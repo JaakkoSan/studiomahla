@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Tietosuojaseloste – Mahlamäen Kauneusstudio</title>
-  <meta name="description" content="Mahlamäen Kauneusstudion tietosuojaseloste. Tietoa henkilötietojen käsittelystä, asiakasrekisteristä ja rekisteröidyn oikeuksista.">
+  <title>Blogi | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Mahlamäen Kauneusstudion blogi – artikkeleita kliinisestä mikroneulauksesta, ihonhoidon biologiasta ja hoitojen tieteellisestä taustasta.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.studiomahla.fi/privacy.html">
+  <link rel="canonical" href="https://www.studiomahla.fi/blogi.html">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <meta property="og:title" content="Blogi | Mahlamäen Kauneusstudio">
+  <meta property="og:description" content="Artikkeleita kliinisestä mikroneulauksesta, ihonhoidon biologiasta ja hoitojen tieteellisestä taustasta.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:url" content="https://www.studiomahla.fi/blogi.html">
 
   <meta name="theme-color" content="#3d5247">
 
@@ -50,23 +56,23 @@
       color: var(--text-dark);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     img, svg { display: block; max-width: 100%; }
-    a { color: var(--text-dark); text-decoration: underline; text-underline-offset: 3px; }
-    a:hover { color: var(--pink); }
+    a { color: inherit; text-decoration: none; }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-    ul { padding: 0 0 0 22px; margin: 0 0 1.4em; }
+    ul { padding: 0; margin: 0; list-style: none; }
 
     h1, h2, h3 {
       font-family: var(--font-serif);
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.15;
       margin: 0 0 .4em;
       letter-spacing: -0.01em;
       color: var(--text-dark);
     }
-    h1 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 24px; }
-    h2 { font-size: 22px; margin-top: 40px; margin-bottom: 12px; }
+    h1 em, h2 em, h3 em { font-style: italic; color: var(--pink); }
+
     p { margin: 0 0 1.1em; }
     p:last-child { margin-bottom: 0; }
 
@@ -78,36 +84,111 @@
     :focus:not(:focus-visible) { outline: none; }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
     }
 
     .skip-link {
-      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
     .skip-link:focus {
-      position: fixed; top: 0; left: 0; z-index: 9999;
-      width: auto; height: auto; padding: 16px 24px;
-      background: var(--pink); color: #fff;
-      font-family: var(--font-sans); font-size: 14px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: auto;
+      height: auto;
+      padding: 16px 24px;
+      background: var(--pink);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      letter-spacing: 0.05em;
     }
 
-    /* NAV */
+    .label {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.4em;
+    }
+    .label--pink-pale { color: var(--pink-pale); }
+    .label--mid { color: var(--text-mid); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      min-height: 44px;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--pink);
+      color: var(--white);
+      border-radius: 2px;
+      transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+    .btn:hover { background: #b6876a; color: var(--white); }
+    .btn--outline {
+      background: transparent;
+      color: var(--pink-pale);
+      border: 1px solid var(--pink-pale);
+    }
+    .btn--outline:hover {
+      background: var(--pink);
+      color: var(--white);
+      border-color: var(--pink);
+    }
+    .btn--small {
+      padding: 10px 18px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      min-height: 44px;
+    }
+
+    /* NAVIGATION */
     .nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       height: var(--nav-height);
-      background: var(--green-dark); color: var(--white);
+      background: var(--green-dark);
+      color: var(--white);
     }
     .nav__inner {
-      max-width: var(--max-w); height: 100%;
-      margin: 0 auto; padding: 0 var(--section-px);
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      max-width: var(--max-w);
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 var(--section-px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
     .brand {
-      display: flex; align-items: center; gap: 14px;
-      color: var(--white); min-height: 44px; text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      min-height: 44px;
     }
-    .brand:hover { color: var(--white); }
-    .brand__logo { width: 30px; height: 30px; color: var(--white); flex-shrink: 0; }
+    .brand__logo {
+      width: 30px;
+      height: 30px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
     .brand__logo svg { width: 100%; height: 100%; }
     .brand__name {
       font-family: var(--font-sans);
@@ -135,32 +216,10 @@
       display: inline-flex;
       align-items: center;
       padding: 4px 0;
-      text-decoration: none;
       transition: color .2s ease;
     }
     .nav__link:hover { color: var(--pink-pale); }
     .nav__link.is-current { color: var(--pink-pale); }
-
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 28px; min-height: 44px;
-      font-family: var(--font-sans);
-      font-weight: 400;
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: var(--pink); color: var(--white);
-      border-radius: 2px; text-decoration: none;
-      transition: background-color .25s ease;
-    }
-    .btn:hover { background: #b6876a; color: var(--white); }
-    .btn--small { padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px; }
-    .btn--outline {
-      background: transparent; color: var(--pink-pale); border: 1px solid var(--pink-pale);
-    }
-    .btn--outline:hover {
-      background: var(--pink); color: var(--white); border-color: var(--pink);
-    }
 
     /* OPENING BANNER (temporary – remove when studio opens) */
     .opening-banner {
@@ -186,53 +245,157 @@
     }
     .opening-banner a:hover { color: var(--green-dark); }
 
-    /* CONTENT */
-    main {
-      max-width: 800px;
-      margin: 0 auto;
+    /* BLOG LANDING HERO */
+    .blog-hero {
+      background: var(--green-dark);
+      color: var(--white);
       /* +40px on top accounts for the fixed opening banner */
-      padding: calc(clamp(48px, 8vw, 96px) + 40px) var(--section-px) clamp(64px, 9vw, 112px);
+      padding: calc(clamp(72px, 10vw, 120px) + 40px) var(--section-px) clamp(96px, 13vw, 160px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .meta-updated {
-      font-size: 13px;
+    .blog-hero::after {
+      content: "";
+      position: absolute;
+      left: -10%;
+      right: -10%;
+      bottom: -1px;
+      height: 80px;
+      background: var(--cream);
+      clip-path: ellipse(60% 100% at 50% 100%);
+    }
+    .blog-hero__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .blog-hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin: 12px 0 20px;
+      color: var(--white);
+      letter-spacing: -0.015em;
+    }
+    .blog-hero p {
+      font-size: clamp(16px, 1.3vw, 18px);
+      line-height: 1.8;
+      color: rgba(250, 248, 244, 0.85);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* BLOG LIST */
+    .blog-list-section {
+      background: var(--cream);
+      padding: clamp(48px, 8vw, 96px) var(--section-px) clamp(72px, 10vw, 128px);
+    }
+    .blog-list {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .post-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: clamp(32px, 4vw, 48px);
+      transition: transform .25s ease, box-shadow .25s ease;
+      border: 1px solid rgba(74, 94, 85, 0.06);
+    }
+    .post-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(42, 56, 48, 0.08);
+    }
+    .post-card a {
+      display: block;
+      color: inherit;
+    }
+    .post-card__meta {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 16px;
+    }
+    .post-card__title {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 2.6vw, 32px);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 16px;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+    .post-card__excerpt {
+      font-size: 16px;
+      line-height: 1.8;
       color: var(--text-mid);
-      margin-bottom: 40px;
-      letter-spacing: 0.04em;
+      margin: 0 0 24px;
     }
-    .contact-block {
-      font-style: normal;
-      line-height: 1.9;
+    .post-card__read {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      font-weight: 400;
     }
+    .post-card__read .arrow {
+      display: inline-block;
+      transition: transform .2s ease;
+    }
+    .post-card:hover .post-card__read .arrow { transform: translateX(4px); }
 
     /* FOOTER */
     .footer {
-      background: var(--green-dark); color: var(--white);
+      background: var(--green-dark);
+      color: var(--white);
       padding: 64px var(--section-px) 28px;
     }
     .footer__inner { max-width: var(--max-w); margin: 0 auto; }
     .footer__cols {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: center;
     }
     @media (max-width: 768px) {
       .footer__cols { grid-template-columns: 1fr; gap: 32px; text-align: center; }
       .footer__cta { justify-self: center; }
     }
-    .footer__brand { display: flex; align-items: center; gap: 12px; opacity: 0.7; color: var(--white); }
+    .footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.7;
+      color: var(--white);
+    }
     .footer__brand .brand__logo { width: 22px; height: 22px; }
     .footer__contact {
-      font-size: 14px; line-height: 1.9; text-align: right;
+      font-size: 14px;
+      line-height: 1.9;
       color: rgba(250, 248, 244, 0.82);
+      text-align: right;
     }
     .footer__contact a { color: inherit; text-decoration: none; }
     .footer__contact a:hover { color: var(--pink-pale); }
-    @media (max-width: 768px) {
-      .footer__contact { text-align: center; }
-    }
+    @media (max-width: 768px) { .footer__contact { text-align: center; } }
     .footer__bottom {
-      margin-top: 48px; padding-top: 24px;
+      margin-top: 48px;
+      padding-top: 24px;
       border-top: 1px solid rgba(250, 248, 244, 0.12);
-      font-size: 13px; color: rgba(250, 248, 244, 0.7);
-      text-align: center; letter-spacing: 0.04em;
+      font-size: 13px;
+      color: rgba(250, 248, 244, 0.7);
+      text-align: center;
+      letter-spacing: 0.04em;
     }
     .footer__bottom a { color: inherit; text-decoration: none; }
     .footer__bottom a:hover { color: var(--pink-pale); text-decoration: underline; }
@@ -264,7 +427,7 @@
     </a>
 
     <nav class="nav__right" aria-label="Päänavigaatio">
-      <a href="blogi.html" class="nav__link">Blogi</a>
+      <a href="blogi.html" class="nav__link is-current" aria-current="page">Blogi</a>
       <a href="https://varaa.timma.fi/studiomahla"
          class="btn btn--small"
          target="_blank"
@@ -276,10 +439,7 @@
   </div>
 </header>
 
-<!-- ============================================================
-     OPENING BANNER — temporary. Remove this whole element when
-     the studio opens, and remove the "+ 40px" from main padding.
-     ============================================================ -->
+<!-- OPENING BANNER — temporary. Remove this element and the "+ 40px" from .blog-hero padding when the studio opens. -->
 <div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
   Hoitola avataan syksyllä 2026 –
   <a href="https://varaa.timma.fi/studiomahla"
@@ -291,42 +451,37 @@
 </div>
 
 <main id="main-content">
-  <h1>Tietosuojaseloste</h1>
-  <p class="meta-updated">Päivitetty: 21.5.2026</p>
 
-  <h2>Rekisterinpitäjä</h2>
-  <address class="contact-block">
-    Guild Lounge Oy (aputoiminimi Mahlamäen kauneusstudio)<br>
-    Y-tunnus: 3578202-2<br>
-    Kotka, Ruonala<br>
-    <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
-    <a href="tel:+358503671683">050 367 1683</a>
-  </address>
+  <section class="blog-hero" aria-labelledby="blog-title">
+    <div class="blog-hero__inner">
+      <p class="label label--pink-pale">Blogi</p>
+      <h1 id="blog-title">Artikkeleita ihonhoidon <em>tieteestä</em></h1>
+      <p>
+        Tutkittua tietoa kliinisestä mikroneulauksesta, ihon biologiasta ja siitä, miten hoidot todella vaikuttavat ihoon.
+      </p>
+    </div>
+  </section>
 
-  <h2>Rekisterin nimi</h2>
-  <p>Asiakasrekisteri</p>
+  <section class="blog-list-section" aria-label="Artikkelilista">
+    <div class="blog-list">
 
-  <h2>Henkilötietojen käsittelyn tarkoitus</h2>
-  <p>
-    Henkilötietoja käsitellään ajanvarauksen ja asiakassuhteen hoitamista varten. Ajanvaraus tapahtuu Timma-palvelun kautta, jonka tietosuojakäytäntöihin voit tutustua osoitteessa <a href="https://timma.fi" target="_blank" rel="noopener noreferrer">timma.fi</a>.
-  </p>
+      <article class="post-card">
+        <a href="blogi-mita-on-kliininen-mikroneulaus.html" aria-label="Lue artikkeli: Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?">
+          <p class="post-card__meta">Mikroneulaus</p>
+          <h2 class="post-card__title">Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?</h2>
+          <p class="post-card__excerpt">
+            Mikroneulaus on yksi ihonhoidon eniten tutkituista menetelmistä. Käymme läpi mitä ihossa tapahtuu hoidon aikana, miksi tulokset ovat pitkäkestoisia ja miten kliininen hoito eroaa kotikäyttöön tarkoitetuista vaihtoehdoista.
+          </p>
+          <span class="post-card__read">
+            Lue artikkeli
+            <span class="arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </article>
 
-  <h2>Käsiteltävät henkilötiedot</h2>
-  <p>Nimi, puhelinnumero, sähköpostiosoite sekä varauksen tiedot.</p>
+    </div>
+  </section>
 
-  <h2>Tietojen säilytysaika</h2>
-  <p>Henkilötietoja säilytetään asiakassuhteen ajan ja sen jälkeen lainsäädännön edellyttämän ajan.</p>
-
-  <h2>Tietojen luovuttaminen</h2>
-  <p>Tietoja ei luovuteta kolmansille osapuolille markkinointitarkoituksiin. Ajanvarausjärjestelmänä toimii Timma (Timma Oy).</p>
-
-  <h2>Rekisteröidyn oikeudet</h2>
-  <p>
-    Sinulla on oikeus tarkastaa itseäsi koskevat tiedot, pyytää tietojen oikaisemista tai poistamista sekä peruuttaa suostumus. Ota yhteyttä: <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>
-  </p>
-
-  <h2>Tietosuojavaltuutettu</h2>
-  <p>Tietosuojavaltuutetun toimisto: <a href="https://tietosuoja.fi" target="_blank" rel="noopener noreferrer">tietosuoja.fi</a></p>
 </main>
 
 <footer class="footer" role="contentinfo">
