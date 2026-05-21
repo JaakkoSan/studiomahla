@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii? | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Mikroneulaus on yksi ihonhoidon eniten tutkituista menetelmistä. Lue mitä ihossa tapahtuu hoidon aikana ja miksi kliininen hoito eroaa kotikäyttöisistä vaihtoehdoista.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.studiomahla.fi/mikroneulaus.htm">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <meta property="og:title" content="Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?">
+  <meta property="og:description" content="Mikroneulaus on yksi ihonhoidon eniten tutkituista menetelmistä. Lue mitä ihossa tapahtuu hoidon aikana ja miksi kliininen hoito eroaa kotikäyttöisistä vaihtoehdoista.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:url" content="https://www.studiomahla.fi/mikroneulaus.htm">
+
+  <meta name="theme-color" content="#3d5247">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-dark: #3d5247;
+      --green-mid: #4a6157;
+      --green-light: #5a7268;
+      --cream: #f5f0e8;
+      --cream-warm: #ede7db;
+      --pink: #c8997a;
+      --pink-light: #d4a98a;
+      --pink-pale: #e8cdb8;
+      --white: #faf8f4;
+      --text-dark: #2a3830;
+      --text-mid: #4a5e55;
+
+      --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --nav-height: 72px;
+      --max-w: 1200px;
+      --section-px: clamp(24px, 5vw, 48px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+    ul { padding: 0; margin: 0; list-style: none; }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 .5em;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+    }
+    h1 em, h2 em, h3 em { font-style: italic; color: var(--pink); }
+
+    p { margin: 0 0 1.2em; }
+    p:last-child { margin-bottom: 0; }
+
+    :focus-visible {
+      outline: 2px solid var(--pink);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    :focus:not(:focus-visible) { outline: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: auto;
+      height: auto;
+      padding: 16px 24px;
+      background: var(--pink);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    .label {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.4em;
+    }
+    .label--pink-pale { color: var(--pink-pale); }
+    .label--mid { color: var(--text-mid); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      min-height: 44px;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--pink);
+      color: var(--white);
+      border-radius: 2px;
+      transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+    .btn:hover { background: #b6876a; color: var(--white); }
+    .btn--outline {
+      background: transparent;
+      color: var(--pink-pale);
+      border: 1px solid var(--pink-pale);
+    }
+    .btn--outline:hover {
+      background: var(--pink);
+      color: var(--white);
+      border-color: var(--pink);
+    }
+    .btn--small {
+      padding: 10px 18px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      min-height: 44px;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    .nav__inner {
+      max-width: var(--max-w);
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 var(--section-px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      min-height: 44px;
+    }
+    .brand__logo {
+      width: 30px;
+      height: 30px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .brand__logo svg { width: 100%; height: 100%; }
+    .brand__name {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 10.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+    .brand__name span { display: block; opacity: 0.85; }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.5vw, 28px);
+    }
+    .nav__link {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--white);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 0;
+      transition: color .2s ease;
+    }
+    .nav__link:hover { color: var(--pink-pale); }
+    .nav__link.is-current { color: var(--pink-pale); }
+
+    /* OPENING BANNER (temporary – remove when studio opens) */
+    .opening-banner {
+      background: var(--pink-pale);
+      color: var(--text-dark);
+      text-align: center;
+      padding: 10px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+    .opening-banner a {
+      color: var(--text-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .opening-banner a:hover { color: var(--green-dark); }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      background: var(--cream);
+      /* +40px on top accounts for the fixed opening banner */
+      padding: calc(clamp(56px, 8vw, 96px) + 40px) var(--section-px) clamp(48px, 7vw, 80px);
+    }
+    .article-hero__inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--text-mid);
+      margin-bottom: 32px;
+      padding: 6px 0;
+    }
+    .article-back:hover { color: var(--pink); }
+    .article-back__arrow {
+      display: inline-block;
+      transition: transform .2s ease;
+    }
+    .article-back:hover .article-back__arrow { transform: translateX(-3px); }
+
+    .article-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      margin: 16px 0 24px;
+      color: var(--text-dark);
+    }
+    .article-lead {
+      font-size: clamp(17px, 1.5vw, 19px);
+      line-height: 1.7;
+      color: var(--text-mid);
+      max-width: 660px;
+      margin: 0 0 1.2em;
+    }
+    .article-lead:last-child { margin-bottom: 0; }
+
+    /* ARTICLE BODY */
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(48px, 7vw, 80px) var(--section-px) clamp(56px, 8vw, 96px);
+    }
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--text-dark);
+    }
+    .article-body h2 {
+      font-size: clamp(26px, 3.2vw, 36px);
+      margin-top: 1.6em;
+      margin-bottom: .5em;
+      line-height: 1.2;
+    }
+    .article-body h2:first-of-type { margin-top: 0; }
+    .article-body h3 {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-top: 1.4em;
+      margin-bottom: .35em;
+    }
+
+    /* ARTICLE CTA (end-of-article) */
+    .article-cta {
+      background: var(--cream-warm);
+      padding: clamp(48px, 6vw, 72px) var(--section-px);
+      text-align: center;
+    }
+    .article-cta__inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .article-cta h2 {
+      font-size: clamp(26px, 3.2vw, 36px);
+      margin: 0 0 16px;
+      color: var(--text-dark);
+    }
+    .article-cta p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text-mid);
+      margin: 0 0 28px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 64px var(--section-px) 28px;
+    }
+    .footer__inner { max-width: var(--max-w); margin: 0 auto; }
+    .footer__cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .footer__cols { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer__cta { justify-self: center; }
+    }
+    .footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.7;
+      color: var(--white);
+    }
+    .footer__brand .brand__logo { width: 22px; height: 22px; }
+    .footer__contact {
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(250, 248, 244, 0.82);
+      text-align: right;
+    }
+    .footer__contact a { color: inherit; text-decoration: none; }
+    .footer__contact a:hover { color: var(--pink-pale); }
+    @media (max-width: 768px) { .footer__contact { text-align: center; } }
+    .footer__bottom {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(250, 248, 244, 0.12);
+      font-size: 13px;
+      color: rgba(250, 248, 244, 0.7);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .footer__bottom a { color: inherit; text-decoration: none; }
+    .footer__bottom a:hover { color: var(--pink-pale); text-decoration: underline; }
+    .footer__bottom span { margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+          <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+        </svg>
+      </span>
+      <span class="brand__name">
+        Mahlamäen
+        <span>Kauneusstudio</span>
+      </span>
+    </a>
+
+    <nav class="nav__right" aria-label="Päänavigaatio">
+      <a href="blogi.html" class="nav__link is-current" aria-current="true">Blogi</a>
+      <a href="https://varaa.timma.fi/studiomahla"
+         class="btn btn--small"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Varaa aika Timmasta – avautuu uuteen välilehteen">
+        Varaa aika
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- OPENING BANNER — temporary. Remove this element and the "+ 40px" from .article-hero padding when the studio opens. -->
+<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
+  Hoitola avataan syksyllä 2026 –
+  <a href="https://varaa.timma.fi/studiomahla"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Liity jonotuslistalle Timmassa – avautuu uuteen välilehteen">
+    liity jonotuslistalle Timmassa
+  </a>
+</div>
+
+<main id="main-content">
+
+  <article>
+    <header class="article-hero">
+      <div class="article-hero__inner">
+        <a href="blogi.html" class="article-back">
+          <span class="article-back__arrow" aria-hidden="true">←</span>
+          Takaisin blogiin
+        </a>
+        <p class="label label--mid">Blogi · Mikroneulaus</p>
+        <h1>Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?</h1>
+        <p class="article-lead">
+          Mikroneulaus on yksi ihonhoidon eniten tutkituista ja tehokkaimmista menetelmistä. Silti harva tietää, mitä ihossa todella tapahtuu hoidon aikana ja miksi kliinisessä ympäristössä toteutettu hoito on niin merkittävästi erilainen kuin kotikäyttöön tarkoitetut vaihtoehdot.
+        </p>
+        <p class="article-lead">
+          Tässä artikkelissa käymme läpi, mitä kliininen mikroneulaus on, miten se vaikuttaa ihoon biologisella tasolla ja miksi tulokset ovat pitkäkestoisia.
+        </p>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <h2>Iho on älykäs elin</h2>
+      <p>
+        Ymmärtääkseen mikroneulausta täytyy ensin ymmärtää, miten iho toimii.
+      </p>
+      <p>
+        Iho ei ole passiivinen suojakerros, vaan aktiivinen, jatkuvasti uusiutuva elin jolla on kyky korjata itseään. Kun ihoon syntyy vaurio, olipa se sitten naarmu, haava tai mikroskooppinen pistos, elimistö reagoi välittömästi käynnistämällä monimutkaisen korjausprosessin.
+      </p>
+      <p>
+        Tämän prosessin keskiössä on kollageeni, ihon tärkein rakennusaine. Kollageeni tekee ihosta napakan, joustavan ja tiiviin. Nuorella iholla kollageenituotanto on vilkasta, mutta jo 25 ikävuoden jälkeen tuotanto alkaa hidastua. 30-vuotiaana iho tuottaa kollageenia noin prosentin vähemmän joka vuosi. Tämä on syy siihen, miksi iho alkaa veltostua, juonteet syvenevät ja ihon tekstuuri muuttuu.
+      </p>
+      <p>
+        Mikroneulaus hyödyntää ihon omaa korjausmekanismia aktivoidakseen kollageenituotannon uudelleen.
+      </p>
+
+      <h2>Miten mikroneulaus toimii käytännössä</h2>
+      <p>
+        Kliinisessä mikroneulauksessa käytetään kynämäistä laitetta, jossa on erittäin ohut, steriili neulapää. Laite tekee ihon pintaan tuhansia mikroskooppisen pieniä kanavia hallitusti ja tarkasti.
+      </p>
+      <p>
+        Nämä mikrokanavat ovat niin ohuita, ettei silmä juuri niitä havaitse, mutta elimistölle ne ovat riittävä signaali käynnistää korjausprosessi. Iho tulkitsee kanavat vaurioiksi ja aktivoi korjaavat solumekanismit.
+      </p>
+      <p>Seurauksena tapahtuu useita rinnakkaisia prosesseja:</p>
+
+      <h3>Kollageenisynteesin käynnistyminen</h3>
+      <p>
+        Fibroblastit, ihon kollageenia tuottavat solut, aktivoituvat ja alkavat rakentaa uutta kollageenia. Tämä ei tapahdu hetkessä, vaan prosessi jatkuu viikoista kuukausiin hoidon jälkeen. Uudet kollageenisäikeet rakentuvat entisten päälle vahvistaen ihon tukirakennetta.
+      </p>
+
+      <h3>Elastiinin tuotanto</h3>
+      <p>
+        Kollageenin lisäksi iho alkaa tuottaa elastiinia, joka vastaa ihon kimmoisuudesta ja joustavuudesta. Elastiini on rakennusaine, joka pitää ihon kimmoisana ja palautumiskykyisenä.
+      </p>
+
+      <h3>Ihon uusiutumissyklin nopeutuminen</h3>
+      <p>
+        Hoito kiihdyttää ihosolujen uusiutumista, mikä näkyy ihon sävyn tasaantumisena ja pintarakenteen parantumisena.
+      </p>
+
+      <p>
+        Oleellista on, että koko prosessi on täysin biologinen. Mikroneulauksessa ei käytetä vieraita aineita eikä pakoteta ihoa mihinkään luonnottomaan, vaan se ainoastaan herättää mekanismit, jotka ihossa ovat jo olemassa.
+      </p>
+
+      <h2>Mitä hoidon aikana tapahtuu</h2>
+      <p>
+        Kliininen mikroneulaushoito etenee aina loogisesti vaiheittain.
+      </p>
+      <p>
+        Hoito alkaa ihon perusteellisella puhdistuksella. Meikki, aurinkosuoja ja epäpuhtaudet poistetaan huolellisesti kaksoispuhdistuksella. Tämä on hoidon turvallisuuden kannalta keskeinen vaihe, sillä puhdas iho on ehdoton edellytys aseptiselle toimenpiteelle.
+      </p>
+      <p>
+        Tämän jälkeen asiantuntija valitsee laitteeseen steriilin kertakäyttöisen neulapään asiakkaan nähden. Neulapää vaihdetaan aina jokaiselle asiakkaalle erikseen eikä samaa neulapäätä koskaan käytetä uudelleen.
+      </p>
+      <p>
+        Varsinainen neulaus toteutetaan hallitusti ja järjestelmällisesti. Ammattilaislaite mahdollistaa neulaussyvyyden tarkan säädön eri kasvojen alueilla, sillä ihon paksuus vaihtelee merkittävästi esimerkiksi otsan ja poskien välillä. Oikea syvyys kullekin alueelle on avain sekä turvallisuuteen että tuloksiin.
+      </p>
+      <p>
+        Hoito saattaa tuntua pienenä nipistelynä tai värinänä, mutta toimenpide on yleensä hyvin siedettävä ja nopeasti ohi.
+      </p>
+      <p>
+        Hoidon päätteeksi iholle levitetään rauhoittavia tehoaineita, jotka tukevat ihon korjausprosessia.
+      </p>
+
+      <h2>Miltä iho näyttää hoidon jälkeen</h2>
+      <p>
+        Hoidon jälkeen iholla esiintyy punoitusta ja lievää kuumotusta. Nämä ovat täysin normaaleja fysiologisia vasteita ja kertovat, että ihon korjausprosessi on käynnistynyt.
+      </p>
+      <p>
+        Punoitus laskee tyypillisesti ensimmäisen vuorokauden aikana. Seuraavina päivinä iho saattaa tuntua hieman tiukalta tai karhealta, ja pintakerros voi hilseillä lievästi. Tämä on merkki siitä, että vanha iho uusiutuu ja korvautuu uudella.
+      </p>
+      <p>
+        Ensimmäiset selkeät tulokset alkavat näkyä yleensä muutaman viikon kuluttua hoidosta, kun uutta kollageenia on ehtinyt muodostua. Iho tuntuu napakoituneelta, tasaisemmalta ja kirkkaamman näköiseltä.
+      </p>
+
+      <h2>Miksi tulokset ovat pysyviä</h2>
+      <p>
+        Toisin kuin monet pintahoitomenetelmät, mikroneulaus vaikuttaa ihon syvempiin kerroksiin, juuri sinne missä kollageeni ja elastiini muodostuvat.
+      </p>
+      <p>
+        Koska iho rakentaa itse uutta kudosta, muutos on rakenteellinen. Tulokset eivät katoa pesun tai ajan myötä samalla tavalla kuin pintahoitojen vaikutukset, sillä iho todella muuttuu.
+      </p>
+      <p>
+        Yksittäinen hoitokerta käynnistää prosessin, mutta pysyvät tulokset vaativat useimmiten kolmesta kuuteen hoitokertaa. Tämä perustuu kollageenisynteesin biologiaan, sillä jokainen hoitokerta lisää uutta kollageenia entisten kerroksien päälle ja muutos kumuloituu.
+      </p>
+      <p>
+        Hoitokertojen välillä pidetään yleensä noin neljän viikon tauko, jotta iho ehtii rauhassa käydä läpi oman korjausprosessinsa ennen seuraavaa hoitoa.
+      </p>
+
+      <h2>Yksilölliset erot vaikuttavat tuloksiin</h2>
+      <p>
+        Vaikka mikroneulaukseen liittyvät fysiologiset reaktiot ovat biologisesti universaaleja, hoito ei toimi kaikilla täysin samalla tehokkuudella. Kollageenisynteesin käynnistyminen on kaikille sama prosessi, mutta kuinka tehokkaasti elimistö sen toteuttaa vaihtelee yksilöstä toiseen.
+      </p>
+      <p>
+        Yleinen terveydentila, ikä ja elintavat vaikuttavat tuloksiin merkittävästi. Tupakointi heikentää kollageenisynteesiä ja hidastaa ihon paranemisprosessia. Pitkäaikainen aurinkoaltistus hajottaa kollageenia ja heikentää ihon luontaista korjauskapasiteettia. Ikääntyminen hidastaa fibroblastien toimintaa, jolloin kollageenia muodostuu hitaammin, mutta kollageenisynteesi käynnistyy silti. Ikääntyvä iho reagoi hoitoon ja hyötyy siitä, ja koska ikääntymisen merkit kuten juonteet ja velttous ovat juuri niitä asioita joita hoidolla korjataan, tulokset ovat usein hyvin merkityksellisiä. Hoitosarjan pituus saattaa olla pidempi kuin nuoremmalla iholla, mutta se ei tarkoita että tuloksia ei synny. Sarjahoito ja riittävä hoitokertojen määrä tasaavat yksilöllisiä eroja merkittävästi, sillä kumulatiivinen vaikutus rakentuu jokaisen hoidon myötä.
+      </p>
+
+      <h2>Mihin haasteisiin kliininen mikroneulaus soveltuu</h2>
+      <p>
+        Koska hoito perustuu ihon oman rakenteen vahvistamiseen sisältäpäin, se soveltuu laaja-alaisesti erilaisiin ihon haasteisiin:
+      </p>
+
+      <h3>Aknearpien tasoittuminen</h3>
+      <p>
+        Uusi kollageeni nostaa arven jättämää kuoppaa ylöspäin ja tasoittaa ihon pintarakennetta. Tulos ei synny hetkessä, mutta sarjahoidolla muutos on selkeästi havaittavissa.
+      </p>
+
+      <h3>Juonteet ja ikääntymisen merkit</h3>
+      <p>
+        Kun ihon kollageenirakenne vahvistuu, hienot juonteet silottuvat ja iho näyttää napakoituneemmalta.
+      </p>
+
+      <h3>Pigmenttimuutokset</h3>
+      <p>
+        Ihon kiihtynyt uusiutuminen auttaa hajottamaan ylimääräistä melaniinikertymää, mikä tasaa ihon sävyä ja vaalentaa tummia läiskiä tasaisesti.
+      </p>
+
+      <h3>Laajentuneet ihohuokoset</h3>
+      <p>
+        Kun ihohuokosia ympäröivä tukirakenne vahvistuu kollageenisynteesin kautta, huokoset supistuvat ja näyttävät huomattavasti pienemmiltä.
+      </p>
+
+      <h2>Kliininen hoito – mitä se tarkoittaa käytännössä</h2>
+      <p>
+        Sana &ldquo;kliininen&rdquo; ei ole pelkkä markkinointitermi. Se tarkoittaa, että hoito toteutetaan terveydenhuollon ammattilaisen toimesta, lääkinnälliseksi laitteeksi luokitellulla välineistöllä ja ehdottomalla aseptiikalla.
+      </p>
+      <p>
+        Ammattilaislaite mahdollistaa neulaussyvyyden tarkan säädön, jolloin jokaiselle kasvojen alueelle valitaan optimaalinen syvyys ihon paksuuden ja hoidettavan haasteen mukaan. Tämä tarkkuus ei ole mahdollista kotikäyttöön tarkoitetuilla laitteilla.
+      </p>
+      <p>
+        Steriilit kertakäyttöiset neulapäät vaihdetaan jokaisen hoidon alussa asiakkaan nähden. Hoitotila puhdistetaan kliinisen tarkasti jokaisen asiakkaan välissä.
+      </p>
+      <p>
+        Tulokset ovat kliinisessä ympäristössä parempia, koska hoito voidaan toteuttaa tarkemmin, turvallisemmin ja yksilöllisemmin kuin kotiolosuhteissa koskaan olisi mahdollista.
+      </p>
+
+      <h2>Yhteenveto</h2>
+      <p>
+        Kliininen mikroneulaus on biologiaan perustuva menetelmä, joka aktivoi ihon omat korjausprosessit. Se ei pakota ihoa mihinkään keinotekoiseen, vaan ainoastaan herättää mekanismit, jotka ihossa jo ovat.
+      </p>
+      <p>
+        Tulokset syntyvät hitaasti mutta pysyvästi. Jokainen hoitokerta lisää uutta kollageenia, vahvistaa ihon tukirakennetta ja parantaa ihon tekstuuria tavalla, joka näkyy ja tuntuu.
+      </p>
+    </div>
+
+    <aside class="article-cta">
+      <div class="article-cta__inner">
+        <h2>Varaa ensikäynti</h2>
+        <p>
+          Arvioimme ihosi tilanteen yksilöllisesti ja laadimme juuri sinulle sopivan hoitosuunnitelman.
+        </p>
+        <a href="https://varaa.timma.fi/studiomahla"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Varaa aika Timmasta – avautuu uuteen välilehteen">
+          Varaa aika Timmasta
+        </a>
+      </div>
+    </aside>
+  </article>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__cols">
+      <a href="index.html" class="footer__brand" aria-label="Mahlamäen Kauneusstudio – etusivu" style="text-decoration:none;">
+        <span class="brand__logo" aria-hidden="true">
+          <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+            <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+          </svg>
+        </span>
+        <span class="brand__name">
+          Mahlamäen
+          <span>Kauneusstudio</span>
+        </span>
+      </a>
+
+      <div class="footer__cta">
+        <a href="https://varaa.timma.fi/studiomahla"
+           class="btn btn--outline"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Varaa aika Timmasta – avautuu uuteen välilehteen">
+          Varaa aika Timmasta
+        </a>
+      </div>
+
+      <div class="footer__contact">
+        <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
+        <a href="tel:+358503671683">050 367 1683</a><br>
+        Kotka, Ruonala
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      © 2025 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+                            
