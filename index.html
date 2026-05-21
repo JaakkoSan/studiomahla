@@ -582,25 +582,28 @@
     }
 
     .feat-cards {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-      margin-top: 40px;
+      margin-top: clamp(40px, 6vw, 64px);
     }
+    @media (max-width: 900px) {
+      .feat-cards { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .feat-cards { grid-template-columns: 1fr; }
+    }
+    .feat-card { height: 100%; }
+
+    /* MicroPen EVO -osion erityisasettelu: kuva ja teksti vertikaalisesti keskitetty */
+    .section--laite .grid-2 { align-items: center; }
     .laite-image {
       width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
+      height: auto;
+      max-height: 640px;
+      object-fit: contain;
       border-radius: 4px;
       background: var(--cream-warm);
-      position: sticky;
-      top: calc(var(--nav-height) + 40px + 24px);
-    }
-    @media (max-width: 768px) {
-      .laite-image {
-        position: static;
-        aspect-ratio: 4/3;
-      }
     }
     .feat-card {
       background: var(--cream-warm);
@@ -1083,7 +1086,7 @@
   </section>
 
   <!-- 7. MICROPEN EVO – LAITE -->
-  <section class="section section--cream" aria-labelledby="laite-title">
+  <section class="section section--cream section--laite" aria-labelledby="laite-title">
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
@@ -1101,20 +1104,20 @@
           <p>
             Laitteen 7000 RPM -moottori ja säädettävä neulasyvyys (0–2 mm) mahdollistavat tarkan ja tasaisen hoidon jokaisella kasvojen alueella. Jokainen hoito tehdään steriileillä kertakäyttöisillä hoitopäillä, jotka vaihdetaan aina asiakkaan nähden.
           </p>
-          <div class="feat-cards">
-            <div class="feat-card">
-              <h3>FDA-hyväksytty</h3>
-              <p>Yhdysvaltain elintarvike- ja lääkeviraston hyväksymä lääkinnällinen laite.</p>
-            </div>
-            <div class="feat-card">
-              <h3>CE-merkitty, luokka IIa</h3>
-              <p>Eurooppalaisen lääkinnällisten laitteiden asetuksen mukainen vaatimustenmukaisuus.</p>
-            </div>
-            <div class="feat-card">
-              <h3>Steriilit kertakäyttöhoitopäät</h3>
-              <p>Vaihdetaan aina asiakkaan nähden. Nestepitävä rakenne estää kontaminaation täydellisesti.</p>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="feat-cards reveal">
+        <div class="feat-card">
+          <h3>FDA-hyväksytty</h3>
+          <p>Yhdysvaltain elintarvike- ja lääkeviraston hyväksymä lääkinnällinen laite.</p>
+        </div>
+        <div class="feat-card">
+          <h3>CE-merkitty, luokka IIa</h3>
+          <p>Eurooppalaisen lääkinnällisten laitteiden asetuksen mukainen vaatimustenmukaisuus.</p>
+        </div>
+        <div class="feat-card">
+          <h3>Steriilit kertakäyttöhoitopäät</h3>
+          <p>Vaihdetaan aina asiakkaan nähden. Nestepitävä rakenne estää kontaminaation täydellisesti.</p>
         </div>
       </div>
     </div>
