@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Peruuta varaus | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Peruuta Mahlamäen Kauneusstudion ennakkovaraus.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <meta name="theme-color" content="#3d5247">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-dark: #3d5247;
+      --cream: #f5f0e8;
+      --cream-warm: #ede7db;
+      --pink: #c8997a;
+      --pink-pale: #e8cdb8;
+      --white: #faf8f4;
+      --text-dark: #2a3830;
+      --text-mid: #4a5e55;
+      --danger: #b85a3a;
+
+      --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --nav-height: 72px;
+      --max-w: 1200px;
+      --section-px: clamp(24px, 5vw, 48px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-dark);
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+    h1, h2 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.15;
+      margin: 0 0 .4em;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+    }
+    p { margin: 0 0 1.1em; }
+    p:last-child { margin-bottom: 0; }
+
+    :focus-visible {
+      outline: 2px solid var(--pink);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    :focus:not(:focus-visible) { outline: none; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-height);
+      background: var(--green-dark); color: var(--white);
+    }
+    .nav__inner {
+      max-width: var(--max-w); height: 100%;
+      margin: 0 auto; padding: 0 var(--section-px);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; color: var(--white); min-height: 44px; }
+    .brand__logo { width: 30px; height: 30px; color: var(--white); flex-shrink: 0; }
+    .brand__logo svg { width: 100%; height: 100%; }
+    .brand__name {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 10.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+    .brand__name span { display: block; opacity: 0.85; }
+
+    /* MAIN */
+    main {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(48px, 8vw, 96px) var(--section-px);
+    }
+
+    .cancel-card {
+      max-width: 560px;
+      width: 100%;
+      background: var(--white);
+      border-radius: 4px;
+      padding: clamp(32px, 5vw, 56px);
+      border: 1px solid rgba(74, 94, 85, 0.08);
+      position: relative;
+    }
+    .cancel-card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--pink);
+      border-radius: 4px 0 0 4px;
+    }
+    .cancel-card h1 {
+      font-size: clamp(28px, 3.6vw, 38px);
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+    .cancel-card p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text-mid);
+    }
+    .cancel-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      min-height: 44px;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--pink);
+      color: var(--white);
+      border-radius: 2px;
+      transition: background-color .25s ease;
+      text-decoration: none;
+    }
+    .btn:hover { background: #b6876a; color: var(--white); }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn--secondary {
+      background: transparent;
+      color: var(--text-mid);
+      border: 1px solid rgba(74, 94, 85, 0.25);
+    }
+    .btn--secondary:hover {
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    .state-error {
+      background: rgba(184, 90, 58, 0.08);
+      border-left: 3px solid var(--danger);
+      padding: 14px 18px;
+      border-radius: 2px;
+      color: var(--danger);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .state-success__icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--pink-pale);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green-dark);
+    }
+    .state-success__icon svg { width: 32px; height: 32px; }
+    .state-success { text-align: center; }
+    .state-success h1 { margin: 0 0 16px; }
+    .state-success p { font-size: 16px; line-height: 1.85; color: var(--text-mid); }
+
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+          <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+        </svg>
+      </span>
+      <span class="brand__name">
+        Mahlamäen
+        <span>Kauneusstudio</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <article class="cancel-card">
+
+    <!-- 1) Initial state: invalid link (no/bad params) -->
+    <div id="stateInvalid" hidden>
+      <h1>Peruutuslinkki ei kelpaa</h1>
+      <p>
+        Tämä peruutuslinkki on viallinen tai vanhentunut. Jos haluat peruuttaa
+        ennakkovarauksesi, ota yhteyttä asiakaspalveluumme:
+      </p>
+      <p style="margin-top:16px;">
+        <a href="mailto:asiakaspalvelu@studiomahla.fi" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">asiakaspalvelu@studiomahla.fi</a><br>
+        <a href="tel:+358503671683" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">050 367 1683</a>
+      </p>
+    </div>
+
+    <!-- 2) Confirmation state: ask user to confirm -->
+    <div id="stateConfirm" hidden>
+      <h1>Peruutetaanko ennakkovaraus?</h1>
+      <p>
+        Olet peruuttamassa ennakkovarauksesi Mahlamäen Kauneusstudioon. Tämän
+        jälkeen korttiasi ei veloiteta eikä sinulle varata aikaa.
+      </p>
+      <p>
+        Peruutus on ilmainen.
+      </p>
+      <div class="cancel-actions">
+        <button type="button" class="btn" id="confirmBtn">Peruuta varaus</button>
+        <a href="index.html" class="btn btn--secondary">En sittenkään</a>
+      </div>
+      <p class="state-error" id="errorMsg" role="alert" hidden></p>
+    </div>
+
+    <!-- 3) Success state -->
+    <div id="stateSuccess" hidden>
+      <div class="state-success">
+        <div class="state-success__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h1>Varaus on peruttu</h1>
+        <p>Ennakkovarauksesi on nyt peruttu. Korttiasi ei veloiteta.</p>
+        <p style="font-size:14px;opacity:0.85;margin-top:24px;">Saat vahvistuksen sähköpostiisi.</p>
+        <div class="cancel-actions" style="justify-content:center;">
+          <a href="index.html" class="btn btn--secondary">Takaisin etusivulle</a>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<script>
+  (function () {
+    'use strict';
+
+    var stateInvalid = document.getElementById('stateInvalid');
+    var stateConfirm = document.getElementById('stateConfirm');
+    var stateSuccess = document.getElementById('stateSuccess');
+    var confirmBtn   = document.getElementById('confirmBtn');
+    var errorMsg     = document.getElementById('errorMsg');
+
+    var params = new URLSearchParams(window.location.search);
+    var customerId = (params.get('customer') || '').trim();
+    var token      = (params.get('token')    || '').trim();
+
+    if (!customerId || !customerId.indexOf || customerId.indexOf('cus_') !== 0 || !token || token.length < 16) {
+      stateInvalid.hidden = false;
+      return;
+    }
+    stateConfirm.hidden = false;
+
+    confirmBtn.addEventListener('click', async function () {
+      errorMsg.hidden = true;
+      errorMsg.textContent = '';
+      var original = confirmBtn.textContent;
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Perutaan…';
+      try {
+        var res = await fetch('/api/cancel-booking', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ customerId: customerId, token: token })
+        });
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Peruutus epäonnistui');
+        stateConfirm.hidden = true;
+        stateSuccess.hidden = false;
+      } catch (err) {
+        errorMsg.textContent = err.message || 'Peruutus epäonnistui. Yritä hetken päästä uudelleen.';
+        errorMsg.hidden = false;
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = original;
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

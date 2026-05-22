@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Tietosuojaseloste – Mahlamäen Kauneusstudio</title>
-  <meta name="description" content="Mahlamäen Kauneusstudion tietosuojaseloste. Tietoa henkilötietojen käsittelystä, asiakasrekisteristä ja rekisteröidyn oikeuksista.">
+  <title>Sopimusehdot | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Mahlamäen Kauneusstudion ennakkovarauksen sopimusehdot.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.studiomahla.fi/privacy.html">
+  <link rel="canonical" href="https://www.studiomahla.fi/ehdot.html">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,11 +21,9 @@
     :root {
       --green-dark: #3d5247;
       --green-mid: #4a6157;
-      --green-light: #5a7268;
       --cream: #f5f0e8;
       --cream-warm: #ede7db;
       --pink: #c8997a;
-      --pink-light: #d4a98a;
       --pink-pale: #e8cdb8;
       --white: #faf8f4;
       --text-dark: #2a3830;
@@ -91,7 +89,6 @@
       font-family: var(--font-sans); font-size: 14px;
     }
 
-    /* NAV */
     .nav {
       position: sticky; top: 0; z-index: 100;
       height: var(--nav-height);
@@ -119,11 +116,7 @@
     }
     .brand__name span { display: block; opacity: 0.85; }
 
-    .nav__right {
-      display: flex;
-      align-items: center;
-      gap: clamp(14px, 2.5vw, 28px);
-    }
+    .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
       font-family: var(--font-sans);
       font-weight: 400;
@@ -162,36 +155,10 @@
       background: var(--pink); color: var(--white); border-color: var(--pink);
     }
 
-    /* OPENING BANNER (temporary – remove when studio opens) */
-    .opening-banner {
-      background: var(--pink-pale);
-      color: var(--text-dark);
-      text-align: center;
-      padding: 10px 24px;
-      font-family: var(--font-sans);
-      font-size: 13px;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      line-height: 1.4;
-      position: fixed;
-      top: var(--nav-height);
-      left: 0;
-      right: 0;
-      z-index: 99;
-    }
-    .opening-banner a {
-      color: var(--text-dark);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .opening-banner a:hover { color: var(--green-dark); }
-
-    /* CONTENT */
     main {
       max-width: 800px;
       margin: 0 auto;
-      /* +40px on top accounts for the fixed opening banner */
-      padding: calc(clamp(48px, 8vw, 96px) + 40px) var(--section-px) clamp(64px, 9vw, 112px);
+      padding: clamp(48px, 8vw, 96px) var(--section-px) clamp(64px, 9vw, 112px);
     }
     .meta-updated {
       font-size: 13px;
@@ -199,12 +166,7 @@
       margin-bottom: 40px;
       letter-spacing: 0.04em;
     }
-    .contact-block {
-      font-style: normal;
-      line-height: 1.9;
-    }
 
-    /* FOOTER */
     .footer {
       background: var(--green-dark); color: var(--white);
       padding: 64px var(--section-px) 28px;
@@ -265,138 +227,92 @@
 
     <nav class="nav__right" aria-label="Päänavigaatio">
       <a href="blogi.html" class="nav__link">Blogi</a>
-      <a href="kauppa.html" class="btn btn--small" aria-label="Tee ennakkovaraus">
-        Ennakkovaraus
-      </a>
+      <a href="kauppa.html" class="btn btn--small">Ennakkovaraus</a>
     </nav>
   </div>
 </header>
 
-<!-- ============================================================
-     OPENING BANNER — temporary. Remove this whole element when
-     the studio opens, and remove the "+ 40px" from main padding.
-     ============================================================ -->
-<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
-  Hoitola avataan syksyllä 2026 –
-  <a href="kauppa.html" aria-label="Varaa ensikäyntisi ennakkohintaan">
-    varaa ensikäyntisi ennakkohintaan
-  </a>
-</div>
-
 <main id="main-content">
-  <h1>Tietosuojaseloste</h1>
+  <h1>Sopimusehdot</h1>
   <p class="meta-updated">Päivitetty: 22.5.2026</p>
 
-  <h2>Rekisterinpitäjä</h2>
-  <address class="contact-block">
-    Guild Lounge Oy (aputoiminimi Mahlamäen Kauneusstudio)<br>
-    Y-tunnus: 3578202-2<br>
-    Kotka, Ruonala<br>
-    <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
-    <a href="tel:+358503671683">050 367 1683</a>
-  </address>
-
-  <h2>Rekisterin nimi</h2>
-  <p>Mahlamäen Kauneusstudion asiakasrekisteri.</p>
-
-  <h2>Henkilötietojen käsittelyn tarkoitus ja peruste</h2>
   <p>
-    Käsittelemme henkilötietojasi seuraaviin tarkoituksiin:
+    Nämä sopimusehdot koskevat Mahlamäen Kauneusstudion ennakkovarausta, jonka voit tehdä studiomahla.fi-sivustolla osoitteessa <a href="kauppa.html">studiomahla.fi/kauppa.html</a>.
+  </p>
+
+  <h2>1. Sopijapuolet</h2>
+  <p>
+    Sopimus syntyy sinun (kuluttaja-asiakkaan) ja <strong>Guild Lounge Oy:n</strong> (Y-tunnus 3578202-2, aputoiminimi Mahlamäen Kauneusstudio, Kotka, Ruonala) välille.
+  </p>
+
+  <h2>2. Mikä ennakkovaraus on</h2>
+  <p>
+    Ennakkovaraus on alustava varaus tulevaa ensikäyntiäsi varten Mahlamäen Kauneusstudiossa, kun studio avaa ovensa syksyllä 2026. Ennakkovaraus <strong>ei ole vahvistettu hoitoaika</strong>, vaan ilmaisu kiinnostuksesta ja paikan varauksesta jonosta ennen muita varauskanavia.
+  </p>
+  <p>
+    Otamme sinuun henkilökohtaisesti yhteyttä puhelimitse tai sähköpostitse ennen kuin avaamme kalenterin muille varauksille, ja sovimme tarkan hoitoajan kanssasi.
+  </p>
+
+  <h2>3. Hinta ja veloitusehdot</h2>
+  <p>
+    Ennakkovarauksen hinta on <strong>190 € (sis. alv 25,5 %)</strong>. Normaalihinta on 200 €. Ennakkohinta on voimassa kaikilla ennakkovarauksen tehneillä.
+  </p>
+  <p>
+    Korttitietosi tallennetaan turvallisesti maksupalveluntarjoaja Stripen järjestelmään. <strong>Korttiasi ei veloiteta ennakkovarauksen yhteydessä</strong>, vaan vasta sen jälkeen kun olemme sopineet kanssasi hoitoajan ja hoito on toteutettu tai hoitoa edeltävän vuorokauden aikana, mikäli sopimus näin edellyttää.
+  </p>
+
+  <h2>4. Peruutusehdot</h2>
+  <p>
+    Voit peruuttaa ennakkovarauksen <strong>koska tahansa ja täysin maksutta</strong> ennen hoidon toteuttamista. Peruutusvaihtoehdot:
   </p>
   <ul>
-    <li><strong>Ennakkovaraus</strong> — kun varaat ensikäyntisi ennakkoon studiomahla.fi-sivuston kautta. Käsittelyperusteena on sopimuksen täytäntöönpano.</li>
-    <li><strong>Ajanvaraus ja hoitojen toteuttaminen</strong> Timma-palvelun kautta sekä hoidon jälkeinen yhteydenpito. Käsittelyperusteena on sopimuksen täytäntöönpano.</li>
-    <li><strong>Asiakaspalvelu</strong> sähköpostitse ja puhelimitse. Käsittelyperusteena on oikeutettu etu.</li>
-    <li><strong>Lakisääteisten velvoitteiden täyttäminen</strong>, kuten kirjanpito. Käsittelyperusteena on lakisääteinen velvoite.</li>
-  </ul>
-
-  <h2>Käsiteltävät henkilötiedot</h2>
-  <p>
-    Käsittelemme seuraavia tietoja, jotka saamme suoraan sinulta:
-  </p>
-  <ul>
-    <li>Nimi</li>
-    <li>Sähköpostiosoite</li>
-    <li>Puhelinnumero</li>
-    <li>Varauksen ja hoidon tiedot</li>
-    <li>Ennakkovarauksen yhteydessä lisäksi: maksukortin tunniste ja viimeiset 4 numeroa, korttityyppi sekä veloitukseen liittyvät metatiedot (käsittelijä: Stripe, ks. alla)</li>
+    <li>varausvahvistus­sähköpostissa olevan <em>Peruuta varaus</em> -painikkeen kautta</li>
+    <li>sähköpostitse osoitteeseen <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a></li>
+    <li>puhelimitse numeroon <a href="tel:+358503671683">050 367 1683</a></li>
   </ul>
   <p>
-    <strong>Emme tallenna täydellisiä korttitietoja palvelimillemme.</strong> Korttitiedot käsittelee ja säilyttää PCI DSS -sertifioitu maksupalveluntarjoaja Stripe (ks. alla).
+    Peruutuksen jälkeen korttitietosi irrotetaan välittömästi asiakastilistäsi eikä korttiasi veloiteta.
   </p>
 
-  <h2>Tietojen luovuttaminen ja tietojenkäsittelijät</h2>
+  <h2>5. Kuluttajan peruuttamisoikeus (etämyynti)</h2>
   <p>
-    Emme luovuta henkilötietojasi kolmansille osapuolille markkinointitarkoituksiin. Käytämme seuraavia tietojenkäsittelijöitä, joiden tehtävänä on käsitellä henkilötietoja meidän puolestamme:
-  </p>
-  <ul>
-    <li>
-      <strong>Stripe Payments Europe, Ltd. (Irlanti) / Stripe Inc. (USA)</strong> — maksukorttien tallennus ja veloitukset.
-      Stripe on PCI DSS Level 1 -sertifioitu maksupalveluntarjoaja. Tietoja voidaan siirtää EU:n ulkopuolelle Stripen Yhdysvaltain konserniyhtiöille; siirto perustuu EU–US Data Privacy Framework -järjestelyyn ja Euroopan komission hyväksymiin mallisopimuslausekkeisiin.
-      Tietosuojaseloste: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>
-    </li>
-    <li>
-      <strong>Resend (USA)</strong> — varausvahvistus- ja peruutusvahvistus­sähköpostien lähetys.
-      Siirto Yhdysvaltoihin perustuu EU–US Data Privacy Framework -järjestelyyn ja mallisopimuslausekkeisiin.
-      Tietosuojaseloste: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">resend.com/legal/privacy-policy</a>
-    </li>
-    <li>
-      <strong>Vercel Inc. (USA)</strong> — sivuston hostaus.
-      Vercel käsittelee teknisiä lokitietoja (esim. IP-osoite, käyttäjäagentti) sivuston toiminnan ja tietoturvan varmistamiseksi.
-      Tietosuojaseloste: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">vercel.com/legal/privacy-policy</a>
-    </li>
-    <li>
-      <strong>Timma (Timma Oy, Suomi)</strong> — ajanvarausjärjestelmä.
-      Tietosuojaseloste: <a href="https://timma.fi" target="_blank" rel="noopener noreferrer">timma.fi</a>
-    </li>
-  </ul>
-
-  <h2>Tietojen säilytysaika</h2>
-  <p>
-    Henkilötietoja säilytetään asiakassuhteen voimassaolon ajan ja sen jälkeen lainsäädännön edellyttämän ajan (esim. kirjanpitolaki edellyttää tositteiden säilytystä kuusi vuotta). Tarpeettomiksi käyneet tiedot poistetaan tai anonymisoidaan.
+    Kuluttajansuojalain mukaan sinulla on oikeus peruuttaa etänä tehty palvelusopimus 14 päivän kuluessa sopimuksen tekemisestä ilman erityistä syytä. Tämä oikeus on voimassa rinnakkaisesti edellä mainitun maksuttoman peruutusoikeuden kanssa, joka on kuluttajansuojalain edellyttämiä oikeuksia laajempi.
   </p>
   <p>
-    <strong>Ennakkovarauksen tiedot</strong>: Jos peruutat ennakkovarauksen, asiakkaaseen liitetty korttitieto poistetaan välittömästi Stripen järjestelmästä. Tilausta ja peruutusta koskeva yhteenveto säilyy Stripen Customer-objektissa kirjanpitolain edellyttämän ajan.
+    Koska kortin veloitusta ei tehdä ennakkovarauksen yhteydessä, peruutus tapahtuu käytännössä yksinkertaisesti irrottamalla kortti — sinulta ei vaadita rahanpalautusta.
   </p>
 
-  <h2>Korttitietojen käsittely</h2>
+  <h2>6. Studion avaamisen viivästyminen tai estyminen</h2>
   <p>
-    Maksukortin numero, voimassaoloaika ja turvakoodi syötetään suoraan Stripen tarjoamaan Stripe Elements -maksulomakkeeseen, jolloin täydet korttitiedot eivät kulje meidän palvelimemme kautta eikä niitä tallenneta meidän rekisteriin. Saamme Stripeltä ainoastaan tunnisteen (PaymentMethod ID) ja tiedon kortin tyypistä ja viimeisistä neljästä numerosta tunnistustarkoituksessa.
+    Mikäli Mahlamäen Kauneusstudion avaaminen viivästyy yli kuusi kuukautta ilmoitetusta avausajankohdasta (syksy 2026) tai estyy kokonaan meistä johtuvasta tai meistä riippumattomasta syystä, ennakkovarauksesi puretaan automaattisesti, korttitietosi irrotetaan eikä korttiasi veloiteta. Ilmoitamme asiasta sähköpostitse.
   </p>
 
-  <h2>Tietoturva</h2>
+  <h2>7. Hinnan voimassaolo</h2>
   <p>
-    Sivusto käyttää HTTPS-salausta. Maksukorttitietojen käsittely tapahtuu PCI DSS -standardin mukaisesti Stripen toimesta. Henkilötietoihin pääsyä on rajoitettu vain niille, jotka tarvitsevat niitä työtehtävissään.
+    Ennakkohinta 190 € (sis. alv 25,5 %) on voimassa ennakkovarauksen yhteydessä sovitulle ensimmäiselle hoitokerralle. Mahdolliset jatkohoidot hinnoitellaan studiomahla.fi-sivuston tai studiossa esillä olevan voimassa olevan hinnaston mukaisesti.
   </p>
 
-  <h2>Evästeet</h2>
+  <h2>8. Henkilötietojen käsittely</h2>
   <p>
-    Sivusto käyttää välttämättömiä evästeitä toimintansa varmistamiseen. Tämän lisäksi maksu- ja korttitietojen käsittely Stripe Elementsillä asettaa Stripen evästeitä petostentorjuntaa varten. Emme käytä seuranta- tai markkinointievästeitä.
+    Henkilötietojesi käsittelystä on kerrottu tarkemmin <a href="privacy.html">tietosuojaselosteessa</a>. Käsittelemme tietoja sopimuksen täytäntöönpanon perusteella.
   </p>
 
-  <h2>Rekisteröidyn oikeudet</h2>
+  <h2>9. Reklamaatiot ja erimielisyydet</h2>
   <p>
-    Sinulla on oikeus:
-  </p>
-  <ul>
-    <li>tarkastaa, mitä henkilötietoja sinusta on tallennettu</li>
-    <li>pyytää virheellisten tietojen oikaisua</li>
-    <li>pyytää tietojesi poistoa (oikeus tulla unohdetuksi)</li>
-    <li>rajoittaa tai vastustaa tietojesi käsittelyä</li>
-    <li>peruuttaa antamasi suostumus</li>
-    <li>siirtää tietosi toiseen palveluun</li>
-    <li>tehdä valitus tietosuojavaltuutetulle, jos koet käsittelyn olevan lainvastaista</li>
-  </ul>
-  <p>
-    <strong>Ennakkovarauksen peruuttaminen</strong>: voit peruuttaa ennakkovarauksesi koska tahansa varausvahvistus­sähköpostissa olevan linkin kautta. Tämä irrottaa maksukortin asiakastilistäsi välittömästi.
+    Mahdolliset reklamaatiot tulee toimittaa sähköpostitse osoitteeseen <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>. Pyrimme ratkaisemaan erimielisyydet ensisijaisesti yhteistyössä kanssasi.
   </p>
   <p>
-    Muissa asioissa ota yhteyttä: <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>
+    Jos erimielisyyttä ei saada ratkaistua neuvottelemalla, kuluttaja-asiakas voi saattaa asian <a href="https://www.kuluttajariita.fi" target="_blank" rel="noopener noreferrer">kuluttajariitalautakunnan</a> (kuluttajariita.fi) käsiteltäväksi. Lautakunnan käsittelyä ennen on suositeltavaa ottaa yhteyttä <a href="https://www.kkv.fi/kuluttaja-asiat/kuluttajaneuvonta/" target="_blank" rel="noopener noreferrer">kuluttajaneuvontaan</a>.
   </p>
 
-  <h2>Valvontaviranomainen</h2>
+  <h2>10. Sovellettava laki</h2>
   <p>
-    Sinulla on oikeus tehdä valitus tietosuojavaltuutetulle, jos katsot meidän käsittelevän henkilötietojasi lainvastaisesti. Tietosuojavaltuutetun toimisto: <a href="https://tietosuoja.fi" target="_blank" rel="noopener noreferrer">tietosuoja.fi</a>
+    Tähän sopimukseen sovelletaan Suomen lakia.
+  </p>
+
+  <h2>11. Ehtojen muutokset</h2>
+  <p>
+    Nämä sopimusehdot ovat voimassa toistaiseksi. Voimme päivittää ehtoja, mutta voimassa olevia ennakkovarauksia koskevat ne ehdot, jotka olivat voimassa varauksen tekohetkellä.
   </p>
 </main>
 
@@ -422,9 +338,7 @@
       </a>
 
       <div class="footer__cta">
-        <a href="kauppa.html" class="btn btn--outline" aria-label="Tee ennakkovaraus">
-          Ennakkovaraus
-        </a>
+        <a href="kauppa.html" class="btn btn--outline">Ennakkovaraus</a>
       </div>
 
       <div class="footer__contact">
