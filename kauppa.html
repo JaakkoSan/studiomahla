@@ -371,13 +371,43 @@
       border-radius: 2px;
     }
 
-    .prebook-fine {
-      font-size: 12px;
-      line-height: 1.6;
+    /* Prominent reassurance — "card will not be charged now" */
+    .prebook-notice {
+      background: var(--cream-warm);
+      border-left: 4px solid var(--pink);
+      border-radius: 2px;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 16px;
+      align-items: start;
+      margin: 0;
+    }
+    .prebook-notice__icon {
+      color: var(--pink);
+      margin-top: 2px;
+    }
+    .prebook-notice__icon svg { width: 26px; height: 26px; display: block; }
+    .prebook-notice__title {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--text-dark);
+      margin: 0 0 6px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+    }
+    .prebook-notice__text {
+      font-size: 14px;
+      line-height: 1.7;
       color: var(--text-mid);
       margin: 0;
-      text-align: center;
-      opacity: 0.85;
+    }
+    @media (max-width: 480px) {
+      .prebook-notice {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
     }
 
     .prebook-error {
@@ -550,17 +580,26 @@
             <div class="prebook-payment" id="payment-element" data-loading="true"></div>
           </div>
 
+          <aside class="prebook-notice" role="note" aria-label="Veloitustieto">
+            <span class="prebook-notice__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </span>
+            <div>
+              <p class="prebook-notice__title">Korttiasi ei veloiteta nyt</p>
+              <p class="prebook-notice__text">
+                Tallennamme korttitiedot turvallisesti Stripe-palveluun ja teemme veloituksen vasta kun hoitoaika on vahvistettu. Voit peruuttaa varauksen ilmaiseksi koska tahansa ennen hoitoa.
+              </p>
+            </div>
+          </aside>
+
           <p class="prebook-error" id="prebookError" role="alert" hidden></p>
 
           <button type="submit" class="btn btn--large" id="prebookSubmit" disabled>
             Varaa ennakkoon
           </button>
-
-          <p class="prebook-fine">
-            Korttiasi ei veloiteta nyt. Tallennamme sen turvallisesti Stripe-palveluun
-            tulevaa veloitusta varten, joka tehdään vasta kun hoitoaika on vahvistettu.
-            Voit peruuttaa varauksen ilmaiseksi koska tahansa ennen hoitoa.
-          </p>
         </form>
       </div>
 
