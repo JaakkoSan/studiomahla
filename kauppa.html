@@ -330,12 +330,10 @@
       text-transform: uppercase;
       color: var(--text-mid);
     }
-    .field__label .field__optional {
-      letter-spacing: 0.05em;
-      text-transform: none;
-      font-size: 12px;
-      opacity: 0.65;
+    .field__required {
+      color: var(--pink);
       margin-left: 4px;
+      font-weight: 400;
     }
     .field__input {
       font-family: var(--font-sans);
@@ -555,21 +553,27 @@
 
         <form class="prebook-form" id="prebookForm" novalidate>
           <div class="field">
-            <label class="field__label" for="prebook-name">Nimi</label>
+            <label class="field__label" for="prebook-name">
+              Nimi <span class="field__required" aria-hidden="true">*</span>
+            </label>
             <input class="field__input" type="text" id="prebook-name" name="name"
-                   required autocomplete="name" maxlength="200">
+                   required aria-required="true" autocomplete="name" maxlength="200">
           </div>
 
           <div class="field">
-            <label class="field__label" for="prebook-email">Sähköposti</label>
+            <label class="field__label" for="prebook-email">
+              Sähköposti <span class="field__required" aria-hidden="true">*</span>
+            </label>
             <input class="field__input" type="email" id="prebook-email" name="email"
-                   required autocomplete="email" maxlength="200">
+                   required aria-required="true" autocomplete="email" maxlength="200">
           </div>
 
           <div class="field">
-            <label class="field__label" for="prebook-phone">Puhelin</label>
+            <label class="field__label" for="prebook-phone">
+              Puhelin <span class="field__required" aria-hidden="true">*</span>
+            </label>
             <input class="field__input" type="tel" id="prebook-phone" name="phone"
-                   required autocomplete="tel" maxlength="50">
+                   required aria-required="true" autocomplete="tel" maxlength="50">
           </div>
 
           <div class="field">
