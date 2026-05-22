@@ -859,20 +859,34 @@
 
       var returnUrl = window.location.origin + window.location.pathname + '?prebooking=return';
 
-      var result = await stripe.confirmSetup({
-        elements: elements,
-        confirmParams: {
-          return_url: returnUrl,
-          payment_method_data: {
-            billing_details: {
-              name: name,
-              email: email,
-              phone: phone || undefined
+      var result;
+      try {
+        result = await stripe.confirmSetup({
+          elements: elements,
+          confirmParams: {
+            return_url: returnUrl,
+            payment_method_data: {
+              billing_details: {
+                name: name,
+                email: email,
+                phone: phone,
+                // Required because PaymentElement is created with
+                // fields.billingDetails = 'never'. Stripe needs at least a country
+                // even if no address form is shown.
+                address: { country: 'FI' }
+              }
             }
-          }
-        },
-        redirect: 'if_required'
-      });
+          },
+          redirect: 'if_required'
+        });
+      } catch (err) {
+        // Catches unexpected runtime errors (e.g. IntegrationError) so the UI
+        // doesn't end up stuck in the "processing" state with no feedback.
+        console.error('confirmSetup threw:', err);
+        showError((err && err.message) ? err.message : 'Kortin tallennus epäonnistui.');
+        setSubmitting(false, 'Varaa ennakkoon');
+        return;
+      }
 
       if (result.error) {
         showError(result.error.message || 'Kortin tallennus epäonnistui.');
