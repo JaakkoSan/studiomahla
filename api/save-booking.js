@@ -61,6 +61,9 @@ module.exports = async function handler(req, res) {
     if (!isValidEmail(email)) {
       return res.status(400).json({ error: 'Virheellinen sähköpostiosoite' });
     }
+    if (!phone || phone.replace(/\D/g, '').length < 6) {
+      return res.status(400).json({ error: 'Puhelinnumero puuttuu' });
+    }
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 

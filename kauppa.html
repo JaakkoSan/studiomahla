@@ -567,11 +567,9 @@
           </div>
 
           <div class="field">
-            <label class="field__label" for="prebook-phone">
-              Puhelin <span class="field__optional">(vapaaehtoinen)</span>
-            </label>
+            <label class="field__label" for="prebook-phone">Puhelin</label>
             <input class="field__input" type="tel" id="prebook-phone" name="phone"
-                   autocomplete="tel" maxlength="50">
+                   required autocomplete="tel" maxlength="50">
           </div>
 
           <div class="field">
@@ -840,6 +838,11 @@
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         showError('Tarkista sähköpostiosoite.');
         emailEl.focus();
+        return;
+      }
+      if (!phone || phone.replace(/\D/g, '').length < 6) {
+        showError('Kirjoita puhelinnumerosi.');
+        phoneEl.focus();
         return;
       }
 
