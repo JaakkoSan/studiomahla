@@ -789,7 +789,17 @@
         setupIntentId = parseSetupIntentIdFromClientSecret(data.clientSecret);
 
         var paymentElement = elements.create('payment', {
-          fields: { billingDetails: 'never' } // we collect contact info ourselves
+          // We collect name/email/phone in our own form so opt out of those in
+          // the PaymentElement. We let Stripe collect address fields (typically
+          // only postal code for FI cards) — opting out of those would require
+          // us to provide every sub-field ourselves.
+          fields: {
+            billingDetails: {
+              name: 'never',
+              email: 'never',
+              phone: 'never'
+            }
+          }
         });
         paymentElement.mount('#payment-element');
         paymentEl.removeAttribute('data-loading');
@@ -867,13 +877,12 @@
             return_url: returnUrl,
             payment_method_data: {
               billing_details: {
+                // Address fields are collected by the PaymentElement itself
+                // (typically just postal code for FI cards), so we only need
+                // to supply name/email/phone here.
                 name: name,
                 email: email,
-                phone: phone,
-                // Required because PaymentElement is created with
-                // fields.billingDetails = 'never'. Stripe needs at least a country
-                // even if no address form is shown.
-                address: { country: 'FI' }
+                phone: phone
               }
             }
           },
