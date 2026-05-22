@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii? | Mahlamäen Kauneusstudio</title>
-  <meta name="description" content="Mikroneulaus on yksi ihonhoidon eniten tutkituista menetelmistä. Lue mitä ihossa tapahtuu hoidon aikana ja miksi kliininen hoito eroaa kotikäyttöisistä vaihtoehdoista.">
+  <title>Mikroneularulla vai kliininen mikroneulaus – mitä eroa niillä oikeasti on? | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Mikroneularullan ja kliinisen mikroneulauksen erot pistoskulman, hygienian, laitteen sertifioinnin ja turvallisuuden näkökulmasta. Mitä eroa rullalla ja ammattilaislaitteella oikeasti on?">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.studiomahla.fi/mikroneulaus.htm">
+  <link rel="canonical" href="https://www.studiomahla.fi/mikrorulla.htm">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <meta property="og:title" content="Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?">
-  <meta property="og:description" content="Mikroneulaus on yksi ihonhoidon eniten tutkituista menetelmistä. Lue mitä ihossa tapahtuu hoidon aikana ja miksi kliininen hoito eroaa kotikäyttöisistä vaihtoehdoista.">
+  <meta property="og:title" content="Mikroneularulla vai kliininen mikroneulaus – mitä eroa niillä oikeasti on?">
+  <meta property="og:description" content="Mikroneularullan ja kliinisen mikroneulauksen erot pistoskulman, hygienian, laitteen sertifioinnin ja turvallisuuden näkökulmasta.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="fi_FI">
-  <meta property="og:url" content="https://www.studiomahla.fi/mikroneulaus.htm">
+  <meta property="og:url" content="https://www.studiomahla.fi/mikrorulla.htm">
 
   <meta name="theme-color" content="#3d5247">
 
@@ -89,25 +89,13 @@
 
     .skip-link {
       position: absolute;
-      left: -9999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
+      left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
     }
     .skip-link:focus {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      width: auto;
-      height: auto;
-      padding: 16px 24px;
-      background: var(--pink);
-      color: #fff;
-      font-family: var(--font-sans);
-      font-size: 14px;
-      letter-spacing: 0.05em;
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      width: auto; height: auto; padding: 16px 24px;
+      background: var(--pink); color: #fff;
+      font-family: var(--font-sans); font-size: 14px; letter-spacing: 0.05em;
     }
 
     .label {
@@ -159,36 +147,20 @@
 
     /* NAVIGATION */
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       height: var(--nav-height);
-      background: var(--green-dark);
-      color: var(--white);
+      background: var(--green-dark); color: var(--white);
     }
     .nav__inner {
-      max-width: var(--max-w);
-      height: 100%;
-      margin: 0 auto;
-      padding: 0 var(--section-px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      max-width: var(--max-w); height: 100%;
+      margin: 0 auto; padding: 0 var(--section-px);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: var(--white);
-      min-height: 44px;
+      display: flex; align-items: center; gap: 14px;
+      color: var(--white); min-height: 44px;
     }
-    .brand__logo {
-      width: 30px;
-      height: 30px;
-      color: var(--white);
-      flex-shrink: 0;
-    }
+    .brand__logo { width: 30px; height: 30px; color: var(--white); flex-shrink: 0; }
     .brand__logo svg { width: 100%; height: 100%; }
     .brand__name {
       font-family: var(--font-sans);
@@ -200,11 +172,7 @@
     }
     .brand__name span { display: block; opacity: 0.85; }
 
-    .nav__right {
-      display: flex;
-      align-items: center;
-      gap: clamp(14px, 2.5vw, 28px);
-    }
+    .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
       font-family: var(--font-sans);
       font-weight: 400;
@@ -221,7 +189,7 @@
     .nav__link:hover { color: var(--pink-pale); }
     .nav__link.is-current { color: var(--pink-pale); }
 
-    /* OPENING BANNER (temporary – remove when studio opens) */
+    /* OPENING BANNER */
     .opening-banner {
       background: var(--pink-pale);
       color: var(--text-dark);
@@ -234,8 +202,7 @@
       line-height: 1.4;
       position: fixed;
       top: var(--nav-height);
-      left: 0;
-      right: 0;
+      left: 0; right: 0;
       z-index: 99;
     }
     .opening-banner a {
@@ -248,7 +215,6 @@
     /* ARTICLE HERO */
     .article-hero {
       background: var(--cream);
-      /* +40px on top accounts for the fixed opening banner */
       padding: calc(clamp(56px, 8vw, 96px) + 40px) var(--section-px) clamp(48px, 7vw, 80px);
     }
     .article-hero__inner {
@@ -318,6 +284,72 @@
       color: var(--text-dark);
       margin-top: 1.4em;
       margin-bottom: .35em;
+    }
+    .article-body hr {
+      border: 0;
+      border-top: 1px solid rgba(74, 94, 85, 0.12);
+      margin: 2.4em 0;
+    }
+
+    /* COMPARISON TABLE inside article */
+    .article-table-wrap {
+      margin: 32px 0;
+      overflow-x: auto;
+      border-radius: 4px;
+      border: 1px solid rgba(74, 94, 85, 0.08);
+    }
+    .article-table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      font-size: 15px;
+      background: var(--white);
+    }
+    .article-table thead th {
+      background: var(--cream-warm);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.12);
+    }
+    .article-table thead th:first-child {
+      background: var(--green-dark);
+      color: var(--cream);
+    }
+    .article-table tbody th {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--text-dark);
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      background: var(--cream);
+      width: 26%;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.08);
+    }
+    .article-table tbody td {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-mid);
+      padding: 14px 16px;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.08);
+    }
+    .article-table tbody tr:last-child th,
+    .article-table tbody tr:last-child td { border-bottom: 0; }
+    @media (max-width: 600px) {
+      .article-table { font-size: 14px; }
+      .article-table thead th,
+      .article-table tbody th,
+      .article-table tbody td { padding: 12px 14px; }
+      .article-table tbody th { font-size: 16px; }
     }
 
     /* ARTICLE CTA (end-of-article) */
@@ -423,7 +455,6 @@
   </div>
 </header>
 
-<!-- OPENING BANNER — temporary. Remove this element and the "+ 40px" from .article-hero padding when the studio opens. -->
 <div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
   Hoitola avataan syksyllä 2026 –
   <a href="kauppa.html" aria-label="Varaa ensikäyntisi ennakkohintaan">
@@ -441,157 +472,154 @@
           Takaisin blogiin
         </a>
         <p class="label label--mid">Blogi · Mikroneulaus</p>
-        <h1>Mitä on kliininen mikroneulaus – ja miten se oikeasti toimii?</h1>
+        <h1>Mikroneularulla vai kliininen mikroneulaus – mitä eroa niillä oikeasti on?</h1>
         <p class="article-lead">
-          Mikroneulaus on yksi ihonhoidon eniten tutkituista ja tehokkaimmista menetelmistä. Silti harva tietää, mitä ihossa todella tapahtuu hoidon aikana ja miksi kliinisessä ympäristössä toteutettu hoito on niin merkittävästi erilainen kuin kotikäyttöön tarkoitetut vaihtoehdot.
+          Mikroneulaus on kasvattanut suosiotaan merkittävästi viime vuosina. Samalla markkinoille on tullut runsaasti kotikäyttöön tarkoitettuja mikroneularullia ja mikroneulausrullia, joiden lupaukset kuulostavat houkuttelevilta.
         </p>
         <p class="article-lead">
-          Tässä artikkelissa käymme läpi, mitä kliininen mikroneulaus on, miten se vaikuttaa ihoon biologisella tasolla ja miksi tulokset ovat pitkäkestoisia.
+          Tässä artikkelissa käymme läpi, mitä eroja näillä kahdella menetelmällä oikeasti on – biologisesti, teknisesti ja turvallisuuden näkökulmasta.
         </p>
       </div>
     </header>
 
     <div class="article-body">
-      <h2>Iho on älykäs elin</h2>
+      <h2>Sama nimi, eri mekanismi</h2>
       <p>
-        Ymmärtääkseen mikroneulausta täytyy ensin ymmärtää, miten iho toimii.
+        Sekä kliininen mikroneulaus että mikroneularulla (tai mikroneulausrulla) perustuvat samaan perusideaan: ihon pinnalle luodaan pieniä vaurioita, jotka käynnistävät <a href="mikroneulaus.htm">ihon korjausprosessin ja kollageenisynteesin</a>. Tässä yhtäläisyydet kuitenkin pitkälti loppuvat.
       </p>
       <p>
-        Iho ei ole passiivinen suojakerros, vaan aktiivinen, jatkuvasti uusiutuva elin jolla on kyky korjata itseään. Kun ihoon syntyy vaurio, olipa se sitten naarmu, haava tai mikroskooppinen pistos, elimistö reagoi välittömästi käynnistämällä monimutkaisen korjausprosessin.
-      </p>
-      <p>
-        Tämän prosessin keskiössä on kollageeni, ihon tärkein rakennusaine. Kollageeni tekee ihosta napakan, joustavan ja tiiviin. Nuorella iholla kollageenituotanto on vilkasta, mutta jo 25 ikävuoden jälkeen tuotanto alkaa hidastua. 30-vuotiaana iho tuottaa kollageenia noin prosentin vähemmän joka vuosi. Tämä on syy siihen, miksi iho alkaa veltostua, juonteet syvenevät ja ihon tekstuuri muuttuu.
-      </p>
-      <p>
-        Mikroneulaus hyödyntää ihon omaa korjausmekanismia aktivoidakseen kollageenituotannon uudelleen.
+        Menetelmät poikkeavat toisistaan merkittävästi sen suhteen, miten neula läpäisee ihon – ja tällä on suora vaikutus sekä hoidon turvallisuuteen että tuloksiin.
       </p>
 
-      <h2>Miten mikroneulaus toimii käytännössä</h2>
-      <p>
-        Kliinisessä mikroneulauksessa käytetään kynämäistä laitetta, jossa on erittäin ohut, steriili neulapää. Laite tekee ihon pintaan tuhansia mikroskooppisen pieniä kanavia hallitusti ja tarkasti.
-      </p>
-      <p>
-        Nämä mikrokanavat ovat niin ohuita, ettei silmä juuri niitä havaitse, mutta elimistölle ne ovat riittävä signaali käynnistää korjausprosessi. Iho tulkitsee kanavat vaurioiksi ja aktivoi korjaavat solumekanismit.
-      </p>
-      <p>Seurauksena tapahtuu useita rinnakkaisia prosesseja:</p>
+      <hr>
 
-      <h3>Kollageenisynteesin käynnistyminen</h3>
+      <h2>Lyhyt historia – miksi rulla kehitettiin ja mitä sen jälkeen tapahtui</h2>
       <p>
-        Fibroblastit, ihon kollageenia tuottavat solut, aktivoituvat ja alkavat rakentaa uutta kollageenia. Tämä ei tapahdu hetkessä, vaan prosessi jatkuu viikoista kuukausiin hoidon jälkeen. Uudet kollageenisäikeet rakentuvat entisten päälle vahvistaen ihon tukirakennetta.
+        Mikroneulauksen historia alkaa 1990-luvulta, jolloin ihon pistostekniikkaa alettiin tutkia arpihoitojen yhteydessä. Ensimmäiset kotikäyttöön tarkoitetut mikroneularullat tulivat markkinoille 2000-luvun alussa ja olivat pitkään ainoa saatavilla oleva vaihtoehto. Rulla oli yksinkertainen, edullinen ja saavutettava tapa hyödyntää ihon korjausmekanismia.
       </p>
-
-      <h3>Elastiinin tuotanto</h3>
       <p>
-        Kollageenin lisäksi iho alkaa tuottaa elastiinia, joka vastaa ihon kimmoisuudesta ja joustavuudesta. Elastiini on rakennusaine, joka pitää ihon kimmoisana ja palautumiskykyisenä.
+        Kynämäiset sähköiset mikroneulauslaitteet kehitettiin nimenomaan rullan rajoitusten ratkaisemiseksi. Tavoitteena oli luoda laite joka tekee kohtisuoran pistoksen viiston sijaan, mahdollistaa neulasyvyyden tarkan säädön eri alueilla ja täyttää lääkinnällisten laitteiden hygienia- ja turvallisuusvaatimukset. Ensimmäiset kliiniset laitteet tulivat markkinoille 2000-luvun puolivälissä ja ovat sittemmin kehittyneet merkittävästi.
+      </p>
+      <p>
+        Rulla on siis menetelmänä vanhempi teknologia jonka pohjalta nykyiset kliiniset laitteet on kehitetty – ei sen rinnalla kulkeva vaihtoehto.
       </p>
 
-      <h3>Ihon uusiutumissyklin nopeutuminen</h3>
+      <hr>
+
+      <h2>Pistoskulma ratkaisee</h2>
       <p>
-        Hoito kiihdyttää ihosolujen uusiutumista, mikä näkyy ihon sävyn tasaantumisena ja pintarakenteen parantumisena.
+        Kliinisessä mikroneulauksessa kynämäinen laite tekee aina kohtisuoran pistoksen suoraan alas ja takaisin ylös samaa reittiä. Näin syntyy tarkka, hallittu mikrokanava jossa kudosvaurio on minimoitu suhteessa saavutettuun vaikutukseen.
+      </p>
+      <p>
+        Mikroneularulla toimii täysin eri periaatteella. Rulla pyörii ihon pinnalla, jolloin neula iskeytyy ihoon viistosti alhaalta ja poistuu yhtä lailla viistosti ylöspäin. Neula siis kulkee ihokudoksen läpi laajana kaarena pystysuoran pistoksen sijaan. Tämä tarkoittaa käytännössä sitä, että syntyy viisto repeämä eikä tarkka mikrokanava.
+      </p>
+      <p>
+        Tulos on suurempi kudosvaurio suhteessa saavutettuun biologiseen hyötyyn.
       </p>
 
+      <hr>
+
+      <h2>Neulojen paksuus</h2>
       <p>
-        Oleellista on, että koko prosessi on täysin biologinen. Mikroneulauksessa ei käytetä vieraita aineita eikä pakoteta ihoa mihinkään luonnottomaan, vaan se ainoastaan herättää mekanismit, jotka ihossa ovat jo olemassa.
+        Kliinisissä ammattilaitteissa käytetyt steriilit hoitopäät sisältävät erittäin ohuita 32-gauge-neuloja. Mitä ohuempi neula, sitä tarkempi pistos ja sitä vähemmän tarpeetonta kudosvauriota.
+      </p>
+      <p>
+        Rullan neulat ovat tyypillisesti selvästi paksumpia. Tämä korostaa entisestään vääränsuuntaisen pistoksen aiheuttamaa kudosvauriota.
       </p>
 
-      <h2>Mitä hoidon aikana tapahtuu</h2>
+      <hr>
+
+      <h2>Neulasyvyyden säätö</h2>
       <p>
-        Kliininen mikroneulaushoito etenee aina loogisesti vaiheittain.
+        Yksi kliinisen mikroneulauksen keskeisimmistä eduista on mahdollisuus säätää neulasyvyyttä tarkasti eri kasvojen alueilla. Ihon paksuus vaihtelee merkittävästi – otsassa, nenässä, poskilla ja silmänympärysalueella tarvitaan kaikilla eri syvyys optimaalisen tuloksen saavuttamiseksi.
       </p>
       <p>
-        Hoito alkaa ihon perusteellisella puhdistuksella. Meikki, aurinkosuoja ja epäpuhtaudet poistetaan huolellisesti kaksoispuhdistuksella. Tämä on hoidon turvallisuuden kannalta keskeinen vaihe, sillä puhdas iho on ehdoton edellytys aseptiselle toimenpiteelle.
-      </p>
-      <p>
-        Tämän jälkeen asiantuntija valitsee laitteeseen steriilin kertakäyttöisen neulapään asiakkaan nähden. Neulapää vaihdetaan aina jokaiselle asiakkaalle erikseen eikä samaa neulapäätä koskaan käytetä uudelleen.
-      </p>
-      <p>
-        Varsinainen neulaus toteutetaan hallitusti ja järjestelmällisesti. Ammattilaislaite mahdollistaa neulaussyvyyden tarkan säädön eri kasvojen alueilla, sillä ihon paksuus vaihtelee merkittävästi esimerkiksi otsan ja poskien välillä. Oikea syvyys kullekin alueelle on avain sekä turvallisuuteen että tuloksiin.
-      </p>
-      <p>
-        Hoito saattaa tuntua pienenä nipistelynä tai värinänä, mutta toimenpide on yleensä hyvin siedettävä ja nopeasti ohi.
-      </p>
-      <p>
-        Hoidon päätteeksi iholle levitetään rauhoittavia tehoaineita, jotka tukevat ihon korjausprosessia.
+        Ammattilaislaite mahdollistaa syvyyden säädön 0,25 millimetrin tarkkuudella. Mikroneularullassa syvyys on kiinteä eikä sitä voi muuttaa eri alueille – sama syvyys koskee koko hoitoaluetta riippumatta ihon paksuudesta.
       </p>
 
-      <h2>Miltä iho näyttää hoidon jälkeen</h2>
+      <hr>
+
+      <h2>Hygienia ja infektioriski</h2>
       <p>
-        Hoidon jälkeen iholla esiintyy punoitusta ja lievää kuumotusta. Nämä ovat täysin normaaleja fysiologisia vasteita ja kertovat, että ihon korjausprosessi on käynnistynyt.
+        Kliinisessä mikroneulausessa jokainen hoitopää on steriili ja kertakäyttöinen. Se vaihdetaan aina asiakkaan nähden ennen hoitoa ja hävitetään hoidon jälkeen asianmukaisesti. Laitteen rakenne estää nesteiden pääsyn runkoon, mikä ennaltaehkäisee kontaminaation.
       </p>
       <p>
-        Punoitus laskee tyypillisesti ensimmäisen vuorokauden aikana. Seuraavina päivinä iho saattaa tuntua hieman tiukalta tai karhealta, ja pintakerros voi hilseillä lievästi. Tämä on merkki siitä, että vanha iho uusiutuu ja korvautuu uudella.
-      </p>
-      <p>
-        Ensimmäiset selkeät tulokset alkavat näkyä yleensä muutaman viikon kuluttua hoidosta, kun uutta kollageenia on ehtinyt muodostua. Iho tuntuu napakoituneelta, tasaisemmalta ja kirkkaamman näköiseltä.
+        Rulla sen sijaan käytetään toistuvasti. Jokaisen käyttökerran jälkeen rullan neulat ovat altistuneet ihon bakteerifloralle, soluneritteille ja mahdollisille verenjälkille. Vaikka rulla puhdistettaisiin huolellisesti, neulojen desinfiointi kotiolosuhteissa ei vastaa kliinistä steriiliyttä. Jokainen käyttökerta on siten hygienisesti eri lähtökohdassa kuin edellinen.
       </p>
 
-      <h2>Miksi tulokset ovat pysyviä</h2>
+      <hr>
+
+      <h2>Vertailutaulukko</h2>
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <caption class="skip-link">Vertailu: kliininen mikroneulaus ja mikroneularulla / mikroneulausrulla</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="skip-link">Ominaisuus</span></th>
+              <th scope="col">Kliininen mikroneulaus</th>
+              <th scope="col">Mikroneularulla / mikroneulausrulla</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Laite</th>
+              <td>FDA-hyväksytty, CE IIa -luokiteltu</td>
+              <td>Ei lääkinnällistä sertifiointia</td>
+            </tr>
+            <tr>
+              <th scope="row">Pistoskulma</th>
+              <td>Kohtisuora – suoraan alas ja takaisin ylös</td>
+              <td>Viisto – neula tulee ja poistuu eri kulmassa</td>
+            </tr>
+            <tr>
+              <th scope="row">Neulasyvyys</th>
+              <td>0–2 mm, tarkka säätö alueittain</td>
+              <td>Kiinteä, ei säädettävissä</td>
+            </tr>
+            <tr>
+              <th scope="row">Neulojen paksuus</th>
+              <td>Erittäin ohuet steriilit hoitopäät</td>
+              <td>Tyypillisesti selvästi paksummat neulat</td>
+            </tr>
+            <tr>
+              <th scope="row">Hygienia</th>
+              <td>Steriilit kertakäyttöhoitopäät</td>
+              <td>Sama rulla käytöstä toiseen</td>
+            </tr>
+            <tr>
+              <th scope="row">Tekijä</th>
+              <td>Terveydenhuollon ammattilainen</td>
+              <td>Itse</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2>Laitteen sertifiointi</h2>
       <p>
-        Toisin kuin monet pintahoitomenetelmät, mikroneulaus vaikuttaa ihon syvempiin kerroksiin, juuri sinne missä kollageeni ja elastiini muodostuvat.
+        Kliinisessä mikroneulausessa käytettävä välineistö on lääkinnällinen laite, jonka on läpäistävä tiukka vaatimustenmukaisuusarviointi ennen markkinoille pääsyä. FDA-hyväksyntä ja CE-merkintä luokassa IIa tarkoittavat, että laitteen turvallisuus ja tehokkuus on todennettu kliinisesti.
       </p>
       <p>
-        Koska iho rakentaa itse uutta kudosta, muutos on rakenteellinen. Tulokset eivät katoa pesun tai ajan myötä samalla tavalla kuin pintahoitojen vaikutukset, sillä iho todella muuttuu.
-      </p>
-      <p>
-        Yksittäinen hoitokerta käynnistää prosessin, mutta pysyvät tulokset vaativat useimmiten kolmesta kuuteen hoitokertaa. Tämä perustuu kollageenisynteesin biologiaan, sillä jokainen hoitokerta lisää uutta kollageenia entisten kerroksien päälle ja muutos kumuloituu.
-      </p>
-      <p>
-        Hoitokertojen välillä pidetään yleensä noin neljän viikon tauko, jotta iho ehtii rauhassa käydä läpi oman korjausprosessinsa ennen seuraavaa hoitoa.
+        Kotikäyttöön myytävillä mikroneularullilla ei ole vastaavaa lääkinnällistä sertifiointia. Ne myydään kosmeettisina tuotteina, joiden markkinoille pääsy ei edellytä samantasoista turvallisuusarviointia.
       </p>
 
-      <h2>Yksilölliset erot vaikuttavat tuloksiin</h2>
+      <hr>
+
+      <h2>Ammattilaisen rooli</h2>
       <p>
-        Vaikka mikroneulaukseen liittyvät fysiologiset reaktiot ovat biologisesti universaaleja, hoito ei toimi kaikilla täysin samalla tehokkuudella. Kollageenisynteesin käynnistyminen on kaikille sama prosessi, mutta kuinka tehokkaasti elimistö sen toteuttaa vaihtelee yksilöstä toiseen.
+        Kliinisen mikroneulauksen toteuttaa terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa, tunnistaa mahdolliset kontraindikaatiot ja säätää hoidon yksilöllisesti jokaisen asiakkaan tarpeiden mukaan. Ammattilaisella on myös kyky tunnistaa ja reagoida mahdollisiin ihon reaktioihin hoidon aikana.
       </p>
       <p>
-        Yleinen terveydentila, ikä ja elintavat vaikuttavat tuloksiin merkittävästi. Tupakointi heikentää kollageenisynteesiä ja hidastaa ihon paranemisprosessia. Pitkäaikainen aurinkoaltistus hajottaa kollageenia ja heikentää ihon luontaista korjauskapasiteettia. Ikääntyminen hidastaa fibroblastien toimintaa, jolloin kollageenia muodostuu hitaammin, mutta kollageenisynteesi käynnistyy silti. Ikääntyvä iho reagoi hoitoon ja hyötyy siitä, ja koska ikääntymisen merkit kuten juonteet ja velttous ovat juuri niitä asioita joita hoidolla korjataan, tulokset ovat usein hyvin merkityksellisiä. Hoitosarjan pituus saattaa olla pidempi kuin nuoremmalla iholla, mutta se ei tarkoita että tuloksia ei synny. Sarjahoito ja riittävä hoitokertojen määrä tasaavat yksilöllisiä eroja merkittävästi, sillä kumulatiivinen vaikutus rakentuu jokaisen hoidon myötä.
+        Tämä yksilöllinen arviointi on olennainen osa hoidon turvallisuutta – ei vain lisäpalvelu.
       </p>
 
-      <h2>Mihin haasteisiin kliininen mikroneulaus soveltuu</h2>
-      <p>
-        Koska hoito perustuu ihon oman rakenteen vahvistamiseen sisältäpäin, se soveltuu laaja-alaisesti erilaisiin ihon haasteisiin:
-      </p>
-
-      <h3>Aknearpien tasoittuminen</h3>
-      <p>
-        Uusi kollageeni nostaa arven jättämää kuoppaa ylöspäin ja tasoittaa ihon pintarakennetta. Tulos ei synny hetkessä, mutta sarjahoidolla muutos on selkeästi havaittavissa.
-      </p>
-
-      <h3>Juonteet ja ikääntymisen merkit</h3>
-      <p>
-        Kun ihon kollageenirakenne vahvistuu, hienot juonteet silottuvat ja iho näyttää napakoituneemmalta.
-      </p>
-
-      <h3>Pigmenttimuutokset</h3>
-      <p>
-        Ihon kiihtynyt uusiutuminen auttaa hajottamaan ylimääräistä melaniinikertymää, mikä tasaa ihon sävyä ja vaalentaa tummia läiskiä tasaisesti.
-      </p>
-
-      <h3>Laajentuneet ihohuokoset</h3>
-      <p>
-        Kun ihohuokosia ympäröivä tukirakenne vahvistuu kollageenisynteesin kautta, huokoset supistuvat ja näyttävät huomattavasti pienemmiltä.
-      </p>
-
-      <h2>Kliininen hoito – mitä se tarkoittaa käytännössä</h2>
-      <p>
-        Sana &ldquo;kliininen&rdquo; ei ole pelkkä markkinointitermi. Se tarkoittaa, että hoito toteutetaan terveydenhuollon ammattilaisen toimesta, lääkinnälliseksi laitteeksi luokitellulla välineistöllä ja ehdottomalla aseptiikalla.
-      </p>
-      <p>
-        Ammattilaislaite mahdollistaa neulaussyvyyden tarkan säädön, jolloin jokaiselle kasvojen alueelle valitaan optimaalinen syvyys ihon paksuuden ja hoidettavan haasteen mukaan. Tämä tarkkuus ei ole mahdollista kotikäyttöön tarkoitetuilla laitteilla. <a href="mikrorulla.htm">Lue lisää kliinisen mikroneulauksen ja mikroneularullan eroista.</a>
-      </p>
-      <p>
-        Steriilit kertakäyttöiset neulapäät vaihdetaan jokaisen hoidon alussa asiakkaan nähden. Hoitotila puhdistetaan kliinisen tarkasti jokaisen asiakkaan välissä.
-      </p>
-      <p>
-        Tulokset ovat kliinisessä ympäristössä parempia, koska hoito voidaan toteuttaa tarkemmin, turvallisemmin ja yksilöllisemmin kuin kotiolosuhteissa koskaan olisi mahdollista.
-      </p>
+      <hr>
 
       <h2>Yhteenveto</h2>
       <p>
-        Kliininen mikroneulaus on biologiaan perustuva menetelmä, joka aktivoi ihon omat korjausprosessit. Se ei pakota ihoa mihinkään keinotekoiseen, vaan ainoastaan herättää mekanismit, jotka ihossa jo ovat.
-      </p>
-      <p>
-        Tulokset syntyvät hitaasti mutta pysyvästi. Jokainen hoitokerta lisää uutta kollageenia, vahvistaa ihon tukirakennetta ja parantaa ihon tekstuuria tavalla, joka näkyy ja tuntuu.
+        Kliininen mikroneulaus ja mikroneularulla käyttävät samaa biologista mekanismia, mutta niiden toteutus poikkeaa merkittävästi toisistaan pistoskulman, neulasyvyyden säädön, hygienian ja laitteen sertifioinnin osalta. Nämä tekijät vaikuttavat suoraan sekä hoidon turvallisuuteen että saavutettaviin tuloksiin.
       </p>
     </div>
 
@@ -652,4 +680,3 @@
 
 </body>
 </html>
-                            
