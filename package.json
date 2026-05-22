@@ -2,11 +2,12 @@
   "name": "studiomahla",
   "version": "1.0.0",
   "private": true,
-  "description": "Mahlamäen Kauneusstudio – verkkosivusto. Sisältää Stripe Checkout -integraation kaupalle (api/checkout.js).",
+  "description": "Mahlamäen Kauneusstudio – verkkosivusto. Sisältää Stripen ennakkovarauksen + sähköpostit (api/).",
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
+    "resend": "^4.0.0",
     "stripe": "^17.5.0"
   }
 }
