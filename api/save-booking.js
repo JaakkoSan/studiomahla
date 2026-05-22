@@ -62,9 +62,18 @@ module.exports = async function handler(req, res) {
   try {
     const body = (req.body && typeof req.body === 'object') ? req.body : {};
     const setupIntentId = sanitize(body.setupIntentId, 100);
-    const name  = sanitize(body.name,  200);
-    const email = sanitize(body.email, 200);
-    const phone = sanitize(body.phone, 50);
+    const name     = sanitize(body.name,    200);
+    const email    = sanitize(body.email,   200).toLowerCase();
+    const phone    = sanitize(body.phone,   50);
+    const honeypot = sanitize(body.website, 100);
+
+    // Honeypot: real users never see the hidden 'website' field, so any value
+    // signals a bot. We return 200 silently so the bot doesn't learn it was
+    // detected and try again with a different approach.
+    if (honeypot) {
+      console.warn('Honeypot triggered, ignoring submission. Email was:', email);
+      return res.status(200).json({ ok: true });
+    }
 
     if (!setupIntentId.startsWith('seti_')) {
       return res.status(400).json({ error: 'Virheellinen varauksen tunniste' });
@@ -80,6 +89,24 @@ module.exports = async function handler(req, res) {
     }
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+    // Email-based duplicate check — Stripe doesn't enforce uniqueness on
+    // customer email, so we check ourselves to prevent accidental double
+    // submissions and basic spam from the same address.
+    try {
+      const existing = await stripe.customers.list({ email: email, limit: 10 });
+      const activeBooking = existing.data.find(function (c) {
+        return c.metadata && c.metadata.booking_status === 'active';
+      });
+      if (activeBooking) {
+        return res.status(409).json({
+          error: 'Tällä sähköpostilla on jo aktiivinen ennakkovaraus. ' +
+                 'Tarkistathan sähköpostisi — peruutuslinkin avulla voit tarvittaessa perua aiemman varauksen.'
+        });
+      }
+    } catch (e) {
+      console.warn('Duplicate check failed (continuing):', e && e.message);
+    }
 
     // 1. Verify SetupIntent — trust only Stripe, not the client.
     const setupIntent = await stripe.setupIntents.retrieve(setupIntentId);
