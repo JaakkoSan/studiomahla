@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Private/transactional pages — already have <meta name="robots" content="noindex">
+# but disallow here for belt-and-braces.
+Disallow: /admin.html
+Disallow: /peruuta.html
+Disallow: /api/
+
+Sitemap: https://www.studiomahla.fi/sitemap.xml
