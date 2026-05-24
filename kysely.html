@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sopiiko hoito minulle? | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Tee lyhyt kysely ja näe sopiiko kliininen mikroneulaus tai ProXN-kasvohoito sinulle.">
+  <!-- Testausvaiheessa: ei indeksointia. Poista kun julkaiset linkin sivustolle. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <meta name="theme-color" content="#3d5247">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    :root {
+      --green-dark: #3d5247;
+      --green-mid: #4a6157;
+      --green-light: #5a7268;
+      --cream: #f5f0e8;
+      --cream-warm: #ede7db;
+      --pink: #c8997a;
+      --pink-light: #d4a98a;
+      --pink-pale: #e8cdb8;
+      --white: #faf8f4;
+      --text-dark: #2a3830;
+      --text-mid: #4a5e55;
+      --danger: #b85a3a;
+      --success: #4a6157;
+
+      --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --nav-height: 72px;
+      --max-w: 1200px;
+      --section-px: clamp(24px, 5vw, 48px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0 0 .5em;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+    }
+    h1 em, h2 em { font-style: italic; color: var(--pink); }
+    p { margin: 0 0 1.1em; }
+    p:last-child { margin-bottom: 0; }
+
+    :focus-visible {
+      outline: 2px solid var(--pink);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    :focus:not(:focus-visible) { outline: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-link:focus {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      width: auto; height: auto; padding: 16px 24px;
+      background: var(--pink); color: var(--text-dark);
+      font-family: var(--font-sans); font-size: 14px;
+    }
+
+    .label {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.4em;
+    }
+    .label--pink-pale { color: var(--pink-pale); }
+    .label--mid { color: var(--text-mid); }
+    .label--pink { color: var(--pink); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 28px; min-height: 44px;
+      font-family: var(--font-sans);
+      font-weight: 400; font-size: 13px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: var(--pink); color: var(--text-dark);
+      border-radius: 2px;
+      transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+    }
+    .btn:hover { background: #b6876a; color: var(--text-dark); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn--secondary {
+      background: transparent; color: var(--text-mid);
+      border: 1px solid rgba(74, 94, 85, 0.25);
+    }
+    .btn--secondary:hover { background: var(--cream); color: var(--text-dark); border-color: rgba(74,94,85,0.4); }
+    .btn--large { padding: 18px 36px; font-size: 14px; min-height: 52px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-height);
+      background: var(--green-dark); color: var(--white);
+    }
+    .nav__inner {
+      max-width: var(--max-w); height: 100%;
+      margin: 0 auto; padding: 0 var(--section-px);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; color: var(--white); min-height: 44px; }
+    .brand__logo { width: 30px; height: 30px; color: var(--white); flex-shrink: 0; }
+    .brand__logo svg { width: 100%; height: 100%; }
+    .brand__name {
+      font-family: var(--font-sans);
+      font-weight: 400; font-size: 10.5px;
+      letter-spacing: 0.22em; text-transform: uppercase; line-height: 1.4;
+    }
+    .brand__name span { display: block; }
+
+    .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
+    .nav__link {
+      font-family: var(--font-sans);
+      font-weight: 400; font-size: 11px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--white);
+      min-height: 44px;
+      display: inline-flex; align-items: center;
+      padding: 4px 0;
+      transition: color .2s ease;
+    }
+    .nav__link:hover { color: var(--pink-pale); }
+    .btn--small { padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px; }
+
+    /* OPENING BANNER */
+    .opening-banner {
+      background: var(--pink-pale); color: var(--text-dark);
+      text-align: center;
+      padding: 10px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px; font-weight: 300; letter-spacing: 0.05em; line-height: 1.4;
+      position: fixed;
+      top: var(--nav-height); left: 0; right: 0;
+      z-index: 99;
+    }
+    .opening-banner a {
+      color: var(--text-dark); text-decoration: underline; text-underline-offset: 3px;
+    }
+    .opening-banner a:hover { color: var(--green-dark); }
+
+    /* HERO */
+    .quiz-hero {
+      background: var(--green-dark); color: var(--white);
+      padding: calc(clamp(64px, 9vw, 112px) + 40px) var(--section-px) clamp(80px, 12vw, 144px);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .quiz-hero::after {
+      content: ""; position: absolute;
+      left: -10%; right: -10%; bottom: -1px; height: 80px;
+      background: var(--cream-warm);
+      clip-path: ellipse(60% 100% at 50% 100%);
+    }
+    .quiz-hero__inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+    .quiz-hero h1 {
+      font-size: clamp(36px, 5.5vw, 56px);
+      font-weight: 300; line-height: 1.1;
+      margin: 12px 0 20px;
+      color: var(--white);
+      letter-spacing: -0.015em;
+    }
+    .quiz-hero p {
+      font-size: clamp(16px, 1.3vw, 18px); line-height: 1.8;
+      color: rgba(250, 248, 244, 0.92);
+      max-width: 560px; margin: 0 auto;
+    }
+
+    /* QUIZ CONTAINER */
+    .quiz {
+      background: var(--cream-warm);
+      padding: clamp(40px, 6vw, 72px) var(--section-px) clamp(64px, 10vw, 120px);
+    }
+    .quiz__card {
+      max-width: 720px; margin: 0 auto;
+      background: var(--white);
+      border-radius: 4px;
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid rgba(74, 94, 85, 0.08);
+      border-left: 4px solid var(--pink);
+    }
+
+    /* PROGRESS */
+    .progress {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 32px;
+    }
+    .progress__track {
+      flex: 1;
+      height: 4px;
+      background: var(--cream);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress__fill {
+      height: 100%;
+      background: var(--pink);
+      width: 20%;
+      transition: width .35s ease;
+    }
+    .progress__label {
+      font-family: var(--font-sans);
+      font-size: 11px; letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      flex-shrink: 0;
+    }
+    .progress__label strong { color: var(--text-dark); font-weight: 500; }
+
+    /* STEP */
+    .step { border: 0; padding: 0; margin: 0; }
+    .step[hidden] { display: none; }
+    .step__legend {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .step__hint {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .step__error {
+      color: var(--danger);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: rgba(184, 90, 58, 0.08);
+      border-left: 3px solid var(--danger);
+      border-radius: 2px;
+    }
+    .step__error[hidden] { display: none !important; }
+
+    /* OPTIONS */
+    .options {
+      display: grid;
+      gap: 8px;
+    }
+    @media (min-width: 640px) {
+      .options--two-col { grid-template-columns: 1fr 1fr; }
+    }
+    .option {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      background: var(--white);
+      border: 1px solid rgba(74, 94, 85, 0.15);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color .15s ease, background-color .15s ease;
+      min-height: 48px;
+    }
+    .option:hover { border-color: var(--pink-pale); background: rgba(232, 205, 184, 0.1); }
+    .option input {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      accent-color: var(--pink);
+      cursor: pointer;
+      margin: 0;
+    }
+    .option__text {
+      font-size: 15px; line-height: 1.4;
+      color: var(--text-dark);
+    }
+    .option:has(input:checked) {
+      border-color: var(--pink);
+      background: rgba(232, 205, 184, 0.18);
+    }
+    .option:has(input:checked) .option__text { font-weight: 500; }
+
+    /* ACTIONS */
+    .actions {
+      display: flex; gap: 12px; justify-content: space-between;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .actions__left { display: flex; gap: 12px; }
+    .actions__right { display: flex; gap: 12px; }
+    @media (max-width: 480px) {
+      .actions { flex-direction: column-reverse; gap: 10px; }
+      .actions__left, .actions__right { width: 100%; }
+      .actions .btn { width: 100%; }
+    }
+
+    /* RESULT VIEW */
+    .result__head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .result__head h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 8px;
+    }
+    .result__head__icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: var(--pink-pale);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green-dark);
+    }
+    .result__head__icon--block { background: rgba(184, 90, 58, 0.12); color: var(--danger); }
+    .result__head__icon svg { width: 32px; height: 32px; }
+    .result__main {
+      background: var(--cream);
+      padding: 24px 28px;
+      border-radius: 2px;
+      border-left: 3px solid var(--pink);
+      margin-bottom: 16px;
+    }
+    .result__main--block {
+      border-left-color: var(--danger);
+      background: rgba(184, 90, 58, 0.05);
+    }
+    .result__main p {
+      font-size: 16px; line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 0;
+    }
+    .result__addition {
+      background: var(--cream-warm);
+      padding: 18px 22px;
+      border-radius: 2px;
+      border-left: 3px solid var(--pink-pale);
+      margin-bottom: 12px;
+    }
+    .result__addition p {
+      font-size: 14px; line-height: 1.7;
+      color: var(--text-mid);
+      margin-bottom: 0;
+    }
+    .result__addition strong { color: var(--text-dark); }
+    .result__cta {
+      text-align: center;
+      margin-top: 32px;
+    }
+    .result__cta p {
+      font-size: 14px; color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+    .result__restart {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--text-mid);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      background: none; border-top: 0; border-left: 0; border-right: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    .result__restart:hover {
+      color: var(--pink); border-bottom-color: var(--pink);
+    }
+
+    /* FOOTER */
+    .footer { background: var(--green-dark); color: var(--white); padding: 64px var(--section-px) 28px; }
+    .footer__inner { max-width: var(--max-w); margin: 0 auto; }
+    .footer__cols {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: center;
+    }
+    @media (max-width: 768px) {
+      .footer__cols { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer__cta { justify-self: center; }
+    }
+    .footer__brand { display: flex; align-items: center; gap: 12px; color: var(--white); }
+    .footer__brand .brand__logo { width: 22px; height: 22px; }
+    .footer__contact {
+      font-size: 14px; line-height: 1.9;
+      color: rgba(250, 248, 244, 1); text-align: right;
+    }
+    .footer__contact a { color: inherit; text-decoration: none; }
+    .footer__contact a:hover { color: var(--pink-pale); }
+    @media (max-width: 768px) { .footer__contact { text-align: center; } }
+    .btn--outline {
+      background: transparent; color: var(--pink-pale); border: 1px solid var(--pink-pale);
+    }
+    .btn--outline:hover { background: var(--pink); color: var(--text-dark); border-color: var(--pink); }
+    .footer__bottom {
+      margin-top: 48px; padding-top: 24px;
+      border-top: 1px solid rgba(250, 248, 244, 0.12);
+      font-size: 13px; color: rgba(250, 248, 244, 1);
+      text-align: center; letter-spacing: 0.04em;
+    }
+    .footer__bottom a { color: inherit; text-decoration: none; }
+    .footer__bottom a:hover { color: var(--pink-pale); text-decoration: underline; }
+    .footer__bottom span { margin: 0 8px; }
+
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
+      <span class="brand__logo" aria-hidden="true">
+        <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+          <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+          <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+        </svg>
+      </span>
+      <span class="brand__name">
+        Mahlamäen
+        <span>Kauneusstudio</span>
+      </span>
+    </a>
+
+    <nav class="nav__right" aria-label="Päänavigaatio">
+      <a href="blogi.html" class="nav__link">Blogi</a>
+      <a href="kauppa.html" class="btn btn--small" aria-label="Tee ennakkovaraus">Ennakkovaraus</a>
+    </nav>
+  </div>
+</header>
+
+<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
+  Hoitola avataan syksyllä 2026 –
+  <a href="kauppa.html" aria-label="Varaa ensikäyntisi ennakkohintaan">varaa ensikäyntisi ennakkohintaan</a>
+</div>
+
+<main id="main-content">
+
+  <section class="quiz-hero" aria-labelledby="quiz-title">
+    <div class="quiz-hero__inner">
+      <p class="label label--pink-pale">Soveltuvuus­kysely</p>
+      <h1 id="quiz-title">Sopiiko hoito <em>minulle?</em></h1>
+      <p>Vastaa muutamaan kysymykseen niin näemme sopiiko kliininen mikroneulaus tai ProXN-kasvohoito sinun ihollesi.</p>
+    </div>
+  </section>
+
+  <section class="quiz" aria-labelledby="quiz-title">
+    <div class="quiz__card">
+
+      <!-- PROGRESS -->
+      <div class="progress" aria-hidden="true">
+        <div class="progress__track">
+          <div class="progress__fill" id="progressFill"></div>
+        </div>
+        <div class="progress__label">Vaihe <strong id="stepNum">1</strong> / 5</div>
+      </div>
+
+      <!-- FORM -->
+      <form id="quizForm" novalidate>
+
+        <!-- STEP 1: PÄÄONGELMA -->
+        <fieldset class="step" data-step="1">
+          <legend class="step__legend">Mikä on pääasiallinen iho-ongelmasi?</legend>
+          <p class="step__hint">Valitse yksi tai useampi. Vähintään yksi vaaditaan.</p>
+          <div class="options options--two-col" role="group" aria-labelledby="step1-error">
+            <label class="option"><input type="checkbox" name="problem" value="aknearvet"><span class="option__text">Aknearvet</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="akne_aktiivinen"><span class="option__text">Aktiivinen akne</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="tulehduksellinen"><span class="option__text">Tulehduksellinen iho</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="couperosa"><span class="option__text">Couperosa</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="ruusufinni"><span class="option__text">Ruusufinni</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="juonteet"><span class="option__text">Juonteet</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="velttous"><span class="option__text">Ihon velttous</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="pigmenttimuutokset"><span class="option__text">Pigmenttimuutokset</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="epatasainen"><span class="option__text">Epätasainen ihonsävy</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="huokoset"><span class="option__text">Laajentuneet ihohuokoset</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="kuiva"><span class="option__text">Kuiva iho</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="herkka"><span class="option__text">Herkkä tai reaktiivinen iho</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="yleinen"><span class="option__text">Ihon yleinen uudistaminen</span></label>
+            <label class="option"><input type="checkbox" name="problem" value="aurinko"><span class="option__text">Auringon aiheuttamat ihomuutokset</span></label>
+          </div>
+          <p class="step__error" id="step1-error" role="alert" hidden>Valitse vähintään yksi vaihtoehto jatkaaksesi.</p>
+        </fieldset>
+
+        <!-- STEP 2: IHOTYYPPI -->
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="step__legend">Mikä on ihotyyppisi?</legend>
+          <p class="step__hint">Valitse yksi tai useampi. Voit ohittaa jos et ole varma.</p>
+          <div class="options" role="group">
+            <label class="option"><input type="checkbox" name="skintype" value="kuiva"><span class="option__text">Kuiva</span></label>
+            <label class="option"><input type="checkbox" name="skintype" value="normaali"><span class="option__text">Normaali</span></label>
+            <label class="option"><input type="checkbox" name="skintype" value="sekaiho"><span class="option__text">Sekaiho</span></label>
+            <label class="option"><input type="checkbox" name="skintype" value="rasvainen"><span class="option__text">Rasvainen</span></label>
+            <label class="option"><input type="checkbox" name="skintype" value="herkka"><span class="option__text">Herkkä tai reaktiivinen</span></label>
+          </div>
+        </fieldset>
+
+        <!-- STEP 3: IKÄ -->
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="step__legend">Ikäsi</legend>
+          <p class="step__hint">Valitse yksi vaihtoehto.</p>
+          <div class="options" role="radiogroup" aria-labelledby="step3-error">
+            <label class="option"><input type="radio" name="age" value="alle25"><span class="option__text">Alle 25</span></label>
+            <label class="option"><input type="radio" name="age" value="25-35"><span class="option__text">25–35</span></label>
+            <label class="option"><input type="radio" name="age" value="36-45"><span class="option__text">36–45</span></label>
+            <label class="option"><input type="radio" name="age" value="46-55"><span class="option__text">46–55</span></label>
+            <label class="option"><input type="radio" name="age" value="yli55"><span class="option__text">Yli 55</span></label>
+          </div>
+          <p class="step__error" id="step3-error" role="alert" hidden>Valitse ikäluokka jatkaaksesi.</p>
+        </fieldset>
+
+        <!-- STEP 4: ELÄMÄNTAVAT -->
+        <fieldset class="step" data-step="4" hidden>
+          <legend class="step__legend">Elämäntavat</legend>
+          <p class="step__hint">Valitse kaikki sinuun pätevät tekijät. Voit ohittaa jos mikään ei sovellu.</p>
+          <div class="options" role="group">
+            <label class="option"><input type="checkbox" name="lifestyle" value="tupakointi"><span class="option__text">Tupakoin säännöllisesti</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="sahkotupakka"><span class="option__text">Käytän sähkötupakkaa</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="aurinko_ei_suojaa"><span class="option__text">Altistun säännöllisesti auringolle ilman suojaa</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="aurinkosuoja_paivittain"><span class="option__text">Käytän aurinkosuojaa päivittäin</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="alle6h_unta"><span class="option__text">Nukun säännöllisesti alle 6 tuntia yössä</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="stressi"><span class="option__text">Koen paljon stressiä arjessa</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="alkoholi"><span class="option__text">Käytän säännöllisesti alkoholia</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="vahan_nesteita"><span class="option__text">Juon vähän nesteitä päivittäin</span></label>
+            <label class="option"><input type="checkbox" name="lifestyle" value="epaterveellinen"><span class="option__text">Syön epäsäännöllisesti tai paljon sokeria ja pikaruokaa</span></label>
+          </div>
+        </fieldset>
+
+        <!-- STEP 5: KONTRAINDIKAATIOT -->
+        <fieldset class="step" data-step="5" hidden>
+          <legend class="step__legend">Onko sinulla jokin seuraavista?</legend>
+          <p class="step__hint">Valitse kaikki sinuun pätevät — tai "Ei mikään näistä" jos yksikään ei sovellu.</p>
+          <div class="options" role="group" aria-labelledby="step5-error">
+            <label class="option"><input type="checkbox" name="contra" value="raskaus"><span class="option__text">Raskaus</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="imetys"><span class="option__text">Imetys</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="infektio"><span class="option__text">Aktiivinen ihotulehdus tai infektio hoitoalueella</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="herpes"><span class="option__text">Aktiivinen herpesinfektio</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="keloidi"><span class="option__text">Keloidi- tai hypertrofinen arpi -taipumus</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="teras"><span class="option__text">Teräsallergia</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="verenohennus"><span class="option__text">Verenohennuslääkitys</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="immunosuppressio"><span class="option__text">Immunosuppressiivinen lääkitys tai sairaus</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="syopahoito"><span class="option__text">Aktiivinen syöpähoito</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="diabetes"><span class="option__text">Huonosti hallinnassa oleva diabetes</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="isotretinoiini"><span class="option__text">Isotretinoiini viimeisen 6 kuukauden aikana</span></label>
+            <label class="option" id="contraTupakka"><input type="checkbox" name="contra" value="tupakointi_step5"><span class="option__text">Tupakointi</span></label>
+            <label class="option"><input type="checkbox" name="contra" value="ei_mikaan" id="contraEiMikaan"><span class="option__text">Ei mikään näistä</span></label>
+          </div>
+          <p class="step__error" id="step5-error" role="alert" hidden>Valitse vähintään yksi vaihtoehto (tai "Ei mikään näistä").</p>
+        </fieldset>
+
+        <!-- ACTIONS -->
+        <div class="actions">
+          <div class="actions__left">
+            <button type="button" class="btn btn--secondary" id="prevBtn" hidden>← Edellinen</button>
+          </div>
+          <div class="actions__right">
+            <button type="button" class="btn" id="nextBtn">Seuraava →</button>
+            <button type="button" class="btn" id="submitBtn" hidden>Näytä tulos</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- RESULT VIEW -->
+      <div class="result" id="resultView" hidden>
+        <div class="result__head">
+          <div class="result__head__icon" id="resultIcon" aria-hidden="true">
+            <!-- icon set by JS depending on result type -->
+          </div>
+          <h2 id="resultTitle">Suosituksesi</h2>
+        </div>
+
+        <div class="result__main" id="resultMain">
+          <p id="resultMainText"></p>
+        </div>
+
+        <div id="resultAdditions"></div>
+
+        <div class="result__cta" id="resultCta">
+          <p>Aukaisemme varauskalenterin syksyllä 2026.</p>
+          <a href="https://varaa.timma.fi/studiomahla" class="btn btn--large" target="_blank" rel="noopener noreferrer">Varaa ensikäynti</a>
+        </div>
+
+        <div style="text-align:center; margin-top: 32px;">
+          <button type="button" class="result__restart" id="restartBtn">↻ Tee kysely uudelleen</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__cols">
+      <a href="index.html" class="footer__brand" aria-label="Mahlamäen Kauneusstudio – etusivu" style="text-decoration:none;">
+        <span class="brand__logo" aria-hidden="true">
+          <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+            <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+            <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+          </svg>
+        </span>
+        <span class="brand__name">
+          Mahlamäen
+          <span>Kauneusstudio</span>
+        </span>
+      </a>
+
+      <div class="footer__cta">
+        <a href="kauppa.html" class="btn btn--outline" aria-label="Tee ennakkovaraus">Ennakkovaraus</a>
+      </div>
+
+      <div class="footer__contact">
+        <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
+        <a href="tel:+358503671683">050 367 1683</a><br>
+        Mahlamäentie 14, 48300 Kotka
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    'use strict';
+
+    /* ---------------- elements ---------------- */
+    var form         = document.getElementById('quizForm');
+    var steps        = Array.prototype.slice.call(form.querySelectorAll('.step'));
+    var progressFill = document.getElementById('progressFill');
+    var stepNumEl    = document.getElementById('stepNum');
+    var prevBtn      = document.getElementById('prevBtn');
+    var nextBtn      = document.getElementById('nextBtn');
+    var submitBtn    = document.getElementById('submitBtn');
+    var resultView   = document.getElementById('resultView');
+    var resultMain   = document.getElementById('resultMain');
+    var resultMainText = document.getElementById('resultMainText');
+    var resultAdditions = document.getElementById('resultAdditions');
+    var resultIcon   = document.getElementById('resultIcon');
+    var restartBtn   = document.getElementById('restartBtn');
+    var contraTupakka = document.getElementById('contraTupakka');
+    var contraEiMikaan = document.getElementById('contraEiMikaan');
+
+    /* ---------------- state ---------------- */
+    var currentStep = 1;
+    var totalSteps  = steps.length;
+
+    /* ---------------- view management ---------------- */
+    function showStep(n) {
+      steps.forEach(function (s) {
+        s.hidden = (parseInt(s.getAttribute('data-step'), 10) !== n);
+      });
+      stepNumEl.textContent = String(n);
+      progressFill.style.width = (n / totalSteps * 100) + '%';
+      prevBtn.hidden = (n === 1);
+      if (n === totalSteps) {
+        nextBtn.hidden = true;
+        submitBtn.hidden = false;
+      } else {
+        nextBtn.hidden = false;
+        submitBtn.hidden = true;
+      }
+      // hide all step errors
+      form.querySelectorAll('.step__error').forEach(function (e) { e.hidden = true; });
+      // smooth scroll to top of card
+      var card = document.querySelector('.quiz__card');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ---------------- validation ---------------- */
+    function validateStep(n) {
+      if (n === 1) {
+        var checked = form.querySelectorAll('input[name="problem"]:checked');
+        if (checked.length === 0) {
+          document.getElementById('step1-error').hidden = false;
+          return false;
+        }
+      }
+      if (n === 3) {
+        var ageChecked = form.querySelector('input[name="age"]:checked');
+        if (!ageChecked) {
+          document.getElementById('step3-error').hidden = false;
+          return false;
+        }
+      }
+      if (n === 5) {
+        var contraChecked = form.querySelectorAll('input[name="contra"]:checked');
+        if (contraChecked.length === 0) {
+          document.getElementById('step5-error').hidden = false;
+          return false;
+        }
+      }
+      // steps 2 and 4 are optional (no validation)
+      return true;
+    }
+
+    /* ---------------- result calculation ---------------- */
+    function getValues(name) {
+      var inputs = form.querySelectorAll('input[name="' + name + '"]:checked');
+      return Array.prototype.map.call(inputs, function (i) { return i.value; });
+    }
+
+    function calculateResult() {
+      var problems        = getValues('problem');
+      var contraindications = getValues('contra');
+      var lifestyle       = getValues('lifestyle');
+
+      var ABSOLUTE_BLOCKS = ['raskaus', 'infektio', 'syopahoito', 'immunosuppressio'];
+      var MICRONEEDLING_BLOCKS = ['herpes', 'keloidi', 'teras', 'verenohennus', 'diabetes', 'isotretinoiini'];
+      var MICRONEEDLING_PROBLEMS = ['aknearvet', 'juonteet', 'velttous', 'pigmenttimuutokset', 'epatasainen', 'huokoset', 'aurinko'];
+      var PROXN_PROBLEMS = ['akne_aktiivinen', 'tulehduksellinen', 'couperosa', 'ruusufinni', 'kuiva', 'herkka'];
+      var NEGATIVE_LIFESTYLE = ['tupakointi', 'sahkotupakka', 'aurinko_ei_suojaa', 'alle6h_unta', 'stressi', 'alkoholi', 'vahan_nesteita', 'epaterveellinen'];
+
+      function anyMatch(list, set) { return list.some(function (x) { return set.indexOf(x) !== -1; }); }
+
+      var hasAbsoluteBlock = anyMatch(contraindications, ABSOLUTE_BLOCKS);
+      // Aktiivinen akne in pääongelma also blocks microneedling (it's a contraindication too)
+      var hasMicroneedlingBlock = anyMatch(contraindications, MICRONEEDLING_BLOCKS)
+                                   || problems.indexOf('akne_aktiivinen') !== -1;
+
+      var hasMicroneedlingProblem = anyMatch(problems, MICRONEEDLING_PROBLEMS);
+      var hasProxnProblem         = anyMatch(problems, PROXN_PROBLEMS);
+      var hasGeneral              = problems.indexOf('yleinen') !== -1;
+
+      var resultType;
+      if (hasAbsoluteBlock) {
+        resultType = 'absolute_block';
+      } else if (hasMicroneedlingBlock) {
+        resultType = 'microneedling_blocked';
+      } else if (hasGeneral || (hasMicroneedlingProblem && hasProxnProblem)) {
+        resultType = 'both_suit';
+      } else if (hasMicroneedlingProblem) {
+        resultType = 'microneedling_suits';
+      } else if (hasProxnProblem) {
+        resultType = 'proxn_suits';
+      } else {
+        // Fallback: ei selvää signaalia, ehdotetaan molempia ensikäynnillä
+        resultType = 'both_suit';
+      }
+
+      var additions = [];
+      // Imetys-viesti (informatiivinen) — ei näytetä jos absolute block (silloin viesti epärelevantti)
+      if (contraindications.indexOf('imetys') !== -1 && resultType !== 'absolute_block') {
+        additions.push('imetys');
+      }
+      // Elämäntapojen lisäviesti
+      var negativeLifestyleCount = lifestyle.filter(function (l) {
+        return NEGATIVE_LIFESTYLE.indexOf(l) !== -1;
+      }).length;
+      if (negativeLifestyleCount >= 3 && resultType !== 'absolute_block') {
+        additions.push('lifestyle');
+      }
+      // Tupakointi
+      var smoking = lifestyle.indexOf('tupakointi') !== -1
+                  || contraindications.indexOf('tupakointi_step5') !== -1;
+      if (smoking && resultType !== 'absolute_block') {
+        additions.push('smoking');
+      }
+
+      return { type: resultType, additions: additions };
+    }
+
+    /* ---------------- result text ---------------- */
+    var RESULT_TEXTS = {
+      absolute_block: 'Emme valitettavasti pysty tarjoamaan hoitoa tällä hetkellä. Suosittelemme ottamaan yhteyttä lääkäriin ensin.',
+      microneedling_blocked: 'Kliininen mikroneulaus ei tällä hetkellä sovi tilanteesi vuoksi. ProXN-kasvohoito on kuitenkin erinomainen vaihtoehto – se rauhoittaa ja vahvistaa ihoa turvallisesti. Palataan mikroneulauksen mahdollisuuteen myöhemmin.',
+      microneedling_suits: 'Vastauksesi perusteella kliininen mikroneulaus sopii hakemaasi vaivaan hyvin. Hoito aktivoi ihon oman kollageenituotannon ja uudistaa ihon rakennetta sisältäpäin. Varaa ensikäynti jossa arvioimme ihosi tilanteen yksilöllisesti.',
+      proxn_suits: 'Vastauksesi perusteella ProXN-kasvohoito sopii tilanteesi parhaiten. Hoito rauhoittaa tulehduksellista ihoa, vahvistaa suojakerroksen ja tukee ihon omaa uudistumista.',
+      both_suit: 'Vastauksesi perusteella molemmat palvelumme sopivat tilanteesi. Yhdessä ne muodostavat kokonaisvaltaisen hoitopolun.'
+    };
+
+    var ADDITION_TEXTS = {
+      imetys: '<strong>Imetys:</strong> Mikroneulaus ja ProXN-kasvohoito eivät fysiologisesti vaaranna imetystä tai aiheuta haittaa vauvalle. Imetys mainitaan yleisesti varovaisuusperiaatteen mukaisena kontraindikaationa, mutta päätös on sinun. Keskustelemme tilanteestasi mielellään tarkemmin ensikäynnillä.',
+      lifestyle: '<strong>Elämäntavat:</strong> Vastauksesi perusteella ihosi saattaa hyötyä erityisesti rauhoittavasta ja suojakerroksen vahvistavasta hoidosta. ProXN-kasvohoito sopii hyvin myös neulausten väliseksi ylläpitohoidoksi.',
+      smoking: '<strong>Tupakointi:</strong> Tupakointi heikentää kollageenisynteesiä ja hidastaa ihon paranemista. Hoidosta on silti hyötyä mutta tulokset voivat olla heikommat.'
+    };
+
+    /* ---------------- icons ---------------- */
+    var ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    var ICON_BLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+
+    /* ---------------- show result ---------------- */
+    function showResult() {
+      var r = calculateResult();
+
+      // Hide form actions; show result view
+      form.querySelector('.actions').hidden = true;
+      steps.forEach(function (s) { s.hidden = true; });
+      document.querySelector('.progress').style.display = 'none';
+      resultView.hidden = false;
+
+      // Icon + main color
+      if (r.type === 'absolute_block') {
+        resultIcon.innerHTML = ICON_BLOCK;
+        resultIcon.classList.add('result__head__icon--block');
+        resultMain.classList.add('result__main--block');
+        document.getElementById('resultCta').style.display = 'none';
+      } else {
+        resultIcon.innerHTML = ICON_CHECK;
+        resultIcon.classList.remove('result__head__icon--block');
+        resultMain.classList.remove('result__main--block');
+        document.getElementById('resultCta').style.display = '';
+      }
+
+      // Main text
+      resultMainText.textContent = RESULT_TEXTS[r.type] || '';
+
+      // Additions
+      resultAdditions.innerHTML = r.additions.map(function (key) {
+        return '<div class="result__addition"><p>' + ADDITION_TEXTS[key] + '</p></div>';
+      }).join('');
+
+      // Scroll up to result
+      var card = document.querySelector('.quiz__card');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ---------------- restart ---------------- */
+    function restart() {
+      // Clear all inputs
+      form.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(function (i) {
+        i.checked = false;
+      });
+      // Reset views
+      form.querySelector('.actions').hidden = false;
+      document.querySelector('.progress').style.display = '';
+      resultView.hidden = true;
+      resultIcon.classList.remove('result__head__icon--block');
+      resultMain.classList.remove('result__main--block');
+      resultAdditions.innerHTML = '';
+      currentStep = 1;
+      showStep(currentStep);
+      // Reset step 5 tupakka visibility
+      if (contraTupakka) contraTupakka.hidden = false;
+    }
+
+    /* ---------------- step 5: hide tupakointi if already selected in step 4 ---------------- */
+    function syncTupakkaVisibility() {
+      var step4Tupakka = form.querySelector('input[name="lifestyle"][value="tupakointi"]');
+      if (!step4Tupakka || !contraTupakka) return;
+      if (step4Tupakka.checked) {
+        contraTupakka.hidden = true;
+        // Also uncheck the step 5 tupakka if it was checked
+        var c = contraTupakka.querySelector('input');
+        if (c) c.checked = false;
+      } else {
+        contraTupakka.hidden = false;
+      }
+    }
+
+    /* ---------------- "Ei mikään näistä" exclusive logic ---------------- */
+    // When user picks "Ei mikään näistä", uncheck all other contra options.
+    // When user picks any other contra option, uncheck "Ei mikään näistä".
+    function setupEiMikaanLogic() {
+      if (!contraEiMikaan) return;
+      var contraInputs = form.querySelectorAll('input[name="contra"]');
+      contraInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+          if (input.value === 'ei_mikaan' && input.checked) {
+            // Uncheck all others
+            contraInputs.forEach(function (other) {
+              if (other.value !== 'ei_mikaan') other.checked = false;
+            });
+          } else if (input.value !== 'ei_mikaan' && input.checked) {
+            // Uncheck "Ei mikään näistä"
+            contraEiMikaan.checked = false;
+          }
+        });
+      });
+    }
+
+    /* ---------------- WIRING ---------------- */
+    nextBtn.addEventListener('click', function () {
+      if (!validateStep(currentStep)) return;
+      if (currentStep < totalSteps) {
+        currentStep++;
+        if (currentStep === 5) syncTupakkaVisibility();
+        showStep(currentStep);
+      }
+    });
+    prevBtn.addEventListener('click', function () {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+    submitBtn.addEventListener('click', function () {
+      if (!validateStep(currentStep)) return;
+      showResult();
+    });
+    restartBtn.addEventListener('click', restart);
+
+    // Allow Enter key to advance (but not in <input>s that submit the form)
+    form.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        if (currentStep < totalSteps) {
+          nextBtn.click();
+        } else {
+          submitBtn.click();
+        }
+      }
+    });
+
+    // Setup exclusive logic for "Ei mikään näistä"
+    setupEiMikaanLogic();
+
+    // Boot
+    showStep(currentStep);
+  })();
+</script>
+
+</body>
+</html>
