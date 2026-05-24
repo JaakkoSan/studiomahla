@@ -652,12 +652,13 @@
     <div id="bookingsError" class="empty" style="color:var(--danger);" hidden></div>
   </section>
 
-  <!-- ESITIEDOT TAB -->
+<!-- ESITIEDOT TAB -->
   <section id="esitiedotView" role="tabpanel" aria-labelledby="tabEsitiedotBtn" hidden>
     <div class="page__head">
       <h1>Esitietolomakkeet</h1>
       <span class="page__meta" id="esitiedotMeta"></span>
-      <button type="button" class="refresh-btn" id="refreshEsitiedotBtn">↻ Päivitä</button>
+      <button type="button" class="refresh-btn" id="gdprCheckBtn" style="margin-left:auto;" title="Etsii yli 2 vuotta vanhat tietueet ja lähettää muistutusviestin">⚖ Aja GDPR-tarkistus</button>
+      <button type="button" class="refresh-btn" id="refreshEsitiedotBtn" style="margin-left:8px;">↻ Päivitä</button>
     </div>
 
     <div id="esitiedotList" class="esitiedot-list"></div>
@@ -691,7 +692,10 @@
     <div class="modal-detail__body" id="detailModalBody"></div>
     <footer class="modal-detail__foot">
       <button type="button" class="btn btn--danger" id="detailDeleteBtn">Poista lomake</button>
-      <button type="button" class="btn btn--secondary" id="detailCloseBtn2">Sulje</button>
+      <div style="display:flex; gap:10px;">
+        <button type="button" class="btn" id="detailUpdateBtn" title="Merkitse asiakkaan käynti tapahtuneeksi tänään">✓ Päivitä käynti</button>
+        <button type="button" class="btn btn--secondary" id="detailCloseBtn2">Sulje</button>
+      </div>
     </footer>
   </div>
 </div>
@@ -814,6 +818,7 @@
 
     /* esitiedot */
     var refreshEsitiedotBtn = document.getElementById('refreshEsitiedotBtn');
+    var gdprCheckBtn        = document.getElementById('gdprCheckBtn');
     var esitiedotList       = document.getElementById('esitiedotList');
     var esitiedotEmpty      = document.getElementById('esitiedotEmpty');
     var esitiedotError      = document.getElementById('esitiedotError');
@@ -833,6 +838,7 @@
     var detailCloseBtn    = document.getElementById('detailCloseBtn');
     var detailCloseBtn2   = document.getElementById('detailCloseBtn2');
     var detailDeleteBtn   = document.getElementById('detailDeleteBtn');
+    var detailUpdateBtn   = document.getElementById('detailUpdateBtn');
 
     /* delete modal */
     var deleteModal       = document.getElementById('deleteModal');
@@ -1237,7 +1243,12 @@
               (e.sahkoposti ? '<span>' + escapeHtml(e.sahkoposti) + '</span>' : '') +
               (e.puhelin ? '<span>' + escapeHtml(e.puhelin) + '</span>' : '') +
             '</div>' +
-            '<div class="esitieto-row__date">' + escapeHtml(fmtIso(e.created_at)) + '</div>' +
+            '<div class="esitieto-row__date">' +
+              'Lähetetty: ' + escapeHtml(fmtIso(e.created_at)) +
+              (e.last_updated && e.last_updated !== e.created_at
+                ? '<br>Päivitetty: ' + escapeHtml(fmtIso(e.last_updated))
+                : '') +
+            '</div>' +
             '<div class="esitieto-row__arrow" aria-hidden="true">›</div>' +
           '</button>';
       });
@@ -1345,6 +1356,7 @@
           '<h3 class="detail-section__title">Tekniset tiedot</h3>' +
           '<div class="detail-grid">' +
             '<div class="detail-grid__label">Lähetysaika</div>' + maybeMutedValue(fmtIso(rec.created_at)) +
+            '<div class="detail-grid__label">Päivitetty</div>' + maybeMutedValue(fmtIso(rec.last_updated)) +
             '<div class="detail-grid__label">IP-osoite</div>' + maybeMutedValue(rec.ip_osoite) +
             '<div class="detail-grid__label">Tietuetunnus</div>' +
               '<span class="detail-grid__value" style="font-family:monospace;font-size:12px;">' + escapeHtml(rec.id || '') + '</span>' +
@@ -1381,10 +1393,10 @@
       deleteConfirmBtn.textContent = 'Poistetaan…';
 
       try {
-        var res = await fetch('/api/delete-esitietue', {
+        var res = await fetch('/api/esitiedot-admin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-          body: JSON.stringify({ id: pendingDeleteId })
+          body: JSON.stringify({ action: 'delete', id: pendingDeleteId })
         });
         var data = await res.json().catch(function () { return {}; });
 
@@ -1399,6 +1411,74 @@
         deleteConfirmBtn.disabled = false;
         deleteConfirmBtn.textContent = 'Poista pysyvästi';
         showToast(err.message || 'Poisto epäonnistui', 'error');
+      }
+    }
+
+    /* ======================================================== */
+    /* ESITIEDOT — UPDATE VISIT + GDPR CHECK                    */
+    /* ======================================================== */
+    async function markVisitUpdated(id, nameForToast) {
+      var token = getToken();
+      if (!token) { showPasswordView(); return; }
+
+      detailUpdateBtn.disabled = true;
+      var originalText = detailUpdateBtn.textContent;
+      detailUpdateBtn.textContent = 'Päivitetään…';
+
+      try {
+        var res = await fetch('/api/esitiedot-admin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'update', id: id })
+        });
+        if (res.status === 401) { closeDetailModal(); handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Päivitys epäonnistui');
+
+        showToast('Käynti merkitty päivitetyksi' + (nameForToast ? ' (' + nameForToast + ')' : '') + '.', 'success');
+        closeDetailModal();
+        loadEsitiedot();
+      } catch (err) {
+        showToast(err.message || 'Päivitys epäonnistui', 'error');
+        detailUpdateBtn.disabled = false;
+        detailUpdateBtn.textContent = originalText;
+      }
+    }
+
+    async function runGdprCheck() {
+      var token = getToken();
+      if (!token) { showPasswordView(); return; }
+
+      if (!confirm('Käy läpi kaikki esitietolomakkeet ja lähettää sähköposti-muistutuksen jokaisesta yli 2 vuotta päivittämättömästä tietueesta. Jatketaanko?')) {
+        return;
+      }
+
+      gdprCheckBtn.disabled = true;
+      var originalText = gdprCheckBtn.textContent;
+      gdprCheckBtn.textContent = '⚖ Tarkistetaan…';
+
+      try {
+        var res = await fetch('/api/esitiedot-admin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'gdpr-check' })
+        });
+        if (res.status === 401) { handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'GDPR-tarkistus epäonnistui');
+
+        var n = data.expiredCount || 0;
+        var sent = data.emailsSent || 0;
+        if (n === 0) {
+          showToast('GDPR-tarkistus valmis. Ei vanhentuneita tietueita.', 'success');
+        } else {
+          showToast('GDPR-tarkistus: ' + n + ' vanhentunut, ' + sent + ' muistutusta lähetetty.', 'success');
+        }
+      } catch (err) {
+        showToast(err.message || 'GDPR-tarkistus epäonnistui', 'error');
+      } finally {
+        gdprCheckBtn.disabled = false;
+        gdprCheckBtn.textContent = originalText;
       }
     }
 
@@ -1701,6 +1781,7 @@
 
     /* esitiedot */
     refreshEsitiedotBtn.addEventListener('click', function () { loadEsitiedot(); });
+    gdprCheckBtn.addEventListener('click', runGdprCheck);
     esitiedotList.addEventListener('click', function (e) {
       var row = e.target.closest('.esitieto-row');
       if (!row) return;
@@ -1718,6 +1799,11 @@
     });
     detailDeleteBtn.addEventListener('click', function () {
       if (openEsitietoRecord && openEsitietoRecord.id) askConfirmDelete(openEsitietoRecord.id);
+    });
+    detailUpdateBtn.addEventListener('click', function () {
+      if (openEsitietoRecord && openEsitietoRecord.id) {
+        markVisitUpdated(openEsitietoRecord.id, openEsitietoRecord.nimi);
+      }
     });
 
     /* delete modal */
