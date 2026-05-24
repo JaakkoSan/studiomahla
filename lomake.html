@@ -283,6 +283,52 @@
       outline: none; border-color: var(--pink); box-shadow: 0 0 0 1px var(--pink);
     }
 
+    /* GDPR-tietosuoja-callout */
+    .gdpr-notice {
+      background: var(--cream-warm);
+      border-left: 4px solid var(--pink);
+      border-radius: 2px;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 16px;
+      align-items: start;
+      margin: 24px 0 32px;
+    }
+    .gdpr-notice__icon {
+      color: var(--pink);
+      margin-top: 2px;
+    }
+    .gdpr-notice__icon svg { width: 26px; height: 26px; display: block; }
+    .gdpr-notice__title {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--text-dark);
+      margin: 0 0 8px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+    }
+    .gdpr-notice__text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      margin: 0 0 10px;
+    }
+    .gdpr-notice__text:last-child { margin-bottom: 0; }
+    .gdpr-notice__text a {
+      color: var(--pink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .gdpr-notice__text a:hover { color: var(--green-dark); }
+    @media (max-width: 480px) {
+      .gdpr-notice {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
     /* Contraindication rows: question + Kyllä/Ei radio pair */
     .kontra-list {
       display: flex; flex-direction: column;
@@ -512,6 +558,28 @@
           <p class="label label--mid">Osio 3</p>
           <h2 id="lomake-form-title">Esitietolomake</h2>
         </div>
+
+        <aside class="gdpr-notice" role="note" aria-label="Tietosuoja ja GDPR">
+          <span class="gdpr-notice__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M12 8v4"/>
+              <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
+            </svg>
+          </span>
+          <div>
+            <p class="gdpr-notice__title">Tietojen luottamuksellinen käsittely (GDPR)</p>
+            <p class="gdpr-notice__text">
+              Antamasi terveys- ja yhteystiedot ovat arkaluontoista tietoa, ja käsittelemme niitä luottamuksellisesti GDPR:n mukaisesti. Tiedot tallennetaan salatusti EU-alueen palvelimille (Supabase, Frankfurt) ja niitä käytetään vain hoitosi turvalliseen toteuttamiseen.
+            </p>
+            <p class="gdpr-notice__text">
+              <strong>Sinulla on oikeus</strong> tarkastaa, korjata, siirtää tai poistaa sinusta tallennetut tiedot koska tahansa. Lähetä pyyntö osoitteeseen <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a> — vastaamme 30 päivän kuluessa.
+            </p>
+            <p class="gdpr-notice__text">
+              Lue tarkemmin <a href="privacy.html">tietosuojaselosteesta</a> miten tietoja käsitellään, kuinka kauan niitä säilytetään ja mitä oikeuksia sinulla on.
+            </p>
+          </div>
+        </aside>
 
         <form id="prebookingForm" novalidate>
           <!-- PERUSTIEDOT -->

@@ -285,7 +285,7 @@
 
 <main id="main-content">
   <h1>Tietosuojaseloste</h1>
-  <p class="meta-updated">Päivitetty: 22.5.2026</p>
+  <p class="meta-updated">Päivitetty: 23.5.2026</p>
 
   <h2>Rekisterinpitäjä</h2>
   <address class="contact-block">
@@ -305,6 +305,7 @@
   </p>
   <ul>
     <li><strong>Ennakkovaraus</strong> — kun varaat ensikäyntisi ennakkoon studiomahla.fi-sivuston kautta. Käsittelyperusteena on sopimuksen täytäntöönpano.</li>
+    <li><strong>Esitietolomake</strong> — kun täytät hoitoa edeltävän esitietolomakkeen (terveys­tiedot, kontraindikaatiot, suostumukset). Tiedot mahdollistavat hoitosi turvallisen toteuttamisen. Käsittelyperusteena on sopimuksen täytäntöönpano ja terveys­tietojen osalta nimenomainen suostumuksesi (GDPR art. 9.2.a).</li>
     <li><strong>Ajanvaraus ja hoitojen toteuttaminen</strong> Timma-palvelun kautta sekä hoidon jälkeinen yhteydenpito. Käsittelyperusteena on sopimuksen täytäntöönpano.</li>
     <li><strong>Asiakaspalvelu</strong> sähköpostitse ja puhelimitse. Käsittelyperusteena on oikeutettu etu.</li>
     <li><strong>Lakisääteisten velvoitteiden täyttäminen</strong>, kuten kirjanpito. Käsittelyperusteena on lakisääteinen velvoite.</li>
@@ -320,6 +321,8 @@
     <li>Puhelinnumero</li>
     <li>Varauksen ja hoidon tiedot</li>
     <li>Ennakkovarauksen yhteydessä lisäksi: maksukortin tunniste ja viimeiset 4 numeroa, korttityyppi sekä veloitukseen liittyvät metatiedot (käsittelijä: Stripe, ks. alla)</li>
+    <li><strong>Esitietolomakkeen yhteydessä</strong> lisäksi: ikä, hoidettava iho-ongelma, kontraindikaatiot (raskaus, lääkitykset, ihosairaudet jne.), allergiat, muut lääkitykset sekä antamasi suostumukset. Nämä ovat <em>arkaluontoisia terveys­tietoja</em> (GDPR erityinen henkilötietoryhmä) ja niitä käsitellään korotetulla varovaisuudella.</li>
+    <li>Lomakkeen lähetyksen yhteydessä tallennetaan tekninen IP-osoite väärinkäytösten estämiseksi.</li>
   </ul>
   <p>
     <strong>Emme tallenna täydellisiä korttitietoja palvelimillemme.</strong> Korttitiedot käsittelee ja säilyttää PCI DSS -sertifioitu maksupalveluntarjoaja Stripe (ks. alla).
@@ -330,6 +333,11 @@
     Emme luovuta henkilötietojasi kolmansille osapuolille markkinointitarkoituksiin. Käytämme seuraavia tietojenkäsittelijöitä, joiden tehtävänä on käsitellä henkilötietoja meidän puolestamme:
   </p>
   <ul>
+    <li>
+      <strong>Supabase Inc. (EU-region, Frankfurt)</strong> — esitietolomakkeen terveys­tietojen ja yhteystietojen tallennus.
+      Tiedot säilytetään EU-alueen Postgres-tietokannassa, salataan levossa (AES-256) ja siirron aikana (TLS). Pääsy on rajattu Row Level Security -käytäntöihin niin että vain valtuutettu henkilökunta voi lukea tallennettuja tietoja.
+      Tietosuojaseloste: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>
+    </li>
     <li>
       <strong>Stripe Payments Europe, Ltd. (Irlanti) / Stripe Inc. (USA)</strong> — maksukorttien tallennus ja veloitukset.
       Stripe on PCI DSS Level 1 -sertifioitu maksupalveluntarjoaja. Tietoja voidaan siirtää EU:n ulkopuolelle Stripen Yhdysvaltain konserniyhtiöille; siirto perustuu EU–US Data Privacy Framework -järjestelyyn ja Euroopan komission hyväksymiin mallisopimuslausekkeisiin.
@@ -357,6 +365,9 @@
   </p>
   <p>
     <strong>Ennakkovarauksen tiedot</strong>: Jos peruutat ennakkovarauksen, asiakkaaseen liitetty korttitieto poistetaan välittömästi Stripen järjestelmästä. Tilausta ja peruutusta koskeva yhteenveto säilyy Stripen Customer-objektissa kirjanpitolain edellyttämän ajan.
+  </p>
+  <p>
+    <strong>Esitietolomakkeen tiedot</strong>: Hoitoa edeltävän esitietolomakkeen terveys­tiedot säilytetään aktiivisen asiakassuhteen ajan ja enintään viisi vuotta viimeisestä hoitokäynnistä. Voit pyytää tietojesi poistamista milloin tahansa lähettämällä sähköpostia osoitteeseen asiakaspalvelu@studiomahla.fi.
   </p>
 
   <h2>Korttitietojen käsittely</h2>
@@ -435,7 +446,7 @@
     </div>
 
     <div class="footer__bottom">
-      © 2025 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
+      © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
     </div>
   </div>
 </footer>
