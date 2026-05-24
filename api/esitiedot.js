@@ -6,17 +6,18 @@
 // — no sensitive data leaves the database via email.
 //
 // Required env vars:
-//   SUPABASE_URL           — e.g. https://abc123.supabase.co
-//   SUPABASE_ANON_KEY      — public anon key; INSERT-only via RLS policy
-//   RESEND_API_KEY         — for the minimal notification email
-//   EMAIL_FROM             — sender, e.g. 'Mahlamäen Kauneusstudio <asiakaspalvelu@studiomahla.fi>'
-//   BOOKING_NOTIFY_EMAIL   — recipient, e.g. asiakaspalvelu@studiomahla.fi
+//   SUPABASE_URL                  — e.g. https://abc123.supabase.co
+//   SUPABASE_SERVICE_ROLE_KEY     — server-only key; bypasses RLS (we validate ourselves)
+//   RESEND_API_KEY                — for the minimal notification email
+//   EMAIL_FROM                    — sender, e.g. 'Mahlamäen Kauneusstudio <asiakaspalvelu@studiomahla.fi>'
+//   BOOKING_NOTIFY_EMAIL          — recipient, e.g. asiakaspalvelu@studiomahla.fi
 //
-// IMPORTANT — Supabase Row Level Security:
-//   The `esitiedot` table MUST have RLS enabled, with an INSERT policy that
-//   allows the `anon` role to insert. Crucially, there should be NO SELECT
-//   policy for `anon` — only the service_role (used via Supabase Dashboard
-//   or admin tooling) should be able to read submissions back.
+// Why service_role and not anon:
+//   This is a server-side function that runs in Vercel (never exposed to the
+//   browser). Validation is done in this file before insert. Using the
+//   service_role key keeps things simple — no RLS rule maintenance required,
+//   and RLS still protects the table from any client-side access via anon key.
+//   The service_role key MUST stay in env vars only, never in client code.
 //
 // Request:  POST /api/esitiedot  { name, email, phone, age, skinIssue,
 //                                  kontra: { ... }, otherMeds, allergies,
@@ -59,7 +60,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     console.error('Supabase env vars not configured');
     return res.status(500).json({ error: 'Tietokantapalvelua ei ole konfiguroitu' });
   }
@@ -134,7 +135,7 @@ module.exports = async function handler(req, res) {
 
     const supabase = createClient(
       process.env.SUPABASE_URL,
-      process.env.SUPABASE_ANON_KEY,
+      process.env.SUPABASE_SERVICE_ROLE_KEY,
       { auth: { persistSession: false } }
     );
 
