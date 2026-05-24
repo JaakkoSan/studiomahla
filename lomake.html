@@ -111,16 +111,16 @@
       font-family: var(--font-sans);
       font-weight: 400; font-size: 13px;
       letter-spacing: 0.18em; text-transform: uppercase;
-      background: var(--pink); color: var(--white);
+      background: var(--pink); color: var(--text-dark);
       border-radius: 2px;
       transition: background-color .25s ease;
     }
-    .btn:hover { background: #b6876a; color: var(--white); }
+    .btn:hover { background: #b6876a; color: var(--text-dark); }
     .btn:disabled { opacity: 0.6; cursor: not-allowed; }
     .btn--outline {
       background: transparent; color: var(--pink-pale); border: 1px solid var(--pink-pale);
     }
-    .btn--outline:hover { background: var(--pink); color: var(--white); border-color: var(--pink); }
+    .btn--outline:hover { background: var(--pink); color: var(--text-dark); border-color: var(--pink); }
     .btn--small { padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px; }
     .btn--large { padding: 18px 40px; font-size: 14px; min-height: 52px; width: 100%; }
 
@@ -143,7 +143,7 @@
       font-weight: 400; font-size: 10.5px;
       letter-spacing: 0.22em; text-transform: uppercase; line-height: 1.4;
     }
-    .brand__name span { display: block; opacity: 0.85; }
+    .brand__name span { display: block; }
 
     .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
@@ -371,7 +371,7 @@
     }
     .radio-pill:hover { border-color: var(--pink); }
     .radio-pill.is-checked {
-      background: var(--pink); color: var(--white); border-color: var(--pink);
+      background: var(--pink); color: var(--text-dark); border-color: var(--pink);
     }
     @media (max-width: 540px) {
       .kontra-row { grid-template-columns: 1fr; gap: 10px; }
@@ -445,7 +445,7 @@
     .footer__brand .brand__logo { width: 22px; height: 22px; }
     .footer__contact {
       font-size: 14px; line-height: 1.9;
-      color: rgba(250, 248, 244, 0.82); text-align: right;
+      color: rgba(250, 248, 244, 1); text-align: right;
     }
     .footer__contact a { color: inherit; text-decoration: none; }
     .footer__contact a:hover { color: var(--pink-pale); }

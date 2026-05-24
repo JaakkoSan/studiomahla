@@ -125,11 +125,11 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       background: var(--pink);
-      color: var(--white);
+      color: var(--text-dark);
       border-radius: 2px;
       transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
-    .btn:hover { background: #b6876a; color: var(--white); }
+    .btn:hover { background: #b6876a; color: var(--text-dark); }
     .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
     .btn--outline {
       background: transparent;
@@ -137,7 +137,7 @@
       border: 1px solid var(--pink-pale);
     }
     .btn--outline:hover {
-      background: var(--pink); color: var(--white); border-color: var(--pink);
+      background: var(--pink); color: var(--text-dark); border-color: var(--pink);
     }
     .btn--small {
       padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px;
@@ -168,7 +168,7 @@
       text-transform: uppercase;
       line-height: 1.4;
     }
-    .brand__name span { display: block; opacity: 0.85; }
+    .brand__name span { display: block; }
 
     .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
@@ -468,7 +468,7 @@
     }
     .footer__brand { display: flex; align-items: center; gap: 12px; opacity: 0.7; color: var(--white); }
     .footer__brand .brand__logo { width: 22px; height: 22px; }
-    .footer__contact { font-size: 14px; line-height: 1.9; color: rgba(250, 248, 244, 0.82); text-align: right; }
+    .footer__contact { font-size: 14px; line-height: 1.9; color: rgba(250, 248, 244, 1); text-align: right; }
     .footer__contact a { color: inherit; text-decoration: none; }
     .footer__contact a:hover { color: var(--pink-pale); }
     @media (max-width: 768px) { .footer__contact { text-align: center; } }
