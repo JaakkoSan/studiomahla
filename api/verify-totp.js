@@ -10,13 +10,25 @@
 // Google Authenticator, Microsoft Authenticator, Authy, 1Password, etc.
 // We allow ±1 window (≈30s before/after) to tolerate small clock drift.
 //
+// Rate limiting: shared key 'login:<ip>' (same key used by verify-password)
+// so attackers can't alternate between the two endpoints to double their
+// budget. 10 attempts per 5 minutes per IP. Fails open if Upstash is
+// unavailable — see api/_ratelimit.js.
+//
 // Required env vars:
 //   ADMIN_PASSWORD
 //   TOTP_SECRET   — base32-encoded secret, configured once via
 //                   admin-setup-totp.html
+// Optional env vars (rate limiting only):
+//   UPSTASH_REDIS_REST_URL
+//   UPSTASH_REDIS_REST_TOKEN
 'use strict';
 
 const { passwordOk, issueSessionToken, TOKEN_TTL_SECONDS } = require('./_auth');
+const { checkRateLimit, getClientIp } = require('./_ratelimit');
+
+const RATE_LIMIT_MAX     = 10;
+const RATE_LIMIT_WINDOW  = 5 * 60; // seconds
 
 function getCode(body) {
   if (!body || typeof body !== 'object') return '';
@@ -42,6 +54,16 @@ module.exports = async function handler(req, res) {
     console.error('TOTP_SECRET not configured');
     return res.status(500).json({
       error: 'Kaksivaiheista tunnistautumista ei ole konfiguroitu',
+    });
+  }
+
+  const ip = getClientIp(req);
+  const rl = await checkRateLimit('login:' + ip, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW);
+  if (!rl.allowed) {
+    res.setHeader('Retry-After', String(rl.retryAfter));
+    return res.status(429).json({
+      error: 'Liian monta kirjautumisyritystä. Yritä uudelleen noin ' +
+        Math.ceil(rl.retryAfter / 60) + ' minuutin kuluttua.',
     });
   }
 
