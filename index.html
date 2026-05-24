@@ -632,20 +632,28 @@
       line-height: 1.85;
     }
 
-    .laite-logo-panel {
-      margin-top: clamp(28px, 4vw, 48px);
-      background: var(--green-dark);
-      border-radius: 4px;
-      padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 48px);
+    /* Hoidot-osion otsikkorivi: label/H2 vasemmalla, MicroPen-logo oikealla */
+    .hoidot-head {
+      max-width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: clamp(24px, 4vw, 48px);
+      flex-wrap: wrap;
     }
-    .laite-logo-panel__img {
-      display: block;
-      max-width: 320px;
+    .hoidot-head__text {
+      max-width: 720px;
+    }
+    .hoidot-head__logo {
+      max-width: 220px;
       width: 100%;
       height: auto;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .hoidot-head__logo {
+        max-width: 160px;
+      }
     }
 
     .care-list { margin: 18px 0 0; }
@@ -1056,9 +1064,15 @@
   <!-- 6. HOIDOT JA HINNAT -->
   <section class="section section--dark" aria-labelledby="hoidot-title">
     <div class="section__inner">
-      <div class="reveal" style="max-width: 720px;">
-        <p class="label label--pink-pale">Palvelumme</p>
-        <h2 id="hoidot-title">Hoidot</h2>
+      <div class="reveal hoidot-head">
+        <div class="hoidot-head__text">
+          <p class="label label--pink-pale">Palvelumme</p>
+          <h2 id="hoidot-title">Hoidot</h2>
+        </div>
+        <img src="assets/MicroPen-Logo-transparent.png"
+             alt="MicroPen EVO -laitevalmistajan logo"
+             class="hoidot-head__logo"
+             loading="lazy">
       </div>
 
       <div class="cards reveal">
@@ -1135,13 +1149,6 @@
           <h3>Steriilit kertakäyttöhoitopäät</h3>
           <p>Vaihdetaan aina asiakkaan nähden. Nestepitävä rakenne estää kontaminaation täydellisesti.</p>
         </div>
-      </div>
-
-      <div class="laite-logo-panel reveal">
-        <img src="assets/MicroPen-Logo-transparent.png"
-             alt="MicroPen EVO -valmistajan logo"
-             class="laite-logo-panel__img"
-             loading="lazy">
       </div>
     </div>
   </section>
