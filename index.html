@@ -1325,23 +1325,37 @@
   Varaa ennakkoon
 </a>
 
-<!-- JSON-LD SCHEMA -->
+<!-- JSON-LD SCHEMA: BeautySalon (paikallinen yritys) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
   "name": "Mahlamäen Kauneusstudio",
   "legalName": "Guild Lounge Oy",
-  "description": "Kliininen mikroneulaus terveydenhuollon ammattilaisten toteuttamana",
-  "url": "https://www.studiomahla.fi",
+  "description": "Kliininen mikroneulaus terveydenhuollon ammattilaisten toteuttamana Kotkassa. FDA-hyväksytty MicroPen EVO™ -laite.",
+  "url": "https://www.studiomahla.fi/",
+  "logo": "https://www.studiomahla.fi/assets/logo.svg",
+  "image": "https://www.studiomahla.fi/assets/micropenEVO.jpg",
   "telephone": "+358503671683",
   "email": "asiakaspalvelu@studiomahla.fi",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Kotka",
-    "addressRegion": "Ruonala",
+    "addressRegion": "Kymenlaakso",
+    "streetAddress": "Ruonala",
     "addressCountry": "FI"
   },
+  "areaServed": [
+    { "@type": "City", "name": "Kotka" },
+    { "@type": "City", "name": "Hamina" },
+    { "@type": "City", "name": "Kouvola" },
+    { "@type": "City", "name": "Pyhtää" },
+    { "@type": "City", "name": "Iitti" },
+    { "@type": "City", "name": "Miehikkälä" },
+    { "@type": "City", "name": "Virolahti" },
+    { "@type": "City", "name": "Loviisa" },
+    { "@type": "AdministrativeArea", "name": "Kymenlaakso" }
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -1350,7 +1364,58 @@
   },
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
-  "paymentAccepted": "Credit Card, MobilePay"
+  "paymentAccepted": "Credit Card, MobilePay",
+  "sameAs": []
+}
+</script>
+
+<!-- JSON-LD SCHEMA: FAQPage (usein kysytyt kysymykset) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Miten saavun studiolle ja kuinka ajoissa minun kannattaa tulla paikalle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Studio sijaitsee rauhallisella omakotitaloalueella Kotkan Ruonalassa. Tontin rajalla on bussipysäkki aivan sisäänkäynnin läheisyydessä, ja omalla autolla saapuville on varattu ilmainen pysäköintipaikka pihassa suoraan studion oven edustalla. Pyydämme saapumaan täsmälleen varattuna kellonaikana – studiolla ei ole erillistä odotustilaa, jotta voimme taata jokaiselle täydellisen yksityisyyden. Tarkemmat saapumisohjeet saat varausvahvistuksen yhteydessä."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sattuuko mikroneulaus ja miltä iho näyttää hoidon jälkeen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kliininen mikroneulaus tuntuu iholla pienenä nipistelynä tai värinänä, mutta toimenpide on erittäin siedettävä ja nopeasti ohi. Hoidon jälkeen iholla esiintyy punoitusta ja kevyttä kuumotusta – täysin normaali fysiologinen vaste ja merkki siitä, että ihon oma uudistumisprosessi on käynnistynyt. Punoitus laskee tyypillisesti jo ensimmäisen vuorokauden aikana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Miten hoidon turvallisuus ja hygienia varmistetaan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toimintamme ydin nojaa yli kahdenkymmenen vuoden kokemukseen terveydenhuoltoalalta. Noudatamme hoidoissa ehdotonta aseptiikkaa. Käytämme laitteessa yksinomaan steriilejä ja kertakäyttöisiä neulapäitä. Hoitotila ja pinnat puhdistetaan kliinisen tarkasti jokaisen asiakkaan välissä."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kuinka monta hoitokertaa ihoni tarvitsee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Näkyvien ja pysyvien rakenteellisten tulosten saavuttaminen vaatii useimmiten kolmesta kuuteen kerran sarjahoidon. Käsittelemme ihoa aina täysin yksilöllisesti. Suosittelemme varaamaan ensimmäisen ajan yksittäiseen hoitoon, jonka yhteydessä teemme asiantuntevan arvion ihosi tilanteesta ja laadimme optimaalisen aikataulun jatkolle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kuinka varaan ajan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ajanvaraus tapahtuu kätevästi Timman kautta – pääset varauskalenteriin sivuston Varaa aika -painikkeista. Timma näyttää reaaliaikaisesti vapaat ajat. Jos sinulla on kysyttävää ennen varausta, tavoitat meidät sähköpostilla asiakaspalvelu@studiomahla.fi."
+      }
+    }
+  ]
 }
 </script>
 
