@@ -5,6 +5,7 @@ Allow: /
 # but disallow here for belt-and-braces.
 Disallow: /admin.html
 Disallow: /peruuta.html
+Disallow: /lomake.html
 Disallow: /api/
 
 Sitemap: https://www.studiomahla.fi/sitemap.xml
