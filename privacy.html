@@ -285,7 +285,7 @@
 
 <main id="main-content">
   <h1>Tietosuojaseloste</h1>
-  <p class="meta-updated">Päivitetty: 23.5.2026</p>
+  <p class="meta-updated">Päivitetty: 24.5.2026</p>
 
   <h2>Rekisterinpitäjä</h2>
   <address class="contact-block">
@@ -344,7 +344,7 @@
       Tietosuojaseloste: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>
     </li>
     <li>
-      <strong>Resend (USA)</strong> — varausvahvistus- ja peruutusvahvistus­sähköpostien lähetys.
+      <strong>Resend (USA)</strong> — kaikki transaktiosähköpostit: ennakkovarauksen vahvistus, peruutusvahvistus, studiolle lähetettävä ilmoitus uudesta esitietolomakkeesta sekä sisäiset GDPR-säilytysaikamuistutukset adminille. Sähköposteissa kulkee tarvittavat yhteystiedot ja asiakkaan nimi; arkaluontoisia terveystietoja ei välitetä sähköpostitse.
       Siirto Yhdysvaltoihin perustuu EU–US Data Privacy Framework -järjestelyyn ja mallisopimuslausekkeisiin.
       Tietosuojaseloste: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">resend.com/legal/privacy-policy</a>
     </li>
@@ -367,7 +367,7 @@
     <strong>Ennakkovarauksen tiedot</strong>: Jos peruutat ennakkovarauksen, asiakkaaseen liitetty korttitieto poistetaan välittömästi Stripen järjestelmästä. Tilausta ja peruutusta koskeva yhteenveto säilyy Stripen Customer-objektissa kirjanpitolain edellyttämän ajan.
   </p>
   <p>
-    <strong>Esitietolomakkeen tiedot</strong>: Hoitoa edeltävän esitietolomakkeen terveys­tiedot säilytetään aktiivisen asiakassuhteen ajan ja enintään viisi vuotta viimeisestä hoitokäynnistä. Voit pyytää tietojesi poistamista milloin tahansa lähettämällä sähköpostia osoitteeseen asiakaspalvelu@studiomahla.fi.
+    <strong>Esitietolomakkeen tiedot</strong>: Hoitoa edeltävän esitietolomakkeen terveystiedot säilytetään <strong>enintään kaksi vuotta</strong> viimeisestä hoitokäynnistä tai muusta yhteydenotosta. Jokaisen käynnin yhteydessä tietueen aikaleima päivittyy, jolloin säilytysaika alkaa juosta uudestaan. Järjestelmämme tarkistaa kuukausittain automaattisesti vanhentuneet tietueet ja lähettää studiolle muistutuksen tietojen poistamisesta. Voit pyytää tietojesi poistamista milloin tahansa lähettämällä sähköpostia osoitteeseen asiakaspalvelu@studiomahla.fi — vastaamme 30 päivän kuluessa.
   </p>
 
   <h2>Korttitietojen käsittely</h2>
@@ -377,8 +377,15 @@
 
   <h2>Tietoturva</h2>
   <p>
-    Sivusto käyttää HTTPS-salausta. Maksukorttitietojen käsittely tapahtuu PCI DSS -standardin mukaisesti Stripen toimesta. Henkilötietoihin pääsyä on rajoitettu vain niille, jotka tarvitsevat niitä työtehtävissään.
+    Suojaamme henkilötietojasi monikerroksisesti:
   </p>
+  <ul>
+    <li>Sivusto käyttää HTTPS-salausta, joka on pakotettu päälle myös selaintasolla (HSTS).</li>
+    <li>Arkaluontoiset terveystiedot tallennetaan salatusti EU-alueen palvelimille (Supabase, Frankfurt). Tietokannassa on Row Level Security -käytäntö, joka estää tietojen lukemisen sivuston julkisesta osasta.</li>
+    <li>Maksukorttitietojen käsittely tapahtuu PCI DSS -standardin mukaisesti Stripen toimesta — täydet korttitiedot eivät kulje palvelimemme kautta.</li>
+    <li>Hallintapaneelimme on suojattu kaksivaiheisella tunnistautumisella (salasana + Authenticator-sovelluksen koodi). Kirjautumisyritysten määrää on rajoitettu.</li>
+    <li>Henkilötietoihin pääsyä on rajoitettu vain niille, jotka tarvitsevat niitä työtehtävissään.</li>
+  </ul>
 
   <h2>Evästeet</h2>
   <p>
