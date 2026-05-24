@@ -645,14 +645,21 @@
       max-width: 720px;
     }
     .hoidot-head__logo {
-      max-width: 220px;
-      width: 100%;
+      max-width: 500px;
+      width: 50%;
       height: auto;
       flex-shrink: 0;
     }
+    @media (max-width: 900px) {
+      .hoidot-head__logo {
+        max-width: 360px;
+        width: 45%;
+      }
+    }
     @media (max-width: 600px) {
       .hoidot-head__logo {
-        max-width: 160px;
+        max-width: 240px;
+        width: 100%;
       }
     }
 
