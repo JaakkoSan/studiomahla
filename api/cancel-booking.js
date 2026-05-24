@@ -196,7 +196,7 @@ function customerCancelHtml(ctx) {
             '<p style="font-size:16px;line-height:1.7;color:#2a3830;margin:0 0 24px;">Toivottavasti tapaamme vielä toiste!</p>',
             '<hr style="border:0;border-top:1px solid rgba(74,94,85,0.12);margin:24px 0;">',
             '<p style="font-size:13px;line-height:1.7;color:#4a5e55;margin:0;">',
-              'Mahlamäen Kauneusstudio · Kotka, Ruonala<br>',
+              'Mahlamäen Kauneusstudio · Mahlamäentie 14, 48300 Kotka<br>',
               '<a href="mailto:asiakaspalvelu@studiomahla.fi" style="color:#4a5e55;">asiakaspalvelu@studiomahla.fi</a> · ',
               '<a href="tel:+358503671683" style="color:#4a5e55;">050 367 1683</a>',
             '</p>',
@@ -219,7 +219,7 @@ function customerCancelText(ctx) {
     '',
     'Toivottavasti tapaamme vielä toiste!',
     '',
-    '— Mahlamäen Kauneusstudio · Kotka, Ruonala',
+    '— Mahlamäen Kauneusstudio · Mahlamäentie 14, 48300 Kotka',
     'asiakaspalvelu@studiomahla.fi · 050 367 1683',
   ].join('\n');
 }
