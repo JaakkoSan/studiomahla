@@ -632,6 +632,22 @@
       line-height: 1.85;
     }
 
+    .laite-logo-panel {
+      margin-top: clamp(28px, 4vw, 48px);
+      background: var(--green-dark);
+      border-radius: 4px;
+      padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .laite-logo-panel__img {
+      display: block;
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+    }
+
     .care-list { margin: 18px 0 0; }
     .care-list li {
       position: relative;
@@ -1119,6 +1135,13 @@
           <h3>Steriilit kertakäyttöhoitopäät</h3>
           <p>Vaihdetaan aina asiakkaan nähden. Nestepitävä rakenne estää kontaminaation täydellisesti.</p>
         </div>
+      </div>
+
+      <div class="laite-logo-panel reveal">
+        <img src="assets/MicroPen-Logo-transparent.png"
+             alt="MicroPen EVO -valmistajan logo"
+             class="laite-logo-panel__img"
+             loading="lazy">
       </div>
     </div>
   </section>
