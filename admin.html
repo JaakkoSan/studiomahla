@@ -154,6 +154,9 @@
     .login-card h2 {
       font-size: 26px; margin-bottom: 18px;
     }
+    .login-card p {
+      font-size: 14px; line-height: 1.7; color: var(--text-mid); margin: 0;
+    }
     .login-card label {
       display: block;
       font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -168,6 +171,37 @@
     .login-card input:focus {
       outline: none; border-color: var(--pink); box-shadow: 0 0 0 1px var(--pink);
     }
+    .login-card input.input--code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: 0.5em;
+      text-align: center;
+      font-size: 24px;
+      padding: 14px 14px;
+    }
+    .login-card__stage-meta {
+      font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin: 0 0 12px;
+      font-weight: 500;
+    }
+    .login-card__error {
+      color: var(--danger); font-size: 14px; line-height: 1.5;
+      margin: 14px 0 0; padding: 10px 14px;
+      background: rgba(184, 90, 58, 0.08);
+      border-left: 3px solid var(--danger); border-radius: 2px;
+    }
+    .login-card__error[hidden] { display: none !important; }
+    .login-card__back {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--text-mid);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    .login-card__back:hover { color: var(--pink); border-bottom-color: var(--pink); }
+
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       gap: 8px;
@@ -184,6 +218,11 @@
     .btn--small { padding: 8px 14px; font-size: 11px; }
     .btn--danger { background: var(--danger); }
     .btn--danger:hover { background: #a04d31; }
+    .btn--secondary {
+      background: transparent; color: var(--text-mid);
+      border: 1px solid rgba(74, 94, 85, 0.25);
+    }
+    .btn--secondary:hover { background: var(--cream); color: var(--text-dark); }
 
     /* BOOKING CARDS */
     .empty {
@@ -307,11 +346,6 @@
     .modal h2 { font-size: 22px; margin-bottom: 12px; }
     .modal p { font-size: 15px; line-height: 1.7; color: var(--text-mid); margin: 0 0 20px; }
     .modal__actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
-    .btn--secondary {
-      background: transparent; color: var(--text-mid);
-      border: 1px solid rgba(74, 94, 85, 0.25);
-    }
-    .btn--secondary:hover { background: var(--cream); color: var(--text-dark); }
 
     /* DETAIL MODAL — bigger, scrollable */
     .modal--detail {
@@ -456,16 +490,33 @@
 </nav>
 
 <main class="page">
-  <!-- LOGIN -->
-  <section class="login-card" id="loginView" hidden>
+
+  <!-- STAGE 1: PASSWORD -->
+  <section class="login-card" id="passwordView" hidden>
+    <p class="login-card__stage-meta">Vaihe 1 / 2</p>
     <h2>Kirjaudu sisään</h2>
-    <p style="font-size:14px;line-height:1.7;color:var(--text-mid);margin:0;">
-      Anna järjestelmänvalvojan salasana päästäksesi hallintapaneeliin.
-    </p>
-    <form id="loginForm">
+    <p>Anna järjestelmänvalvojan salasana päästäksesi hallintapaneeliin.</p>
+    <form id="passwordForm">
       <label for="adminPwd">Salasana</label>
       <input type="password" id="adminPwd" autocomplete="current-password" required>
-      <button type="submit" class="btn btn--block" id="loginBtn">Kirjaudu sisään</button>
+      <button type="submit" class="btn btn--block" id="passwordSubmitBtn">Jatka</button>
+      <p class="login-card__error" id="passwordError" hidden></p>
+    </form>
+  </section>
+
+  <!-- STAGE 2: TOTP -->
+  <section class="login-card" id="totpView" hidden>
+    <p class="login-card__stage-meta">Vaihe 2 / 2</p>
+    <h2>Authenticator-koodi</h2>
+    <p>Avaa Authenticator-sovelluksesi ja syötä 6-numeroinen koodi.</p>
+    <form id="totpForm">
+      <label for="adminTotp">Authenticator-koodi</label>
+      <input type="text" id="adminTotp" inputmode="numeric" pattern="[0-9]*"
+             maxlength="6" autocomplete="one-time-code" required
+             class="input--code" placeholder="000000">
+      <button type="submit" class="btn btn--block" id="totpSubmitBtn">Kirjaudu sisään</button>
+      <p class="login-card__error" id="totpError" hidden></p>
+      <a href="#" class="login-card__back" id="backToPasswordBtn">← Käytä eri salasanaa</a>
     </form>
   </section>
 
@@ -545,21 +596,31 @@
   (function () {
     'use strict';
 
-    var STORAGE_KEY = 'mahla_admin_pwd_v1';
-    var TAB_KEY     = 'mahla_admin_tab_v1';
+    /* ----- storage keys (sessionStorage so session ends with the tab) ----- */
+    var TOKEN_KEY   = 'mahla_admin_token_v2';   // 2FA-verified session token
+    var TAB_KEY     = 'mahla_admin_tab_v1';     // remember active tab in this session
 
     /* ----- elements ----- */
-    var loginView     = document.getElementById('loginView');
-    var bookingsView  = document.getElementById('bookingsView');
-    var esitiedotView = document.getElementById('esitiedotView');
-    var tabsNav       = document.getElementById('tabsNav');
-    var tabBookings   = document.getElementById('tabBookingsBtn');
-    var tabEsitiedot  = document.getElementById('tabEsitiedotBtn');
+    var passwordView   = document.getElementById('passwordView');
+    var totpView       = document.getElementById('totpView');
+    var bookingsView   = document.getElementById('bookingsView');
+    var esitiedotView  = document.getElementById('esitiedotView');
+    var tabsNav        = document.getElementById('tabsNav');
+    var tabBookings    = document.getElementById('tabBookingsBtn');
+    var tabEsitiedot   = document.getElementById('tabEsitiedotBtn');
 
-    var loginForm   = document.getElementById('loginForm');
-    var loginBtn    = document.getElementById('loginBtn');
-    var adminPwdEl  = document.getElementById('adminPwd');
-    var logoutBtn   = document.getElementById('logoutBtn');
+    var passwordForm   = document.getElementById('passwordForm');
+    var passwordSubmit = document.getElementById('passwordSubmitBtn');
+    var adminPwdEl     = document.getElementById('adminPwd');
+    var passwordError  = document.getElementById('passwordError');
+
+    var totpForm       = document.getElementById('totpForm');
+    var totpSubmit     = document.getElementById('totpSubmitBtn');
+    var adminTotpEl    = document.getElementById('adminTotp');
+    var totpError      = document.getElementById('totpError');
+    var backToPwdBtn   = document.getElementById('backToPasswordBtn');
+
+    var logoutBtn      = document.getElementById('logoutBtn');
 
     /* bookings */
     var refreshBookingsBtn = document.getElementById('refreshBookingsBtn');
@@ -598,28 +659,33 @@
     var toast = document.getElementById('toast');
 
     /* ----- state ----- */
+    var stagedPassword = '';              // held in memory between stage 1 → 2 only
     var pendingChargeCustomerId = null;
-    var openEsitietoRecord = null;       // currently shown in detail modal
-    var pendingDeleteId = null;          // currently pending deletion
-    var esitiedotCache = [];             // last fetched list for re-render
+    var openEsitietoRecord = null;
+    var pendingDeleteId = null;
+    var esitiedotCache = [];
     var toastTimer = null;
     var activeTab = 'bookings';
 
+    /* One-time migration: clean up the old localStorage password from v1.
+       If anyone still has it set on this device, this removes it. */
+    try { localStorage.removeItem('mahla_admin_pwd_v1'); } catch (e) {}
+
     /* ----- helpers ----- */
-    function getPwd() {
-      try { return localStorage.getItem(STORAGE_KEY) || ''; } catch (e) { return ''; }
+    function getToken() {
+      try { return sessionStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return ''; }
     }
-    function setPwd(p) {
-      try { localStorage.setItem(STORAGE_KEY, p); } catch (e) {}
+    function setToken(t) {
+      try { sessionStorage.setItem(TOKEN_KEY, t); } catch (e) {}
     }
-    function clearPwd() {
-      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+    function clearToken() {
+      try { sessionStorage.removeItem(TOKEN_KEY); } catch (e) {}
     }
     function getStoredTab() {
-      try { return localStorage.getItem(TAB_KEY) || 'bookings'; } catch (e) { return 'bookings'; }
+      try { return sessionStorage.getItem(TAB_KEY) || 'bookings'; } catch (e) { return 'bookings'; }
     }
     function setStoredTab(t) {
-      try { localStorage.setItem(TAB_KEY, t); } catch (e) {}
+      try { sessionStorage.setItem(TAB_KEY, t); } catch (e) {}
     }
 
     function showToast(msg, kind) {
@@ -657,22 +723,39 @@
     }
 
     function handle401(message) {
-      clearPwd();
-      showLogin();
-      showToast(message || 'Sessio vanheni — kirjaudu uudelleen.', 'error');
+      clearToken();
+      stagedPassword = '';
+      showPasswordView();
+      showToast(message || 'Istunto vanheni — kirjaudu uudelleen.', 'error');
     }
 
     /* ----- views ----- */
-    function showLogin() {
-      loginView.hidden = false;
-      bookingsView.hidden = true;
+    function hideAllViews() {
+      passwordView.hidden  = true;
+      totpView.hidden      = true;
+      bookingsView.hidden  = true;
       esitiedotView.hidden = true;
-      tabsNav.hidden = true;
-      logoutBtn.hidden = true;
+      tabsNav.hidden       = true;
+      logoutBtn.hidden     = true;
+    }
+
+    function showPasswordView() {
+      hideAllViews();
+      passwordView.hidden = false;
+      passwordError.hidden = true;
+      adminPwdEl.value = '';
+      stagedPassword = '';
       setTimeout(function () { adminPwdEl.focus(); }, 50);
     }
+    function showTotpView() {
+      hideAllViews();
+      totpView.hidden = false;
+      totpError.hidden = true;
+      adminTotpEl.value = '';
+      setTimeout(function () { adminTotpEl.focus(); }, 50);
+    }
     function showAdmin() {
-      loginView.hidden = true;
+      hideAllViews();
       tabsNav.hidden = false;
       logoutBtn.hidden = false;
       activateTab(activeTab);
@@ -699,35 +782,85 @@
     }
 
     /* ======================================================== */
-    /* LOGIN                                                    */
+    /* LOGIN — STAGE 1: PASSWORD                                */
     /* ======================================================== */
-    async function login(pwd) {
-      loginBtn.disabled = true;
-      loginBtn.textContent = 'Kirjaudutaan…';
+    async function submitPassword(pwd) {
+      passwordSubmit.disabled = true;
+      passwordSubmit.textContent = 'Tarkistetaan…';
+      passwordError.hidden = true;
+
       try {
-        var res = await fetch('/api/list-bookings', {
+        var res = await fetch('/api/verify-password', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
           body: '{}'
         });
         if (res.status === 401) {
-          showToast('Väärä salasana.', 'error');
-          loginBtn.disabled = false;
-          loginBtn.textContent = 'Kirjaudu sisään';
+          passwordError.textContent = 'Väärä salasana.';
+          passwordError.hidden = false;
           return;
         }
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
 
-        setPwd(pwd);
+        // Hold password in memory so we can send it together with TOTP code.
+        stagedPassword = pwd;
+        showTotpView();
+      } catch (err) {
+        passwordError.textContent = err.message || 'Kirjautuminen epäonnistui';
+        passwordError.hidden = false;
+      } finally {
+        passwordSubmit.disabled = false;
+        passwordSubmit.textContent = 'Jatka';
+      }
+    }
+
+    /* ======================================================== */
+    /* LOGIN — STAGE 2: TOTP                                    */
+    /* ======================================================== */
+    async function submitTotp(code) {
+      if (!stagedPassword) {
+        showToast('Aloita uudelleen — salasana ei ollut muistissa.', 'error');
+        showPasswordView();
+        return;
+      }
+      totpSubmit.disabled = true;
+      totpSubmit.textContent = 'Tarkistetaan…';
+      totpError.hidden = true;
+
+      try {
+        var res = await fetch('/api/verify-totp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: stagedPassword, code: code })
+        });
+        var data = await res.json().catch(function () { return {}; });
+
+        if (res.status === 401) {
+          totpError.textContent = 'Väärä koodi. Tarkista Authenticator-sovelluksesta.';
+          totpError.hidden = false;
+          adminTotpEl.value = '';
+          adminTotpEl.focus();
+          return;
+        }
+        if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
+        if (!data.token) throw new Error('Token puuttuu vastauksesta');
+
+        // 2FA passed. Clear staged password from memory and store the token.
+        stagedPassword = '';
+        adminPwdEl.value = '';
+        adminTotpEl.value = '';
+        setToken(data.token);
+
         showAdmin();
-        renderBookings(data.bookings || []);
-        // Preload the other tab lazily so it's ready when user switches
+        loadBookings();
         loadEsitiedot({ silent: true });
       } catch (err) {
-        showToast(err.message || 'Kirjautuminen epäonnistui', 'error');
-        loginBtn.disabled = false;
-        loginBtn.textContent = 'Kirjaudu sisään';
+        totpError.textContent = err.message || 'Kirjautuminen epäonnistui';
+        totpError.hidden = false;
+      } finally {
+        totpSubmit.disabled = false;
+        totpSubmit.textContent = 'Kirjaudu sisään';
       }
     }
 
@@ -735,8 +868,8 @@
     /* BOOKINGS                                                 */
     /* ======================================================== */
     async function loadBookings() {
-      var pwd = getPwd();
-      if (!pwd) { showLogin(); return; }
+      var token = getToken();
+      if (!token) { showPasswordView(); return; }
 
       refreshBookingsBtn.disabled = true;
       refreshBookingsBtn.textContent = '↻ Päivittää…';
@@ -744,7 +877,7 @@
       try {
         var res = await fetch('/api/list-bookings', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
           body: '{}'
         });
         if (res.status === 401) { handle401(); return; }
@@ -815,8 +948,8 @@
 
     async function confirmCharge() {
       if (!pendingChargeCustomerId) return;
-      var pwd = getPwd();
-      if (!pwd) { closeChargeModal(); showLogin(); return; }
+      var token = getToken();
+      if (!token) { closeChargeModal(); showPasswordView(); return; }
 
       chargeConfirm.disabled = true;
       chargeConfirm.textContent = 'Veloitetaan…';
@@ -824,7 +957,7 @@
       try {
         var res = await fetch('/api/charge-booking', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
           body: JSON.stringify({ customerId: pendingChargeCustomerId })
         });
         var data = await res.json().catch(function () { return {}; });
@@ -854,8 +987,8 @@
     async function loadEsitiedot(opts) {
       opts = opts || {};
       var silent = !!opts.silent;
-      var pwd = getPwd();
-      if (!pwd) { if (!silent) showLogin(); return; }
+      var token = getToken();
+      if (!token) { if (!silent) showPasswordView(); return; }
 
       if (!silent) {
         refreshEsitiedotBtn.disabled = true;
@@ -865,7 +998,7 @@
       try {
         var res = await fetch('/api/list-esitiedot', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
           body: '{}'
         });
         if (res.status === 401) {
@@ -918,7 +1051,6 @@
       esitiedotList.innerHTML = html;
     }
 
-    /* Finnish-language labels for the contraindication keys */
     var KONTRA_LABELS = {
       raskaus:          'Raskaus tai imetys',
       ihotulehdus:      'Aktiivinen ihotulehdus, ihottuma tai infektio hoitoalueella',
@@ -1049,8 +1181,8 @@
 
     async function confirmDelete() {
       if (!pendingDeleteId) return;
-      var pwd = getPwd();
-      if (!pwd) { closeDeleteModal(); showLogin(); return; }
+      var token = getToken();
+      if (!token) { closeDeleteModal(); showPasswordView(); return; }
 
       deleteConfirmBtn.disabled = true;
       deleteConfirmBtn.textContent = 'Poistetaan…';
@@ -1058,7 +1190,7 @@
       try {
         var res = await fetch('/api/delete-esitietue', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
           body: JSON.stringify({ id: pendingDeleteId })
         });
         var data = await res.json().catch(function () { return {}; });
@@ -1087,26 +1219,49 @@
     });
     tabEsitiedot.addEventListener('click', function () {
       activateTab('esitiedot');
-      // Refresh when entering tab if list is empty (first switch)
       if (esitiedotCache.length === 0 && esitiedotEmpty.hidden && esitiedotError.hidden) {
         loadEsitiedot();
       }
     });
 
-    /* login */
-    loginForm.addEventListener('submit', function (e) {
+    /* stage 1 form */
+    passwordForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var pwd = adminPwdEl.value;
       if (!pwd) return;
-      login(pwd);
+      submitPassword(pwd);
     });
+
+    /* stage 2 form */
+    totpForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var code = adminTotpEl.value.replace(/\s+/g, '');
+      if (!/^\d{6}$/.test(code)) {
+        totpError.textContent = 'Anna 6-numeroinen koodi.';
+        totpError.hidden = false;
+        return;
+      }
+      submitTotp(code);
+    });
+
+    /* keep code field digits-only */
+    adminTotpEl.addEventListener('input', function () {
+      var v = adminTotpEl.value.replace(/\D/g, '').slice(0, 6);
+      if (v !== adminTotpEl.value) adminTotpEl.value = v;
+    });
+
+    backToPwdBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showPasswordView();
+    });
+
+    /* logout */
     logoutBtn.addEventListener('click', function () {
-      clearPwd();
-      adminPwdEl.value = '';
+      clearToken();
       esitiedotCache = [];
       esitiedotList.innerHTML = '';
       bookingsList.innerHTML = '';
-      showLogin();
+      showPasswordView();
       showToast('Kirjauduit ulos.', 'success');
     });
 
@@ -1166,12 +1321,12 @@
 
     /* ----- BOOT ----- */
     activeTab = getStoredTab();
-    if (getPwd()) {
+    if (getToken()) {
       showAdmin();
       loadBookings();
       loadEsitiedot({ silent: true });
     } else {
-      showLogin();
+      showPasswordView();
     }
   })();
 </script>

@@ -4,42 +4,17 @@
 // metadata.booking_status === 'active' and source === 'ennakkovaraus').
 // Used by admin.html to render the management view.
 //
-// Auth: shared secret in env var ADMIN_PASSWORD, supplied by the client in
-// the 'x-admin-password' header (or 'authorization: Bearer <password>').
-// Constant-time comparison to prevent timing attacks.
+// Auth: requires a 2FA-verified session token from /api/verify-totp in
+// the 'x-admin-token' header. Password alone is NOT accepted — see
+// api/_auth.js for the full model.
 //
 // Required env vars:
 //   STRIPE_SECRET_KEY
-//   ADMIN_PASSWORD
+//   ADMIN_PASSWORD   (used to derive the session-token HMAC key)
 'use strict';
 
 const Stripe = require('stripe');
-const crypto = require('crypto');
-
-function timingSafeEqualStrings(a, b) {
-  const bufA = Buffer.from(String(a));
-  const bufB = Buffer.from(String(b));
-  if (bufA.length !== bufB.length) return false;
-  return crypto.timingSafeEqual(bufA, bufB);
-}
-
-function getProvidedPassword(req) {
-  const header = req.headers['x-admin-password'];
-  if (typeof header === 'string' && header) return header;
-  const auth = req.headers['authorization'];
-  if (typeof auth === 'string' && auth.toLowerCase().startsWith('bearer ')) {
-    return auth.slice(7);
-  }
-  return '';
-}
-
-function isAuthorized(req) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return false; // safe default: deny if not configured
-  const provided = getProvidedPassword(req);
-  if (!provided) return false;
-  return timingSafeEqualStrings(expected, provided);
-}
+const { isAdminAuthorized } = require('./_auth');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -53,8 +28,8 @@ module.exports = async function handler(req, res) {
     console.error('ADMIN_PASSWORD not configured');
     return res.status(500).json({ error: 'Adminia ei ole konfiguroitu' });
   }
-  if (!isAuthorized(req)) {
-    return res.status(401).json({ error: 'Väärä salasana' });
+  if (!isAdminAuthorized(req)) {
+    return res.status(401).json({ error: 'Istunto on vanhentunut' });
   }
 
   try {

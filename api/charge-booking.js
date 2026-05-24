@@ -4,7 +4,7 @@
 // Used by admin.html when the studio confirms an appointment and wants to bill.
 //
 // Request:  POST /api/charge-booking  { customerId }
-//           header 'x-admin-password: <ADMIN_PASSWORD>'
+//           header 'x-admin-token: <session token from /api/verify-totp>'
 // Response: 200 { ok: true, paymentIntentId, status }                       — charged
 //           200 { ok: false, paymentIntentId, status, error, needsAction }  — SCA required / declined
 //           4xx/5xx { error }
@@ -14,43 +14,24 @@
 //   charged_at:     ISO timestamp
 //   payment_intent_id: 'pi_...'
 //
+// Auth: requires a 2FA-verified session token. Password alone is NOT
+// accepted — see api/_auth.js for the full model.
+//
 // Required env vars:
 //   STRIPE_SECRET_KEY
-//   ADMIN_PASSWORD
+//   ADMIN_PASSWORD   (used to derive the session-token HMAC key)
 'use strict';
 
 const Stripe = require('stripe');
-const crypto = require('crypto');
+const { isAdminAuthorized } = require('./_auth');
 
 const AMOUNT_EUR_CENTS = 19000; // 190.00 EUR
 const CURRENCY         = 'eur';
 const DESCRIPTION      = 'Ennakkovaraus – ensikäynti';
 
-function timingSafeEqualStrings(a, b) {
-  const bufA = Buffer.from(String(a));
-  const bufB = Buffer.from(String(b));
-  if (bufA.length !== bufB.length) return false;
-  return crypto.timingSafeEqual(bufA, bufB);
-}
 function sanitize(value, maxLength) {
   if (typeof value !== 'string') return '';
   return value.trim().slice(0, maxLength);
-}
-function getProvidedPassword(req) {
-  const header = req.headers['x-admin-password'];
-  if (typeof header === 'string' && header) return header;
-  const auth = req.headers['authorization'];
-  if (typeof auth === 'string' && auth.toLowerCase().startsWith('bearer ')) {
-    return auth.slice(7);
-  }
-  return '';
-}
-function isAuthorized(req) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return false;
-  const provided = getProvidedPassword(req);
-  if (!provided) return false;
-  return timingSafeEqualStrings(expected, provided);
 }
 
 module.exports = async function handler(req, res) {
@@ -65,8 +46,8 @@ module.exports = async function handler(req, res) {
     console.error('ADMIN_PASSWORD not configured');
     return res.status(500).json({ error: 'Adminia ei ole konfiguroitu' });
   }
-  if (!isAuthorized(req)) {
-    return res.status(401).json({ error: 'Väärä salasana' });
+  if (!isAdminAuthorized(req)) {
+    return res.status(401).json({ error: 'Istunto on vanhentunut' });
   }
 
   try {

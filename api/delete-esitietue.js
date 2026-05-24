@@ -3,44 +3,19 @@
 // Deletes a single esitiedot row from Supabase by id (UUID).
 // Used by admin.html on the Esitiedot tab.
 //
-// Auth: shared secret in env var ADMIN_PASSWORD, supplied by the client in
-// the 'x-admin-password' header (or 'authorization: Bearer <password>').
-// Constant-time comparison to prevent timing attacks.
+// Auth: requires a 2FA-verified session token from /api/verify-totp in
+// the 'x-admin-token' header. Password alone is NOT accepted — see
+// api/_auth.js for the full model.
 //
 // Request body: { id: '<uuid>' }
 //
 // Required env vars:
 //   SUPABASE_URL
 //   SUPABASE_SERVICE_ROLE_KEY
-//   ADMIN_PASSWORD
+//   ADMIN_PASSWORD   (used to derive the session-token HMAC key)
 'use strict';
 
-const crypto = require('crypto');
-
-function timingSafeEqualStrings(a, b) {
-  const bufA = Buffer.from(String(a));
-  const bufB = Buffer.from(String(b));
-  if (bufA.length !== bufB.length) return false;
-  return crypto.timingSafeEqual(bufA, bufB);
-}
-
-function getProvidedPassword(req) {
-  const header = req.headers['x-admin-password'];
-  if (typeof header === 'string' && header) return header;
-  const auth = req.headers['authorization'];
-  if (typeof auth === 'string' && auth.toLowerCase().startsWith('bearer ')) {
-    return auth.slice(7);
-  }
-  return '';
-}
-
-function isAuthorized(req) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return false;
-  const provided = getProvidedPassword(req);
-  if (!provided) return false;
-  return timingSafeEqualStrings(expected, provided);
-}
+const { isAdminAuthorized } = require('./_auth');
 
 // Very loose UUID check; Supabase ids are uuid v4. We do not parse strictly
 // because Postgres will reject anything malformed anyway.
@@ -61,8 +36,8 @@ module.exports = async function handler(req, res) {
     console.error('ADMIN_PASSWORD not configured');
     return res.status(500).json({ error: 'Adminia ei ole konfiguroitu' });
   }
-  if (!isAuthorized(req)) {
-    return res.status(401).json({ error: 'Väärä salasana' });
+  if (!isAdminAuthorized(req)) {
+    return res.status(401).json({ error: 'Istunto on vanhentunut' });
   }
 
   const body = (req.body && typeof req.body === 'object') ? req.body : {};

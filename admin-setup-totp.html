@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TOTP-käyttöönotto · Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Authenticator-sovelluksen kertaluonteinen käyttöönotto.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <meta name="theme-color" content="#3d5247">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- QR code library: small, dependency-free, renders to <canvas>. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" defer></script>
+
+  <style>
+    :root {
+      --green-dark: #3d5247;
+      --green-mid: #4a6157;
+      --cream: #f5f0e8;
+      --cream-warm: #ede7db;
+      --pink: #c8997a;
+      --pink-pale: #e8cdb8;
+      --white: #faf8f4;
+      --text-dark: #2a3830;
+      --text-mid: #4a5e55;
+      --danger: #b85a3a;
+      --success: #4a6157;
+
+      --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --section-px: clamp(20px, 4vw, 40px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: var(--cream);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--pink); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--green-dark); }
+    button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+    }
+
+    :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 2px; }
+    :focus:not(:focus-visible) { outline: none; }
+
+    .topbar {
+      height: 64px;
+      background: var(--green-dark);
+      color: var(--white);
+      display: flex; align-items: center;
+      padding: 0 var(--section-px);
+    }
+    .topbar__brand {
+      display: flex; align-items: center; gap: 12px;
+      color: var(--white); text-decoration: none;
+    }
+    .topbar__brand svg { width: 24px; height: 24px; color: var(--white); }
+    .topbar__title {
+      font-family: var(--font-sans);
+      font-weight: 400; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    }
+
+    .page { padding: 32px var(--section-px) 80px; max-width: 640px; margin: 0 auto; }
+
+    .card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 36px;
+      border: 1px solid rgba(74, 94, 85, 0.08);
+      border-left: 4px solid var(--pink);
+      margin-bottom: 20px;
+    }
+    .card h1 { font-size: 28px; margin-bottom: 10px; }
+    .card h2 { font-size: 20px; margin: 0 0 12px; }
+    .card p { margin: 0 0 14px; color: var(--text-mid); }
+    .card p:last-child { margin-bottom: 0; }
+
+    .warning {
+      background: var(--cream-warm);
+      border-left: 4px solid var(--danger);
+      border-radius: 2px;
+      padding: 16px 20px;
+      margin: 0 0 24px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-dark);
+    }
+    .warning strong { color: var(--danger); font-weight: 500; }
+
+    label {
+      display: block;
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--text-mid); margin-bottom: 8px;
+    }
+    input {
+      width: 100%; font: inherit; font-size: 15px;
+      padding: 12px 14px; min-height: 44px;
+      border: 1px solid rgba(74, 94, 85, 0.2); border-radius: 2px;
+      background: var(--white); color: var(--text-dark);
+    }
+    input:focus {
+      outline: none; border-color: var(--pink); box-shadow: 0 0 0 1px var(--pink);
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px;
+      padding: 12px 22px; min-height: 44px;
+      font-family: var(--font-sans);
+      font-weight: 400; font-size: 12px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: var(--pink); color: var(--white);
+      border-radius: 2px;
+    }
+    .btn:hover { background: #b6876a; }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn--block { width: 100%; margin-top: 24px; }
+    .btn--secondary {
+      background: transparent; color: var(--text-mid);
+      border: 1px solid rgba(74, 94, 85, 0.25);
+    }
+    .btn--secondary:hover { background: var(--cream); color: var(--text-dark); }
+
+    .error {
+      color: var(--danger); font-size: 14px; line-height: 1.5;
+      margin: 16px 0 0; padding: 12px 14px;
+      background: rgba(184, 90, 58, 0.08);
+      border-left: 3px solid var(--danger); border-radius: 2px;
+    }
+
+    /* Setup result layout */
+    .qr-wrap {
+      text-align: center;
+      margin: 24px 0 8px;
+    }
+    .qr-wrap canvas {
+      display: inline-block;
+      background: #fff;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(74, 94, 85, 0.1);
+      max-width: 100%;
+      height: auto !important;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+      align-items: start;
+    }
+    .step__num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--pink);
+      color: var(--white);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500;
+      flex-shrink: 0;
+    }
+    .step__text {
+      font-size: 14px; line-height: 1.7; color: var(--text-dark);
+    }
+    .step__text strong { color: var(--text-dark); font-weight: 500; }
+
+    .code-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cream);
+      border: 1px solid rgba(74, 94, 85, 0.1);
+      border-radius: 2px;
+      padding: 12px 14px;
+      margin: 8px 0 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+      color: var(--text-dark);
+      word-break: break-all;
+      letter-spacing: 0.05em;
+    }
+    .code-box code { flex: 1; font-family: inherit; }
+    .copy-btn {
+      flex-shrink: 0;
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 2px;
+      color: var(--pink);
+      border: 1px solid var(--pink);
+      background: var(--white);
+      min-height: 30px;
+    }
+    .copy-btn:hover { background: var(--pink); color: var(--white); }
+    .copy-btn.is-done { background: var(--success); color: var(--white); border-color: var(--success); }
+
+    .toast {
+      position: fixed; bottom: 24px; left: 50%;
+      transform: translateX(-50%) translateY(120px);
+      background: var(--green-dark); color: var(--white);
+      padding: 14px 22px; border-radius: 4px; font-size: 14px;
+      max-width: calc(100vw - 32px); z-index: 200;
+      opacity: 0;
+      transition: opacity .25s ease, transform .25s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+    .toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast--success { background: var(--success); }
+    .toast--error   { background: var(--danger); }
+
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="topbar__brand" title="Etusivulle">
+    <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-miterlimit="4" d="M 180 200 L 180 100 L 250 160 L 320 100 L 320 200"/>
+      <path fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" d="M 250 160 C 220 190, 220 230, 250 250 C 280 230, 280 190, 250 160 Z"/>
+      <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="160" x2="250" y2="250"/>
+      <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="235" y2="190"/>
+      <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="205" x2="265" y2="190"/>
+      <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="238" y2="215"/>
+      <line stroke="currentColor" stroke-width="4" stroke-linecap="round" x1="250" y1="225" x2="262" y2="215"/>
+    </svg>
+    <span class="topbar__title">TOTP-käyttöönotto</span>
+  </a>
+</header>
+
+<main class="page">
+
+  <div class="warning" role="note">
+    <strong>Huomio:</strong> Tämä sivu generoi uuden TOTP-secretin joka kerta käytettäessä. Avaa tämä vain käyttöönotossa tai laitteen vaihdossa. <strong>Poista tämä sivu (admin-setup-totp.html) ja vastaava API (api/setup-totp.js) GitHub-repostasi käyttöönoton jälkeen.</strong>
+  </div>
+
+  <!-- STAGE 1: password -->
+  <section class="card" id="passwordCard">
+    <h1>Authenticator-sovelluksen käyttöönotto</h1>
+    <p>Tämä sivu generoi sinulle Authenticator-sovellukseen sopivan QR-koodin ja salaisen avaimen. Aloita antamalla nykyinen admin-salasana.</p>
+
+    <form id="passwordForm">
+      <label for="pwd">Admin-salasana</label>
+      <input type="password" id="pwd" autocomplete="current-password" required>
+      <button type="submit" class="btn btn--block" id="continueBtn">Jatka</button>
+      <p class="error" id="pwdError" hidden></p>
+    </form>
+  </section>
+
+  <!-- STAGE 2: result with QR + secret -->
+  <section class="card" id="resultCard" hidden>
+    <h1>Käyttöönotto-ohjeet</h1>
+    <p>Seuraa askeleita järjestyksessä. Pidä tämä välilehti auki kunnes olet valmis.</p>
+
+    <div id="alreadyConfiguredNote" class="warning" hidden style="margin-top:16px;">
+      <strong>Huom:</strong> TOTP_SECRET on jo asetettu Verceliin. Jos jatkat ja korvaat sen, vanha Authenticator-merkintä lakkaa toimimasta.
+    </div>
+
+    <div class="step" style="margin-top: 24px;">
+      <span class="step__num">1</span>
+      <div class="step__text">
+        <strong>Avaa Authenticator-sovellus</strong> puhelimellasi (Google Authenticator, Microsoft Authenticator, Authy, 1Password — mikä tahansa TOTP-yhteensopiva).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step__num">2</span>
+      <div class="step__text">
+        <strong>Lisää uusi tili</strong> skannaamalla QR-koodi alta. Jos et voi skannata, syötä alla oleva manuaalinen koodi sovellukseen.
+      </div>
+    </div>
+
+    <div class="qr-wrap">
+      <canvas id="qrCanvas" aria-label="TOTP QR-koodi"></canvas>
+    </div>
+
+    <label style="margin-top: 12px;">Manuaalinen koodi (jos QR ei skannaudu)</label>
+    <div class="code-box">
+      <code id="secretCode"></code>
+      <button type="button" class="copy-btn" data-target="secretCode">Kopioi</button>
+    </div>
+
+    <div class="step" style="margin-top: 28px;">
+      <span class="step__num">3</span>
+      <div class="step__text">
+        <strong>Kopioi tämä sama secret Verceliin</strong> ympäristömuuttujana <code style="font-family:monospace;background:var(--cream);padding:1px 6px;border-radius:2px;">TOTP_SECRET</code>. Mene Vercel-projekti → Settings → Environment Variables → Add.
+      </div>
+    </div>
+
+    <div class="code-box">
+      <code id="secretCode2"></code>
+      <button type="button" class="copy-btn" data-target="secretCode2">Kopioi</button>
+    </div>
+
+    <div class="step" style="margin-top: 28px;">
+      <span class="step__num">4</span>
+      <div class="step__text">
+        <strong>Deploy uudelleen Vercelissä</strong> jotta uusi env-muuttuja tulee käyttöön. (Deployments → uusin → ⋯ → Redeploy.)
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step__num">5</span>
+      <div class="step__text">
+        <strong>Testaa</strong> kirjautumalla osoitteessa <a href="admin.html">admin.html</a> — annettuasi salasanan, syötä Authenticator-sovelluksen 6-numeroinen koodi.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step__num">6</span>
+      <div class="step__text">
+        <strong>Poista tämä sivu ja sen API</strong> GitHub-repostasi: poista tiedostot <code style="font-family:monospace;background:var(--cream);padding:1px 6px;border-radius:2px;">admin-setup-totp.html</code> ja <code style="font-family:monospace;background:var(--cream);padding:1px 6px;border-radius:2px;">api/setup-totp.js</code>, sitten push.
+      </div>
+    </div>
+
+    <button type="button" class="btn btn--secondary btn--block" id="doneBtn" style="margin-top: 28px;">Sulje</button>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function () {
+    'use strict';
+
+    var passwordCard = document.getElementById('passwordCard');
+    var resultCard   = document.getElementById('resultCard');
+    var pwdForm      = document.getElementById('passwordForm');
+    var pwdEl        = document.getElementById('pwd');
+    var continueBtn  = document.getElementById('continueBtn');
+    var pwdError     = document.getElementById('pwdError');
+    var qrCanvas     = document.getElementById('qrCanvas');
+    var secretCode   = document.getElementById('secretCode');
+    var secretCode2  = document.getElementById('secretCode2');
+    var alreadyConfiguredNote = document.getElementById('alreadyConfiguredNote');
+    var doneBtn      = document.getElementById('doneBtn');
+    var toast        = document.getElementById('toast');
+    var toastTimer   = null;
+
+    function showToast(msg, kind) {
+      toast.textContent = msg;
+      toast.classList.remove('toast--success', 'toast--error');
+      if (kind === 'success') toast.classList.add('toast--success');
+      if (kind === 'error')   toast.classList.add('toast--error');
+      toast.classList.add('is-visible');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        toast.classList.remove('is-visible');
+      }, 3000);
+    }
+
+    function showPwdError(msg) {
+      pwdError.textContent = msg;
+      pwdError.hidden = false;
+    }
+    function clearPwdError() {
+      pwdError.textContent = '';
+      pwdError.hidden = true;
+    }
+
+    function renderQR(otpauthUrl) {
+      // QRious sometimes loads after DOMContentLoaded if defer races; wait if needed.
+      if (typeof QRious === 'undefined') {
+        setTimeout(function () { renderQR(otpauthUrl); }, 50);
+        return;
+      }
+      // Higher level + larger size = scans well from across the room.
+      new QRious({
+        element: qrCanvas,
+        value: otpauthUrl,
+        size: 240,
+        level: 'M',
+        background: '#ffffff',
+        foreground: '#2a3830',
+      });
+    }
+
+    async function copyToClipboard(text) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (e) { /* fall through */ }
+      // Fallback for non-secure contexts
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        return ok;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    pwdForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      clearPwdError();
+      var pwd = pwdEl.value;
+      if (!pwd) return;
+
+      continueBtn.disabled = true;
+      continueBtn.textContent = 'Generoi…';
+
+      try {
+        var res = await fetch('/api/setup-totp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-password': pwd },
+          body: '{}'
+        });
+        var data = await res.json().catch(function () { return {}; });
+
+        if (res.status === 401) {
+          showPwdError('Väärä salasana.');
+          continueBtn.disabled = false;
+          continueBtn.textContent = 'Jatka';
+          return;
+        }
+        if (!res.ok) throw new Error(data.error || 'Käyttöönotto epäonnistui');
+        if (!data.secret || !data.otpauthUrl) {
+          throw new Error('Puutteellinen vastaus palvelimelta');
+        }
+
+        // Wipe password from form once we're done with it.
+        pwdEl.value = '';
+
+        passwordCard.hidden = true;
+        resultCard.hidden = false;
+        alreadyConfiguredNote.hidden = !data.alreadyConfigured;
+
+        secretCode.textContent  = data.secret;
+        secretCode2.textContent = data.secret;
+        renderQR(data.otpauthUrl);
+
+        // Scroll the result into view.
+        resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (err) {
+        showPwdError(err.message || 'Käyttöönotto epäonnistui');
+        continueBtn.disabled = false;
+        continueBtn.textContent = 'Jatka';
+      }
+    });
+
+    /* copy buttons */
+    document.addEventListener('click', async function (e) {
+      var btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+      var targetId = btn.getAttribute('data-target');
+      var srcEl = document.getElementById(targetId);
+      if (!srcEl) return;
+      var text = srcEl.textContent || '';
+      var ok = await copyToClipboard(text);
+      if (ok) {
+        btn.classList.add('is-done');
+        var orig = btn.textContent;
+        btn.textContent = 'Kopioitu ✓';
+        setTimeout(function () {
+          btn.classList.remove('is-done');
+          btn.textContent = orig;
+        }, 1800);
+      } else {
+        showToast('Kopiointi epäonnistui — kopioi käsin.', 'error');
+      }
+    });
+
+    doneBtn.addEventListener('click', function () {
+      window.location.href = 'admin.html';
+    });
+  })();
+</script>
+
+</body>
+</html>
