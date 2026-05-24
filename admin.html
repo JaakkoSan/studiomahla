@@ -454,6 +454,102 @@
       font-weight: 600;
     }
 
+    /* BACKUP CODE input field (similar feel to TOTP but allows letters) */
+    .login-card input.input--backup {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: 0.18em;
+      text-align: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 14px 14px;
+    }
+
+    /* TOPBAR — extra actions next to logout */
+    .topbar__actions { display: flex; align-items: center; gap: 8px; }
+    .topbar__btn {
+      font-family: var(--font-sans);
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--pink-pale);
+      padding: 8px 12px;
+      border-radius: 2px;
+      display: inline-flex; align-items: center; gap: 6px;
+      min-height: 36px;
+    }
+    .topbar__btn:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+    .topbar__btn-icon { font-size: 14px; line-height: 1; }
+
+    /* BACKUP CODE STATUS in management modal */
+    .backup-status {
+      background: var(--cream);
+      border-radius: 2px;
+      padding: 16px 18px;
+      margin: 0 0 16px;
+      display: flex; gap: 16px; align-items: center; justify-content: space-between;
+    }
+    .backup-status__count {
+      font-family: var(--font-serif);
+      font-size: 28px; line-height: 1;
+      color: var(--text-dark);
+    }
+    .backup-status__count em { color: var(--pink); font-style: normal; }
+    .backup-status__label {
+      font-size: 12px; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin-top: 4px;
+    }
+    .backup-status--warn { background: rgba(184, 90, 58, 0.08); border-left: 3px solid var(--danger); }
+    .backup-status--warn .backup-status__count em { color: var(--danger); }
+
+    /* DISPLAYED CODES (after generation) */
+    .codes-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 14px;
+      margin: 16px 0;
+    }
+    @media (max-width: 480px) {
+      .codes-list { grid-template-columns: 1fr; }
+    }
+    .codes-list__item {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      background: var(--white);
+      border: 1px solid rgba(74, 94, 85, 0.15);
+      border-radius: 2px;
+      padding: 10px 12px;
+      text-align: center;
+      color: var(--text-dark);
+      user-select: all;
+    }
+    .codes-warning {
+      background: rgba(184, 90, 58, 0.08);
+      border-left: 3px solid var(--danger);
+      border-radius: 2px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+    .codes-warning strong { color: var(--danger); }
+
+    /* Plain text link used inline (e.g., 'use backup code' below TOTP) */
+    .inline-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--text-mid);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      background: none;
+      border-top: 0; border-left: 0; border-right: 0;
+      padding: 0;
+    }
+    .inline-link:hover { color: var(--pink); border-bottom-color: var(--pink); }
+
     [hidden] { display: none !important; }
   </style>
 </head>
@@ -472,7 +568,13 @@
     </svg>
     <span class="topbar__title">Hallinta</span>
   </a>
-  <button type="button" class="topbar__logout" id="logoutBtn" hidden>Kirjaudu ulos</button>
+  <div class="topbar__actions">
+    <button type="button" class="topbar__btn" id="manageBackupBtn" hidden title="Palautuskoodit">
+      <span class="topbar__btn-icon" aria-hidden="true">🔑</span>
+      <span>Palautuskoodit</span>
+    </button>
+    <button type="button" class="topbar__logout" id="logoutBtn" hidden>Kirjaudu ulos</button>
+  </div>
 </header>
 
 <!-- TABS (only visible after login) -->
@@ -517,6 +619,23 @@
       <button type="submit" class="btn btn--block" id="totpSubmitBtn">Kirjaudu sisään</button>
       <p class="login-card__error" id="totpError" hidden></p>
       <a href="#" class="login-card__back" id="backToPasswordBtn">← Käytä eri salasanaa</a>
+      <br>
+      <button type="button" class="inline-link" id="useBackupCodeBtn">Käytä palautuskoodia</button>
+    </form>
+  </section>
+
+  <!-- STAGE 2 ALTERNATE: BACKUP CODE -->
+  <section class="login-card" id="backupCodeView" hidden>
+    <p class="login-card__stage-meta">Vaihe 2 / 2 · Palautuskoodi</p>
+    <h2>Palautuskoodi</h2>
+    <p>Syötä yksi tallennetuista palautuskoodeistasi (muotoa XXXXX-XXXXX). Jokainen koodi toimii vain kerran.</p>
+    <form id="backupCodeForm">
+      <label for="adminBackupCode">Palautuskoodi</label>
+      <input type="text" id="adminBackupCode" autocomplete="off" required
+             class="input--backup" placeholder="XXXXX-XXXXX" maxlength="20">
+      <button type="submit" class="btn btn--block" id="backupCodeSubmitBtn">Kirjaudu sisään</button>
+      <p class="login-card__error" id="backupCodeError" hidden></p>
+      <a href="#" class="login-card__back" id="backToTotpBtn">← Käytä Authenticator-koodia</a>
     </form>
   </section>
 
@@ -589,6 +708,49 @@
   </div>
 </div>
 
+<!-- BACKUP CODES MANAGEMENT MODAL -->
+<div class="modal-overlay" id="backupManageModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="backupManageTitle" style="max-width: 520px;">
+    <h2 id="backupManageTitle">Palautuskoodit</h2>
+    <p>Palautuskoodit toimivat Authenticator-sovelluksen vaihtoehtona, jos puhelimesi katoaa. Jokainen koodi toimii vain kerran.</p>
+
+    <div class="backup-status" id="backupStatusBox">
+      <div>
+        <div class="backup-status__count"><em id="backupCountEl">–</em> <span style="font-size:14px;color:var(--text-mid);">/ 10</span></div>
+        <div class="backup-status__label">käyttämätöntä koodia</div>
+      </div>
+      <button type="button" class="btn btn--small" id="backupGenerateBtn">Generoi uudet</button>
+    </div>
+
+    <p style="font-size:13px;color:var(--text-mid);margin:0 0 16px;line-height:1.6;">
+      "Generoi uudet" -nappi mitätöi vanhat koodit ja luo 10 uutta. Tallenna ne salasanahallintaan tai tulosta turvalliseen paikkaan — niitä ei voi enää nähdä myöhemmin.
+    </p>
+
+    <div class="modal__actions">
+      <button type="button" class="btn btn--secondary" id="backupManageCloseBtn">Sulje</button>
+    </div>
+    <p class="login-card__error" id="backupManageError" hidden></p>
+  </div>
+</div>
+
+<!-- DISPLAY NEW CODES MODAL -->
+<div class="modal-overlay" id="codesDisplayModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="codesDisplayTitle" style="max-width: 560px;">
+    <h2 id="codesDisplayTitle">Uudet palautuskoodit</h2>
+
+    <div class="codes-warning">
+      <strong>Tärkeää:</strong> Tallenna nämä koodit nyt. Et näe niitä enää tämän modaalin sulkemisen jälkeen.
+    </div>
+
+    <div class="codes-list" id="codesListEl"></div>
+
+    <div class="modal__actions">
+      <button type="button" class="btn btn--secondary" id="codesCopyBtn">Kopioi leikepöydälle</button>
+      <button type="button" class="btn" id="codesDisplayDoneBtn">Tallensin koodit</button>
+    </div>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -619,6 +781,27 @@
     var adminTotpEl    = document.getElementById('adminTotp');
     var totpError      = document.getElementById('totpError');
     var backToPwdBtn   = document.getElementById('backToPasswordBtn');
+    var useBackupBtn   = document.getElementById('useBackupCodeBtn');
+
+    var backupCodeView   = document.getElementById('backupCodeView');
+    var backupCodeForm   = document.getElementById('backupCodeForm');
+    var backupCodeSubmit = document.getElementById('backupCodeSubmitBtn');
+    var adminBackupEl    = document.getElementById('adminBackupCode');
+    var backupCodeError  = document.getElementById('backupCodeError');
+    var backToTotpBtn    = document.getElementById('backToTotpBtn');
+
+    var manageBackupBtn  = document.getElementById('manageBackupBtn');
+    var backupManageModal   = document.getElementById('backupManageModal');
+    var backupManageCloseBtn = document.getElementById('backupManageCloseBtn');
+    var backupGenerateBtn   = document.getElementById('backupGenerateBtn');
+    var backupStatusBox     = document.getElementById('backupStatusBox');
+    var backupCountEl       = document.getElementById('backupCountEl');
+    var backupManageError   = document.getElementById('backupManageError');
+
+    var codesDisplayModal   = document.getElementById('codesDisplayModal');
+    var codesListEl         = document.getElementById('codesListEl');
+    var codesCopyBtn        = document.getElementById('codesCopyBtn');
+    var codesDisplayDoneBtn = document.getElementById('codesDisplayDoneBtn');
 
     var logoutBtn      = document.getElementById('logoutBtn');
 
@@ -731,12 +914,14 @@
 
     /* ----- views ----- */
     function hideAllViews() {
-      passwordView.hidden  = true;
-      totpView.hidden      = true;
-      bookingsView.hidden  = true;
-      esitiedotView.hidden = true;
-      tabsNav.hidden       = true;
-      logoutBtn.hidden     = true;
+      passwordView.hidden   = true;
+      totpView.hidden       = true;
+      backupCodeView.hidden = true;
+      bookingsView.hidden   = true;
+      esitiedotView.hidden  = true;
+      tabsNav.hidden        = true;
+      logoutBtn.hidden      = true;
+      manageBackupBtn.hidden = true;
     }
 
     function showPasswordView() {
@@ -754,10 +939,18 @@
       adminTotpEl.value = '';
       setTimeout(function () { adminTotpEl.focus(); }, 50);
     }
+    function showBackupCodeView() {
+      hideAllViews();
+      backupCodeView.hidden = false;
+      backupCodeError.hidden = true;
+      adminBackupEl.value = '';
+      setTimeout(function () { adminBackupEl.focus(); }, 50);
+    }
     function showAdmin() {
       hideAllViews();
       tabsNav.hidden = false;
       logoutBtn.hidden = false;
+      manageBackupBtn.hidden = false;
       activateTab(activeTab);
     }
     function activateTab(name) {
@@ -1210,6 +1403,184 @@
     }
 
     /* ======================================================== */
+    /* LOGIN — STAGE 2 ALTERNATE: BACKUP CODE                   */
+    /* ======================================================== */
+    async function submitBackupCode(backupCode) {
+      if (!stagedPassword) {
+        showToast('Aloita uudelleen — salasana ei ollut muistissa.', 'error');
+        showPasswordView();
+        return;
+      }
+      backupCodeSubmit.disabled = true;
+      backupCodeSubmit.textContent = 'Tarkistetaan…';
+      backupCodeError.hidden = true;
+
+      try {
+        var res = await fetch('/api/verify-totp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: stagedPassword, backupCode: backupCode })
+        });
+        var data = await res.json().catch(function () { return {}; });
+
+        if (res.status === 401) {
+          backupCodeError.textContent = 'Virheellinen tai jo käytetty palautuskoodi.';
+          backupCodeError.hidden = false;
+          adminBackupEl.value = '';
+          adminBackupEl.focus();
+          return;
+        }
+        if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
+        if (!data.token) throw new Error('Token puuttuu vastauksesta');
+
+        stagedPassword = '';
+        adminPwdEl.value = '';
+        adminBackupEl.value = '';
+        setToken(data.token);
+
+        showAdmin();
+        showToast('Kirjautuminen onnistui palautuskoodilla. Tarkista palautuskoodien tilanne ja generoi uudet jos tarpeen.', 'success');
+        loadBookings();
+        loadEsitiedot({ silent: true });
+      } catch (err) {
+        backupCodeError.textContent = err.message || 'Kirjautuminen epäonnistui';
+        backupCodeError.hidden = false;
+      } finally {
+        backupCodeSubmit.disabled = false;
+        backupCodeSubmit.textContent = 'Kirjaudu sisään';
+      }
+    }
+
+    /* ======================================================== */
+    /* BACKUP CODES MANAGEMENT                                  */
+    /* ======================================================== */
+    async function openBackupManageModal() {
+      var token = getToken();
+      if (!token) { showPasswordView(); return; }
+
+      backupCountEl.textContent = '…';
+      backupStatusBox.classList.remove('backup-status--warn');
+      backupManageError.hidden = true;
+      backupGenerateBtn.disabled = true;
+      backupGenerateBtn.textContent = 'Generoi uudet';
+      backupManageModal.hidden = false;
+
+      try {
+        var res = await fetch('/api/backup-codes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'status' })
+        });
+        if (res.status === 401) {
+          closeBackupManageModal();
+          handle401();
+          return;
+        }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Tilan haku epäonnistui');
+
+        var unused = typeof data.unused === 'number' ? data.unused : 0;
+        backupCountEl.textContent = String(unused);
+        if (unused === 0) {
+          backupStatusBox.classList.add('backup-status--warn');
+        } else if (unused <= 2) {
+          backupStatusBox.classList.add('backup-status--warn');
+        }
+        backupGenerateBtn.disabled = false;
+      } catch (err) {
+        backupManageError.textContent = err.message || 'Tilan haku epäonnistui';
+        backupManageError.hidden = false;
+        backupGenerateBtn.disabled = false;
+      }
+    }
+
+    function closeBackupManageModal() {
+      backupManageModal.hidden = true;
+    }
+
+    async function generateBackupCodes() {
+      var token = getToken();
+      if (!token) { closeBackupManageModal(); showPasswordView(); return; }
+
+      if (!confirm('Vanhat palautuskoodit mitätöidään ja luodaan 10 uutta. Jatketaanko?')) {
+        return;
+      }
+
+      backupGenerateBtn.disabled = true;
+      backupGenerateBtn.textContent = 'Generoidaan…';
+      backupManageError.hidden = true;
+
+      try {
+        var res = await fetch('/api/backup-codes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'generate' })
+        });
+        if (res.status === 401) {
+          closeBackupManageModal();
+          handle401();
+          return;
+        }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Generointi epäonnistui');
+        if (!Array.isArray(data.codes) || data.codes.length === 0) {
+          throw new Error('Palvelin ei palauttanut koodeja');
+        }
+
+        // Show the codes in a modal; user must save them.
+        showCodes(data.codes);
+        closeBackupManageModal();
+      } catch (err) {
+        backupManageError.textContent = err.message || 'Generointi epäonnistui';
+        backupManageError.hidden = false;
+        backupGenerateBtn.disabled = false;
+        backupGenerateBtn.textContent = 'Generoi uudet';
+      }
+    }
+
+    function showCodes(codes) {
+      codesListEl.innerHTML = codes.map(function (c) {
+        return '<div class="codes-list__item">' + escapeHtml(c) + '</div>';
+      }).join('');
+      codesDisplayModal.hidden = false;
+    }
+
+    function closeCodesDisplay() {
+      // Wipe codes from DOM before closing.
+      codesListEl.innerHTML = '';
+      codesDisplayModal.hidden = true;
+    }
+
+    async function copyCodesToClipboard() {
+      var items = codesListEl.querySelectorAll('.codes-list__item');
+      if (items.length === 0) return;
+      var text = Array.prototype.map.call(items, function (el) {
+        return el.textContent;
+      }).join('\n');
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          showToast('Koodit kopioitu leikepöydälle.', 'success');
+          return;
+        }
+      } catch (e) { /* fall through */ }
+      // Fallback
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('Koodit kopioitu leikepöydälle.', 'success');
+      } catch (e) {
+        showToast('Kopiointi epäonnistui — kopioi käsin.', 'error');
+      }
+    }
+
+    /* ======================================================== */
     /* WIRING                                                   */
     /* ======================================================== */
 
@@ -1254,6 +1625,51 @@
       e.preventDefault();
       showPasswordView();
     });
+
+    /* TOTP <-> backup code switch */
+    useBackupBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showBackupCodeView();
+    });
+    backToTotpBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showTotpView();
+    });
+
+    /* backup code form submit */
+    backupCodeForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var code = adminBackupEl.value.trim();
+      if (!code) {
+        backupCodeError.textContent = 'Anna palautuskoodi.';
+        backupCodeError.hidden = false;
+        return;
+      }
+      submitBackupCode(code);
+    });
+
+    /* uppercase live as the user types */
+    adminBackupEl.addEventListener('input', function () {
+      var pos = adminBackupEl.selectionStart;
+      var v = adminBackupEl.value.toUpperCase();
+      if (v !== adminBackupEl.value) {
+        adminBackupEl.value = v;
+        try { adminBackupEl.setSelectionRange(pos, pos); } catch (e) {}
+      }
+    });
+
+    /* backup codes management */
+    manageBackupBtn.addEventListener('click', openBackupManageModal);
+    backupManageCloseBtn.addEventListener('click', closeBackupManageModal);
+    backupManageModal.addEventListener('click', function (e) {
+      if (e.target === backupManageModal) closeBackupManageModal();
+    });
+    backupGenerateBtn.addEventListener('click', generateBackupCodes);
+
+    /* codes display modal */
+    codesDisplayDoneBtn.addEventListener('click', closeCodesDisplay);
+    codesCopyBtn.addEventListener('click', copyCodesToClipboard);
+    /* deliberately NO backdrop-click close — user might lose codes */
 
     /* logout */
     logoutBtn.addEventListener('click', function () {
@@ -1311,12 +1727,13 @@
     });
     deleteConfirmBtn.addEventListener('click', confirmDelete);
 
-    /* esc closes any open modal */
+    /* esc closes any open modal (but NOT the codes display — user could lose codes) */
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
-      if (!deleteModal.hidden) { closeDeleteModal(); return; }
-      if (!detailModal.hidden) { closeDetailModal(); return; }
-      if (!chargeModal.hidden) { closeChargeModal(); return; }
+      if (!backupManageModal.hidden) { closeBackupManageModal(); return; }
+      if (!deleteModal.hidden)       { closeDeleteModal(); return; }
+      if (!detailModal.hidden)       { closeDetailModal(); return; }
+      if (!chargeModal.hidden)       { closeChargeModal(); return; }
     });
 
     /* ----- BOOT ----- */

@@ -145,6 +145,47 @@ function isAdminAuthorized(req) {
   return isTokenAuthorized(req);
 }
 
+/* ---------- backup recovery codes ---------- */
+
+// Codes are hashed with HMAC-SHA256 using a key derived from ADMIN_PASSWORD
+// (separate key from session tokens — different "purpose" prefix). HMAC with
+// a server-side secret means a dumped database cannot be brute-forced even
+// though codes themselves are only ~50 bits — the attacker would also need
+// ADMIN_PASSWORD to compute candidate hashes.
+
+function getBackupCodeHmacKey() {
+  const base = process.env.ADMIN_PASSWORD || '';
+  return crypto
+    .createHash('sha256')
+    .update('mahla-backup-codes-v1|' + base)
+    .digest();
+}
+
+function hashBackupCode(code) {
+  // Normalize: uppercase, strip non-alphanumeric (users may write
+  // "q7k2p 9n4xf" or "q7k2p-9n4xf" — both should match).
+  const normalized = String(code || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  return crypto.createHmac('sha256', getBackupCodeHmacKey()).update(normalized).digest('hex');
+}
+
+/**
+ * Generate a single new plaintext backup code, e.g. "Q7K2P-9N4XF".
+ * Uses Crockford-ish base32 alphabet (no I, L, O, U to avoid confusion
+ * with 1, 0, V).
+ */
+function generateBackupCode() {
+  const alphabet = 'ABCDEFGHJKMNPQRSTVWXYZ23456789'; // 30 chars (~4.9 bits each)
+  const len = 10; // 10 chars × ~4.9 bits ≈ 49 bits of entropy
+  const buf = crypto.randomBytes(len * 2);
+  let out = '';
+  for (let i = 0; i < len; i++) {
+    // Use 16 bits per char (rejection-free for 30 of 65536 buckets is fine;
+    // bias is negligible — ~0.001% per draw).
+    out += alphabet[buf.readUInt16BE(i * 2) % alphabet.length];
+  }
+  return out.slice(0, 5) + '-' + out.slice(5);
+}
+
 module.exports = {
   timingSafeEqualStrings,
   passwordOk,
@@ -155,4 +196,6 @@ module.exports = {
   isTokenAuthorized,
   isAdminAuthorized,
   TOKEN_TTL_SECONDS,
+  hashBackupCode,
+  generateBackupCode,
 };
