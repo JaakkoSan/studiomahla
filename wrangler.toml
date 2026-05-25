@@ -1,0 +1,10 @@
+# Cloudflare Pages konfiguraatio.
+# Tämä kertoo build-vaiheelle (wrangler/esbuild) miten käsitellä
+# Node.js-sisäisiä moduuleja (kuten 'crypto') jotka jotkut npm-paketit
+# (esim. otplib) käyttävät ilman 'node:'-etuliitettä.
+
+name = "studiomahla"
+compatibility_date = "2026-05-25"
+compatibility_flags = ["nodejs_compat", "nodejs_compat_populate_process_env"]
+
+pages_build_output_dir = "./"
