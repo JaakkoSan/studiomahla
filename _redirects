@@ -1,0 +1,4 @@
+# Cloudflare Pages _redirects
+# Vanhat blogiartikkelien URL:t → uudet SEO-ystävälliset nimet (301 = pysyvä)
+/mikroneulaus.htm  /mita-on-kliininen-mikroneulaus.html              301
+/mikrorulla.htm    /mikroneularulla-vai-kliininen-mikroneulaus.html  301
