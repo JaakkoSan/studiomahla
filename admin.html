@@ -1964,17 +1964,12 @@
       var addAreasHtml = additionalAreas.map(function (a, i) {
         return renderAddAreaRow(a.label || '', a.depth, i);
       }).join('');
-      var photoSection;
-      if (!isNew) {
-        photoSection = '<fieldset><legend>Valokuvat</legend><div class="photo-grid">' +
-          renderPhotoSlot('before', v.before_photo_signed_url) +
-          renderPhotoSlot('after', v.after_photo_signed_url) +
-          '</div></fieldset>';
-      } else {
-        photoSection = '<fieldset><legend>Valokuvat</legend>' +
-          '<p style="font-size:13px;color:var(--text-mid);margin:0;">Tallenna käynti ensin, sitten voit lisätä valokuvat muokkaamalla.</p>' +
-          '</fieldset>';
-      }
+      var photoSection = '<fieldset><legend>Valokuvat</legend><div class="photo-grid">' +
+        renderPhotoSlot('before', v.before_photo_signed_url) +
+        renderPhotoSlot('after', v.after_photo_signed_url) +
+        '</div>' +
+        (isNew ? '<p style="font-size:12px;color:var(--text-mid);margin:10px 0 0;">Käynti tallennetaan automaattisesti kun lisäät ensimmäisen kuvan.</p>' : '') +
+        '</fieldset>';
       var html = '<form class="visit-form" data-visit-id="' + escapeHtml(v.id || '') + '" data-is-new="' + (isNew ? '1' : '0') + '">';
       html += '<fieldset>';
       html += '<legend>Käyntitiedot</legend>';
@@ -2042,7 +2037,7 @@
         html += '<div class="photo-slot__placeholder">Ei kuvaa</div>';
       }
       html += '<div class="photo-slot__actions">';
-      html += '<input type="file" class="photo-slot__file-input" accept="image/jpeg,image/png,image/webp" data-action="upload-photo">';
+      html += '<input type="file" class="photo-slot__file-input" accept="image/jpeg,image/png,image/webp" capture="environment" data-action="upload-photo">';
       html += '<button type="button" class="btn btn--xs btn--ghost" data-action="trigger-upload">' + (signedUrl ? 'Vaihda' : 'Lataa') + '</button>';
       if (signedUrl) {
         html += '<button type="button" class="btn btn--xs btn--secondary" data-action="delete-photo">Poista</button>';
@@ -2134,6 +2129,29 @@
           submitBtn.disabled = false;
           submitBtn.textContent = isNew ? 'Tallenna käynti' : 'Tallenna muutokset';
         }
+      }
+    }
+    async function createVisitFromForm(form) {
+      // Save new visit silently and return the new ID. Used when user uploads
+      // a photo on a new-visit form — we auto-save first so the photo has
+      // something to attach to.
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return null; }
+      var data = collectFormData(form);
+      data.esitiedot_id = currentEsitiedotId;
+      try {
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify(Object.assign({ action: 'create' }, data))
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return null; }
+        var resData = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(resData.error || 'Tallennus epäonnistui');
+        return (resData.visit && resData.visit.id) || null;
+      } catch (err) {
+        showToast(err.message || 'Käynnin tallennus epäonnistui', 'error');
+        return null;
       }
     }
     async function deleteVisit(id) {
@@ -2374,18 +2392,80 @@
         if (photoType) deletePhoto(visitId, photoType);
       }
     });
-    hoitolokiList.addEventListener('change', function (e) {
+    hoitolokiList.addEventListener('change', async function (e) {
       if (e.target.tagName !== 'INPUT' || e.target.type !== 'file') return;
       if (e.target.getAttribute('data-action') !== 'upload-photo') return;
       var slot = e.target.closest('.photo-slot');
       var form = e.target.closest('.visit-form');
       var photoType = slot ? slot.getAttribute('data-photo-type') : null;
       var visitId = form ? form.getAttribute('data-visit-id') : null;
+      var isNew = form ? form.getAttribute('data-is-new') === '1' : false;
       var file = e.target.files && e.target.files[0];
-      if (visitId && photoType && file) {
-        uploadPhoto(visitId, photoType, file);
-      }
       e.target.value = '';
+      if (!photoType || !file) return;
+
+      // If the form is for a new visit, save it first so we have an ID
+      // to attach the photo to. Switch state so the saved visit re-renders
+      // as an editable card with the photo attached.
+      if (isNew && !visitId) {
+        showToast('Tallennetaan käynti…');
+        var newId = await createVisitFromForm(form);
+        if (!newId) return;
+        visitId = newId;
+        isAddingNewVisit = false;
+        editingVisitId = newId;
+      }
+
+      if (visitId) {
+        await uploadPhoto(visitId, photoType, file);
+      }
+    });
+    hoitolokiList.addEventListener('submit', function (e) {
+      if (e.target && e.target.classList && e.target.classList.contains('visit-form')) {
+        e.preventDefault();
+        saveVisit(e.target);
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (!hoitolokiModal.hidden)    { closeHoitolokiModal(); return; }
+      if (!backupManageModal.hidden) { closeBackupManageModal(); return; }
+      if (!deleteModal.hidden)       { closeDeleteModal(); return; }
+      if (!detailModal.hidden)       { closeDetailModal(); return; }
+      if (!chargeModal.hidden)       { closeChargeModal(); return; }
+    });
+    /* ----- BOOT ----- */
+    activeTab = getStoredTab();
+    if (getToken()) {
+      showAdmin();
+      loadBookings();
+      loadEsitiedot({ silent: true });
+    } else {
+      showPasswordView();
+    }
+  })();
+</script>
+</body>
+</html>
+ var file = e.target.files && e.target.files[0];
+      e.target.value = '';
+      if (!photoType || !file) return;
+
+      // If the form is for a new visit, save it first so we have an ID
+      // to attach the photo to. Switch state so the saved visit re-renders
+      // as an editable card with the photo attached.
+      if (isNew && !visitId) {
+        showToast('Tallennetaan käynti…');
+        var newId = await createVisitFromForm(form);
+        if (!newId) return;
+        visitId = newId;
+        isAddingNewVisit = false;
+        editingVisitId = newId;
+      }
+
+      if (visitId) {
+        await uploadPhoto(visitId, photoType, file);
+      }
     });
     hoitolokiList.addEventListener('submit', function (e) {
       if (e.target && e.target.classList && e.target.classList.contains('visit-form')) {
