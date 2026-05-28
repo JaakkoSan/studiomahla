@@ -6,15 +6,12 @@
   <title>Hallinta · Mahlamäen Kauneusstudio</title>
   <meta name="description" content="Ennakkovarausten ja esitietolomakkeiden hallintapaneeli.">
   <meta name="robots" content="noindex, nofollow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta name="theme-color" content="#3d5247">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --green-dark: #3d5247;
@@ -28,14 +25,11 @@
       --text-mid: #4a5e55;
       --danger: #b85a3a;
       --success: #4a6157;
-
       --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
       --nav-height: 64px;
       --section-px: clamp(20px, 4vw, 40px);
     }
-
     *, *::before, *::after { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
     body {
@@ -52,7 +46,6 @@
     a { color: var(--pink); text-decoration: underline; text-underline-offset: 3px; }
     a:hover { color: var(--green-dark); }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-
     h1, h2 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -60,10 +53,8 @@
       letter-spacing: -0.01em;
       color: var(--text-dark);
     }
-
     :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 2px; }
     :focus:not(:focus-visible) { outline: none; }
-
     /* TOP BAR */
     .topbar {
       height: var(--nav-height);
@@ -91,7 +82,6 @@
       border-radius: 2px;
     }
     .topbar__logout:hover { color: var(--white); background: rgba(255,255,255,0.05); }
-
     /* TABS */
     .tabs {
       background: var(--green-mid);
@@ -121,7 +111,6 @@
       color: var(--white);
       border-bottom-color: var(--pink);
     }
-
     /* PAGE */
     .page { padding: 32px var(--section-px) 80px; max-width: 1100px; margin: 0 auto; }
     .page__head {
@@ -140,7 +129,6 @@
       min-height: 36px;
     }
     .refresh-btn:hover { background: var(--cream-warm); color: var(--text-dark); }
-
     /* LOGIN */
     .login-card {
       max-width: 420px;
@@ -201,7 +189,6 @@
       border-bottom: 1px solid transparent;
     }
     .login-card__back:hover { color: var(--pink); border-bottom-color: var(--pink); }
-
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       gap: 8px;
@@ -216,6 +203,7 @@
     .btn:disabled { opacity: 0.6; cursor: not-allowed; }
     .btn--block { width: 100%; margin-top: 24px; }
     .btn--small { padding: 8px 14px; font-size: 11px; }
+    .btn--xs { padding: 6px 10px; font-size: 10px; min-height: 30px; letter-spacing: 0.14em; }
     .btn--danger { background: var(--danger); }
     .btn--danger:hover { background: #a04d31; }
     .btn--secondary {
@@ -223,7 +211,11 @@
       border: 1px solid rgba(74, 94, 85, 0.25);
     }
     .btn--secondary:hover { background: var(--cream); color: var(--text-dark); }
-
+    .btn--ghost {
+      background: transparent; color: var(--pink);
+      border: 1px solid var(--pink);
+    }
+    .btn--ghost:hover { background: var(--pink); color: var(--white); }
     /* BOOKING CARDS */
     .empty {
       text-align: center; padding: 60px 24px;
@@ -262,7 +254,6 @@
     .booking__actions {
       display: flex; gap: 8px; align-items: center;
     }
-
     /* ESITIETO ROWS */
     .esitiedot-list { display: flex; flex-direction: column; gap: 10px; }
     .esitieto-row {
@@ -315,7 +306,6 @@
       .esitieto-row__date { grid-area: date; }
       .esitieto-row__arrow { grid-area: arrow; align-self: start; }
     }
-
     /* TOAST */
     .toast {
       position: fixed; bottom: 24px; left: 50%;
@@ -330,7 +320,6 @@
     .toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
     .toast--error { background: var(--danger); }
     .toast--success { background: var(--success); }
-
     /* MODAL */
     .modal-overlay {
       position: fixed; inset: 0; background: rgba(42, 56, 48, 0.5);
@@ -346,7 +335,6 @@
     .modal h2 { font-size: 22px; margin-bottom: 12px; }
     .modal p { font-size: 15px; line-height: 1.7; color: var(--text-mid); margin: 0 0 20px; }
     .modal__actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
-
     /* DETAIL MODAL — bigger, scrollable */
     .modal--detail {
       max-width: 720px;
@@ -453,7 +441,6 @@
       color: var(--success);
       font-weight: 600;
     }
-
     /* BACKUP CODE input field (similar feel to TOTP but allows letters) */
     .login-card input.input--backup {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -463,7 +450,6 @@
       text-transform: uppercase;
       padding: 14px 14px;
     }
-
     /* TOPBAR — extra actions next to logout */
     .topbar__actions { display: flex; align-items: center; gap: 8px; }
     .topbar__btn {
@@ -477,7 +463,6 @@
     }
     .topbar__btn:hover { color: var(--white); background: rgba(255,255,255,0.05); }
     .topbar__btn-icon { font-size: 14px; line-height: 1; }
-
     /* BACKUP CODE STATUS in management modal */
     .backup-status {
       background: var(--cream);
@@ -500,7 +485,6 @@
     }
     .backup-status--warn { background: rgba(184, 90, 58, 0.08); border-left: 3px solid var(--danger); }
     .backup-status--warn .backup-status__count em { color: var(--danger); }
-
     /* DISPLAYED CODES (after generation) */
     .codes-list {
       display: grid;
@@ -534,7 +518,6 @@
       color: var(--text-dark);
     }
     .codes-warning strong { color: var(--danger); }
-
     /* Plain text link used inline (e.g., 'use backup code' below TOTP) */
     .inline-link {
       display: inline-block;
@@ -550,11 +533,182 @@
     }
     .inline-link:hover { color: var(--pink); border-bottom-color: var(--pink); }
 
+    /* ====================================== */
+    /* HOITOLOKI MODAL                        */
+    /* ====================================== */
+    .hoitoloki-modal { max-width: 900px; }
+    .visit-toolbar {
+      padding: 14px 28px;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.08);
+      display: flex; gap: 10px; align-items: center; justify-content: space-between;
+    }
+    .visit-toolbar__note {
+      font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em;
+    }
+    .visit-list { display: flex; flex-direction: column; gap: 12px; }
+    .visit-card {
+      background: var(--cream);
+      border-radius: 4px;
+      padding: 18px 22px;
+      border-left: 3px solid var(--pink-pale);
+    }
+    .visit-card__head {
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .visit-card__title {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--text-dark);
+      margin: 0;
+    }
+    .visit-card__meta {
+      font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em;
+    }
+    .visit-card__summary {
+      font-size: 13px; line-height: 1.6; color: var(--text-mid); margin-top: 4px;
+      word-break: break-word;
+    }
+    .visit-card__summary strong { color: var(--text-dark); font-weight: 500; }
+    .visit-card__actions {
+      margin-top: 12px;
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    /* visit form */
+    .visit-form {
+      background: var(--white);
+      border: 1px solid rgba(74, 94, 85, 0.12);
+      border-left: 3px solid var(--pink);
+      border-radius: 4px;
+      padding: 22px;
+    }
+    .visit-form fieldset {
+      border: 0; padding: 0; margin: 0 0 18px;
+    }
+    .visit-form fieldset:last-of-type { margin-bottom: 0; }
+    .visit-form legend {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--pink);
+      margin: 0 0 10px;
+      padding: 0;
+    }
+    .visit-form label {
+      display: block;
+      font-size: 12px; color: var(--text-mid);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .visit-form input[type="text"],
+    .visit-form input[type="number"],
+    .visit-form input[type="date"],
+    .visit-form select,
+    .visit-form textarea {
+      width: 100%; font: inherit; font-size: 14px;
+      padding: 8px 12px; min-height: 38px;
+      border: 1px solid rgba(74, 94, 85, 0.2); border-radius: 2px;
+      background: var(--white); color: var(--text-dark);
+    }
+    .visit-form input:focus,
+    .visit-form select:focus,
+    .visit-form textarea:focus {
+      outline: none; border-color: var(--pink); box-shadow: 0 0 0 1px var(--pink);
+    }
+    .visit-form textarea { min-height: 80px; resize: vertical; line-height: 1.6; }
+    .visit-form__row {
+      display: grid; gap: 12px;
+    }
+    .visit-form__row--2col {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .depth-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px 14px;
+    }
+    .checkbox-row {
+      display: flex; gap: 8px; align-items: center;
+      font-size: 14px; color: var(--text-dark);
+      padding: 4px 0;
+      margin-bottom: 0;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .checkbox-row input { width: auto; min-height: auto; margin: 0; }
+    /* additional areas */
+    .add-area-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+    .add-area-row {
+      display: grid;
+      grid-template-columns: 1fr 120px auto;
+      gap: 8px;
+      align-items: center;
+    }
+    .add-area-row__remove {
+      font-size: 18px; color: var(--text-mid); padding: 6px 10px;
+      background: none;
+    }
+    .add-area-row__remove:hover { color: var(--danger); }
+    .add-area-add-btn {
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--pink);
+      background: none;
+      padding: 6px 0;
+      align-self: flex-start;
+      cursor: pointer;
+    }
+    .add-area-add-btn:hover { color: var(--green-dark); }
+    /* photos */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 540px) { .photo-grid { grid-template-columns: 1fr; } }
+    .photo-slot {
+      background: var(--cream);
+      border-radius: 4px;
+      padding: 14px;
+      text-align: center;
+      position: relative;
+    }
+    .photo-slot__label {
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--text-mid); margin: 0 0 10px;
+    }
+    .photo-slot__img {
+      max-width: 100%;
+      max-height: 240px;
+      border-radius: 2px;
+      margin: 0 auto 10px;
+      display: block;
+      object-fit: contain;
+    }
+    .photo-slot__placeholder {
+      color: var(--text-mid); font-size: 13px;
+      padding: 36px 12px;
+      border: 1px dashed rgba(74, 94, 85, 0.3);
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    .photo-slot__actions { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+    .photo-slot__file-input { display: none; }
+    .visit-form__actions {
+      display: flex; justify-content: space-between; gap: 10px;
+      padding-top: 16px; border-top: 1px solid rgba(74, 94, 85, 0.08);
+      margin-top: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .visit-form__actions-right {
+      display: flex; gap: 10px; flex-wrap: wrap;
+    }
+
     [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-
 <header class="topbar">
   <a href="index.html" class="topbar__brand" title="Etusivulle">
     <svg viewBox="150 80 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -576,7 +730,6 @@
     <button type="button" class="topbar__logout" id="logoutBtn" hidden>Kirjaudu ulos</button>
   </div>
 </header>
-
 <!-- TABS (only visible after login) -->
 <nav class="tabs" id="tabsNav" hidden aria-label="Hallinnan välilehdet">
   <div class="tabs__inner" role="tablist">
@@ -590,9 +743,7 @@
     </button>
   </div>
 </nav>
-
 <main class="page">
-
   <!-- STAGE 1: PASSWORD -->
   <section class="login-card" id="passwordView" hidden>
     <p class="login-card__stage-meta">Vaihe 1 / 2</p>
@@ -605,7 +756,6 @@
       <p class="login-card__error" id="passwordError" hidden></p>
     </form>
   </section>
-
   <!-- STAGE 2: TOTP -->
   <section class="login-card" id="totpView" hidden>
     <p class="login-card__stage-meta">Vaihe 2 / 2</p>
@@ -623,7 +773,6 @@
       <button type="button" class="inline-link" id="useBackupCodeBtn">Käytä palautuskoodia</button>
     </form>
   </section>
-
   <!-- STAGE 2 ALTERNATE: BACKUP CODE -->
   <section class="login-card" id="backupCodeView" hidden>
     <p class="login-card__stage-meta">Vaihe 2 / 2 · Palautuskoodi</p>
@@ -638,7 +787,6 @@
       <a href="#" class="login-card__back" id="backToTotpBtn">← Käytä Authenticator-koodia</a>
     </form>
   </section>
-
   <!-- BOOKINGS TAB -->
   <section id="bookingsView" role="tabpanel" aria-labelledby="tabBookingsBtn" hidden>
     <div class="page__head">
@@ -646,12 +794,10 @@
       <span class="page__meta" id="bookingsMeta"></span>
       <button type="button" class="refresh-btn" id="refreshBookingsBtn">↻ Päivitä</button>
     </div>
-
     <div id="bookingsList" class="bookings"></div>
     <div id="bookingsEmpty" class="empty" hidden>Ei aktiivisia ennakkovarauksia.</div>
     <div id="bookingsError" class="empty" style="color:var(--danger);" hidden></div>
   </section>
-
 <!-- ESITIEDOT TAB -->
   <section id="esitiedotView" role="tabpanel" aria-labelledby="tabEsitiedotBtn" hidden>
     <div class="page__head">
@@ -660,13 +806,11 @@
       <button type="button" class="refresh-btn" id="gdprCheckBtn" style="margin-left:auto;" title="Etsii yli 2 vuotta vanhat tietueet ja lähettää muistutusviestin">⚖ Aja GDPR-tarkistus</button>
       <button type="button" class="refresh-btn" id="refreshEsitiedotBtn" style="margin-left:8px;">↻ Päivitä</button>
     </div>
-
     <div id="esitiedotList" class="esitiedot-list"></div>
     <div id="esitiedotEmpty" class="empty" hidden>Ei tallennettuja esitietolomakkeita.</div>
     <div id="esitiedotError" class="empty" style="color:var(--danger);" hidden></div>
   </section>
 </main>
-
 <!-- CHARGE CONFIRMATION MODAL -->
 <div class="modal-overlay" id="chargeModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="chargeModalTitle">
@@ -678,7 +822,6 @@
     </div>
   </div>
 </div>
-
 <!-- ESITIETO DETAIL MODAL -->
 <div class="modal-overlay" id="detailModal" hidden>
   <div class="modal modal--detail" role="dialog" aria-modal="true" aria-labelledby="detailModalTitle">
@@ -692,14 +835,40 @@
     <div class="modal-detail__body" id="detailModalBody"></div>
     <footer class="modal-detail__foot">
       <button type="button" class="btn btn--danger" id="detailDeleteBtn">Poista lomake</button>
-      <div style="display:flex; gap:10px;">
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" class="btn btn--ghost" id="detailHoitolokiBtn" title="Avaa MicroPen EVO -hoitoloki">📋 Hoitoloki</button>
         <button type="button" class="btn" id="detailUpdateBtn" title="Merkitse asiakkaan käynti tapahtuneeksi tänään">✓ Päivitä käynti</button>
         <button type="button" class="btn btn--secondary" id="detailCloseBtn2">Sulje</button>
       </div>
     </footer>
   </div>
 </div>
-
+<!-- HOITOLOKI MODAL -->
+<div class="modal-overlay" id="hoitolokiModal" hidden>
+  <div class="modal modal--detail hoitoloki-modal" role="dialog" aria-modal="true" aria-labelledby="hoitolokiModalTitle">
+    <header class="modal-detail__head">
+      <div>
+        <h2 id="hoitolokiModalTitle">Hoitoloki</h2>
+        <div class="modal-detail__sub" id="hoitolokiModalSub"></div>
+      </div>
+      <button type="button" class="modal-detail__close" id="hoitolokiCloseBtn" aria-label="Sulje">×</button>
+    </header>
+    <div class="visit-toolbar">
+      <span class="visit-toolbar__note">MicroPen EVO -hoitoloki</span>
+      <button type="button" class="btn btn--ghost btn--small" id="hoitolokiAddBtn">+ Lisää käynti</button>
+    </div>
+    <div class="modal-detail__body" id="hoitolokiModalBody">
+      <div id="hoitolokiLoading" class="empty">Ladataan…</div>
+      <div id="hoitolokiList" class="visit-list" hidden></div>
+      <div id="hoitolokiEmpty" class="empty" hidden>Ei tallennettuja käyntejä. Klikkaa "+ Lisää käynti" aloittaaksesi.</div>
+      <div id="hoitolokiError" class="empty" style="color:var(--danger);" hidden></div>
+    </div>
+    <footer class="modal-detail__foot">
+      <div></div>
+      <button type="button" class="btn btn--secondary" id="hoitolokiCloseBtn2">Sulje</button>
+    </footer>
+  </div>
+</div>
 <!-- DELETE CONFIRMATION MODAL -->
 <div class="modal-overlay" id="deleteModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle">
@@ -711,13 +880,11 @@
     </div>
   </div>
 </div>
-
 <!-- BACKUP CODES MANAGEMENT MODAL -->
 <div class="modal-overlay" id="backupManageModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="backupManageTitle" style="max-width: 520px;">
     <h2 id="backupManageTitle">Palautuskoodit</h2>
     <p>Palautuskoodit toimivat Authenticator-sovelluksen vaihtoehtona, jos puhelimesi katoaa. Jokainen koodi toimii vain kerran.</p>
-
     <div class="backup-status" id="backupStatusBox">
       <div>
         <div class="backup-status__count"><em id="backupCountEl">–</em> <span style="font-size:14px;color:var(--text-mid);">/ 10</span></div>
@@ -725,47 +892,37 @@
       </div>
       <button type="button" class="btn btn--small" id="backupGenerateBtn">Generoi uudet</button>
     </div>
-
     <p style="font-size:13px;color:var(--text-mid);margin:0 0 16px;line-height:1.6;">
       "Generoi uudet" -nappi mitätöi vanhat koodit ja luo 10 uutta. Tallenna ne salasanahallintaan tai tulosta turvalliseen paikkaan — niitä ei voi enää nähdä myöhemmin.
     </p>
-
     <div class="modal__actions">
       <button type="button" class="btn btn--secondary" id="backupManageCloseBtn">Sulje</button>
     </div>
     <p class="login-card__error" id="backupManageError" hidden></p>
   </div>
 </div>
-
 <!-- DISPLAY NEW CODES MODAL -->
 <div class="modal-overlay" id="codesDisplayModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="codesDisplayTitle" style="max-width: 560px;">
     <h2 id="codesDisplayTitle">Uudet palautuskoodit</h2>
-
     <div class="codes-warning">
       <strong>Tärkeää:</strong> Tallenna nämä koodit nyt. Et näe niitä enää tämän modaalin sulkemisen jälkeen.
     </div>
-
     <div class="codes-list" id="codesListEl"></div>
-
     <div class="modal__actions">
       <button type="button" class="btn btn--secondary" id="codesCopyBtn">Kopioi leikepöydälle</button>
       <button type="button" class="btn" id="codesDisplayDoneBtn">Tallensin koodit</button>
     </div>
   </div>
 </div>
-
 <!-- TOAST -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
 <script>
   (function () {
     'use strict';
-
     /* ----- storage keys (sessionStorage so session ends with the tab) ----- */
     var TOKEN_KEY   = 'mahla_admin_token_v2';   // 2FA-verified session token
     var TAB_KEY     = 'mahla_admin_tab_v1';     // remember active tab in this session
-
     /* ----- elements ----- */
     var passwordView   = document.getElementById('passwordView');
     var totpView       = document.getElementById('totpView');
@@ -774,26 +931,22 @@
     var tabsNav        = document.getElementById('tabsNav');
     var tabBookings    = document.getElementById('tabBookingsBtn');
     var tabEsitiedot   = document.getElementById('tabEsitiedotBtn');
-
     var passwordForm   = document.getElementById('passwordForm');
     var passwordSubmit = document.getElementById('passwordSubmitBtn');
     var adminPwdEl     = document.getElementById('adminPwd');
     var passwordError  = document.getElementById('passwordError');
-
     var totpForm       = document.getElementById('totpForm');
     var totpSubmit     = document.getElementById('totpSubmitBtn');
     var adminTotpEl    = document.getElementById('adminTotp');
     var totpError      = document.getElementById('totpError');
     var backToPwdBtn   = document.getElementById('backToPasswordBtn');
     var useBackupBtn   = document.getElementById('useBackupCodeBtn');
-
     var backupCodeView   = document.getElementById('backupCodeView');
     var backupCodeForm   = document.getElementById('backupCodeForm');
     var backupCodeSubmit = document.getElementById('backupCodeSubmitBtn');
     var adminBackupEl    = document.getElementById('adminBackupCode');
     var backupCodeError  = document.getElementById('backupCodeError');
     var backToTotpBtn    = document.getElementById('backToTotpBtn');
-
     var manageBackupBtn  = document.getElementById('manageBackupBtn');
     var backupManageModal   = document.getElementById('backupManageModal');
     var backupManageCloseBtn = document.getElementById('backupManageCloseBtn');
@@ -801,21 +954,17 @@
     var backupStatusBox     = document.getElementById('backupStatusBox');
     var backupCountEl       = document.getElementById('backupCountEl');
     var backupManageError   = document.getElementById('backupManageError');
-
     var codesDisplayModal   = document.getElementById('codesDisplayModal');
     var codesListEl         = document.getElementById('codesListEl');
     var codesCopyBtn        = document.getElementById('codesCopyBtn');
     var codesDisplayDoneBtn = document.getElementById('codesDisplayDoneBtn');
-
     var logoutBtn      = document.getElementById('logoutBtn');
-
     /* bookings */
     var refreshBookingsBtn = document.getElementById('refreshBookingsBtn');
     var bookingsList       = document.getElementById('bookingsList');
     var bookingsEmpty      = document.getElementById('bookingsEmpty');
     var bookingsError      = document.getElementById('bookingsError');
     var bookingsMeta       = document.getElementById('bookingsMeta');
-
     /* esitiedot */
     var refreshEsitiedotBtn = document.getElementById('refreshEsitiedotBtn');
     var gdprCheckBtn        = document.getElementById('gdprCheckBtn');
@@ -823,13 +972,11 @@
     var esitiedotEmpty      = document.getElementById('esitiedotEmpty');
     var esitiedotError      = document.getElementById('esitiedotError');
     var esitiedotMeta       = document.getElementById('esitiedotMeta');
-
     /* charge modal */
     var chargeModal   = document.getElementById('chargeModal');
     var chargeText    = document.getElementById('chargeModalText');
     var chargeConfirm = document.getElementById('chargeConfirmBtn');
     var chargeCancel  = document.getElementById('chargeCancelBtn');
-
     /* detail modal */
     var detailModal       = document.getElementById('detailModal');
     var detailModalTitle  = document.getElementById('detailModalTitle');
@@ -839,14 +986,24 @@
     var detailCloseBtn2   = document.getElementById('detailCloseBtn2');
     var detailDeleteBtn   = document.getElementById('detailDeleteBtn');
     var detailUpdateBtn   = document.getElementById('detailUpdateBtn');
-
+    var detailHoitolokiBtn = document.getElementById('detailHoitolokiBtn');
     /* delete modal */
     var deleteModal       = document.getElementById('deleteModal');
     var deleteCancelBtn   = document.getElementById('deleteCancelBtn');
     var deleteConfirmBtn  = document.getElementById('deleteConfirmBtn');
+    /* hoitoloki modal */
+    var hoitolokiModal       = document.getElementById('hoitolokiModal');
+    var hoitolokiModalTitle  = document.getElementById('hoitolokiModalTitle');
+    var hoitolokiModalSub    = document.getElementById('hoitolokiModalSub');
+    var hoitolokiList        = document.getElementById('hoitolokiList');
+    var hoitolokiLoading     = document.getElementById('hoitolokiLoading');
+    var hoitolokiEmpty       = document.getElementById('hoitolokiEmpty');
+    var hoitolokiError       = document.getElementById('hoitolokiError');
+    var hoitolokiCloseBtn    = document.getElementById('hoitolokiCloseBtn');
+    var hoitolokiCloseBtn2   = document.getElementById('hoitolokiCloseBtn2');
+    var hoitolokiAddBtn      = document.getElementById('hoitolokiAddBtn');
 
     var toast = document.getElementById('toast');
-
     /* ----- state ----- */
     var stagedPassword = '';              // held in memory between stage 1 → 2 only
     var pendingChargeCustomerId = null;
@@ -856,10 +1013,29 @@
     var toastTimer = null;
     var activeTab = 'bookings';
 
-    /* One-time migration: clean up the old localStorage password from v1.
-       If anyone still has it set on this device, this removes it. */
-    try { localStorage.removeItem('mahla_admin_pwd_v1'); } catch (e) {}
+    /* hoitoloki state */
+    var currentEsitiedotId   = null;
+    var currentEsitiedotName = null;
+    var hoitolokiVisits      = [];
+    var editingVisitId       = null;
+    var isAddingNewVisit     = false;
 
+    var VISIT_TYPES_LIST = ['Aloitushoito', 'Sarjakäynti', 'Ylläpitokäynti'];
+    var NUMBING_AGENTS_LIST = ['Benzokaiini', 'Lidokaiini', 'Tetrakaiini', 'Muu'];
+    var DEPTH_FIELDS_LIST = [
+      { key: 'depth_forehead',     label: 'Otsa (mm)' },
+      { key: 'depth_nose',         label: 'Nenä (mm)' },
+      { key: 'depth_facial_scars', label: 'Kasvojen arvet (mm)' },
+      { key: 'depth_orbital',      label: 'Silmäkuopan ympärys (mm)' },
+      { key: 'depth_neck',         label: 'Kaula (mm)' },
+      { key: 'depth_cheek',        label: 'Posket (mm)' },
+      { key: 'depth_decollete',    label: 'Dekoltee (mm)' },
+      { key: 'depth_hand_right',   label: 'Oikea käsi (mm)' },
+      { key: 'depth_hand_left',    label: 'Vasen käsi (mm)' }
+    ];
+
+    /* One-time migration: clean up the old localStorage password from v1. */
+    try { localStorage.removeItem('mahla_admin_pwd_v1'); } catch (e) {}
     /* ----- helpers ----- */
     function getToken() {
       try { return sessionStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return ''; }
@@ -876,7 +1052,6 @@
     function setStoredTab(t) {
       try { sessionStorage.setItem(TAB_KEY, t); } catch (e) {}
     }
-
     function showToast(msg, kind) {
       toast.textContent = msg;
       toast.classList.remove('toast--error', 'toast--success');
@@ -888,7 +1063,6 @@
         toast.classList.remove('is-visible');
       }, 4500);
     }
-
     function fmtUnix(unixSeconds) {
       try {
         return new Date(unixSeconds * 1000).toLocaleString('fi-FI', {
@@ -904,20 +1078,25 @@
         });
       } catch (e) { return String(iso); }
     }
-
+    function fmtDateFi(iso) {
+      if (!iso) return '';
+      try {
+        return new Date(iso + 'T12:00:00').toLocaleDateString('fi-FI', {
+          day: 'numeric', month: 'numeric', year: 'numeric'
+        });
+      } catch (e) { return String(iso); }
+    }
     function escapeHtml(s) {
       return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
         return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
       });
     }
-
     function handle401(message) {
       clearToken();
       stagedPassword = '';
       showPasswordView();
       showToast(message || 'Istunto vanheni — kirjaudu uudelleen.', 'error');
     }
-
     /* ----- views ----- */
     function hideAllViews() {
       passwordView.hidden   = true;
@@ -929,7 +1108,6 @@
       logoutBtn.hidden      = true;
       manageBackupBtn.hidden = true;
     }
-
     function showPasswordView() {
       hideAllViews();
       passwordView.hidden = false;
@@ -962,7 +1140,6 @@
     function activateTab(name) {
       activeTab = (name === 'esitiedot') ? 'esitiedot' : 'bookings';
       setStoredTab(activeTab);
-
       if (activeTab === 'bookings') {
         bookingsView.hidden = false;
         esitiedotView.hidden = true;
@@ -979,7 +1156,6 @@
         tabEsitiedot.setAttribute('aria-selected', 'true');
       }
     }
-
     /* ======================================================== */
     /* LOGIN — STAGE 1: PASSWORD                                */
     /* ======================================================== */
@@ -987,7 +1163,6 @@
       passwordSubmit.disabled = true;
       passwordSubmit.textContent = 'Tarkistetaan…';
       passwordError.hidden = true;
-
       try {
         var res = await fetch('/api/verify-password', {
           method: 'POST',
@@ -1001,8 +1176,6 @@
         }
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
-
-        // Hold password in memory so we can send it together with TOTP code.
         stagedPassword = pwd;
         showTotpView();
       } catch (err) {
@@ -1013,7 +1186,6 @@
         passwordSubmit.textContent = 'Jatka';
       }
     }
-
     /* ======================================================== */
     /* LOGIN — STAGE 2: TOTP                                    */
     /* ======================================================== */
@@ -1026,7 +1198,6 @@
       totpSubmit.disabled = true;
       totpSubmit.textContent = 'Tarkistetaan…';
       totpError.hidden = true;
-
       try {
         var res = await fetch('/api/verify-totp', {
           method: 'POST',
@@ -1034,7 +1205,6 @@
           body: JSON.stringify({ password: stagedPassword, code: code })
         });
         var data = await res.json().catch(function () { return {}; });
-
         if (res.status === 401) {
           totpError.textContent = 'Väärä koodi. Tarkista Authenticator-sovelluksesta.';
           totpError.hidden = false;
@@ -1044,13 +1214,10 @@
         }
         if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
         if (!data.token) throw new Error('Token puuttuu vastauksesta');
-
-        // 2FA passed. Clear staged password from memory and store the token.
         stagedPassword = '';
         adminPwdEl.value = '';
         adminTotpEl.value = '';
         setToken(data.token);
-
         showAdmin();
         loadBookings();
         loadEsitiedot({ silent: true });
@@ -1062,14 +1229,12 @@
         totpSubmit.textContent = 'Kirjaudu sisään';
       }
     }
-
     /* ======================================================== */
     /* BOOKINGS                                                 */
     /* ======================================================== */
     async function loadBookings() {
       var token = getToken();
       if (!token) { showPasswordView(); return; }
-
       refreshBookingsBtn.disabled = true;
       refreshBookingsBtn.textContent = '↻ Päivittää…';
       bookingsError.hidden = true;
@@ -1093,18 +1258,15 @@
         refreshBookingsBtn.textContent = '↻ Päivitä';
       }
     }
-
     function renderBookings(bookings) {
       bookingsMeta.textContent = bookings.length + ' kpl';
       bookingsList.innerHTML = '';
       bookingsError.hidden = true;
-
       if (bookings.length === 0) {
         bookingsEmpty.hidden = false;
         return;
       }
       bookingsEmpty.hidden = true;
-
       var html = '';
       bookings.forEach(function (b) {
         var stripeUrl = 'https://dashboard.stripe.com/customers/' + encodeURIComponent(b.id);
@@ -1130,7 +1292,6 @@
       });
       bookingsList.innerHTML = html;
     }
-
     function askConfirmCharge(customerId, customerName) {
       pendingChargeCustomerId = customerId;
       chargeText.textContent = 'Veloitetaan asiakkaalta ' + (customerName || customerId) +
@@ -1144,15 +1305,12 @@
       chargeModal.hidden = true;
       pendingChargeCustomerId = null;
     }
-
     async function confirmCharge() {
       if (!pendingChargeCustomerId) return;
       var token = getToken();
       if (!token) { closeChargeModal(); showPasswordView(); return; }
-
       chargeConfirm.disabled = true;
       chargeConfirm.textContent = 'Veloitetaan…';
-
       try {
         var res = await fetch('/api/charge-booking', {
           method: 'POST',
@@ -1160,10 +1318,8 @@
           body: JSON.stringify({ customerId: pendingChargeCustomerId })
         });
         var data = await res.json().catch(function () { return {}; });
-
         if (res.status === 401) { closeChargeModal(); handle401(); return; }
         if (!res.ok) throw new Error(data.error || 'Veloitus epäonnistui');
-
         if (data.ok) {
           showToast('Veloitus onnistui!', 'success');
         } else if (data.needsAction) {
@@ -1179,7 +1335,6 @@
         showToast(err.message || 'Veloitus epäonnistui', 'error');
       }
     }
-
     /* ======================================================== */
     /* ESITIEDOT                                                */
     /* ======================================================== */
@@ -1188,7 +1343,6 @@
       var silent = !!opts.silent;
       var token = getToken();
       if (!token) { if (!silent) showPasswordView(); return; }
-
       if (!silent) {
         refreshEsitiedotBtn.disabled = true;
         refreshEsitiedotBtn.textContent = '↻ Päivittää…';
@@ -1222,18 +1376,15 @@
         }
       }
     }
-
     function renderEsitiedot(items) {
       esitiedotMeta.textContent = items.length + ' kpl';
       esitiedotList.innerHTML = '';
       esitiedotError.hidden = true;
-
       if (items.length === 0) {
         esitiedotEmpty.hidden = false;
         return;
       }
       esitiedotEmpty.hidden = true;
-
       var html = '';
       items.forEach(function (e, idx) {
         html +=
@@ -1254,7 +1405,6 @@
       });
       esitiedotList.innerHTML = html;
     }
-
     var KONTRA_LABELS = {
       raskaus:          'Raskaus tai imetys',
       ihotulehdus:      'Aktiivinen ihotulehdus, ihottuma tai infektio hoitoalueella',
@@ -1267,37 +1417,32 @@
       syopahoito:       'Aktiivinen syöpähoito',
       diabetes:         'Huonosti hallinnassa oleva diabetes',
       isotretinoiini:   'Isotretinoiini viimeisen 6 kuukauden aikana',
-      tupakointi:       'Tupakointi',
+      tupakointi:       'Tupakointi'
     };
     var KONTRA_ORDER = [
       'raskaus','ihotulehdus','akne','herpes','keloidi','teras',
       'verenohennus','immunosuppressio','syopahoito','diabetes',
-      'isotretinoiini','tupakointi',
+      'isotretinoiini','tupakointi'
     ];
-
     var CONSENT_LABELS = {
       consent1: 'Tietoinen normaaleista hoidon vasteista (punoitus, turvotus, lievä vuoto)',
       consent2: 'Sitoutuu noudattamaan jälkihoito-ohjeita',
       consent3: 'Vakuuttaa antamansa terveys- ja lääkitystiedot oikeiksi',
-      consent4: 'Ilmoittaa muutoksista terveydentilassaan ennen jokaista hoitokertaa',
+      consent4: 'Ilmoittaa muutoksista terveydentilassaan ennen jokaista hoitokertaa'
     };
-
     function maybeMutedValue(value) {
       var s = (value == null ? '' : String(value)).trim();
       if (!s) return '<span class="detail-grid__value detail-grid__value--muted">(ei annettu)</span>';
       return '<span class="detail-grid__value">' + escapeHtml(s) + '</span>';
     }
-
     function renderDetail(rec) {
       openEsitietoRecord = rec;
       detailModalTitle.textContent = rec.nimi || 'Esitietolomake';
       detailModalSub.textContent =
         'Lähetetty ' + fmtIso(rec.created_at) +
         (rec.id ? '  ·  ID: ' + rec.id : '');
-
       var kontra = (rec.kontraindikaatiot && typeof rec.kontraindikaatiot === 'object') ? rec.kontraindikaatiot : {};
       var suostumus = (rec.suostumus && typeof rec.suostumus === 'object') ? rec.suostumus : {};
-
       var kontraRows = KONTRA_ORDER.map(function (key) {
         var label = KONTRA_LABELS[key] || key;
         var val = (kontra[key] || '').toString().toLowerCase();
@@ -1305,7 +1450,6 @@
         var display = (val === 'kyllä' || val === 'kylla') ? 'Kyllä' : (val === 'ei' ? 'Ei' : '—');
         return '<tr><td>' + escapeHtml(label) + '</td><td class="' + cls + '">' + display + '</td></tr>';
       }).join('');
-
       var consentRows = ['consent1','consent2','consent3','consent4'].map(function (k) {
         var checked = suostumus[k] === true || suostumus[k] === 'true';
         return (
@@ -1315,7 +1459,6 @@
           '</div>'
         );
       }).join('');
-
       detailModalBody.innerHTML =
         '<section class="detail-section">' +
           '<h3 class="detail-section__title">Perustiedot</h3>' +
@@ -1333,12 +1476,10 @@
             '<div class="detail-grid__label">Iho-ongelma</div>' + maybeMutedValue(rec.iho_ongelma) +
           '</div>' +
         '</section>' +
-
         '<section class="detail-section">' +
           '<h3 class="detail-section__title">Kontraindikaatiot</h3>' +
           '<table class="kontra-table">' + kontraRows + '</table>' +
         '</section>' +
-
         '<section class="detail-section">' +
           '<h3 class="detail-section__title">Avoimet vastaukset</h3>' +
           '<div class="detail-grid">' +
@@ -1346,12 +1487,10 @@
             '<div class="detail-grid__label">Allergiat</div>' + maybeMutedValue(rec.allergiat) +
           '</div>' +
         '</section>' +
-
         '<section class="detail-section">' +
           '<h3 class="detail-section__title">Suostumukset</h3>' +
           consentRows +
         '</section>' +
-
         '<section class="detail-section">' +
           '<h3 class="detail-section__title">Tekniset tiedot</h3>' +
           '<div class="detail-grid">' +
@@ -1362,16 +1501,13 @@
               '<span class="detail-grid__value" style="font-family:monospace;font-size:12px;">' + escapeHtml(rec.id || '') + '</span>' +
           '</div>' +
         '</section>';
-
       detailModal.hidden = false;
       setTimeout(function () { detailCloseBtn.focus(); }, 50);
     }
-
     function closeDetailModal() {
       detailModal.hidden = true;
       openEsitietoRecord = null;
     }
-
     function askConfirmDelete(id) {
       pendingDeleteId = id;
       deleteConfirmBtn.disabled = false;
@@ -1383,15 +1519,12 @@
       deleteModal.hidden = true;
       pendingDeleteId = null;
     }
-
     async function confirmDelete() {
       if (!pendingDeleteId) return;
       var token = getToken();
       if (!token) { closeDeleteModal(); showPasswordView(); return; }
-
       deleteConfirmBtn.disabled = true;
       deleteConfirmBtn.textContent = 'Poistetaan…';
-
       try {
         var res = await fetch('/api/esitiedot-admin', {
           method: 'POST',
@@ -1399,10 +1532,8 @@
           body: JSON.stringify({ action: 'delete', id: pendingDeleteId })
         });
         var data = await res.json().catch(function () { return {}; });
-
         if (res.status === 401) { closeDeleteModal(); handle401(); return; }
         if (!res.ok) throw new Error(data.error || 'Poisto epäonnistui');
-
         showToast('Lomake poistettu.', 'success');
         closeDeleteModal();
         closeDetailModal();
@@ -1413,18 +1544,12 @@
         showToast(err.message || 'Poisto epäonnistui', 'error');
       }
     }
-
-    /* ======================================================== */
-    /* ESITIEDOT — UPDATE VISIT + GDPR CHECK                    */
-    /* ======================================================== */
     async function markVisitUpdated(id, nameForToast) {
       var token = getToken();
       if (!token) { showPasswordView(); return; }
-
       detailUpdateBtn.disabled = true;
       var originalText = detailUpdateBtn.textContent;
       detailUpdateBtn.textContent = 'Päivitetään…';
-
       try {
         var res = await fetch('/api/esitiedot-admin', {
           method: 'POST',
@@ -1434,7 +1559,6 @@
         if (res.status === 401) { closeDetailModal(); handle401(); return; }
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'Päivitys epäonnistui');
-
         showToast('Käynti merkitty päivitetyksi' + (nameForToast ? ' (' + nameForToast + ')' : '') + '.', 'success');
         closeDetailModal();
         loadEsitiedot();
@@ -1444,19 +1568,15 @@
         detailUpdateBtn.textContent = originalText;
       }
     }
-
     async function runGdprCheck() {
       var token = getToken();
       if (!token) { showPasswordView(); return; }
-
       if (!confirm('Käy läpi kaikki esitietolomakkeet ja lähettää sähköposti-muistutuksen jokaisesta yli 2 vuotta päivittämättömästä tietueesta. Jatketaanko?')) {
         return;
       }
-
       gdprCheckBtn.disabled = true;
       var originalText = gdprCheckBtn.textContent;
       gdprCheckBtn.textContent = '⚖ Tarkistetaan…';
-
       try {
         var res = await fetch('/api/esitiedot-admin', {
           method: 'POST',
@@ -1466,7 +1586,6 @@
         if (res.status === 401) { handle401(); return; }
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'GDPR-tarkistus epäonnistui');
-
         var n = data.expiredCount || 0;
         var sent = data.emailsSent || 0;
         if (n === 0) {
@@ -1481,7 +1600,6 @@
         gdprCheckBtn.textContent = originalText;
       }
     }
-
     /* ======================================================== */
     /* LOGIN — STAGE 2 ALTERNATE: BACKUP CODE                   */
     /* ======================================================== */
@@ -1494,7 +1612,6 @@
       backupCodeSubmit.disabled = true;
       backupCodeSubmit.textContent = 'Tarkistetaan…';
       backupCodeError.hidden = true;
-
       try {
         var res = await fetch('/api/verify-totp', {
           method: 'POST',
@@ -1502,7 +1619,6 @@
           body: JSON.stringify({ password: stagedPassword, backupCode: backupCode })
         });
         var data = await res.json().catch(function () { return {}; });
-
         if (res.status === 401) {
           backupCodeError.textContent = 'Virheellinen tai jo käytetty palautuskoodi.';
           backupCodeError.hidden = false;
@@ -1512,12 +1628,10 @@
         }
         if (!res.ok) throw new Error(data.error || 'Kirjautuminen epäonnistui');
         if (!data.token) throw new Error('Token puuttuu vastauksesta');
-
         stagedPassword = '';
         adminPwdEl.value = '';
         adminBackupEl.value = '';
         setToken(data.token);
-
         showAdmin();
         showToast('Kirjautuminen onnistui palautuskoodilla. Tarkista palautuskoodien tilanne ja generoi uudet jos tarpeen.', 'success');
         loadBookings();
@@ -1530,21 +1644,18 @@
         backupCodeSubmit.textContent = 'Kirjaudu sisään';
       }
     }
-
     /* ======================================================== */
     /* BACKUP CODES MANAGEMENT                                  */
     /* ======================================================== */
     async function openBackupManageModal() {
       var token = getToken();
       if (!token) { showPasswordView(); return; }
-
       backupCountEl.textContent = '…';
       backupStatusBox.classList.remove('backup-status--warn');
       backupManageError.hidden = true;
       backupGenerateBtn.disabled = true;
       backupGenerateBtn.textContent = 'Generoi uudet';
       backupManageModal.hidden = false;
-
       try {
         var res = await fetch('/api/backup-codes', {
           method: 'POST',
@@ -1558,7 +1669,6 @@
         }
         var data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || 'Tilan haku epäonnistui');
-
         var unused = typeof data.unused === 'number' ? data.unused : 0;
         backupCountEl.textContent = String(unused);
         if (unused === 0) {
@@ -1573,23 +1683,18 @@
         backupGenerateBtn.disabled = false;
       }
     }
-
     function closeBackupManageModal() {
       backupManageModal.hidden = true;
     }
-
     async function generateBackupCodes() {
       var token = getToken();
       if (!token) { closeBackupManageModal(); showPasswordView(); return; }
-
       if (!confirm('Vanhat palautuskoodit mitätöidään ja luodaan 10 uutta. Jatketaanko?')) {
         return;
       }
-
       backupGenerateBtn.disabled = true;
       backupGenerateBtn.textContent = 'Generoidaan…';
       backupManageError.hidden = true;
-
       try {
         var res = await fetch('/api/backup-codes', {
           method: 'POST',
@@ -1606,8 +1711,6 @@
         if (!Array.isArray(data.codes) || data.codes.length === 0) {
           throw new Error('Palvelin ei palauttanut koodeja');
         }
-
-        // Show the codes in a modal; user must save them.
         showCodes(data.codes);
         closeBackupManageModal();
       } catch (err) {
@@ -1617,20 +1720,16 @@
         backupGenerateBtn.textContent = 'Generoi uudet';
       }
     }
-
     function showCodes(codes) {
       codesListEl.innerHTML = codes.map(function (c) {
         return '<div class="codes-list__item">' + escapeHtml(c) + '</div>';
       }).join('');
       codesDisplayModal.hidden = false;
     }
-
     function closeCodesDisplay() {
-      // Wipe codes from DOM before closing.
       codesListEl.innerHTML = '';
       codesDisplayModal.hidden = true;
     }
-
     async function copyCodesToClipboard() {
       var items = codesListEl.querySelectorAll('.codes-list__item');
       if (items.length === 0) return;
@@ -1644,7 +1743,6 @@
           return;
         }
       } catch (e) { /* fall through */ }
-      // Fallback
       try {
         var ta = document.createElement('textarea');
         ta.value = text;
@@ -1659,12 +1757,465 @@
         showToast('Kopiointi epäonnistui — kopioi käsin.', 'error');
       }
     }
-
+    /* ======================================================== */
+    /* HOITOLOKI (MicroPen EVO Treatment Log)                   */
+    /* ======================================================== */
+    function fmtDepth(v) {
+      if (v == null || v === '') return '–';
+      var n = Number(v);
+      if (!isFinite(n)) return String(v);
+      var s = n.toFixed(2);
+      s = s.replace(/0+$/, '').replace(/\.$/, '');
+      return s + ' mm';
+    }
+    function summarizeDepths(v) {
+      var parts = [];
+      DEPTH_FIELDS_LIST.forEach(function (f) {
+        if (v[f.key] != null && v[f.key] !== '') {
+          parts.push(escapeHtml(f.label.replace(' (mm)', '')) + ': <strong>' + fmtDepth(v[f.key]) + '</strong>');
+        }
+      });
+      if (Array.isArray(v.additional_areas)) {
+        v.additional_areas.forEach(function (a) {
+          if (a && a.label) parts.push(escapeHtml(a.label) + ': <strong>' + fmtDepth(a.depth) + '</strong>');
+        });
+      }
+      return parts.length ? parts.join(' · ') : '<em style="color:var(--text-mid);">Ei kirjattuja syvyyksiä</em>';
+    }
+    function computeNextVisitNumber() {
+      var max = 0;
+      hoitolokiVisits.forEach(function (v) {
+        if (typeof v.visit_number === 'number' && v.visit_number > max) max = v.visit_number;
+      });
+      return max + 1;
+    }
+    function openHoitolokiModal(rec) {
+      currentEsitiedotId = rec.id;
+      currentEsitiedotName = rec.nimi || '';
+      hoitolokiModalTitle.textContent = 'Hoitoloki';
+      hoitolokiModalSub.textContent = currentEsitiedotName || '';
+      editingVisitId = null;
+      isAddingNewVisit = false;
+      hoitolokiVisits = [];
+      hoitolokiList.innerHTML = '';
+      hoitolokiList.hidden = true;
+      hoitolokiEmpty.hidden = true;
+      hoitolokiError.hidden = true;
+      hoitolokiLoading.hidden = false;
+      hoitolokiModal.hidden = false;
+      setTimeout(function () { hoitolokiCloseBtn.focus(); }, 50);
+      loadHoitoloki();
+    }
+    function closeHoitolokiModal() {
+      hoitolokiModal.hidden = true;
+      currentEsitiedotId = null;
+      currentEsitiedotName = null;
+      hoitolokiVisits = [];
+      editingVisitId = null;
+      isAddingNewVisit = false;
+      hoitolokiList.innerHTML = '';
+    }
+    async function loadHoitoloki() {
+      if (!currentEsitiedotId) return;
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return; }
+      hoitolokiLoading.hidden = false;
+      hoitolokiList.hidden = true;
+      hoitolokiEmpty.hidden = true;
+      hoitolokiError.hidden = true;
+      try {
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'list', esitiedotId: currentEsitiedotId })
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Hoitolokin hakeminen epäonnistui');
+        hoitolokiVisits = data.visits || [];
+        renderHoitolokiList();
+      } catch (err) {
+        hoitolokiLoading.hidden = true;
+        hoitolokiList.hidden = true;
+        hoitolokiError.textContent = err.message || 'Hoitolokin hakeminen epäonnistui';
+        hoitolokiError.hidden = false;
+      }
+    }
+    function renderHoitolokiList() {
+      hoitolokiLoading.hidden = true;
+      hoitolokiError.hidden = true;
+      if (hoitolokiVisits.length === 0 && !isAddingNewVisit) {
+        hoitolokiList.hidden = true;
+        hoitolokiEmpty.hidden = false;
+        return;
+      }
+      hoitolokiEmpty.hidden = true;
+      hoitolokiList.hidden = false;
+      var html = '';
+      if (isAddingNewVisit) {
+        html += renderVisitForm(null);
+      }
+      hoitolokiVisits.forEach(function (v) {
+        if (v.id === editingVisitId) {
+          html += renderVisitForm(v);
+        } else {
+          html += renderVisitCard(v);
+        }
+      });
+      hoitolokiList.innerHTML = html;
+    }
+    function renderVisitCard(v) {
+      var dateStr = fmtDateFi(v.visit_date);
+      var typeStr = v.visit_type || '';
+      var visitNoStr = v.visit_number ? 'Käynti ' + v.visit_number : '';
+      var title = [visitNoStr, typeStr].filter(Boolean).join(' · ') || 'Käynti';
+      var subtitle = dateStr + (v.provider_name ? ' · ' + v.provider_name : '');
+      var summary = summarizeDepths(v);
+      var hasPhotos = v.before_photo_signed_url || v.after_photo_signed_url;
+      var html = '<article class="visit-card" data-id="' + escapeHtml(v.id) + '">';
+      html += '<div class="visit-card__head">';
+      html += '<h3 class="visit-card__title">' + escapeHtml(title) + '</h3>';
+      html += '<span class="visit-card__meta">' + escapeHtml(subtitle) + '</span>';
+      html += '</div>';
+      html += '<div class="visit-card__summary">' + summary + '</div>';
+      if (v.passes != null && v.passes !== '') {
+        html += '<div class="visit-card__summary">Pistoja: <strong>' + v.passes + '</strong></div>';
+      }
+      if (v.numbing_agent) {
+        var na = v.numbing_agent + (v.numbing_agent === 'Muu' && v.numbing_agent_other ? ' (' + v.numbing_agent_other + ')' : '');
+        html += '<div class="visit-card__summary">Puudute: <strong>' + escapeHtml(na) + '</strong></div>';
+      }
+      var flags = [];
+      if (v.consent_signed) flags.push('Suostumus ✓');
+      if (v.before_picture_taken) flags.push('Ennen-kuva ✓');
+      if (flags.length) {
+        html += '<div class="visit-card__summary">' + escapeHtml(flags.join(' · ')) + '</div>';
+      }
+      if (v.notes) {
+        html += '<div class="visit-card__summary" style="white-space:pre-wrap;">Muistiinpanot: ' + escapeHtml(v.notes) + '</div>';
+      }
+      if (hasPhotos) {
+        html += renderPhotosPreview(v);
+      }
+      html += '<div class="visit-card__actions">';
+      html += '<button type="button" class="btn btn--xs btn--ghost" data-action="edit">Muokkaa</button>';
+      html += '<button type="button" class="btn btn--xs btn--danger" data-action="delete">Poista</button>';
+      html += '</div>';
+      html += '</article>';
+      return html;
+    }
+    function renderPhotosPreview(v) {
+      var html = '<div class="photo-grid" style="margin-top:12px;">';
+      ['before', 'after'].forEach(function (t) {
+        var url = v[t + '_photo_signed_url'];
+        var label = t === 'before' ? 'Ennen' : 'Jälkeen';
+        html += '<div class="photo-slot">';
+        html += '<div class="photo-slot__label">' + label + '</div>';
+        if (url) {
+          html += '<img class="photo-slot__img" src="' + escapeHtml(url) + '" alt="' + label + '" loading="lazy">';
+        } else {
+          html += '<div class="photo-slot__placeholder">Ei kuvaa</div>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+      return html;
+    }
+    function renderVisitForm(existing) {
+      var v = existing || {};
+      var isNew = !existing;
+      var todayIso = new Date().toISOString().slice(0, 10);
+      var visitDate = v.visit_date || todayIso;
+      var defaultType = isNew
+        ? (hoitolokiVisits.length === 0 ? 'Aloitushoito' : 'Sarjakäynti')
+        : (v.visit_type || '');
+      var visitType = v.visit_type != null ? v.visit_type : defaultType;
+      var visitNumber = (v.visit_number != null && v.visit_number !== '')
+        ? v.visit_number
+        : (isNew ? computeNextVisitNumber() : '');
+      var providerName = v.provider_name ||
+        (isNew && hoitolokiVisits.length > 0 ? (hoitolokiVisits[hoitolokiVisits.length - 1].provider_name || '') : '');
+      var numbingAgent = v.numbing_agent ||
+        (isNew && hoitolokiVisits.length > 0 ? (hoitolokiVisits[hoitolokiVisits.length - 1].numbing_agent || '') : '');
+      var numbingOther = v.numbing_agent_other || '';
+      var passes = (v.passes != null && v.passes !== '') ? v.passes : '';
+      var notes = v.notes || '';
+      var consentSigned = v.consent_signed === true;
+      var beforePictureTaken = v.before_picture_taken === true;
+      var additionalAreas = Array.isArray(v.additional_areas) ? v.additional_areas : [];
+      var depthInputs = DEPTH_FIELDS_LIST.map(function (f) {
+        var val = v[f.key];
+        var inputVal = (val == null || val === '') ? '' : val;
+        return (
+          '<div>' +
+            '<label>' + escapeHtml(f.label) + '</label>' +
+            '<input type="number" step="0.01" min="0" max="2.5" data-field="' + f.key + '" value="' + escapeHtml(inputVal) + '" placeholder="mm">' +
+          '</div>'
+        );
+      }).join('');
+      var visitTypeOptions = '<option value=""' + (visitType === '' ? ' selected' : '') + '>—</option>' +
+        VISIT_TYPES_LIST.map(function (t) {
+          return '<option value="' + t + '"' + (visitType === t ? ' selected' : '') + '>' + t + '</option>';
+        }).join('');
+      var numbingOptions = '<option value=""' + (numbingAgent === '' ? ' selected' : '') + '>—</option>' +
+        NUMBING_AGENTS_LIST.map(function (n) {
+          return '<option value="' + n + '"' + (numbingAgent === n ? ' selected' : '') + '>' + n + '</option>';
+        }).join('');
+      var addAreasHtml = additionalAreas.map(function (a, i) {
+        return renderAddAreaRow(a.label || '', a.depth, i);
+      }).join('');
+      var photoSection;
+      if (!isNew) {
+        photoSection = '<fieldset><legend>Valokuvat</legend><div class="photo-grid">' +
+          renderPhotoSlot('before', v.before_photo_signed_url) +
+          renderPhotoSlot('after', v.after_photo_signed_url) +
+          '</div></fieldset>';
+      } else {
+        photoSection = '<fieldset><legend>Valokuvat</legend>' +
+          '<p style="font-size:13px;color:var(--text-mid);margin:0;">Tallenna käynti ensin, sitten voit lisätä valokuvat muokkaamalla.</p>' +
+          '</fieldset>';
+      }
+      var html = '<form class="visit-form" data-visit-id="' + escapeHtml(v.id || '') + '" data-is-new="' + (isNew ? '1' : '0') + '">';
+      html += '<fieldset>';
+      html += '<legend>Käyntitiedot</legend>';
+      html += '<div class="visit-form__row visit-form__row--2col">';
+      html += '<div><label>Päivämäärä</label><input type="date" data-field="visit_date" value="' + escapeHtml(visitDate) + '" required></div>';
+      html += '<div><label>Käyntityyppi</label><select data-field="visit_type">' + visitTypeOptions + '</select></div>';
+      html += '<div><label>Käyntinumero</label><input type="number" min="1" max="999" data-field="visit_number" value="' + escapeHtml(visitNumber) + '"></div>';
+      html += '<div><label>Hoidon suorittaja</label><input type="text" data-field="provider_name" value="' + escapeHtml(providerName) + '" maxlength="200"></div>';
+      html += '</div>';
+      html += '</fieldset>';
+      html += '<fieldset>';
+      html += '<legend>Esihoitotiedot</legend>';
+      html += '<label class="checkbox-row"><input type="checkbox" data-field="consent_signed"' + (consentSigned ? ' checked' : '') + '> Suostumus allekirjoitettu</label>';
+      html += '<label class="checkbox-row"><input type="checkbox" data-field="before_picture_taken"' + (beforePictureTaken ? ' checked' : '') + '> Ennen-kuva otettu</label>';
+      html += '</fieldset>';
+      html += '<fieldset>';
+      html += '<legend>Topikaalinen puudute</legend>';
+      html += '<div class="visit-form__row visit-form__row--2col">';
+      html += '<div><label>Puuduteaine</label><select data-field="numbing_agent">' + numbingOptions + '</select></div>';
+      html += '<div><label>Muu (vapaa teksti)</label><input type="text" data-field="numbing_agent_other" value="' + escapeHtml(numbingOther) + '" maxlength="200"></div>';
+      html += '</div>';
+      html += '</fieldset>';
+      html += '<fieldset>';
+      html += '<legend>Hoidon parametrit</legend>';
+      html += '<div style="margin-bottom:12px;max-width:200px;"><label>Pistokertojen määrä</label><input type="number" min="0" max="99" data-field="passes" value="' + escapeHtml(passes) + '"></div>';
+      html += '<div class="depth-grid">' + depthInputs + '</div>';
+      html += '</fieldset>';
+      html += '<fieldset>';
+      html += '<legend>Muut alueet (vartalo ym.)</legend>';
+      html += '<div class="add-area-list" data-add-areas>' + addAreasHtml + '</div>';
+      html += '<button type="button" class="add-area-add-btn" data-action="add-area">+ Lisää alue</button>';
+      html += '</fieldset>';
+      html += photoSection;
+      html += '<fieldset>';
+      html += '<legend>Muistiinpanot</legend>';
+      html += '<textarea data-field="notes" rows="3" maxlength="4000">' + escapeHtml(notes) + '</textarea>';
+      html += '</fieldset>';
+      html += '<div class="visit-form__actions">';
+      html += (isNew ? '<div></div>' : '<button type="button" class="btn btn--danger btn--small" data-action="delete-visit">Poista käynti</button>');
+      html += '<div class="visit-form__actions-right">';
+      html += '<button type="button" class="btn btn--secondary btn--small" data-action="cancel">Peruuta</button>';
+      html += '<button type="submit" class="btn btn--small" data-action="save">' + (isNew ? 'Tallenna käynti' : 'Tallenna muutokset') + '</button>';
+      html += '</div>';
+      html += '</div>';
+      html += '</form>';
+      return html;
+    }
+    function renderAddAreaRow(label, depth, idx) {
+      var depthStr = (depth == null || depth === '') ? '' : depth;
+      return (
+        '<div class="add-area-row" data-area-idx="' + idx + '">' +
+          '<input type="text" placeholder="Esim. Raskausarvet vatsa" data-area-label value="' + escapeHtml(label || '') + '" maxlength="100">' +
+          '<input type="number" step="0.01" min="0" max="2.5" placeholder="mm" data-area-depth value="' + escapeHtml(depthStr) + '">' +
+          '<button type="button" class="add-area-row__remove" data-action="remove-area" aria-label="Poista">×</button>' +
+        '</div>'
+      );
+    }
+    function renderPhotoSlot(type, signedUrl) {
+      var label = type === 'before' ? 'Ennen' : 'Jälkeen';
+      var html = '<div class="photo-slot" data-photo-type="' + type + '">';
+      html += '<div class="photo-slot__label">' + label + '</div>';
+      if (signedUrl) {
+        html += '<img class="photo-slot__img" src="' + escapeHtml(signedUrl) + '" alt="' + label + '" loading="lazy">';
+      } else {
+        html += '<div class="photo-slot__placeholder">Ei kuvaa</div>';
+      }
+      html += '<div class="photo-slot__actions">';
+      html += '<input type="file" class="photo-slot__file-input" accept="image/jpeg,image/png,image/webp" data-action="upload-photo">';
+      html += '<button type="button" class="btn btn--xs btn--ghost" data-action="trigger-upload">' + (signedUrl ? 'Vaihda' : 'Lataa') + '</button>';
+      if (signedUrl) {
+        html += '<button type="button" class="btn btn--xs btn--secondary" data-action="delete-photo">Poista</button>';
+      }
+      html += '</div>';
+      html += '</div>';
+      return html;
+    }
+    function startAddVisit() {
+      isAddingNewVisit = true;
+      editingVisitId = null;
+      renderHoitolokiList();
+      setTimeout(scrollFormIntoView, 50);
+    }
+    function startEditVisit(id) {
+      isAddingNewVisit = false;
+      editingVisitId = id;
+      renderHoitolokiList();
+      setTimeout(scrollFormIntoView, 50);
+    }
+    function cancelVisitForm() {
+      isAddingNewVisit = false;
+      editingVisitId = null;
+      renderHoitolokiList();
+    }
+    function scrollFormIntoView() {
+      var form = hoitolokiList.querySelector('.visit-form');
+      if (form && form.scrollIntoView) form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    function collectFormData(form) {
+      var data = {};
+      var inputs = form.querySelectorAll('[data-field]');
+      inputs.forEach(function (el) {
+        var field = el.getAttribute('data-field');
+        if (el.type === 'checkbox') {
+          data[field] = el.checked;
+        } else {
+          var v = el.value.trim();
+          data[field] = v === '' ? null : v;
+        }
+      });
+      var areaRows = form.querySelectorAll('[data-add-areas] [data-area-idx]');
+      var areas = [];
+      areaRows.forEach(function (row) {
+        var labelEl = row.querySelector('[data-area-label]');
+        var depthEl = row.querySelector('[data-area-depth]');
+        var label = labelEl ? labelEl.value.trim() : '';
+        var depthStr = depthEl ? depthEl.value.trim() : '';
+        if (label) {
+          areas.push({
+            label: label,
+            depth: depthStr === '' ? null : Number(depthStr)
+          });
+        }
+      });
+      data.additional_areas = areas;
+      return data;
+    }
+    async function saveVisit(form) {
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return; }
+      var isNew = form.getAttribute('data-is-new') === '1';
+      var visitId = form.getAttribute('data-visit-id');
+      var data = collectFormData(form);
+      if (isNew) data.esitiedot_id = currentEsitiedotId;
+      var submitBtn = form.querySelector('[data-action="save"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Tallennetaan…';
+      }
+      try {
+        var payload = Object.assign({ action: isNew ? 'create' : 'update' }, data);
+        if (!isNew) payload.id = visitId;
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify(payload)
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return; }
+        var resData = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(resData.error || 'Tallennus epäonnistui');
+        showToast(isNew ? 'Käynti tallennettu.' : 'Käynti päivitetty.', 'success');
+        isAddingNewVisit = false;
+        editingVisitId = null;
+        await loadHoitoloki();
+      } catch (err) {
+        showToast(err.message || 'Tallennus epäonnistui', 'error');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = isNew ? 'Tallenna käynti' : 'Tallenna muutokset';
+        }
+      }
+    }
+    async function deleteVisit(id) {
+      if (!confirm('Poista tämä käynti pysyvästi? Toimintoa ei voi peruuttaa.')) return;
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return; }
+      try {
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'delete', id: id })
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Poisto epäonnistui');
+        showToast('Käynti poistettu.', 'success');
+        editingVisitId = null;
+        isAddingNewVisit = false;
+        loadHoitoloki();
+      } catch (err) {
+        showToast(err.message || 'Poisto epäonnistui', 'error');
+      }
+    }
+    async function uploadPhoto(visitId, photoType, file) {
+      if (!visitId || !file) return;
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return; }
+      var formData = new FormData();
+      formData.append('id', visitId);
+      formData.append('photoType', photoType);
+      formData.append('file', file);
+      showToast('Ladataan kuvaa…');
+      try {
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'x-admin-token': token },
+          body: formData
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Kuvan lataus epäonnistui');
+        showToast('Kuva ladattu.', 'success');
+        loadHoitoloki();
+      } catch (err) {
+        showToast(err.message || 'Kuvan lataus epäonnistui', 'error');
+      }
+    }
+    async function deletePhoto(visitId, photoType) {
+      if (!confirm('Poistetaanko ' + (photoType === 'before' ? 'ennen' : 'jälkeen') + '-kuva?')) return;
+      var token = getToken();
+      if (!token) { closeHoitolokiModal(); showPasswordView(); return; }
+      try {
+        var res = await fetch('/api/hoitoloki', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+          body: JSON.stringify({ action: 'delete-photo', id: visitId, photoType: photoType })
+        });
+        if (res.status === 401) { closeHoitolokiModal(); handle401(); return; }
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.error || 'Poisto epäonnistui');
+        showToast('Kuva poistettu.', 'success');
+        loadHoitoloki();
+      } catch (err) {
+        showToast(err.message || 'Kuvan poisto epäonnistui', 'error');
+      }
+    }
+    function addAddAreaRowToForm(form) {
+      var list = form.querySelector('[data-add-areas]');
+      if (!list) return;
+      var rows = list.querySelectorAll('[data-area-idx]');
+      var newIdx = rows.length;
+      var temp = document.createElement('div');
+      temp.innerHTML = renderAddAreaRow('', '', newIdx);
+      while (temp.firstChild) list.appendChild(temp.firstChild);
+    }
+    function removeAddAreaRow(button) {
+      var row = button.closest('[data-area-idx]');
+      if (row && row.parentNode) row.parentNode.removeChild(row);
+    }
     /* ======================================================== */
     /* WIRING                                                   */
     /* ======================================================== */
-
-    /* tabs */
     tabBookings.addEventListener('click', function () {
       activateTab('bookings');
     });
@@ -1674,16 +2225,12 @@
         loadEsitiedot();
       }
     });
-
-    /* stage 1 form */
     passwordForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var pwd = adminPwdEl.value;
       if (!pwd) return;
       submitPassword(pwd);
     });
-
-    /* stage 2 form */
     totpForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var code = adminTotpEl.value.replace(/\s+/g, '');
@@ -1694,19 +2241,14 @@
       }
       submitTotp(code);
     });
-
-    /* keep code field digits-only */
     adminTotpEl.addEventListener('input', function () {
       var v = adminTotpEl.value.replace(/\D/g, '').slice(0, 6);
       if (v !== adminTotpEl.value) adminTotpEl.value = v;
     });
-
     backToPwdBtn.addEventListener('click', function (e) {
       e.preventDefault();
       showPasswordView();
     });
-
-    /* TOTP <-> backup code switch */
     useBackupBtn.addEventListener('click', function (e) {
       e.preventDefault();
       showBackupCodeView();
@@ -1715,8 +2257,6 @@
       e.preventDefault();
       showTotpView();
     });
-
-    /* backup code form submit */
     backupCodeForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var code = adminBackupEl.value.trim();
@@ -1727,8 +2267,6 @@
       }
       submitBackupCode(code);
     });
-
-    /* uppercase live as the user types */
     adminBackupEl.addEventListener('input', function () {
       var pos = adminBackupEl.selectionStart;
       var v = adminBackupEl.value.toUpperCase();
@@ -1737,21 +2275,14 @@
         try { adminBackupEl.setSelectionRange(pos, pos); } catch (e) {}
       }
     });
-
-    /* backup codes management */
     manageBackupBtn.addEventListener('click', openBackupManageModal);
     backupManageCloseBtn.addEventListener('click', closeBackupManageModal);
     backupManageModal.addEventListener('click', function (e) {
       if (e.target === backupManageModal) closeBackupManageModal();
     });
     backupGenerateBtn.addEventListener('click', generateBackupCodes);
-
-    /* codes display modal */
     codesDisplayDoneBtn.addEventListener('click', closeCodesDisplay);
     codesCopyBtn.addEventListener('click', copyCodesToClipboard);
-    /* deliberately NO backdrop-click close — user might lose codes */
-
-    /* logout */
     logoutBtn.addEventListener('click', function () {
       clearToken();
       esitiedotCache = [];
@@ -1760,8 +2291,6 @@
       showPasswordView();
       showToast('Kirjauduit ulos.', 'success');
     });
-
-    /* bookings */
     refreshBookingsBtn.addEventListener('click', loadBookings);
     bookingsList.addEventListener('click', function (e) {
       var btn = e.target.closest('.charge-btn');
@@ -1772,14 +2301,11 @@
       var name = nameEl ? nameEl.textContent : '';
       if (customerId) askConfirmCharge(customerId, name);
     });
-
     chargeCancel.addEventListener('click', closeChargeModal);
     chargeModal.addEventListener('click', function (e) {
       if (e.target === chargeModal) closeChargeModal();
     });
     chargeConfirm.addEventListener('click', confirmCharge);
-
-    /* esitiedot */
     refreshEsitiedotBtn.addEventListener('click', function () { loadEsitiedot(); });
     gdprCheckBtn.addEventListener('click', runGdprCheck);
     esitiedotList.addEventListener('click', function (e) {
@@ -1790,8 +2316,6 @@
       var rec = esitiedotCache[idx];
       if (rec) renderDetail(rec);
     });
-
-    /* detail modal */
     detailCloseBtn.addEventListener('click', closeDetailModal);
     detailCloseBtn2.addEventListener('click', closeDetailModal);
     detailModal.addEventListener('click', function (e) {
@@ -1805,23 +2329,78 @@
         markVisitUpdated(openEsitietoRecord.id, openEsitietoRecord.nimi);
       }
     });
-
-    /* delete modal */
+    detailHoitolokiBtn.addEventListener('click', function () {
+      if (openEsitietoRecord && openEsitietoRecord.id) {
+        openHoitolokiModal(openEsitietoRecord);
+      }
+    });
     deleteCancelBtn.addEventListener('click', closeDeleteModal);
     deleteModal.addEventListener('click', function (e) {
       if (e.target === deleteModal) closeDeleteModal();
     });
     deleteConfirmBtn.addEventListener('click', confirmDelete);
-
-    /* esc closes any open modal (but NOT the codes display — user could lose codes) */
+    hoitolokiCloseBtn.addEventListener('click', closeHoitolokiModal);
+    hoitolokiCloseBtn2.addEventListener('click', closeHoitolokiModal);
+    hoitolokiModal.addEventListener('click', function (e) {
+      if (e.target === hoitolokiModal) closeHoitolokiModal();
+    });
+    hoitolokiAddBtn.addEventListener('click', startAddVisit);
+    hoitolokiList.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      var action = btn.getAttribute('data-action');
+      var card = btn.closest('.visit-card');
+      var form = btn.closest('.visit-form');
+      var visitId = card ? card.getAttribute('data-id') : (form ? form.getAttribute('data-visit-id') : null);
+      if (action === 'edit' && visitId) {
+        startEditVisit(visitId);
+      } else if (action === 'delete' && visitId) {
+        deleteVisit(visitId);
+      } else if (action === 'cancel') {
+        cancelVisitForm();
+      } else if (action === 'delete-visit' && visitId) {
+        deleteVisit(visitId);
+      } else if (action === 'add-area' && form) {
+        addAddAreaRowToForm(form);
+      } else if (action === 'remove-area' && form) {
+        removeAddAreaRow(btn);
+      } else if (action === 'trigger-upload') {
+        var slot = btn.closest('.photo-slot');
+        var fileInput = slot ? slot.querySelector('input[type="file"]') : null;
+        if (fileInput) fileInput.click();
+      } else if (action === 'delete-photo' && visitId) {
+        var photoSlot = btn.closest('.photo-slot');
+        var photoType = photoSlot ? photoSlot.getAttribute('data-photo-type') : null;
+        if (photoType) deletePhoto(visitId, photoType);
+      }
+    });
+    hoitolokiList.addEventListener('change', function (e) {
+      if (e.target.tagName !== 'INPUT' || e.target.type !== 'file') return;
+      if (e.target.getAttribute('data-action') !== 'upload-photo') return;
+      var slot = e.target.closest('.photo-slot');
+      var form = e.target.closest('.visit-form');
+      var photoType = slot ? slot.getAttribute('data-photo-type') : null;
+      var visitId = form ? form.getAttribute('data-visit-id') : null;
+      var file = e.target.files && e.target.files[0];
+      if (visitId && photoType && file) {
+        uploadPhoto(visitId, photoType, file);
+      }
+      e.target.value = '';
+    });
+    hoitolokiList.addEventListener('submit', function (e) {
+      if (e.target && e.target.classList && e.target.classList.contains('visit-form')) {
+        e.preventDefault();
+        saveVisit(e.target);
+      }
+    });
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
+      if (!hoitolokiModal.hidden)    { closeHoitolokiModal(); return; }
       if (!backupManageModal.hidden) { closeBackupManageModal(); return; }
       if (!deleteModal.hidden)       { closeDeleteModal(); return; }
       if (!detailModal.hidden)       { closeDetailModal(); return; }
       if (!chargeModal.hidden)       { closeChargeModal(); return; }
     });
-
     /* ----- BOOT ----- */
     activeTab = getStoredTab();
     if (getToken()) {
@@ -1833,6 +2412,5 @@
     }
   })();
 </script>
-
 </body>
 </html>
