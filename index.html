@@ -7,25 +7,20 @@
   <meta name="description" content="Kliininen mikroneulaus Kotkassa terveydenhuollon ammattilaisten toteuttamana. MicroPen EVO™ – FDA-hyväksytty, CE-merkitty laite. Varaa aika Timmasta.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.studiomahla.fi/">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-
   <!-- Open Graph -->
   <meta property="og:title" content="Mahlamäen Kauneusstudio – Kliininen mikroneulaus Kotka">
   <meta property="og:description" content="Terveydenhuollon ammattilaisten toteuttama kliininen mikroneulaus Kotkassa. FDA-hyväksytty MicroPen EVO™ -laite.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fi_FI">
   <meta property="og:url" content="https://www.studiomahla.fi/">
-
   <meta name="theme-color" content="#3d5247">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-
   <style>
     :root {
       --green-dark: #3d5247;
@@ -39,18 +34,15 @@
       --white: #faf8f4;
       --text-dark: #2a3830;
       --text-mid: #4a5e55;
-
       --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
       --nav-height: 72px;
       --max-w: 1200px;
       --section-py: clamp(64px, 9vw, 128px);
       --section-px: clamp(24px, 5vw, 48px);
     }
-
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -61,12 +53,12 @@
       background: var(--white);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
     ul { padding: 0; margin: 0; list-style: none; }
-
     h1, h2, h3 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -75,22 +67,18 @@
       letter-spacing: -0.01em;
     }
     h1 em, h2 em, h3 em { font-style: italic; color: var(--pink); }
-
     p { margin: 0 0 1.1em; }
     p:last-child { margin-bottom: 0; }
-
     :focus-visible {
       outline: 2px solid var(--pink);
       outline-offset: 3px;
       border-radius: 2px;
     }
     :focus:not(:focus-visible) { outline: none; }
-
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
       .reveal { opacity: 1 !important; transform: none !important; }
     }
-
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -113,7 +101,6 @@
       font-size: 14px;
       letter-spacing: 0.05em;
     }
-
     .label {
       font-family: var(--font-sans);
       font-weight: 300;
@@ -126,7 +113,6 @@
     .label--pink { color: var(--pink); }
     .label--pink-pale { color: var(--pink-pale); }
     .label--mid { color: var(--text-mid); }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -160,8 +146,9 @@
       font-size: 11px;
       letter-spacing: 0.2em;
       min-height: 44px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
-
     .nav {
       position: sticky;
       top: 0;
@@ -203,7 +190,6 @@
       line-height: 1.4;
     }
     .brand__name span { display: block; }
-
     .nav__right {
       display: flex;
       align-items: center;
@@ -226,7 +212,21 @@
     .nav__link.is-current {
       color: var(--pink-pale);
     }
-
+    @media (max-width: 540px) {
+      .nav__inner { padding: 0 16px; gap: 10px; }
+      .brand { gap: 10px; }
+      .brand__logo { width: 26px; height: 26px; }
+      .brand__name span { display: none; }
+      .nav__right { gap: 10px; }
+      .nav__link { font-size: 10.5px; letter-spacing: 0.16em; padding: 4px 2px; }
+      .btn--small { padding: 8px 14px; font-size: 10px; letter-spacing: 0.14em; }
+    }
+    @media (max-width: 400px) {
+      .nav__inner { padding: 0 12px; gap: 8px; }
+      .brand__name { display: none; }
+      .nav__right { gap: 8px; }
+      .btn--small { padding: 8px 12px; font-size: 9.5px; letter-spacing: 0.12em; }
+    }
     .floating-cta {
       position: fixed;
       right: 32px;
@@ -244,7 +244,6 @@
       transform: translateY(0);
     }
     .floating-cta:hover { transform: translateY(-2px); }
-
     .section {
       padding: var(--section-py) var(--section-px);
       position: relative;
@@ -262,7 +261,6 @@
     @media (max-width: 768px) {
       .grid-2 { grid-template-columns: 1fr; gap: 48px; }
     }
-
     .reveal {
       opacity: 0;
       transform: translateY(20px);
@@ -272,7 +270,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
     /* OPENING BANNER (temporary – remove when studio opens) */
     .opening-banner {
       background: var(--pink-pale);
@@ -296,7 +293,6 @@
       text-underline-offset: 3px;
     }
     .opening-banner a:hover { color: var(--green-dark); }
-
     .hero {
       background: var(--green-dark);
       color: var(--white);
@@ -343,7 +339,6 @@
       margin: 0 auto 36px;
       color: rgba(250, 248, 244, 0.85);
     }
-
     .pillars {
       display: flex;
       flex-direction: column;
@@ -363,11 +358,9 @@
       line-height: 1.85;
       color: var(--text-mid);
     }
-
     .section--dark .pillar h3 { color: var(--white); }
     .section--dark .pillar p { color: rgba(250, 248, 244, 1); }
     .section--dark .pillar { border-left-color: var(--pink-pale); }
-
     .section--cream { background: var(--cream); }
     .section--cream-warm { background: var(--cream-warm); }
     .section--white { background: var(--white); }
@@ -377,7 +370,6 @@
     }
     .section--dark h1, .section--dark h2, .section--dark h3 { color: var(--white); }
     .section--dark p { color: rgba(250, 248, 244, 0.85); }
-
     h2 {
       font-size: clamp(38px, 4vw, 58px);
       font-weight: 400;
@@ -386,7 +378,6 @@
       font-size: 22px;
       font-weight: 500;
     }
-
     .challenges {
       display: flex;
       flex-direction: column;
@@ -411,7 +402,6 @@
       color: rgba(250, 248, 244, 1);
       margin: 0;
     }
-
     /* COMPARE TABLE — clinical microneedling vs. roller */
     .section--compare .section__inner { max-width: 1100px; }
     .compare-table-wrap {
@@ -466,8 +456,7 @@
       line-height: 1.9;
       color: var(--text-mid);
     }
-    /* Below 900px: collapse the table into stacked cards
-       (each row = one card with category title + two labeled values) */
+    /* Below 900px: collapse the table into stacked cards */
     @media (max-width: 900px) {
       .compare-table-wrap {
         background: transparent;
@@ -520,7 +509,6 @@
         margin-bottom: 6px;
       }
     }
-
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -589,7 +577,6 @@
       color: rgba(250, 248, 244, 0.7);
       line-height: 1.85;
     }
-
     .feat-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -603,7 +590,6 @@
       .feat-cards { grid-template-columns: 1fr; }
     }
     .feat-card { height: 100%; }
-
     /* MicroPen EVO -osion erityisasettelu: kuva ja teksti vertikaalisesti keskitetty */
     .section--laite .grid-2 { align-items: center; }
     .laite-image {
@@ -632,7 +618,6 @@
       margin: 0;
       line-height: 1.85;
     }
-
     /* Hoidot-osion otsikkorivi: label/H2 vasemmalla, MicroPen-logo oikealla */
     .hoidot-head {
       max-width: 100%;
@@ -663,7 +648,6 @@
         width: 100%;
       }
     }
-
     .care-list { margin: 18px 0 0; }
     .care-list li {
       position: relative;
@@ -683,7 +667,6 @@
       height: 1px;
       background: var(--pink);
     }
-
     .contra-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -715,7 +698,6 @@
       line-height: 1.85;
       margin: 0;
     }
-    /* Dark variant (if contra section is ever used on dark bg again) */
     .section--dark .contra-list li {
       border-bottom-color: rgba(250, 248, 244, 0.12);
       color: rgba(250, 248, 244, 0.88);
@@ -728,7 +710,6 @@
       max-width: 720px;
       margin: 0 0 16px;
     }
-
     .faq {
       display: flex;
       flex-direction: column;
@@ -769,7 +750,6 @@
       line-height: 1.9;
       margin: 0;
     }
-
     .footer {
       background: var(--green-dark);
       color: var(--white);
@@ -812,9 +792,7 @@
     }
     .footer__bottom a:hover { color: var(--pink-pale); text-decoration: underline; }
     .footer__bottom span { margin: 0 8px; }
-
     @media (max-width: 768px) { .floating-cta { display: none; } }
-
     .lead {
       font-size: 16px;
       line-height: 1.9;
@@ -823,9 +801,7 @@
   </style>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
-
 <header class="nav" role="banner">
   <div class="nav__inner">
     <a href="#hero" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
@@ -845,7 +821,6 @@
         <span>Kauneusstudio</span>
       </span>
     </a>
-
     <nav class="nav__right" aria-label="Päänavigaatio">
       <a href="blogi.html" class="nav__link">Blogi</a>
       <a href="kauppa.html" class="btn btn--small" aria-label="Tee ennakkovaraus">
@@ -854,7 +829,6 @@
     </nav>
   </div>
 </header>
-
 <!-- OPENING BANNER — temporary. Remove this element and the "+ 40px" from .hero padding when the studio opens. -->
 <div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
   Hoitola avataan syksyllä 2026 –
@@ -862,9 +836,7 @@
     varaa ensikäyntisi ennakkohintaan
   </a>
 </div>
-
 <main id="main-content">
-
   <!-- 1. HERO -->
   <section id="hero" class="hero" aria-labelledby="hero-title">
     <div class="hero__inner">
@@ -892,7 +864,6 @@
       </a>
     </div>
   </section>
-
   <!-- 2. FILOSOFIA -->
   <section class="section section--cream" aria-labelledby="filosofia-title">
     <div class="section__inner">
@@ -924,7 +895,6 @@
       </div>
     </div>
   </section>
-
   <!-- 3. MIKRONEULAUS – MENETELMÄ -->
   <section class="section section--dark" aria-labelledby="menetelma-title">
     <div class="section__inner">
@@ -974,7 +944,6 @@
       </div>
     </div>
   </section>
-
   <!-- 4. KENELLE HOITO EI SOVI -->
   <section class="section section--cream-warm" aria-labelledby="kontraindikaatiot-title">
     <div class="section__inner">
@@ -1004,7 +973,6 @@
       </p>
     </div>
   </section>
-
   <!-- 5. KLIININEN MIKRONEULAUS VS. MIKRONEULARULLA -->
   <section class="section section--white section--compare" aria-labelledby="vertailu-title">
     <div class="section__inner">
@@ -1012,7 +980,6 @@
         <p class="label label--mid">Miksi kliininen hoito</p>
         <h2 id="vertailu-title">Kliininen mikroneulaus vai mikroneularulla?</h2>
       </div>
-
       <div class="compare-table-wrap reveal">
         <table class="compare-table">
           <caption class="skip-link">Vertailu: kliininen mikroneulaus ja mikroneularulla / mikroneulausrulla</caption>
@@ -1057,7 +1024,6 @@
           </tbody>
         </table>
       </div>
-
       <div class="compare-text reveal">
         <p>
           Pistoskulma vaikuttaa merkittävästi hoidon turvallisuuteen ja tulokseen. Mikroneularulla tai mikroneulausrulla pyörii ihon pinnalla, jolloin neula iskeytyy ihoon viistosti alhaalta ja poistuu yhtä lailla viistosti ylöspäin – kulkien ihokudoksen läpi laajana kaarena pystysuoran pistoksen sijaan. Tämä repivä liike vaurioittaa kudosta huomattavasti enemmän kuin on tarpeen. Rullien neulat ovat myös tyypillisesti selvästi paksumpia kuin kliinisissä laitteissa käytettävät steriilit hoitopäät, mikä lisää kudosvauriota entisestään.
@@ -1068,7 +1034,6 @@
       </div>
     </div>
   </section>
-
   <!-- 6. HOIDOT JA HINNAT -->
   <section class="section section--dark" aria-labelledby="hoidot-title">
     <div class="section__inner">
@@ -1082,7 +1047,6 @@
              class="hoidot-head__logo"
              loading="lazy">
       </div>
-
       <div class="cards reveal">
         <article class="card">
           <div class="card__num">01</div>
@@ -1093,7 +1057,6 @@
             <div class="card__price">200 €</div>
           </div>
         </article>
-
         <article class="card">
           <div class="card__num">02</div>
           <h3 class="card__name">Sarjahoito 3 ×</h3>
@@ -1104,7 +1067,6 @@
             <div class="card__note">190 € / hoito</div>
           </div>
         </article>
-
         <article class="card">
           <div class="card__num">03</div>
           <h3 class="card__name">Sarjahoito 6 ×</h3>
@@ -1116,13 +1078,11 @@
           </div>
         </article>
       </div>
-
       <p class="cards-note">
         Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen.
       </p>
     </div>
   </section>
-
   <!-- 7. MICROPEN EVO – LAITE -->
   <section class="section section--cream section--laite" aria-labelledby="laite-title">
     <div class="section__inner">
@@ -1160,7 +1120,6 @@
       </div>
     </div>
   </section>
-
   <!-- 8. HOIDON KULKU -->
   <section class="section section--dark" aria-labelledby="hoidon-kulku-title">
     <div class="section__inner">
@@ -1200,7 +1159,6 @@
       </div>
     </div>
   </section>
-
   <!-- 9. ENNEN JA JÄLKEEN HOITOA -->
   <section class="section section--cream" aria-labelledby="ennen-jalkeen-title">
     <div class="section__inner">
@@ -1208,7 +1166,6 @@
         <p class="label label--mid">Ohjeistus</p>
         <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoitoa</h2>
       </div>
-
       <div class="grid-2">
         <div class="reveal">
           <h3>Ennen hoitoa</h3>
@@ -1232,7 +1189,6 @@
       </div>
     </div>
   </section>
-
   <!-- 10. UKK -->
   <section class="section section--white" aria-labelledby="ukk-title">
     <div class="section__inner">
@@ -1240,32 +1196,27 @@
         <p class="label label--mid">UKK</p>
         <h2 id="ukk-title">Usein kysyttyä</h2>
       </div>
-
       <div class="faq reveal">
         <article class="faq__item">
           <div class="faq__num">01</div>
           <h3 class="faq__q">Miten saavun studiolle ja kuinka ajoissa minun kannattaa tulla paikalle?</h3>
           <p class="faq__answer">Studio sijaitsee rauhallisella omakotitaloalueella Kotkan Ruonalassa. Tontin rajalla on bussipysäkki aivan sisäänkäynnin läheisyydessä, ja omalla autolla saapuville on varattu ilmainen pysäköintipaikka pihassa suoraan studion oven edustalla. Pyydämme saapumaan täsmälleen varattuna kellonaikana – studiolla ei ole erillistä odotustilaa, jotta voimme taata jokaiselle täydellisen yksityisyyden. Tarkemmat saapumisohjeet saat varausvahvistuksen yhteydessä.</p>
         </article>
-
         <article class="faq__item">
           <div class="faq__num">02</div>
           <h3 class="faq__q">Sattuuko mikroneulaus ja miltä iho näyttää hoidon jälkeen?</h3>
           <p class="faq__answer">Kliininen mikroneulaus tuntuu iholla pienenä nipistelynä tai värinänä, mutta toimenpide on erittäin siedettävä ja nopeasti ohi. Hoidon jälkeen iholla esiintyy punoitusta ja kevyttä kuumotusta – täysin normaali fysiologinen vaste ja merkki siitä, että ihon oma uudistumisprosessi on käynnistynyt. Punoitus laskee tyypillisesti jo ensimmäisen vuorokauden aikana.</p>
         </article>
-
         <article class="faq__item">
           <div class="faq__num">03</div>
           <h3 class="faq__q">Miten hoidon turvallisuus ja hygienia varmistetaan?</h3>
           <p class="faq__answer">Toimintamme ydin nojaa yli kahdenkymmenen vuoden kokemukseen terveydenhuoltoalalta. Noudatamme hoidoissa ehdotonta aseptiikkaa. Käytämme laitteessa yksinomaan steriilejä ja kertakäyttöisiä neulapäitä. Hoitotila ja pinnat puhdistetaan kliinisen tarkasti jokaisen asiakkaan välissä.</p>
         </article>
-
         <article class="faq__item">
           <div class="faq__num">04</div>
           <h3 class="faq__q">Kuinka monta hoitokertaa ihoni tarvitsee?</h3>
           <p class="faq__answer">Näkyvien ja pysyvien rakenteellisten tulosten saavuttaminen vaatii useimmiten kolmesta kuuteen kerran sarjahoidon. Käsittelemme ihoa aina täysin yksilöllisesti. Suosittelemme varaamaan ensimmäisen ajan yksittäiseen hoitoon, jonka yhteydessä teemme asiantuntevan arvion ihosi tilanteesta ja laadimme optimaalisen aikataulun jatkolle.</p>
         </article>
-
         <article class="faq__item">
           <div class="faq__num">05</div>
           <h3 class="faq__q">Kuinka varaan ajan?</h3>
@@ -1274,9 +1225,7 @@
       </div>
     </div>
   </section>
-
 </main>
-
 <!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
@@ -1298,26 +1247,22 @@
           <span>Kauneusstudio</span>
         </span>
       </div>
-
       <div class="footer__cta">
         <a href="kauppa.html" class="btn btn--outline" aria-label="Tee ennakkovaraus">
           Ennakkovaraus
         </a>
       </div>
-
       <div class="footer__contact">
         <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
         <a href="tel:+358503671683">050 367 1683</a><br>
         Mahlamäentie 14, 48300 Kotka
       </div>
     </div>
-
     <div class="footer__bottom">
       © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
     </div>
   </div>
 </footer>
-
 <!-- FLOATING CTA -->
 <a href="kauppa.html"
    class="btn floating-cta"
@@ -1325,7 +1270,6 @@
    aria-label="Tee ennakkovaraus">
   Varaa ennakkoon
 </a>
-
 <!-- JSON-LD SCHEMA: BeautySalon (paikallinen yritys) -->
 <script type="application/ld+json">
 {
@@ -1370,7 +1314,6 @@
   "sameAs": []
 }
 </script>
-
 <!-- JSON-LD SCHEMA: FAQPage (usein kysytyt kysymykset) -->
 <script type="application/ld+json">
 {
@@ -1420,12 +1363,10 @@
   ]
 }
 </script>
-
 <!-- PROGRESSIVE ENHANCEMENT JS -->
 <script>
   (function () {
     'use strict';
-
     var revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
@@ -1440,7 +1381,6 @@
     } else {
       revealEls.forEach(function (el) { el.classList.add('is-visible'); });
     }
-
     var hero = document.getElementById('hero');
     var cta = document.getElementById('floatingCta');
     if (hero && cta && 'IntersectionObserver' in window) {
@@ -1466,6 +1406,5 @@
     }
   })();
 </script>
-
 </body>
 </html>
