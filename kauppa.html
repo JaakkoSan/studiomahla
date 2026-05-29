@@ -7,26 +7,20 @@
   <meta name="description" content="Varaa ensikäyntisi ennakkoon hintaan 190 € (norm. 200 €) ja ole ensimmäisten joukossa kun kliininen mikroneulausstudio avaa Kotkassa syksyllä 2026.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.studiomahla.fi/kauppa.html">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-
   <meta property="og:title" content="Ennakkovaraus – Kliininen mikroneulaus Kotka">
   <meta property="og:description" content="Varaa ensikäyntisi ennakkohintaan 190 € ennen avajaisia syksyllä 2026.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fi_FI">
   <meta property="og:url" content="https://www.studiomahla.fi/kauppa.html">
-
   <meta name="theme-color" content="#3d5247">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-
   <!-- Stripe.js — loaded async; page degrades gracefully if blocked -->
   <script src="https://js.stripe.com/v3/" async></script>
-
   <style>
     :root {
       --green-dark: #3d5247;
@@ -41,17 +35,14 @@
       --text-dark: #2a3830;
       --text-mid: #4a5e55;
       --danger: #b85a3a;
-
       --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
       --nav-height: 72px;
       --max-w: 1200px;
       --section-px: clamp(24px, 5vw, 48px);
     }
-
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -62,11 +53,11 @@
       background: var(--white);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-
     h1, h2, h3 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -78,18 +69,15 @@
     h1 em, h2 em, h3 em { font-style: italic; color: var(--pink); }
     p { margin: 0 0 1.1em; }
     p:last-child { margin-bottom: 0; }
-
     :focus-visible {
       outline: 2px solid var(--pink);
       outline-offset: 3px;
       border-radius: 2px;
     }
     :focus:not(:focus-visible) { outline: none; }
-
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
     }
-
     .skip-link {
       position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
     }
@@ -99,7 +87,6 @@
       background: var(--pink); color: #fff;
       font-family: var(--font-sans); font-size: 14px; letter-spacing: 0.05em;
     }
-
     .label {
       font-family: var(--font-sans);
       font-weight: 300;
@@ -111,7 +98,6 @@
     }
     .label--pink-pale { color: var(--pink-pale); }
     .label--mid { color: var(--text-mid); }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -141,11 +127,11 @@
     }
     .btn--small {
       padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px;
+      white-space: nowrap; flex-shrink: 0;
     }
     .btn--large {
       padding: 18px 40px; font-size: 14px; min-height: 52px; width: 100%;
     }
-
     /* NAVIGATION */
     .nav {
       position: sticky; top: 0; z-index: 100;
@@ -169,7 +155,6 @@
       line-height: 1.4;
     }
     .brand__name span { display: block; }
-
     .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
       font-family: var(--font-sans);
@@ -186,7 +171,21 @@
     }
     .nav__link:hover { color: var(--pink-pale); }
     .nav__link.is-current { color: var(--pink-pale); }
-
+    @media (max-width: 540px) {
+      .nav__inner { padding: 0 16px; gap: 10px; }
+      .brand { gap: 10px; }
+      .brand__logo { width: 26px; height: 26px; }
+      .brand__name span { display: none; }
+      .nav__right { gap: 10px; }
+      .nav__link { font-size: 10.5px; letter-spacing: 0.16em; padding: 4px 2px; }
+      .btn--small { padding: 8px 14px; font-size: 10px; letter-spacing: 0.14em; }
+    }
+    @media (max-width: 400px) {
+      .nav__inner { padding: 0 12px; gap: 8px; }
+      .brand__name { display: none; }
+      .nav__right { gap: 8px; }
+      .btn--small { padding: 8px 12px; font-size: 9.5px; letter-spacing: 0.12em; }
+    }
     /* OPENING BANNER */
     .opening-banner {
       background: var(--pink-pale);
@@ -209,7 +208,6 @@
       text-underline-offset: 3px;
     }
     .opening-banner a:hover { color: var(--green-dark); }
-
     /* HERO */
     .prebook-hero {
       background: var(--green-dark);
@@ -249,7 +247,6 @@
       max-width: 580px;
       margin: 0 auto;
     }
-
     /* CARD SECTION */
     .prebook-section {
       background: var(--cream);
@@ -327,7 +324,6 @@
       color: var(--text-mid);
       letter-spacing: 0.04em;
     }
-
     /* FORM */
     .prebook-form { display: flex; flex-direction: column; gap: 18px; }
     .field { display: flex; flex-direction: column; gap: 8px; }
@@ -360,7 +356,6 @@
       box-shadow: 0 0 0 1px var(--pink);
     }
     .field__input:disabled { background: var(--cream); cursor: not-allowed; }
-
     /* Stripe PaymentElement container */
     .prebook-payment {
       padding: 0;
@@ -376,7 +371,6 @@
       background: var(--cream);
       border-radius: 2px;
     }
-
     /* Prominent reassurance — "card will not be charged now" */
     .prebook-notice {
       background: var(--cream-warm);
@@ -415,7 +409,6 @@
         gap: 10px;
       }
     }
-
     .prebook-error {
       color: var(--danger);
       font-size: 14px;
@@ -427,7 +420,6 @@
       border-left: 3px solid var(--danger);
     }
     .prebook-error[hidden] { display: none !important; }
-
     /* SUCCESS STATE */
     .prebook-success {
       text-align: center;
@@ -455,7 +447,6 @@
       color: var(--text-mid);
       margin: 0 0 8px;
     }
-
     /* FOOTER */
     .footer { background: var(--green-dark); color: var(--white); padding: 64px var(--section-px) 28px; }
     .footer__inner { max-width: var(--max-w); margin: 0 auto; }
@@ -487,9 +478,7 @@
   </style>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
-
 <header class="nav" role="banner">
   <div class="nav__inner">
     <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
@@ -509,7 +498,6 @@
         <span>Kauneusstudio</span>
       </span>
     </a>
-
     <nav class="nav__right" aria-label="Päänavigaatio">
       <a href="blogi.html" class="nav__link">Blogi</a>
       <a href="kauppa.html" class="btn btn--small" aria-current="page" aria-label="Olet ennakkovarauksen sivulla">
@@ -518,13 +506,10 @@
     </nav>
   </div>
 </header>
-
 <div id="opening-banner" class="opening-banner" role="status" aria-live="polite">
   Hoitola avataan syksyllä 2026 – varaa ensikäyntisi ennakkohintaan
 </div>
-
 <main id="main-content">
-
   <section class="prebook-hero" aria-labelledby="prebook-title">
     <div class="prebook-hero__inner">
       <p class="label label--pink-pale">Ennakkovaraus</p>
@@ -532,7 +517,6 @@
       <p>Ole ensimmäisten joukossa kun Mahlamäen kauneusstudio avaa ovensa syksyllä 2026.</p>
     </div>
   </section>
-
   <section class="prebook-section" aria-label="Ennakkovaraus">
     <article class="prebook-card">
       <!-- FORM (visible by default; replaced by success state on completion) -->
@@ -542,14 +526,12 @@
         <p class="prebook-card__desc">
           Varaa ensikäyntisi nyt ennakkohintaan ja ole ensimmäisten joukossa kun Mahlamäen kauneusstudio avaa ovensa syksyllä 2026. Olemme sinuun yhteydessä henkilökohtaisesti ennen kuin avaamme kalenterin muille varauksille. Varauksen voi peruuttaa maksutta koska tahansa ennen hoitoa – korttia ei veloiteta ennen kuin hoito on vahvistettu.
         </p>
-
         <div class="prebook-price">
           <span class="prebook-price__current">190 €</span>
           <span class="prebook-price__vat">sis. alv 25,5 %</span>
           <span class="prebook-price__original">norm. 200 €</span>
           <span class="prebook-price__note">Veloitetaan vasta kun hoito on vahvistettu</span>
         </div>
-
         <form class="prebook-form" id="prebookForm" novalidate>
           <div class="field">
             <label class="field__label" for="prebook-name">
@@ -558,7 +540,6 @@
             <input class="field__input" type="text" id="prebook-name" name="name"
                    required aria-required="true" autocomplete="name" maxlength="200">
           </div>
-
           <div class="field">
             <label class="field__label" for="prebook-email">
               Sähköposti <span class="field__required" aria-hidden="true">*</span>
@@ -566,7 +547,6 @@
             <input class="field__input" type="email" id="prebook-email" name="email"
                    required aria-required="true" autocomplete="email" maxlength="200">
           </div>
-
           <div class="field">
             <label class="field__label" for="prebook-phone">
               Puhelin <span class="field__required" aria-hidden="true">*</span>
@@ -574,20 +554,17 @@
             <input class="field__input" type="tel" id="prebook-phone" name="phone"
                    required aria-required="true" autocomplete="tel" maxlength="50">
           </div>
-
           <!-- Honeypot field — hidden from humans, often filled by spam bots.
                If any value is submitted, the server silently ignores the request. -->
           <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
             <label for="prebook-website">Verkkosivu (jätä tyhjäksi)</label>
             <input type="text" id="prebook-website" name="website" tabindex="-1" autocomplete="off">
           </div>
-
           <div class="field">
             <span class="field__label">Maksukortti</span>
             <!-- Stripe PaymentElement is mounted here -->
             <div class="prebook-payment" id="payment-element" data-loading="true"></div>
           </div>
-
           <aside class="prebook-notice" role="note" aria-label="Veloitustieto">
             <span class="prebook-notice__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -602,15 +579,12 @@
               </p>
             </div>
           </aside>
-
           <p class="prebook-error" id="prebookError" role="alert" hidden></p>
-
           <button type="submit" class="btn btn--large" id="prebookSubmit" disabled>
             Varaa ennakkoon
           </button>
         </form>
       </div>
-
       <!-- SUCCESS STATE (hidden by default) -->
       <div id="prebookSuccess" hidden>
         <div class="prebook-success">
@@ -632,9 +606,7 @@
       </div>
     </article>
   </section>
-
 </main>
-
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
     <div class="footer__cols">
@@ -655,30 +627,25 @@
           <span>Kauneusstudio</span>
         </span>
       </a>
-
       <div class="footer__cta">
         <a href="kauppa.html" class="btn btn--outline" aria-label="Tee ennakkovaraus">
           Ennakkovaraus
         </a>
       </div>
-
       <div class="footer__contact">
         <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
         <a href="tel:+358503671683">050 367 1683</a><br>
         Mahlamäentie 14, 48300 Kotka
       </div>
     </div>
-
     <div class="footer__bottom">
       © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
     </div>
   </div>
 </footer>
-
 <script>
   (function () {
     'use strict';
-
     // ----- DOM refs -----
     var formEl       = document.getElementById('prebookForm');
     var nameEl       = document.getElementById('prebook-name');
@@ -689,11 +656,9 @@
     var errorEl      = document.getElementById('prebookError');
     var formWrapEl   = document.getElementById('prebookFormWrap');
     var successEl    = document.getElementById('prebookSuccess');
-
     var stripe = null;
     var elements = null;
     var setupIntentId = null;
-
     /* ----- helpers ----- */
     function showError(msg) {
       errorEl.textContent = msg;
@@ -711,10 +676,8 @@
       formWrapEl.hidden = true;
       successEl.hidden = false;
       successEl.focus && successEl.focus();
-      // Scroll the card into view if user is far down
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-
     /* ----- bootstrap: wait for Stripe.js + create SetupIntent ----- */
     function waitForStripe(timeoutMs) {
       return new Promise(function (resolve, reject) {
@@ -726,11 +689,9 @@
         })();
       });
     }
-
     async function init() {
       try {
         var StripeCtor = await waitForStripe(8000);
-
         var res = await fetch('/api/setup-intent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -741,9 +702,7 @@
         if (!data.clientSecret || !data.publishableKey) {
           throw new Error('Maksupalvelu palautti virheellisen vastauksen');
         }
-
         stripe = StripeCtor(data.publishableKey);
-
         var appearance = {
           theme: 'stripe',
           variables: {
@@ -788,15 +747,9 @@
             }
           }
         };
-
         elements = stripe.elements({ clientSecret: data.clientSecret, appearance: appearance });
         setupIntentId = parseSetupIntentIdFromClientSecret(data.clientSecret);
-
         var paymentElement = elements.create('payment', {
-          // We collect name/email/phone in our own form so opt out of those in
-          // the PaymentElement. We let Stripe collect address fields (typically
-          // only postal code for FI cards) — opting out of those would require
-          // us to provide every sub-field ourselves.
           fields: {
             billingDetails: {
               name: 'never',
@@ -807,12 +760,10 @@
         });
         paymentElement.mount('#payment-element');
         paymentEl.removeAttribute('data-loading');
-
         paymentElement.on('ready', function () {
           submitEl.disabled = false;
         });
         paymentElement.on('change', function (event) {
-          // Clear any prior error once the user edits the card
           if (!event.empty) clearError();
         });
       } catch (err) {
@@ -826,28 +777,22 @@
         submitEl.disabled = true;
       }
     }
-
-    // SetupIntent client_secret format: seti_XXX_secret_YYY
     function parseSetupIntentIdFromClientSecret(cs) {
       if (typeof cs !== 'string') return null;
       var idx = cs.indexOf('_secret_');
       return idx > 0 ? cs.slice(0, idx) : null;
     }
-
     /* ----- submit ----- */
     formEl.addEventListener('submit', async function (e) {
       e.preventDefault();
       clearError();
-
       if (!stripe || !elements) {
         showError('Maksupalvelu ei ole vielä valmiina. Odota hetki ja yritä uudelleen.');
         return;
       }
-
       var name  = nameEl.value.trim();
       var email = emailEl.value.trim();
       var phone = phoneEl.value.trim();
-
       if (!name) {
         showError('Kirjoita nimesi.');
         nameEl.focus();
@@ -863,16 +808,11 @@
         phoneEl.focus();
         return;
       }
-
       setSubmitting(true, 'Käsitellään…');
-
-      // Save contact info for the possible redirect-back path (3D Secure).
       try {
         sessionStorage.setItem('prebookingContact', JSON.stringify({ name: name, email: email, phone: phone }));
       } catch (e) {}
-
       var returnUrl = window.location.origin + window.location.pathname + '?prebooking=return';
-
       var result;
       try {
         result = await stripe.confirmSetup({
@@ -881,9 +821,6 @@
             return_url: returnUrl,
             payment_method_data: {
               billing_details: {
-                // Address fields are collected by the PaymentElement itself
-                // (typically just postal code for FI cards), so we only need
-                // to supply name/email/phone here.
                 name: name,
                 email: email,
                 phone: phone
@@ -893,31 +830,24 @@
           redirect: 'if_required'
         });
       } catch (err) {
-        // Catches unexpected runtime errors (e.g. IntegrationError) so the UI
-        // doesn't end up stuck in the "processing" state with no feedback.
         console.error('confirmSetup threw:', err);
         showError((err && err.message) ? err.message : 'Kortin tallennus epäonnistui.');
         setSubmitting(false, 'Varaa ennakkoon');
         return;
       }
-
       if (result.error) {
         showError(result.error.message || 'Kortin tallennus epäonnistui.');
         setSubmitting(false, 'Varaa ennakkoon');
         return;
       }
-
-      // No redirect was required → SetupIntent succeeded inline.
       var seti = result.setupIntent;
       if (!seti || seti.status !== 'succeeded') {
         showError('Kortin tallennus ei valmistunut. Yritä uudelleen.');
         setSubmitting(false, 'Varaa ennakkoon');
         return;
       }
-
       await finalizeBooking(seti.id, { name: name, email: email, phone: phone });
     });
-
     async function finalizeBooking(intentId, contact) {
       try {
         var honeypotEl = document.getElementById('prebook-website');
@@ -942,36 +872,27 @@
         setSubmitting(false, 'Varaa ennakkoon');
       }
     }
-
     /* ----- handle return from Stripe redirect (3D Secure etc.) ----- */
     async function handleRedirectReturn() {
       var params = new URLSearchParams(window.location.search);
       if (params.get('prebooking') !== 'return') return false;
-
       var intentId      = params.get('setup_intent');
       var redirectStat  = params.get('redirect_status');
-
-      // Clean URL regardless
       window.history.replaceState({}, document.title, window.location.pathname);
-
       if (redirectStat !== 'succeeded' || !intentId) {
         showError('Kortin vahvistus ei valmistunut. Yritä uudelleen.');
         return false;
       }
-
       var contact = {};
       try { contact = JSON.parse(sessionStorage.getItem('prebookingContact') || '{}'); } catch (e) {}
       if (!contact.name || !contact.email) {
-        // We can't finalize without contact info; ask user to enter again.
         showError('Korttitiedot tallennettiin, mutta yhteystiedot eivät enää löytyneet selaimesta. Tee varaus uudelleen, niin saamme yhteystiedot talteen.');
         return false;
       }
-
       setSubmitting(true, 'Käsitellään…');
       await finalizeBooking(intentId, contact);
       return true;
     }
-
     /* ----- start ----- */
     (async function () {
       await init();
@@ -979,6 +900,5 @@
     })();
   })();
 </script>
-
 </body>
 </html>
