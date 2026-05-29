@@ -6,16 +6,13 @@
   <title>Peruuta varaus | Mahlamäen Kauneusstudio</title>
   <meta name="description" content="Peruuta Mahlamäen Kauneusstudion ennakkovaraus.">
   <meta name="robots" content="noindex, nofollow">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta name="theme-color" content="#3d5247">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-
   <style>
     :root {
       --green-dark: #3d5247;
@@ -27,17 +24,14 @@
       --text-dark: #2a3830;
       --text-mid: #4a5e55;
       --danger: #b85a3a;
-
       --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
       --nav-height: 72px;
       --max-w: 1200px;
       --section-px: clamp(24px, 5vw, 48px);
     }
-
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -51,11 +45,11 @@
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-
     h1, h2 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -66,14 +60,12 @@
     }
     p { margin: 0 0 1.1em; }
     p:last-child { margin-bottom: 0; }
-
     :focus-visible {
       outline: 2px solid var(--pink);
       outline-offset: 3px;
       border-radius: 2px;
     }
     :focus:not(:focus-visible) { outline: none; }
-
     /* NAV */
     .nav {
       position: sticky; top: 0; z-index: 100;
@@ -97,7 +89,15 @@
       line-height: 1.4;
     }
     .brand__name span { display: block; opacity: 0.85; }
-
+    @media (max-width: 540px) {
+      .nav__inner { padding: 0 16px; }
+      .brand { gap: 10px; }
+      .brand__logo { width: 26px; height: 26px; }
+    }
+    @media (max-width: 400px) {
+      .nav__inner { padding: 0 12px; }
+      .brand__name span { display: none; }
+    }
     /* MAIN */
     main {
       flex-grow: 1;
@@ -106,7 +106,6 @@
       justify-content: center;
       padding: clamp(48px, 8vw, 96px) var(--section-px);
     }
-
     .cancel-card {
       max-width: 560px;
       width: 100%;
@@ -169,7 +168,6 @@
       background: var(--cream);
       color: var(--text-dark);
     }
-
     .state-error {
       background: rgba(184, 90, 58, 0.08);
       border-left: 3px solid var(--danger);
@@ -192,12 +190,10 @@
     .state-success { text-align: center; }
     .state-success h1 { margin: 0 0 16px; }
     .state-success p { font-size: 16px; line-height: 1.85; color: var(--text-mid); }
-
     [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-
 <header class="nav" role="banner">
   <div class="nav__inner">
     <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
@@ -219,10 +215,8 @@
     </a>
   </div>
 </header>
-
 <main>
   <article class="cancel-card">
-
     <!-- 1) Initial state: invalid link (no/bad params) -->
     <div id="stateInvalid" hidden>
       <h1>Peruutuslinkki ei kelpaa</h1>
@@ -235,7 +229,6 @@
         <a href="tel:+358503671683" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">050 367 1683</a>
       </p>
     </div>
-
     <!-- 2) Confirmation state: ask user to confirm -->
     <div id="stateConfirm" hidden>
       <h1>Peruutetaanko ennakkovaraus?</h1>
@@ -252,7 +245,6 @@
       </div>
       <p class="state-error" id="errorMsg" role="alert" hidden></p>
     </div>
-
     <!-- 3) Success state -->
     <div id="stateSuccess" hidden>
       <div class="state-success">
@@ -269,30 +261,24 @@
         </div>
       </div>
     </div>
-
   </article>
 </main>
-
 <script>
   (function () {
     'use strict';
-
     var stateInvalid = document.getElementById('stateInvalid');
     var stateConfirm = document.getElementById('stateConfirm');
     var stateSuccess = document.getElementById('stateSuccess');
     var confirmBtn   = document.getElementById('confirmBtn');
     var errorMsg     = document.getElementById('errorMsg');
-
     var params = new URLSearchParams(window.location.search);
     var customerId = (params.get('customer') || '').trim();
     var token      = (params.get('token')    || '').trim();
-
     if (!customerId || !customerId.indexOf || customerId.indexOf('cus_') !== 0 || !token || token.length < 16) {
       stateInvalid.hidden = false;
       return;
     }
     stateConfirm.hidden = false;
-
     confirmBtn.addEventListener('click', async function () {
       errorMsg.hidden = true;
       errorMsg.textContent = '';
@@ -318,6 +304,5 @@
     });
   })();
 </script>
-
 </body>
 </html>
