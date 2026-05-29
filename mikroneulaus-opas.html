@@ -16,6 +16,15 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="fi_FI">
   <meta property="og:url" content="https://www.studiomahla.fi/mikroneulaus-opas.html">
+  <meta property="og:image" content="https://www.studiomahla.fi/assets/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mahlamäen Kauneusstudio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mikroneulaus – täydellinen opas hoidosta, tuloksista ja siitä kenelle se sopii">
+  <meta name="twitter:description" content="Kattava opas kliinisestä mikroneulauksesta: mihin haasteisiin se auttaa, kenelle se sopii, miten hoito etenee ja kuinka monta hoitokertaa tarvitaan.">
+  <meta name="twitter:image" content="https://www.studiomahla.fi/assets/og-default.jpg">
 
   <meta name="theme-color" content="#3d5247">
 
@@ -56,6 +65,33 @@
   }
   </script>
 
+  <!-- JSON-LD SCHEMA: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Etusivu",
+        "item": "https://www.studiomahla.fi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blogi",
+        "item": "https://www.studiomahla.fi/blogi.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Mikroneulaus – täydellinen opas"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --green-dark: #3d5247;
@@ -79,7 +115,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       margin: 0;
       font-family: var(--font-sans);
