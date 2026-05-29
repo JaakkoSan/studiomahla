@@ -7,17 +7,13 @@
   <meta name="description" content="Mahlamäen Kauneusstudion ennakkovarauksen sopimusehdot.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.studiomahla.fi/ehdot.html">
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-
   <meta name="theme-color" content="#3d5247">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-
   <style>
     :root {
       --green-dark: #3d5247;
@@ -29,17 +25,14 @@
       --white: #faf8f4;
       --text-dark: #2a3830;
       --text-mid: #4a5e55;
-
       --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
       --nav-height: 72px;
       --max-w: 1200px;
       --section-px: clamp(24px, 5vw, 48px);
     }
-
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -49,13 +42,13 @@
       color: var(--text-dark);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: var(--text-dark); text-decoration: underline; text-underline-offset: 3px; }
     a:hover { color: var(--pink); }
     button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
     ul { padding: 0 0 0 22px; margin: 0 0 1.4em; }
-
     h1, h2, h3 {
       font-family: var(--font-serif);
       font-weight: 400;
@@ -68,18 +61,15 @@
     h2 { font-size: 22px; margin-top: 40px; margin-bottom: 12px; }
     p { margin: 0 0 1.1em; }
     p:last-child { margin-bottom: 0; }
-
     :focus-visible {
       outline: 2px solid var(--pink);
       outline-offset: 3px;
       border-radius: 2px;
     }
     :focus:not(:focus-visible) { outline: none; }
-
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
-
     .skip-link {
       position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
     }
@@ -89,7 +79,6 @@
       background: var(--pink); color: #fff;
       font-family: var(--font-sans); font-size: 14px;
     }
-
     .nav {
       position: sticky; top: 0; z-index: 100;
       height: var(--nav-height);
@@ -116,7 +105,6 @@
       line-height: 1.4;
     }
     .brand__name span { display: block; }
-
     .nav__right { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 28px); }
     .nav__link {
       font-family: var(--font-sans);
@@ -134,7 +122,6 @@
     }
     .nav__link:hover { color: var(--pink-pale); }
     .nav__link.is-current { color: var(--pink-pale); }
-
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 14px 28px; min-height: 44px;
@@ -148,14 +135,31 @@
       transition: background-color .25s ease;
     }
     .btn:hover { background: #b6876a; color: var(--text-dark); }
-    .btn--small { padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px; }
+    .btn--small {
+      padding: 10px 18px; font-size: 11px; letter-spacing: 0.2em; min-height: 44px;
+      white-space: nowrap; flex-shrink: 0;
+    }
     .btn--outline {
       background: transparent; color: var(--pink-pale); border: 1px solid var(--pink-pale);
     }
     .btn--outline:hover {
       background: var(--pink); color: var(--text-dark); border-color: var(--pink);
     }
-
+    @media (max-width: 540px) {
+      .nav__inner { padding: 0 16px; gap: 10px; }
+      .brand { gap: 10px; }
+      .brand__logo { width: 26px; height: 26px; }
+      .brand__name span { display: none; }
+      .nav__right { gap: 10px; }
+      .nav__link { font-size: 10.5px; letter-spacing: 0.16em; padding: 4px 2px; }
+      .btn--small { padding: 8px 14px; font-size: 10px; letter-spacing: 0.14em; }
+    }
+    @media (max-width: 400px) {
+      .nav__inner { padding: 0 12px; gap: 8px; }
+      .brand__name { display: none; }
+      .nav__right { gap: 8px; }
+      .btn--small { padding: 8px 12px; font-size: 9.5px; letter-spacing: 0.12em; }
+    }
     main {
       max-width: 800px;
       margin: 0 auto;
@@ -167,7 +171,6 @@
       margin-bottom: 40px;
       letter-spacing: 0.04em;
     }
-
     .footer {
       background: var(--green-dark); color: var(--white);
       padding: 64px var(--section-px) 28px;
@@ -203,9 +206,7 @@
   </style>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
-
 <header class="nav" role="banner">
   <div class="nav__inner">
     <a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio – etusivu">
@@ -225,27 +226,22 @@
         <span>Kauneusstudio</span>
       </span>
     </a>
-
     <nav class="nav__right" aria-label="Päänavigaatio">
       <a href="blogi.html" class="nav__link">Blogi</a>
       <a href="kauppa.html" class="btn btn--small">Ennakkovaraus</a>
     </nav>
   </div>
 </header>
-
 <main id="main-content">
   <h1>Sopimusehdot</h1>
   <p class="meta-updated">Päivitetty: 22.5.2026</p>
-
   <p>
     Nämä sopimusehdot koskevat Mahlamäen Kauneusstudion ennakkovarausta, jonka voit tehdä studiomahla.fi-sivustolla osoitteessa <a href="kauppa.html">studiomahla.fi/kauppa.html</a>.
   </p>
-
   <h2>1. Sopijapuolet</h2>
   <p>
     Sopimus syntyy sinun (kuluttaja-asiakkaan) ja <strong>Guild Lounge Oy:n</strong> (Y-tunnus 3578202-2, aputoiminimi Mahlamäen Kauneusstudio, Mahlamäentie 14, 48300 Kotka) välille.
   </p>
-
   <h2>2. Mikä ennakkovaraus on</h2>
   <p>
     Ennakkovaraus on alustava varaus tulevaa ensikäyntiäsi varten Mahlamäen Kauneusstudiossa, kun studio avaa ovensa syksyllä 2026. Ennakkovaraus <strong>ei ole vahvistettu hoitoaika</strong>, vaan ilmaisu kiinnostuksesta ja paikan varauksesta jonosta ennen muita varauskanavia.
@@ -253,7 +249,6 @@
   <p>
     Otamme sinuun henkilökohtaisesti yhteyttä puhelimitse tai sähköpostitse ennen kuin avaamme kalenterin muille varauksille, ja sovimme tarkan hoitoajan kanssasi.
   </p>
-
   <h2>3. Hinta ja veloitusehdot</h2>
   <p>
     Ennakkovarauksen hinta on <strong>190 € (sis. alv 25,5 %)</strong>. Normaalihinta on 200 €. Ennakkohinta on voimassa kaikilla ennakkovarauksen tehneillä.
@@ -261,7 +256,6 @@
   <p>
     Korttitietosi tallennetaan turvallisesti maksupalveluntarjoaja Stripen järjestelmään. <strong>Korttiasi ei veloiteta ennakkovarauksen yhteydessä</strong>, vaan vasta sen jälkeen kun olemme sopineet kanssasi hoitoajan ja hoito on toteutettu tai hoitoa edeltävän vuorokauden aikana, mikäli sopimus näin edellyttää.
   </p>
-
   <h2>4. Peruutusehdot</h2>
   <p>
     Voit peruuttaa ennakkovarauksen <strong>koska tahansa ja täysin maksutta</strong> ennen hoidon toteuttamista. Peruutusvaihtoehdot:
@@ -274,7 +268,6 @@
   <p>
     Peruutuksen jälkeen korttitietosi irrotetaan välittömästi asiakastilistäsi eikä korttiasi veloiteta.
   </p>
-
   <h2>5. Kuluttajan peruuttamisoikeus (etämyynti)</h2>
   <p>
     Kuluttajansuojalain mukaan sinulla on oikeus peruuttaa etänä tehty palvelusopimus 14 päivän kuluessa sopimuksen tekemisestä ilman erityistä syytä. Tämä oikeus on voimassa rinnakkaisesti edellä mainitun maksuttoman peruutusoikeuden kanssa, joka on kuluttajansuojalain edellyttämiä oikeuksia laajempi.
@@ -282,22 +275,18 @@
   <p>
     Koska kortin veloitusta ei tehdä ennakkovarauksen yhteydessä, peruutus tapahtuu käytännössä yksinkertaisesti irrottamalla kortti — sinulta ei vaadita rahanpalautusta.
   </p>
-
   <h2>6. Studion avaamisen viivästyminen tai estyminen</h2>
   <p>
     Mikäli Mahlamäen Kauneusstudion avaaminen viivästyy yli kuusi kuukautta ilmoitetusta avausajankohdasta (syksy 2026) tai estyy kokonaan meistä johtuvasta tai meistä riippumattomasta syystä, ennakkovarauksesi puretaan automaattisesti, korttitietosi irrotetaan eikä korttiasi veloiteta. Ilmoitamme asiasta sähköpostitse.
   </p>
-
   <h2>7. Hinnan voimassaolo</h2>
   <p>
     Ennakkohinta 190 € (sis. alv 25,5 %) on voimassa ennakkovarauksen yhteydessä sovitulle ensimmäiselle hoitokerralle. Mahdolliset jatkohoidot hinnoitellaan studiomahla.fi-sivuston tai studiossa esillä olevan voimassa olevan hinnaston mukaisesti.
   </p>
-
   <h2>8. Henkilötietojen käsittely</h2>
   <p>
     Henkilötietojesi käsittelystä on kerrottu tarkemmin <a href="privacy.html">tietosuojaselosteessa</a>. Käsittelemme tietoja sopimuksen täytäntöönpanon perusteella.
   </p>
-
   <h2>9. Reklamaatiot ja erimielisyydet</h2>
   <p>
     Mahdolliset reklamaatiot tulee toimittaa sähköpostitse osoitteeseen <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>. Pyrimme ratkaisemaan erimielisyydet ensisijaisesti yhteistyössä kanssasi.
@@ -305,18 +294,15 @@
   <p>
     Jos erimielisyyttä ei saada ratkaistua neuvottelemalla, kuluttaja-asiakas voi saattaa asian <a href="https://www.kuluttajariita.fi" target="_blank" rel="noopener noreferrer">kuluttajariitalautakunnan</a> (kuluttajariita.fi) käsiteltäväksi. Lautakunnan käsittelyä ennen on suositeltavaa ottaa yhteyttä <a href="https://www.kkv.fi/kuluttaja-asiat/kuluttajaneuvonta/" target="_blank" rel="noopener noreferrer">kuluttajaneuvontaan</a>.
   </p>
-
   <h2>10. Sovellettava laki</h2>
   <p>
     Tähän sopimukseen sovelletaan Suomen lakia.
   </p>
-
   <h2>11. Ehtojen muutokset</h2>
   <p>
     Nämä sopimusehdot ovat voimassa toistaiseksi. Voimme päivittää ehtoja, mutta voimassa olevia ennakkovarauksia koskevat ne ehdot, jotka olivat voimassa varauksen tekohetkellä.
   </p>
 </main>
-
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
     <div class="footer__cols">
@@ -337,23 +323,19 @@
           <span>Kauneusstudio</span>
         </span>
       </a>
-
       <div class="footer__cta">
         <a href="kauppa.html" class="btn btn--outline">Ennakkovaraus</a>
       </div>
-
       <div class="footer__contact">
         <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>
         <a href="tel:+358503671683">050 367 1683</a><br>
         Mahlamäentie 14, 48300 Kotka
       </div>
     </div>
-
     <div class="footer__bottom">
       © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
     </div>
   </div>
 </footer>
-
 </body>
 </html>
