@@ -32,7 +32,7 @@
       --section-px: clamp(24px, 5vw, 48px);
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -42,7 +42,7 @@
       color: var(--text-dark);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
     img, svg { display: block; max-width: 100%; }
     a { color: var(--text-dark); text-decoration: underline; text-underline-offset: 3px; }
