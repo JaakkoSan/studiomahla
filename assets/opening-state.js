@@ -41,13 +41,13 @@ window.STUDIOMAHLA_TIMMA_URL = 'https://varaa.timma.fi/studiomahla';
     } else if (afterPrebookEnd) {
       if (timmaActive) {
         banner.innerHTML =
-          'Hoitola avataan 3.8.2026 — ' +
+          'Studio avataan 3.8.2026 — ' +
           '<a href="' + timmaUrl + '" target="_blank" rel="noopener" aria-label="Varaa aika Timman kautta">' +
             'ajanvaraus Timman kautta' +
           '</a>';
       } else {
         banner.innerHTML =
-          'Hoitola avataan 3.8.2026 — ' +
+          'Studio avataan 3.8.2026 — ' +
           '<a href="kauppa.html" aria-label="Lue lisää avajaisista">kalenteri avautuu pian</a>';
       }
     }
@@ -124,7 +124,7 @@ window.STUDIOMAHLA_TIMMA_URL = 'https://varaa.timma.fi/studiomahla';
         '<h2 class="prebook-card__title">Ennakkomyynti on päättynyt</h2>' +
         '<p class="prebook-card__desc">' +
           'Ennakkohinta oli voimassa kesäkuun loppuun saakka. ' +
-          'Hoitola avataan <strong>3.8.2026</strong>. ' +
+          'Studio avataan <strong>3.8.2026</strong>. ' +
           'Varauskalenteri avautuu Timmassa lähempänä avajaisia — ' +
           'jätä yhteystietosi sähköpostitse, niin ilmoitamme: ' +
           '<a href="mailto:asiakaspalvelu@studiomahla.fi" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">' +
