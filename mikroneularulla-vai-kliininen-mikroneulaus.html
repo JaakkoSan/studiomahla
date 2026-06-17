@@ -350,6 +350,16 @@
       text-underline-offset: 3px;
     }
     .article-body p a:hover { color: var(--green-dark); }
+    .article-body figure {
+      margin: 2.5em 0;
+    }
+    .article-body figure img {
+      width: 100%; height: auto; border-radius: 4px; display: block;
+    }
+    .article-body figure figcaption {
+      font-size: 14px; color: var(--text-mid); margin-top: 12px;
+      font-style: italic; text-align: center; line-height: 1.5;
+    }
     .article-body h2 {
       font-size: clamp(26px, 3.2vw, 36px);
       margin-top: 1.6em;
@@ -697,6 +707,13 @@
       <hr>
 
       <h2>Laitteen sertifiointi</h2>
+      <figure>
+        <img src="assets/micropenEVO.jpg"
+             alt="MicroPen EVO -mikroneulauslaite — FDA-hyväksytty ja CE IIa -merkitty kliininen laite"
+             loading="lazy"
+             width="800" height="533">
+        <figcaption>MicroPen EVO™ täyttää lääkinnällisten laitteiden vaatimustenmukaisuusarvioinnin — kotikäyttöön myytävät rullat eivät.</figcaption>
+      </figure>
       <p>
         Kliinisessä mikroneulausessa käytettävä välineistö on lääkinnällinen laite, jonka on läpäistävä tiukka vaatimustenmukaisuusarviointi ennen markkinoille pääsyä. FDA-hyväksyntä ja CE-merkintä luokassa IIa tarkoittavat, että laitteen turvallisuus ja tehokkuus on todennettu kliinisesti.
       </p>

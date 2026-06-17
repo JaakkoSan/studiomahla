@@ -297,6 +297,23 @@
       color: var(--pink); text-decoration: underline; text-underline-offset: 3px;
     }
     .article-body p a:hover { color: var(--green-dark); }
+    .article-body figure.infographic {
+      margin: 2.8em 0;
+    }
+    .article-body figure.infographic svg {
+      width: 100%; height: auto; display: block;
+    }
+    .article-body figure.infographic svg text {
+      font-family: var(--font-sans);
+    }
+    .article-body figure.infographic svg text.num {
+      font-family: var(--font-serif); font-style: italic;
+    }
+    .article-body figure.infographic figcaption {
+      font-size: 14px; color: var(--text-mid); margin-top: 16px;
+      font-style: italic; text-align: center; line-height: 1.55;
+      max-width: 580px; margin-left: auto; margin-right: auto;
+    }
     .article-body h2 {
       font-size: clamp(26px, 3.2vw, 36px);
       margin-top: 1.6em; margin-bottom: .5em; line-height: 1.2;
@@ -462,6 +479,51 @@
       <p>
         Tämä 400 % luku on usein toistettu mikroneulauksen yhteydessä ja se perustuu histologiseen dataan, ei markkinointiväitteeseen. Oleellista on kuitenkin ymmärtää mitä se tarkoittaa: kyse on suhteellisesta kasvusta lähtötasoon nähden, mitattu 6 kuukauden kohdalla. Mitä tapahtuu sen jälkeen on erillinen kysymys johon tutkimus vastaa heikommin.
       </p>
+      <figure class="infographic">
+        <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ig-title ig-desc">
+          <title id="ig-title">Mikroneulauksen biologinen aikajana</title>
+          <desc id="ig-desc">Aikajana mikroneulauksen biologisista vaikutuksista hoidosta kuuden kuukauden tulokseen: päivä 0 hoito ja mikrokanavien muodostuminen, päivät 1-3 inflammaatiovaihe ja kasvutekijöiden vapautuminen, viikot 1-6 proliferaatiovaihe ja kollageeni-tyyppi III, kuuden kuukauden kohdalla 400 prosentin kasvu kollageeni- ja elastiinipitoisuuksissa.</desc>
+
+          <!-- Aikajana-viiva -->
+          <line x1="80" y1="170" x2="640" y2="170" stroke="#c8997a" stroke-width="1.5" opacity="0.35"/>
+
+          <!-- Vaihe 1: Päivä 0 -->
+          <circle cx="80" cy="170" r="32" fill="#f5f0e8" stroke="#3d5247" stroke-width="1.8"/>
+          <text class="num" x="80" y="180" text-anchor="middle" font-size="26" fill="#3d5247">0</text>
+          <text x="80" y="120" text-anchor="middle" font-size="11" letter-spacing="3" fill="#4a5e55">PÄIVÄ</text>
+          <text x="80" y="225" text-anchor="middle" font-size="13" font-weight="500" fill="#2a3830">Hoito</text>
+          <text x="80" y="248" text-anchor="middle" font-size="12" fill="#4a5e55">Mikrokanavien</text>
+          <text x="80" y="264" text-anchor="middle" font-size="12" fill="#4a5e55">muodostuminen</text>
+
+          <!-- Vaihe 2: Päivät 1-3 -->
+          <circle cx="267" cy="170" r="32" fill="#f5f0e8" stroke="#3d5247" stroke-width="1.8"/>
+          <text class="num" x="267" y="180" text-anchor="middle" font-size="22" fill="#3d5247">1–3</text>
+          <text x="267" y="120" text-anchor="middle" font-size="11" letter-spacing="3" fill="#4a5e55">PÄIVÄÄ</text>
+          <text x="267" y="225" text-anchor="middle" font-size="13" font-weight="500" fill="#2a3830">Inflammaatio</text>
+          <text x="267" y="248" text-anchor="middle" font-size="12" fill="#4a5e55">Kasvutekijät</text>
+          <text x="267" y="264" text-anchor="middle" font-size="12" fill="#4a5e55">vapautuvat</text>
+
+          <!-- Vaihe 3: Viikot 1-6 -->
+          <circle cx="454" cy="170" r="32" fill="#f5f0e8" stroke="#3d5247" stroke-width="1.8"/>
+          <text class="num" x="454" y="180" text-anchor="middle" font-size="22" fill="#3d5247">1–6</text>
+          <text x="454" y="120" text-anchor="middle" font-size="11" letter-spacing="3" fill="#4a5e55">VIIKKOA</text>
+          <text x="454" y="225" text-anchor="middle" font-size="13" font-weight="500" fill="#2a3830">Proliferaatio</text>
+          <text x="454" y="248" text-anchor="middle" font-size="12" fill="#4a5e55">Kollageeni</text>
+          <text x="454" y="264" text-anchor="middle" font-size="12" fill="#4a5e55">tyyppi III</text>
+
+          <!-- Vaihe 4: 6 kuukautta — korostettu -->
+          <circle cx="640" cy="170" r="44" fill="#c8997a" stroke="#3d5247" stroke-width="2"/>
+          <text class="num" x="640" y="178" text-anchor="middle" font-size="22" fill="#faf8f4" font-style="normal" font-weight="400">+400%</text>
+          <text x="640" y="108" text-anchor="middle" font-size="11" letter-spacing="3" fill="#4a5e55">6 KUUKAUTTA</text>
+          <text x="640" y="235" text-anchor="middle" font-size="13" font-weight="500" fill="#2a3830">Lopullinen tulos</text>
+          <text x="640" y="258" text-anchor="middle" font-size="12" fill="#4a5e55">Kollageeni-tyyppi I</text>
+          <text x="640" y="274" text-anchor="middle" font-size="12" fill="#4a5e55">+ elastiini</text>
+        </svg>
+        <figcaption>Mikroneulauksen biologinen aikajana: hallittu mikrovaurio käynnistää korjauskaskadin, joka huipentuu kuuden kuukauden kohdalla 400 % kasvuun kollageeni- ja elastiinipitoisuuksissa (histologinen mittaus, Aust et al. 2008).</figcaption>
+      </figure>
+      <p>
+        Tämä kumulatiivisen rakentumisen logiikka on syy siihen miksi mikroneulausta tehdään sarjana eikä kerralla. <a href="mikroneulaus-sarjahoito.html">Tarkempi opas sarjahoidon biologiasta ja sarjavaihtoehdoista löytyy omasta artikkelistaan.</a>
+      </p>
       <p>
         Tutkimukset tehtiin rullalaitteella.
       </p>
@@ -577,10 +639,4 @@
       </div>
     </div>
     <div class="footer__bottom">
-      © 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="ehdot.html">Sopimusehdot</a>
-    </div>
-  </div>
-</footer>
-<script src="/assets/opening-state.js" defer></script>
-</body>
-</html>
+ 
