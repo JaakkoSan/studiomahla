@@ -449,7 +449,7 @@
     }
     .compare-text {
       max-width: 820px;
-      margin: 48px 0 0;
+      margin: 48px auto 0;
     }
     .compare-text p {
       font-size: 16px;
@@ -668,12 +668,16 @@
       background: var(--pink);
     }
     .contra-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 32px;
+      column-count: 2;
+      column-gap: 32px;
       margin: 28px 0 32px;
     }
-    @media (max-width: 600px) { .contra-list { grid-template-columns: 1fr; } }
+    .contra-list li {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    @media (max-width: 600px) { .contra-list { column-count: 1; } }
     .contra-list li {
       padding: 14px 0 14px 28px;
       position: relative;
@@ -1167,7 +1171,7 @@
     <div class="section__inner">
       <div class="reveal" style="max-width: 720px; margin-bottom: 40px;">
         <p class="label label--mid">Ohjeistus</p>
-        <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoitoa</h2>
+        <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoidon</h2>
       </div>
       <div class="grid-2">
         <div class="reveal">
