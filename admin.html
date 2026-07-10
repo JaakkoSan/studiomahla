@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hallinta · Mahlamäen Kauneusstudio</title>
-  <meta name="description" content="Ennakkovarausten ja esitietolomakkeiden hallintapaneeli.">
+  <meta name="description" content="Esitietolomakkeiden ja hoitolokin hallintapaneeli.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -730,19 +730,6 @@
     <button type="button" class="topbar__logout" id="logoutBtn" hidden>Kirjaudu ulos</button>
   </div>
 </header>
-<!-- TABS (only visible after login) -->
-<nav class="tabs" id="tabsNav" hidden aria-label="Hallinnan välilehdet">
-  <div class="tabs__inner" role="tablist">
-    <button type="button" class="tab-btn is-active" id="tabBookingsBtn"
-            role="tab" aria-selected="true" aria-controls="bookingsView">
-      Ennakkovaraukset
-    </button>
-    <button type="button" class="tab-btn" id="tabEsitiedotBtn"
-            role="tab" aria-selected="false" aria-controls="esitiedotView">
-      Esitiedot
-    </button>
-  </div>
-</nav>
 <main class="page">
   <!-- STAGE 1: PASSWORD -->
   <section class="login-card" id="passwordView" hidden>
@@ -787,18 +774,7 @@
       <a href="#" class="login-card__back" id="backToTotpBtn">← Käytä Authenticator-koodia</a>
     </form>
   </section>
-  <!-- BOOKINGS TAB -->
-  <section id="bookingsView" role="tabpanel" aria-labelledby="tabBookingsBtn" hidden>
-    <div class="page__head">
-      <h1>Aktiiviset ennakkovaraukset</h1>
-      <span class="page__meta" id="bookingsMeta"></span>
-      <button type="button" class="refresh-btn" id="refreshBookingsBtn">↻ Päivitä</button>
-    </div>
-    <div id="bookingsList" class="bookings"></div>
-    <div id="bookingsEmpty" class="empty" hidden>Ei aktiivisia ennakkovarauksia.</div>
-    <div id="bookingsError" class="empty" style="color:var(--danger);" hidden></div>
-  </section>
-<!-- ESITIEDOT TAB -->
+  <!-- ESITIEDOT TAB -->
   <section id="esitiedotView" role="tabpanel" aria-labelledby="tabEsitiedotBtn" hidden>
     <div class="page__head">
       <h1>Esitietolomakkeet</h1>
@@ -811,16 +787,6 @@
     <div id="esitiedotError" class="empty" style="color:var(--danger);" hidden></div>
   </section>
 </main>
-<!-- CHARGE CONFIRMATION MODAL -->
-<div class="modal-overlay" id="chargeModal" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="chargeModalTitle">
-    <h2 id="chargeModalTitle">Vahvista veloitus</h2>
-    <p id="chargeModalText"></p>
-    <div class="modal__actions">
-      <button type="button" class="btn btn--secondary" id="chargeCancelBtn">Peruuta</button>
-      <button type="button" class="btn" id="chargeConfirmBtn">Veloita 190 €</button>
-    </div>
-  </div>
 </div>
 <!-- ESITIETO DETAIL MODAL -->
 <div class="modal-overlay" id="detailModal" hidden>
@@ -926,11 +892,7 @@
     /* ----- elements ----- */
     var passwordView   = document.getElementById('passwordView');
     var totpView       = document.getElementById('totpView');
-    var bookingsView   = document.getElementById('bookingsView');
     var esitiedotView  = document.getElementById('esitiedotView');
-    var tabsNav        = document.getElementById('tabsNav');
-    var tabBookings    = document.getElementById('tabBookingsBtn');
-    var tabEsitiedot   = document.getElementById('tabEsitiedotBtn');
     var passwordForm   = document.getElementById('passwordForm');
     var passwordSubmit = document.getElementById('passwordSubmitBtn');
     var adminPwdEl     = document.getElementById('adminPwd');
@@ -959,12 +921,6 @@
     var codesCopyBtn        = document.getElementById('codesCopyBtn');
     var codesDisplayDoneBtn = document.getElementById('codesDisplayDoneBtn');
     var logoutBtn      = document.getElementById('logoutBtn');
-    /* bookings */
-    var refreshBookingsBtn = document.getElementById('refreshBookingsBtn');
-    var bookingsList       = document.getElementById('bookingsList');
-    var bookingsEmpty      = document.getElementById('bookingsEmpty');
-    var bookingsError      = document.getElementById('bookingsError');
-    var bookingsMeta       = document.getElementById('bookingsMeta');
     /* esitiedot */
     var refreshEsitiedotBtn = document.getElementById('refreshEsitiedotBtn');
     var gdprCheckBtn        = document.getElementById('gdprCheckBtn');
@@ -972,11 +928,6 @@
     var esitiedotEmpty      = document.getElementById('esitiedotEmpty');
     var esitiedotError      = document.getElementById('esitiedotError');
     var esitiedotMeta       = document.getElementById('esitiedotMeta');
-    /* charge modal */
-    var chargeModal   = document.getElementById('chargeModal');
-    var chargeText    = document.getElementById('chargeModalText');
-    var chargeConfirm = document.getElementById('chargeConfirmBtn');
-    var chargeCancel  = document.getElementById('chargeCancelBtn');
     /* detail modal */
     var detailModal       = document.getElementById('detailModal');
     var detailModalTitle  = document.getElementById('detailModalTitle');
@@ -1006,12 +957,11 @@
     var toast = document.getElementById('toast');
     /* ----- state ----- */
     var stagedPassword = '';              // held in memory between stage 1 → 2 only
-    var pendingChargeCustomerId = null;
     var openEsitietoRecord = null;
     var pendingDeleteId = null;
     var esitiedotCache = [];
     var toastTimer = null;
-    var activeTab = 'bookings';
+    var activeTab = 'esitiedot';
 
     /* hoitoloki state */
     var currentEsitiedotId   = null;
@@ -1047,7 +997,7 @@
       try { sessionStorage.removeItem(TOKEN_KEY); } catch (e) {}
     }
     function getStoredTab() {
-      try { return sessionStorage.getItem(TAB_KEY) || 'bookings'; } catch (e) { return 'bookings'; }
+      try { return sessionStorage.getItem(TAB_KEY) || 'esitiedot'; } catch (e) { return 'esitiedot'; }
     }
     function setStoredTab(t) {
       try { sessionStorage.setItem(TAB_KEY, t); } catch (e) {}
@@ -1102,9 +1052,7 @@
       passwordView.hidden   = true;
       totpView.hidden       = true;
       backupCodeView.hidden = true;
-      bookingsView.hidden   = true;
       esitiedotView.hidden  = true;
-      tabsNav.hidden        = true;
       logoutBtn.hidden      = true;
       manageBackupBtn.hidden = true;
     }
@@ -1132,29 +1080,14 @@
     }
     function showAdmin() {
       hideAllViews();
-      tabsNav.hidden = false;
       logoutBtn.hidden = false;
       manageBackupBtn.hidden = false;
       activateTab(activeTab);
     }
     function activateTab(name) {
-      activeTab = (name === 'esitiedot') ? 'esitiedot' : 'bookings';
+      activeTab = 'esitiedot';
       setStoredTab(activeTab);
-      if (activeTab === 'bookings') {
-        bookingsView.hidden = false;
-        esitiedotView.hidden = true;
-        tabBookings.classList.add('is-active');
-        tabBookings.setAttribute('aria-selected', 'true');
-        tabEsitiedot.classList.remove('is-active');
-        tabEsitiedot.setAttribute('aria-selected', 'false');
-      } else {
-        bookingsView.hidden = true;
-        esitiedotView.hidden = false;
-        tabBookings.classList.remove('is-active');
-        tabBookings.setAttribute('aria-selected', 'false');
-        tabEsitiedot.classList.add('is-active');
-        tabEsitiedot.setAttribute('aria-selected', 'true');
-      }
+      esitiedotView.hidden = false;
     }
     /* ======================================================== */
     /* LOGIN — STAGE 1: PASSWORD                                */
@@ -1219,7 +1152,6 @@
         adminTotpEl.value = '';
         setToken(data.token);
         showAdmin();
-        loadBookings();
         loadEsitiedot({ silent: true });
       } catch (err) {
         totpError.textContent = err.message || 'Kirjautuminen epäonnistui';
@@ -1227,112 +1159,6 @@
       } finally {
         totpSubmit.disabled = false;
         totpSubmit.textContent = 'Kirjaudu sisään';
-      }
-    }
-    /* ======================================================== */
-    /* BOOKINGS                                                 */
-    /* ======================================================== */
-    async function loadBookings() {
-      var token = getToken();
-      if (!token) { showPasswordView(); return; }
-      refreshBookingsBtn.disabled = true;
-      refreshBookingsBtn.textContent = '↻ Päivittää…';
-      bookingsError.hidden = true;
-      try {
-        var res = await fetch('/api/list-bookings', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-          body: '{}'
-        });
-        if (res.status === 401) { handle401(); return; }
-        var data = await res.json().catch(function () { return {}; });
-        if (!res.ok) throw new Error(data.error || 'Varauksien hakeminen epäonnistui');
-        renderBookings(data.bookings || []);
-      } catch (err) {
-        bookingsError.textContent = err.message || 'Varauksien hakeminen epäonnistui';
-        bookingsError.hidden = false;
-        bookingsList.innerHTML = '';
-        bookingsEmpty.hidden = true;
-      } finally {
-        refreshBookingsBtn.disabled = false;
-        refreshBookingsBtn.textContent = '↻ Päivitä';
-      }
-    }
-    function renderBookings(bookings) {
-      bookingsMeta.textContent = bookings.length + ' kpl';
-      bookingsList.innerHTML = '';
-      bookingsError.hidden = true;
-      if (bookings.length === 0) {
-        bookingsEmpty.hidden = false;
-        return;
-      }
-      bookingsEmpty.hidden = true;
-      var html = '';
-      bookings.forEach(function (b) {
-        var stripeUrl = 'https://dashboard.stripe.com/customers/' + encodeURIComponent(b.id);
-        html +=
-          '<article class="booking" data-id="' + escapeHtml(b.id) + '">' +
-            '<div class="booking__info">' +
-              '<h2 class="booking__name">' + escapeHtml(b.name || '—') + '</h2>' +
-              '<div class="booking__meta">' +
-                (b.email ? '<span><a href="mailto:' + escapeHtml(b.email) + '">' + escapeHtml(b.email) + '</a></span>' : '') +
-                (b.phone ? '<span><a href="tel:' + escapeHtml(b.phone.replace(/\s/g, '')) + '">' + escapeHtml(b.phone) + '</a></span>' : '') +
-              '</div>' +
-              '<div class="booking__date">Varattu: ' + escapeHtml(fmtUnix(b.created)) + '</div>' +
-              '<div class="booking__stripe">' +
-                '<a href="' + stripeUrl + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(b.id) + ' ↗</a>' +
-              '</div>' +
-            '</div>' +
-            '<div class="booking__actions">' +
-              (b.hasPaymentMethod
-                ? '<button type="button" class="btn charge-btn">Veloita 190 €</button>'
-                : '<span style="font-size:12px;color:var(--danger);">Ei korttia</span>') +
-            '</div>' +
-          '</article>';
-      });
-      bookingsList.innerHTML = html;
-    }
-    function askConfirmCharge(customerId, customerName) {
-      pendingChargeCustomerId = customerId;
-      chargeText.textContent = 'Veloitetaan asiakkaalta ' + (customerName || customerId) +
-        ' 190 € (sis. alv 25,5 %) ennakkovarauksesta. Kortti veloitetaan välittömästi.';
-      chargeModal.hidden = false;
-      chargeConfirm.disabled = false;
-      chargeConfirm.textContent = 'Veloita 190 €';
-      setTimeout(function () { chargeCancel.focus(); }, 50);
-    }
-    function closeChargeModal() {
-      chargeModal.hidden = true;
-      pendingChargeCustomerId = null;
-    }
-    async function confirmCharge() {
-      if (!pendingChargeCustomerId) return;
-      var token = getToken();
-      if (!token) { closeChargeModal(); showPasswordView(); return; }
-      chargeConfirm.disabled = true;
-      chargeConfirm.textContent = 'Veloitetaan…';
-      try {
-        var res = await fetch('/api/charge-booking', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-          body: JSON.stringify({ customerId: pendingChargeCustomerId })
-        });
-        var data = await res.json().catch(function () { return {}; });
-        if (res.status === 401) { closeChargeModal(); handle401(); return; }
-        if (!res.ok) throw new Error(data.error || 'Veloitus epäonnistui');
-        if (data.ok) {
-          showToast('Veloitus onnistui!', 'success');
-        } else if (data.needsAction) {
-          showToast('Maksu vaatii vahvistuksen. Lähetä asiakkaalle vahvistuslinkki Stripe Dashboardista.', 'error');
-        } else {
-          showToast(data.error || 'Maksu ei mennyt heti läpi.', 'error');
-        }
-        closeChargeModal();
-        loadBookings();
-      } catch (err) {
-        chargeConfirm.disabled = false;
-        chargeConfirm.textContent = 'Veloita 190 €';
-        showToast(err.message || 'Veloitus epäonnistui', 'error');
       }
     }
     /* ======================================================== */
@@ -1634,7 +1460,6 @@
         setToken(data.token);
         showAdmin();
         showToast('Kirjautuminen onnistui palautuskoodilla. Tarkista palautuskoodien tilanne ja generoi uudet jos tarpeen.', 'success');
-        loadBookings();
         loadEsitiedot({ silent: true });
       } catch (err) {
         backupCodeError.textContent = err.message || 'Kirjautuminen epäonnistui';
@@ -2234,15 +2059,6 @@
     /* ======================================================== */
     /* WIRING                                                   */
     /* ======================================================== */
-    tabBookings.addEventListener('click', function () {
-      activateTab('bookings');
-    });
-    tabEsitiedot.addEventListener('click', function () {
-      activateTab('esitiedot');
-      if (esitiedotCache.length === 0 && esitiedotEmpty.hidden && esitiedotError.hidden) {
-        loadEsitiedot();
-      }
-    });
     passwordForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var pwd = adminPwdEl.value;
@@ -2305,25 +2121,9 @@
       clearToken();
       esitiedotCache = [];
       esitiedotList.innerHTML = '';
-      bookingsList.innerHTML = '';
       showPasswordView();
       showToast('Kirjauduit ulos.', 'success');
     });
-    refreshBookingsBtn.addEventListener('click', loadBookings);
-    bookingsList.addEventListener('click', function (e) {
-      var btn = e.target.closest('.charge-btn');
-      if (!btn) return;
-      var article = btn.closest('.booking');
-      var customerId = article && article.getAttribute('data-id');
-      var nameEl = article && article.querySelector('.booking__name');
-      var name = nameEl ? nameEl.textContent : '';
-      if (customerId) askConfirmCharge(customerId, name);
-    });
-    chargeCancel.addEventListener('click', closeChargeModal);
-    chargeModal.addEventListener('click', function (e) {
-      if (e.target === chargeModal) closeChargeModal();
-    });
-    chargeConfirm.addEventListener('click', confirmCharge);
     refreshEsitiedotBtn.addEventListener('click', function () { loadEsitiedot(); });
     gdprCheckBtn.addEventListener('click', runGdprCheck);
     esitiedotList.addEventListener('click', function (e) {
@@ -2432,60 +2232,11 @@
       if (!backupManageModal.hidden) { closeBackupManageModal(); return; }
       if (!deleteModal.hidden)       { closeDeleteModal(); return; }
       if (!detailModal.hidden)       { closeDetailModal(); return; }
-      if (!chargeModal.hidden)       { closeChargeModal(); return; }
     });
     /* ----- BOOT ----- */
     activeTab = getStoredTab();
     if (getToken()) {
       showAdmin();
-      loadBookings();
-      loadEsitiedot({ silent: true });
-    } else {
-      showPasswordView();
-    }
-  })();
-</script>
-</body>
-</html>
- var file = e.target.files && e.target.files[0];
-      e.target.value = '';
-      if (!photoType || !file) return;
-
-      // If the form is for a new visit, save it first so we have an ID
-      // to attach the photo to. Switch state so the saved visit re-renders
-      // as an editable card with the photo attached.
-      if (isNew && !visitId) {
-        showToast('Tallennetaan käynti…');
-        var newId = await createVisitFromForm(form);
-        if (!newId) return;
-        visitId = newId;
-        isAddingNewVisit = false;
-        editingVisitId = newId;
-      }
-
-      if (visitId) {
-        await uploadPhoto(visitId, photoType, file);
-      }
-    });
-    hoitolokiList.addEventListener('submit', function (e) {
-      if (e.target && e.target.classList && e.target.classList.contains('visit-form')) {
-        e.preventDefault();
-        saveVisit(e.target);
-      }
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'Escape') return;
-      if (!hoitolokiModal.hidden)    { closeHoitolokiModal(); return; }
-      if (!backupManageModal.hidden) { closeBackupManageModal(); return; }
-      if (!deleteModal.hidden)       { closeDeleteModal(); return; }
-      if (!detailModal.hidden)       { closeDetailModal(); return; }
-      if (!chargeModal.hidden)       { closeChargeModal(); return; }
-    });
-    /* ----- BOOT ----- */
-    activeTab = getStoredTab();
-    if (getToken()) {
-      showAdmin();
-      loadBookings();
       loadEsitiedot({ silent: true });
     } else {
       showPasswordView();

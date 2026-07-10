@@ -2,3 +2,8 @@
 # Vanhat blogiartikkelien URL:t → uudet SEO-ystävälliset nimet (301 = pysyvä)
 /mikroneulaus.htm  /mita-on-kliininen-mikroneulaus.html              301
 /mikrorulla.htm    /mikroneularulla-vai-kliininen-mikroneulaus.html  301
+
+# Poistetut ennakkovaraussivut → etusivu (2026-07: ennakkovaraus lopetettu, Timma-jonotuslista käytössä)
+/kauppa.html   /  301
+/ehdot.html    /  301
+/peruuta.html  /  301

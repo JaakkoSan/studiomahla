@@ -4,7 +4,6 @@ Allow: /
 # Private/transactional pages — already have <meta name="robots" content="noindex">
 # but disallow here for belt-and-braces.
 Disallow: /admin.html
-Disallow: /peruuta.html
 Disallow: /lomake.html
 Disallow: /api/
 
