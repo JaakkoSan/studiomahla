@@ -21,6 +21,8 @@
   --nav-height: 72px;
   --max-w: 1200px;
   --section-px: clamp(24px, 5vw, 48px);
+  --section-py: clamp(80px, 12vw, 128px);
+  --danger: #b85a3a;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
