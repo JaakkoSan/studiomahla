@@ -55,42 +55,29 @@
   <style>
     /* BLOG LANDING HERO */
     .blog-hero {
-      background: var(--green-dark);
-      color: var(--white);
+      background: var(--cream);
+      color: var(--text-dark);
       /* +40px on top accounts for the fixed opening banner */
-      padding: calc(clamp(72px, 10vw, 120px) + 40px) var(--section-px) clamp(96px, 13vw, 160px);
+      padding: calc(clamp(72px, 10vw, 120px) + 40px) var(--section-px) clamp(72px, 10vw, 120px);
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-    .blog-hero::after {
-      content: "";
-      position: absolute;
-      left: -10%;
-      right: -10%;
-      bottom: -1px;
-      height: 80px;
-      background: var(--cream);
-      clip-path: ellipse(60% 100% at 50% 100%);
     }
     .blog-hero__inner {
       max-width: 720px;
       margin: 0 auto;
-      position: relative;
-      z-index: 1;
     }
     .blog-hero h1 {
       font-size: clamp(38px, 6vw, 64px);
       font-weight: 300;
       line-height: 1.1;
       margin: 12px 0 20px;
-      color: var(--white);
+      color: var(--text-dark);
       letter-spacing: -0.015em;
     }
     .blog-hero p {
       font-size: clamp(16px, 1.3vw, 18px);
       line-height: 1.8;
-      color: rgba(250, 248, 244, 0.85);
+      color: var(--text-mid);
       max-width: 540px;
       margin: 0 auto;
     }
@@ -187,7 +174,7 @@
 <main id="main-content">
   <section class="blog-hero" aria-labelledby="blog-title">
     <div class="blog-hero__inner">
-      <p class="label label--pink-pale">Blogi</p>
+      <p class="label label--mid">Blogi</p>
       <h1 id="blog-title">Artikkeleita ihonhoidon <em>tieteestä</em></h1>
       <p>
         Tutkittua tietoa kliinisestä mikroneulauksesta, ihon biologiasta ja siitä, miten hoidot todella vaikuttavat ihoon.
