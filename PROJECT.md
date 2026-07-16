@@ -674,6 +674,20 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-07-16 (myöhemmin samana päivänä)
+- **Luotu `/404.html`** — brändin mukainen virhesivu Cloudflaren yleisen sivun
+  sijaan. Käyttää jaettua style.css ja layout.js -mekaniikkaa (nav + footer
+  injektoituvat oikein). Sivun sisältö: iso 404, "Etsimääsi sivua ei löytynyt"
+  -otsikko, selitys + kehotus ilmoittaa jos linkki toistuu, kaksi CTA:ta
+  (etusivulle + blogiin). Meta robots: noindex, follow.
+- **Päivitetty `index.html`:n BeautySalon JSON-LD schema**:
+  - Poistettu `openingHoursSpecification` (Ma–Su 10–22) koska studio ei ole
+    vielä avoinna — vältetään väärän tiedon näyttäminen Googlessa.
+  - Lisätty `hasOfferCatalog` joka listaa palvelut (Ensikäynti 200 €,
+    Sarjahoito 3× 570 €, Sarjahoito 6× 1080 €). Kun studio avautuu ja on aika
+    lisätä aukioloajat takaisin, tehdään myös sen jälkeen.
+- **Sivustorakenne päivittynyt luvussa 7**: 14 asiakassivua (13 nykyistä + 404).
+
 ### 2026-07-16
 - Tiedosto luotu. Sisältää studion perustiedot, vesivahingon nykytilanteen,
   yläkerran remonttiaikataulun, Pro XN -tuotesarjan valinnan perusteluineen,

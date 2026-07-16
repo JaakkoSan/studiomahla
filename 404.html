@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sivua ei löytynyt | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Etsimääsi sivua ei löytynyt. Palaa etusivulle tai selaa artikkeleitamme.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <meta name="theme-color" content="#3d5247">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* 404 -sivun oma tyyli */
+    .error {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: calc(clamp(80px, 12vw, 128px) + 40px) var(--section-px) clamp(80px, 12vw, 128px);
+      text-align: center;
+      min-height: calc(100vh - var(--nav-height) - 320px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .error__number {
+      font-family: var(--font-serif);
+      font-size: clamp(96px, 18vw, 168px);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--pink);
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+    .error h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      margin: 0 0 24px;
+      color: var(--text-dark);
+    }
+    .error h1 em {
+      font-style: italic;
+      color: var(--pink);
+    }
+    .error p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-mid);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .error__actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .error__link {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      padding: 12px 4px;
+      transition: color .2s ease;
+    }
+    .error__link:hover { color: var(--pink); }
+  </style>
+  <!-- Meta Pixel -->
+  <script src="/assets/meta-pixel.js"></script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1720418568979435&ev=PageView&noscript=1" alt=""/></noscript>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
+<div id="header-slot"></div>
+<main id="main-content">
+  <section class="error">
+    <p class="error__number">404</p>
+    <h1>Etsimääsi sivua <em>ei löytynyt</em></h1>
+    <p>
+      Sivu on saattanut siirtyä tai poistua käytöstä. Tarkista osoite tai palaa etusivulle — ja jos päädyit tänne toistuvasti saman linkin kautta, kerro siitä sähköpostitse osoitteeseen asiakaspalvelu@studiomahla.fi.
+    </p>
+    <div class="error__actions">
+      <a href="index.html" class="btn">Etusivulle</a>
+      <a href="blogi.html" class="error__link">Selaa blogia →</a>
+    </div>
+  </section>
+</main>
+<div id="footer-slot"></div>
+<script src="/assets/layout.js" defer></script>
+<script src="/assets/opening-state.js" defer></script>
+</body>
+</html>

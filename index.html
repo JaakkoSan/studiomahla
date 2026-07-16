@@ -966,11 +966,41 @@
     { "@type": "City", "name": "Loviisa" },
     { "@type": "AdministrativeArea", "name": "Kymenlaakso" }
   ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "10:00",
-    "closes": "22:00"
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hoitopalvelut",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ensikäynti — kliininen mikroneulaus",
+          "description": "Iho-analyysi ja kliininen mikroneulaushoito, tunti. Sisältää ammattilaisen ajan, käytetyt tuotteet ja jälkihoidon."
+        },
+        "price": "200",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mikroneulauksen sarjahoito — 3 hoitokertaa",
+          "description": "Kolmen hoidon sarja neljän viikon välein. Ensikäynti sisältyy hintaan."
+        },
+        "price": "570",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mikroneulauksen sarjahoito — 6 hoitokertaa",
+          "description": "Kuuden hoidon sarja neljän viikon välein. Ensikäynti sisältyy hintaan."
+        },
+        "price": "1080",
+        "priceCurrency": "EUR"
+      }
+    ]
   },
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
