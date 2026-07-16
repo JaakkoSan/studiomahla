@@ -12,6 +12,33 @@ sisältävä — brändi-info ja tekniset päätökset.
 
 ---
 
+## ⚠️ CLAUDELLE: pysyvä ohje
+
+**Päivitä tämä tiedosto AINA ITSENÄISESTI seuraavissa tilanteissa,
+ilman että käyttäjän tarvitsee erikseen pyytää:**
+
+1. Kun tehdään **tekninen muutos** joka vaikuttaa arkkitehtuuriin (uusi tiedosto
+   assets:iin, uusi sivutyyppi, muutos layout.js:ään, opening-state.js:ään, jne.)
+2. Kun tehdään **sisältömuutos** joka vaikuttaa palvelu­kuvaukseen (uusi hoito,
+   hintapäivitys, tuotesarjan muutos, brändi­viestin muutos)
+3. Kun **tehdään päätös** joka vaikuttaa tuleviin toimen­piteisiin
+   (esim. "avataan yläkertaan" tai "otetaan käyttöön Pro XN")
+4. Kun **luodaan uusi sivu** — lisää se lukuun 7 (sivut)
+5. Kun **aikataulu tai suunnitelma muuttuu** — päivitä luku 9
+6. Kun **käytetään uusia palveluita/kumppaneita** — päivitä luku 13
+7. Kun **käyttäjä muuttaa toimintaperiaatteitaan** — päivitä luku 10
+
+**Prosessi jokaisella päivityksellä:**
+- Etsi oikea luku
+- Päivitä sisältö
+- Lisää rivi lukuun 15 (Muutosloki) päivämäärän kanssa
+- Päivitä "Viimeksi päivitetty" -päivämäärä tiedoston lopussa
+
+**Tämä ei ole valinnaista.** Käyttäjä on nimenomaan pyytänyt että hoidan tämän
+itsenäisesti eikä hänen tarvitse muistaa muistuttaa.
+
+---
+
 ## 1. Studio (perustiedot)
 
 - **Yritys**: Guild Lounge Oy (aputoiminimi Mahlamäen Kauneusstudio)
@@ -356,10 +383,311 @@ tiedoston yläreunassa:
 
 Kaikki näiden tietosuojaselosteet on linkitetty `privacy.html`:ssä.
 
+## 14. Vaihe 2 -suunnitelma: aknenhoito-lisäys
+
+**Status**: Suunnitelma. Odottaa toteutusta.
+**Aikataulu**: syksy 2026 jälkeen, kun aknenhoito-koulutus on valmis ja studio
+avautunut yläkertaan ja perustoiminta on stabiilia.
+**Alkuperä**: Käyttäjän oma suunnitelmadokumentti kesäkuulta 2026
+(SITE_ARCHITECTURE_PHASE2.md, nyt sulautettu tähän).
+
+### 14.1 Vaihe 2 -toteutuksen edellytykset
+
+Ei toteudu ennen kuin **kaikki** nämä täyttyvät:
+1. Studio on avautunut (yläkerta tai alakerta) ja perustoiminta on stabiilia
+2. Aknenhoito-koulutus suoritettu
+3. Kaikki [VAHVISTETTAVA]-kohdat Aknenhoitopolku v1.0:ssa vahvistettu
+4. ProXN, LED ja aknenhoidon hinnoittelu lukittu
+
+### 14.2 Strateginen perusta
+
+Mikroneulaus ja aknenhoito ovat luonteeTESTAA
+Molemmat tarvitsevat oman pillar-rakenteensa. Mikroneulaus pysyy
+menetelmäkeskeisenä pillarina, aknenhoito tulee vaivakeskeiseksi pillariksi.
+ProXN ja LED ovat tukimenetelmiä (omat sivut, ei pillaria).
+
+### 14.3 Uudet sivut
+
+**Aknenhoito-pillar:**
+- `/aknenhoito.html` (pillar)
+- `/aknenhoito-lieva.html` (Polku 1: lievä akne + reaktiivinen iho)
+- `/aknenhoito-kohtalainen.html` (Polku 2: kohtalainen tulehduksellinen akne)
+- `/aknearvet-pigmenttimuutokset.html` (Polku 3: aknearvet ja PIH)
+
+**Menetelmäsivut:** `/proxn-kasvohoito.html`, `/led-valohoito.html`
+**Mahdollinen:** `/ensikaynti.html`
+
+### 14.4 Navigaatio
+
+**Nykyinen:** `[Brand] | Blogi | [Ajanvaraus]`
+**Vaihe 2:** `[Brand] | Mikroneulaus | Aknenhoito | Blogi | [Ajanvaraus]`
+
+Ei dropdownia. Ei hampurilaista aluksi. Alle 380 px piilotetaan "Blogi"
+(löytyy footerista); "Ajanvaraus" pysyy aina.
+
+### 14.5 Etusivun uudelleenajattelu
+
+Etusivu siirtyy palvelumyynnistä **brändi- ja filosofiakeskeiseksi portiksi**.
+Pois etusivulta: hinnasto, FAQ, prosessikuvaus, sarjat → siirtyy pillar-sivuille.
+
+Uusi rakenne:
+1. Hero (tiivis brändipositionointi, yksi CTA)
+2. Hoitofilosofia (laajempi)
+3. Hoitopolut — 2 isoa korttia (mikroneulaus + aknenhoito)
+4. Kuka olen / Tiimi
+5. Blogi-snippet
+6. Yhteystiedot + Kotka
+7. Footer-edelläinen CTA
+
+**Kriittinen:** Etusivu **ei** muutu ennen kuin aknenhoito on valmis
+lanseerattavaksi.
+
+### 14.6 Aknenhoito-pillar sisältö
+
+**`/aknenhoito.html`:** Hero "Hoidamme aknea sen tyypin ja vaiheen mukaan",
+filosofia (rauhoitus, barrier-tuki, ei peitetä vaan parannetaan), kenelle sopii,
+ensikäynti ja arviointi, 3 polkua korttina + linkit, hoitomenetelmät (ProXN, LED,
+mikroneulaus) + linkit, hinnoittelu, milloin ohjaamme lääkärille, FAQ + CTA.
+
+**Polku 1 (lievä):** ProXN-kasvohoito + Dermalux LED -sarja. Kohde: lievä
+tulehduksellinen akne, rasvoittuva iho, herkkä iho, couperosa.
+
+**Polku 2 (kohtalainen):** Korkeampi hoidollinen taso. Selkeästi: jos vaste
+puuttuu → lääkärille. Yhteistyö paikallislääkityksen kanssa.
+
+**Polku 3 (arvet ja PIH):** **6 kuukauden odotusaika isotretinoiinin jälkeen**
+(ehdoton). Mikroneulauskeskeinen → `/mikroneulaus-opas.html`. ProXN + LED tukena.
+
+### 14.7 Menetelmäsivut
+
+**`/proxn-kasvohoito.html`:** ProXN-tuotelinjan kuvaus, kenelle (lievä/kohtalainen
+akne, couperosa, rosacea, herkkä iho), protokolla, **ei sekoiteta mikroneulaukseen
+ilman turvallisuusarviota**, yhteensopivuus paikallislääkkeiden kanssa, hinnoittelu.
+
+**`/led-valohoito.html`:** Dermalux LED kliinisellä tasolla, kaksi roolia
+(sarjahoito ja yksittäinen lisähoito), sinisen ja punaisen valon vaikutus,
+vasta-aiheet, hinnoittelu (~420–450 € / 8 hoitoa, 35 € lisäpalveluna).
+
+### 14.8 LED-hoidon tutkimusnäyttö
+
+Tarkasteltu kesäkuu 2026, tieteellisesti vahva. Käytettävä lähdeluettelo
+`led-valohoito.html`-sivun kirjoituksessa.
+
+**Meta-analyysit (korkein näyttö):**
+- **Ngoc et al. 2023**, Photodermatology, Photoimmunology & Photomedicine.
+  Meta-analyysi 31 tutkimuksesta. Aknevaikutus SMD −2.42 [−2.64, −2.15]
+  (erittäin suuri), I² = 17 %. DOI: 10.1111/phpp.12841.
+- **Akuffo-Addo et al. 2024**, Journal of Cutaneous Medicine and Surgery.
+  1185 aknetapausta: 92 % osittaista helpotusta, 43 % parannus 4 viikossa.
+  DOI: 10.1177/12034754241265697.
+- **JAAD 2024 CME Part II — Photobiomodulation Clinical Applications in
+  Dermatology.** Sham-kontrolloitu RCT: 77 % vähennys tulehduksellisissa,
+  54 % ei-tulehduksellisissa 4 viikossa (420 nm + 660 nm, 2.5 min × 2/päivä).
+- **At-Home LED Devices Meta-Analysis 2025** — vahvistaa kotikäyttöiset LED:t.
+
+**Klassinen RCT:**
+- **Papageorgiou et al. 2000**, British Journal of Dermatology, 142:973-978.
+  n=107, sininen+punainen valo tuotti 76 % parannuksen 12 viikossa, tilastollisesti
+  merkitsevästi parempi kuin 5 % bentsoyyliperoksidi. HUOM: loisteputkilamppuja
+  (415 + 660 nm), ei LEDejä.
+
+**Mekanistinen:**
+- **Hamblin & Demidova 2006**, Proc SPIE Vol. 6140.
+- **Chung et al. 2011**, Annals of Biomedical Engineering, 40(2):516-533.
+- **Avci et al. 2013**, Semin Cutan Med Surg, 32:41-52.
+- **Barolet 2008**, Semin Cutan Med Surg, 27:227-238.
+
+**Dermalux Tri-Wave MD -spesifi:**
+- **Naranjo & López Andrino 2023**, Photobiomodulation Photomedicine and Laser
+  Surgery, 41(2):64-72. n=20 verisuonet/punoitus: 59 % vähennys hemoglobiini-
+  alueessa 12 viikossa, IPL:ää vähemmän tehokas mutta paremmin siedetty (70 %
+  LED-asiakkaista ei kipua vs. 100 % IPL kipu). DOI: 10.1089/photob.2022.0079.
+  HUOM: pieni otos, valmistajan rahoittama.
+
+**Ei käytetä lähteinä:** Aesthetic Technology Ltd 2020 (markkinointimateriaalia).
+
+**Käytettävissä olevat maltilliset väitteet:**
+- "LED-valohoidon tehosta aknessa on vahvaa systemaattista näyttöä" ✓
+- "Sinisen valon vaikutus perustuu P. acnes -bakteerin porfyriinien
+  fotoaktivaatioon" ✓
+- "Punainen valo vähentää tulehdusta ja tukee paranemista" ✓
+- "Mikroneulauksen jälkeisessä paranemisessa LED voi rauhoittaa ja nopeuttaa" ✓
+- "LED kasvojen punoituksessa: lievempi mutta kivuttomampi kuin IPL" — alustava
+
+**Väitteet joita EI saa esittää:**
+- "Parantaa rosacean" — riittämätön näyttö
+- "Poistaa pigmenttimuutokset" — vain in vitro (Kim 2012)
+- "Yhtä tehokas kuin IPL" — Naranjo osoitti päinvastaista
+
+### 14.9 Sisäinen linkitys (Vaihe 2)
+
+Aknenhoito-pillarista → 3 polkua, `/proxn-kasvohoito.html`, `/led-valohoito.html`,
+`/mikroneulaus-opas.html` (Polku 3 arpien hoidossa).
+
+Aknearvet-pigmenttimuutokset linkittää: `/mikroneulaus-opas.html`,
+`/mita-tutkimus-sanoo-mikroneulauksesta.html`, `/proxn-kasvohoito.html`,
+`/led-valohoito.html`.
+
+Mikroneulaus-pillariin lisätään lohko "Mikroneulauksen rooli aknearpien
+hoidossa" → `/aknearvet-pigmenttimuutokset.html`.
+
+### 14.10 Footer (Vaihe 2)
+
+```
+PALVELUT              TIETOA               ASIAKKAALLE
+Mikroneulaus          Studiosta            Hinnasto
+Aknenhoito            Tiimi                Ajanvaraus
+ProXN-kasvohoito      Blogi                Ota yhteyttä
+LED-valohoito                              Ehdot
+                                           Tietosuoja
+```
+
+### 14.11 Blogistrategia (Vaihe 2)
+
+Aknenhoito-klusterin uusia aiheita: akne ja sen tyypit, aknearpien hoito, PIH,
+ProXN barrier-tukena, LED aknessa, rosacea ja couperosa, aknepotilaan kotihoito.
+
+`blogi.html`:ään kategoriasuodattimet: Mikroneulaus, Aknenhoito, Yleistä.
+
+### 14.12 Tekniset huomiot
+
+**sitemap.xml (Vaihe 2 lisäys):** `/aknenhoito.html` (0.9),
+`/aknenhoito-lieva.html` (0.7), `/aknenhoito-kohtalainen.html` (0.7),
+`/aknearvet-pigmenttimuutokset.html` (0.7), `/proxn-kasvohoito.html` (0.7),
+`/led-valohoito.html` (0.7).
+
+**Schema.org:** BeautySalon `hasOfferCatalog`, sivukohtaiset BreadcrumbList,
+MedicalProcedure / BeautyService per sivu.
+
+**Hoitoloki (Vaihe 3, ei Vaihe 2):** `treatment_type`-kenttä:
+"microneedling" | "proxn" | "led" | "mixed".
+
+**Esitietolomake (suositus A):** yksi lomake kaikille, alkuvalinta "Mihin
+haluat varata ajan?" → dynaamiset lisäkentät. Backend tukee jo.
+
+### 14.13 Pro XN -koulutuksen kriittiset vahvistuskysymykset
+
+Vastaukset ratkaisevat hinnoittelun ja palvelurakenteen ennen Vaihe 2:ta.
+
+**Xanthohumol Recovery -käyttö:**
+1. Jokaisessa ammattihoidossa vai valikoidusti?
+2. Riittääkö 1 yksikkö per hoito, vai jaettuna?
+3. Missä sarjan kohdassa? Alussa (intensiivi) vai keskellä?
+4. Miten "moduloidut hoidot" rakentuvat 6 hoidon sarjassa?
+
+**Muiden ammattituotteiden käyttömäärät:**
+5. PHA Solution (60 €/30 ml) — paljonko per hoito?
+6. Antioxidant Therapy (69 €/30 ml) — käyttömäärä?
+7. Novel Peel (105 €/30 ml) — milloin käytössä? Aknepolulle vai erillinen?
+
+**Integraatio muihin hoitoihin:**
+8. ProXN + paikallisretinoidit/bentsoyyliperoksidi — sietoraja
+9. ProXN + isotretinoiini (Polku 2)
+10. ProXN + mikroneulaus — Antioxidant/Xanthohumol jälkihoitona vai erilliset?
+
+**Logistiikka:**
+11. Volyymialennukset yli aloituspakkausten?
+12. Toimitusajat ja minimitilausmäärät
+13. Xanthohumol box -yksiköiden säilyvyys avaamisen jälkeen?
+
+### 14.14 LED-vahvistukset ennen sivun kirjoitusta
+
+- LED + paikallislääkkeet (doksisykliini, isotretinoiini, valoherkistävät)
+- LED + raskaus/imetys (Dermaluxin dokumentaatio)
+- LED + autoimmuunisairaudet, epilepsia, fotoallergiat
+
+### 14.15 Hinnoittelupäätökset ennen Vaihe 2:ta
+
+- ProXN-kasvohoito: perustaso ~100–110 €, intensiivi ~160–175 €
+- LED: perustaso 75 €, sarjana 65 €/hoito
+- LED + ProXN -yhdistelmäpalvelut
+- Aknepolun sarjapaketit (8 LED + ProXN)
+- Kotihoitotuotteiden markkinakate 50–100 %
+
+### 14.16 Vaiheistus
+
+**Vaihe 1 (valmistelu):** koulutus + vahvistukset + hinnat lukittu.
+
+**Vaihe 2 (rakentaminen, 1–2 vk):**
+1. `/aknenhoito.html` pillar
+2. 3 polkusivua
+3. `/proxn-kasvohoito.html` + `/led-valohoito.html`
+4. Nav (Mikroneulaus + Aknenhoito + Blogi + CTA)
+5. `index.html` (uusi hero, filosofia, hoitopolkukortit, hinnasto pois)
+6. `/mikroneulaus-opas.html` linkittämään aknearpisivuun
+7. sitemap + schema
+8. Footer (uudet sarakkeet)
+9. `blogi.html` (kategoriat)
+10. **`kysely.html` viimeistely** — laajenna mikroneulaus + ProXN + LED,
+    poista noindex, lisää sitemapiin, palauta linkit
+    `/mikroneulaus-sopiiko-minulle.html` ja `/mikroneulaus-sarjahoito.html`.
+
+**Vaihe 3 (lanseeraus):** blogiartikkeli, some, GBP-päivitys,
+mahdollinen sähköposti olemassa oleville.
+
+**Vaihe 4 (jatkokehitys):** aknenhoidon blogiklusterin rakennus (1/kk),
+hoitoloki kaikille tyypeille, lääkärivetoinen hoito omana alaosionaan.
+
+### 14.17 Riskit
+
+**Brändinarratiivi:** "mikroneulausstudio" → "kliininen ihonhoitostudio".
+Etusivun copy täytyy harkita: esim. "Kliininen ihonhoito, joka tukee ihoa
+eikä peitä sitä" tai "Ihon biologiaa kunnioittava kauneusstudio Kotkassa".
+
+**Sisäinen linkitys:** Uusi pillar tarvitsee riittävästi sisäisiä linkkejä.
+
+**Perustoiminta ensin:** Ennen aknenhoito-lanseerausta mikroneulauspalvelu
+stabiili, ensimmäiset asiakaskokemukset käsitelty, hoitoloki toimii.
+**Älä laajenna ennen kuin perusvirta toimii.**
+
+**Vasta-aiheiden ristikkäisyys:** isotretinoiini (mikroneulaus + LED),
+doksisykliini (LED), valoherkistävät (LED), autoimmuunisairaudet (LED),
+epilepsia (LED), raskaus/imetys (LED, vahvistettava koulutuksessa).
+
+### 14.18 Tarkistuslista ennen Vaihe 2:n rakennusta
+
+- [ ] Kaikki [VAHVISTETTAVA]-kohdat Aknenhoitopolku v1.0:ssa vahvistettu
+- [ ] Aknenhoidon ensikäynnin hinta päätetty
+- [ ] ProXN-kasvohoidon hinta päätetty
+- [ ] LED-sarjan lopullinen hinta päätetty
+- [ ] Kotihoitotuotteiden hinnoittelu ja saatavuus
+- [ ] LED:n vasta-aiheet vahvistettu Dermaluxin dokumentaatiosta
+- [ ] Lääkäriohjauksen raja määritelty
+- [ ] Lääkäriohjauksen prosessi sovittu
+- [ ] Mikroneulauspalvelu vakaa
+- [ ] Hoitoloki toimii moitteettomasti
+
+### 14.19 Lääkärivetoinen hoito — Vaihe 3 (tulevaisuus)
+
+Aknenhoitopolku v1.0 kohta 8: etälääkärin ihotautikonsultaatio, sairaanhoitajan
+verikokeet studiossa, isotretinoiinin koordinointi. Selvästi erillinen vaihe.
+
+Vaatii: uusi alaosio "Lääketieteellinen ihonhoito", top nav -laajennus tai
+hampurilainen, LED:n vasta-aiheiden päivitys (isotretinoiinin yhteensopivuus),
+hoitolokin laajennus, GDPR ja potilastietolainsäädäntö.
+
 ---
 
-**Tämän tiedoston päivitys**: kun tässä keskustelussa tehdään merkittäviä
-muutoksia (uusia sivuja, uusi tuotevalinta, brändimuutos, arkkitehtuurimuutos),
-päivitä myös tämä tiedosto. Näin muistio pysyy ajan tasalla.
+## 15. Muutosloki
+
+Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
+päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
+muutoksia.
+
+### 2026-07-16
+- Tiedosto luotu. Sisältää studion perustiedot, vesivahingon nykytilanteen,
+  yläkerran remonttiaikataulun, Pro XN -tuotesarjan valinnan perusteluineen,
+  brändin design-tokenit, teknisen arkkitehtuurin, 13 asiakassivua, poistetun
+  ennakkovarausekosysteemin, tulevat sivut, marraskuun talvi-artikkelin
+  julkaisulistan.
+- Vahva "päivitä itsenäisesti" -ohje lisätty tiedoston alkuun.
+- **Vaihe 2 -suunnitelma (aknenhoito-lisäys) sulautettu luvuksi 14**
+  alkuperäisestä `SITE_ARCHITECTURE_PHASE2.md`-tiedostosta (kesäkuu 2026).
+  Alkuperäinen tiedosto poistettu. Sisältää: aknenhoito-pillar 3 polulla,
+  ProXN- ja LED-menetelmäsivut, navigaation muutos, etusivun uudelleenajattelu,
+  LED-hoidon täydellinen tutkimusnäyttö (9 lähdettä), Pro XN -koulutuksen 13
+  vahvistuskysymystä, tarkistuslista.
+
+---
 
 **Viimeksi päivitetty**: 2026-07-16
