@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Mahlamäen Kauneusstudio – sitemap
-  Päivitetty: 2026-07-10
+  Päivitetty: 2026-07-16
 
   KUN LISÄÄT UUDEN SIVUN (esim. uuden blogi-artikkelin):
     1. Lisää uusi <url>-blokki tähän
@@ -26,7 +26,13 @@
   </url>
   <url>
     <loc>https://www.studiomahla.fi/milloin-aloittaa-mikroneulaus.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiomahla.fi/mikroneulaus-talvella.html</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
