@@ -674,6 +674,35 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-07-16 (kolmas eräpäivä samana päivänä)
+- **Sivustokatselmus tehty koko sivustolle**. Tunnistetut ongelmat korjattu:
+  - **7 blogisivun CTA-otsikko** yhtenäistetty: "Varaa ensikäynti" →
+    "Aloita ensikäynnillä" — toimii sekä postponed että avoin -tilassa
+    (aiemmin jo tehty milloin-aloittaa- ja mikroneulaus-talvella.html).
+    Muutetut: mikroneulaus-opas, mikroneulaus-sarjahoito, mikroneulaus-sopiiko-
+    minulle, mikroneularulla-vai-kliininen-mikroneulaus, mita-ensikaynnilla-
+    tapahtuu, mita-on-kliininen-mikroneulaus, mita-tutkimus-sanoo-
+    mikroneulauksesta. Lisätty CTA-p:hen: "Jonotuslistalaisille ilmoitamme
+    avajaispäivän ensimmäisenä."
+  - **index.html FAQ 05** ("Kuinka varaan ajan?") + JSON-LD FAQPage schema
+    päivitetty neutraalimmaksi joka toimii postponed + open -tiloissa
+    ("painike joka ohjaa Timmaan" + selitys että ohjaa jonotuslistalle nyt,
+    varauskalenteriin avautumisen jälkeen).
+  - **mikroneulaus-sopiiko-minulle.html rivi 295** leipäteksti: "Varaa
+    ensikäynti" → "Varaa ensikäynti — tai liity jonotuslistalle jos studio
+    ei ole vielä auki".
+  - **privacy.html perusteellinen siivous**: poistettu 9 kohtaa jotka
+    liittyivät ennakkovaraus- ja Stripe-järjestelmään (ei ollut koskaan
+    aktiivista käytössä). Poistetut: maksukortti-lista käsiteltävistä
+    tiedoista, "Emme tallenna korttitietoja" -maininta, Stripe Payments
+    Europe -datankäsittelijämerkintä, "Ennakkovarauksen tiedot"
+    -säilytysaika-p, koko "Korttitietojen käsittely" -osio (h2+p), PCI DSS
+    -kohta Tietoturva-listasta, Stripe-evästemaininta, "Ennakkovarauksen
+    peruuttaminen" -oikeus-p. Muokattu: Resend-kuvaus (poistettu "ennakko-
+    varauksen vahvistus, peruutusvahvistus" -viittaukset). Datankäsittelijät
+    nyt: Supabase, Resend, Cloudflare, Timma (ei Stripeä).
+- Aiemmat tänään tehdyt jäävät edelleen voimaan (ks. alempi merkintä).
+
 ### 2026-07-16 (myöhemmin samana päivänä)
 - **Luotu `/404.html`** — brändin mukainen virhesivu Cloudflaren yleisen sivun
   sijaan. Käyttää jaettua style.css ja layout.js -mekaniikkaa (nav + footer

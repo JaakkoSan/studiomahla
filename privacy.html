@@ -74,13 +74,9 @@
     <li>Sähköpostiosoite</li>
     <li>Puhelinnumero</li>
     <li>Varauksen ja hoidon tiedot</li>
-    <li>Ennakkovarauksen yhteydessä lisäksi: maksukortin tunniste ja viimeiset 4 numeroa, korttityyppi sekä veloitukseen liittyvät metatiedot (käsittelijä: Stripe, ks. alla)</li>
     <li><strong>Esitietolomakkeen yhteydessä</strong> lisäksi: ikä, hoidettava iho-ongelma, kontraindikaatiot (raskaus, lääkitykset, ihosairaudet jne.), allergiat, muut lääkitykset sekä antamasi suostumukset. Nämä ovat <em>arkaluontoisia terveys­tietoja</em> (GDPR erityinen henkilötietoryhmä) ja niitä käsitellään korotetulla varovaisuudella.</li>
     <li>Lomakkeen lähetyksen yhteydessä tallennetaan tekninen IP-osoite väärinkäytösten estämiseksi.</li>
   </ul>
-  <p>
-    <strong>Emme tallenna täydellisiä korttitietoja palvelimillemme.</strong> Korttitiedot käsittelee ja säilyttää PCI DSS -sertifioitu maksupalveluntarjoaja Stripe (ks. alla).
-  </p>
   <h2>Tietojen luovuttaminen ja tietojenkäsittelijät</h2>
   <p>
     Emme luovuta henkilötietojasi kolmansille osapuolille markkinointitarkoituksiin. Käytämme seuraavia tietojenkäsittelijöitä, joiden tehtävänä on käsitellä henkilötietoja meidän puolestamme:
@@ -92,12 +88,7 @@
       Tietosuojaseloste: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>
     </li>
     <li>
-      <strong>Stripe Payments Europe, Ltd. (Irlanti) / Stripe Inc. (USA)</strong> — maksukorttien tallennus ja veloitukset.
-      Stripe on PCI DSS Level 1 -sertifioitu maksupalveluntarjoaja. Tietoja voidaan siirtää EU:n ulkopuolelle Stripen Yhdysvaltain konserniyhtiöille; siirto perustuu EU–US Data Privacy Framework -järjestelyyn ja Euroopan komission hyväksymiin mallisopimuslausekkeisiin.
-      Tietosuojaseloste: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>
-    </li>
-    <li>
-      <strong>Resend (USA)</strong> — kaikki transaktiosähköpostit: ennakkovarauksen vahvistus, peruutusvahvistus, studiolle lähetettävä ilmoitus uudesta esitietolomakkeesta sekä sisäiset GDPR-säilytysaikamuistutukset adminille. Sähköposteissa kulkee tarvittavat yhteystiedot ja asiakkaan nimi; arkaluontoisia terveystietoja ei välitetä sähköpostitse.
+      <strong>Resend (USA)</strong> — transaktiosähköpostit: studiolle lähetettävä ilmoitus uudesta esitietolomakkeesta sekä sisäiset GDPR-säilytysaikamuistutukset adminille. Sähköposteissa kulkee tarvittavat yhteystiedot ja asiakkaan nimi; arkaluontoisia terveystietoja ei välitetä sähköpostitse.
       Siirto Yhdysvaltoihin perustuu EU–US Data Privacy Framework -järjestelyyn ja mallisopimuslausekkeisiin.
       Tietosuojaseloste: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">resend.com/legal/privacy-policy</a>
     </li>
@@ -116,14 +107,7 @@
     Henkilötietoja säilytetään asiakassuhteen voimassaolon ajan ja sen jälkeen lainsäädännön edellyttämän ajan (esim. kirjanpitolaki edellyttää tositteiden säilytystä kuusi vuotta). Tarpeettomiksi käyneet tiedot poistetaan tai anonymisoidaan.
   </p>
   <p>
-    <strong>Ennakkovarauksen tiedot</strong>: Jos peruutat ennakkovarauksen, asiakkaaseen liitetty korttitieto poistetaan välittömästi Stripen järjestelmästä. Tilausta ja peruutusta koskeva yhteenveto säilyy Stripen Customer-objektissa kirjanpitolain edellyttämän ajan.
-  </p>
-  <p>
     <strong>Esitietolomakkeen tiedot</strong>: Hoitoa edeltävän esitietolomakkeen terveystiedot säilytetään <strong>enintään kaksi vuotta</strong> viimeisestä hoitokäynnistä tai muusta yhteydenotosta. Jokaisen käynnin yhteydessä tietueen aikaleima päivittyy, jolloin säilytysaika alkaa juosta uudestaan. Järjestelmämme tarkistaa kuukausittain automaattisesti vanhentuneet tietueet ja lähettää studiolle muistutuksen tietojen poistamisesta. Voit pyytää tietojesi poistamista milloin tahansa lähettämällä sähköpostia osoitteeseen <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a> — vastaamme 30 päivän kuluessa.
-  </p>
-  <h2>Korttitietojen käsittely</h2>
-  <p>
-    Maksukortin numero, voimassaoloaika ja turvakoodi syötetään suoraan Stripen tarjoamaan Stripe Elements -maksulomakkeeseen, jolloin täydet korttitiedot eivät kulje meidän palvelimemme kautta eikä niitä tallenneta meidän rekisteriin. Saamme Stripeltä ainoastaan tunnisteen (PaymentMethod ID) ja tiedon kortin tyypistä ja viimeisistä neljästä numerosta tunnistustarkoituksessa.
   </p>
   <h2>Tietoturva</h2>
   <p>
@@ -132,13 +116,12 @@
   <ul>
     <li>Sivusto käyttää HTTPS-salausta, joka on pakotettu päälle myös selaintasolla (HSTS).</li>
     <li>Arkaluontoiset terveystiedot tallennetaan salatusti EU-alueen palvelimille (Supabase, Frankfurt). Tietokannassa on Row Level Security -käytäntö, joka estää tietojen lukemisen sivuston julkisesta osasta.</li>
-    <li>Maksukorttitietojen käsittely tapahtuu PCI DSS -standardin mukaisesti Stripen toimesta — täydet korttitiedot eivät kulje palvelimemme kautta.</li>
     <li>Hallintapaneelimme on suojattu kaksivaiheisella tunnistautumisella (salasana + Authenticator-sovelluksen koodi). Kirjautumisyritysten määrää on rajoitettu.</li>
     <li>Henkilötietoihin pääsyä on rajoitettu vain niille, jotka tarvitsevat niitä työtehtävissään.</li>
   </ul>
   <h2>Evästeet</h2>
   <p>
-    Sivusto käyttää välttämättömiä evästeitä toimintansa varmistamiseen. Tämän lisäksi maksu- ja korttitietojen käsittely Stripe Elementsillä asettaa Stripen evästeitä petostentorjuntaa varten. Emme käytä seuranta- tai markkinointievästeitä.
+    Sivusto käyttää välttämättömiä evästeitä toimintansa varmistamiseen. Emme käytä seuranta- tai markkinointievästeitä.
   </p>
   <h2>Rekisteröidyn oikeudet</h2>
   <p>
@@ -153,9 +136,6 @@
     <li>siirtää tietosi toiseen palveluun</li>
     <li>tehdä valitus tietosuojavaltuutetulle, jos koet käsittelyn olevan lainvastaista</li>
   </ul>
-  <p>
-    <strong>Ennakkovarauksen peruuttaminen</strong>: voit peruuttaa ennakkovarauksesi koska tahansa varausvahvistus­sähköpostissa olevan linkin kautta. Tämä irrottaa maksukortin asiakastilistäsi välittömästi.
-  </p>
   <p>
     Muissa asioissa ota yhteyttä: <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>
   </p>
