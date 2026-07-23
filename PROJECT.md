@@ -37,6 +37,84 @@ ilman että käyttäjän tarvitsee erikseen pyytää:**
 **Tämä ei ole valinnaista.** Käyttäjä on nimenomaan pyytänyt että hoidan tämän
 itsenäisesti eikä hänen tarvitse muistaa muistuttaa.
 
+### Erityisohje faktatietojen tallennukseen (kriittinen)
+
+**HETI kun käyttäjä mainitsee minkä tahansa faktatiedon** studiosta, tiimistä,
+palveluista, hinnoista, aikatauluista, tuotteista, kumppaneista tai muusta joka
+ei ole vielä PROJECT.md:ssä — **kirjaa se välittömästi tähän tiedostoon** ilman
+että pyydät vahvistusta tai kysyt käyttäjältä ensin. Parempi kirjata liikaa
+kuin menettää tieto.
+
+Miksi tämä on kriittistä: kontekstisi ei pysy istuntojen välillä. Jos et kirjaa
+tietoa heti, se katoaa myöhemmin. Käyttäjä ei tule enää muistuttamaan samasta
+asiasta toistuvasti — se on hänen aikansa hukkaan.
+
+**Esimerkkejä tiedoista joita EI saa menettää:**
+- Kaikki nimet (yrittäjä, tiimi, kumppanit, maahantuojat)
+- Kaikki tutkinnot, sertifikaatit, koulutushistoriat
+- Konkreettiset päivämäärät ja aikataulut
+- Hinnoittelupäätökset
+- Tuote- ja palveluvalinnat
+- Yhteystiedot (uusia sähköposteja, puhelinnumeroita)
+- Some- ja hakukonekanavat (mitkä ovat olemassa)
+- Perheenjäsenten ja sukulaisten mainintoja jos ne liittyvät studioon
+- Käytännön päätökset ("emme tee X", "teemme aina Y")
+
+**Prosessi kun näet uuden faktatiedon:**
+1. Kirjaa se PROJECT.md:hen heti (edes lyhyenä muistiinpanona)
+2. Lisää muutoslokiin
+3. Jatka käyttäjän varsinaiseen kysymykseen
+
+**Jos et ole varma minkä luvun alle tieto kuuluu**, luo tarvittaessa uusi
+alaotsikko tai lisää se lukuun 1 (Studio) muistiinpanona. Parempi että
+tieto on jonkin epätarkassa paikassa kuin että se ei ole tallessa lainkaan.
+
+---
+
+## 0. Tietolista — mitä on tallessa, mitä puuttuu
+
+Nopea silmäys mitkä keskeiset faktat ovat vahvistettu tässä muistiossa ja mitkä
+odottavat käyttäjän vahvistusta. Pidä ajan tasalla. Merkintä: ✅ = tallessa,
+❓ = puuttuu tai epäselvä.
+
+**Studion perustiedot**
+- ✅ Yhtiö (Guild Lounge Oy), Y-tunnus, osoite, sähköposti, puhelin
+- ✅ Yrittäjän nimi (Jaakko Sandström)
+- ❓ Yrittäjän tarkka ammatti ja koulutustausta
+- ❓ Vastuusairaanhoitajan nimi
+- ❓ Vastuusairaanhoitajan tutkinto ja koulutushistoria
+- ❓ Vastuusairaanhoitajan kokemusalueet
+- ❓ Vastuusairaanhoitajan rooli studiossa
+- ✅ Sijainti (Kotkan Ruonala)
+
+**Palvelut ja hinnoittelu**
+- ✅ Ensikäynti (200 €)
+- ✅ Mikroneulaus 3× sarja (570 €), 6× sarja (1080 €)
+- ❓ Pro XN -jatkohoidon lopullinen hinta
+- ❓ LED-hoidon lopullinen hinta
+
+**Aikataulu**
+- ✅ Alkuperäinen avaus 3.8.2026 siirretty vesivahingon takia
+- ❓ Uusi avautumispäivä (yläkerta)
+- ❓ Alakerran valmistumisen tarkempi aikataulu
+- ❓ Pro XN -koulutuksen aikataulu
+
+**Some- ja hakukonekanavat**
+- ✅ Google Business Profile (olemassa, ei ehdoteta perustamista)
+- ✅ Instagram (olemassa, ei ehdoteta perustamista)
+- ❓ Facebook (onko olemassa?)
+- ❓ TikTok (onko olemassa?)
+- ❓ YouTube (onko olemassa?)
+
+**Kumppanit ja palvelut**
+- ✅ Pro XN maahantuoja: Duallaser Aesthetic
+- ✅ Timma (ajanvaraus)
+- ✅ Supabase, Resend, Cloudflare (tekninen)
+- ❓ LED-laitteen valmistaja / maahantuoja
+- ❓ Lääkärikumppani jos on
+
+**Muut avoimet kysymykset:** [käyttäjä saa lisätä tähän]
+
 ---
 
 ## 1. Studio (perustiedot)
@@ -49,6 +127,41 @@ itsenäisesti eikä hänen tarvitse muistaa muistuttaa.
 - **Yrittäjä**: Jaakko Sandström (jaakko.sandstrom@gmail.com)
 - **Sijainti**: Kotkan Ruonala, omakotitaloalue. Studio omakotitalon alakerrassa;
   bussipysäkki tontin rajalla, ilmainen pysäköinti pihassa suoraan oven edustalla.
+
+### Tiimi
+
+Studiolla on **vastuusairaanhoitaja**, joka toimii kliinisenä ammattilaisena
+mikroneulauksen ja tulevien aknenhoitopalvelujen puolella. Sivustolla viestitään
+monikossa "terveydenhuollon ammattilaiset toteuttamana" ja "yli kahdenkymmenen
+vuoden kokemus terveydenhuoltoalalta".
+
+**[TÄYDENNETTÄVÄ käyttäjältä]** — konkreettiset tiedot vastuusairaanhoitajasta
+sivuston tiimi-sivua ja schema-merkintöjä varten:
+- Nimi
+- Tutkinto ja koulutushistoria
+- Vuosien määrä terveydenhuollossa + erityisosaamisalueet
+- Rooli studiossa (kliininen vastuu, hoitojen toteutus, jne.)
+- Sertifikaatit ja lisäkoulutukset jotka liittyvät mikroneulaukseen tai
+  ammattikosmetologiaan
+
+Nämä täydennetään kuvausajankohtaan mennessä jotta uusi tiimi-osio etusivulla
+voidaan kirjoittaa oikeilla tiedoilla.
+
+Yrittäjä Jaakko puolestaan on... **[TÄYDENNETTÄVÄ käyttäjältä]** — Jaakon oma
+tausta (ammatti, rooli studiossa, koulutustausta) on myös tarpeen tietää sivuston
+tiimi-osioon.
+
+### Some- ja hakukonekanavat (olemassa)
+
+**Google Business Profile**: perustettu. Älä ehdota perustamista.
+**Instagram-tili**: perustettu. Älä ehdota perustamista.
+**Facebook**: (jos on, käyttäjä täsmentää tarvittaessa)
+
+Kun Claude keskustelee sivustosta tai markkinoinnista, näitä ei tarvitse
+"ehdottaa perustettavaksi". Ne ovat jo käytössä. Voi kylläkin ehdottaa
+konkreettisia toimenpiteitä niiden puolella (esim. "kannattaisi lisätä
+Google Business Profileen tuoreet kuvat", "Instagramiin voisi laittaa
+avajaisviestin", jne.) jos tilanne sitä vaatii.
 
 ## 2. Nykytilanne (heinäkuu 2026)
 
@@ -162,6 +275,27 @@ Suunnitteilla — sini- ja punavalo. Tulee osaksi menetelmäpalettia myöhemmin.
 - Body-teksti font-weight 300, line-height 1.9
 - Nav/painikkeet letter-spacing 0.22em, uppercase, font-weight 400
 
+### Kirjoitustyyli (kaikki sivustolle kirjoitettava sisältö)
+
+**Vältä ajatusviivaa ( — em-dash ja – en-dash) sisällössä.** Suomen kielessä
+näitä käytetään harvoin, toisin kuin englannissa. Käytä sen sijaan:
+- **Pilkku** kun yhdistät kaksi rinnasteista lausetta
+- **Kaksoispiste** kun johdatat luetteloon tai selitykseen
+- **Puolipiste** kun yhdistät kaksi itsenäistä ajatusta
+- **Sulkeet** kun teet lisähuomion
+- **Erillinen virke** kun ajatus on itsenäinen
+
+Esim: EI *"Jälkihoito on osa hoidon onnistumista — ei kosmeettinen valinta."*
+KYLLÄ *"Jälkihoito on osa hoidon onnistumista, ei kosmeettinen valinta."*
+
+Ajatusviivan käyttö sallitaan vain teknisessä muodossa (esim. numeroalueessa
+kuten "3–6 kuukautta", "SPF 30–50" tai "päivät 1–3"). Näissä käytetään en-dashiä
+tai tavutus-viivaa vakiokäytännön mukaisesti.
+
+Sama käytäntö koskee kaikkia blogiartikkeleita, sivukuvauksia, meta-tageja,
+CTA-tekstejä ja muita asiakkaalle näkyviä tekstejä. Kun kirjoitat uutta
+sisältöä, tarkista jälkikäteen ettei tekstissä ole ajatusviivoja.
+
 ## 6. Tekninen arkkitehtuuri
 
 ### Hosting ja deployment
@@ -257,6 +391,7 @@ sivut päivittyvät automaattisesti.
 - **mita-ensikaynnilla-tapahtuu.html** — ensikäynnin kulku
 - **mita-on-kliininen-mikroneulaus.html** — perusartikkeli
 - **mita-tutkimus-sanoo-mikroneulauksesta.html** — tutkimusnäyttö
+- **mikroneulauksen-jalkihoito.html** — jälkihoito-opas 24 tunnista 30 päivään (julkaistu 16.7.2026)
 - **mikroneulaus-talvella.html** — DRAFT, noindex, julkaisu marraskuussa 2026
 
 ### Hallintasivut (2)
@@ -330,6 +465,45 @@ tiedoston yläreunassa:
 - Kirjoita 1–2 uutta blogiartikkelia (SEO-ajovaraus ennen avausta)
 - Ota yhteyttä Duallaser Aestheticiin: demopakkaus + koulutus + tilaus
 
+### Blogisisältöjono (mikroneulaus-pillarin kattavuuden täydentäminen)
+
+Analysoitu 2026-07-16: pillar-artikkeli (`mikroneulaus-opas.html`) kattaa 12
+otsikkoa, joista yksi puuttuu klusteriverkosta ("Mitä hoidon jälkeen tapahtuu").
+Suositeltu jono seuraavaksi kirjoitettavaksi tärkeysjärjestyksessä:
+
+1. ✅ **`mikroneulauksen-jalkihoito.html`** — "Mikroneulauksen jälkihoito:
+   käytännönläheinen opas 24 tunnista 30 päivään". **JULKAISTU 16.7.2026.**
+   Cross-linkit lisätty pillariin (mikroneulaus-opas.html "Mitä hoidon
+   jälkeen tapahtuu" -osioon) ja ensikäynti-artikkeliin (mita-ensikaynnilla-
+   tapahtuu.html "Jälkihoidon ohjeistus" -osion jälkeen). Artikkelin
+   sisällä linkit sarjahoitoon, ensikäyntiin, talvella-artikkeliin
+   (UV-yhteys), ja pillariin.
+
+2. **`mikroneulaus-aknearvet.html`** — "Aknearpien hoito mikroneulauksella:
+   mitä realistisesti odottaa". Strateginen silta Vaihe 2:n aknenhoitopolulle.
+   Palvelee jo saavutettua "aknen hoito kotka" -sijoitusta. Sisältörunko:
+   arpityypit (atroofinen: ice pick, boxcar, rolling; hypertrofinen; keloidi),
+   biologinen vaikutusmekanismi, realistinen tulosarvio per arpityyppi,
+   6 kk isotretinoiini-sääntö, PIH-käsittely, milloin ei kannata,
+   sarjan aikataulu ja hoitokertojen määrä arpimääriä varten. Suositeltu
+   toiseksi, mutta voi myös olla ensimmäinen jos aknehoitopolku on jo lähempänä.
+
+3. **`mikroneulaus-muut-alueet.html`** (mahdollinen) — "Kaula, dekoltee ja
+   kädet — mikroneulaus muille alueille kuin kasvoille". Vaatii vahvistuksen
+   käyttäjältä että näille alueille todella tarjotaan hoitoa. Laajentaa
+   palvelun kohderyhmää.
+
+**Muistilista jokaisen uuden blogiartikkelin luontiin:**
+- Kopioi runko olemassa olevalta blogisivulta (esim. `mita-ensikaynnilla-tapahtuu.html`
+  on hyvä pohja käytännönläheisille aiheille)
+- Päivitä title, description, OG, Twitter, JSON-LD BlogPosting +
+  BreadcrumbList, dates
+- Lisää tiedostonimi `assets/layout.js`:n `BLOG_PAGES`-objektiin
+- Lisää sitemap.xml:ään (priority 0.8)
+- Lisää blogi.html-listaukseen (uusin ensin)
+- Cross-linkit pillariin (mikroneulaus-opas.html) ja relevantteihin klustereihin
+- CTA-osio: "Aloita ensikäynnillä" -otsikolla (yhtenäistetty muille)
+
 ## 10. Käyttäjän toimintaperiaatteet
 
 - **Ei uusia työkaluja/alustoja/rakennusvaiheita.** Cloudflare Pages + GitHub +
@@ -401,7 +575,10 @@ Ei toteudu ennen kuin **kaikki** nämä täyttyvät:
 
 ### 14.2 Strateginen perusta
 
-Mikroneulaus ja aknenhoito ovat luonteeTESTAA
+Mikroneulaus ja aknenhoito ovat luonteeltaan erilaisia:
+- **Mikroneulaus** on menetelmä joka palvelee useita ihon vaivoja
+- **Aknenhoito** on vaiva jota hoidetaan usealla menetelmällä (ProXN, LED, mikroneulaus)
+
 Molemmat tarvitsevat oman pillar-rakenteensa. Mikroneulaus pysyy
 menetelmäkeskeisenä pillarina, aknenhoito tulee vaivakeskeiseksi pillariksi.
 ProXN ja LED ovat tukimenetelmiä (omat sivut, ei pillaria).
@@ -674,6 +851,77 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-07-16 (seitsemäs eräpäivä samana päivänä)
+- **Uusi kirjoitustyyliohje lisätty lukuun 5 (Brändi ja visuaalisuus)**:
+  vältetään ajatusviivaa (— ja –) suomenkielisessä sisällössä. Suomessa
+  näitä käytetään harvoin, toisin kuin englannissa. Käytä pilkkua,
+  kaksoispistettä, puolipistettä, sulkeita tai erillistä virkettä. Ajatusviivan
+  käyttö sallitaan vain teknisessä muodossa (numeroalueet kuten "3–6 kuukautta"
+  tai "SPF 30–50"). Ohje koskee kaikkia asiakkaalle näkyviä tekstejä
+  (blogit, sivukuvaukset, meta-tagit, CTA:t).
+- **Korjattu `mikroneulauksen-jalkihoito.html`**: kaikki 13 em-dashiä
+  poistettu ja korvattu pilkuilla, kaksoispisteillä tai erillisillä virkkeillä.
+  Käyttäjän erikseen mainitsema virke "Kummallakaan ei tarvitse olla iso
+  ero — pienet valinnat ratkaisevat" muotoiltu uudelleen: "Näiden kahden
+  lopputuloksen välinen ero ei aina synny suurista tekemisistä; pienet
+  päivittäiset valinnat ratkaisevat." Kaikki 19 en-dashiä (numeroalueet)
+  säilytettiin.
+
+### 2026-07-16 (kuudes eräpäivä samana päivänä)
+- **Julkaistu uusi blogiartikkeli `mikroneulauksen-jalkihoito.html`**:
+  "Mikroneulauksen jälkihoito: käytännönläheinen opas 24 tunnista 30 päivään".
+  Täyttää puuttuvan klusterikohdan pillar-artikkelin "Mitä hoidon jälkeen
+  tapahtuu" -osiolle. 10 h2-otsikkoa: miksi jälkihoito ratkaisee, ensimmäiset
+  24 h, päivät 1–3, päivät 4–7, viikot 2–4, UV-suoja koko sarjan ajan, mitä
+  välttää sarjan aikana, hälytysmerkit, kotihoidon rooli, yhteenveto-
+  tarkistuslista. Rekisteröity: sitemap.xml (priority 0.8), layout.js
+  BLOG_PAGES, blogi.html-listaus (uusin ensin). Cross-linkit lisätty
+  pillariin ja ensikäynti-artikkeliin luontaisissa kohdissa (ei väkisin).
+  Sisäiset linkit: sarjahoito (neljän viikon välit), talvella (UV-yhteys),
+  pillar-opas (kokonaiskuva).
+- Luku 7 (Sivut nykyisin) päivitetty: 15 asiakassivua (13 → 14 → 15,
+  kun 404 ja jälkihoito lisätty aiemmin ja nyt).
+
+### 2026-07-16 (viides eräpäivä samana päivänä)
+- **Blogi-analyysi tehty**: käyty läpi pillar (`mikroneulaus-opas.html`) +
+  8 klusteriartikkelia. Tunnistettu selkeästi puuttuva kluster: pillar-osio
+  "Mitä hoidon jälkeen tapahtuu" ei ole omana syväartikkelinaan. Lisätty luku 9
+  (Tulevat toimenpiteet) uusi "Blogisisältöjono" -osio jossa priorisoidut
+  ehdotukset seuraaville artikkeleille:
+  1. `mikroneulauksen-jalkihoito.html` (ensisijainen — täyttää puuttuvan
+     klusterin, ei riippuvuutta uusista palveluista)
+  2. `mikroneulaus-aknearvet.html` (strateginen silta Vaihe 2:lle,
+     palvelee jo saavutettua "aknen hoito kotka" -sijoitusta)
+  3. `mikroneulaus-muut-alueet.html` (mahdollinen — vaatii vahvistuksen
+     että kaula/dekoltee/kädet ovat palveluvalikoimassa)
+- **Korjattu PROJECT.md luvun 14.2 alusta** joka oli rikkoutunut
+  aiemmasta bash-testistä ("luonteeTESTAA" → "luonteeltaan erilaisia:").
+- **`⚠️ CLAUDELLE` -ohjeeseen lisätty erityisohje faktatietojen
+  tallennuksesta** (edellinen istunto, mutta ei ollut vielä muutoslokissa
+  erillisenä merkintänä). Käyttäjä pyysi että kaikki uudet faktatiedot
+  tallentuvat automaattisesti ilman erillistä pyyntöä. Lisätty myös uusi
+  luku 0 (Tietolista) joka näyttää yhdellä silmäyksellä mitkä keskeiset
+  faktat ovat tallessa ja mitkä puuttuvat.
+
+### 2026-07-16 (neljäs eräpäivä samana päivänä)
+- **SEO / hakutuloksen nimi**: lisätty `og:site_name`, `application-name` ja
+  uusi `WebSite` JSON-LD -schema etusivulle jotta Google näyttäisi hakutuloksessa
+  "Mahlamäen Kauneusstudio" domain-nimen sijaan. `og:site_name` lisätty myös
+  kaikille 10 muulle asiakassivulle yhtenäisyyden vuoksi. Muutos näkyy 1–4 viikossa
+  Googlen indeksointisyklin mukaan; Search Consolen kautta voi pyytää
+  uudelleenindeksoinnin nopeuttamiseen.
+- **Some- ja hakukonekanavat lisätty PROJECT.md lukuun 1**: Google Business
+  Profile ja Instagram-tili ovat jo olemassa. Ohjeistus Claudelle: ei ehdoteta
+  perustamista uudelleen (mutta konkreettisia toimenpide-ehdotuksia voi tehdä).
+- **Kuvausaika sovittu**: käyttäjä saa kuvia studiosta, itsestään ja
+  sairaanhoitajastaan.
+- **Vastuusairaanhoitaja lisätty lukuun 1 (Tiimi-alaotsikko)** implisiittisenä
+  tietona jota sivustolla jo kerrotaan ("terveydenhuollon ammattilaiset",
+  "yli 20 vuoden kokemus"). Konkreettiset tiedot merkitty [TÄYDENNETTÄVÄ]-
+  paikkamerkeillä (nimi, tutkinto, kokemusalue, rooli, sertifioinnit) ja ne
+  täydennetään ennen kuvausta jotta sivuston tiimi-osio voidaan kirjoittaa
+  oikeilla tiedoilla. Sama koskee yrittäjän (Jaakko Sandström) omaa taustaa.
+
 ### 2026-07-16 (kolmas eräpäivä samana päivänä)
 - **Sivustokatselmus tehty koko sivustolle**. Tunnistetut ongelmat korjattu:
   - **7 blogisivun CTA-otsikko** yhtenäistetty: "Varaa ensikäynti" →
@@ -733,4 +981,4 @@ muutoksia.
 
 ---
 
-**Viimeksi päivitetty**: 2026-07-16
+**Viimeksi päivitetty**: 2026-07-16 (seitsemäs eräpäivä)
