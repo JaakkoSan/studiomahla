@@ -791,10 +791,15 @@
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
-          <img class="laite-image"
-               src="assets/micropenEVO.jpg"
-               alt="MicroPen EVO mikroneulauslaite"
-               loading="lazy">
+          <picture>
+            <source srcset="assets/micropenEVO.webp" type="image/webp">
+            <img class="laite-image"
+                 src="assets/micropenEVO.jpg"
+                 alt="MicroPen EVO mikroneulauslaite"
+                 width="1200"
+                 height="1799"
+                 fetchpriority="high">
+          </picture>
         </div>
         <div class="reveal">
           <p class="label label--mid">Käyttämämme laite</p>

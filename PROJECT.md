@@ -80,11 +80,18 @@ odottavat käyttäjän vahvistusta. Pidä ajan tasalla. Merkintä: ✅ = talless
 **Studion perustiedot**
 - ✅ Yhtiö (Guild Lounge Oy), Y-tunnus, osoite, sähköposti, puhelin
 - ✅ Yrittäjän nimi (Jaakko Sandström)
-- ❓ Yrittäjän tarkka ammatti ja koulutustausta
-- ❓ Vastuusairaanhoitajan nimi
-- ❓ Vastuusairaanhoitajan tutkinto ja koulutushistoria
-- ❓ Vastuusairaanhoitajan kokemusalueet
-- ❓ Vastuusairaanhoitajan rooli studiossa
+- ✅ Yrittäjän ammatti: lähihoitaja
+- ✅ Yrittäjän kokemus: 20 vuoden kokemus kauneudenhoidon parissa,
+  pitkä kokemus erikoissairaanhoidossa kirurgisessa hoitotyössä
+  (mm. verisuonikirurgian haavanhoito)
+- ✅ Yrittäjän rooli studiossa: hoitaja
+- ✅ MicroPen EVO Certificate Course suoritettu 24.5.2026 (Revance Academy)
+- ✅ Vastuuhoitajan nimi: Petra Sahari
+- ✅ Vastuuhoitajan tutkinto: sairaanhoitaja (AMK)
+- ✅ Vastuuhoitajan kokemustausta: pitkän linjan yrittäjä sote-alalla,
+  laajaa osaamista aseptiikasta ja turvallisesta hoitotyöstä
+- ✅ Vastuuhoitajan rooli studiossa: vastuuhoitaja, ei osallistu hoitojen
+  toteutukseen
 - ✅ Sijainti (Kotkan Ruonala)
 
 **Palvelut ja hinnoittelu**
@@ -135,26 +142,45 @@ odottavat käyttäjän vahvistusta. Pidä ajan tasalla. Merkintä: ✅ = talless
 
 ### Tiimi
 
-Studiolla on **vastuusairaanhoitaja**, joka toimii kliinisenä ammattilaisena
-mikroneulauksen ja tulevien aknenhoitopalvelujen puolella. Sivustolla viestitään
-monikossa "terveydenhuollon ammattilaiset toteuttamana" ja "yli kahdenkymmenen
-vuoden kokemus terveydenhuoltoalalta".
+**Jaakko Sandström** — hoitaja
+- Lähihoitaja
+- 20 vuoden kokemus kauneudenhoidon parissa
+- Pitkä kokemus erikoissairaanhoidossa kirurgisessa hoitotyössä,
+  mm. verisuonikirurgian haavanhoidosta. Kirurgisen hoitotyön
+  kokemus ja haavanhoidon ymmärrys tukevat osaamista ihon
+  ongelmien hoidossa ja ihon uudistumisessa.
+- MicroPen EVO Certificate Course suoritettu 24.5.2026
+  (Revance Academy).
 
-**[TÄYDENNETTÄVÄ käyttäjältä]** — konkreettiset tiedot vastuusairaanhoitajasta
-sivuston tiimi-sivua ja schema-merkintöjä varten:
-- Nimi
-- Tutkinto ja koulutushistoria
-- Vuosien määrä terveydenhuollossa + erityisosaamisalueet
-- Rooli studiossa (kliininen vastuu, hoitojen toteutus, jne.)
-- Sertifikaatit ja lisäkoulutukset jotka liittyvät mikroneulaukseen tai
-  ammattikosmetologiaan
+**Petra Sahari** — vastuuhoitaja
+- Sairaanhoitaja (AMK)
+- Pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalla
+- Tuo studioon laajan osaamisen aseptiikasta ja turvallisesta
+  hoitotyöstä
+- Ei osallistu hoitojen toteutukseen. Vastuuhoitajan rooli.
 
-Nämä täydennetään kuvausajankohtaan mennessä jotta uusi tiimi-osio etusivulla
-voidaan kirjoittaa oikeilla tiedoilla.
+Sivustolla viestitään "terveydenhuollon ammattilaiset toteuttamana" ja
+"yli kahdenkymmenen vuoden kokemus". Nämä molemmat pitävät paikkansa
+Jaakon taustan pohjalta ja voidaan säilyttää.
 
-Yrittäjä Jaakko puolestaan on... **[TÄYDENNETTÄVÄ käyttäjältä]** — Jaakon oma
-tausta (ammatti, rooli studiossa, koulutustausta) on myös tarpeen tietää sivuston
-tiimi-osioon.
+### Tiimi-esittelyn valmis luonnos etusivun tiimi-osiota varten
+
+Julkaistaan vasta kuvien kanssa (viikko 30/2026). Luonnos säilytetään
+tässä siihen asti:
+
+**Jaakko Sandström, lähihoitaja**
+"Studiolla hoitajana toimii lähihoitaja Jaakko Sandström. Jaakolla on
+kahdenkymmenen vuoden kokemus kauneudenhoidon parissa. Sen rinnalla hän
+on työskennellyt pitkään erikoissairaanhoidossa kirurgisessa hoitotyössä.
+Verisuonikirurgiassa saatu haavanhoidon osaaminen antaa vahvan pohjan
+ihon ongelmien hoitoon ja ihon uudistumista tukeviin menetelmiin.
+Studiossa käytettävään MicroPen EVO -laitteeseen Jaakolla on Revance
+Academyn koulutus ja sertifikaatti."
+
+**Petra Sahari, sairaanhoitaja (AMK)**
+"Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra
+on pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalta. Hän tuo
+studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä."
 
 ### Some- ja hakukonekanavat (olemassa)
 
@@ -1151,6 +1177,44 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **MicroPen EVO -laitekuva optimoitu**: Alkuperäinen `micropenEVO.jpg`
+  oli 15,65 MB (5464×8192 px), mikä aiheutti näkyvän latausviiveen jopa
+  valokuituverkolla. Optimoitu:
+  - JPG pienennetty 1200×1799 pikseliin, laatu 82, progressive JPG,
+    optimize=True → **59,1 kB (99,6 % pienempi)**
+  - WebP-versio samasta lähteestä laatu 82, method 6 →
+    **21,6 kB (99,9 % pienempi)**
+  - `index.html` rivi 794-797: `<img>` korvattu `<picture>`-elementillä,
+    jossa WebP-lähde modernin selaimen priorisoi ja JPG toimii
+    fallbackina. Lisätty `width="1200" height="1799"` layout-hyppyjen
+    estämiseksi. Poistettu `loading="lazy"` ja lisätty
+    `fetchpriority="high"` koska laite-osio on riittävän ylhäällä
+    etusivulla.
+  - Alkuperäinen 15,65 MB tiedosto on korvattu optimoidulla; jos
+    tarvitset alkuperäisen takaisin, se on tallessa uploads-kansiossa.
+- **Yleinen ohje jatkoon**: kaikki uudet kuvat sivustolle pitää
+  optimoida ennen pushia. Käytännön säännöt: pysty- ja neliökuvat
+  1200 px lyhyestä sivusta, laakakuvat 1600 px pitkästä sivusta,
+  laatu 80-85, WebP-versio kaikkiin isoihin kuviin, `<picture>`-
+  elementti HTML:ssä.
+- **Petran taustatiedot ja Jaakon MicroPen EVO -sertifikaatti kirjattu**:
+  Petra Sahari on pitkän linjan yrittäjä sosiaali- ja
+  terveydenhuoltoalalla, tuo studioon osaamista aseptiikasta ja
+  turvallisesta hoitotyöstä. Ei osallistu hoitojen toteutukseen.
+  Jaakko on suorittanut MicroPen EVO Certificate Course -koulutuksen
+  Revance Academyssa 24.5.2026 (sertifikaatti PDF-liitteenä uploads-
+  kansiossa). Molempien esittelyluonnokset päivitetty luvun 1
+  Tiimi-osiossa odottamaan tiimi-osion lisäystä etusivulle kuvien
+  saapumisen jälkeen.
+- **Tiimin tietoja saatu käyttäjältä**: Jaakko Sandström on hoitaja
+  (lähihoitaja), jolla 20 vuoden kokemus kauneudenhoidon parissa sekä
+  pitkä tausta erikoissairaanhoidossa kirurgisessa hoitotyössä
+  (verisuonikirurgian haavanhoito). Petra Sahari on vastuuhoitaja,
+  sairaanhoitaja (AMK). Petran tarkempi koulutushistoria, kokemusvuodet
+  ja erikoistumisalueet puuttuvat vielä. Tiedot lisätty luvun 1 Tiimi-
+  osioon ja Tietolistaan. Tiimi-osio etusivulle julkaistaan vasta kuvien
+  kanssa (viikko 30/2026). Valmis tekstiluonnos Jaakon esittelystä
+  tallennettu luvun 1 tiimi-osioon odottamaan julkaisua.
 - **index.html UKK-kohta 01 päivitetty** ("Miten saavun studiolle ja
   kuinka ajoissa minun kannattaa tulla paikalle?"). Poistettu viimeinen
   lause "Tarkemmat saapumisohjeet saat varausvahvistuksen yhteydessä".
