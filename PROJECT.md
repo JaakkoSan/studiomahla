@@ -1195,6 +1195,18 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **sitemap.xml päivitetty**: `<lastmod>`-päivämäärä päivitetty
+  arvoon 2026-07-23 kaikilla sivuilla joita muokattiin tänään
+  (etusivu ja 9 muuta sivua: mikroneulaus-opas,
+  milloin-aloittaa-mikroneulaus, mita-ensikaynnilla-tapahtuu,
+  mikroneulauksen-jalkihoito, mikroneulaus-sarjahoito,
+  mikroneulaus-sopiiko-minulle, mita-tutkimus-sanoo-mikroneulauksesta,
+  mikroneularulla-vai-kliininen-mikroneulaus, mita-on-kliininen-
+  mikroneulaus). Blogi.html ja privacy.html jätetty ennalleen koska
+  niitä ei muutettu. Tiedoston yläkommentin "Päivitetty"-päivämäärä
+  myös 2026-07-23. mikroneulaus-talvella.html ei kuulu sitemapiin
+  (julkaistaan loka-marraskuussa). proxn-kasvohoito.html ei kuulu
+  sitemapiin (julkaistaan myöhemmin kuvien kanssa).
 - **index.html Open Graph -kuva ja Twitter Card lisätty**: aiemmin
   etusivulta puuttui `og:image`, `og:image:width`, `og:image:height`,
   `og:image:alt` sekä koko Twitter Card -lohko (`twitter:card`,
