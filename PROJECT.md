@@ -1195,6 +1195,17 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **Meta descriptionit lyhennetty SEO-optimaaliseen pituuteen**: 8
+  sivun meta description oli yli 165 merkkiä (Google leikkaa
+  hakutuloksissa n. 155-160 merkin jälkeen). Kaikki päivitetty
+  välille 130-162 merkkiä: mikroneularulla-vai-kliininen-mikroneulaus,
+  mikroneulauksen-jalkihoito, mikroneulaus-opas, mikroneulaus-sarjahoito,
+  mikroneulaus-talvella, milloin-aloittaa-mikroneulaus,
+  mita-tutkimus-sanoo-mikroneulauksesta, mita-on-kliininen-mikroneulaus.
+- **privacy.html Open Graph -tiedot ja Twitter Card lisätty**:
+  aiemmin puuttuivat kokonaan. Käyttää samaa `assets/og-default.jpg`-
+  kuvaa kuin muut sivut. Sisällössä tietosuojaselosteeseen sopiva
+  otsikko ja lyhyt kuvaus.
 - **sitemap.xml päivitetty**: `<lastmod>`-päivämäärä päivitetty
   arvoon 2026-07-23 kaikilla sivuilla joita muokattiin tänään
   (etusivu ja 9 muuta sivua: mikroneulaus-opas,
