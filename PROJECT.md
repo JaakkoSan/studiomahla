@@ -1195,6 +1195,13 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **index.html Open Graph -kuva ja Twitter Card lisätty**: aiemmin
+  etusivulta puuttui `og:image`, `og:image:width`, `og:image:height`,
+  `og:image:alt` sekä koko Twitter Card -lohko (`twitter:card`,
+  `twitter:title`, `twitter:description`, `twitter:image`). Tämä
+  aiheutti että etusivun linkkiä someen jakaessa ei näkynyt
+  esikatselukuvaa. Nyt käyttää samaa `assets/og-default.jpg` -kuvaa
+  kuin muut sivut. Muut sivut sisälsivät nämä metatiedot jo aiemmin.
 - **UKK 05 ja 06 yhdistetty**: kohdat "Kuinka varaan ajan?" ja
   "Miten voin maksaa hoidon?" yhdistetty yhdeksi kohdaksi "Ajanvaraus
   ja maksutavat" sekä näkyvässä UKK-osiossa että FAQPage JSON-LD
