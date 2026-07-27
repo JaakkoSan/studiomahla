@@ -1195,6 +1195,24 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **Maksutavat lisätty sivustolle**: käytössä korttimaksut (pankki-
+  ja luottokortit), Klarna ja käteinen tasarahalla. Kaksi muutosta:
+  - `index.html` UKK-osioon lisätty uusi kohta 06 "Miten voin maksaa
+    hoidon?" vastauksella.
+  - `index.html` FAQPage JSON-LD schemaan lisätty vastaava
+    Question/Answer-lohko (Google voi näyttää hakutuloksissa).
+  - `index.html` BeautySalon JSON-LD schema `paymentAccepted`-kenttä
+    päivitetty: aiempi "Credit Card, MobilePay" korvattu muodolla
+    "Credit Card, Debit Card, Klarna, Cash".
+- **Footerin aukiolojen sijoittelu tarkennettu**: aukioloajat siirretty
+  yhteystiedoista Ajanvaraus-napin viereen omalla otsikolla
+  "Aukioloajat" (11px label-tyyliä). Aukiolotekstit hieman isompana
+  kuin yhteystiedot (15px vs. 14px). Rakenne: nappi vasemmalla,
+  aukiolot oikealla (flex row) desktop-näytöllä, mobiilissa nappi
+  ylhäällä ja aukiolot alla (flex column). Muutokset layout.js:ään
+  (footer__hours-lohko footer__cta:n sisällä) ja style.css:ään
+  (uudet .footer__hours, .footer__hours-label, .footer__hours-times
+  -säännöt, .footer__cta muutettu flex-rakenteeseen).
 - **Aukioloajat lisätty sivustolle**: arkisin 14–20, viikonloppuisin
   10–20. Kaksi muutosta:
   - `layout.js` FOOTER_HTML: footer__contact-sarakkeeseen lisätty
