@@ -93,6 +93,7 @@ odottavat käyttäjän vahvistusta. Pidä ajan tasalla. Merkintä: ✅ = talless
 - ✅ Vastuuhoitajan rooli studiossa: vastuuhoitaja, ei osallistu hoitojen
   toteutukseen
 - ✅ Sijainti (Kotkan Ruonala)
+- ✅ Aukioloajat: arkisin 14–20, viikonloppuisin 10–20
 
 **Palvelut ja hinnoittelu**
 - ✅ Ensikäynti (200 €)
@@ -185,6 +186,23 @@ studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä."
 ### Some- ja hakukonekanavat (olemassa)
 
 **Google Business Profile**: perustettu. Älä ehdota perustamista.
+Päivityksiä hoidetaan Fonectan kautta.
+
+Google Business Profile -esittelyteksti (voimassa 23.7.2026 alkaen,
+n. 460 merkkiä):
+
+> Mahlamäen Kauneusstudio on kliinisen tason ihonhoitoon erikoistunut
+> studio Kotkan Ruonalassa. Toteutamme kaikki hoidot terveydenhuollon
+> ammattilaisen työnä. Erikoistumisalueitamme ovat aknen ja sen oireiden
+> hoito, ärtynyt ja herkkä iho sekä ikääntymisen merkit.
+>
+> Kliinisessä mikroneulaushoidossa käytämme FDA-hyväksyttyä ja
+> CE-merkittyä (luokka IIa) MicroPen EVO -laitetta. Hoito käynnistää
+> ihon oman kollageenin- ja elastiinintuotannon ilman vieraita aineita,
+> ja tulokset ovat pysyviä.
+
+Päivitetään kun ProXN otetaan käyttöön ja LED-valohoito syksyllä.
+
 **Instagram-tili**: perustettu. Älä ehdota perustamista.
 **Facebook**: (jos on, käyttäjä täsmentää tarvittaessa)
 
@@ -1177,6 +1195,27 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **Aukioloajat lisätty sivustolle**: arkisin 14–20, viikonloppuisin
+  10–20. Kaksi muutosta:
+  - `layout.js` FOOTER_HTML: footer__contact-sarakkeeseen lisätty
+    osoitteen alle rivit "Arkisin 14–20" ja "Viikonloppuisin 10–20".
+    Näkyy kaikilla sivuilla footerissa.
+  - `index.html` BeautySalon JSON-LD schema: lisätty
+    `openingHoursSpecification` -kenttä kahdella lohkolla (arkipäivät
+    Mon–Fri 14:00–20:00, viikonloput Sat–Sun 10:00–20:00). Tämä on
+    aiemmin poistettu kun studio oli suljettu, nyt palautettu oikeilla
+    ajoilla. Näkyy Googlen hakutuloksissa ja Business Profilessa
+    automaattisesti kun Google kaappaa schemasta.
+  - Tietolistaan luvun 0 studion perustietoihin lisätty aukioloajat.
+- **Google Business Profile -esittelyteksti kirjattu lukuun 1**:
+  n. 460 merkkiä pitkä teksti joka mainitsee studion sijainnin (Kotkan
+  Ruonala), kohderyhmät (akne ja sen oireet, ärtynyt ja herkkä iho,
+  ikääntymisen merkit), terveydenhuollon ammattilaisen taustan
+  yleisellä tasolla ja mikroneulaushoidon laitteen (MicroPen EVO,
+  FDA + CE IIa). Ei mainita erikseen sairaanhoitajaa (AMK) eikä
+  ProXN:ää tässä vaiheessa. Käyttäjä päivittää tekstin Google
+  Business Profileen Fonectan kautta. Teksti odottaa päivitystä
+  kun ProXN otetaan käyttöön ja LED-valohoito syksyllä.
 - **MicroPen EVO -laitekuva optimoitu**: Alkuperäinen `micropenEVO.jpg`
   oli 15,65 MB (5464×8192 px), mikä aiheutti näkyvän latausviiveen jopa
   valokuituverkolla. Optimoitu:
