@@ -1195,6 +1195,12 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-23
+- **UKK 05 ja 06 yhdistetty**: kohdat "Kuinka varaan ajan?" ja
+  "Miten voin maksaa hoidon?" yhdistetty yhdeksi kohdaksi "Ajanvaraus
+  ja maksutavat" sekä näkyvässä UKK-osiossa että FAQPage JSON-LD
+  schemassa. Vastaus sisältää suoran linkin ajanvaraukseen
+  (https://varaa.timma.fi/studiomahla) yläreunan Ajanvaraus-painikkeen
+  lisäksi.
 - **Maksutavat lisätty sivustolle**: käytössä korttimaksut (pankki-
   ja luottokortit), Klarna ja käteinen tasarahalla. Kaksi muutosta:
   - `index.html` UKK-osioon lisätty uusi kohta 06 "Miten voin maksaa
