@@ -68,14 +68,15 @@
           '</div>' +
           '<div class="footer__cta">' +
             '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--outline" aria-label="Varaa aika Timman kautta">Ajanvaraus</a>' +
+            '<div class="footer__hours">' +
+              '<p class="footer__hours-label">Aukioloajat</p>' +
+              '<p class="footer__hours-times">Arkisin 14&ndash;20<br>Viikonloppuisin 10&ndash;20</p>' +
+            '</div>' +
           '</div>' +
           '<div class="footer__contact">' +
             '<a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>' +
             '<a href="tel:+358503671683">050 367 1683</a><br>' +
-            'Mahlamäentie 14, 48300 Kotka<br>' +
-            '<br>' +
-            'Arkisin 14&ndash;20<br>' +
-            'Viikonloppuisin 10&ndash;20' +
+            'Mahlamäentie 14, 48300 Kotka' +
           '</div>' +
         '</div>' +
         '<div class="footer__bottom">' +
