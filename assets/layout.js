@@ -20,9 +20,9 @@
 
   var HEADER_HTML =
     '<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">' +
-      'Heinäkuun rankkasateet aiheuttivat vesivahingon studiotilaan, ja avajaisia joudutaan siirtämään remontin ajaksi. Ilmoitamme uuden avajaispäivän mahdollisimman pian — ' +
-      '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" aria-label="Liity jonotuslistalle niin saat tiedon kun studio avautuu">' +
-        'liity jonotuslistalle niin saat tiedon ensimmäisenä' +
+      'Varauskalenteri on auki. Ensimmäiset vapaat ajat ovat 5.9. alkaen, ' +
+      '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" aria-label="Varaa aika Timman kautta">' +
+        'varaa aikasi tästä' +
       '</a>.' +
     '</div>' +
     '<header class="nav" role="banner">' +
@@ -43,7 +43,7 @@
         '</a>' +
         '<nav class="nav__right" aria-label="Päänavigaatio">' +
           '<a href="blogi.html" class="nav__link">Blogi</a>' +
-          '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--small" aria-label="Liity jonotuslistalle Timmassa">Liity jonotuslistalle</a>' +
+          '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--small" aria-label="Varaa aika Timman kautta">Ajanvaraus</a>' +
         '</nav>' +
       '</div>' +
     '</header>';
@@ -67,7 +67,7 @@
             '<span class="brand__name">Mahlamäen<span>Kauneusstudio</span></span>' +
           '</div>' +
           '<div class="footer__cta">' +
-            '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--outline" aria-label="Liity jonotuslistalle Timmassa">Liity jonotuslistalle</a>' +
+            '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--outline" aria-label="Varaa aika Timman kautta">Ajanvaraus</a>' +
           '</div>' +
           '<div class="footer__contact">' +
             '<a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>' +
@@ -87,6 +87,7 @@
     'mikroneulaus-sarjahoito.html': 1,
     'mikroneulaus-sopiiko-minulle.html': 1,
     'mikroneulaus-talvella.html': 1,
+    'mikroneulauksen-jalkihoito.html': 1,
     'mikroneularulla-vai-kliininen-mikroneulaus.html': 1,
     'milloin-aloittaa-mikroneulaus.html': 1,
     'mita-ensikaynnilla-tapahtuu.html': 1,

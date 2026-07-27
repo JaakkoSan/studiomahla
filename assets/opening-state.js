@@ -2,18 +2,17 @@
 //
 // =====================================================================
 // KAKSI TILAA:
-//   1) POSTPONED (nyt) — banneri kertoo vesivahingosta,
+//   1) POSTPONED — banneri kertoo vesivahingosta tai muusta viivästyksestä,
 //      CTA-painikkeet ohjaavat Timman jonotuslistalle.
-//   2) OPEN — banneri piilotetaan, CTA-painikkeet näyttävät "Ajanvaraus"
-//      ja ohjaavat Timman normaaliin ajanvaraukseen.
+//   2) OPEN — banneri kertoo että varauskalenteri on auki (staattinen
+//      teksti tulee HEADER_HTML:stä layout.js:ssä), CTA-painikkeet
+//      näyttävät "Ajanvaraus" ja ohjaavat Timman ajanvaraukseen.
 //
-// KUN STUDIO AVAA:
-//   1. Aseta STUDIOMAHLA_POSTPONED = false
-//   2. Sulje "Jonotuslista"-palvelu Timmasta ja avaa varsinaiset palvelut
-//   3. Ilmoita jonotuslistan jäsenille (Timman kautta)
-//   4. Pushaa GitHubiin
+// KUN STUDIO SIIRTYY TÄYSIN NORMAALIIN AJOON (esim. bannerin voi poistaa):
+//   1. Voit poistaa opening-banner-lohkon layout.js HEADER_HTML:stä
+//   2. Voit poistaa tämän tiedoston kokonaan tai jättää sen paikoilleen
 // =====================================================================
-window.STUDIOMAHLA_POSTPONED = true;
+window.STUDIOMAHLA_POSTPONED = false;
 window.STUDIOMAHLA_TIMMA_URL = 'https://varaa.timma.fi/studiomahla';
 
 (function () {
@@ -23,21 +22,16 @@ window.STUDIOMAHLA_TIMMA_URL = 'https://varaa.timma.fi/studiomahla';
   var timmaUrl  = (window.STUDIOMAHLA_TIMMA_URL || '').trim();
 
   /* ----- 1) Opening banner ----- */
+  // OPEN-tilassa banneri säilyy sellaisenaan (layout.js HEADER_HTML on
+  // päivitetty vastaamaan auki-tilaa). POSTPONED-tilassa banneri
+  // korvataan vanhalla vesivahinko-viestillä.
   var banner = document.getElementById('opening-banner');
-  if (banner) {
-    if (postponed) {
-      // Synkronoi banneri kanoniseen postponed-tekstiin (idempotentti).
-      banner.innerHTML =
-        'Heinäkuun rankkasateet aiheuttivat vesivahingon studiotilaan, ja avajaisia joudutaan siirtämään remontin ajaksi. Ilmoitamme uuden avajaispäivän mahdollisimman pian — ' +
-        '<a href="' + timmaUrl + '" target="_blank" rel="noopener" aria-label="Liity jonotuslistalle niin saat tiedon kun studio avautuu">' +
-          'liity jonotuslistalle niin saat tiedon ensimmäisenä' +
-        '</a>.';
-    } else {
-      // OPEN-tila: piilota banneri
-      banner.hidden = true;
-      banner.style.display = 'none';
-      document.body.classList.add('banner-hidden');
-    }
+  if (banner && postponed) {
+    banner.innerHTML =
+      'Heinäkuun rankkasateet aiheuttivat vesivahingon studiotilaan, ja avajaisia joudutaan siirtämään remontin ajaksi. Ilmoitamme uuden avajaispäivän mahdollisimman pian, ' +
+      '<a href="' + timmaUrl + '" target="_blank" rel="noopener" aria-label="Liity jonotuslistalle niin saat tiedon kun studio avautuu">' +
+        'liity jonotuslistalle niin saat tiedon ensimmäisenä' +
+      '</a>.';
   }
 
   /* ----- 2) CTA-painikkeet (kaikki [data-cta="booking"] linkit) ----- */
