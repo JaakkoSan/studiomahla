@@ -693,6 +693,8 @@ sivut päivittyvät automaattisesti.
 - **mita-on-kliininen-mikroneulaus.html** — perusartikkeli
 - **mita-tutkimus-sanoo-mikroneulauksesta.html** — tutkimusnäyttö
 - **mikroneulauksen-jalkihoito.html** — jälkihoito-opas 24 tunnista 30 päivään (julkaistu 16.7.2026)
+- **mikroneulaus-kaula-dekoltee-kadet.html** — lisäalueet: kaula, dekoltee, kämmenselät (julkaistu 28.7.2026)
+- **proxn-kasvohoito.html** — ProXN-kasvohoito (ei vielä linkitetty navigaatiosta)
 - **mikroneulaus-talvella.html** — DRAFT, noindex, julkaisu marraskuussa 2026
 
 ### Hallintasivut (2)
@@ -733,6 +735,47 @@ tilausajankohta vielä avoinna).
 ### Erikoissivut
 - `ensikaynti.html` — ensikäynti oman sivun
 - `404.html` — oma virhesivu Cloudflare-oletuksen sijaan
+
+### Blogiartikkeli: mikroneulauksen lisäalueet — TEHTY 28.7.2026
+
+**Julkaistu tiedostona `mikroneulaus-kaula-dekoltee-kadet.html`.**
+Alla oleva suunnitelma on tallessa perusteluineen. 967 sanaa.
+
+Linkitykset toteutettu: blogi.html (kortti), sitemap.xml,
+etusivun Lisäpalvelut-osio, mikroneulaus-opas.html (kohta kenelle
+hoito sopii) ja mikroneulauksen-jalkihoito.html (UV-suojaosio).
+
+Kaksi kohtaa poistettiin käyttäjän pyynnöstä ennen julkaisua:
+
+1. Kappale jossa todettiin ettei pigmenttimuutosten häviämistä
+   luvata. Näyttö on ristiriitaista, mutta hoitoa voidaan silti
+   tarjota jos asiakas haluaa kokeilla. Asiaa ei mainita sivulla.
+2. Kappale jossa perusteltiin miksi lisäalue myydään vain
+   lisäpalveluna (asiakas jo paikalla, valmistelut tehty).
+   **Perustelu oli oikea mutta kuulosti liiketoimintaperustelulta
+   eikä asiakaslähtöiseltä.** Tämä on hyvä muistisääntö
+   jatkossakin: sisäinen kannattavuuslogiikka ei kuulu
+   asiakastekstiin, vaikka se olisi totta.
+
+**Perustelu:** näille alueille ei ole vielä yhtään sisältöä, ja
+hakusanat kuten "kaulan mikroneulaus" ja "käsien ikääntyminen"
+ovat kilpailullisesti kevyempiä kuin pääsanat. Artikkeli antaa myös
+lisäpalveluille paikan johon linkittää etusivulta ja Timmasta.
+
+**Kärki:** miksi nämä alueet jäävät hoitamatta vaikka ne
+vanhenevat näkyvästi. Kasvoja hoidetaan, kaula ja kädet unohtuvat,
+ja lopputulos on epäsuhta.
+
+**Fysiologinen ydin** (sama kuin Timman kuvauksissa, laajemmin):
+kaikilla kolmella alueella on vähemmän talirauhasia ja
+karvatuppeja kuin kasvoissa. Koska ihon pinta uusiutuu
+mikroneulauksen jälkeen osittain näistä rakenteista käsin,
+paraneminen kestää pidempään ja alueilla edetään varovaisemmin.
+**Ei väitettä pienemmästä neulasyvyydestä** (ks. luku 3
+sisältösääntö).
+
+**Ristiinlinkitykset:** pillar-artikkeli, sarjahoito, jälkihoito.
+Etusivun Lisäpalvelut-osiosta linkki tänne.
 
 ### Navigaatiorakenne (myöhemmin)
 - Etusivu
@@ -1638,11 +1681,28 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-28
+- **Uusi blogiartikkeli julkaistu:
+  `mikroneulaus-kaula-dekoltee-kadet.html`** (967 sanaa). Aiheena
+  kaula, dekoltee ja kämmenselät. Ydinperustelu: näillä alueilla on
+  vähemmän talirauhasia ja karvatuppeja, joista ihon pinta
+  uusiutuu, joten paraneminen kestää pidempään. Sanoo suoraan että
+  tutkimusnäyttö painottuu kasvoihin. Linkitetty blogi.html,
+  sitemap.xml, etusivun Lisäpalvelut-osio, mikroneulaus-opas.html
+  ja mikroneulauksen-jalkihoito.html.
+- **Termi "suojaeste" poistettu koko sivustolta.** Viisi esiintymää
+  kahdessa artikkelissa (jälkihoito, talvella) korvattu muodolla
+  "ihon oma suojakerros" luvun 5 linjauksen mukaisesti. Laajempi
+  kielentarkistus tehdään myöhemmin erikseen.
+- **Uusi kirjoitussääntö:** sisäinen kannattavuuslogiikka ei kuulu
+  asiakastekstiin vaikka se olisi totta. Poistettiin kappale joka
+  perusteli lisäpalvelumallia sillä että asiakas on jo paikalla.
 - **Mikroneulauksen lisäalueet päätetty:** kaula, dekoltee ja
   kämmenselät, 35 € per alue, vain lisäpalveluna kasvohoidon
   yhteydessä. Sama hintapiste kuin LED-lisäpalvelulla. Enintään
   20 min per alue. Sarja-alennus sama kuin hoitosarjoissa: 5 %
   kolmen ja 10 % kuuden hoidon sarjassa. Kirjattu lukuun 3.
+  **Sisältösuunnitelma:** lisäalueista tehdään oma blogiartikkeli
+  (luku 8) ja jokaisesta alueesta oma Reels (REELS-IDEAT.md luku 8b).
   **Lisätty myös etusivulle 28.7.2026:** oma Lisäpalvelut-alaryhmä
   Hoidot-osion sisällä, erotettuna ohuella viivalla. Kortit ovat
   matalampia ja ilman järjestysnumeroita, jotta 35 € lisäpalvelu ei
