@@ -7,5 +7,7 @@ Disallow: /admin.html
 Disallow: /lomake.html
 Disallow: /api/
 Disallow: /PROJECT.md
+Disallow: /META-MARKKINOINTI.md
+Disallow: /REELS-IDEAT.md
 
 Sitemap: https://www.studiomahla.fi/sitemap.xml

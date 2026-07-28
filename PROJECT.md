@@ -37,6 +37,35 @@ ilman että käyttäjän tarvitsee erikseen pyytää:**
 **Tämä ei ole valinnaista.** Käyttäjä on nimenomaan pyytänyt että hoidan tämän
 itsenäisesti eikä hänen tarvitse muistaa muistuttaa.
 
+### Erityisohje kolmannen osapuolen palveluista (kriittinen)
+
+**Ennen kuin ehdotan mitään ominaisuutta, asetusta tai toimintoa
+kolmannen osapuolen palvelussa, tarkistan ajantasaisesta
+dokumentaatiosta että se on olemassa.**
+
+Koskee kaikkia palveluita joita projektissa käytetään: Meta Business
+Suite, Instagram, Facebook, Timma, Cloudflare, Google Business
+Profile, Fonecta, Duallaser ja mikä tahansa muu.
+
+Miksi tämä on kriittistä: käyttäjä toimii ohjeideni mukaan ja etsii
+mainitsemiani kohtia käyttöliittymästä. Jos ominaisuutta ei ole,
+hänen aikansa menee hukkaan ja luottamus ohjeisiin heikkenee.
+Käyttöliittymät muuttuvat jatkuvasti, eikä koulutusdatani ole
+luotettava lähde nykytilasta.
+
+**Käytännön sääntö:**
+- Muistikuva ei riitä perusteeksi
+- "Se on tyypillisesti kohdassa X" ei riitä perusteeksi
+- Haen ajantasaisen ohjeen ja tarkistan sen ennen ehdotusta
+- Jos en löydä varmistusta, sanon sen suoraan enkä arvaa
+- Jos ehdotan silti epävarmana, merkitsen epävarmuuden selvästi
+
+**Tausta:** kirjattu 28.7.2026 sen jälkeen kun ehdotin Facebookin
+usein kysytyt kysymykset -automaatiota tarkistamatta ensin että se
+on nykyisessä käyttöliittymässä olemassa. Käyttäjä etsi sitä turhaan.
+Jälkikäteen tarkistettuna ominaisuus oli olemassa, mutta arvaus olisi
+voinut yhtä hyvin osua väärään.
+
 ### Erityisohje faktatietojen tallennukseen (kriittinen)
 
 **HETI kun käyttäjä mainitsee minkä tahansa faktatiedon** studiosta, tiimistä,
@@ -665,6 +694,62 @@ tiedoston yläreunassa:
 - Kirjoita 1–2 uutta blogiartikkelia (SEO-ajovaraus ennen avausta)
 - Ota yhteyttä Duallaser Aestheticiin: demopakkaus + koulutus + tilaus
 
+### Meta-hallinnan käyttöönotto (elokuu 2026)
+
+Päätös 2026-07-23: Meta (Facebook + Instagram) otetaan haltuun omaan
+hallintaan. Instagram-tili on jo olemassa. Facebook-tiliä ei ole
+(käyttäjä poistui Facebookista aiemmin), mutta se on teknisesti
+pakollinen: Meta Business Suite ja Instagram-yritystilin mainonta
+edellyttävät Facebook-yrityssivua, joka puolestaan edellyttää
+henkilökohtaista Facebook-tiliä omistajaksi.
+
+**Rakennettavat osat järjestyksessä:**
+1. Henkilökohtainen Facebook-tili (pelkkä hallintakerros, ei
+   henkilökohtaista käyttöä, yksityisyysasetukset lukkoon)
+2. Facebook-yrityssivu "Mahlamäen Kauneusstudio"
+3. Instagram-tilin muunto Business-tiliksi jos ei jo ole
+4. Instagram-yritystilin yhdistäminen Facebook-yrityssivuun
+5. Meta Business Suite käyttöön (kaikki hallinta yhdestä paikasta,
+   ei henkilökohtaista uutissyötettä näkyvillä)
+
+Meta Pixel on jo asennettu sivustolle, joten seurantatekniikka on
+valmis retargetointia varten.
+
+**Somestrategian perusperiaate (käyttäjän linjaus):** somea ei tehdä
+aktiivisesti. Ei vastata kommentteihin eikä yksityisviesteihin.
+Someprofiilien tarkoitus on toimia info- ja markkinointikanavana joka
+ohjaa ihmiset sivustolle ja ajanvaraukseen. Yksityiskohtainen
+suunnitelma tiedostossa `META-MARKKINOINTI.md`.
+
+### Maksettu mainonta (aloitussuunnitelma)
+
+Päätös 2026-07-23: käyttäjä on jo Googlen orgaanisten hakutulosten
+etusivulla hakusanoilla "aknenhoito Kotka", "aknearpien hoito Kotka" ja
+"mikroneulaus Kotka". Google Ads olisi näissä duplikaatti orgaaniseen
+näkyvyyteen, ei kustannustehokas. Meta-mainonta valittu ensisijaiseksi
+maksullisen mainonnan kanavaksi.
+
+**Elokuu 2026**: ammattivalokuvaus. Valokuvaaja tekee brandi-shootin
+studion tilasta, Jaakosta ja Petrasta, työskentelykuvista ja mahdollisista
+tuotekuvista. Kuvat käytetään sivustolla (tiimi-osio, muut osiot),
+Instagramissa, Facebookissa, Google Business Profilessa ja Meta-
+mainonnassa. Kertainvestointi n. 500–2000 €.
+
+**Syys-lokakuu 2026**: Meta-mainonta (Facebook + Instagram) käyttöön.
+Alustava budjetti 300–500 €/kk. Kohdennus: naiset 25–55 v, Kotka + 30 km
+säde. Retargeting sivustokävijöille (Meta Pixel on jo asennettu
+sivustolle). Instagram-tilin jatkuva syöttäminen ammattikuvilla.
+Algoritmi vaatii 2–4 viikon oppimisajan. Meta on erinomainen kauneus-
+ja ihonhoitopalveluille visuaalisen sisällön vuoksi.
+
+**Google Ads**: ei ajankohtainen tässä vaiheessa koska orgaaninen näkyvyys
+on jo etusivulla keskeisillä hakusanoilla. Voidaan harkita myöhemmin jos
+laajennetaan Kotkan ulkopuolelle tai halutaan tavoittaa uusia hakusanoja.
+
+Selvitettävä: hoitaako Fonecta Meta-mainontaa (sama toimija joka hoitaa
+Google Business Profilen), vai halutaanko itse hallinnoida Meta Business
+Managerin kautta.
+
 ### Blogisisältöjono (mikroneulaus-pillarin kattavuuden täydentäminen)
 
 Analysoitu 2026-07-16: pillar-artikkeli (`mikroneulaus-opas.html`) kattaa 12
@@ -1188,13 +1273,577 @@ Nav, footer, sitemap.xml, BeautySalon-schema päivitetään.
 
 ---
 
+## 14c. Pitkän aikavälin suunta: oma ihonhoitobrändi
+
+**Kirjattu 28.7.2026. Ei ajankohtainen. Aikajänne vuosia.**
+
+Tämä luku on tallessa siksi että suunta olisi kirjattuna kun se
+joskus tulee ajankohtaiseksi, ei siksi että sen eteen tehtäisiin
+nyt jotain. Mitään päätöksiä ei tämän perusteella tehdä.
+
+**Kaikki luvut ovat alustavia.** Hinnat, kustannukset, eräkoot ja
+katteet ovat suuntaa-antavia arvioita, eivät tarjouksia tai
+vahvistettuja tietoja. Ne tarkistetaan kokonaan sopimusvalmistajalta
+ja tavarantoimittajilta kun asia on ajankohtainen. Alla olevat
+korjaukset koskevat laskutapaa, eivät lukujen oikeellisuutta.
+
+### Mitä on päätetty
+
+**Ainoa syy laajentua valtakunnalliseksi olisi oma ihonhoitosarja.**
+Kaikki muu toiminta on ja pysyy paikallisena.
+
+**Toinen hoitola on suljettu pois.** Ei kiinnosta. Se olisi sama työ
+toisessa osoitteessa eikä skaalaudu, koska tekijän aika on pullonkaula.
+
+**Este on pääoma.** Suunnitelma on olemassa mutta vaatii sellaisen
+pääoman ettei se ole tässä vaiheessa kiinnostava.
+
+### Suunnitelma (käyttäjän kirjaamana 28.7.2026)
+
+Konsepti: asiantuntijavetoinen, kestotilauksiin perustuva
+ihonhoitobrändi, jonka ytimessä on ihon suojamuuria korjaava
+tehoseerumi.
+
+**1. Tuotevalinta**
+
+Aurinkosuoja rajattiin pois: tuotekehitys vaatii kymmenien
+tuhansien eurojen kliiniset testit ja lainsäädäntö on monimutkaista
+ja muuttuvaa. Markettimeikkivoiteiden SPF 15 perustuu usein pelkkiin
+väripigmentteihin (titaanidioksidi, sinkkioksidi) ja toteutuu vain
+epärealistisen paksulla kerroksella.
+
+Valittu tuote on tehoseerumi, koska tuotekehitysriski on matala
+mutta kate ja asiakasarvo korkeita. Kysyntäperuste: markkinan suurin
+liike on ylihoitamisesta (hapot, retinoli) vaurioituneen ihon
+rauhoittaminen. Seerumi toimii yhdessä aiemmin suunniteltujen
+hyaluronihappokapselien kanssa, ja molemmat mahtuvat samaan
+postiluukkulähetykseen yhdellä postimaksulla.
+
+**2. Formulointi**
+
+Vegaaninen, hajusteeton, vain kliinisesti tutkittuja ainesosia.
+Vastuullisuus vihreän kemian ja biofermentoinnin kautta.
+
+- Skvalaani: sokeriruo'osta biofermentoimalla
+- Glyseriini: 100 % palmuöljyvapaa (rypsi tai kookos)
+- Keramidit ja hyaluronihappo kahdella molekyylipainolla:
+  laboratoriossa biofermentoitu
+- Niasiiniamidi 5 % ja pantenoli: synteettisesti vihreän kemian
+  menetelmin
+
+**3. Talous (käyttäjän luvut)**
+
+Laskettu 3000 kappaleen minimierällä, alv 25,5 %.
+
+- Kertaluonteiset aloituskulut: koetuotanto, reseptiikka ja
+  laadunvarmistus n. 3 500 € netto (n. 4 393 € brutto). Resepti jää
+  yrityksen omaisuudeksi.
+- Yksikköhinta netto n. 4,50 € (neste, pakkaus, täyttötyö)
+- Normaalihinta 34,90 €. Asemointi The Ordinaryn premium-tason ja
+  laadukkaan apteekkikosmetiikan väliin.
+- Kestotilaushinta 25,90 € (n. −26 %). Seerumi kestää päivittäisessä
+  käytössä 2 kuukautta, eli 6 toimitusta vuodessa.
+- Muuttuvat kulut per toimitus (tuote + postimaksu) n. 11,30 €
+
+**4. Logistiikka ja pakkaus**
+
+Suunnittelun ydin on Postin pikkupaketin 30 mm maksimipaksuus ja
+kitkaton asiakaskokemus.
+
+- Pullo: litteä 30 ml PCR-kierrätyslasipullo. Varmistaa että
+  Paptic-pussiin pakattu tuote mahtuu postiluukusta eikä ohjaudu
+  noutopisteeseen.
+- Annostelija: monomateriaalipipetti (esim. 100 % PP). Asiakkaan ei
+  tarvitse opetella uutta käyttötapaa, ja koko pipetin voi laittaa
+  muovinkeräykseen ilman osien erottelua.
+- Hankinta: kotimaiset tukkurit (esim. Pack-Tukku, Tarapack), jotka
+  hankkivat eurooppalaisilta valmistajilta (Eurovetrocap, Virospack,
+  Lumson, Berlin Packaging) ja toimittavat suoraan
+  sopimusvalmistajalle (esim. Pharmia, Galena).
+
+### Toinen tuote: hyaluronihappokapselit (sisäinen hoito)
+
+Kapselit muodostavat "inside–out"-mallin toisen puolikkaan. Ne
+matkustavat samassa lähetyksessä seerumin kanssa, jolloin
+asiakkaan elinkaariarvo kasvaa ilman että toimituskulut kasvavat.
+
+**Konsepti**
+
+Yksi täsmätuote monivitamiinien ja sottaisten kollageenijauheiden
+sijaan. Seerumi lukitsee kosteuden ihon pintaan (keramidit ja
+skvalaani), kapseli sitoo vettä syvemmissä kerroksissa joihin
+ulkoinen kosmetiikka ei yllä.
+
+**Formulointi (vegaaninen)**
+
+- Hyaluronihappo (natriumhyaluronaatti): biofermentoitu, ei
+  eläinperäistä lähdettä. Päiväannos n. 100–120 mg.
+- Kapselin kuori kasviselluloosaa (HPMC), ei liivatetta.
+- Sinkki tai biotiini valinnaisena.
+
+**C-vitamiini: ei mukaan (käyttäjän kanta 28.7.2026).** C-vitamiini
+oli mukana alkuperäisessä ehdotuksessa, mutta käyttäjä ei halua
+sitä koostumukseen. Asia ratkaistaan myöhemmin.
+
+Tästä seuraa yksi asia joka on tiedostettava eikä ratkaistava nyt:
+C-vitamiini oli ainoa ainesosa jolla on hyväksytty terveysväittämä.
+Ilman sitä kapselissa ei ole yhtään ainesosaa josta saisi esittää
+ihoon liittyviä vaikutusväittämiä, koska hyaluronihapolle ei ole
+hyväksyttyä väittämää suun kautta otettuna. Sinkillä ja biotiinilla
+on omat hyväksytyt väittämänsä, joten ne ovat vaihtoehtoinen reitti
+jos väittämä halutaan säilyttää ilman C-vitamiinia. Tämä on
+markkinointikysymys, ei este tuotteelle.
+
+**Pakkaus**
+
+Litteä, uudelleensuljettava doypack-pussi muovipurkin sijaan.
+FSC-sertifioitu paperi ja kierrätettävä estekalvo sisäpinnalla.
+60 kapselia eli kahden kuukauden annos painuu kasaan ja mahtuu
+samaan Paptic-kuoreen litteän seerumipullon kanssa.
+
+**Talous (käyttäjän luvut)**
+
+- Aloituskulut: reseptiikka, vakaustestaus, ravintoarvolaskelmat ja
+  pakkausmerkintöjen lakitarkistus n. 2 500 € netto
+- Valmistus per pussi n. 3,80 € netto, 3000 kpl erä n. 11 400 €
+- Kertaostos 29,90 €, kestotilaus 22,90 € / 60 vrk
+- Postimaksu ja Paptic n. 5,65 € netto
+
+**Yhdistelmätilaus**
+
+Seerumi 25,90 € + kapselit 22,90 € = 48,80 €, yksi postimaksu.
+
+---
+
+### Tarkistettavat kohdat ennen toteutusta
+
+Nämä eivät kaada konseptia. Ne on kirjattu jotta niitä ei tarvitse
+löytää uudelleen.
+
+**1. Katelaskelmissa on alv mukana (korjattava, koskee molempia)**
+
+Kaikki katteet on laskettu vähentämällä kulut arvonlisäverollisesta
+hinnasta. Hintaan sisältyvä alv ei ole yrityksen rahaa vaan
+tilitetään valtiolle.
+
+| Kate per toimitus | Suunnitelmassa | Oikein | Yliarvio |
+|---|---|---|---|
+| Vain seerumi | 14,60 € | **9,34 €** | 56 % |
+| Vain kapselit | 13,45 € | **10,73 €** | 25 % |
+| Yhdistelmä | 34,85 € | **26,86 €** | 30 % |
+
+Vuosiarvo yhdistelmätilaajasta on **161 €**, ei yli 209 €.
+
+Verottomat hinnat: seerumi 25,90 € → 20,64 €, kapselit 22,90 € →
+20,18 €.
+
+Konsepti on yhä kannattava. Yhdistelmätilauksen 26,86 € on hyvä
+kate kulutustuotteelle, ja logiikka siitä että kapselit matkustavat
+saman postimaksun siivellä pitää edelleen paikkansa. Tilaajamäärän
+tavoite on vain noin kolmanneksen suurempi kuin suunnitelmassa.
+
+Huom: jos muuttuvat kulut onkin ilmoitettu arvonlisäverollisina,
+oikeat katteet ovat hieman korkeampia. Tarkistettava, samoin
+postimaksun arvonlisäverokohtelu.
+
+**2. Lisäravinteiden verokanta on 13,5 %, ei 14 %**
+
+Suomen alennettu verokanta laski 14 prosentista 13,5 prosenttiin
+vuodenvaihteessa 2026. Ero on pieni ja kapselien eduksi.
+
+**Tarkistettava erikseen:** sovelletaanko ravintolisiin
+elintarvikkeiden alennettua kantaa vai yleistä 25,5 prosenttia.
+Tätä ei saatu varmistettua, ja se on kapselien kateoletuksen
+kannalta ratkaiseva. Vahvistus haetaan Verohallinnolta kun asia on
+ajankohtainen.
+
+**3. Kaksi eri verokantaa samassa lähetyksessä**
+
+Yhdistelmätilaus sisältää 25,5 prosentin kosmetiikkaa ja
+alennetun kannan elintarviketta. Jos se myydään yhtenä alennettuna
+pakettihintana, hinta on jaettava osiin verotusta varten ja jaon on
+oltava perusteltavissa. Tämä on kirjanpidollinen mutkistus jota
+suunnitelmassa ei ole huomioitu. Yksinkertaisin ratkaisu on
+hinnoitella tuotteet erikseen eikä antaa pakettialennusta.
+
+**4. Terveysväittämät ratkaistava koostumuksen kanssa yhdessä**
+
+Hyaluronihapolle **ei ole hyväksyttyä terveysväittämää suun kautta
+otettuna.** Alkuperäisessä suunnitelmassa C-vitamiinin väittämän
+todettiin antavan "vahvan laillisen selkänojan ihonhoidollisiin
+markkinointiväittämiin". Se on liian pitkälle menevä tulkinta:
+väittämä koskee vain C-vitamiinia, eikä markkinointi saa antaa
+ymmärtää että hyaluronihapolla olisi vastaava vaikutus.
+
+Koska C-vitamiini on rajattu pois, kysymys siirtyy: halutaanko
+koostumukseen jokin ainesosa jolla on hyväksytty väittämä (sinkki,
+biotiini), vai markkinoidaanko tuote kokonaan ilman
+terveysväittämiä.
+
+Molemmat ovat mahdollisia. Jälkimmäinen sopii itse asiassa hyvin
+studion linjaan, jossa on johdonmukaisesti vältetty ylilupaamista.
+Ratkaistaan koostumuksen kanssa samaan aikaan.
+
+**5. Minimierät sitovat pääoman ja luovat säilyvyysriskin**
+
+| Erä | Varasto | Aloitus | Yhteensä |
+|---|---|---|---|
+| Seerumi | 13 500 € | 3 500 € | 17 000 € |
+| Kapselit | 11 400 € | 2 500 € | 13 900 € |
+| **Yhteensä** | | | **30 900 €** |
+
+Tämä on nettona ennen ensimmäistäkään myyntiä. Nyt "vaatii
+pääomaa" on numero.
+
+Takaisinmaksu yhdistelmätilaajilla: n. 1 150 toimitusta eli
+**192 tilaajavuotta.**
+
+Varaston kierto huolestuttaa enemmän kuin summa. Kumpikin erä
+riittää 500 tilaajavuodeksi. Jotta erä kuluisi kahdessa vuodessa,
+tarvittaisiin **250 jatkuvaa tilaajaa** alusta asti.
+
+Säilyvyys ja avaamisen jälkeinen käyttöaika rajaavat sitä kuinka
+kauan erää voi myydä. Selvitettävä sopimusvalmistajalta ennen
+tilausta. Vaihtoehtoina pienempi ensierä tai riittävän suuri
+ennakkomyynti ennen tuotantoa.
+
+**6. Lainsäädännölliset velvoitteet**
+
+Kosmetiikka: EU:n kosmetiikka-asetus edellyttää
+turvallisuusselvitystä, vastuuhenkilöä ja ilmoitusta
+ilmoitusportaaliin ennen markkinoille saattamista.
+
+Ravintolisät: Suomessa ravintolisistä tehdään ilmoitus
+Ruokavirastolle. Vaatimukset tarkistetaan ajantasaisesta ohjeesta
+kun asia on ajankohtainen.
+
+Sopimusvalmistaja hoitaa näistä tyypillisesti osan, mutta
+vastuunjako on sovittava kirjallisesti.
+
+**7. Postin mitat**
+
+Koko pullo- ja pussivalinta nojaa 30 mm paksuusrajaan. Postin
+ajantasaiset mitat ja hinnat tarkistetaan ennen pakkausten
+tilaamista, koska väärä oletus tekee koko logistisesta edusta
+arvottoman.
+
+### Miksi nykyinen työ tukee tätä suuntaa
+
+Nämä eivät ole perusteluja aloittaa, vaan huomio siitä ettei
+nykyinen työ mene hukkaan jos suunta joskus avautuu.
+
+**Uskottavuus.** Ihonhoitobrändin vaikein osa ei ole valmistus vaan
+uskottavuus. Blogi kerryttää sitä jatkuvasti. Artikkelit joissa on
+lähteet ja rehelliset rajaukset ovat eri lähtökohta kuin tyhjästä
+aloittavalla tuotemerkillä.
+
+**Brändijärjestelmä.** Fontit, värit, logo, äänensävy ja
+sisältögeneraattorit ovat siirrettävissä sellaisenaan.
+
+**ProXN-jälleenmyynti on markkinatutkimusta.** Myynnistä näkee mitä
+asiakkaat ostavat uudelleen, mikä hinta menee läpi ja mitkä
+ainesosat kestävät kysymykset. Tätä tietoa ei saa muuten kuin
+myymällä. Sama koskee INCI-listojen arviointia ja katelaskentaa,
+joita on jo tehty ProXN-päätöksen yhteydessä.
+
+**Studio on koeympäristö.** Hoidoissa näkee suoraan mikä toimii
+millekin ihotyypille. Se on tuotekehityksen lähtötietoa.
+
+### Miten tämä vaikuttaa nykyisiin päätöksiin
+
+**Ei mitenkään.** Mitään ei tehdä nyt toisin tämän vuoksi eikä
+tähän investoida. Ainoa käytännön seuraus on että ProXN-myynnin
+havainnot kannattaa kirjata ylös, koska ne ovat joka tapauksessa
+hyödyllisiä liiketoiminnalle.
+
+---
+
 ## 15. Muutosloki
 
 Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
-### 2026-07-23
+### 2026-07-28
+- **Uusi luku 14c: oma ihonhoitobrändi pitkän aikavälin suuntana.**
+  Ei ajankohtainen, aikajänne vuosia, este on pääoma. Toinen hoitola
+  suljettu pois. Käyttäjän suunnitelma kirjattu kokonaisuudessaan:
+  suojamuuria korjaava tehoseerumi, kestotilausmalli, formulointi,
+  talous ja logistiikka. Lisätty neljä tarkistettavaa kohtaa, joista
+  tärkein: katelaskelmissa oli alv mukana. Lisätty myös
+  hyaluronihappokapselit ja yhdistelmätilaus. Korjatut katteet per
+  toimitus: seerumi 9,34 €, kapselit 10,73 €, yhdistelmä 26,86 €
+  (suunnitelmassa 14,60 / 13,45 / 34,85). Yhdistelmätilaajan
+  vuosiarvo 161 € eikä 209 €. Pääomantarve yhteensä 30 900 €
+  nettona ennen ensimmäistä myyntiä. Muut löydökset: alennettu
+  verokanta on 13,5 % eikä 14 %, kaksi verokantaa samassa
+  lähetyksessä mutkistaa hinnoittelua, ja EFSA-väittämä kattaa vain
+  C-vitamiinin eikä hyaluronihappoa.
+- **Muut alustat arvioitu ja hylätty toistaiseksi** (Pinterest,
+  TikTok, X, LinkedIn). Ratkaiseva peruste: studio on paikallinen
+  palvelu jolla on yksi tekijä ja rajattu kapasiteetti, eikä
+  valtakunnallinen näkyvyys muutu varauksiksi. Suurin käyttämätön
+  kanava on Google-yritysprofiilin arvostelut avauksesta 5.9.
+  alkaen. Kirjattu META-MARKKINOINTI.md lukuun 12.
+- **Karuselligeneraattoriin lisätty kansidian sävykierto.** Kolme
+  taustaa (tummanvihreä, keskivihreä, kerma), koska kansidia on ainoa
+  dia joka näkyy Instagram-ruudukossa ja pelkkä vihreä teki
+  ruudukosta yksivärisen. Uusi väri pink_soft #ecd6c5, koska aiempi
+  pink_pale jäi keskivihreällä arvoon 4,41:1 eli alle WCAG-rajan.
+  Kaikki yhdistelmät nyt yli 4,5:1. Kirjattu META-MARKKINOINTI.md
+  lukuun 3.5a.
+- **Toinen Reels tuotettu: 2.1 Pistoskulma** (kynä vai rulla),
+  22,6 s, julkaisu 29.7. Ensimmäinen vaalealla kansidialla.
+- **Meta-automaattivastaukset testattu ulkopuolisella tilillä ja
+  todettu toimiviksi.** Mobiilisovelluksella luodut automaatiot eivät
+  näy Business Suiten työpöytänäkymässä, mutta ovat silti voimassa.
+  Tila varmistetaan testiviestillä, ei työpöytänäkymästä.
+- **Facebook-sivun profiilikuva päätetty pitää nykyisellään**
+  (valkoinen ympyrä, musta logo).
+- **Facebook-sivun kansikuva tehty ja valittu.** Vaihtoehto C:
+  logo, sanamerkki ja tagline tummanvihreällä pohjalla. Tekniset
+  vaatimukset ja sumeuden syyt kirjattu META-MARKKINOINTI.md
+  lukuun 2. Oikea kuvasuhde on 820 × 312 ja lähtökuvan on oltava
+  2048 pikseliä leveä, koska Facebook pienentää kaikki kuvat siihen
+  ja tarjoilee niistä pienempiä versioita.
+- **Uusi pysyvä sääntö Claudelle: kolmannen osapuolen palveluiden
+  ominaisuudet tarkistetaan ajantasaisesta dokumentaatiosta ennen
+  ehdottamista.** Koskee kaikkia palveluita (Meta, Instagram,
+  Facebook, Timma, Cloudflare, Google Business Profile, Fonecta).
+  Muistikuva tai "se on tyypillisesti kohdassa X" ei riitä
+  perusteeksi. Jos varmistusta ei löydy, se sanotaan suoraan.
+  Kirjattu lukuun 0 (pysyvät ohjeet).
+  - **Tausta**: ehdotin Facebookin usein kysytyt kysymykset
+    -automaatiota tarkistamatta että se on nykyisessä
+    käyttöliittymässä. Käyttäjä etsi sitä turhaan. Jälkikäteen
+    tarkistettuna ominaisuus oli olemassa (Business Suite →
+    Postilaatikko → Automaatiot, enintään 4 kysymystä, saatavilla
+    myös Instagram-sovelluksessa), mutta arvaus olisi voinut yhtä
+    hyvin osua väärään.
+  - **Vahvistettu samalla**: Metan automaatiotyypit ovat välitön
+    vastaus, viesti poissa, usein kysytyt kysymykset ja kommentin
+    vastaus. Ne voivat olla "Luo automaatio" -napin takana pohjina
+    eivätkä näy suoraan listana jos muokataan olemassa olevaa
+    automaatiota.
+- **Meta Pixel varmistettu toimivaksi.** Tapahtumienhallinnassa näkyy
+  tapahtumia koko heinäkuun ajan (päivittäin n. 5–50, piikki 16.7.
+  noin 52). Tietojoukko 1720418568979435 liitetty oikeaan yritykseen
+  ja sivustoksi tunnistettu www.studiomahla.fi. Sivuston puoli
+  tarkistettu koodista: `assets/meta-pixel.js` on oikein toteutettu,
+  lataa Metan skriptin ja kirjaa PageView-tapahtuman.
+  - Tapahtumienhallinnan "0 % valmis" -palkki koskee Conversions API
+    -palvelinpuolen seurantaa, joka on lisäominaisuus eikä edellytys
+    mainonnalle. Voidaan jättää huomiotta toistaiseksi.
+  - **Tehtävä ennen mainonnan alkua**: pixel kirjaa nyt vain
+    PageView'n. Mainonnan optimointia varten tarvitaan
+    konversiotapahtuma. Lähin mitattava on Ajanvaraus-napin klikkaus,
+    koska varsinainen varaus tapahtuu Timmassa jonne pixel ei ulotu.
+    Vaatii muutaman rivin lisäyksen opening-state.js-tiedostoon.
+    Tehdään ennen syys-lokakuun mainonnan käynnistystä.
+- **Facebookin CTA-napin rajoitus todettu**: "Varaa nyt" ei tue
+  Timmaa, ja Facebookin omaa varausjärjestelmää ei oteta käyttöön
+  koska se toisi päällekkäisen kalenterin. Vaihtoehto: jokin toinen
+  nappityyppi joka hyväksyy vapaan URL-osoitteen. Jos sellaista ei
+  löydy, reitti varaukseen hoituu kuvatekstien linkeillä (klikattavia
+  Facebookissa) ja sivun tiedoissa olevalla verkkosivuosoitteella.
+  Ei vaikuta Pixel-seurantaan, koska konversiotapahtuma laukeaa
+  sivuston napista. Kirjattu META-MARKKINOINTI.md lukuun 2.2.
+- **Valmiiksi todettu**: Facebookin CTA (siltä osin kuin mahdollista),
+  Instagramin yhteystietonapit ja aukioloajat molemmissa kanavissa.
+- **Julkaisutahti päätetty: kolme julkaisua viikossa.** 2 Reelsiä ja
+  1 karuselli tai kuva. Facebookiin sama sisältö samalla toiminnolla.
+  Vaiheistus: nyt–5.9. kolme viikossa (profiilin rakentaminen ennen
+  avausta), syys–lokakuu kolme viikossa (maksettu mainonta
+  käynnistyy), marraskuusta eteenpäin kaksi viikossa (ylläpito).
+  - **Perustelu päivittäistä vastaan**: Instagram ei palkitse
+    julkaisutiheydestä vaan sitoutumisesta per julkaisu. Päivittäin
+    julkaistessa sama yleisö jakautuu useammalle julkaisulle ja
+    yksittäisten suoritus heikkenee, mikä on algoritmille negatiivinen
+    signaali. Lisäksi 40 ideaa loppuisi kuudessa viikossa, ja
+    päivittäinen tahti on ristiriidassa koko strategian lähtökohdan
+    kanssa.
+  - **Missä määrällä on merkitystä**: algoritmi tarvitsee n. 10–20
+    julkaisua ymmärtääkseen tilin aihepiirin. Kolmen viikkotahdilla
+    tämä täyttyy noin kuudessa viikossa eli osuu avaukseen 5.9.
+    Avaukseen mennessä profiilissa n. 18 julkaisua.
+  - **Toteutus**: yksi tuotantosessio kuukaudessa, n. 12 julkaisua
+    kerralla ajastettuna Business Suitessa. Aikaa n. 2 h/kk.
+  - Kirjattu META-MARKKINOINTI.md lukuun 3.2.
+- **Laitekuvajulkaisu tehty ja ajastettu perjantaille 31.7.**
+  Yksittäinen kuvajulkaisu MicroPen EVO -laitteesta. Kolme varianttia
+  tehtiin (pelkkä kuva, vaalea brändipohja, tumma brändipohja),
+  käyttäjä valitsi tumman. Kuva 1080 × 1350, alkuperäinen valokuva
+  rajattuna ja brändiotsikot alareunassa. Tiedostot kansiossa
+  `outputs/julkaisut`.
+  - **Kuvateksti**: 1030 merkkiä. Kotka mainitaan heti ensimmäisessä
+    lauseessa jotta se osuu Instagramin katkaistuun näkymään. Oma
+    kappale siitä että laitteella hoidon tekee aina koulutettu
+    terveydenhuollon ammattilainen, kärkenä "lääkinnällinen laite ei
+    yksin riitä, ratkaisevaa on myös se kuka sitä käyttää".
+  - **Hashtag-linjaus muutettu**: paikalliset tunnisteet (#kotka,
+    #kymenlaakso, #ihonhoitokotka) pudotettiin. Perustelu: Instagram
+    on siirtynyt pois hashtag-pohjaisesta jakelusta, ja paikallisten
+    tunnisteiden selaajat eivät etsi ihonhoitoa. Paikallisen
+    löydettävyyden hoitavat sijaintimerkintä, kuvatekstin luonnolliset
+    sanat (Instagram indeksoi kuvatekstin) ja profiilin nimi-kenttä.
+    Jäljelle jää 3–4 aihekohtaista tunnistetta, joiden tehtävä on
+    kertoa algoritmille aihe.
+
+### 2026-07-27
+- **Ensimmäinen mittaustulos formaattivertailusta (12 h)**: Reels 206
+  näyttöä, karuselli 27. Ero 7,6-kertainen Reelsin hyväksi. Huom:
+  Instagram laskee Reelsin näytöt ja karusellin kattavuuden eri
+  tavalla, joten luvut eivät ole täysin vertailukelpoisia, mutta ero
+  on niin suuri että suunta on selvä. Selitys: uudelle tilille
+  karuselli näytetään pääosin seuraajille joita ei ole, Reels
+  työnnetään ei-seuraajille. **Alustava johtopäätös: Reels on
+  jakelukanava, karuselli syvyyssisältö. Painotus noin kolme Reelsiä
+  yhtä karusellia kohden.** Vielä seurattava profiilikäynnit,
+  ei-seuraajien osuus ja tallennukset, koska näytöt ovat pintaluku.
+  Kirjattu META-MARKKINOINTI.md lukuun 3.5b.
+- **Ensimmäinen Reels tehty ja julkaistu**: lyhennetty versio
+  karusellin aiheesta, 8 diaa, 62 sanaa, 27,4 s. Julkaistiin samana
+  päivänä kuin karuselli molempiin kanaviin. Claude suositteli
+  odottamaan muutaman päivän, mutta käyttäjä huomautti perustellusti
+  että Reels menee eri jakelupintaan (Reels-välilehti ja Explore)
+  eikä päällekkäisyyttä synny kun seuraajia ei vielä ole.
+  Toistovaroitus koskee tilejä joilla on vakiintunut seuraajakunta.
+  **Syntyi samalla vertailuasetelma**: sama aihe, sama päivä, kaksi
+  formaattia. Verrataan kattavuutta, ei-seuraajien osuutta,
+  tallennuksia ja profiilikäyntejä. Tulos ratkaisee kumpaa formaattia
+  painotetaan jatkossa. Kirjattu META-MARKKINOINTI.md lukuun 3.5b.
+- **Reels-generaattori rakennettu ja ideapankki kaivettu**:
+  - `reels.py` (outputs-kansio) muuntaa karusellidiat pystyvideoksi
+    1080 × 1920, H.264, 30 fps. Diat sommitellaan pystykehykseen ja
+    tausta täytetään dian omalla värillä. Ristihäivytykset
+    siirtymissä. Vaatii ffmpeg, joka löytyi sandboxista valmiina.
+  - **Keskeinen havainto: Reelsiä ei voi tehdä karusellista suoraan.**
+    Karusellissa lukija hallitsee tahdin, Reelsissä video hallitsee.
+    Mitattu: 165 sanan karuselli vaatisi 70 sekuntia mukavaan
+    lukemiseen. Sama aihe Reelsinä 62 sanalla mahtuu 27 sekuntiin.
+    Reels vaatii noin 60 % vähemmän tekstiä. Kestot mitoitetaan
+    kaavalla `sanoja / 2,8 + 1,2`.
+  - **Työtapa päätetty**: älä pilko artikkelia useaan Reelsiin (tuottaa
+    toistoa), vaan kaiva koko sisältövarastosta yksittäiset vahvat
+    ajatukset ja tee jokaisesta oma Reels. Kolme tai neljä diaa,
+    15–20 sekuntia.
+  - **Uusi tiedosto `REELS-IDEAT.md`**: 40 ideaa kaivettu nykyisestä
+    blogimateriaalista, luokiteltu vahvuuden mukaan (18 vahvinta,
+    18 hyvää, 4 täydentävää). Kullekin lähdeartikkeli, kestoarvio ja
+    diaehdotukset. Sisältää suositellun aloitusjärjestyksen
+    kymmenelle ensimmäiselle. Riittää 20 kuukaudeksi kahdella
+    julkaisulla kuukaudessa. Lisätty robots.txt Disallow-listalle.
+  - **Perustelu formaatin käytölle**: diaesitys-Reels on Reels-
+    formaateista heikoin, mutta saa selvästi paremman jakelun kuin
+    karuselli koska Meta työntää Reelsiä ja näyttää sen myös
+    ei-seuraajille. Marginaalikustannus n. 15 min. Ehdot: ääni
+    lisättävä sovelluksessa, pituus 15–20 s, ei jokaisesta
+    karusellista.
+  - **Ristiinjulkaisu**: sekä karusellit että Reelsit julkaistaan
+    molempiin kanaviin. Facebookin käyttäjäkunta painottuu yli
+    45-vuotiaisiin, mikä osuu ikääntymisen merkit -painopisteeseen ja
+    on maksukykyinen segmentti sarjahoidoille. Kuvateksti kannattaa
+    muokata alustakohtaisesti, koska Facebookissa linkit ovat
+    klikattavia ja Instagramissa eivät.
+- **Karusellidiojen generaattori rakennettu**: Python-skripti
+  `karuselli.py` (outputs-kansio) tuottaa 1080 × 1350 px PNG-diat
+  Instagram- ja Facebook-karuselleihin. Brändivärit suoraan
+  `style.css`-muuttujista, brändifontit (Cormorant Garamond, Jost)
+  kansiossa `outputs/fontit`. Viisi diatyyppiä: kansi, teksti, lista,
+  nosto, loppu. Uuden karusellin tekeminen on tekstin kirjoittamista
+  eikä taittamista, mikä on olennaista koska somea ei tehdä
+  aktiivisesti.
+  - **Sommittelu**: ankkuroitu kolmannesperiaate. Kaksi edeltävää
+    versiota hylättiin: kiinteä yläreunasta alkava asettelu (lyhyt
+    sisältö jätti alaosan tyhjäksi) ja tiukka pystykeskitys (teksti
+    muodosti tiiviin möykyn keskelle).
+  - **Saavutettavuus**: kaikki tekstiyhdistelmät täyttävät WCAG AA.
+    Alkuperäinen terrakotta (#c8997a) vaalealla taustalla oli vain
+    2,23:1 ja korvattiin tummemmalla sävyllä #8f5f3f (4,78:1).
+    Light-fonttileikkaus poistettiin käytöstä luettavuuden vuoksi.
+    Pienin tekstikoko 36 px eli n. 13 px puhelimen näytöllä.
+  - **Typografia-asteikko** kalibroitu brändifonteille. Cormorant
+    Garamondin x-korkeus on n. 80 % Lorasta ja Jostin n. 86 %
+    Poppinsista, joten pistekokoja kasvatettiin kun varafonteista
+    siirryttiin brändifontteihin.
+  - **Huom**: fonttien hankinta vaati käyttäjän apua. npm- ja
+    pip-rekisterit ovat estettyjä sandboxissa eikä Claude saa hakea
+    tiedostoja URL-osoitteista. Käyttäjä latasi fontit Google
+    Fontsista ja lähetti zip-pakettina.
+- **Ensimmäinen karuselli valmis ja julkaistu**: "Mitä kliininen
+  mikroneulaus oikeasti tekee iholle?" (9 diaa) artikkelista
+  `mita-on-kliininen-mikroneulaus.html`. Kuvateksti 1878 merkkiä,
+  sisältää linkit artikkeliin, sivustolle ja Timmaan. Dokumentoitu
+  META-MARKKINOINTI.md lukuun 3.5b. **Julkaistu 27.7.2026 sekä
+  Instagramiin että Facebookiin. Tämä on tilien ensimmäinen
+  julkaisu.**
+- **Meta-käyttöönotto edennyt**: henkilökohtainen Facebook-tili luotu
+  yksityisyysasetuksin, Facebook-yrityssivu luotu ja julkaistu,
+  Instagram Business -tili yhdistetty. Kuvaus molemmissa kanavissa:
+  "Kliininen mikroneulaus Kotkan Ruonalassa terveydenhuollon
+  ammattilaisten tekemänä." (82 merkkiä, Facebookin lyhyen kuvauksen
+  raja 101 merkkiä). Automaattivastaukset otettu käyttöön.
+  **Tekninen huomio: Business Suiten työpöytäversio ei tallentanut
+  automaatioasetuksia** (toggle palautui, tallennus epäonnistui
+  vaikka sivu julkaistu ja oikeudet kunnossa). Ratkaisu: automaatiot
+  tehtiin mobiilisovelluksella. Kirjattu META-MARKKINOINTI.md:hen.
+- **Brändilinjaus lukittu: yritysbrändi, ei henkilöbrändi.**
+  Markkinointi keskittyy studioon ja hoitomuotoihin, ei
+  ammattilaisiin henkilöinä. Ammattitausta mainitaan vain siinä
+  merkityksessä että studiossa työskentelee ainoastaan
+  terveydenhuollon ammattilaisia. Kasvot saavat näkyä kuvissa
+  (muotokuvat ja työskentelykuvat), mutta sisältö puhuu studiosta
+  ja menetelmistä, ei henkilöistä. Ei henkilökohtaisia tarinoita,
+  uratarinoita tai arjen jakamista. Käytetään me-muotoa, ei
+  minä-muotoa. Nimiä käytetään säästeliäästi eikä koskaan
+  otsikkotasolla. **Poikkeus: verkkosivuston tiimi-osio säilyy
+  nykyisessä muodossa** (kuvat, nimet, taustat), koska sivustolla
+  kävijä on jo aktiivisesti etsimässä tietoa ja haluaa tietää kuka
+  hoidon tekee. Lisätty META-MARKKINOINTI.md lukuun 0.5 ja
+  sisältöpilari 4 muotoiltu uudelleen ("Tiimi" → "Ammattitausta").
+- **Ennen ja jälkeen -kuvia ei käytetä lainkaan.** Tietoinen
+  brändipäätös, ei pelkkä Metan sääntöjen noudattaminen. Perustelu:
+  ennen/jälkeen-kuvia on nykyään erittäin helppo väärentää
+  (valaistus, kuvakulma, meikki, kuvankäsittely, tekoälytyökalut),
+  joten koko kuvatyypin uskottavuus on kärsinyt. Kliinisessä
+  positioinnissa on johdonmukaisempaa olla käyttämättä niitä
+  ollenkaan. Linjaus koskee sekä somea että sivustoa ja kaikkea
+  markkinointimateriaalia. Voidaan myös sanoa ääneen sisällössä
+  erottautumistekijänä.
+- **Instagram-tilin nykytila**: tyhjä tai lähes tyhjä. Ei tarvetta
+  siivota vanhaa sisältöä. Suunnitelmaan lisätty avausruudukko-osio
+  (9 ensimmäistä julkaisua muodostavat ensivaikutelman
+  profiilissa).
+- **Meta-hallinnan käyttöönotto ja somestrategia päätetty**: Meta
+  (Facebook + Instagram) otetaan omaan hallintaan elokuussa 2026.
+  Facebook-tili luodaan (käyttäjä poistui Facebookista aiemmin) koska
+  se on tekninen edellytys Meta Business Suitelle ja Instagram-
+  mainonnalle. Somestrategian perusperiaate: **somea ei tehdä
+  aktiivisesti, kommentteihin ja yksityisviesteihin ei vastata.**
+  Someprofiilien tarkoitus on toimia info- ja markkinointikanavana
+  joka ohjaa sivustolle ja ajanvaraukseen. Kirjattu lukuun 9.
+- **Laaja Meta-markkinointisuunnitelma laadittu**: uusi tiedosto
+  `META-MARKKINOINTI.md` (estetty hakukoneilta robots.txt:ssä).
+  Sisältää 13 lukua: strategian rehellinen arvio ja riskit, tekninen
+  käyttöönotto vaiheittain, profiilien optimointi (bio, nimi-kenttä,
+  kohokohdat, linkkistrategia), sisältöstrategia ja viisi
+  sisältöpilaria, batch-tuotantomalli, yksityiskohtainen
+  valokuvauslista elokuun kuvaukseen, viestintäautomaatio
+  (automaattivastaukset koska ei vastata manuaalisesti), hashtag- ja
+  löydettävyysstrategia, Metan mainossäännöt kauneusalalla
+  (ennen/jälkeen-kuvien kielto, terveysväitteet, henkilökohtaisiin
+  ominaisuuksiin viittaamisen kielto), tietosuoja ja asiakaskuvien
+  luvat, mittarit ja seuranta, maksetun mainonnan vaihe
+  kampanjatyypeittäin ja budjetteineen, toteutusaikataulu
+  elokuu–marraskuu, riskitaulukko sekä lista siitä mitä ei tehdä.
+- **robots.txt päivitetty**: `META-MARKKINOINTI.md` lisätty
+  Disallow-listalle samoin kuin PROJECT.md.
+- **Maksetun mainonnan aloitussuunnitelma lukittu**: Google Ads
+  ei tässä vaiheessa (orgaaninen näkyvyys jo Googlen etusivulla
+  hakusanoilla "aknenhoito Kotka", "aknearpien hoito Kotka",
+  "mikroneulaus Kotka"). Elokuussa 2026 ammattivalokuvaus (brandi-
+  shoot: tila, Jaakko + Petra, työskentelykuvat). Syys-lokakuussa
+  Meta-mainonta 300–500 €/kk. Kirjattu lukuun 9.
 - **Meta descriptionit lyhennetty SEO-optimaaliseen pituuteen**: 8
   sivun meta description oli yli 165 merkkiä (Google leikkaa
   hakutuloksissa n. 155-160 merkin jälkeen). Kaikki päivitetty
@@ -1359,6 +2008,7 @@ muutoksia.
   pyytää. Ei muutoksia sivustolle ilman lupaa. Voidaan ehdottaa mutta
   ei toteuttaa. Poikkeus: PROJECT.md-muutosloki päivittyy automaattisesti
   jokaisen muutoksen yhteydessä (tämä on jo lukuun 0 sovittu käytäntö).
+### 2026-07-23
 - **Uusi kirjoitusohje: Terminologia ja selkokielisyys** lisätty lukuun 5
   (kirjoitustyyli). Sisältää viisi käytäntöä: (1) termi ja sulkeissa
   selitys ensimmäisellä kerralla, (2) käänteinen kun suomennos on
@@ -1617,4 +2267,4 @@ muutoksia.
 
 ---
 
-**Viimeksi päivitetty**: 2026-07-23
+**Viimeksi päivitetty**: 2026-07-27
