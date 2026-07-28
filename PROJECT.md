@@ -288,6 +288,79 @@ päädytään, ensikäynnin hoito lasketaan sarjaan mukaan (kustannusvaikutus ne
 - 4 viikon välit hoitokerroilla (biologisesti perusteltu, ei joustava)
 - Laite: MicroPen EVO™ (FDA-hyväksytty, CE-merkitty)
 
+### Mikroneulauksen lisäalueet (päätetty 28.7.2026)
+
+Myydään **vain lisäpalveluna** kasvojen mikroneulaushoidon
+yhteydessä, ei itsenäisenä hoitona.
+
+| Alue | Hinta |
+|---|---|
+| Kaulan alue | 35 € |
+| Dekolteen alue | 35 € |
+| Kämmenselät | 35 € |
+
+**Miksi vain lisäpalveluna:** alueet hoidetaan samalla käynnillä,
+jolloin puhdistus, iho-analyysi, valmistelu ja jälkihoito-ohjeistus
+on jo tehty. Erillisenä hoitona sama alue veisi koko käynnin
+verran aikaa eikä 35 € kattaisi sitä.
+
+**Hinta on linjassa** LED-lisäpalvelun kanssa (myös 35 €), joten
+lisäpalveluilla on yksi selkeä hintapiste.
+
+**Perustelu sisällöllisesti:** kaula, dekoltee ja kädet vanhenevat
+näkyvästi ja niitä hoidetaan usein liian vähän. Ne ovat myös
+alueita joilla asiakas itse huomaa eron. Lisäalueet ovat siksi
+luonteva ehdotus kasvohoidon yhteydessä eivätkä koe lisämyynniltä.
+
+**Ajankäyttö:** enintään 20 min per alue, käytännössä vähemmän.
+
+**Sisältösääntö näiden alueiden kuvauksissa (28.7.2026).** Älä
+perustele lisäalueita väitteellä "kaulalla käytetään pienempää
+neulasyvyyttä". Se ei pidä aina paikkaansa: jos asiakkaan iho on
+herkkä, pienintä syvyyttä käytetään jo kasvoilla, jolloin kaulalla
+ei ole varaa mennä alemmas.
+
+Fysiologisesti kestävä perustelu on toinen: kaulassa, dekolteessa
+ja kämmenselissä on vähemmän talirauhasia ja karvatuppeja kuin
+kasvoissa. Mikroneulauksen jälkeen ihon pinta uusiutuu osittain
+juuri näistä rakenteista käsin, joten näillä alueilla paraneminen
+on hitaampaa. Tästä seuraa varovaisempi eteneminen, mikä on totta
+riippumatta siitä mitä syvyyttä asiakkaan kasvoilla käytetään.
+
+Sanamuoto: "alueella edetään varovaisemmin ja hoidon voimakkuus
+mitoitetaan erikseen", ei "käytetään pienempää syvyyttä".
+
+**Sarja-alennus:** lisäalueisiin sovelletaan samaa porrastusta kuin
+mikroneulaussarjoihin, eli 5 % kolmen hoidon sarjassa ja 10 %
+kuuden hoidon sarjassa.
+
+| Ostotapa | Yhteensä | Per kerta | Tuntikate 15 min | Tuntikate 20 min |
+|---|---|---|---|---|
+| Kertahoito | 35,00 € | 35,00 € | 140 €/h | 105 €/h |
+| 3 hoidon sarja | 99,75 € | 33,25 € | 133 €/h | 99,75 €/h |
+| 6 hoidon sarja | 189,00 € | 31,50 € | 126 €/h | 94,50 €/h |
+
+**Huomio minimikatteesta:** jos alue vie täydet 20 minuuttia,
+sarja-alennus painaa tuntikatteen hieman alle 100 €/h rajan. 15
+minuutissa kaikki vaihtoehdot ovat selvästi rajan yläpuolella.
+
+Tätä ei pidetä ongelmana, koska minimikate 100 €/h asetettiin
+kokonaiselle käynnille. Lisäalue ei sisällä erillistä ajanvarausta,
+iho-analyysiä, valmistelua eikä siivousväliä, vaan käyttää aikaa
+joka on jo varattu ja maksettu. Marginaalinen lisäaika ei ole
+verrattavissa itsenäiseen hoitoon.
+
+**Hoitopää: sama riittää kaikille alueille samalla käynnillä
+(vahvistettu 28.7.2026).** Tämä on koko hinnoittelun perusta.
+Lisäalueesta ei synny lainkaan muuttuvaa kustannusta, vaan
+ainoastaan ajankäyttöä. Siksi 35 € on mahdollinen hinta.
+
+Käytännön seuraus: lisäalueiden kate on lähes puhdasta katetta.
+Jokainen myyty lisäalue parantaa käynnin kannattavuutta enemmän
+kuin sen hinta suhteessa kasvohoitoon antaisi olettaa. Lisäalueet
+kannattaa siis mainita järjestelmällisesti kaikille asiakkaille,
+ei vain silloin kun asiakas itse kysyy.
+
 ### Pro XN -jatkohoidot
 - Hinta myöhemmin päätettävissä (n. 170–180 € voisi olla sopiva)
 - Voidaan myydä myös kotihoitotuotteita asiakkaille (retail-marginaali)
@@ -1565,6 +1638,23 @@ päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
 ### 2026-07-28
+- **Mikroneulauksen lisäalueet päätetty:** kaula, dekoltee ja
+  kämmenselät, 35 € per alue, vain lisäpalveluna kasvohoidon
+  yhteydessä. Sama hintapiste kuin LED-lisäpalvelulla. Enintään
+  20 min per alue. Sarja-alennus sama kuin hoitosarjoissa: 5 %
+  kolmen ja 10 % kuuden hoidon sarjassa. Kirjattu lukuun 3.
+  **Lisätty myös etusivulle 28.7.2026:** oma Lisäpalvelut-alaryhmä
+  Hoidot-osion sisällä, erotettuna ohuella viivalla. Kortit ovat
+  matalampia ja ilman järjestysnumeroita, jotta 35 € lisäpalvelu ei
+  näytä samanarvoiselta kuin 1080 € sarjahoito. Samalla:
+  osion otsikko Hoidot → Kliininen mikroneulaus, ja voide-maininta
+  siirretty korteista yhteiseen alatekstiin (oli kolmesti).
+  Lisäalueet lisätty myös BeautySalon-skeeman OfferCatalogiin.
+  **Lisätty Timmaan 28.7.2026.** Kuvaukset kirjoitettu
+  fysiologiaan perustuen (talirauhasten ja karvatuppien vähäisempi
+  määrä ja siitä seuraava hitaampi paraneminen), ei väitteellä
+  pienemmästä neulasyvyydestä. Sivuston hinnastoon ja
+  Service-skeemaan lisätään erikseen pyydettäessä.
 - **Uusi luku 14c: oma ihonhoitobrändi pitkän aikavälin suuntana.**
   Ei ajankohtainen, aikajänne vuosia, este on pääoma. Toinen hoitola
   suljettu pois. Käyttäjän suunnitelma kirjattu kokonaisuudessaan:

@@ -361,6 +361,31 @@
       color: rgba(250, 248, 244, 0.7);
       line-height: 1.85;
     }
+    /* Lisäpalvelut: oma alaryhmä Hoidot-osion sisällä */
+    .addon-head {
+      margin-top: 88px;
+      padding-top: 56px;
+      border-top: 1px solid rgba(232, 205, 184, 0.25);
+    }
+    .addon-head h3 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--white);
+      margin: 0 0 14px;
+    }
+    .addon-head p {
+      max-width: 640px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(250, 248, 244, 0.85);
+      margin: 0;
+    }
+    .cards--addon { margin-top: 36px; }
+    .card--addon { min-height: 0; padding: 32px 28px; }
+    .card--addon .card__name { font-size: 22px; }
+    .card--addon .card__desc { font-size: 14px; }
+    .card--addon .card__price { font-size: 24px; }
     .feat-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -752,7 +777,7 @@
       <div class="reveal hoidot-head">
         <div class="hoidot-head__text">
           <p class="label label--pink-pale">Palvelumme</p>
-          <h2 id="hoidot-title">Hoidot</h2>
+          <h2 id="hoidot-title">Kliininen mikroneulaus</h2>
         </div>
         <img src="assets/MicroPen-Logo-transparent.png"
              alt="MicroPen EVO -laitevalmistajan logo"
@@ -764,7 +789,6 @@
           <div class="card__num">01</div>
           <h3 class="card__name">Ensikäynti</h3>
           <p class="card__desc">Ihon yksilöllinen arviointi ja ensimmäinen kliininen mikroneulaushoito. Laaditaan yhdessä optimaalinen hoitosuunnitelma.</p>
-          <p class="card__included">Hoitohintaan sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi.</p>
           <div>
             <div class="card__price">200 €</div>
           </div>
@@ -773,7 +797,6 @@
           <div class="card__num">02</div>
           <h3 class="card__name">Sarjahoito 3 ×</h3>
           <p class="card__desc">Kolmen hoidon sarja näkyville ja pitkäkestoisille tuloksille. Sopii useimmille ihotyypeille ja tavoitteille.</p>
-          <p class="card__included">Hoitohintaan sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi.</p>
           <div>
             <div class="card__price">570 €</div>
             <div class="card__note">190 € / hoito</div>
@@ -783,7 +806,6 @@
           <div class="card__num">03</div>
           <h3 class="card__name">Sarjahoito 6 ×</h3>
           <p class="card__desc">Kuuden hoidon sarja vaativampiin tavoitteisiin ja pysyviin rakenteellisiin tuloksiin.</p>
-          <p class="card__included">Hoitohintaan sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi.</p>
           <div>
             <div class="card__price">1080 €</div>
             <div class="card__note">180 € / hoito</div>
@@ -791,7 +813,40 @@
         </article>
       </div>
       <p class="cards-note">
-        Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
+        Kaikkiin hoitohintoihin sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi. Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
+      </p>
+
+      <div class="addon-head reveal">
+        <h3>Lisäpalvelut</h3>
+        <p>
+          Kasvohoidon yhteydessä voidaan hoitaa myös muita alueita samalla käynnillä. Näissä kaikissa on vähemmän talirauhasia ja karvatuppeja kuin kasvoissa, joten ihon pinnan uusiutuminen kestää pidempään ja alueilla edetään varovaisemmin. Lisäalueet varataan aina kasvojen mikroneulaushoidon yhteydessä, eivät erillisenä hoitona.
+        </p>
+      </div>
+      <div class="cards cards--addon reveal">
+        <article class="card card--addon">
+          <h3 class="card__name">Kaulan alue</h3>
+          <p class="card__desc">Kaulan iho on ohuempaa kuin kasvojen iho ja tukikudosta on vähemmän, joten muutokset näkyvät siellä varhain.</p>
+          <div>
+            <div class="card__price">35 €</div>
+          </div>
+        </article>
+        <article class="card card--addon">
+          <h3 class="card__name">Dekolteen alue</h3>
+          <p class="card__desc">Alue jää usein paljaaksi ja saa runsaasti auringonvaloa, mikä hajottaa ihon kollageenia ja elastiinia.</p>
+          <div>
+            <div class="card__price">35 €</div>
+          </div>
+        </article>
+        <article class="card card--addon">
+          <h3 class="card__name">Kämmenselät</h3>
+          <p class="card__desc">Käden yläpuolen iho on ohutta ja sen alla on vähän rasvakudosta. Alue on jatkuvasti alttiina auringolle ja pesulle.</p>
+          <div>
+            <div class="card__price">35 €</div>
+          </div>
+        </article>
+      </div>
+      <p class="cards-note">
+        Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa.
       </p>
     </div>
   </section>
@@ -1038,6 +1093,36 @@
           "description": "Kuuden hoidon sarja neljän viikon välein. Ensikäynti sisältyy hintaan."
         },
         "price": "1080",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mikroneulaus, kaulan alue",
+          "description": "Lisäpalvelu kasvojen mikroneulaushoidon yhteydessä. Ei myydä erillisenä hoitona."
+        },
+        "price": "35",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mikroneulaus, dekolteen alue",
+          "description": "Lisäpalvelu kasvojen mikroneulaushoidon yhteydessä. Ei myydä erillisenä hoitona."
+        },
+        "price": "35",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mikroneulaus, kämmenselät",
+          "description": "Lisäpalvelu kasvojen mikroneulaushoidon yhteydessä. Ei myydä erillisenä hoitona."
+        },
+        "price": "35",
         "priceCurrency": "EUR"
       }
     ]
