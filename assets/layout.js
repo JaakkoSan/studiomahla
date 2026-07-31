@@ -77,6 +77,11 @@
             '<a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a><br>' +
             '<a href="tel:+358503671683">050 367 1683</a><br>' +
             'Mahlamäentie 14, 48300 Kotka' +
+            '<div class="footer__social">' +
+              '<a href="https://www.instagram.com/studiomahla" target="_blank" rel="me noopener">Instagram</a>' +
+              '<span aria-hidden="true">·</span>' +
+              '<a href="https://www.facebook.com/studiomahla" target="_blank" rel="me noopener">Facebook</a>' +
+            '</div>' +
           '</div>' +
         '</div>' +
         '<div class="footer__bottom">' +
