@@ -198,14 +198,37 @@ Jaakon taustan pohjalta ja voidaan säilyttää.
 Julkaistaan vasta kuvien kanssa (viikko 30/2026). Luonnos säilytetään
 tässä siihen asti:
 
-**Jaakko Sandström, lähihoitaja**
+**Jaakko Sandström, lähihoitaja** (julkaistu etusivulla 31.7.2026)
+
 "Studiolla hoitajana toimii lähihoitaja Jaakko Sandström. Jaakolla on
 kahdenkymmenen vuoden kokemus kauneudenhoidon parissa. Sen rinnalla hän
-on työskennellyt pitkään erikoissairaanhoidossa kirurgisessa hoitotyössä.
-Verisuonikirurgiassa saatu haavanhoidon osaaminen antaa vahvan pohjan
-ihon ongelmien hoitoon ja ihon uudistumista tukeviin menetelmiin.
+on työskennellyt pitkään erikoissairaanhoidossa kirurgisessa
+hoitotyössä.
+
+Kirurgisessa hoitotyössä ja erityisesti verisuonikirurgian
+haavanhoidossa työn ytimessä on rikkinäinen iho: miten se paranee, mikä
+paranemista hidastaa ja miten tulehdusriskiä hallitaan. Mikroneulaus
+perustuu samaan lähtökohtaan, sillä hoidossa ihoon tehdään hallitusti
+pieniä mikrokanavia. Kyse on tarkoituksellisesta ja tarkasti rajatusta
+ihovauriosta.
+
+Käytännössä tämä näkyy kolmessa asiassa. Aseptiikka eli hoidon puhtaus
+on rutiinia, ei erillinen työvaihe. Hoidon jälkeisen ihon
+erityispiirteet ovat ennestään tuttuja, joten jälkihoidon ohjeistus
+perustuu siihen mitä iholla todella tapahtuu. Ja koska ihon paranemisen
+vaiheet ovat tuttuja, hoidon voimakkuus ja hoitovälit mitoitetaan sen
+mukaan mitä iho kestää.
+
 Studiossa käytettävään MicroPen EVO -laitteeseen Jaakolla on Revance
 Academyn koulutus ja sertifikaatti."
+
+**Miksi tämä muotoilu:** kirurgisen hoitotyön tausta ei ole pelkkä
+ansioluettelon rivi vaan suoraan tähän hoitomuotoon liittyvä osaaminen.
+Yhteys tehdään näkyväksi: mikroneulaus tuottaa tarkoituksellisen
+ihovaurion, ja juuri sen hoitaminen on kirurgisen hoitotyön ydinosaamista.
+Kolme konkreettista seurausta (aseptiikka, hoidon jälkeisen ihon
+tuntemus, paranemisen vaiheiden ymmärrys) tekevät väitteestä
+tarkistettavan sen sijaan että se jäisi yleiseksi kehuksi.
 
 **Petra Sahari, sairaanhoitaja (AMK)**
 "Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra
@@ -1733,16 +1756,52 @@ Seuraukset sisältöön:
 
 ### 16.3 Kapasiteetti ja hinnoittelu
 
-**Tavoite on myydä ei-oota, ei jäädä turvalliseen 80 prosentin
-varausasteeseen.** Ylikysyntä on hinnoitteluvoimaa. Sisällön
-tehtävä ei siis ole vain täyttää kalenteria vaan luoda niin paljon
-kysyntää että hintaa voi nostaa.
+**Tavoite on myydä ei-oota.** Ylikysyntä on hinnoitteluvoimaa.
+Sisällön tehtävä ei ole vain täyttää kalenteria vaan luoda niin
+paljon kysyntää että hintaa voi nostaa.
 
 Tämä vahvistaa saman johtopäätöksen toista kautta: **erottautuminen
 on tärkeämpää kuin volyymi.** Sisältö joka saa ihmisen ajamaan
 tunnin on arvokkaampaa kuin sisältö joka kerää kävijöitä.
 
 Kalenterin täyttymistä ei mietitä ennen kuin hoitoja on tehty.
+
+**Kysyntä ja kalenterin täyttöaste ovat eri asioita.** Kysynnän
+kannattaa ylittää kapasiteetti. Siitä ei kuitenkaan seuraa että
+kalenterissa pitäisi olla tyhjiä ruutuja.
+
+**Claude ehdotti ensin 80–85 prosentin täyttöastetta. Se oli väärä
+lähtökohta.** Perustelu nojasi siihen että sarjahoitoasiakas voisi
+jäädä ilman paikkaa neljän viikon kohdalla. Näin ei käy, koska
+**sarjahoidon kaikki ajat varataan kalenteriin jo ensimmäisellä
+käynnillä.** Kapasiteetti on siis sidottu etukäteen.
+
+**Korjattu linjaus: pelivara kuuluu kahteen paikkaan, ei tyhjiin
+ruutuihin.**
+
+**1. Hoitoajan pituuteen.** Kun Timman aikaikkuna on hoitoa
+pidempi, puskuri on rakenteessa: puhdistus, hoitopään vaihto,
+kirjaukset ja mahdollinen ylivuoto mahtuvat siihen. Silloin sadan
+prosentin täyttöaste on kunnossa, koska jokainen varattu ruutu
+sisältää jo väljyyden. Tämä on parempi kuin tyhjä ruutu, koska
+tyhjä ruutu on tulonmenetys ja väljä aikaikkuna ei ole.
+
+**2. Siihen montako tuntia avataan varattavaksi.** Aukiolo on 50
+tuntia viikossa (arkisin 14–20, viikonloppuisin 10–20). Kysymys ei
+ole siitä täyttyykö avattu aika vaan siitä avataanko kaikki 50
+tuntia. Sisällöntuotanto, tilaukset ja kirjanpito tapahtuvat
+jossain.
+
+**Yksi asia joka jää seurattavaksi: ensikäyntien kapasiteetti.**
+Sarja-asiakkaat varaavat itsensä eteenpäin, uudet asiakkaat eivät.
+Jos kalenteri täyttyy kokonaan sarjoista, ensikäynneille ei jää
+paikkoja. Ensikäynti on sekä kallein yksittäinen hoito (200 €) että
+koko suppilon suu, josta sarjat syntyvät.
+
+Kannattaa harkita tiettyjen aikojen pitämistä varattuna
+ensikäynneille. Se ei ole tyhjää pelivaraa vaan kohdennettua
+kapasiteettia. Päätös tehdään vasta kun nähdään miten kalenteri
+oikeasti täyttyy.
 
 ### 16.4 Kuinka monta artikkelia
 
@@ -1863,6 +1922,49 @@ muutoksia.
   sitemap.xml, muut artikkelit koskemattomia) käyttäjän hyväksyntää odottaen.
 
 ### 2026-07-31
+- **Tiimiosio julkaistu etusivulle**, filosofia-osion jälkeen ennen
+  menetelmäosiota. **Otsikko on "Tiimi"**, ei pikkuotsikkoa.
+  **Vain Jaakon kuva ja esittely.** Kuva kelluu vasemmalla ja
+  teksti kiertää sen, kuten hyväksytyssä mockupissa. Mobiilissa
+  kuva on tekstin yläpuolella.
+  **Petra mainitaan erillisenä kappaleena osion alaosassa**
+  ohuen viivan alla: vastuuhoitaja, sairaanhoitaja (AMK),
+  aseptiikan ja turvallisen hoitotyön osaaminen.
+- **Jaakon esittelyä laajennettu kliinisen osaamisen osalta.**
+  Kirurgisen hoitotyön tausta oli aiemmin yksi lause eikä siitä
+  käynyt ilmi miksi se on tässä hoitomuodossa merkityksellinen.
+  Nyt yhteys tehdään näkyväksi: mikroneulaus tuottaa
+  tarkoituksellisen ja tarkasti rajatun ihovaurion, ja juuri sen
+  hoitaminen on kirurgisen hoitotyön ydinosaamista. Kolme
+  konkreettista seurausta kirjattu: aseptiikka rutiinina, hoidon
+  jälkeisen ihon erityispiirteiden tuntemus ja paranemisen
+  vaiheiden ymmärrys hoitovälien mitoituksessa. Sama teksti
+  päivitetty myös lukuun 1.
+- **Uusi kirjoitussääntö: ei kerrota mitä ei tapahdu.**
+  Claude kirjoitti Petran esittelyyn lauseen "Hän ei osallistu
+  hoitojen toteutukseen". Käyttäjä poisti sen: on turhaa kertoa
+  mitä ei tapahdu. Sama koskee muutakin sisältöä. Kerrotaan mitä
+  tehdään ja mitä osataan, ei sitä mitä jätetään tekemättä, ellei
+  asia ole asiakkaan turvallisuuden kannalta olennainen (esim.
+  vasta-aiheet).
+- **Valokuva: värillinen, ei mustavalko.** Perustelu: tummansininen
+  työasu on värikuvassa tunnistettavasti työasu ja tukee viestiä
+  koulutetusta terveydenhuollon ammattilaisesta. Mustavalkoisena se
+  on vain musta paita. Lisäksi sivustolla ei ole muuta
+  mustavalkoista.
+  Kuva optimoitu kuten laitekuva: 900 × 1200, JPG 67 kt ja WebP
+  27 kt, `<picture>`-elementti ja lazy loading. EXIF-kierto
+  korjattu, alkuperäinen oli 2448 × 3264.
+- **Kapasiteettilinjaus korjattu (luku 16.3).** Claude ehdotti
+  80–85 prosentin täyttöastetta perustellen sillä että
+  sarjahoitoasiakas voisi jäädä ilman paikkaa. **Perustelu oli
+  virheellinen: sarjahoidon kaikki ajat varataan kalenteriin jo
+  ensimmäisellä käynnillä**, joten kapasiteetti on sidottu
+  etukäteen. Korjattu linjaus: pelivara kuuluu hoitoajan pituuteen
+  ja siihen montako tuntia avataan varattavaksi, ei tyhjiin
+  ruutuihin. Tyhjä ruutu on tulonmenetys, väljä aikaikkuna ei ole.
+  Jäljelle jäävä seurattava asia on ensikäyntien kapasiteetti:
+  sarja-asiakkaat varaavat itsensä eteenpäin, uudet eivät.
 - **FACEBOOK-SIVU SAATIIN PALAUTETTUA ENNALLAAN.** Kaikki säilyi:
   Erikoisalat, kansikuva, profiilikuva, automaattivastaukset,
   Instagram-liitos ja toimintanappi. Uudelleenrakennusta ei

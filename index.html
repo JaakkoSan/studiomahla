@@ -293,6 +293,54 @@
         margin-bottom: 6px;
       }
     }
+    /* Tiimi: kuva vasemmalle, teksti kiertää sen ympäri ja jatkuu alta */
+    .tiimi { margin-top: 40px; max-width: 900px; }
+    .tiimi::after { content: ""; display: block; clear: both; }
+    .tiimi__kuva {
+      float: left;
+      width: 280px;
+      height: auto;
+      margin: 6px 36px 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+    .tiimi__nimi {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      font-weight: 400;
+      margin: 0 0 4px;
+      color: var(--text-dark);
+    }
+    .tiimi__rooli {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin: 0 0 22px;
+    }
+    .tiimi p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0 0 18px;
+    }
+    .tiimi__vastuuhoitaja {
+      max-width: 900px;
+      margin: 40px 0 0;
+      padding-top: 28px;
+      border-top: 1px solid rgba(42, 56, 48, 0.14);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-mid);
+    }
+    @media (max-width: 640px) {
+      .tiimi__kuva {
+        float: none;
+        width: 200px;
+        margin: 0 0 24px 0;
+      }
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -630,6 +678,40 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <!-- 2b. TIIMI -->
+  <section class="section section--white" aria-labelledby="tiimi-title">
+    <div class="section__inner">
+      <h2 id="tiimi-title" class="reveal">Tiimi</h2>
+      <div class="tiimi reveal">
+        <picture>
+          <source srcset="assets/jaakko.webp" type="image/webp">
+          <img class="tiimi__kuva"
+               src="assets/jaakko.jpg"
+               alt="Jaakko Sandström, lähihoitaja"
+               width="900"
+               height="1200"
+               loading="lazy">
+        </picture>
+        <h3 class="tiimi__nimi">Jaakko Sandström</h3>
+        <p class="tiimi__rooli">Lähihoitaja</p>
+        <p>
+          Studiolla hoitajana toimii lähihoitaja Jaakko Sandström. Jaakolla on kahdenkymmenen vuoden kokemus kauneudenhoidon parissa. Sen rinnalla hän on työskennellyt pitkään erikoissairaanhoidossa kirurgisessa hoitotyössä.
+        </p>
+        <p>
+          Kirurgisessa hoitotyössä ja erityisesti verisuonikirurgian haavanhoidossa työn ytimessä on rikkinäinen iho: miten se paranee, mikä paranemista hidastaa ja miten tulehdusriskiä hallitaan. Mikroneulaus perustuu samaan lähtökohtaan, sillä hoidossa ihoon tehdään hallitusti pieniä mikrokanavia. Kyse on tarkoituksellisesta ja tarkasti rajatusta ihovauriosta.
+        </p>
+        <p>
+          Käytännössä tämä näkyy kolmessa asiassa. Aseptiikka eli hoidon puhtaus on rutiinia, ei erillinen työvaihe. Hoidon jälkeisen ihon erityispiirteet ovat ennestään tuttuja, joten jälkihoidon ohjeistus perustuu siihen mitä iholla todella tapahtuu. Ja koska ihon paranemisen vaiheet ovat tuttuja, hoidon voimakkuus ja hoitovälit mitoitetaan sen mukaan mitä iho kestää.
+        </p>
+        <p>
+          Studiossa käytettävään MicroPen EVO -laitteeseen Jaakolla on Revance Academyn koulutus ja sertifikaatti.
+        </p>
+      </div>
+      <p class="tiimi__vastuuhoitaja reveal">
+        Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra on pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalta ja tuo studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä.
+      </p>
     </div>
   </section>
   <!-- 3. MIKRONEULAUS – MENETELMÄ -->
