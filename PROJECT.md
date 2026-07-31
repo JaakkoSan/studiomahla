@@ -1930,7 +1930,32 @@ muutoksia.
   **Petra mainitaan erillisenä kappaleena osion alaosassa**
   ohuen viivan alla: vastuuhoitaja, sairaanhoitaja (AMK),
   aseptiikan ja turvallisen hoitotyön osaaminen.
-- **Uusi väri `--pink-deep: #895b3c` tekstilinkeille vaalealla
+- **MicroPen EVO -logosta tehty tumma versio:
+  `assets/MicroPen-Logo-dark.png`.** Alkuperäinen logo on vaaleaa
+  viivaa läpinäkyvällä ja tehty tummalle taustalle. Hinnasto-osion
+  vaihduttua vaaleaksi se hävisi taustaan.
+
+  Ensimmäinen korjaus oli CSS-suodatin, koska kuvatiedostoa ei
+  ollut paikallisesti. Kun käyttäjä lisäsi tiedoston, tehtiin
+  kunnollinen versio ja suodatin poistettiin.
+
+  **Muunnos:** pikselin kirkkaus kertoo musteen peittävyyden, joten
+  se siirrettiin alfakanavaan ja väriksi asetettiin `--text-dark`.
+  Näin viivan pehmennykset säilyvät eikä logo litisty. Tiedostokoko
+  putosi 108 kt:sta 46 kt:hen.
+
+  Alkuperäinen vaalea versio jätettiin kansioon, koska sitä
+  tarvitaan jos osio joskus palaa tummaksi.
+- **RATKENNUT: työkansio täsmää nyt palvelimen kanssa.**
+  Paikallisesta kansiosta puuttui kolme tiedostoa jotka olivat
+  palvelimella. Käyttäjä lisäsi ne 31.7.
+
+  Faviconit menivät ensin `assets/`-kansioon, mutta HTML viittaa
+  niihin juuresta (`/favicon.ico`). Siirretty juureen, jolloin
+  paikallinen rakenne vastaa palvelinta. **Kaikki yhdeksän
+  viitattua tiedostoa löytyvät nyt paikallisesti.**
+
+  Työkansiossa 112 tiedostoa, 7,8 Mt.
   taustalla.** Käyttäjä huomasi että etusivun linkki näytti
   liian vaalealta. Välitön syy oli taustojen vuorottelu: linkissä
   oli kiinteä `--pink-pale`, joka on tarkoitettu tummalle
