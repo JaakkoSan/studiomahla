@@ -170,10 +170,10 @@
     }
     .challenge {
       padding-left: 22px;
-      border-left: 1px solid var(--pink-pale);
+      border-left: 1px solid var(--pink);
     }
     .challenge__title {
-      color: var(--pink-pale);
+      color: var(--text-dark);
       font-family: var(--font-serif);
       font-size: 22px;
       font-weight: 400;
@@ -183,7 +183,7 @@
     .challenge__desc {
       font-size: 15px;
       line-height: 1.85;
-      color: rgba(250, 248, 244, 1);
+      color: var(--text-mid);
       margin: 0;
     }
     /* COMPARE TABLE — clinical microneedling vs. roller */
@@ -309,7 +309,7 @@
       font-size: 30px;
       font-weight: 400;
       margin: 0 0 4px;
-      color: var(--text-dark);
+      color: var(--white);
     }
     .tiimi__rooli {
       font-family: var(--font-sans);
@@ -317,21 +317,23 @@
       font-weight: 400;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--text-mid);
+      color: var(--pink-pale);
       margin: 0 0 22px;
     }
     .tiimi p {
       font-size: 16px;
       line-height: 1.9;
       margin: 0 0 18px;
+      color: rgba(250, 248, 244, 1);
     }
     .tiimi__vastuuhoitaja {
       max-width: 900px;
       margin: 40px 0 0;
       padding-top: 28px;
-      border-top: 1px solid rgba(42, 56, 48, 0.14);
+      border-top: 1px solid rgba(250, 248, 244, 0.22);
       font-size: 16px;
       line-height: 1.9;
+      color: rgba(250, 248, 244, 1);
     }
     @media (max-width: 640px) {
       .tiimi__kuva {
@@ -340,6 +342,15 @@
         margin: 0 0 24px 0;
       }
     }
+    /* Tummalle taustalle siirtyneet komponentit (taustojen vuorottelu 31.7.2026) */
+    .section--dark .compare-table td { color: rgba(250, 248, 244, 1); border-bottom-color: rgba(250, 248, 244, 0.16); }
+    .section--dark .compare-table th { color: var(--pink-pale); border-bottom-color: rgba(250, 248, 244, 0.28); }
+    .section--dark .compare-text { color: rgba(250, 248, 244, 1); }
+    .section--dark .feat-card { background: var(--green-mid); border-left-color: var(--pink-pale); }
+    .section--dark .feat-card h3 { color: var(--white); }
+    .section--dark .feat-card p { color: rgba(250, 248, 244, 1); }
+    .section--dark .care-list li { color: rgba(250, 248, 244, 1); border-bottom-color: rgba(250, 248, 244, 0.16); }
+    .section--dark .intro-text { color: rgba(250, 248, 244, 1); }
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -405,27 +416,27 @@
       margin: 28px auto 0;
       text-align: center;
       font-size: 14px;
-      color: rgba(250, 248, 244, 0.7);
+      color: var(--text-mid);
       line-height: 1.85;
     }
     /* Lisäpalvelut: oma alaryhmä Hoidot-osion sisällä */
     .addon-head {
       margin-top: 88px;
       padding-top: 56px;
-      border-top: 1px solid rgba(232, 205, 184, 0.25);
+      border-top: 1px solid rgba(42, 56, 48, 0.14);
     }
     .addon-head h3 {
       font-family: var(--font-serif);
       font-size: 32px;
       font-weight: 400;
-      color: var(--white);
+      color: var(--text-dark);
       margin: 0 0 14px;
     }
     .addon-head p {
       max-width: 640px;
       font-size: 15px;
       line-height: 1.85;
-      color: rgba(250, 248, 244, 0.85);
+      color: var(--text-mid);
       margin: 0;
     }
     .cards--addon { margin-top: 36px; }
@@ -680,7 +691,7 @@
     </div>
   </section>
   <!-- 2b. TIIMI -->
-  <section class="section section--white" aria-labelledby="tiimi-title">
+  <section class="section section--dark" aria-labelledby="tiimi-title">
     <div class="section__inner">
       <h2 id="tiimi-title" class="reveal">Tiimi</h2>
       <div class="tiimi reveal">
@@ -714,11 +725,11 @@
     </div>
   </section>
   <!-- 3. MIKRONEULAUS – MENETELMÄ -->
-  <section class="section section--dark" aria-labelledby="menetelma-title">
+  <section class="section section--cream" aria-labelledby="menetelma-title">
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
-          <p class="label label--pink-pale">Menetelmä</p>
+          <p class="label label--mid">Menetelmä</p>
           <h2 id="menetelma-title">Mikroneulaus on ihon luonnollinen uudistumisprosessi</h2>
           <p class="lead">
             Mikroneulaus on yksi tehokkaimmista ja tutkituimmista tavoista parantaa ihon kuntoa. Vaikka toimenpiteen nimi saattaa kuulostaa tekniseltä, kyse on pohjimmiltaan ihon oman biologisen korjausmekanismin älykkäästä hyödyntämisestä.
@@ -732,7 +743,7 @@
           </p>
           <h3 style="margin-top:36px">Miksi valita kliininen mikroneulaus</h3>
           <p>
-            Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä – iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html" style="color:var(--pink-pale);text-decoration:underline;text-underline-offset:3px;">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
+            Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä – iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
           </p>
         </div>
         <div class="reveal">
@@ -763,10 +774,10 @@
     </div>
   </section>
   <!-- 4. KENELLE HOITO EI SOVI -->
-  <section class="section section--cream-warm" aria-labelledby="kontraindikaatiot-title">
+  <section class="section section--dark" aria-labelledby="kontraindikaatiot-title">
     <div class="section__inner">
       <div class="reveal" style="max-width: 780px;">
-        <p class="label label--mid">Turvallisuus</p>
+        <p class="label label--pink-pale">Turvallisuus</p>
         <h2 id="kontraindikaatiot-title">Kenelle mikroneulaus ei sovi</h2>
         <p class="intro-text">
           Kliininen mikroneulaus on turvallinen hoito suurimmalle osalle aikuisista. Turvallisuutesi vuoksi hoito ei sovi seuraavissa tilanteissa:
@@ -853,11 +864,11 @@
     </div>
   </section>
   <!-- 6. HOIDOT JA HINNAT -->
-  <section class="section section--dark" aria-labelledby="hoidot-title">
+  <section class="section section--cream-warm" aria-labelledby="hoidot-title">
     <div class="section__inner">
       <div class="reveal hoidot-head">
         <div class="hoidot-head__text">
-          <p class="label label--pink-pale">Palvelumme</p>
+          <p class="label label--mid">Palvelumme</p>
           <h2 id="hoidot-title">Kliininen mikroneulaus</h2>
         </div>
         <img src="assets/MicroPen-Logo-transparent.png"
@@ -894,7 +905,7 @@
         </article>
       </div>
       <p class="cards-note">
-        Kaikkiin hoitohintoihin sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi. Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
+        Kaikkiin hoitohintoihin sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi. Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
       </p>
 
       <div class="addon-head reveal">
@@ -927,12 +938,12 @@
         </article>
       </div>
       <p class="cards-note">
-        Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa. <a href="mikroneulaus-kaula-dekoltee-kadet.html" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin näiden alueiden ihosta ja siitä miksi ne vaativat oman lähestymistapansa.</a>
+        Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa. <a href="mikroneulaus-kaula-dekoltee-kadet.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin näiden alueiden ihosta ja siitä miksi ne vaativat oman lähestymistapansa.</a>
       </p>
     </div>
   </section>
   <!-- 7. MICROPEN EVO – LAITE -->
-  <section class="section section--cream section--laite" aria-labelledby="laite-title">
+  <section class="section section--dark section--laite" aria-labelledby="laite-title">
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
@@ -947,7 +958,7 @@
           </picture>
         </div>
         <div class="reveal">
-          <p class="label label--mid">Käyttämämme laite</p>
+          <p class="label label--pink-pale">Käyttämämme laite</p>
           <h2 id="laite-title">MicroPen EVO™ – kliinisen tason mikroneulauslaite</h2>
           <p class="lead">
             Toteutamme hoidot MicroPen EVO™ -laitteella, joka on FDA-hyväksytty ja CE-merkitty (luokka IIa) lääkinnällinen laite. Luokka IIa tarkoittaa, että laite on läpikäynyt tiukan eurooppalaisen vaatimustenmukaisuusarvioinnin – sama luokka kuin monilla kirurgisilla instrumenteilla.
@@ -974,11 +985,11 @@
     </div>
   </section>
   <!-- 8. HOIDON KULKU -->
-  <section class="section section--dark" aria-labelledby="hoidon-kulku-title">
+  <section class="section section--cream" aria-labelledby="hoidon-kulku-title">
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
-          <p class="label label--pink-pale">Prosessi</p>
+          <p class="label label--mid">Prosessi</p>
           <h2 id="hoidon-kulku-title">Hoidon kulku: Miten mikroneulaus toteutetaan käytännössä</h2>
           <p class="lead">
             Kliininen mikroneulaus on tarkka ja huolellisesti ohjattu prosessi, jossa asiantuntijan rooli ja ehdoton puhtaus korostuvat. Jokainen hoitokerta etenee loogisesti vaiheittain.
@@ -1013,10 +1024,10 @@
     </div>
   </section>
   <!-- 9. ENNEN JA JÄLKEEN HOITOA -->
-  <section class="section section--cream" aria-labelledby="ennen-jalkeen-title">
+  <section class="section section--dark" aria-labelledby="ennen-jalkeen-title">
     <div class="section__inner">
       <div class="reveal" style="max-width: 720px; margin-bottom: 40px;">
-        <p class="label label--mid">Ohjeistus</p>
+        <p class="label label--pink-pale">Ohjeistus</p>
         <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoidon</h2>
       </div>
       <div class="grid-2">

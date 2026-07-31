@@ -1930,6 +1930,80 @@ muutoksia.
   **Petra mainitaan erillisenä kappaleena osion alaosassa**
   ohuen viivan alla: vastuuhoitaja, sairaanhoitaja (AMK),
   aseptiikan ja turvallisen hoitotyön osaaminen.
+- **Uusi väri `--pink-deep: #895b3c` tekstilinkeille vaalealla
+  taustalla.** Käyttäjä huomasi että etusivun linkki näytti
+  liian vaalealta. Välitön syy oli taustojen vuorottelu: linkissä
+  oli kiinteä `--pink-pale`, joka on tarkoitettu tummalle
+  taustalle (1,34:1 kermalla).
+
+  **Korjatessa paljastui vanhempi vika.** Sivuston linkkiväri
+  `--pink` (#c8997a) on vaalealla taustalla vain **2,23:1**, kun
+  vaatimus on 4,5:1. Tämä ei johtunut taustamuutoksesta vaan on
+  ollut näin alusta asti ja koski **kaikkia sivuston
+  tekstilinkkejä**, mukaan lukien jokaisen blogiartikkelin
+  leipätekstin linkit (`.article-body p a`).
+
+  Uusi sävy testattiin kaikkia kolmea vaaleaa taustaa vasten:
+  kerma 5,11:1, lämmin kerma 4,70:1, valkoinen 5,46:1.
+  Ensimmäinen ehdokas #8f5f3f jäi lämpimällä kermalla arvoon
+  4,40:1 eli niukasti alle rajan, joten sävyä tummennettiin.
+
+  **`--pink` säilyy** napeissa, korostuksissa ja kursiiviosissa,
+  joissa se ei ole leipätekstiä. Vain tekstilinkit vaihtoivat.
+
+  Muutettu: kolme linkkiä index.html-tiedostossa ja
+  `.article-body p a` style.css-tiedostossa, mikä korjaa kaikki
+  blogiartikkelit kerralla.
+- **Etusivun osioiden taustat vuorottelevat nyt täydellisesti.**
+  Tiimiosio häiritsi, ja syy oli rakenteellinen: sivusto vuorottelee
+  vaaleaa ja tummaa, ja tiimiosion lisääminen vaaleana filosofian
+  jälkeen rikkoi rytmin.
+
+  **Claude ehdotti ensin keskivihreää välisävyä ja uutta
+  väримuuttujaa. Käyttäjä hylkäsi uuden värin ja pyysi sen sijaan
+  jatkamaan vuorottelua läpi sivun.** Se oli oikea ratkaisu:
+  ongelma korjaantuu olemassa olevilla väreillä eikä palettiin
+  tarvita lisäystä. `--pink-soft` poistettiin.
+
+  Tiimi on nyt tumma ja kaikki sen alapuoliset osiot vaihtoivat
+  vuoroaan:
+
+  | Osio | Ennen | Nyt |
+  |---|---|---|
+  | Filosofia | vaalea | vaalea |
+  | Tiimi | (uusi) | **tumma** |
+  | Menetelmä | tumma | **vaalea** |
+  | Kenelle ei sovi | vaalea | **tumma** |
+  | Hoidot ja hinnat | tumma | **vaalea** |
+  | Laite | vaalea | **tumma** |
+  | Hoidon kulku | tumma | **vaalea** |
+  | Ennen ja jälkeen | vaalea | **tumma** |
+  | UKK | vaalea | vaalea |
+
+  **Sivuvaikutus: myös vanha vika korjaantui.** Ennen tätä
+  "Ennen ja jälkeen" ja "UKK" olivat molemmat vaaleita peräkkäin.
+  Nyt vuorottelu on katkeamaton koko sivun mitalta.
+
+  Komponentit jotka olettivat taustan värin piti korjata:
+  `challenge` (vaalealle), `cards-note` ja `addon-head` (vaalealle),
+  sekä uudet tummat variantit `compare-table`, `feat-card`,
+  `care-list` ja `intro-text`.
+
+  **Claude unohti ensimmäisellä kerralla osioiden pikkuotsikot.**
+  Käyttäjä huomasi että sana "Prosessi" ei erottunut. Vika oli
+  laajempi: **kaikkien kuuden vaihtaneen osion pikkuotsikko oli
+  väärällä värillä**, koska luokat `label--pink-pale` (vaalea,
+  tummalle taustalle) ja `label--mid` (tumma, vaalealle) eivät
+  vaihtuneet taustan mukana. Kontrastit olivat noin 1,3:1 eli
+  käytännössä näkymättömiä.
+
+  **Opetus: kun osion taustaväri vaihtuu, on käytävä läpi sekä
+  komponenttien tekstivärit että osion oman otsikkorivin
+  label-luokka.** Claude tarkisti ensimmäisellä kerralla vain
+  komponentit.
+
+  Korjauksen jälkeen kaikki kahdeksan pikkuotsikkoa mitattu,
+  matalin 5,55:1.
 - **Jaakon esittelyä laajennettu kliinisen osaamisen osalta.**
   Kirurgisen hoitotyön tausta oli aiemmin yksi lause eikä siitä
   käynyt ilmi miksi se on tässä hoitomuodossa merkityksellinen.
