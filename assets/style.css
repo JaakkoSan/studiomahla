@@ -13,6 +13,7 @@
   --pink: #c8997a;
   --pink-light: #d4a98a;
   --pink-pale: #e8cdb8;
+  --pink-deep: #895b3c;   /* linkit vaalealla taustalla: kerma 5.11:1, lämmin kerma 4.70:1, valkoinen 5.46:1 */
   --white: #faf8f4;
   --text-dark: #2a3830;
   --text-mid: #4a5e55;
@@ -224,7 +225,7 @@ p:last-child { margin-bottom: 0; }
 }
 .article-body p { font-size: 17px; line-height: 1.9; color: var(--text-dark); }
 .article-body p a {
-  color: var(--pink); text-decoration: underline; text-underline-offset: 3px;
+  color: var(--pink-deep); text-decoration: underline; text-underline-offset: 3px;
 }
 .article-body p a:hover { color: var(--green-dark); }
 .article-body ul.article-list,
