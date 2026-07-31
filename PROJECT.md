@@ -622,6 +622,13 @@ studiomahla/
 ├── functions/api/       (Cloudflare Pages Functions)
 │   └── (esitiedot, hoitoloki, contact, auth, keep-alive)
 ├── *.html               (13 asiakassivua + admin.html + kysely.html)
+├── tuotanto/            (EI VIEDÄ GITHUBIIN, ks. tuotanto/LUE-TAMA.md)
+│   ├── generaattorit/   (karuselli.py, reels.py, logo.py, pistoskulma.py)
+│   ├── fontit/          (Cormorant Garamond, Jost)
+│   ├── karusellit/      (valmiit diat)
+│   ├── reels/           (valmiit videot)
+│   ├── kansikuvat/      (Facebook-kansikuvat)
+│   └── julkaisut/       (yksittäiset kuvajulkaisut)
 ├── sitemap.xml
 ├── robots.txt
 ├── _redirects           (Cloudflare Pages 301-säännöt)
@@ -1674,13 +1681,460 @@ hyödyllisiä liiketoiminnalle.
 
 ---
 
+## 16. Blogistrategia
+
+Laadittu 30.7.2026. Tämä luku on sitova viikoittaiselle
+blogiautomaatiolle.
+
+### 16.1 Blogin kolme tehtävää
+
+Ne kyllästyvät eri tahtiin, mikä on koko strategian ydin.
+
+| Tehtävä | Kyllästyy | Perusteleeko lisää artikkeleita |
+|---|---|---|
+| Löydettävyys haussa | Hitaasti | Kyllä, mutta rajallisesti |
+| Uskottavuus kävijälle | Nopeasti | Ei. Kukaan ei lue kahtakymmentä artikkelia päättäessään varaako ajan |
+| Raaka-aine somelle | Heti | Ei. 12 artikkelia tuotti 46 Reels-ideaa |
+
+Vain ensimmäinen perustelee lisää sisältöä.
+
+### 16.2 Kohderyhmä on laajempi kuin Kotka
+
+**Tämä korjattiin 30.7.2026 käyttäjän huomautuksesta.** Claude oli
+rajannut kysynnän Kotkaan ja Kymenlaaksoon, mikä johti liian
+matalaan arvioon sisällön hyödystä.
+
+Ihmiset ajavat hyväksi koetun palvelun perässä pitkiäkin matkoja.
+Käytännön säde on se, jonka voi ajaa työpäivän jälkeen ja ehtiä
+kotiin järkevään aikaan. Kotkasta se kattaa pääkaupunkiseudun,
+Kouvolan, Lahden, Lappeenrannan ja Porvoon.
+
+**Toinen ryhmä: Kotkassa säännöllisesti käyvät.** Työmatkalaiset ja
+muut jotka tulevat toiselta paikkakunnalta Kotkaan töihin. Heille
+matkaa ei synny lainkaan, koska he ovat täällä muutenkin. Arkien
+aukioloaika 14–20 sopii tähän hyvin: hoito mahtuu työpäivän
+jälkeen ennen kotimatkaa.
+
+Tämä ryhmä ei ole pääkohderyhmä, mutta se on yksi peruste sille
+ettei näkyvyyttä kannata rajata Kotkaan. Kouvolassa asuva voi etsiä
+tietoa kotoaan ja huomata että studio on työpaikan lähellä.
+
+Seuraukset sisältöön:
+
+- **Valtakunnalliset hakusanat eivät ole hyödyttömiä.** Kauempaa
+  tuleva vertailee, ja vertailu tapahtuu yleisillä hakusanoilla.
+  Sama koskee Kotkassa työssä käyvää joka hakee kotoaan käsin.
+- **Kauempaa tuleva ei valitse lähintä vaan parhaan.** Häntä
+  vakuuttavat erottavat aiheet: menetelmien erot, tutkimusnäyttö ja
+  sen rajat, laitteen sertifiointi, tekijän ammattitausta. Nämä ovat
+  jo sivuston vahvimmat artikkelit.
+- Lähialueen asiakas valitsee mukavuuden perusteella, kaukaa tuleva
+  erottautumisen perusteella. Sisällön pitää palvella molempia.
+
+### 16.3 Kapasiteetti ja hinnoittelu
+
+**Tavoite on myydä ei-oota, ei jäädä turvalliseen 80 prosentin
+varausasteeseen.** Ylikysyntä on hinnoitteluvoimaa. Sisällön
+tehtävä ei siis ole vain täyttää kalenteria vaan luoda niin paljon
+kysyntää että hintaa voi nostaa.
+
+Tämä vahvistaa saman johtopäätöksen toista kautta: **erottautuminen
+on tärkeämpää kuin volyymi.** Sisältö joka saa ihmisen ajamaan
+tunnin on arvokkaampaa kuin sisältö joka kerää kävijöitä.
+
+Kalenterin täyttymistä ei mietitä ennen kuin hoitoja on tehty.
+
+### 16.4 Kuinka monta artikkelia
+
+Ei lukuna vaan kysymysten kattavuutena.
+
+| Palveluvalikoima | Artikkeleita | Perustelu |
+|---|---|---|
+| Pelkkä mikroneulaus | 15–20 | Erillisiä asiakaskysymyksiä ei ole enempää |
+| + LED | 5–7 lisää | Oma hakusanaklusterinsa |
+| + ProXN | 4–6 lisää | Oma hakusanaklusterinsa |
+| Kaikki kolme | 30–35 | Luonnollinen katto |
+
+Tilanne 30.7.2026: 12 julkaistua. Mikroneulauksesta kattamatta
+suunnilleen aknearvet omana artikkelinaan, ikääntymisen merkit
+omanaan, hinta ja mitä siihen sisältyy, mitä hoidolta ei kannata
+odottaa, sekä mikroneulaus muiden hoitojen rinnalla.
+
+**LED ja ProXN eivät vain lisää artikkeleita.** Ne tuovat uusia
+hakusanaklustereita joissa kilpailu ja kysyntä ovat erilaiset.
+Aknehoito on todennäköisesti isompi kysyntä kuin mikroneulaus,
+koska ihmiset etsivät ongelmaa eivätkä menetelmää. Tämä on
+painava peruste laajennukselle.
+
+### 16.5 Milloin tahtia väljennetään
+
+Ei päivämäärän vaan signaalien perusteella.
+
+1. **Ehdotusten laatu laskee.** Kun automaatio alkaa ehdottaa
+   muunnelmia olemassa olevista tai suosittaa ettei julkaista,
+   klusteri on katettu. Luotettavin signaali, tulee ensimmäisenä.
+2. **Uudet artikkelit eivät kerää näyttökertoja.** Search Console
+   kertoo artikkelikohtaiset näyttökerrat. Kolmen kuukauden jälkeen
+   lähellä nollaa oleva uusi artikkeli on merkki kyllästymisestä.
+
+Suunniteltu kaari:
+
+| Vaihe | Tahti |
+|---|---|
+| Nyt → syyskuun puoliväli | Viikoittain |
+| Syys–joulukuu | Joka toinen viikko |
+| 2027 alkaen | Kerran kuussa tai tapahtumavetoisesti |
+
+### 16.6 Päivittäminen voittaa lisäämisen
+
+**Aliarvostetuin toimenpide ja toisen vuoden tuottavin.**
+
+Kun artikkeleita on noin viisitoista, olemassa olevan päivittäminen
+tuottaa yleensä enemmän kuin uusi artikkeli. Sijalla 9 oleva
+artikkeli nousee sijalle 4 halvemmalla kuin uusi lähtee nollasta.
+
+Blogiautomaatiolla on tämä vaihtoehtona joka viikko, ja sen on
+harkittava sitä aidosti eikä oletuksena kirjoitettava uutta.
+
+Kaksi kausiartikkelia (syksy ja talvi) päivitetään vuosittain, ei
+kirjoiteta uusia.
+
+### 16.7 Ero someen: toisto
+
+**Blogissa päällekkäisyys on haitta, somessa se on tehokeino.**
+
+Katsoja joka näki Reelsin puoli vuotta sitten ei muista sitä.
+Reels-aiheet saavat siis toistua. Reels-automaatio saa ottaa yli
+kuusi kuukautta vanhan ★★★-idean uudelleen, mutta tekee siitä uuden
+version eikä julkaise samaa videota.
+
+Sama ei päde blogiin. Kaksi artikkelia samasta aiheesta laimentaa
+molempia ja hajottaa hakusijoitukset.
+
+### 16.8 Kolme muuta huomiota
+
+**Konversio on mittaamatta.** Kaksitoista artikkelia ja nolla
+tietoa siitä mikä tuottaa varauksia. Pixelin konversiotapahtuma
+Ajanvaraus-napille on tekemättä. Ilman sitä ei voi tietää
+kannattaako artikkeli 13. Tämä on tärkeämpää kuin seuraava
+artikkeli.
+
+**Ristiinlinkitys molempiin suuntiin.** Uusi artikkeli linkitetään
+myös vanhoista, ei vain uudesta ulos. Orpo artikkeli ei sijoitu.
+
+**Rehellisyys on erottava tekijä.** Artikkelit joissa sanotaan mitä
+tutkimus ei osoita ja kenelle hoito ei sovi ovat kauneusalalla
+harvinaisia. Se säilytetään silloinkin kun se maksaa yksittäisen
+varauksen.
+
+---
+
 ## 15. Muutosloki
 
 Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-07-30
+- **Hakusanaseuranta ajettu ensimmäistä kertaa** (`tuotanto/hakusanaseuranta.md`).
+  **Havainto joka vaatii päätöksen: incognito-ikkunaa ei pystynyt avaamaan
+  käytettävissä olevilla Claude in Chrome -työkaluilla** (ei tabs_create_mcp:ssä,
+  ei näppäinoikotietä Ctrl+Shift+N kautta — uutta ikkunaa ei ilmestynyt MCP-
+  välilehtiryhmään). Haut tehtiin siis kirjautuneena olemassa olevaan Chrome-
+  profiiliin. Tämä näkyi konkreettisesti haussa "kliininen mikroneulaus kotka":
+  karttapaketin 1. sija oli studiomahla.fi mutta merkittynä "Ylläpidät tätä
+  yritysprofiilia" eli Google tunnisti kirjautuneen käyttäjän yrityksen
+  omistajaksi. Sijoitus ei siis välttämättä vastaa mitä tuntematon kävijä
+  näkisi. **Päätettävä ennen seuraavaa mittausta (1.9.):** joko käyttäjä
+  yhdistää Claude in Chromen manuaalisesti avattuun incognito-ikkunaan ennen
+  ajoa, tai automaatio hyväksyy tämän rajoituksen ja raportoi sen joka kerta.
+- **Uusi blogiluonnos tehty, odottaa hyväksyntää: `herkka-iho-ruusufinni-mikroneulaus.html`**
+  (987 sanaa). Aiheena herkkä iho ja ruusufinni (rosacea) suhteessa mikroneulaukseen:
+  milloin hoito sopii, milloin ei, miten hoitoa muokataan (pienempi neulasyvyys,
+  hellempi tekniikka, testaus pieneltä alueelta), jälkihoidon korostuminen ja
+  milloin ohjataan lääkärille. Täyttää aukon studion kolmen ydinpainopisteen
+  joukossa (akne, ärtynyt/herkkä iho, ikääntyminen): herkkä iho ei ollut vielä
+  saanut omaa artikkelia. Ei linkitetty mihinkään (blogi.html, sitemap.xml, muut
+  artikkelit koskemattomia) käyttäjän hyväksyntää odottaen.
+- **Uusi blogiluonnos tehty, odottaa hyväksyntää: `aknearpien-hoito-mikroneulauksella.html`**
+  (907 sanaa). Aiheena aknearpien hoito mikroneulauksella: mekanismi, aktiivisen
+  akneen vasta-aihe, tutkimusnäyttö (Sitohang 2021, Dove Medical Press 2020),
+  sarjan pituus ja realistiset odotukset. Ei linkitetty mihinkään (blogi.html,
+  sitemap.xml, muut artikkelit koskemattomia) käyttäjän hyväksyntää odottaen.
+
+### 2026-07-31
+- **FACEBOOK-SIVU SAATIIN PALAUTETTUA ENNALLAAN.** Kaikki säilyi:
+  Erikoisalat, kansikuva, profiilikuva, automaattivastaukset,
+  Instagram-liitos ja toimintanappi. Uudelleenrakennusta ei
+  tarvittu.
+- **Facebook-sivun käyttäjänimi asetettu: facebook.com/studiomahla.**
+  Tämä oli avoinna heinäkuun alusta, koska asetussivu ei auennut
+  selaimessa. Onnistui palautuksen jälkeen.
+- **Facebook-suositukset päätetty pitää käytössä.** Aiemmin
+  harkittiin poistamista. Arvostelut ovat paikallisessa
+  palveluliiketoiminnassa hyödyllisiä, sama logiikka kuin
+  Google-yritysprofiilissa.
+- **Some-linkit lisätty footeriin.** Instagram ja Facebook
+  yhteystietojen alle pienellä harvennetulla versaalilla, samalla
+  tyylillä kuin muut footerin pikkuotsikot. Ei ikoneita, koska ne
+  toisivat visuaalista kohinaa eikä tavoite ole seuraajamäärä.
+  Linkeissä `rel="me"`, mikä on tunnistettu signaali siitä että
+  profiilit kuuluvat samalle toimijalle ja tukee `sameAs`-kenttää.
+  Muutettu `assets/layout.js` ja `assets/style.css`, joten se
+  näkyy kaikilla sivuilla kerralla.
+- **KORJATTU VIKA: `package.json` oli katkennut kesken.** Tiedosto
+  päättyi riviin 13 kesken merkkijonon eikä ollut kelvollista
+  JSONia.
+
+  **Claude arvioi tämän ensin turhaksi Vercel-jäänteeksi. Se oli
+  väärin ja poistaminen olisi rikkonut sivuston.** Cloudflare Pages
+  Functions tuovat kolme npm-pakettia, jotka asennetaan juuri tämän
+  tiedoston perusteella: `@supabase/supabase-js` (esitiedot,
+  hoitoloki, tunnistautuminen), `resend` (sähköpostit) ja `otplib`
+  (kaksivaiheinen tunnistautuminen).
+
+  Tiedosto kirjoitettiin uusiksi. Riippuvuudet tarkistettiin
+  koodin import-riveiltä eikä arvattu. Vertailu tehty ohjelmallisesti:
+  koodin tuomat paketit ja package.jsonin riippuvuudet täsmäävät
+  täsmälleen, ei puuttuvia eikä ylimääräisiä. Kuvauksesta poistettiin
+  vanhentunut maininta Stripe-ennakkovarauksesta.
+
+  Katkennut kohta oli neljäs riippuvuus jonka nimeä ei näkynyt.
+  Todennäköisesti Stripe, joka poistettiin ennakkovarausten mukana.
+  **Jos jokin toiminto ei korjauksen jälkeen toimi, puuttuva paketti
+  selviää Cloudflaren build-lokista.**
+
+  **Testattu 31.7.2026: esitietolomake ja hallintapaneeli
+  toimivat.** Kolme riippuvuutta riittää, neljättä ei tarvita.
+  Cloudflare on siis ilmeisesti käyttänyt aiempaa onnistunutta
+  asennusta, tai npm on sietänyt katkennutta tiedostoa. Nyt
+  tilanne on joka tapauksessa siisti eikä seuraava rakennus voi
+  kaatua tähän.
+- **Käyttämättömiä Functions-tiedostoja ei poistettu.**
+  `functions/api/contact.js` ja `functions/api/keep-alive.js` eivät
+  ole minkään sivun kutsumia eikä keep-alivelle ole ajastusta.
+  Hyöty poistamisesta on nolla ja riski pieni mutta olemassa, joten
+  ne jätettiin paikoilleen.
+- **Sivuston `sameAs`-kenttä täytetty.** index.html
+  BeautySalon-skeemaan lisätty facebook.com/studiomahla ja
+  instagram.com/studiomahla. Kenttä oli tyhjä koska Facebook-sivu
+  oli aiemmin pitkän numerosarjan takana. Auttaa Googlea
+  yhdistämään profiilit samaan yritykseen, mikä tukee paikallista
+  löydettävyyttä. Tarkistettu: kaikki kolme JSON-LD-lohkoa
+  jäsentyvät.
+- **Kanavalinjaus palautettu: käytössä molemmat, Instagram ja
+  Facebook.** META-MARKKINOINTI.md luku 0.1 kirjoitettu uusiksi,
+  kaikki [FACEBOOK — MYÖHEMMIN] -merkinnät poistettu (luvut 2.2,
+  4.2, 10), luvun 3.2 ehdollinen muotoilu poistettu ja luku 11.3
+  merkitty toteutumattomaksi mutta säilytetty tarkistuslistana
+  siltä varalta että sivu joskus menetetään pysyvästi.
+  Väliaikainen linjaus 28.–31.7. jätettiin lukuun 0.1
+  historiatietona.
+- **Yksi havainto kannattaa muistaa vaikka linjaus raukesi:**
+  Instagram-mainonta todettiin 28.7. toimivaksi ilman
+  Facebook-sivua, ja maksutavat kuuluvat yritysportfoliolle
+  eivätkä sivulle. Jos sivu joskus menetetään pysyvästi, mainonta
+  ei kaadu sen mukana.
+- **Laitejulkaisulle kirjoitettu Facebook-versio kuvatekstistä.**
+  Ero Instagramiin: linkit oikeina osoitteina koska ne ovat
+  klikattavia, ei hashtageja koska ne eivät tuo Facebookissa
+  jakelua. Kirjattu luvun 3.5b julkaisulokiin sääntönä joka pätee
+  kaikkiin julkaisuihin jatkossa.
+- **Laitekuvajulkaisu julkaistu Instagramiin.** Neljäs julkaisu.
+  Viikon 31 sisältö: karuselli, kaksi Reelsiä ja laitekuva.
+  Ensimmäinen viikko jonka aikana kanavana on ollut vain Instagram.
+
+### 2026-07-30
+- **Uusi luku 16: blogistrategia.** Vastaa kysymyksiin milloin
+  tahtia väljennetään, kuinka monta artikkelia kannattaa olla ja
+  mitä muuta blogista on sanottavaa. Käsitelty erikseen kolme
+  skenaariota: pelkkä mikroneulaus (15–20 artikkelia), LED mukaan
+  (+5–7), ProXN mukaan (+4–6).
+- **Claude korjasi analyysinsä käyttäjän kolmen huomautuksen
+  perusteella.** Kaikki kolme muuttivat johtopäätöksiä:
+  1. **Kohderyhmä on laajempi kuin Kotka.** Claude rajasi kysynnän
+     Kotkaan ja Kymenlaaksoon. Ihmiset ajavat hyväksi koetun
+     palvelun perässä, ja käytännön säde on työpäivän jälkeen
+     ajettava matka, eli pääkaupunkiseutu, Kouvola, Lahti,
+     Lappeenranta ja Porvoo. Lisäksi omana ryhmänään Kotkassa
+     säännöllisesti työssä käyvät, joille matkaa ei synny lainkaan.
+     Valtakunnalliset hakusanat eivät siis ole hyödyttömiä, ja
+     artikkelien katto on korkeampi.
+  2. **Tavoite on myydä ei-oota, ei jäädä 80 prosenttiin.**
+     Ylikysyntä on hinnoitteluvoimaa. Kalenterin täyttymistä ei
+     mietitä ennen kuin hoitoja on tehty.
+  3. **Somessa toisto on tehokeino, blogissa haitta.** Reels-aiheet
+     saavat toistua, koska katsoja ei muista puoli vuotta vanhaa
+     videota.
+- **Blogiautomaatioon lisätty jarru.** Se ei enää tuota artikkelia
+  joka viikko oletuksena, vaan valitsee kolmesta: uusi artikkeli,
+  olemassa olevan päivitys, tai ei julkaista mitään. Päivitys on
+  nostettu tasavertaiseksi vaihtoehdoksi. Automaatio myös arvioi
+  joka kerta onko viikoittainen tahti edelleen perusteltu, ja
+  suosittelee väljentämistä jos se on kahdesti peräkkäin päätynyt
+  olemaan julkaisematta.
+- **Reels-automaatioon lisätty uusiokäyttö.** Yli kuusi kuukautta
+  vanhan ★★★-idean saa ottaa uudelleen, mutta siitä tehdään uusi
+  versio eikä julkaista samaa videota.
+- **Kaikki työ koottu yhden kansion alle.** Ajastettujen tehtävien
+  ohjeet asuivat sovelluksen omassa kansiossa
+  `C:\Users\jaakk\Claude\Scheduled`, eivätkä olleet varmuuskopiona
+  missään. Ne kopioitiin kansioon `tuotanto/automaatiot/`.
+  **Huom: kopiot eivät päivity itsestään.** Kun ajastetun tehtävän
+  ohjetta muutetaan, myös kopio on päivitettävä.
+  Tarkistettiin samalla väliaikaisen työkansion sisältö tiedosto
+  tiedostolta: siellä ei ole mitään mitä ei ole jo `tuotanto/`
+  -kansiossa. Se saa tyhjentyä.
+  **Lopputulos: `C:\studiomahla` on 7,5 Mt ja 106 tiedostoa, ja
+  siinä on kaikki.** Varmuuskopiointi hoituu yhdellä
+  synkronoinnilla.
+- **Reels-automaation tallennuspaikat täsmennetty.** Ohje kertoi
+  minne diat ja videot tallennetaan, mutta ei sitä minne kunkin
+  Reelsin oma Python-skripti kirjoitetaan. Skripti olisi voinut
+  jäädä väliaikaiseen työkansioon ja kadota. Ohjeeseen lisättiin
+  taulukko tallennuspaikoista, vaatimus tallentaa skripti kansioon
+  `tuotanto/generaattorit/` ja lopputarkistus että mitään ei jäänyt
+  muualle. Samalla lisättiin vaatimus kirjata kuvatekstit
+  julkaisulokiin sanatarkasti.
+  **Blogiautomaatio tarkistettu: se kirjoittaa jo oikeaan
+  paikkaan** (`C:\studiomahla`).
+- **Instagramin viestiautomaatio oli hävinnyt** (todennäköisesti
+  Facebook-sivun menetyksen yhteydessä) ja palautettiin käsin.
+  Käytössä oleva teksti ei ollut tallessa suunnitelmassa, vaan
+  sinne oli kirjattu vain alkuperäinen lyhyt ehdotus. Oikea teksti
+  löytyi keskusteluhistoriasta. **Nyt kirjattu
+  META-MARKKINOINTI.md lukuun 4.1 käytössä olevana tekstinä.**
+- **Laitekuvajulkaisu tehty uudelleen.** Ajastus oli hävinnyt
+  sivun mukana. Samalla paljastui että variantti C oli olemassa
+  vain vertailukuvassa eikä sitä ollut tallennettu omaksi
+  tiedostokseen. Kuva tuotettiin uudelleen ja tehtiin samalla
+  skripti `tuotanto/generaattorit/laitejulkaisu.py`, joten se on
+  jatkossa toistettavissa. Kuvateksti (1030 merkkiä) kirjattu
+  META-MARKKINOINTI.md lukuun 3.5b sanatarkasti.
+- **Toistuva virhe todettu: toteutunutta sisältöä ei ole kirjattu,
+  vain ohjeita.** Sama tapahtui Erikoisalojen kanssa. Sääntö:
+  kaikki Metaan, Instagramiin tai muuhun kolmannen osapuolen
+  palveluun syötetty teksti kirjataan myös suunnitelmaan
+  sanatarkasti ja merkitään käytössä olevaksi, ei ehdotukseksi.
+
 ### 2026-07-28
+
+> **Huom lukijalle:** tämän päivän aikana Facebook-sivu menetettiin.
+> Alla olevat merkinnät Erikoisaloista, kansikuvasta,
+> profiilikuvasta, CTA-napista ja perjantaille ajastetusta
+> julkaisusta koskevat sivua joka ei enää ole olemassa. Ne on
+> jätetty lokiin sellaisinaan, koska tieto tarvitaan uudelleen kun
+> sivu rakennetaan. Tehdyt asetukset on toteutettava uudelleen.
+> Ks. META-MARKKINOINTI.md luvut 0.1, 11.2 ja 11.3.
+
+- **HÄIRIÖ: henkilötilin rajoitus vei Facebook-sivun mukanaan.**
+  Tili palautettu, sivun tila selvityksessä. Palautusikkuna
+  poistetulle sivulle on n. 14 vrk, joten selvitys aloitetaan heti.
+  Toimintajärjestys ja opetukset kirjattu META-MARKKINOINTI.md
+  lukuun 11.2. Sivu ei lataudu julkisesti eikä näy Business
+  Suitessa kummallakaan ylläpitäjätilillä, eli se on poistettu tai
+  rajoitettu sivutasolla. **Päätös: ei yritetä palauttaa, tehdään
+  uusi sivu.** Sivu oli muutaman päivän ikäinen, yksi seuraaja ja
+  kaksi julkaisua, joten valitusprosessi olisi suhteettoman raskas.
+  Uudelleenrakennuksen tarkistuslista META-MARKKINOINTI.md
+  luvussa 11.3. **Keskitytään toistaiseksi pelkkään Instagramiin.**
+  Data tukee sitä (206 vs 27 näyttöä) ja rajoituksen syy on
+  tuntematon, joten kannattaa odottaa että henkilötilin tilanne on
+  vakaa.
+- **Automaatio luotu: viikoittaiset Reelsit.** Ajetaan maanantaisin
+  klo 10, blogiehdotuksen jälkeen. Tuottaa kaksi Reelsiä
+  ideapankista eri aihepiireistä ja eri kansidian sävyillä,
+  kirjoittaa kuvatekstit ja merkitsee käytetyt ideat.
+  **Kun käyttämättömiä ideoita on alle 10, se lukee koko sivuston
+  ja blogit selaimella ja tuottaa vähintään 15 uutta ideaa.**
+  Ideapankkiin lisättiin tilamerkintäkäytäntö
+  (`— KÄYTETTY pp.kk.vvvv`), jotta jäljellä olevien määrän voi
+  laskea suoraan tiedostosta. Ideoita 46, käytetty 1, jäljellä 45.
+- **Korjattu: brändifontit olivat väärässä paikassa.**
+  `karuselli.py` etsii fontteja alikansiosta `generaattorit/fontit`,
+  mutta ne oli kopioitu polkuun `tuotanto/fontit`. Skripti olisi
+  pudonnut varafontteihin (Lora ja Poppins) ja typografia olisi
+  ollut väärin skaalattu. Fontit siirretty oikeaan paikkaan ja
+  automaatioon lisätty tarkistus joka keskeyttää ajon jos
+  varafontti on käytössä.
+- **Automaatio luotu: hakusanaseuranta.** Ajetaan kuukauden
+  ensimmäisenä päivänä. Tekee Google-haut incognito-ikkunassa
+  Claude in Chrome -laajennuksella ja kirjaa sijoitukset,
+  karttapaketin, kilpailijat ja hakutuloselementit tiedostoon
+  `tuotanto/hakusanaseuranta.md`. Historia on koko automaation
+  arvo: yksittäinen mittaus on kohinaa. Seurattavia hakusanoja 10,
+  joista neljä ydinsanaa (mikroneulaus kotka, aknehoito kotka,
+  aknearpien hoito kotka, kliininen mikroneulaus kotka).
+  Claude oli aluksi väärässä pitäessään tätä epäluotettavana:
+  incognito poistaa personoinnin ja sijainti tulee käyttäjän omasta
+  yhteydestä, mikä on juuri haluttu näkymä.
+- **Automaatio luotu: viikoittainen blogiehdotus.** Ajetaan
+  keskiviikkoisin klo 9 (siirretty maanantailta, koska maanantaille
+  osui jo Reels-tuotanto). Käy läpi koko blogikirjaston, ehdottaa kolme
+  aihetta perusteluineen ja kirjoittaa parhaan valmiiksi
+  luonnokseksi. **Ei linkitä artikkelia mihinkään** (blogi.html,
+  sitemap.xml, index.html, ristiinlinkit) vaan jättää sen
+  hyväksyttäväksi. Ohje sisältää luvun 5 kirjoitussäännöt ja
+  tarkistuslistan, koska ajo alkaa aina tyhjältä pöydältä ilman
+  muistia aiemmista keskusteluista.
+  **Lähteenä on julkaistu sivusto, ei paikallinen kansio,** ja
+  jokainen artikkeli luetaan kokonaan Claude in Chrome
+  -laajennuksella. Ei otsikkotason silmäilyä eikä tiedostojen
+  lukemista oikotienä. Jos laajennus ei ole yhteydessä, ajo
+  keskeytetään sen sijaan että korvattaisiin muulla menetelmällä.
+  Paikallista kansiota käytetään vain sen tarkistamiseen onko
+  siellä julkaisemattomia luonnoksia, jottei ehdoteta jo
+  kirjoitettua aihetta.
+- **Kanavalinjaus muutettu: käytössä vain Instagram, Facebook
+  siirretty suunnitteluvaiheeseen.** Mitään ei poistettu.
+  META-MARKKINOINTI.md sai uuden luvun 0.1 (kanavalinjaus
+  perusteluineen ja taulukko siitä mikä muuttuu), ja
+  Facebook-kohtaiset luvut on merkitty tunnisteella
+  **[FACEBOOK — MYÖHEMMIN]**. Luvun 10 elokuun aikataulu päivitetty
+  vastaamaan todellisuutta: suurin osa perustyöstä tehtiin jo
+  heinäkuussa, ja Facebook-kohdat siirrettiin omaan listaansa.
+  Sisällöntuotantoon muutos ei vaikuta lainkaan.
+- **Testattu 28.7.2026: Instagram-mainoksen luonti onnistuu ilman
+  Facebook-sivua** ja aiemmin lisätyt maksutavat olivat säilyneet.
+  Maksutavat ja mainostili kuuluvat yritysportfoliolle, eivät
+  sivulle. Kovaa takarajaa sivun rakentamiselle ei siis ole.
+  Realistinen ajankohta on syksy. Uusi sivu luodaan portfolion
+  omistukseen, koska portfolio on jo pystyssä.
+- **Tarkennus ohjeisiin: Petra ei osallistu markkinointiin eikä
+  minkään järjestelmän ylläpitoon.** Claude ehdotti häntä
+  Facebook-sivun ylläpitäjäksi. Väärin. Petra on vastuusairaanhoitaja
+  eikä osallistu hoitoihin, markkinointiin, someen, sivustoon eikä
+  muuhun ylläpitoon. Ks. luku 1 Tiimi.
+- **TEHTY 30.7.2026: Google Driven synkronointi käytössä.**
+  `C:\studiomahla` synkronoidaan Driveen peilaustilassa, studion
+  Google Workspace -tilillä. Kansio pysyy nykyisellä paikallaan.
+
+  **Miksi kansiota ei siirretty Driven sisälle:** ajastettujen
+  tehtävien ohjeissa on polku `C:\studiomahla` kymmenissä
+  kohdissa. Siirto olisi rikkonut ne kaikki ja edellyttänyt
+  kansion valitsemista Coworkissa uudelleen. Drivessa kansio
+  näkyy kohdassa Tietokoneet eikä Oma Drive -osiossa, mikä on
+  pelkkä kosmeettinen ero.
+
+  **Valittu peilaus, ei suoratoisto.** Suoratoistossa tiedostot
+  ladataan vasta tarvittaessa, mikä voisi kaataa
+  generaattoriskriptit ja GitHubiin viennin.
+
+  Tarkistettu synkronoinnin jälkeen: 106 tiedostoa, 7,5 Mt,
+  luku ja kirjoitus toimivat normaalisti.
+
+  Huomioitava jos joskus siirrytään paikalliseen gitiin: `.git`
+  -hakemiston synkronointi Driveen voi aiheuttaa ristiriitoja.
+  Nyt hakemistoa ei ole.
+- **Kaikki työtiedostot koottu yhteen kansioon: `tuotanto/`.**
+  Generaattorit, fontit ja valmis media olivat aiemmin
+  väliaikaisessa työkansiossa joka tyhjenee istuntojen välillä.
+  Nyt ne ovat samassa paikassa sivuston kanssa (6,3 Mt).
+  **Kansiota ei viedä GitHubiin.** Estetty varotoimena myös
+  robots.txt-tiedostossa. Ohje: `tuotanto/LUE-TAMA.md`.
+  Jos `C:\studiomahla` synkronoidaan Driveen, kaikki
+  varmuuskopioituu samalla. Paikallisessa kansiossa ei ole
+  `.git`-hakemistoa, joten synkronointi on turvallista.
 - **Uusi blogiartikkeli julkaistu:
   `mikroneulaus-kaula-dekoltee-kadet.html`** (967 sanaa). Aiheena
   kaula, dekoltee ja kämmenselät. Ydinperustelu: näillä alueilla on
@@ -1748,6 +2202,10 @@ muutoksia.
   todettu toimiviksi.** Mobiilisovelluksella luodut automaatiot eivät
   näy Business Suiten työpöytänäkymässä, mutta ovat silti voimassa.
   Tila varmistetaan testiviestillä, ei työpöytänäkymästä.
+- **Facebookin Erikoisalat-osio täytetty** (8 kohtaa). Osio on
+  nimeltään Erikoisalat, ei Palvelut. Ei hintakenttää, joten hinnat
+  kirjoitettiin kuvausteksteihin. **Muistettava päivittää käsin kun
+  hinnasto muuttuu.** Kirjattu META-MARKKINOINTI.md lukuun 2.
 - **Facebook-sivun profiilikuva päätetty pitää nykyisellään**
   (valkoinen ympyrä, musta logo).
 - **Facebook-sivun kansikuva tehty ja valittu.** Vaihtoehto C:

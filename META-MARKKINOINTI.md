@@ -1,11 +1,66 @@
 # Meta-markkinointisuunnitelma
 
-Mahlamäen Kauneusstudio · Instagram ja Facebook
-Laadittu 23.7.2026
+Mahlamäen Kauneusstudio · Instagram (käytössä) ja Facebook (myöhemmin)
+Laadittu 23.7.2026, kanavalinjaus päivitetty 28.7.2026
 
 Tämä on työdokumentti Metan (Instagram + Facebook) käyttöön
 Mahlamäen Kauneusstudion markkinointikanavana. Dokumentti on estetty
 hakukoneilta robots.txt-tiedostossa.
+
+---
+
+## 0.1 Kanavalinjaus (päivitetty 31.7.2026)
+
+**Käytössä ovat molemmat: Instagram ja Facebook.**
+
+Facebook-sivu poistui 28.7.2026 henkilötilin rajoituksen yhteydessä
+ja **saatiin palautettua 31.7.2026 täsmälleen siinä kunnossa kuin se
+oli tehty.** Erikoisalat, kansikuva, profiilikuva,
+automaattivastaukset, Instagram-liitos ja toimintanappi säilyivät.
+Uudelleenrakennusta ei tarvittu.
+
+**Käytäntö**
+
+| Asia | Miten |
+|---|---|
+| Julkaisu | Business Suite molempiin kerralla |
+| Julkaisutiheys | 2 Reels + 1 karuselli tai kuva viikossa |
+| Automaattivastaukset | Instagram ja Messenger |
+| Sisällöntuotanto | Samat tiedostot molempiin |
+| Mainonta | Kaikki sijoittelut käytettävissä |
+
+**Kuvatekstit eroavat kanavittain.** Ks. luku 3.5b:
+
+1. **Linkit.** Facebookissa oikeat osoitteet, koska ne ovat
+   klikattavia. Instagramissa "linkki biossa".
+2. **Hashtagit.** Instagramissa 3–4 aihekohtaista (luku 5.1).
+   Facebookissa ei lainkaan, koska ne eivät tuo siellä jakelua.
+3. **Sijaintimerkintä** lisätään molempiin.
+
+Muilta osin sisältö on sama. Karusellit, Reelsit ja kuvatekstien
+runko tehdään kerran.
+
+**Miksi Facebook pidetään**
+
+Facebookin suomalainen käyttäjäkunta painottuu vanhempiin
+ikäryhmiin, mikä osuu ikääntymisen merkkien kohderyhmään. Se ei ole
+Instagramin kaksoiskappale. Marginaalikustannus on lähellä nollaa,
+koska Business Suite julkaisee molempiin samalla kertaa.
+
+**Mittarit puhuvat silti Instagramin puolesta.** Ensimmäisessä
+vertailussa Instagram-Reels sai 206 näyttöä ja Facebook-karuselli
+27. Painotus pidetään Instagramissa, mutta Facebook ei maksa
+mitään ylimääräistä.
+
+**Väliaikainen linjaus 28.–31.7.2026 (historiatieto)**
+
+Sivun ollessa poissa päätettiin keskittyä pelkkään Instagramiin
+eikä rakentaa sivua uudelleen. Perusteina olivat mittarit,
+rajoituksen tuntematon syy ja se että Instagram-mainonta todettiin
+28.7. toimivaksi myös ilman Facebook-sivua. Tämä linjaus raukesi
+kun sivu palautui. **Havainto mainonnasta on silti hyvä pitää
+mielessä:** jos sivu joskus menetetään pysyvästi, mainonta ei kaadu
+sen mukana.
 
 ---
 
@@ -202,6 +257,62 @@ Pidetään nykyisellään eli valkoinen ympyrä mustalla logolla. Erottuu
 selvästi tummanvihreää kansikuvaa vasten ja näkyy hyvin myös
 Facebookin syötteessä pienenä. Ei muutostarvetta.
 
+**HÄIRIÖ 28.7.2026: henkilötilin rajoitus vei sivun mukanaan**
+
+Henkilökohtaiselle Facebook-tilille tuli rajoitus tuntemattomasta
+syystä. Tili on palautettu ja toimii, mutta kauneusstudion sivu oli
+samalla poistunut näkyvistä.
+
+**Sivulla on jo toinen ylläpitäjä.** Claude oletti virheellisesti
+että ylläpitäjiä on vain yksi ja ehdotti Petran lisäämistä. Molemmat
+oletukset olivat väärin.
+
+**Petra ei osallistu markkinointiin eikä ylläpitoon millään tavalla.**
+Hän on studion vastuusairaanhoitaja eikä osallistu myöskään
+hoitoihin. Häntä ei ehdoteta Metan, Instagramin, sivuston tai
+minkään muun ylläpitoon.
+
+Koska toinen ylläpitäjä on olemassa, se on nopein tapa selvittää
+sivun tila: kyseinen tili näkee onko sivu olemassa ja voi tarvittaessa
+palauttaa oikeudet.
+
+**Toinen opetus: sisältö on tallennettava myös paikallisesti.**
+Erikoisalojen tarkat tekstit jätettiin tietoisesti kirjaamatta
+tähän tiedostoon (perustelu: kahden version ylläpito johtaisi
+ristiriitaan). Se oli väärä painotus. Jos sivu menetetään, tekstit
+menetetään myös. Jatkossa kaikki Facebookiin ja Instagramiin
+kirjoitettu teksti kirjataan myös tänne, ja hinnastomuutosten
+yhteydessä molemmat päivitetään.
+
+Tilanteen selvitys ja aikarajat: ks. luku 11.2.
+
+**Erikoisalat: täytetty 28.7.2026**
+
+Facebookin palveluluettelo ei ole nimeltään "Palvelut" vaan
+**"Erikoisalat"**. Tämä kannattaa muistaa, koska sitä etsii väärästä
+paikasta jos hakee sanaa "palvelut".
+
+Kentän rajoitukset:
+
+- Enintään 10 kohtaa
+- Jokaisessa nimi ja enintään 150 merkin kuvaus
+- **Ei erillistä hintakenttää.** Jos hinta halutaan näkyviin, se on
+  kirjoitettava kuvaustekstiin.
+
+Luotu 8 kohtaa, jotka sekoittavat kaksi tyyppiä: varsinaiset
+palvelut hintoineen (hinnat kuvaustekstissä) ja hoidettavat
+aihealueet ilman hintaa. Näin luettelo palvelee sekä hintaa etsivää
+että omaa huoltaan etsivää kävijää.
+
+Kohtien tarkat tekstit ovat Facebook-sivulla. Niitä ei toisteta
+tässä, koska ne muuttuvat hinnaston mukana ja kahden version
+ylläpito johtaisi ristiriitaan. **Kun hinnasto muuttuu, Erikoisalat
+on päivitettävä käsin.** Tämä on helppo unohtaa.
+
+Kaksi kohtaa jätettiin tarkoituksella tekemättä: suositukset
+(katsotaan myöhemmin tarvittaessa) ja UKK, jota ei löytynyt tästä
+näkymästä eikä pidetty oleellisena.
+
 **Toimintanappi (CTA): rajoitus todettu 28.7.2026**
 
 Facebookin "Varaa nyt" -nappi ei tue Timmaa. Facebook tarjoaa
@@ -397,6 +508,18 @@ tallenna ne kohokohtaan.
 
 ### 2.2 Facebook-yrityssivu
 
+> Sivu poistui 28.7.2026 ja **palautui 31.7.2026 ennallaan.**
+> Kaikki alla kuvattu on voimassa ja käytössä.
+
+**Osoite: facebook.com/studiomahla** (käyttäjänimi asetettu
+31.7.2026). Aiemmin sivu oli pitkän numerosarjan takana. Nyt
+osoitteen voi kirjoittaa kuvateksteihin, käyntikorttiin ja
+sivustolle.
+
+**Suositukset: käytössä.** Harkittiin poistamista, mutta
+arvostelut ovat paikallisessa palveluliiketoiminnassa hyödyllisiä.
+Sama logiikka kuin Google-yritysprofiilin arvosteluilla.
+
 Facebook on toissijainen kanava mutta pakollinen mainontaa varten.
 Se palvelee myös yli 45-vuotiaita asiakkaita jotka etsivät palveluita
 Facebookista.
@@ -461,8 +584,9 @@ Reelsin hyväksi.
 | Reels | 2 | Jakelu, uusien ihmisten tavoittaminen |
 | Karuselli tai kuva | 1 | Syvyys ja uskottavuus profiilissa |
 
-Facebookiin sama sisältö. Business Suite julkaisee molempiin samalla
-kertaa, joten marginaalikustannus on nolla.
+Facebookiin sama sisältö. Business Suite julkaisee molempiin
+samalla kertaa, joten marginaalikustannus on nolla. Kuvatekstien
+kanavakohtaiset erot on kuvattu luvussa 0.1.
 
 Stories: 1–3 kertaa viikossa, ensisijaisesti feed-julkaisun jakamalla.
 Ei vaadi erillistä sisällöntuotantoa.
@@ -1124,18 +1248,108 @@ Tiedosto: `julkaisut/laite_C.jpg` (1080 × 1350)
 Tehty 28.7.2026, **ajastettu perjantaille 31.7.2026** molempiin
 kanaviin.
 
+**JULKAISTU 31.7.2026 aamulla Instagramiin.** Alkuperäinen ajastus
+hävisi 28.7. Facebook-sivun menetyksen yhteydessä, joten kuva
+tehtiin uudelleen ja julkaistiin käsin.
+
+**Facebook-versio (sivun palauduttua 31.7.2026):**
+
+```
+Toteutamme kaikki mikroneulaushoidot Kotkassa MicroPen EVO -laitteella.
+
+Se on FDA-hyväksytty ja CE-merkitty luokan IIa lääkinnällinen laite. Luokka IIa tarkoittaa, että laite on läpikäynyt tiukan eurooppalaisen vaatimustenmukaisuusarvioinnin. Sama luokka koskee monia kirurgisia instrumentteja.
+
+Laitteella hoidon tekee aina koulutettu terveydenhuollon ammattilainen. Lääkinnällinen laite ei yksin riitä, vaan ratkaisevaa on myös se kuka sitä käyttää.
+
+Käytännössä tämä näkyy kolmessa asiassa.
+
+Neulasyvyys on säädettävissä 0,25 millimetrin tarkkuudella. Ihon paksuus vaihtelee otsan, nenän, poskien ja silmänympäryksen välillä, ja jokaiselle alueelle valitaan oma syvyys.
+
+Laite tekee kohtisuoran pistoksen suoraan alas ja takaisin ylös samaa reittiä. Näin syntyy tarkka mikrokanava ilman tarpeetonta kudoksen repimistä.
+
+Jokainen hoitopää on steriili ja kertakäyttöinen. Se vaihdetaan aina asiakkaan nähden ennen hoidon alkua.
+
+Hinnasto ja lisätiedot: https://www.studiomahla.fi
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+```
+
+**Ero Instagram-versioon, pätee kaikkiin julkaisuihin jatkossa:**
+
+1. **Linkit oikeina osoitteina.** Facebookissa ne ovat klikattavia.
+   Instagramissa käytetään muotoa "linkki biossa".
+2. **Ei hashtageja.** Ne toimivat Facebookissa selvästi heikommin
+   eivätkä tuo jakelua. Eivät haittaa, mutta eivät hyödytäkään.
+3. Sijaintimerkintä lisätään molempiin.
+
+Samalla huomattiin että itse kuvatiedostoa ei ollut koskaan
+tallennettu: kansiossa olivat vain variantit A ja B sekä
+vertailukuva, joissa C näkyi mutta jota ei ollut viety omaksi
+tiedostokseen. **Kuva on nyt tuotettu uudelleen skriptillä
+`generaattorit/laitejulkaisu.py`**, joten se on jatkossa
+toistettavissa eikä riipu yhdestä tiedostosta.
+
+**Rajaus ratkaistiin uudelleen.** Lähdekuva on pystykuva
+(1200 × 1799) ja kuva-alue vaakasuuntainen. Jos kuva rajataan
+täyttämään alue, laite leikkaantuu joko kärjestä tai jalustasta.
+Ensimmäinen uusi versio leikkasi kärjen.
+
+Ratkaisu: kuva skaalataan korkeuden mukaan ja taustan harmaa
+liukuväri jatketaan sivuille reunapikseleitä venyttämällä. Koska
+tausta on tasainen gradientti, jatkos ei näy. Koko laite on
+näkyvissä.
+
+**Toinen välttämätön korjaus: lähdekuvan tyhjä yläosa rajataan
+pois** (`YLARAJAUS = 300`). Laite alkaa lähdekuvassa vasta noin
+riviltä 345, joten ilman tätä rajausta koko laite kyllä mahtuu
+kuvaan mutta jää selvästi liian pieneksi. Tyhjän yläosan
+poistaminen kasvattaa laitteen kokoa noin kolmanneksella ilman
+että sommittelu muuttuu.
+
+**Kuva-alue pidetään 70 prosentissa korkeudesta** (`KUVAOSUUS`).
+Kokeiltiin myös 76 ja 80 prosenttia, mutta käyttäjä hyväksyi
+alkuperäiset mittasuhteet joissa tekstipalkki on väljempi.
+
+Lopputulos: sama sommittelu kuin hyväksytyssä versiossa, laite
+kokonaan näkyvissä ja aiempaa suurempana.
+
+Sama tekniikka kannattaa muistaa jos tuleviin julkaisuihin tulee
+muita pystysuuntaisia tuotekuvia.
+
 Tumma brändipohja, valokuva ylhäällä ja alareunassa otsikko
 "MicroPen EVO" sekä "FDA-hyväksytty, CE-merkitty luokka IIa".
 Vaihtoehtoina tehtiin myös pelkkä valokuva (`laite_A.jpg`) ja vaalea
 brändipohja (`laite_B.jpg`).
 
-Kuvateksti 1030 merkkiä. Rakenne: laite ja sen sertifiointi, oma
-kappale siitä että hoidon tekee aina koulutettu terveydenhuollon
-ammattilainen, sitten kolme konkreettista asiaa (syvyyden säätö,
-kohtisuora pistos, steriili kertakäyttöpää).
+**KÄYTÖSSÄ OLEVA KUVATEKSTI (1030 merkkiä).** Palautettu
+30.7.2026 sen jälkeen kun julkaisu oli hävinnyt.
+
+```
+Toteutamme kaikki mikroneulaushoidot Kotkassa MicroPen EVO -laitteella.
+
+Se on FDA-hyväksytty ja CE-merkitty luokan IIa lääkinnällinen laite. Luokka IIa tarkoittaa, että laite on läpikäynyt tiukan eurooppalaisen vaatimustenmukaisuusarvioinnin. Sama luokka koskee monia kirurgisia instrumentteja.
+
+Laitteella hoidon tekee aina koulutettu terveydenhuollon ammattilainen. Lääkinnällinen laite ei yksin riitä, vaan ratkaisevaa on myös se kuka sitä käyttää.
+
+Käytännössä tämä näkyy kolmessa asiassa.
+
+Neulasyvyys on säädettävissä 0,25 millimetrin tarkkuudella. Ihon paksuus vaihtelee otsan, nenän, poskien ja silmänympäryksen välillä, ja jokaiselle alueelle valitaan oma syvyys.
+
+Laite tekee kohtisuoran pistoksen suoraan alas ja takaisin ylös samaa reittiä. Näin syntyy tarkka mikrokanava ilman tarpeetonta kudoksen repimistä.
+
+Jokainen hoitopää on steriili ja kertakäyttöinen. Se vaihdetaan aina asiakkaan nähden ennen hoidon alkua.
+
+Ajanvaraus ja hinnasto: linkki biossa
+
+#mikroneulaus #kliininenmikroneulaus #micropenevo #ihonhoito
+```
+
+Rakenne: laite ja sen sertifiointi, oma kappale siitä että hoidon
+tekee aina koulutettu terveydenhuollon ammattilainen, sitten kolme
+konkreettista asiaa (syvyyden säätö, kohtisuora pistos, steriili
+kertakäyttöpää).
 
 Kotka mainitaan ensimmäisessä lauseessa jotta se osuu Instagramin
-katkaistuun näkymään.
+katkaistuun näkymään. Muista sijaintimerkintä.
 
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
@@ -1179,15 +1393,44 @@ Instagram Business -tilissä on kaksi työkalua:
 Näkyy kun tili on merkitty poissaolevaksi. Voi asettaa päälle
 pysyvästi.
 
-Ehdotus:
+**KÄYTÖSSÄ OLEVA TEKSTI (391 merkkiä).** Sama teksti sekä
+välittömässä vastauksessa että poissaoloviestissä. Tämä on
+hyväksytty ja käyttöönotettu versio, ei ehdotus. Palautettu
+käyttöön 30.7.2026 sen jälkeen kun automaatio oli hävinnyt.
+
+```
+Kiitos viestistäsi.
+
+Emme seuraa viestejä päivittäin, mutta löydät vastauksen nopeimmin näin:
+
+Etsitkö tietoa hoidosta tai sen soveltuvuudesta sinulle?
+Kattavat tiedot löydät sivuiltamme: studiomahla.fi
+
+Haluatko varata ajan?
+Ajanvaraus onnistuu Timmassa: varaa.timma.fi/studiomahla
+
+Onko sinulla kysyttävää?
+Vastaamme sähköpostilla asiakaspalvelu@studiomahla.fi tai puhelimitse 050 367 1683
+```
+
+Rakenne on käyttäjän määrittelemä: kolme kysymystä jotka kattavat
+yleisimmät syyt ottaa yhteyttä, ja jokaiselle oma reitti. Se
+ohjaa tiedonhakijan sivustolle, varaajan Timmaan ja kysyjän
+sähköpostiin tai puhelimeen.
+
+Ei sisällä vastausaikalupausta tarkoituksella. Hoitopäivinä
+lupausta ei voisi pitää, ja rikottu lupaus on huonompi kuin ei
+lupausta lainkaan.
+
+**Aiempi lyhyempi luonnos (ei käytössä), säilytetty vertailun
+vuoksi:**
+
 ```
 Kiitos viestistäsi. Emme seuraa Instagram-viestejä päivittäin.
 
 Ajanvaraus: studiomahla.fi
 Kysymykset: asiakaspalvelu@studiomahla.fi
 Puhelin: 050 367 1683
-
-Vastaamme sähköposteihin ja puheluihin arkisin.
 ```
 
 **Pikavastaukset (Quick replies)**
@@ -1203,6 +1446,9 @@ Lähtee automaattisesti ensimmäiseen viestiin. Suositus: ota käyttöön
 ja käytä samaa tekstiä kuin poissaoloviestissä.
 
 ### 4.2 Facebook-automaattivastaukset
+
+> Käytössä. Säilyivät sivun palautuksessa 31.7.2026.
+> Huom: automaatiot tehdään mobiilisovelluksella, ks. luku 1.1.
 
 Facebook Messengerissä automaatio on kehittyneempi. Business Suitesta
 löytyy Inbox → Automaattiset vastaukset.
@@ -1674,25 +1920,46 @@ heikkoja tai aika ei riitä, harkitse kumppania.
 
 ### Elokuu 2026: perustan rakentaminen
 
-**Viikko 1**
-- [ ] Henkilökohtainen Facebook-tili
-- [ ] Facebook-yrityssivu ja perustiedot
-- [ ] Instagram Business -tilin varmistus
-- [ ] Instagram ja Facebook yhdistetään
-- [ ] Meta Business Suite käyttöön
-- [ ] Meta Pixelin yhteys varmistetaan
+Tilanne päivitetty 28.7.2026. Suurin osa perustyöstä tehtiin jo
+heinäkuussa, joten elokuulle jää vähemmän kuin alun perin
+suunniteltiin.
 
-**Viikko 2**
-- [ ] Instagram-bio ja nimi-kenttä optimoidaan
-- [ ] Automaattivastaukset molempiin kanaviin
-- [ ] Avainsanasuodattimet
-- [ ] Facebook-suositukset pois käytöstä (tai Fonecta Plus)
-- [ ] Hashtag-setit valmiiksi muistiinpanoihin
+**Tehty heinäkuussa**
+- [x] Henkilökohtainen Facebook-tili luotu
+- [x] Instagram Business -tilin varmistus
+- [x] Meta Business Suite käyttöön
+- [x] Meta Pixelin yhteys varmistettu (tunniste 1720418568979435)
+- [x] Instagram-bio ja nimi-kenttä optimoitu
+- [x] Instagram-automaattivastaukset käytössä ja testattu
+- [x] Hashtag-linjaus päätetty (luku 5.1)
+- [x] Julkaisutahti päätetty (luku 3.2)
+- [x] Karuselli- ja Reels-generaattorit rakennettu
+- [x] Ensimmäiset julkaisut ulkona
 
-**Viikko 3–4**
+**Elokuulle jäävät**
 - [ ] Valokuvaus toteutetaan (kuvauslista luvusta 3.5)
 - [ ] Kuvat käsitellään ja arkistoidaan
 - [ ] Sivuston tiimi-osio julkaistaan samoilla kuvilla
+- [ ] Avainsanasuodattimet Instagramiin
+- [ ] Instagram-kohokohdat (vaatii kuvat)
+- [ ] Julkaisurytmi jatkuu: 2 Reels + 1 muu viikossa
+
+**Facebook: palautui ennallaan 31.7.2026**
+
+Nämä poistuivat sivun mukana 28.7. ja palautuivat sellaisinaan.
+Uudelleenrakennusta ei tarvittu.
+
+- [x] Facebook-yrityssivu ja perustiedot
+- [x] Instagram ja Facebook yhdistetty
+- [x] Facebook-automaattivastaukset
+- [x] Erikoisalat-osio (8 kohtaa)
+- [x] Kansikuva ja profiilikuva
+- [x] Facebook-sivun käyttäjänimi asetettu 31.7.2026:
+      **facebook.com/studiomahla**
+- [x] Facebook-suositukset: päätetty pitää käytössä 31.7.2026.
+      Aiemmin harkittiin poistamista, mutta arvostelut ovat
+      paikallisessa palvelussa hyödyllisiä eikä niitä kannata
+      estää.
 
 ### Syyskuu 2026: sisällön käynnistys
 
@@ -1754,6 +2021,221 @@ Tämän jälkeen siirrytään normaaliin 2 julkaisua viikossa -rytmiin.
 | Negatiivinen kommentti johon ei vastata | Matala | Keskisuuri | Seuraa kerran viikossa, poista asiattomat |
 | Facebook-tilin luominen tuntuu vastenmieliseltä | Korkea | Pieni | Tili on pelkkä tekninen kerros, ei sosiaalinen |
 | Kuvat eivät riitä | Keskisuuri | Suuri | Kattava kuvauslista, pyydä paljon kuvia |
+| **Henkilötilin rajoitus vie sivun mukanaan** | Toteutui 28.7.2026 | Suuri | Toinen ylläpitäjä on jo olemassa, sisältö tallennetaan myös paikallisesti |
+
+### 11.2 Sivun katoaminen: toimintajärjestys
+
+Kirjattu 28.7.2026 kun tämä riski toteutui. Ohje on tallessa siltä
+varalta että sama toistuu.
+
+**Kaksi eri aikarajaa, älä sekoita niitä.**
+
+- **Itse poistettu sivu:** palautusikkuna noin 14 vuorokautta. Tämä
+  koskee tilannetta jossa ylläpitäjä on poistanut sivun itse.
+- **Metan poistama tai rajoittama sivu:** valitusaika on selvästi
+  pidempi, nykyisen ohjeistuksen mukaan jopa 180 vuorokautta
+  rajoituksen alkamisesta.
+
+Jos sivua ei ole poistettu itse, kiire ei ole yhtä kova kuin
+ensin luulisi. Selvitys kannattaa silti tehdä heti.
+
+**Keskeisin havainto (28.7.2026): rajoitukset ovat kerroksittaisia.**
+Kun henkilötilin rajoitus puretaan, se ei automaattisesti pura
+muihin resursseihin kohdistuvia rajoituksia. Sivu, yritystili,
+mainostili ja maksutapa voivat kaikki olla omina kerroksinaan.
+Käytännössä tämä tarkoittaa että **sivulle on tehtävä oma erillinen
+tarkistuspyyntö,** vaikka henkilötilin valitus olisi jo hyväksytty.
+
+**Valitusreitti on Business Support Home, ei Account Quality.**
+Account Quality on korvattu Business Support Homella
+(facebook.com/business-support-home). Siellä valitaan rajoitettu
+resurssi ja kohdasta "Request review" tehdään tarkistuspyyntö.
+Vain ylläpitäjä voi pyytää manuaalista tarkistusta.
+
+**1. Selvitä onko sivu oikeasti poistettu vai vain piilossa.**
+Yleisin tilanne on ettei sivua ole poistettu, vaan se oli
+saavuttamattomissa niin kauan kuin ylläpitäjän tili oli rajoitettuna.
+Palautuminen voi tulla viiveellä tilin palautumisen jälkeen.
+
+Halvimmat tarkistukset ensin:
+
+- **Kirjaudu toisella ylläpitäjätilillä.** Tämä on nopein ja
+  varmin tapa: jos sivu näkyy siellä, se on olemassa ja kysymys on
+  vain oikeuksista.
+- Avaa sivun osoite kirjautumattomana (yksityinen selausikkuna). Jos
+  sivu latautuu, se on olemassa.
+- Katso Instagram-yritystilin asetuksista onko Facebook-sivu
+  edelleen liitettynä. Jos on, sivu on todennäköisesti olemassa.
+- Kirjaudu Meta Business Suiteen ja katso näkyykö sivu siellä sekä
+  onko tullut ilmoitusta sääntörikkomuksesta.
+- Avaa facebook.com/business-support-home ja katso onko sivu
+  listattu rajoitettuna resurssina.
+
+**Havainto 28.7.2026:** Business Suite ilmoitti ettei hallittavia
+Facebook-sivuja ole yhtään. Se tarkoittaa että sivun yhteys tiliin
+on katkennut, ei pelkästään että oikeudet olisivat muuttuneet.
+Tässä tilanteessa Business Support Home on oikea paikka, koska se
+näyttää rajoitetut resurssit myös silloin kun ne eivät näy
+Business Suitessa.
+
+**Diagnoosi 28.7.2026:** sivu ei lataudu myöskään julkisesti eikä
+näy Business Suitessa kummallakaan ylläpitäjätilillä. Sivu on siis
+poistettu tai rajoitettu sivutasolla, ei pelkästään irrotettu
+tileistä.
+
+**2. Tee tarkistuspyyntö sivulle erikseen.** Business Support
+Homessa valitaan sivu ja kohdasta "Request review" lähetetään
+pyyntö. Tämä on eri asia kuin henkilötilin valitus, joka on jo
+hyväksytty. Yksi pyyntö riittää: saman asian toistuva lähettäminen
+ei nopeuta käsittelyä.
+
+**3. Älä luo uutta sivua ennen kuin vanha on todettu menetetyksi.**
+Kolme syytä. Samanniminen kaksoiskappale voi mutkistaa palautusta.
+Menettäisit Instagram-liitoksen, Erikoisalat-tiedot, automaatiot ja
+sivun historian. Ja jos vanha sivu palautuu myöhemmin, käsissä on
+kaksi sivua joista toinen on siivottava pois.
+
+**4. Tarkista lopuksi että toisen ylläpitäjän oikeudet ovat kunnossa.**
+Ne saattavat muuttua häiriön yhteydessä.
+
+**Mitä ei menetetä vaikka sivu menetettäisiin:** Meta Pixel
+(tunniste 1720418568979435) on erillinen resurssi eikä riipu
+sivusta. Instagram-yritystili on niin ikään oma tilinsä. Sivuston
+sisältö, generaattorit ja valmis media ovat paikallisesti tallessa.
+
+### 11.3 Uudelleenrakennus (ei toteutunut, ohje säilytetty)
+
+**RATKESI 31.7.2026: sivu saatiin palautettua ennallaan.**
+Alla oleva suunnitelma jäi käyttämättä. Se on säilytetty, koska
+tarkistuslista ja työmäärän arvio ovat käyttökelpoisia jos sivu
+joskus menetetään pysyvästi.
+
+**Alkuperäinen päätös 28.7.2026: sivua ei yritetä palauttaa,
+tehdään uusi.**
+
+**Ajoitus: uusi sivu tehdään elokuussa, ei heti.** Siihen asti
+keskitytään pelkkään Instagramiin.
+
+Perustelut lykkäykselle:
+
+1. **Data tukee Instagramia.** Reels 206 näyttöä, Facebook-karuselli
+   27. Facebook-sivulla oli yksi seuraaja. Sivun rakentaminen heti
+   ei tuo mitään mitattavaa.
+2. **Rajoituksen syy on tuntematon.** Jos henkilötili rajoitetaan
+   uudelleen, uusi sivu voi kadota samalla tavalla. Kannattaa
+   odottaa että tilin tilanne on osoittautunut vakaaksi.
+3. **Uudelleenrakennus on tunnin työ** ja tarkistuslista on
+   valmiina. Lykkääminen ei kasvata työmäärää.
+
+**Mainonta ei ole este: testattu käytännössä 28.7.2026.**
+
+Käyttäjä testasi mainoksen luonnin Instagramissa ilman
+Facebook-sivua ja pääsi prosessin loppuun asti. Lisäksi
+**aiemmin lisätyt maksutavat olivat säilyneet.** Ne kuuluvat
+mainostilille ja yritysportfoliolle, eivät sivulle, joten ne eivät
+kadonneet sivun mukana.
+
+Tämä kumoaa alkuperäisen oletuksen että sivu olisi pakko rakentaa
+ennen mainontaa. Havainto perustuu omaan testiin, mikä on parempi
+näyttö kuin verkkolähteet.
+
+**Yksi varaus:** luontiprosessin loppuun pääseminen ei ole sama
+asia kuin että mainos hyväksytään ja jakelu käynnistyy. Kun
+mainonta aloitetaan, ensimmäinen kampanja kannattaa tehdä pienellä
+budjetilla ja varmistaa että se todella pyörii, ennen kuin
+suunnitellaan isompaa.
+
+**Jäljelle jäävä peruste sivulle:** Facebookin suomalainen
+käyttäjäkunta painottuu vanhempiin ikäryhmiin, mikä osuu
+ikääntymisen merkkien kohderyhmään. Facebook ei siis ole pelkkä
+Instagramin kaksoiskappale. Tämä on kuitenkin kasvuperuste, ei
+kiireellinen.
+
+**Uusi linjaus: kovaa takarajaa ei ole.** Sivu rakennetaan kun se
+kannattaa omilla ansioillaan, ei mainonnan pakosta. Realistinen
+ajankohta on syksy, kun avaus on takana ja tiedetään mitä
+Instagram tuottaa.
+
+**Yritysportfolio on olemassa.** Koska mainostili ja maksutavat
+säilyivät, portfolio on jo pystyssä. Uusi sivu luodaan sen
+omistukseen, ei irrallisena.
+
+**Pitkällä aikavälillä molemmat pidetään.** Kun sivu on olemassa,
+Facebookin marginaalikustannus on lähellä nollaa, koska Business
+Suite julkaisee molempiin samalla kertaa.
+
+Perustelu: sivu oli vasta muutaman päivän ikäinen, siinä oli yksi
+seuraaja ja kaksi julkaisua. Tarkistuspyyntö ja mahdollinen
+edestakainen valitusprosessi on suhteettoman raskas toimenpide
+siihen nähden mitä on menetettävissä. Uudelleenrakennus on noin
+tunnin työ.
+
+Tämä on hyvä muistaa myös jatkossa: valitusprosessin
+mielekkyys riippuu siitä paljonko sivulle on kertynyt seuraajia,
+historiaa ja mainosdataa. Kun sivu on vakiintunut, laskelma
+kääntyy toisin päin ja palautusta kannattaa yrittää.
+
+**Ratkaistava ennen uuden sivun luomista:** kannattaako sivu luoda
+yritysportfolion (Business Manager) omistukseen sen sijaan että se
+on suoraan henkilötilin varassa. En tiedä varmuudella suojaako se
+henkilötilin rajoituksen vaikutuksilta, joten se on tarkistettava
+ajantasaisesta ohjeistuksesta ennen päätöstä. Nyt on oikea hetki
+päättää, koska rakenteen muuttaminen jälkikäteen on työläämpää.
+
+Alla oleva lista on tallessa jotta uudelleenrakennus on
+tunnin työ eikä päivän.
+
+Arvio kokonaistyömäärästä: noin tunti. Mikään ei ole
+korvaamatonta.
+
+| Kohta | Työmäärä | Mistä löytyy |
+|---|---|---|
+| Kansikuva | 1 min | `tuotanto/kansikuvat/kansi_C_2048.png` |
+| Profiilikuva | 1 min | nykyinen valkoinen logoympyrä |
+| Kuvaus (max 101 merkkiä) | 1 min | luku 2, sama teksti kuin Instagramissa |
+| Nimi-kenttä | 1 min | luku 2 |
+| Yhteystiedot, osoite, aukioloajat | 5 min | luku 2 |
+| Toimintanappi | 2 min | luku 2, osoittaa sivustolle |
+| **Erikoisalat, 8 kohtaa** | **20 min** | **EI KIRJATTU, kirjoitetaan uudelleen** |
+| Automaattivastaukset | 15 min | luku 4, tehdään mobiilisovelluksella |
+| Instagram-liitos | 5 min | Instagramin asetuksista |
+| Kaksi julkaistua sisältöä uudelleen | 10 min | `tuotanto/karusellit/`, `tuotanto/reels/` |
+| Meta Pixel -yhteys | 0 min | erillinen resurssi, ei riipu sivusta |
+
+**Menetettävä data:** yksi seuraaja ja kahden julkaisun
+tilastot. Ei liiketoiminnallista merkitystä.
+
+**Tarkistettava erikseen:** perjantaille 31.7. ajastettu
+laitekuvajulkaisu. Jos se oli ajastettu Business Suitessa, se on
+todennäköisesti mennyt sivun mukana ja on ajastettava uudelleen.
+Instagramin puoli on tarkistettava erikseen.
+
+**Instagram on tärkeämpi kanava.** Ensimmäisessä vertailussa
+Instagram-Reels sai 206 näyttöä ja Facebook-karuselli 27. Sivun
+menetys ei siis kaada somestrategiaa, kunhan Instagram-tili on
+kunnossa. Se on tarkistettava ensimmäisenä.
+
+**Instagram tarkistettu 28.7.2026: kunnossa.** Tili on edelleen
+yritystili eikä Facebook-sivua ole liitettynä. Vanhaa rikkinäistä
+liitosta ei siis tarvitse siivota, ja uuden sivun liittäminen
+onnistuu suoraan.
+
+### 11.4 Mistä Instagramin liitokset tarkistetaan
+
+Kaksi eri järjestelmää jotka on helppo sekoittaa keskenään.
+
+**Sivuliitos:** Instagram-sovellus, oma profiili, Muokkaa profiilia,
+kohta julkiset yritystiedot, rivi **Sivu** (Page). Tämä on se joka
+liittää yritystilin Facebook-sivuun. **Sivuliitos ei ole
+Tilikeskuksessa,** vaikka sitä sieltä ensin etsii.
+
+**Tilikeskus:** Instagram, asetukset, Tilikeskus (Accounts Center).
+Tämä kytkee Instagram-tilin henkilökohtaiseen Facebook-profiiliin
+eikä liity sivuun mitenkään. Eri järjestelmä, eri tarkoitus.
+
+**Järjestys uutta sivua luodessa:** siivoa vanha sivuliitos ensin
+jos sellainen on jäänyt roikkumaan. Muuten uuden sivun liittäminen
+voi kaatua virheeseen jota on vaikea tulkita.
 
 ---
 

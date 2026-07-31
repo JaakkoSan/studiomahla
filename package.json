@@ -2,14 +2,13 @@
   "name": "studiomahla",
   "version": "1.0.0",
   "private": true,
-  "description": "Mahlamäen Kauneusstudio – verkkosivusto. Stripe-ennakkovaraus + Supabase-esitiedot + sähköpostit (api/).",
+  "description": "Mahlamäen Kauneusstudio, verkkosivusto. Esitietolomake, hoitoloki ja tunnistautuminen (functions/api).",
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
     "otplib": "^12.0.1",
-    "resend": "^4.0.0",
-    "stripe": "^17.5.0"
+    "resend": "^4.0.0"
   }
 }

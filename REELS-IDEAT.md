@@ -6,6 +6,16 @@ Kaivettu nykyisestä blogimateriaalista 27.7.2026
 Jokainen idea on yksi itsenäinen ajatus joka toimii omana Reelsinään.
 Ideat eivät ole artikkelien tiivistelmiä vaan yksittäisiä kärkiä.
 
+**Tilamerkinnät**
+
+Käytetty idea merkitään otsikkoriville muodossa
+`— KÄYTETTY 28.7.2026`. Näin jäljellä olevien määrän voi laskea
+suoraan tiedostosta eikä sitä tarvitse päätellä julkaisulokista.
+**Automaatio ylläpitää näitä merkintöjä. Älä poista niitä.**
+
+Kun käyttämättömiä ideoita on jäljellä alle 10, automaatio käy
+sivuston ja blogit läpi ja tuottaa uusia ideoita tähän tiedostoon.
+
 **Merkinnät**
 
 Vahvuus kuvaa sitä miten hyvin idea pysäyttää selauksen ja jää mieleen.
@@ -79,7 +89,7 @@ todella tapahtuu, ei miltä se näyttää.
 Tämä on vahvin sisältöryhmä, koska vastakkainasettelu on selkeä ja
 perustelee hintaeron.
 
-### 2.1 Pistoskulma ★★★
+### 2.1 Pistoskulma ★★★ — KÄYTETTY 28.7.2026
 **Lähde:** Rulla vai kliininen
 **Kesto:** n. 17 s
 
@@ -374,6 +384,67 @@ Voit tulla meikattuna. Teemme aina kaksoispuhdistuksen ennen hoitoa.
 
 Tieto lääkityksistä, allergioista ja ihosairauksista. Ne käydään läpi
 turvallisuusarviossa.
+
+---
+
+## 8b. Lisäalueet (lisätty 28.7.2026)
+
+Kolme Reelsiä, yksi per lisäalue. Päätetty 28.7.2026 yhdessä sen
+kanssa että lisäalueista kirjoitetaan oma blogiartikkeli.
+
+**Yhteinen fysiologinen ydin kaikissa kolmessa:** näillä alueilla on
+vähemmän talirauhasia ja karvatuppeja kuin kasvoissa. Koska ihon
+pinta uusiutuu mikroneulauksen jälkeen osittain näistä rakenteista
+käsin, paraneminen kestää pidempään ja alueilla edetään
+varovaisemmin.
+
+**Ei saa väittää** että alueilla käytettäisiin pienempää
+neulasyvyyttä. Se ei pidä aina paikkaansa: herkällä iholla pienin
+syvyys on käytössä jo kasvoilla. Ks. PROJECT.md luku 3.
+
+### 8b.1 Kaula unohtuu ★★★
+**Lähde:** lisäaluesivu, Timman kuvaus
+**Kesto:** n. 15 s
+
+Kasvoja hoidetaan vuosia, kaula jää väliin. Lopputulos on epäsuhta
+jonka huomaa kauempaakin.
+
+Diat:
+1. "Hoidat kasvot. Entä kaula?"
+2. "Kaulan iho on ohuempaa ja tukikudosta on vähemmän."
+3. "Siksi muutokset näkyvät siellä usein ensin."
+4. CTA
+
+### 8b.2 Dekoltee ja aurinko ★★★
+**Lähde:** lisäaluesivu
+**Kesto:** n. 16 s
+
+Dekoltee jää paljaaksi eikä sitä suojata yhtä järjestelmällisesti
+kuin kasvoja.
+
+Diat:
+1. "Suojaatko kasvot mutta unohdat dekolteen?"
+2. "Auringon ultraviolettisäteily hajottaa kollageenia ja
+   elastiinia."
+3. "Se näkyy ihon ohentumisena ja kiinteyden vähenemisenä."
+4. CTA
+
+### 8b.3 Kädet paljastavat iän ★★★
+**Lähde:** lisäaluesivu
+**Kesto:** n. 15 s
+
+Kämmenselkien iho on ohutta ja sen alla on vähän rasvakudosta.
+Alue on jatkuvasti alttiina auringolle ja pesulle.
+
+Diat:
+1. "Kasvot kertovat yhtä, kädet toista."
+2. "Kämmenselissä on ohut iho ja vähän rasvakudosta."
+3. "Alue on jatkuvasti alttiina auringolle ja pesulle."
+4. CTA
+
+**Huom kaikkiin kolmeen:** lisäalue myydään vain kasvohoidon
+yhteydessä, ei erillisenä hoitona. Tämä on hyvä mainita
+kuvatekstissä, ei dioissa, jotta dia ei täyty ehdoista.
 
 ---
 
