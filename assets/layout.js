@@ -20,9 +20,10 @@
 
   var HEADER_HTML =
     '<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">' +
-      'Varauskalenteri on auki. Ensimmäiset vapaat ajat ovat 5.9. alkaen, ' +
+      // PÄIVITÄ VIIKOITTAIN: päivämäärä on seuraava vapaa aika Timmassa.
+      'Seuraavat vapaat ajat 5.9. ' +
       '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" aria-label="Varaa aika Timman kautta">' +
-        'varaa aikasi tästä' +
+        'Varaa aikasi tästä' +
       '</a>.' +
     '</div>' +
     '<header class="nav" role="banner">' +
