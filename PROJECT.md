@@ -311,6 +311,26 @@ päädytään, ensikäynnin hoito lasketaan sarjaan mukaan (kustannusvaikutus ne
 - 4 viikon välit hoitokerroilla (biologisesti perusteltu, ei joustava)
 - Laite: MicroPen EVO™ (FDA-hyväksytty, CE-merkitty)
 
+**Aknearvet: aina kuuden hoidon sarja** (kirjattu 5.8.2026 käyttäjän
+tiedosta). Kolmen hoidon sarja riittää ihon yleiskunnon kohentamiseen,
+mutta arven kohdalla tavoite on rakenteellinen muutos ihon syvemmissä
+kerroksissa, mikä vaatii enemmän toistoja. Älä siis esitä aknearpien
+kohdalla kolmen ja kuuden sarjaa vaihtoehtoisina.
+
+**Arpialueen hoidon vaste: pistemäinen verenvuoto** (kirjattu 5.8.2026
+käyttäjän tiedosta). Arpialueella edetään syvemmälle ja tavoiteltu
+vaste on pistemäinen verenvuoto arven kohdalla. Vuoto tyrehtyy hoidon
+aikana eikä asiakas lähde vastaanotolta verta vuotavana, mutta kasvot
+punoittavat arpihoidon jälkeen tyypillisesti hieman voimakkaammin kuin
+tavanomaisen mikroneulauksen jälkeen.
+
+**Punoituksen kesto** (täydennetty 5.8.2026 käyttäjän tiedosta): kesto on
+yksilöllinen eikä tarkkaa aikaa voi luvata, mutta suurimmalla osalla
+punoitus rauhoittuu 1–2 vuorokaudessa. Sanamuoto: kerrotaan yksilöllisyys
+ensin ja tyypillinen haarukka vasta sen jälkeen, ei toisin päin.
+Yhdenmukainen `lomake.html`:n suostumustekstin kanssa, jossa lievä
+verenvuoto on jo kirjattu normaaliksi fysiologiseksi vasteeksi.
+
 ### Mikroneulauksen lisäalueet (päätetty 28.7.2026)
 
 Myydään **vain lisäpalveluna** kasvojen mikroneulaushoidon
@@ -512,6 +532,31 @@ tai tavutus-viivaa vakiokäytännön mukaisesti.
 Sama käytäntö koskee kaikkia blogiartikkeleita, sivukuvauksia, meta-tageja,
 CTA-tekstejä ja muita asiakkaalle näkyviä tekstejä. Kun kirjoitat uutta
 sisältöä, tarkista jälkikäteen ettei tekstissä ole ajatusviivoja.
+
+**Lähdesääntö (kirjattu 5.8.2026, käyttäjän sääntö).** Jos artikkelissa
+mainitaan jokin lähde, artikkelissa on oltava myös lähdeluettelo. Ei
+poikkeuksia. Yksikin nimetty tutkimus, katsaus tai julkaisu leipätekstissä
+riittää laukaisemaan vaatimuksen.
+
+Lähdeluettelo tehdään samalla rakenteella kuin
+`mita-tutkimus-sanoo-mikroneulauksesta.html`:ssä:
+
+```html
+<section class="references" aria-labelledby="references-title">
+  <h2 id="references-title">Lähteet</h2>
+  <ol>
+    <li>Tekijä et al. Otsikko. <em>Lyhennetty julkaisun nimi.</em> Vuosi.
+      <a href="URL" target="_blank" rel="noopener noreferrer nofollow">näkyvä osoite</a></li>
+  </ol>
+</section>
+```
+
+Sijoitus: `article-body`-lohkon loppuun, "Lue lisää" -kappaleen jälkeen.
+
+**Viittaa julkaisuun, älä kustantajaan.** Esimerkiksi "Dove Medical Pressin
+katsauksessa" on väärin, koska Dove Medical Press on kustantaja. Oikein on
+julkaisun nimi: *Clinical, Cosmetic and Investigational Dermatology*. Sama
+virhe olisi sanoa "Elsevierin tutkimus".
 
 ### Terminologia ja selkokielisyys
 
@@ -826,6 +871,35 @@ tiedoston yläreunassa:
 4. Palauta sitemap.xml:ään
 5. Palauta cross-linkki `milloin-aloittaa-mikroneulaus.html`:n
    "Lue lisää"-osioon
+
+### Avausbanneri: päivitetään viikoittain (sovittu 5.8.2026)
+
+Banneri on tiedostossa `assets/layout.js`, muuttujassa `HEADER_HTML`, heti
+alussa. Se näkyy jokaisella sivulla, koska layout.js injektoi sen
+`#header-slot`-elementtiin.
+
+Nykyinen teksti:
+
+```
+Seuraavat vapaat ajat 5.9. Varaa aikasi tästä.
+```
+
+"Varaa aikasi tästä" on linkki Timmaan. **Päivämäärä on ainoa osa joka
+muuttuu, ja se on Timman seuraava aidosti vapaa aika.** Koodissa on tästä
+kommenttirivi.
+
+Käytäntö: tarkistetaan viikoittain. Vanhentunut päivämäärä on pahempi kuin
+ei päivämäärää lainkaan, koska se lupaa aikoja joita ei ole.
+
+**Päivämäärä on nyt vain tässä yhdessä paikassa.** Artikkeleiden
+CTA-teksteistä se poistettiin 5.8.2026 ja korvattiin muodolla
+"Varauskalenteri on auki, pääset varaamaan ajan tästä." Kun bannerin
+päivämäärä muuttuu, muualle ei tarvitse koskea.
+
+Muistutus on rakennettu maanantain Reels-automaatioon (VAIHE 6b). Se
+lukee päivämäärän, vertaa sitä kuluvaan päivään ja huomauttaa raportissa
+jos päivä on mennyt tai on alle viikon päässä. **Automaatio ei muuta
+tiedostoa**, koska vain käyttäjä näkee Timman todellisen tilanteen.
 
 ### Kun studio avataan yläkertaan
 - opening-state.js: `STUDIOMAHLA_POSTPONED = false`
@@ -1894,7 +1968,159 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
-### 2026-07-30
+### 2026-08-05
+- **Viikoittainen blogiehdotus, vaihtoehto B: päivitetty `mikroneulaus-opas.html`.**
+  Luettu kaikki 10 julkaistua artikkelia Chromella. Ei uutta artikkelia:
+  kaksi kattamattomista aiheista (aknearvet, herkkä iho/ruusufinni) on jo
+  kirjoitettu luonnoksina 1.8. ja odottaa hyväksyntää, muut jäljellä olevat
+  aukot (ikääntymisen merkit omana artikkelina, hinta/sisältö, mitä ei
+  kannata odottaa) eivät vielä perustele uutta tekstiä. Sen sijaan
+  pillar-oppaasta löytyi konkreettinen puute: se on ainoa julkaistu
+  artikkeli joka ei linkitä `milloin-aloittaa-mikroneulaus.html`-artikkeliin,
+  vaikka linkittää kaikkiin muihin yhdeksään. Lisätty kappale ja linkki,
+  korjattu kaksi ajatusviiva-sääntörikkomusta (rivit, joissa "—" ei ollut
+  numeroalue), päivitetty dateModified ja article-meta. Löytyi myös
+  `milloin-aloittaa-mikroneulaus.html`:ssä yksi ajatusviivarikkomus ja
+  `mikroneulaus-sopiiko-minulle.html`:ssä kolme "barrier"-sananmukaista
+  anglismia sekä avaamaton "Fitzpatrick"-termi; näitä ei korjattu tällä
+  kertaa (yksi artikkeli per viikko), merkitty seuraavaa päivityskierrosta
+  varten.
+
+### 2026-08-05
+- **Blogiautomaation viime viikolla merkitsemät korjaukset tehty.**
+  `milloin-aloittaa-mikroneulaus.html`: yksi ajatusviiva leipätekstissä
+  korvattu pisteellä. `mikroneulaus-sopiiko-minulle.html`: sana "barrier"
+  (3 esiintymää) korvattu ilmauksella "ihon oma suojakerros", kirjoitusvirhe
+  "heikkenneen" korjattu muotoon "heikentyneen", ja Fitzpatrick-luokitus
+  avattu kappaleella ennen ensimmäistä käyttöä (aiemmin termi esiintyi
+  selittämättä, vastoin luvun 5 selkokielisyyssääntöä).
+- **Aknearpi-luonnos tarkistettu julkaisukuntoon** (`aknearpien-hoito-
+  mikroneulauksella.html`, 907 sanaa). Tekninen tarkistus läpi: molemmat
+  JSON-LD-lohkot jäsentyvät, kaikki 6 sisäistä linkkiä osoittavat
+  olemassa oleviin sivuihin, tagit tasapainossa, ei ajatusviivoja
+  numeroalueiden ulkopuolella, ei anglismeja. Korjattu ennen julkaisua:
+  päivämäärä 30.7. → 5.8.2026 (JSON-LD `datePublished`, `dateModified` ja
+  `<time>`), kömpelö virke neulasyvyyden säätötarkkuudesta jaettu kahdeksi,
+  ja käyttäjän antamat kaksi kliinistä tietoa lisätty: **aknearville
+  suositellaan aina kuuden hoidon sarjaa** (aiemmin teksti esitti kolmen
+  ja kuuden sarjan vaihtoehtoisina) ja **uusi luku "Mitä arpialueella
+  tapahtuu hoidon aikana"** pistemäisestä verenvuodosta ja siitä että
+  punoitus on arpihoidon jälkeen tavallista voimakkaampaa. Molemmat
+  kirjattu myös lukuun 3. Artikkeli on nyt 1009 sanaa,
+  ja sijamuotovirhe "viikkoa ennen ja viikko jälkeen" korjattu sivuston
+  vakiomuotoon "viikkoa ennen jokaista hoitokertaa ja viikkoa sen jälkeen".
+  **Lisätty `blogi.html`-listalle** (kiinnitetyn kortin jälkeen, uusin
+  ensin) **ja `sitemap.xml`:ään.** Artikkeli on nyt julkaisuvalmis.
+- **KORJATTU: julkaistussa artikkelissa
+  `mita-tutkimus-sanoo-mikroneulauksesta.html` on lääketieteellinen
+  virhe.** Rivillä 200 lukee "atooppisiin aknearpiin" ja "Atooppiset arvet
+  ovat...". Oikea termi on **atrofinen** (kuoppamainen, kollageenia
+  menettänyt). Atooppinen tarkoittaa aivan eri asiaa, atopiaa. Saman sivun
+  lähdeluettelossa alkuperäisen tutkimuksen otsikko on oikein
+  ("atrophic scars"), joten virhe oli suomennoksessa. Esiintyi kahdesti.
+  Korjattu muotoon "atrofisiin aknearpiin" ja "Atrofiset eli kuoppamaiset
+  arvet ovat". Aknearpi-artikkelissa termi oli jo alun perin oikein, joten
+  sivustolla on nyt yksi yhtenäinen termi.
+- **Sama sivu: anglismi "peer-reviewed" korjattu** muotoon
+  "vertaisarvioidussa" (luvun 5 kirjoitussääntö).
+  **Avoin, ei korjattu:** molemmissa artikkeleissa lukee "Dove Medical
+  Pressin katsauksessa". Dove Medical Press on kustantaja, ei julkaisu.
+  Oikea julkaisu käy ilmi lähdeluettelosta: *Clinical, Cosmetic and
+  Investigational Dermatology* (2020). **Korjattu käyttäjän pyynnöstä
+  molempiin artikkeleihin:** viittaus on nyt julkaisun nimellä, ei
+  kustantajan. Sääntö kirjattu lukuun 5.
+- **UUSI PYSYVÄ SÄÄNTÖ (käyttäjä, 5.8.2026): jos artikkelissa mainitaan
+  lähde, artikkelissa on oltava lähdeluettelo.** Kirjattu lukuun 5 yhdessä
+  HTML-rakenteen kanssa. Tarkistin koko sivuston: vain kaksi artikkelia
+  nimeää lähteitä leipätekstissä, ja niistä `mita-tutkimus-sanoo-` oli
+  ainoa jolla luettelo oli. **Lisätty lähdeluettelo artikkeliin
+  `aknearpien-hoito-mikroneulauksella.html`** (Sitohang ym. 2021,
+  *Int Wound J.* ja *Clin Cosmet Investig Dermatol.* 2020). Muut
+  artikkelit eivät nimeä lähteitä, joten ne eivät vaadi luetteloa.
+- **Avausbanneri muutettu** (`assets/layout.js`, `HEADER_HTML`).
+  Vanha: "Varauskalenteri on auki. Ensimmäiset vapaat ajat ovat 5.9.
+  alkaen, varaa aikasi tästä." Uusi: **"Seuraavat vapaat ajat 5.9.
+  Varaa aikasi tästä."** Linkki säilyi Timmaan, `aria-label`
+  ennallaan. Syntaksi tarkistettu `node --check`, ja banneri
+  renderöitiin ohjelmallisesti näkyvän tekstin varmistamiseksi.
+  **Sovittu että päivämäärä päivitetään viikoittain**, koodiin lisätty
+  kommenttirivi ja käytäntö kirjattu lukuun 9. Sama päivämäärä esiintyy
+  myös artikkelien CTA-teksteissä.
+- **Päivämäärät poistettu artikkelien CTA-teksteistä.** Uusi vakiomuoto
+  kaikkialla: "Varauskalenteri on auki, pääset varaamaan ajan tästä."
+  Päivämäärä esiintyy nyt vain bannerissa, joten viikoittainen päivitys
+  on yhden rivin työ.
+  **Löydös samalla:** `mita-ensikaynnilla-tapahtuu.html` oli jäänyt
+  kokonaan vanhaan ennakkomalliin. Sen CTA luki "Jonotuslistalaisille
+  ilmoitamme avajaispäivän ensimmäisenä" ja painike "Liity
+  jonotuslistalle", vaikka muu sivusto kertoo kalenterin olevan auki.
+  Painike renderöityi silti tekstillä "Ajanvaraus", koska
+  `opening-state.js` korvaa kaikkien `[data-cta="booking"]`-painikkeiden
+  tekstin. Kappale ja painike oli siis ristiriidassa keskenään.
+  Yhtenäistetty muiden kanssa. Jonotuslista-jäänteitä ei ole enää
+  yhdelläkään sivulla.
+- **Muistutus bannerista lisätty maanantain Reels-automaatioon**
+  (VAIHE 6b). Lisätty sekä ajastettuun tehtävään että varmuuskopioon
+  `tuotanto/automaatiot/viikoittaiset-reelsit.md`. Automaatio lukee
+  päivämäärän, vertaa sitä kuluvaan päivään ja huomauttaa raportissa jos
+  se on mennyt tai on alle viikon päässä. Se **ei muuta tiedostoa**,
+  koska Timman todellista tilannetta ei voi päätellä koodista.
+- **Punoituksen kesto lisätty arpialuekappaleeseen:** "Kesto on
+  yksilöllinen, mutta useimmilla punoitus rauhoittuu yhdestä kahteen
+  vuorokauteen." Kirjattu myös lukuun 3.
+- **dateModified päivitetty 5.8.2026:ksi** kaikkiin kolmeen tänään
+  muokattuun julkaistuun artikkeliin (`mita-tutkimus-sanoo-`,
+  `milloin-aloittaa-`, `mikroneulaus-sopiiko-minulle`), samoin näiden
+  `lastmod` sitemapissa. Sitemapista poistettiin samalla
+  `mita-tutkimus-sanoo-` -sivun kaksoiskappale joka syntyi lisäyksen
+  yhteydessä. Sitemapissa on nyt 14 osoitetta, kaikki uniikkeja, ja
+  XML jäsentyy.
+
+### 2026-08-02
+- **Reels-automaation ajoaika siirretty maanantailta klo 10 klo 8:aan**,
+  jotta videot ovat valmiina kun käyttäjä tulee töihin. Päivitetty
+  kolmeen paikkaan: ajastettu tehtävä, varmuuskopio
+  `tuotanto/automaatiot/viikoittaiset-reelsit.md` (frontmatter `cron`) ja
+  taulukko `tuotanto/automaatiot/LUE-TAMA.md`.
+  **Huom: `agape-viikkoraportti` ajetaan myös maanantaisin klo 8.**
+  Tehtävät ovat eri projekteista eivätkä käytä samoja tiedostoja, joten
+  törmäystä ei pitäisi syntyä, mutta jos ajot ruuhkautuvat toinen
+  siirretään.
+- **Karttapakettia koskeva epävarmuus poistui.** 1.8. mittaus vahvisti
+  kirjautumattomana että "kliininen mikroneulaus kotka" näyttää
+  karttapaketin ja studiomahla.fi on siinä 1. sijalla ilman
+  omistajamerkintää. Aiempi varaus (että ilmiö olisi voinut johtua
+  kirjautuneesta istunnosta) ei siis pidä paikkaansa.
+- **Hakusijoituksen nostamisen vivut käyty läpi keskustelussa, ei
+  toimenpiteitä.** Johtopäätös: etusivun sivunsisäinen optimointi on jo
+  kunnossa (`<title>` ja meta description sisältävät "Kliininen
+  mikroneulaus Kotka"), ja etusivu **saa** olla mikroneulaussivu siihen
+  asti että palveluille tehdään omat sivunsa. Jäljelle jäävät vivut ovat
+  ulkoiset linkit ja maininnat, Google-yritysprofiilin arvostelut
+  (mahdollisia vasta avauksesta 5.9. alkaen) ja verkkotunnuksen ikä.
+  Mikään näistä ei korjaannu sivustoa muokkaamalla.
+  **Tunnistettu tuleva riski (liittyy lukuun 14.5):** kun etusivu
+  muutetaan Vaihe 2:ssa brändiportiksi ja mikroneulaus siirtyy omalle
+  pillar-sivulleen, nykyinen sijoitus on siirrettävä uudelle sivulle
+  tietoisesti sisäisellä linkityksellä. Muuten osuma katoaa väliin.
+  Ei kirjattu lukuun 14.5, koska käyttäjä ei ole vielä päättänyt.
+
+### 2026-08-01
+- **Hakusanaseuranta ajettu kuukauden ensimmäisenä mittauksena** (TASO 1,
+  kirjautumaton profiili, kaikki 10 hakusanaa). Tulokset kokonaisuudessaan
+  `tuotanto/hakusanaseuranta.md`.
+  **Merkittävin havainto: "kliininen mikroneulaus kotka" on nyt 1. sija sekä
+  orgaanisesti että karttapaketissa, ilman omistajamerkintää.** Tämä on
+  ensimmäinen kerta kun tämä hakusana on mitattu puhtaasti kirjautumattomana;
+  aiemmat kaksi mittausta (30.7.) tehtiin vahingossa kirjautuneena samalle
+  tilille joka omistaa Google-yritysprofiilin, joten tulos ei ollut
+  luotettava. Nyt on.
+  **mikroneulaus kotka pysyi sijalla 8**, ei muutosta 31.7. mittaukseen.
+  **aknehoito kotka -haussa Google korjasi kyselyn automaattisesti muotoon
+  "aknen hoito kotka"**, mikä muutti koko tulosjoukon eikä studiomahla.fi
+  näkynyt enää top 10:ssä (oli sija 3). Tätä ei tulkita sijoituksen
+  pudotukseksi, koska kyse voi olla hakukoneen tulkinnasta eikä
+  sijoituksesta. Seurataan seuraavassa mittauksessa jatkuuko autokorjaus.
 - **Hakusanaseuranta ajettu ensimmäistä kertaa** (`tuotanto/hakusanaseuranta.md`).
   **Havainto joka vaatii päätöksen: incognito-ikkunaa ei pystynyt avaamaan
   käytettävissä olevilla Claude in Chrome -työkaluilla** (ei tabs_create_mcp:ssä,
@@ -1922,6 +2148,31 @@ muutoksia.
   sitemap.xml, muut artikkelit koskemattomia) käyttäjän hyväksyntää odottaen.
 
 ### 2026-07-31
+- **Hakusanaseurannan menetelmä saatu kuntoon.** Käyttäjä loi
+  erillisen Chrome-profiilin ja asensi siihen Claude in Chromen.
+
+  **Keskeinen havainto: Chromeen kirjautuminen ja
+  google.com-verkkoistunnon kirjautuminen ovat eri asioita.** Uusi
+  profiili näytti Chromessa "ei kirjautuneena" mutta oli silti
+  kirjautunut Google-istuntoon tilillä jaakko.sandstrom@gmail.com.
+  Ainoa luotettava tarkistus on hakusivun oikea yläkulma:
+  "Kirjaudu"-painike tarkoittaa kirjautumatonta, profiilikuva
+  värirenkaassa kirjautunutta.
+
+  Uloskirjautumisen jälkeen mittaus onnistui. **Sija 8 hakusanalla
+  "mikroneulaus kotka", sijoittuva sivu etusivu.**
+
+  **Karttapaketti: puuttuminen on oikea havainto, ei mittausvirhe.**
+  Claude epäili automaation ensimmäistä tulosta perusteettomasti.
+  Varmistettu neljä kertaa. Huom kuitenkin että haussa "kliininen
+  mikroneulaus kotka" karttapaketti näkyy, joten puuttuminen on
+  hakusanakohtaista eikä yleistä.
+
+  Automaation ohje päivitetty: selaimen valinta kysytään
+  käyttäjältä, kirjautumattomuus varmistetaan kuvakaappauksesta,
+  evästekyselyyn vastataan "Hylkää kaikki", eikä Claude kirjaudu
+  ulos käyttäjän tileiltä. Lisätty 31.7. vertailukohta, johon
+  jatkossa verrataan.
 - **Tiimiosio julkaistu etusivulle**, filosofia-osion jälkeen ennen
   menetelmäosiota. **Otsikko on "Tiimi"**, ei pikkuotsikkoa.
   **Vain Jaakon kuva ja esittely.** Kuva kelluu vasemmalla ja
@@ -1946,6 +2197,25 @@ muutoksia.
 
   Alkuperäinen vaalea versio jätettiin kansioon, koska sitä
   tarvitaan jos osio joskus palaa tummaksi.
+- **Tarkennus: työkansiossa on myös julkaisemattomia luonnoksia.**
+  Claude epäili että kaksi sitemapista puuttuvaa artikkelia voisi
+  päätyä hakuun tarkistamattomana. Huoli oli aiheeton: **tiedostot
+  ovat vain paikallisessa kansiossa eikä niitä ole viety gitiin**,
+  joten ne eivät ole palvelimella lainkaan.
+
+  **Työkansio sisältää siis sekä julkaistut tiedostot että
+  luonnokset.** Tämä on kunnossa mutta hyvä tiedostaa: paikallisen
+  tiedoston olemassaolo ei tarkoita että se olisi sivustolla.
+  Julkaistun sisällön totuus on sivusto, ei kansio. Tämä on jo
+  huomioitu blogiautomaation ohjeessa.
+
+  Odottavat luonnokset:
+
+  | Tiedosto | Otsikko | Sanoja |
+  |---|---|---|
+  | `aknearpien-hoito-mikroneulauksella.html` | Aknearpien hoito mikroneulauksella | 1001 |
+  | `herkka-iho-ruusufinni-mikroneulaus.html` | Herkkä iho ja ruusufinni | 1095 |
+  | `proxn-kasvohoito.html` | ProXN-kasvohoito | 932 |
 - **RATKENNUT: työkansio täsmää nyt palvelimen kanssa.**
   Paikallisesta kansiosta puuttui kolme tiedostoa jotka olivat
   palvelimella. Käyttäjä lisäsi ne 31.7.
@@ -3076,4 +3346,4 @@ muutoksia.
 
 ---
 
-**Viimeksi päivitetty**: 2026-07-27
+**Viimeksi päivitetty**: 2026-08-05

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Mahlamäen Kauneusstudio – sitemap
-  Päivitetty: 2026-07-23
+  Päivitetty: 2026-08-05
 
   KUN LISÄÄT UUDEN SIVUN (esim. uuden blogi-artikkelin):
     1. Lisää uusi <url>-blokki tähän
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://www.studiomahla.fi/milloin-aloittaa-mikroneulaus.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,13 +50,7 @@
   </url>
   <url>
     <loc>https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.studiomahla.fi/mita-tutkimus-sanoo-mikroneulauksesta.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -79,8 +73,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.studiomahla.fi/aknearpien-hoito-mikroneulauksella.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiomahla.fi/mita-tutkimus-sanoo-mikroneulauksesta.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.studiomahla.fi/blogi.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
