@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hinnasto | Mahlamäen Kauneusstudio</title>
+  <meta name="description" content="Kliinisen mikroneulauksen hinnat Kotkassa. Ensikäynti 200 euroa, kolmen hoidon sarja 570 euroa ja kuuden hoidon sarja 1080 euroa. Lisäalueet 35 euroa alueelta.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.studiomahla.fi/hinnasto.html">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <meta property="og:site_name" content="Mahlamäen Kauneusstudio">
+  <meta property="og:title" content="Hinnasto | Mahlamäen Kauneusstudio">
+  <meta property="og:description" content="Kliinisen mikroneulauksen hinnat Kotkassa. Ensikäynti, sarjahoidot ja lisäalueet.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:url" content="https://www.studiomahla.fi/hinnasto.html">
+  <meta property="og:image" content="https://www.studiomahla.fi/assets/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mahlamäen Kauneusstudio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hinnasto | Mahlamäen Kauneusstudio">
+  <meta name="twitter:description" content="Kliinisen mikroneulauksen hinnat Kotkassa. Ensikäynti, sarjahoidot ja lisäalueet.">
+  <meta name="twitter:image" content="https://www.studiomahla.fi/assets/og-default.jpg">
+
+  <meta name="theme-color" content="#3d5247">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+
+  <!-- JSON-LD SCHEMA: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Etusivu",
+        "item": "https://www.studiomahla.fi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hinnasto"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* Hinnastorivit. Nämä tyylit ovat vain tällä sivulla, koska muualla
+       sivustolla ei ole vastaavaa listarakennetta. Värit tulevat sivuston
+       omista muuttujista, uusia ei ole lisätty. */
+    .hinta-lista { list-style: none; padding: 0; margin: 28px 0 32px; }
+    .hinta-rivi {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 24px; padding: 20px 0;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.14);
+    }
+    .hinta-rivi:last-child { border-bottom: 0; }
+    .hinta-rivi__teksti { flex: 1 1 auto; }
+    /* .article-body p on tarkkuudeltaan 0,1,1, joten pelkkä luokkavalitsin
+       ei riittäisi vaan leipätekstin koko voittaisi. Siksi .article-body
+       on mukana jokaisessa kappaletason säännössä. */
+    .article-body .hinta-rivi__nimi {
+      font-family: var(--font-serif); font-size: 21px; line-height: 1.3;
+      color: var(--text-dark); margin: 0;
+    }
+    .article-body .hinta-rivi__kuvaus {
+      font-size: 14.5px; line-height: 1.75; color: var(--text-mid);
+      margin: 6px 0 0; max-width: 46em;
+    }
+    .hinta-rivi__hinta {
+      flex: 0 0 auto; text-align: right;
+      font-family: var(--font-serif); font-size: 23px; line-height: 1.2;
+      color: var(--text-dark); white-space: nowrap;
+    }
+    .hinta-rivi__yksikko {
+      display: block; margin-top: 5px;
+      font-family: var(--font-sans); font-size: 11.5px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-mid);
+    }
+    .article-body .hinta-huomio {
+      font-size: 14.5px; line-height: 1.8; color: var(--text-mid);
+      border-left: 1px solid var(--pink); padding-left: 18px; margin: 0 0 8px;
+    }
+    @media (max-width: 520px) {
+      .hinta-rivi { flex-direction: column; gap: 8px; }
+      .hinta-rivi__hinta { text-align: left; }
+      .hinta-rivi__yksikko { margin-top: 2px; }
+    }
+  </style>
+  <!-- Meta Pixel -->
+  <script src="/assets/meta-pixel.js"></script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1720418568979435&ev=PageView&noscript=1" alt=""/></noscript>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
+<div id="header-slot"></div>
+<main id="main-content">
+  <header class="article-hero">
+    <div class="article-hero__inner">
+      <p class="label label--mid">Hinnasto</p>
+      <h1>Hoidot ja hinnat</h1>
+      <p class="article-lead">
+        Kaikki hoidot toteuttaa terveydenhuollon ammattilainen Kotkan Ruonalassa. Hoito valitaan aina ihon tilanteen mukaan, joten kaikki alkaa ensikäynnistä. Hinnat sisältävät arvonlisäveron.
+      </p>
+    </div>
+  </header>
+  <div class="article-body">
+
+    <h2>Ensikäynti</h2>
+    <ul class="hinta-lista">
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Ensikäynti</p>
+          <p class="hinta-rivi__kuvaus">Iho-analyysi, keskustelu ja hoitosuunnitelma sekä ensimmäinen kliininen mikroneulaushoito samalla käynnillä. Kestää kokonaisuudessaan noin tunnin.</p>
+        </div>
+        <div class="hinta-rivi__hinta">200 €</div>
+      </li>
+    </ul>
+    <p>
+      Ensikäynnillä arvioidaan ihon tilanne, laaditaan hoitosuunnitelma ja tehdään ensimmäinen hoito samalla käynnillä. Jos päädyt sarjahoitoon, ensikäynnin hoito lasketaan sarjaan mukaan, joten kustannusvaikutus on neutraali. <a href="mita-ensikaynnilla-tapahtuu.html">Mitä ensikäynnillä tapahtuu</a> käy läpi käynnin kulun vaihe vaiheelta.
+    </p>
+
+    <h2>Kliinisen mikroneulauksen sarjahoidot</h2>
+    <ul class="hinta-lista">
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Kolmen hoidon sarja</p>
+          <p class="hinta-rivi__kuvaus">Ihon yleisen kunnon ja kimmoisuuden vahvistaminen, lievät ikääntymisen merkit, hienot juonteet.</p>
+        </div>
+        <div class="hinta-rivi__hinta">570 €<span class="hinta-rivi__yksikko">190 € / hoito</span></div>
+      </li>
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Kuuden hoidon sarja</p>
+          <p class="hinta-rivi__kuvaus">Syvemmät rakenteelliset tulokset: aknearvet, syvemmät juonteet, vahvempi pigmentti.</p>
+        </div>
+        <div class="hinta-rivi__hinta">1080 €<span class="hinta-rivi__yksikko">180 € / hoito</span></div>
+      </li>
+    </ul>
+    <p>
+      Hoitokerrat ajoitetaan noin neljän viikon välein, mikä on linjassa ihon luonnollisen uusiutumissyklin kanssa. Väli ei ole joustava, koska kollageenin kypsyminen vie oman aikansa. <a href="mikroneulaus-sarjahoito.html">Sarjahoidon biologia</a> selittää miksi yksi hoitokerta ei riitä ja miten sarjan pituus valitaan.
+    </p>
+    <p class="hinta-huomio">
+      Aknearpien hoidossa suositellaan aina kuuden hoidon sarjaa. Kolmen hoidon sarja riittää ihon yleiskunnon kohentamiseen, mutta arven kohdalla tavoite on rakenteellinen muutos ihon syvemmissä kerroksissa. <a href="aknearpien-hoito-mikroneulauksella.html">Aknearpien hoito mikroneulauksella</a> käsittelee tämän tarkemmin.
+    </p>
+    <p>
+      Sarja sovitaan aina ensikäynnin jälkeen, ei ennen sitä. Näin hoitosuunnitelma perustuu ihon todelliseen tilanteeseen eikä arvioon.
+    </p>
+
+    <h2>Lisäalueet</h2>
+    <ul class="hinta-lista">
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Kaulan alue</p>
+          <p class="hinta-rivi__kuvaus">Kaulan iho on ohuempaa kuin kasvojen iho ja tukikudosta on vähemmän, joten muutokset näkyvät siellä varhain.</p>
+        </div>
+        <div class="hinta-rivi__hinta">35 €<span class="hinta-rivi__yksikko">per hoitokerta</span></div>
+      </li>
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Dekolteen alue</p>
+          <p class="hinta-rivi__kuvaus">Alue jää usein paljaaksi ja saa runsaasti auringonvaloa, mikä hajottaa ihon kollageenia ja elastiinia.</p>
+        </div>
+        <div class="hinta-rivi__hinta">35 €<span class="hinta-rivi__yksikko">per hoitokerta</span></div>
+      </li>
+      <li class="hinta-rivi">
+        <div class="hinta-rivi__teksti">
+          <p class="hinta-rivi__nimi">Kämmenselät</p>
+          <p class="hinta-rivi__kuvaus">Käden yläpuolen iho on ohutta ja sen alla on vähän rasvakudosta. Alue on jatkuvasti alttiina auringolle ja pesulle.</p>
+        </div>
+        <div class="hinta-rivi__hinta">35 €<span class="hinta-rivi__yksikko">per hoitokerta</span></div>
+      </li>
+    </ul>
+    <p>
+      Lisäalueet hoidetaan kasvojen mikroneulaushoidon yhteydessä, eivät erillisenä hoitona. Samalla käynnillä puhdistus, iho-analyysi ja jälkihoito-ohjeistus on jo tehty, mikä pitää lisäalueen hinnan matalana.
+    </p>
+    <p>
+      Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa. <a href="mikroneulaus-kaula-dekoltee-kadet.html">Kaulan, dekolteen ja käsien mikroneulaus</a> kertoo miksi näiden alueiden iho eroaa kasvojen ihosta.
+    </p>
+
+    <h2>Mitä hintaan sisältyy</h2>
+    <ul class="article-list">
+      <li>Terveydenhuollon ammattilaisen aika ja osaaminen</li>
+      <li>Steriili kertakäyttöinen neulapää, joka avataan asiakkaan nähden</li>
+      <li>Hoidon aikana käytetyt tuotteet</li>
+      <li>Hoitava voide ensimmäisen 24 tunnin ajaksi</li>
+      <li>Jälkihoito-ohjeet</li>
+    </ul>
+    <p>
+      Erillisiä toimisto- tai varausmaksuja ei ole. <a href="mikroneulauksen-jalkihoito.html">Jälkihoito-opas</a> käy läpi ensimmäisen vuorokauden ja sitä seuraavat 30 päivää.
+    </p>
+
+    <h2>Varaaminen ja maksaminen</h2>
+    <p>
+      Ajanvaraus tapahtuu Timman kautta. Voit varata ajan <a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener">suoraan tästä</a> tai sivuston yläreunan Ajanvaraus-painikkeesta.
+    </p>
+    <p>
+      Maksutapoina käytössä ovat korttimaksut, sekä pankki- että luottokortit, ja Klarna. Jos haluat maksaa käteisellä, varaathan tasarahan mukaan. Maksu suoritetaan käynnin yhteydessä, ei varausta tehdessä.
+    </p>
+    <p>
+      Jos jokin jää mietityttämään ennen varaamista, vastaamme mielellämme osoitteessa <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>. <a href="mikroneulaus-sopiiko-minulle.html">Kenelle mikroneulaus sopii ja kenelle ei</a> sisältää myös 12 kysymyksen itsearvioinnin, jonka voi käydä läpi jo etukäteen.
+    </p>
+
+  </div>
+  <aside class="article-cta">
+    <div class="article-cta__inner">
+      <h2>Aloita ensikäynnillä</h2>
+      <p>
+        Arvioimme ihosi tilanteen yksilöllisesti ja laadimme juuri sinulle sopivan hoitosuunnitelman. Varauskalenteri on auki, pääset varaamaan ajan tästä.
+      </p>
+      <a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn" aria-label="Varaa aika Timman kautta">Ajanvaraus</a>
+    </div>
+  </aside>
+</main>
+<div id="footer-slot"></div>
+<script src="/assets/layout.js" defer></script>
+<script src="/assets/opening-state.js" defer></script>
+</body>
+</html>

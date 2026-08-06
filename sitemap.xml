@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Mahlamäen Kauneusstudio – sitemap
-  Päivitetty: 2026-08-05
+  Päivitetty: 2026-08-06
 
   KUN LISÄÄT UUDEN SIVUN (esim. uuden blogi-artikkelin):
     1. Lisää uusi <url>-blokki tähän
@@ -14,13 +14,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.studiomahla.fi/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.studiomahla.fi/hinnasto.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.studiomahla.fi/mikroneulaus-opas.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,43 +38,43 @@
   </url>
   <url>
     <loc>https://www.studiomahla.fi/mita-ensikaynnilla-tapahtuu.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.studiomahla.fi/mikroneulauksen-jalkihoito.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.studiomahla.fi/mikroneulaus-sarjahoito.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.studiomahla.fi/mikroneulaus-sarjahoito.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.studiomahla.fi/mikroneularulla-vai-kliininen-mikroneulaus.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.studiomahla.fi/mita-on-kliininen-mikroneulaus.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.studiomahla.fi/mikroneulaus-kaula-dekoltee-kadet.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

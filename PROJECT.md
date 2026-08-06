@@ -294,6 +294,12 @@ markkinointimomenttia yhden sijaan).
 
 ## 3. Palvelut ja hinnoittelu
 
+**Yhtiö on arvonlisäverovelvollinen** (vahvistettu 6.8.2026). Kaikki
+asiakkaalle näkyvät hinnat ovat verollisia lopullisia hintoja. Tämä on
+kirjattu näkyviin `hinnasto.html`-sivulle. Muista tämä kun lasket
+katteita: luvun 14c-tyyppisissä laskelmissa alv on vähennettävä ennen
+katetta, mikä on aiemmin kertaalleen unohtunut.
+
 ### Ensikäynti (200 €)
 Sisältää: iho-analyysi + keskustelu + henkilökohtaisesti valittu hoito.
 Hoitovaihtoehto valitaan yhdessä asiakkaan kanssa iho-analyysin perusteella:
@@ -789,8 +795,37 @@ sivut päivittyvät automaattisesti.
 
 ## 7. Sivut nykyisin
 
-### Asiakassivut (13)
+### Hinnastosivu (luotu 6.8.2026)
+
+`hinnasto.html`, linkitetty päänavigaatiosta ennen Blogia. 402 sanaa.
+
+**Laajuus rajattu tarkoituksella nykyiseen tarjontaan** (käyttäjän
+päätös): ensikäynti 200 €, kolmen hoidon sarja 570 €, kuuden hoidon
+sarja 1080 €, lisäalueet 35 €/alue sarja-alennuksineen. ProXN ja LED
+jätettiin pois, koska ProXN-sarjahinnat eivät ole lukittuja eikä
+LED-laitetta ole hankittu. Sivu ei siis lupaa mitään mitä ei voi ostaa.
+
+**Etusivun hinnasto-osio jätettiin ennalleen** (käyttäjän päätös).
+Sisältö on siis kahdessa paikassa. **Seuraus jonka on oltava tiedossa:
+jokainen hinnanmuutos on tehtävä sekä `index.html`:ään että
+`hinnasto.html`:ään.** Etusivun osio tiivistetään ja linkitetään
+hinnastoon siinä vaiheessa kun uusia palveluita julkaistaan.
+
+Tekninen huomio: sivu käyttää `article-hero` ja `article-body`
+-rakennetta, ja hinnastorivien tyylit ovat sivun omassa
+`<style>`-lohkossa. **Kappaletason säännöissä on oltava `.article-body`
+mukana**, koska `style.css`:n `.article-body p` on tarkkuudeltaan
+suurempi kuin pelkkä luokkavalitsin ja voittaisi muuten. Tämä on
+kirjattu myös CSS-kommenttiin.
+
+Sivulle ei tehty Offer-skeemaa, koska etusivun BeautySalon-lohkon
+`hasOfferCatalog` on jo sivuston kanoninen hintailmoitus. Kaksi
+päällekkäistä tarjousilmoitusta eri osoitteissa olisi turha
+ristiriidan lähde. Hinnastosivulla on vain BreadcrumbList.
+
+### Asiakassivut (14)
 - **index.html** — etusivu (hero + filosofia + menetelmä + haasteet + vertailu)
+- **hinnasto.html** — hinnasto (navigaatiossa ennen Blogia), ks. luku yllä
 - **blogi.html** — blogilista (blog-hero tumma vihreä)
 - **privacy.html** — tietosuojaseloste
 - **lomake.html** — esitietolomake (Supabase-tallennus)
@@ -2156,6 +2191,22 @@ muutoksia.
   vihjettä. Oppaan "palautumisaika" tarkoittaa hoitokertojen väliä, ja
   ensikäyntiartikkelin toinen maininta koskee ulkonäköä ennen häitä tai
   juhlia, mikä on oikea käyttö.
+- **Hinnastosivu `hinnasto.html` luotu ja lisätty navigaatioon** ennen
+  Blogia. Yksityiskohdat luvussa 7. Muutetut tiedostot: uusi
+  `hinnasto.html`, `assets/layout.js` (navilinkki ja `is-current`
+  -käsittely hinnastosivulle) ja `sitemap.xml`.
+  **Ratkaistu: yhtiö on alv-velvollinen** (käyttäjän vahvistus 6.8.2026).
+  Lisätty hinnastosivun ingressiin "Hinnat sisältävät arvonlisäveron."
+  Tieto kirjattu myös lukuun 3.
+  **Ensikäynnin kuvausta täsmennetty käyttäjän huomautuksesta.** Aiemmin
+  luki "ensimmäinen hoito", mistä saattoi saada käsityksen että kyse on
+  pelkästä arviokäynnistä. Nyt: "Iho-analyysi, keskustelu ja
+  hoitosuunnitelma sekä ensimmäinen kliininen mikroneulaushoito samalla
+  käynnillä." Sama täsmennys tehty myös osion leipätekstiin.
+  **Huom: alv-mainintaa ei ole etusivun hinnasto-osiossa.** Se ei ole
+  virhe, koska näytetty hinta on lopullinen hinta, mutta maininta
+  kannattaa lisätä siinä vaiheessa kun etusivun osio muutenkin
+  päivitetään.
 - **Etusivun ajatusviivat korvattu (13 kohtaa).** Käyttäjän linjaus:
   otsikkotasolla ajatusviiva saa olla, leipätekstissä ei. Korvaukset:
   pilkku appositioissa ("elastiinia, ihon tärkeimpiä rakennusaineita"),
