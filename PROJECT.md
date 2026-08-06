@@ -324,10 +324,28 @@ aikana eikä asiakas lähde vastaanotolta verta vuotavana, mutta kasvot
 punoittavat arpihoidon jälkeen tyypillisesti hieman voimakkaammin kuin
 tavanomaisen mikroneulauksen jälkeen.
 
-**Punoituksen kesto** (täydennetty 5.8.2026 käyttäjän tiedosta): kesto on
-yksilöllinen eikä tarkkaa aikaa voi luvata, mutta suurimmalla osalla
-punoitus rauhoittuu 1–2 vuorokaudessa. Sanamuoto: kerrotaan yksilöllisyys
-ensin ja tyypillinen haarukka vasta sen jälkeen, ei toisin päin.
+**Punoituksen ja kireyden kesto** (kirjattu 5.8.2026, täydennetty
+6.8.2026 käyttäjän tiedosta): vaihtelu on yksilöllistä eikä tarkkaa aikaa voi luvata.
+**Suurin osa punoituksesta laskee vuorokauden aikana, mutta toisilla se
+voi jatkua pari päivää. Kireä tunne voi kestää joitakin päiviä**, eli
+pidempään kuin punoitus. Arpialueen hoidon jälkeen punoitus on
+tavallista voimakkaampaa ja rauhoittuu useimmilla 1–2 vuorokaudessa.
+Sanamuoto: kerrotaan yksilöllisyys ensin ja tyypillinen haarukka vasta
+sen jälkeen, ei toisin päin. **Älä esitä punoitusta ja kireyttä samana
+asiana samalla kestolla**, koska ne eivät kulje samaa tahtia.
+
+**Toipumisaika: hoito ei vaadi lepoa** (kirjattu 6.8.2026 käyttäjän
+tarkennuksesta). Arkea voi jatkaa heti hoidon jälkeen: töitä, asiointia,
+kaupassa käyntiä. Rajoitukset ovat jälkihoito-ohjeiden rajoituksia, eivät
+toimintakyvyn rajoituksia. Ensimmäisen vuorokauden ajan vältetään
+meikkiä, saunaa, liikuntaa ja aurinkoa.
+
+**Älä kirjoita että iho on "vuorokaudessa siinä kunnossa että arkea voi
+jatkaa"**, koska se antaa ymmärtää että arki keskeytyy vuorokaudeksi.
+Punoituksen kesto koskee ulkonäköä, ei sitä mitä voi tehdä. Nämä kaksi
+pidetään erillään. Ainoa kohta jossa palautumisaika kannattaa mainita
+ajoituksen perusteena on tärkeä tapahtuma kuten häät, ja siinäkin kyse
+on ulkonäöstä.
 Yhdenmukainen `lomake.html`:n suostumustekstin kanssa, jossa lievä
 verenvuoto on jo kirjattu normaaliksi fysiologiseksi vasteeksi.
 
@@ -532,6 +550,23 @@ tai tavutus-viivaa vakiokäytännön mukaisesti.
 Sama käytäntö koskee kaikkia blogiartikkeleita, sivukuvauksia, meta-tageja,
 CTA-tekstejä ja muita asiakkaalle näkyviä tekstejä. Kun kirjoitat uutta
 sisältöä, tarkista jälkikäteen ettei tekstissä ole ajatusviivoja.
+
+**Persoonasääntö: sekä minä- että me-muoto ovat käytössä** (kirjattu
+6.8.2026, käyttäjän sääntö). Ne eivät ole vaihtoehtoja toisilleen vaan
+niillä on eri tehtävä. Valinta ei ole tyylikysymys vaan riippuu siitä
+kuka tekee sen mitä lause kuvaa.
+
+- **Minä-muoto, kun puhuja kertoo tekstistä itsestään.** Kirjoittaja
+  johdattaa lukijaa artikkelin läpi. "Tässä artikkelissa kerron...",
+  "käyn läpi miksi...", "avaan tarkemmin...".
+- **Me-muoto, kun kuvataan mitä studiolla tehdään.** Taustalla on tiimi,
+  ei yksi ihminen. "Arvioimme ihosi tilanteen...", "laadimme
+  hoitosuunnitelman...", "hoidon päätteeksi käymme läpi jälkihoito-ohjeet".
+
+Sama verbi voi siis olla kummassa muodossa tahansa asiayhteyden mukaan.
+"Käyn läpi" artikkelissa tarkoittaa kirjoittajaa, "käymme läpi"
+hoitohuoneessa tarkoittaa studiota. Tarkista aina kumpi on kyseessä, älä
+yhtenäistä mekaanisesti.
 
 **Lähdesääntö (kirjattu 5.8.2026, käyttäjän sääntö).** Jos artikkelissa
 mainitaan jokin lähde, artikkelissa on oltava myös lähdeluettelo. Ei
@@ -1968,6 +2003,195 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-08-06
+- **HUOM: tämän istunnon työ jakautuu kahdelle päivälle.** Kaikki alla
+  oleva tehtiin 6.8. illalla, mutta se oli aluksi kirjattu 5.8. alle,
+  koska en tarkistanut päivää bashilla vaan luotin istunnon alussa
+  saatuun tietoon. Käyttäjä huomasi ristiriidan kansion
+  muokkauspäivistä. **Sääntö: päivämäärä tarkistetaan aina bashilla
+  (`date`) ennen kuin sitä kirjoitetaan mihinkään.** Sama sääntö on
+  jo Reels-automaation ohjeessa, mutta sitä ei ollut täällä.
+- **Julkaisumetatiedot korjattu käyttäjän huomautuksesta.** Käyttäjä
+  kysyi näkyykö aknearpi-artikkelin linkitys kansiossa. Vastaus: ei
+  näy eikä pidäkään, koska linkit osoittavat **artikkeliin**, eivät
+  siitä ulos, joten muuttuivat `mikroneulaus-opas.html` ja
+  `mikroneulaus-sopiiko-minulle.html`. Linkit varmistettiin olemassa
+  oleviksi. Samalla tarkastuksessa paljastui kolme puutetta:
+  - **Sitemapissa oli 9 vanhentunutta `lastmod`-päivää.** Pahin oli
+    etusivu, joka väitti olevansa muuttumaton 23.7. lähtien vaikka sen
+    koko rakenne vaihtui. Kaikki päivitetty todellisten
+    muokkauspäivien mukaan.
+  - **`dateModified` päivitetty kahteen artikkeliin** joissa sisältö
+    muuttui olennaisesti: `mita-ensikaynnilla-tapahtuu.html` (CTA
+    vaihdettiin jonotuslistamallista ja punoituskappale kirjoitettiin
+    uusiksi) ja `mikroneulaus-sopiiko-minulle.html`.
+    **Neljään muuhun ei koskettu tarkoituksella:** niihin tehtiin vain
+    CTA-tekstin vaihto, ja Googlen ohje sanoo suoraan ettei
+    päivämääriä pidä tuoreuttaa kun sisältö ei ole olennaisesti
+    muuttunut. Sitemapin `lastmod` sen sijaan päivitettiin, koska se
+    kuvaa mitä tahansa muutosta.
+  - **Muutosloki jaettu oikeille päiville**, ks. huomautus yllä.
+- **LÖYDÖS, ei korjattu: kaksi keskeneräistä sivua on merkitty
+  indeksoitavaksi.** `herkka-iho-ruusufinni-mikroneulaus.html` ja
+  `proxn-kasvohoito.html` ovat molemmat `robots: index, follow`, mutta
+  niihin ei linkitä blogilista, etusivu eikä sitemap. Jos ne päätyvät
+  gitiin, Google voi indeksoida keskeneräistä sisältöä.
+  `mikroneulaus-talvella.html` on oikein `noindex, nofollow`.
+- **Etusivun osiojärjestys muutettu.** Käyttäjän havainto: rajaukset ja
+  rullavertailu olivat ennen hinnastoa, mikä on väärä prioriteetti.
+  Mittaus vahvisti sen: hinnasto alkoi vasta **47 %** kohdalla sivun
+  sanamäärästä, ja siitä 248 sanaa oli puolustavaa sisältöä. Nyt
+  hinnasto alkaa **31 %** kohdalla. "Kenelle ei sovi" ja rullavertailu
+  siirrettiin ennen UKK-osiota, koska ne kaikki kolme vastaavat
+  vastaväitteisiin. Uusi järjestys: filosofia, tiimi, menetelmä,
+  hinnasto, laite, hoidon kulku, ennen ja jälkeen, kenelle ei sovi,
+  rullavertailu, UKK. HTML-kommenttien numerointi päivitetty.
+- **Taustavärit laskettu uudelleen.** Havainto joka kannattaa muistaa:
+  **täydellinen vuorottelu on rakenteellisesti mahdoton.** Hero on tumma
+  ja footer on tumma, joten ensimmäisen ja viimeisen osion on oltava
+  vaaleita. Kymmenellä osiolla se vaatii parittoman määrän vaihtoja, eli
+  yksi sauma (kaksi samanväristä peräkkäin) on pakko olla. Tämä selittää
+  myös miksi vanhassa järjestyksessä oli sauma: se ei ollut virhe vaan
+  välttämättömyys.
+  Sauma sijoitettiin samaan pariin kuin ennenkin, valkoinen ja lämmin
+  kerma, koska ne erottuvat toisistaan riittävästi. Menetelmäosio
+  vaihdettiin kermasta valkoiseksi tätä varten. Muut vaihdot: "kenelle ei
+  sovi" tummasta kermaan, rullavertailu valkoisesta tummaan. Label-luokat
+  vaihdettiin mukana (`label--pink-pale` tummalle, `label--mid`
+  vaalealle). Kaikki kontrastit mitattu, matalin 5,55:1.
+- **Poistettu kaksi CSS-sääntöä jotka olisivat rikkoneet vertailutaulukon.**
+  `.section--dark .compare-table td` ja `... th` pakottivat lähes valkoisen
+  tekstin, mutta taulukon rivit ovat oma vaalea korttinsa (`--cream` ja
+  `--cream-warm`) eivätkä peri osion taustaa. Tummassa osiossa tuloksena
+  olisi ollut lähes valkoinen teksti kermalla eli noin 1,03:1. Taulukko
+  toimii sellaisenaan millä tahansa taustalla, myös mobiilin
+  korttinäkymässä. Jäljelle jäävä `.section--dark .compare-text` on
+  oikein, koska se on taulukon ulkopuolista leipätekstiä.
+- **Korjattu käyttäjän havaintoon: rullavertailun leipäteksti oli lähes
+  näkymätön.** Syy oli CSS:n tarkkuussääntö, ja tämä kannattaa muistaa
+  jatkossa. Sääntö `.compare-text p { color: var(--text-mid) }` asettaa
+  värin **suoraan p-elementille**, joten se voittaa periytymisen
+  säännöstä `.section--dark .compare-text`. Tumma vihreä teksti tummalla
+  vihreällä taustalla oli **1,21:1**. Lisätty
+  `.section--dark .compare-text p`, nyt 7,93:1.
+  **Yleinen oppi:** kun osio vaihdetaan vaaleasta tummaksi, ei riitä että
+  tarkistaa säiliön tumma-variantit. On käytävä läpi jokainen sääntö joka
+  asettaa värin suoraan lapsielementille (`.jokin p`, `.jokin li`,
+  `.jokin td`). Tein tämän tarkistuksen nyt koko vertailuosiolle ja
+  "kenelle ei sovi" -osiolle. Muut suorat värisäännöt osoittautuivat
+  oikeiksi, koska ne koskevat taulukon sisällä olevia elementtejä jotka
+  istuvat taulukon omalla vaalealla taustalla.
+- **Taulukon otsikkorivi erotettu taustasta.** `.compare-table thead th`
+  käyttää väriä `--green-dark`, joka on täsmälleen sama kuin tumman osion
+  tausta, joten rivi sulautui siihen. Tummassa osiossa se on nyt
+  `--green-mid`, sama korotetun pinnan väri jota `.section--dark
+  .feat-card` jo käyttää.
+- **Ristiinlinkitys tarkistettu koko sivustolta ja neljä linkkiä lisätty.**
+  Käyttäjän havainto piti paikkansa: "Hoidon kulku" ja rullavertailu
+  olivat etusivun kaksi ainoaa sisältöosiota ilman linkkejä, vaikka
+  molemmilla on suora vastine blogissa.
+  - Hoidon kulku → `mikroneulauksen-jalkihoito.html` ja
+    `mita-ensikaynnilla-tapahtuu.html`
+  - Rullavertailu → `mikroneularulla-vai-kliininen-mikroneulaus.html`
+    (osio on tumma, joten linkkiväri on `--pink-pale` eikä
+    `--pink-deep`; jälkimmäinen on tarkoitettu vaalealle taustalle)
+  - `mikroneulaus-opas.html` ja `mikroneulaus-sopiiko-minulle.html`
+    → `aknearpien-hoito-mikroneulauksella.html`
+  Filosofia, tiimi, laite ja ennen/jälkeen jätettiin tarkoituksella
+  ilman linkkejä (käyttäjän päätös): niissä ei ole luontevaa
+  jatkokysymystä.
+- **Linkkikartta laskettu. Aknearpi-artikkelilla oli nolla sisääntulevaa
+  linkkiä.** Blogiautomaatio oli merkinnyt tämän jo etukäteen, ja jätin
+  sen aamulla tekemättä kun lisäsin artikkelin vain blogilistalle ja
+  sitemapiin. **Uusi tarkistuskohta: kun artikkeli julkaistaan, sille on
+  tehtävä myös sisääntulevat linkit, ei pelkkää listausta.**
+  Sisääntulevat linkit korjauksen jälkeen: sopiiko-minulle 11, opas 9,
+  sarjahoito 9, tutkimusnäyttö 9, ensikäynti 6, jälkihoito 5,
+  rullavertailu 5, mita-on-kliininen 3, milloin-aloittaa 2, lisäalueet 2,
+  aknearvet 2.
+- **Linjaus: vastavuoroisuutta ei tavoitella.** Kartassa oli 21 tapausta
+  joissa A linkittää B:hen mutta B ei takaisin. Näitä ei korjata.
+  Yksisuuntainen linkki on normaali, ja vastavuoroisuuden tavoittelu
+  johtaa linkkitulvaan jossa yksikään linkki ei enää ohjaa lukijaa.
+- **KORJATTU `mikroneulaus-sopiiko-minulle.html`:** "Atroofiset
+  aknearvet" → "Atrofiset aknearvet" (oikea muoto on yhdellä o:lla), ja
+  "Sarjahoito 4–6 kertaa antaa tyypillisesti merkittäviä tuloksia" →
+  "Aknearpien hoidossa suositellaan aina kuuden hoidon sarjaa".
+  Jälkimmäinen oli ristiriidassa sekä hinnaston (vain 3 ja 6) että
+  käyttäjän antaman tiedon kanssa (kirjattu 5.8., ks. luku 3).
+- **Sisäiset ristiriidat käyty läpi koko sivustolta ohjelmallisesti**
+  (sarjan pituudet, hinnat, hoitovälit, tulosten aikajänteet, ylläpito,
+  punoituksen kesto, neulasyvyys, ikäraja, isotretinoiini,
+  retinoiditauko, ensikäynnin kesto, termistö). Yhdenmukaisia ja
+  kunnossa: 4 viikon hoitoväli, 3–6 kk tulokset, 200 € ensikäynti,
+  0,25 mm säätötarkkuus, 18 vuoden ikäraja, isotretinoiinin 6 kk,
+  viikon retinoiditauko, ensikäynti tunti ja itse hoito 30–40 min.
+  Myös "atooppinen" osoittautui oikeaksi kaikissa jäljellä olevissa
+  kohdissa: ne käsittelevät atooppista ihottumaa, eivät arpia.
+  **Kaksi uutta löydöstä jäi korjaamatta, ks. alla.**
+- **KORJATTU (käyttäjän ratkaisut 6.8.2026):**
+  - `mikroneulaus-sopiiko-minulle.html`: "pidempi sarja (6–8 hoitoa)" →
+    **"kuuden hoidon sarja ja tiiviimpi ylläpitorytmi"**. Kahdeksan
+    hoidon sarjaa ei ole olemassa, ja sama artikkeli linkitti heti
+    perään sarjahoito-artikkeliin jossa lukee "kaksi vaihtoehtoa".
+  - `mita-ensikaynnilla-tapahtuu.html`: virke oli ristiriidassa itsensä
+    kanssa ("kireä parin päivän ajan, mutta palautuu 24 tunnissa").
+    Kirjoitettu uudelleen käyttäjän antaman kliinisen kuvan mukaan:
+    punoitus ja kireys erotettu toisistaan, koska ne eivät kestä yhtä
+    kauan. Uusi muotoilu kirjattu myös lukuun 3.
+  - **Ylläpitoväli yhdenmukaistettu muotoon "6–12 kuukauden välein"**
+    kaikkiin viiteen kohtaan. Etusivu ja opas käyttivät muotoa "noin
+    kuuden tai kahdentoista kuukauden välein", joka antoi ymmärtää että
+    vaihtoehtoja on tasan kaksi.
+  Loppuvarmistus ajettu: yhtään näistä neljästä ristiriidasta ei ole
+  enää missään tiedostossa.
+- **Korjattu vielä käyttäjän huomautuksesta: "Useimmilla iho on
+  vuorokaudessa siinä kunnossa että arkea voi jatkaa normaalisti."**
+  Virke oli oma lisäykseni ja se antoi ymmärtää että arki keskeytyy
+  vuorokaudeksi. Todellisuudessa hoito ei vaadi lepoa lainkaan, vaan
+  rajoitukset tulevat jälkihoito-ohjeista. Korvattu tekstillä joka
+  erottaa nämä kaksi. Sääntö kirjattu lukuun 3.
+  Tarkistin samalla koko sivuston sanoilla lepo, toipuminen,
+  palautumisaika ja töihin paluu: muualla ei ole vastaavaa väärää
+  vihjettä. Oppaan "palautumisaika" tarkoittaa hoitokertojen väliä, ja
+  ensikäyntiartikkelin toinen maininta koskee ulkonäköä ennen häitä tai
+  juhlia, mikä on oikea käyttö.
+- **LÖYDÖS, ei korjattu: etusivulla on 12 ajatusviivaa leipätekstissä**,
+  numeroalueiden ulkopuolella. Tämä rikkoo luvun 5 sääntöä ja koskee
+  sivuston tärkeintä sivua. Esimerkkejä: "elastiinia – ihon tärkeimpiä
+  rakennusaineita", "Isotretinoiinihoito – mikroneulaus voidaan tehdä",
+  "Kohtisuora – suoraan alas ja takaisin ylös". Kolme niistä on
+  vertailutaulukon soluissa, joissa ajatusviiva toimii kaksoispisteenä.
+- **LÖYDÖS, ei korjattu: linkit etusivun leipätekstissä eivät erotu.**
+  Globaali sääntö on `a { color: inherit; text-decoration: none; }`,
+  joten esimerkiksi "Kenelle ei sovi" -osion linkki artikkeliin näyttää
+  tavalliselta tekstiltä. Hoidot-osiossa sama on ratkaistu inline-tyylillä
+  (`color:var(--pink-deep)` + alleviivaus), mikä kertoo että ongelma on
+  tiedossa mutta ratkaistu vain yhdessä kohdassa.
+- **LÖYDÖS, ei korjattu: mobiilin vertailutaulukon sarakeotsikot**
+  (`.compare-table tbody td::before`) käyttävät väriä `--pink` kermalla.
+  Se on sama noin 2,2:1 kontrasti jonka takia linkkiväri vaihdettiin
+  heinäkuussa `--pink-deep`:iin.
+- **UUSI KIRJOITUSSÄÄNTÖ (käyttäjä, 6.8.2026): minä- ja me-muoto ovat
+  molemmat käytössä, eri tehtävissä.** Minä kun kirjoittaja puhuu
+  tekstistä ("tässä artikkelissa kerron"), me kun kuvataan studion
+  toimintaa ("arvioimme ihosi tilanteen"), koska taustalla on tiimi.
+  Kirjattu lukuun 5. Tämä kumoaa aiemman oletukseni että sivuston pitäisi
+  puhua yhdellä äänellä.
+  **Tarkistettu koko sivusto tätä vasten: yksi poikkeama löytyi.**
+  `proxn-kasvohoito.html` rivillä 223 lukee "oppaasta, jossa käymme läpi
+  mikroneulauksen tuloksia", vaikka lause kuvaa artikkelin sisältöä eikä
+  studion toimintaa. Pitäisi olla "käyn läpi". Ei korjattu, koska
+  käyttäjä ei pyytänyt. Sivu ei ole vielä linkitetty navigaatiosta.
+  Kaikki muut 8 me-muotoa ja 3 minä-muotoa ovat sääntöjen mukaisia.
+- **Kirjoittajamerkintä artikkeleihin: päätös yhä auki.** Rajattu
+  yhteen näkyvään riviin (nimi, ammattinimike, päivämäärä) ja JSON-LD:n
+  `author`-kenttään Personina. Kirjoittajasivu, esittelylaatikot, kuvat
+  ja some-linkit rajattu pois: ne olisivat henkilöbrändin rakentamista.
+  Pelkkä JSON-LD ilman näkyvää merkintää todettu kelvottomaksi, koska
+  Googlen rakenteisen datan ohje edellyttää että merkintä vastaa
+  näkyvää sisältöä.
+
 ### 2026-08-05
 - **Viikoittainen blogiehdotus, vaihtoehto B: päivitetty `mikroneulaus-opas.html`.**
   Luettu kaikki 10 julkaistua artikkelia Chromella. Ei uutta artikkelia:
@@ -1986,7 +2210,6 @@ muutoksia.
   kertaa (yksi artikkeli per viikko), merkitty seuraavaa päivityskierrosta
   varten.
 
-### 2026-08-05
 - **Blogiautomaation viime viikolla merkitsemät korjaukset tehty.**
   `milloin-aloittaa-mikroneulaus.html`: yksi ajatusviiva leipätekstissä
   korvattu pisteellä. `mikroneulaus-sopiiko-minulle.html`: sana "barrier"

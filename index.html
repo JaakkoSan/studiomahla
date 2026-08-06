@@ -343,9 +343,15 @@
       }
     }
     /* Tummalle taustalle siirtyneet komponentit (taustojen vuorottelu 31.7.2026) */
-    .section--dark .compare-table td { color: rgba(250, 248, 244, 1); border-bottom-color: rgba(250, 248, 244, 0.16); }
-    .section--dark .compare-table th { color: var(--pink-pale); border-bottom-color: rgba(250, 248, 244, 0.28); }
+    /* Vertailutaulukko on oma vaalea korttinsa, joten se ei peri tumman osion värejä.
+       Vain sen ulkopuolinen leipäteksti tarvitsee tumman variantin.
+       HUOM: .compare-text p asettaa värin suoraan elementille, joten pelkkä
+       .section--dark .compare-text ei riitä. Kappalesääntö on pakko ylikirjoittaa. */
     .section--dark .compare-text { color: rgba(250, 248, 244, 1); }
+    .section--dark .compare-text p { color: rgba(250, 248, 244, 1); }
+    /* Taulukon otsikkorivi on samaa vihreää kuin tumma osio, jolloin se sulautuisi
+       taustaan. Tummassa osiossa käytetään vaaleampaa vihreää. */
+    .section--dark .compare-table thead th { background: var(--green-mid); }
     .section--dark .feat-card { background: var(--green-mid); border-left-color: var(--pink-pale); }
     .section--dark .feat-card h3 { color: var(--white); }
     .section--dark .feat-card p { color: rgba(250, 248, 244, 1); }
@@ -690,7 +696,7 @@
       </div>
     </div>
   </section>
-  <!-- 2b. TIIMI -->
+  <!-- 3. TIIMI -->
   <section class="section section--dark" aria-labelledby="tiimi-title">
     <div class="section__inner">
       <h2 id="tiimi-title" class="reveal">Tiimi</h2>
@@ -724,8 +730,8 @@
       </p>
     </div>
   </section>
-  <!-- 3. MIKRONEULAUS – MENETELMÄ -->
-  <section class="section section--cream" aria-labelledby="menetelma-title">
+  <!-- 4. MIKRONEULAUS – MENETELMÄ -->
+  <section class="section section--white" aria-labelledby="menetelma-title">
     <div class="section__inner">
       <div class="grid-2">
         <div class="reveal">
@@ -773,97 +779,7 @@
       </div>
     </div>
   </section>
-  <!-- 4. KENELLE HOITO EI SOVI -->
-  <section class="section section--dark" aria-labelledby="kontraindikaatiot-title">
-    <div class="section__inner">
-      <div class="reveal" style="max-width: 780px;">
-        <p class="label label--pink-pale">Turvallisuus</p>
-        <h2 id="kontraindikaatiot-title">Kenelle mikroneulaus ei sovi</h2>
-        <p class="intro-text">
-          Kliininen mikroneulaus on turvallinen hoito suurimmalle osalle aikuisista. Turvallisuutesi vuoksi hoito ei sovi seuraavissa tilanteissa:
-        </p>
-      </div>
-      <ul class="contra-list reveal">
-        <li>Raskaus tai imetys</li>
-        <li>Aktiivinen ihotulehdus, ihottuma tai infektio hoitoalueella</li>
-        <li>Aktiivinen akne hoitoalueella</li>
-        <li>Keloidi- tai hypertrofinen arpi -taipumus</li>
-        <li>Aktiivinen herpesinfektio</li>
-        <li>Teräsallergia</li>
-        <li>Verenohennuslääkitys</li>
-        <li>Isotretinoiinihoito – mikroneulaus voidaan tehdä aikaisintaan 6 kuukautta hoidon päättymisestä</li>
-        <li>Immunosuppressiivinen lääkitys tai sairaus</li>
-        <li>Aktiivinen syöpähoito</li>
-        <li>Huonosti hallinnassa oleva diabetes</li>
-        <li>Alle 18-vuotias</li>
-      </ul>
-      <p class="contra-note reveal">
-        Kerro aina kaikista lääkityksistä ja ihosairauksista ennen hoitoa. Epäselvissä tilanteissa arvioimme sopivuuden yhdessä ennen hoidon aloittamista. Tarkempi soveltuvuusarvio ikäryhmittäin ja ihotyypeittäin sekä itsearviointi-lista löytyy <a href="mikroneulaus-sopiiko-minulle.html">erillisestä artikkelistamme</a>.
-      </p>
-    </div>
-  </section>
-  <!-- 5. KLIININEN MIKRONEULAUS VS. MIKRONEULARULLA -->
-  <section class="section section--white section--compare" aria-labelledby="vertailu-title">
-    <div class="section__inner">
-      <div class="reveal" style="max-width: 720px;">
-        <p class="label label--mid">Miksi kliininen hoito</p>
-        <h2 id="vertailu-title">Kliininen mikroneulaus vai mikroneularulla?</h2>
-      </div>
-      <div class="compare-table-wrap reveal">
-        <table class="compare-table">
-          <caption class="skip-link">Vertailu: kliininen mikroneulaus ja mikroneularulla / mikroneulausrulla</caption>
-          <thead>
-            <tr>
-              <th scope="col"><span class="skip-link">Ominaisuus</span></th>
-              <th scope="col">Kliininen mikroneulaus</th>
-              <th scope="col">Mikroneularulla / mikroneulausrulla</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Laite</th>
-              <td data-label="Kliininen mikroneulaus">FDA-hyväksytty, CE IIa -luokiteltu</td>
-              <td data-label="Mikroneularulla">Ei lääkinnällistä sertifiointia</td>
-            </tr>
-            <tr>
-              <th scope="row">Pistoskulma</th>
-              <td data-label="Kliininen mikroneulaus">Kohtisuora – suoraan alas ja takaisin ylös</td>
-              <td data-label="Mikroneularulla">Viisto – neula tulee ja poistuu eri kulmassa</td>
-            </tr>
-            <tr>
-              <th scope="row">Neulasyvyys</th>
-              <td data-label="Kliininen mikroneulaus">0–2 mm, tarkka säätö alueittain</td>
-              <td data-label="Mikroneularulla">Kiinteä, ei säädettävissä</td>
-            </tr>
-            <tr>
-              <th scope="row">Neulojen paksuus</th>
-              <td data-label="Kliininen mikroneulaus">Erittäin ohuet steriilit hoitopäät</td>
-              <td data-label="Mikroneularulla">Tyypillisesti selvästi paksummat neulat</td>
-            </tr>
-            <tr>
-              <th scope="row">Hygienia</th>
-              <td data-label="Kliininen mikroneulaus">Steriilit kertakäyttöhoitopäät</td>
-              <td data-label="Mikroneularulla">Sama rulla käytöstä toiseen</td>
-            </tr>
-            <tr>
-              <th scope="row">Tekijä</th>
-              <td data-label="Kliininen mikroneulaus">Terveydenhuollon ammattilainen</td>
-              <td data-label="Mikroneularulla">Itse</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="compare-text reveal">
-        <p>
-          Pistoskulma vaikuttaa merkittävästi hoidon turvallisuuteen ja tulokseen. Mikroneularulla tai mikroneulausrulla pyörii ihon pinnalla, jolloin neula iskeytyy ihoon viistosti alhaalta ja poistuu yhtä lailla viistosti ylöspäin – kulkien ihokudoksen läpi laajana kaarena pystysuoran pistoksen sijaan. Tämä repivä liike vaurioittaa kudosta huomattavasti enemmän kuin on tarpeen. Rullien neulat ovat myös tyypillisesti selvästi paksumpia kuin kliinisissä laitteissa käytettävät steriilit hoitopäät, mikä lisää kudosvauriota entisestään.
-        </p>
-        <p>
-          Kynämäinen laite tekee aina kohtisuoran piston suoraan alas ja takaisin ylös – saman reitin kautta. Näin syntyy tarkka mikrokanava ilman tarpeetonta kudoksen repimistä.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- 6. HOIDOT JA HINNAT -->
+  <!-- 5. HOIDOT JA HINNAT -->
   <section class="section section--cream-warm" aria-labelledby="hoidot-title">
     <div class="section__inner">
       <div class="reveal hoidot-head">
@@ -942,7 +858,7 @@
       </p>
     </div>
   </section>
-  <!-- 7. MICROPEN EVO – LAITE -->
+  <!-- 6. MICROPEN EVO – LAITE -->
   <section class="section section--dark section--laite" aria-labelledby="laite-title">
     <div class="section__inner">
       <div class="grid-2">
@@ -984,7 +900,7 @@
       </div>
     </div>
   </section>
-  <!-- 8. HOIDON KULKU -->
+  <!-- 7. HOIDON KULKU -->
   <section class="section section--cream" aria-labelledby="hoidon-kulku-title">
     <div class="section__inner">
       <div class="grid-2">
@@ -1003,6 +919,12 @@
           <p>
             Hoidon päätteeksi käymme läpi jälkihoito-ohjeet ja saat mukaan hoitavan voiteen ensimmäiseksi 24 tunniksi.
           </p>
+          <p>
+            <a href="mikroneulauksen-jalkihoito.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Jälkihoito-opas käy läpi ensimmäisen vuorokauden ja sitä seuraavat 30 päivää.</a>
+          </p>
+          <p>
+            <a href="mita-ensikaynnilla-tapahtuu.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin mitä ensikäynnillä tapahtuu vaihe vaiheelta.</a>
+          </p>
         </div>
         <div class="reveal">
           <h3 style="margin-top:48px">Miksi alkuun tarvitaan sarjahoito</h3>
@@ -1017,13 +939,13 @@
             Sarjahoidon aikana hoitokerrat ajoitetaan ihon luonnollisen uusiutumissyklin mukaan. Optimaalinen väli hoitojen välillä on noin neljä viikkoa.
           </p>
           <p>
-            Kun toivottu tulos on saavutettu, tulosten ylläpitämiseksi riittää yksittäinen ylläpitohoito noin kuuden tai kahdentoista kuukauden välein.
+            Kun toivottu tulos on saavutettu, tulosten ylläpitämiseksi riittää yksittäinen ylläpitohoito 6–12 kuukauden välein.
           </p>
         </div>
       </div>
     </div>
   </section>
-  <!-- 9. ENNEN JA JÄLKEEN HOITOA -->
+  <!-- 8. ENNEN JA JÄLKEEN HOITOA -->
   <section class="section section--dark" aria-labelledby="ennen-jalkeen-title">
     <div class="section__inner">
       <div class="reveal" style="max-width: 720px; margin-bottom: 40px;">
@@ -1053,7 +975,100 @@
       </div>
     </div>
   </section>
-  <!-- 10. UKK -->
+  <!-- 9. KENELLE HOITO EI SOVI -->
+  <section class="section section--cream" aria-labelledby="kontraindikaatiot-title">
+    <div class="section__inner">
+      <div class="reveal" style="max-width: 780px;">
+        <p class="label label--mid">Turvallisuus</p>
+        <h2 id="kontraindikaatiot-title">Kenelle mikroneulaus ei sovi</h2>
+        <p class="intro-text">
+          Kliininen mikroneulaus on turvallinen hoito suurimmalle osalle aikuisista. Turvallisuutesi vuoksi hoito ei sovi seuraavissa tilanteissa:
+        </p>
+      </div>
+      <ul class="contra-list reveal">
+        <li>Raskaus tai imetys</li>
+        <li>Aktiivinen ihotulehdus, ihottuma tai infektio hoitoalueella</li>
+        <li>Aktiivinen akne hoitoalueella</li>
+        <li>Keloidi- tai hypertrofinen arpi -taipumus</li>
+        <li>Aktiivinen herpesinfektio</li>
+        <li>Teräsallergia</li>
+        <li>Verenohennuslääkitys</li>
+        <li>Isotretinoiinihoito – mikroneulaus voidaan tehdä aikaisintaan 6 kuukautta hoidon päättymisestä</li>
+        <li>Immunosuppressiivinen lääkitys tai sairaus</li>
+        <li>Aktiivinen syöpähoito</li>
+        <li>Huonosti hallinnassa oleva diabetes</li>
+        <li>Alle 18-vuotias</li>
+      </ul>
+      <p class="contra-note reveal">
+        Kerro aina kaikista lääkityksistä ja ihosairauksista ennen hoitoa. Epäselvissä tilanteissa arvioimme sopivuuden yhdessä ennen hoidon aloittamista. Tarkempi soveltuvuusarvio ikäryhmittäin ja ihotyypeittäin sekä itsearviointi-lista löytyy <a href="mikroneulaus-sopiiko-minulle.html">erillisestä artikkelistamme</a>.
+      </p>
+    </div>
+  </section>
+  <!-- 10. KLIININEN MIKRONEULAUS VS. MIKRONEULARULLA -->
+  <section class="section section--dark section--compare" aria-labelledby="vertailu-title">
+    <div class="section__inner">
+      <div class="reveal" style="max-width: 720px;">
+        <p class="label label--pink-pale">Miksi kliininen hoito</p>
+        <h2 id="vertailu-title">Kliininen mikroneulaus vai mikroneularulla?</h2>
+      </div>
+      <div class="compare-table-wrap reveal">
+        <table class="compare-table">
+          <caption class="skip-link">Vertailu: kliininen mikroneulaus ja mikroneularulla / mikroneulausrulla</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="skip-link">Ominaisuus</span></th>
+              <th scope="col">Kliininen mikroneulaus</th>
+              <th scope="col">Mikroneularulla / mikroneulausrulla</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Laite</th>
+              <td data-label="Kliininen mikroneulaus">FDA-hyväksytty, CE IIa -luokiteltu</td>
+              <td data-label="Mikroneularulla">Ei lääkinnällistä sertifiointia</td>
+            </tr>
+            <tr>
+              <th scope="row">Pistoskulma</th>
+              <td data-label="Kliininen mikroneulaus">Kohtisuora – suoraan alas ja takaisin ylös</td>
+              <td data-label="Mikroneularulla">Viisto – neula tulee ja poistuu eri kulmassa</td>
+            </tr>
+            <tr>
+              <th scope="row">Neulasyvyys</th>
+              <td data-label="Kliininen mikroneulaus">0–2 mm, tarkka säätö alueittain</td>
+              <td data-label="Mikroneularulla">Kiinteä, ei säädettävissä</td>
+            </tr>
+            <tr>
+              <th scope="row">Neulojen paksuus</th>
+              <td data-label="Kliininen mikroneulaus">Erittäin ohuet steriilit hoitopäät</td>
+              <td data-label="Mikroneularulla">Tyypillisesti selvästi paksummat neulat</td>
+            </tr>
+            <tr>
+              <th scope="row">Hygienia</th>
+              <td data-label="Kliininen mikroneulaus">Steriilit kertakäyttöhoitopäät</td>
+              <td data-label="Mikroneularulla">Sama rulla käytöstä toiseen</td>
+            </tr>
+            <tr>
+              <th scope="row">Tekijä</th>
+              <td data-label="Kliininen mikroneulaus">Terveydenhuollon ammattilainen</td>
+              <td data-label="Mikroneularulla">Itse</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="compare-text reveal">
+        <p>
+          Pistoskulma vaikuttaa merkittävästi hoidon turvallisuuteen ja tulokseen. Mikroneularulla tai mikroneulausrulla pyörii ihon pinnalla, jolloin neula iskeytyy ihoon viistosti alhaalta ja poistuu yhtä lailla viistosti ylöspäin – kulkien ihokudoksen läpi laajana kaarena pystysuoran pistoksen sijaan. Tämä repivä liike vaurioittaa kudosta huomattavasti enemmän kuin on tarpeen. Rullien neulat ovat myös tyypillisesti selvästi paksumpia kuin kliinisissä laitteissa käytettävät steriilit hoitopäät, mikä lisää kudosvauriota entisestään.
+        </p>
+        <p>
+          Kynämäinen laite tekee aina kohtisuoran piston suoraan alas ja takaisin ylös – saman reitin kautta. Näin syntyy tarkka mikrokanava ilman tarpeetonta kudoksen repimistä.
+        </p>
+        <p>
+          <a href="mikroneularulla-vai-kliininen-mikroneulaus.html" style="color:var(--pink-pale);text-decoration:underline;text-underline-offset:3px;">Lue tarkempi vertailu kliinisen mikroneulauksen ja mikroneularullan eroista.</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- 11. UKK -->
   <section class="section section--white" aria-labelledby="ukk-title">
     <div class="section__inner">
       <div class="reveal" style="max-width: 720px;">
