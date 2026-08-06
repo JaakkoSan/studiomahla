@@ -2156,7 +2156,35 @@ muutoksia.
   vihjettä. Oppaan "palautumisaika" tarkoittaa hoitokertojen väliä, ja
   ensikäyntiartikkelin toinen maininta koskee ulkonäköä ennen häitä tai
   juhlia, mikä on oikea käyttö.
-- **LÖYDÖS, ei korjattu: etusivulla on 12 ajatusviivaa leipätekstissä**,
+- **Etusivun ajatusviivat korvattu (13 kohtaa).** Käyttäjän linjaus:
+  otsikkotasolla ajatusviiva saa olla, leipätekstissä ei. Korvaukset:
+  pilkku appositioissa ("elastiinia, ihon tärkeimpiä rakennusaineita"),
+  kaksoispiste kun jälkiosa selittää ("prosessi: uusia säikeitä
+  rakentuu"), erillinen virke kun ajatus on itsenäinen ("jos
+  mahdollista. Teemme kuitenkin").
+  Yksi kohta esiintyi **kahdesti**: sama lause on sekä näkyvässä
+  tekstissä että FAQ-skeeman vastauksessa. Molemmat korjattu, koska
+  skeema näkyy hakutuloksessa.
+  Myös meta description korjattu ("MicroPen EVO™ on FDA-hyväksytty ja
+  CE-merkitty laite"), koska luvun 5 sääntö kattaa meta-tagit.
+  **Jätetty tarkoituksella ennalleen:** `<title>`, `og:title`,
+  `twitter:title` ja h2 "MicroPen EVO™ – kliinisen tason
+  mikroneulauslaite" (otsikkotasoa), numeroalueet 0–2 mm ja
+  6–12 kuukautta (sääntö sallii), sekä HTML- ja CSS-kommentit (eivät
+  näy asiakkaalle).
+- **LÖYDÖS, ei korjattu: JSON-LD:n palvelunimissä on pitkä ajatusviiva
+  (—), otsikoissa lyhyt (–).** Esimerkiksi `"Ensikäynti — kliininen
+  mikroneulaus"` ja `"Mikroneulauksen sarjahoito — 3 hoitokertaa"`.
+  Nämä ovat nimikenttiä eli otsikkotasoa, joten viiva saa olla, mutta
+  merkki on eri kuin muualla sivustolla.
+- **LÖYDÖS, ei korjattu: yksi etusivun linkki ei erotu tekstistä.**
+  "Kenelle ei sovi" -osion `contra-note`-kappaleessa oleva linkki
+  "erillisestä artikkelistamme" on ainoa ilman inline-tyyliä, joten se
+  perii leipätekstin värin eikä siinä ole alleviivausta. Kaikki muut
+  yhdeksän linkkiä on tyylitelty. Tämä selittää miksi linkit näyttävät
+  nyt hyviltä: ne on tyylitelty yksitellen, ei säännöllä.
+- **AIEMPI LÖYDÖS, nyt korjattu: etusivulla oli 12 ajatusviivaa
+  leipätekstissä**,
   numeroalueiden ulkopuolella. Tämä rikkoo luvun 5 sääntöä ja koskee
   sivuston tärkeintä sivua. Esimerkkejä: "elastiinia – ihon tärkeimpiä
   rakennusaineita", "Isotretinoiinihoito – mikroneulaus voidaan tehdä",
