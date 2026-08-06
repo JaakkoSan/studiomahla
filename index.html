@@ -154,6 +154,30 @@
     }
     .section--dark h1, .section--dark h2, .section--dark h3 { color: var(--white); }
     .section--dark p { color: rgba(250, 248, 244, 0.85); }
+    /* --- LEIPÄTEKSTILINKIT ------------------------------------------
+       Globaali sääntö style.css:ssä on a { color: inherit; text-decoration:
+       none }, joten ilman näitä sääntöjä osioiden linkit näyttävät
+       tavalliselta tekstiltä. Nämä kattavat myös tulevat linkit:
+       inline-tyylejä ei enää tarvita eikä niitä pidä lisätä.
+
+       Vaalea tausta  -> --pink-deep   (kerma 5,11:1, lämmin kerma 4,70:1,
+                                        valkoinen 5,46:1)
+       Tumma osio     -> --pink-pale   (tummanvihreä 5,55:1)
+
+       td jätetään tumman säännön ulkopuolelle, koska vertailutaulukko on
+       vaalea kortti myös tummassa osiossa. Jos sivustolle joskus tehdään
+       tumma taulukko, tämä kohta on tarkistettava. */
+    .section p a:not(.btn),
+    .section li a:not(.btn),
+    .section td a:not(.btn) {
+      color: var(--pink-deep);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .section--dark p a:not(.btn),
+    .section--dark li a:not(.btn) {
+      color: var(--pink-pale);
+    }
     h2 {
       font-size: clamp(38px, 4vw, 58px);
       font-weight: 400;
@@ -749,7 +773,7 @@
           </p>
           <h3 style="margin-top:36px">Miksi valita kliininen mikroneulaus</h3>
           <p>
-            Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä: iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
+            Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä: iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
           </p>
         </div>
         <div class="reveal">
@@ -821,7 +845,7 @@
         </article>
       </div>
       <p class="cards-note">
-        Kaikkiin hoitohintoihin sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi. Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
+        Kaikkiin hoitohintoihin sisältyy hoitava voide ensimmäisen 24 tunnin ajaksi. Suosittelemme aloittamaan ensikäynnillä, jonka yhteydessä arvioimme ihosi yksilöllisen tilanteen ja suosittelemme sopivaa sarjahoitoa. Sarjahoito sovitaan aina ensikäynnin jälkeen. <a href="mikroneulaus-sarjahoito.html">Lue tarkemmin sarjahoidon biologiasta ja sarjavaihtoehdoista.</a>
       </p>
 
       <div class="addon-head reveal">
@@ -854,7 +878,7 @@
         </article>
       </div>
       <p class="cards-note">
-        Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa. <a href="mikroneulaus-kaula-dekoltee-kadet.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin näiden alueiden ihosta ja siitä miksi ne vaativat oman lähestymistapansa.</a>
+        Osana sarjahoitoa lisäalueesta saa saman alennuksen kuin hoitosarjasta. Yksi alue maksaa tällöin 33,25 € hoitokerralta kolmen hoidon sarjassa ja 31,50 € hoitokerralta kuuden hoidon sarjassa. <a href="mikroneulaus-kaula-dekoltee-kadet.html">Lue tarkemmin näiden alueiden ihosta ja siitä miksi ne vaativat oman lähestymistapansa.</a>
       </p>
     </div>
   </section>
@@ -920,10 +944,10 @@
             Hoidon päätteeksi käymme läpi jälkihoito-ohjeet ja saat mukaan hoitavan voiteen ensimmäiseksi 24 tunniksi.
           </p>
           <p>
-            <a href="mikroneulauksen-jalkihoito.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Jälkihoito-opas käy läpi ensimmäisen vuorokauden ja sitä seuraavat 30 päivää.</a>
+            <a href="mikroneulauksen-jalkihoito.html">Jälkihoito-opas käy läpi ensimmäisen vuorokauden ja sitä seuraavat 30 päivää.</a>
           </p>
           <p>
-            <a href="mita-ensikaynnilla-tapahtuu.html" style="color:var(--pink-deep);text-decoration:underline;text-underline-offset:3px;">Lue tarkemmin mitä ensikäynnillä tapahtuu vaihe vaiheelta.</a>
+            <a href="mita-ensikaynnilla-tapahtuu.html">Lue tarkemmin mitä ensikäynnillä tapahtuu vaihe vaiheelta.</a>
           </p>
         </div>
         <div class="reveal">
@@ -1063,7 +1087,7 @@
           Kynämäinen laite tekee aina kohtisuoran piston suoraan alas ja takaisin ylös, saman reitin kautta. Näin syntyy tarkka mikrokanava ilman tarpeetonta kudoksen repimistä.
         </p>
         <p>
-          <a href="mikroneularulla-vai-kliininen-mikroneulaus.html" style="color:var(--pink-pale);text-decoration:underline;text-underline-offset:3px;">Lue tarkempi vertailu kliinisen mikroneulauksen ja mikroneularullan eroista.</a>
+          <a href="mikroneularulla-vai-kliininen-mikroneulaus.html">Lue tarkempi vertailu kliinisen mikroneulauksen ja mikroneularullan eroista.</a>
         </p>
       </div>
     </div>
@@ -1094,12 +1118,12 @@
         <article class="faq__item">
           <div class="faq__num">04</div>
           <h3 class="faq__q">Kuinka monta hoitokertaa ihoni tarvitsee?</h3>
-          <p class="faq__answer">Näkyvien ja pysyvien rakenteellisten tulosten saavuttaminen vaatii useimmiten kolmesta kuuteen kerran sarjahoidon. Käsittelemme ihoa aina täysin yksilöllisesti. Suosittelemme varaamaan ensimmäisen ajan yksittäiseen hoitoon, jonka yhteydessä teemme asiantuntevan arvion ihosi tilanteesta ja laadimme optimaalisen aikataulun jatkolle. <a href="mita-tutkimus-sanoo-mikroneulauksesta.html" style="text-decoration:underline;">Lue mitä tutkimus oikeasti sanoo mikroneulauksen vaikutuksista.</a></p>
+          <p class="faq__answer">Näkyvien ja pysyvien rakenteellisten tulosten saavuttaminen vaatii useimmiten kolmesta kuuteen kerran sarjahoidon. Käsittelemme ihoa aina täysin yksilöllisesti. Suosittelemme varaamaan ensimmäisen ajan yksittäiseen hoitoon, jonka yhteydessä teemme asiantuntevan arvion ihosi tilanteesta ja laadimme optimaalisen aikataulun jatkolle. <a href="mita-tutkimus-sanoo-mikroneulauksesta.html">Lue mitä tutkimus oikeasti sanoo mikroneulauksen vaikutuksista.</a></p>
         </article>
         <article class="faq__item">
           <div class="faq__num">05</div>
           <h3 class="faq__q">Ajanvaraus ja maksutavat</h3>
-          <p class="faq__answer">Ajanvaraus tapahtuu Timman kautta. Voit siirtyä varaamaan aikasi <a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" style="text-decoration:underline;">suoraan tästä</a> tai klikata sivuston yläreunan Ajanvaraus-painiketta ja valita sopivan ajan kalenterista. Maksutapoina käytössä ovat korttimaksut (pankki- ja luottokortit) sekä Klarna. Jos haluat maksaa käteisellä, varaathan tasarahan mukaan. Jos sinulla on kysyttävää, tavoitat meidät sähköpostilla <a href="mailto:asiakaspalvelu@studiomahla.fi" style="text-decoration:underline;">asiakaspalvelu@studiomahla.fi</a>.</p>
+          <p class="faq__answer">Ajanvaraus tapahtuu Timman kautta. Voit siirtyä varaamaan aikasi <a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener">suoraan tästä</a> tai klikata sivuston yläreunan Ajanvaraus-painiketta ja valita sopivan ajan kalenterista. Maksutapoina käytössä ovat korttimaksut (pankki- ja luottokortit) sekä Klarna. Jos haluat maksaa käteisellä, varaathan tasarahan mukaan. Jos sinulla on kysyttävää, tavoitat meidät sähköpostilla <a href="mailto:asiakaspalvelu@studiomahla.fi">asiakaspalvelu@studiomahla.fi</a>.</p>
         </article>
       </div>
     </div>

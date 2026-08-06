@@ -2177,12 +2177,45 @@ muutoksia.
   mikroneulaus"` ja `"Mikroneulauksen sarjahoito — 3 hoitokertaa"`.
   Nämä ovat nimikenttiä eli otsikkotasoa, joten viiva saa olla, mutta
   merkki on eri kuin muualla sivustolla.
-- **LÖYDÖS, ei korjattu: yksi etusivun linkki ei erotu tekstistä.**
-  "Kenelle ei sovi" -osion `contra-note`-kappaleessa oleva linkki
-  "erillisestä artikkelistamme" on ainoa ilman inline-tyyliä, joten se
-  perii leipätekstin värin eikä siinä ole alleviivausta. Kaikki muut
-  yhdeksän linkkiä on tyylitelty. Tämä selittää miksi linkit näyttävät
-  nyt hyviltä: ne on tyylitelty yksitellen, ei säännöllä.
+- **Etusivun linkkityyli siirretty inline-tyyleistä CSS-säännöksi.**
+  Aiemmin jokainen linkki oli tyylitelty käsin, ja yksi ("erillisestä
+  artikkelistamme" kohdassa Kenelle ei sovi) oli jäänyt tyylittelemättä
+  eli näytti tavalliselta tekstiltä. Uusi sääntö `index.html`:n
+  `<style>`-lohkossa:
+
+```css
+.section p a:not(.btn),
+.section li a:not(.btn),
+.section td a:not(.btn) {
+  color: var(--pink-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.section--dark p a:not(.btn),
+.section--dark li a:not(.btn) {
+  color: var(--pink-pale);
+}
+```
+
+  Kaikki 9 inline-tyyliä poistettu. Nyt kaikki 10 leipätekstilinkkiä
+  saavat värinsä säännöstä, ja **tulevat linkit toimivat automaattisesti
+  ilman että kukaan muistaa lisätä tyyliä.**
+
+  Miksi tämä on varmasti kattava: sivuston paletti on lukittu (kerma,
+  lämmin kerma, valkoinen, tummanvihreä) eikä uusia värejä ole tulossa.
+  Vaaleat taustat saavat `--pink-deep` (4,70–5,46:1) ja tumma osio
+  `--pink-pale` (5,55:1). `:not(.btn)` suojaa ajanvarauspainikkeen.
+  Tarkkuusjärjestys on kunnossa: tumman säännön tarkkuus on suurempi,
+  joten se voittaa perussäännön.
+
+  **Ainoa oletus jonka voi joskus rikkoa:** `td` on jätetty tumman
+  säännön ulkopuolelle, koska vertailutaulukko on vaalea kortti myös
+  tummassa osiossa. Jos sivustolle tehdään joskus taulukko jonka rivit
+  ovat tummat, tämä kohta on tarkistettava. Ehto on kirjattu myös
+  CSS-kommenttiin.
+
+  **Sääntö jatkoon: älä lisää linkkeihin inline-tyylejä.** Jos linkki ei
+  erotu, vika on CSS-säännössä eikä yksittäisessä linkissä.
 - **AIEMPI LÖYDÖS, nyt korjattu: etusivulla oli 12 ajatusviivaa
   leipätekstissä**,
   numeroalueiden ulkopuolella. Tämä rikkoo luvun 5 sääntöä ja koskee
