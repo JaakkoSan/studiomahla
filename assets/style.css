@@ -170,25 +170,10 @@ p:last-child { margin-bottom: 0; }
   .btn--small { padding: 8px 12px; font-size: 9.5px; letter-spacing: 0.12em; }
 }
 
-/* OPENING BANNER */
-.opening-banner {
-  background: var(--pink-pale);
-  color: var(--text-dark);
-  text-align: center;
-  padding: 10px 24px;
-  font-family: var(--font-sans);
-  font-size: 13px; font-weight: 300; letter-spacing: 0.05em; line-height: 1.4;
-  position: fixed;
-  top: var(--nav-height); left: 0; right: 0;
-  z-index: 99;
-}
-.opening-banner a { color: var(--text-dark); text-decoration: underline; text-underline-offset: 3px; }
-.opening-banner a:hover { color: var(--green-dark); }
-
 /* ARTICLE HERO */
 .article-hero {
   background: var(--cream);
-  padding: calc(clamp(56px, 8vw, 96px) + 40px) var(--section-px) clamp(48px, 7vw, 80px);
+  padding: clamp(56px, 8vw, 96px) var(--section-px) clamp(48px, 7vw, 80px);
 }
 .article-hero__inner { max-width: 760px; margin: 0 auto; }
 .article-back {

@@ -1,4 +1,4 @@
-// layout.js — Injektoi jaettu opening-banner, nav ja footer HTML-sivuille.
+// layout.js — Injektoi jaettu nav ja footer HTML-sivuille.
 //
 // Sivuilla on kaksi slot-elementtiä joissa injektointi tapahtuu:
 //   <div id="header-slot"></div>   → korvataan bannerilla + navigaatiolla
@@ -19,13 +19,6 @@
   'use strict';
 
   var HEADER_HTML =
-    '<div id="opening-banner" class="opening-banner" role="status" aria-live="polite">' +
-      // PÄIVITÄ VIIKOITTAIN: päivämäärä on seuraava vapaa aika Timmassa.
-      'Seuraavat vapaat ajat 5.9. ' +
-      '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" aria-label="Varaa aika Timman kautta">' +
-        'Varaa aikasi tästä' +
-      '</a>.' +
-    '</div>' +
     '<header class="nav" role="banner">' +
       '<div class="nav__inner">' +
         '<a href="index.html" class="brand" aria-label="Mahlamäen Kauneusstudio, etusivu">' +
