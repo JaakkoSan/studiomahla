@@ -238,7 +238,7 @@ vahvistaa sitä pohjalta uudella kollageenilla.
 
 ## 5. Miten hoito toimii
 
-### 5.1 Ei mitään vierasta ★★★
+### 5.1 Ei mitään vierasta ★★★ — KÄYTETTY 3.8.2026
 **Lähde:** Mikä on mikroneulaus
 **Kesto:** n. 13 s
 
@@ -312,7 +312,7 @@ juonteisiin ja yli 40-vuotiaalle iholle.
 
 ## 7. Jälkihoito
 
-### 7.1 Aurinkosuoja on tärkein ★★★
+### 7.1 Aurinkosuoja on tärkein ★★★ — KÄYTETTY 7.8.2026
 **Lähde:** Jälkihoito
 **Kesto:** n. 15 s
 

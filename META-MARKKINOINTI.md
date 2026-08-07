@@ -1351,6 +1351,145 @@ kertakäyttöpää).
 Kotka mainitaan ensimmäisessä lauseessa jotta se osuu Instagramin
 katkaistuun näkymään. Muista sijaintimerkintä.
 
+**4. Ei mitään vierasta (Reels)**
+Lähde: `mita-on-kliininen-mikroneulaus.html`, idea 5.1
+Tiedostot: `karusellit/vierasta_01.png` … `_05.png`
+Skripti: `generaattorit/vierasta.py`
+Video: `reels/vierasta.mp4` (24,2 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 3.8.2026. **Julkaisu odottaa.**
+5 diaa, 56 sanaa, kansidian sävy tumma.
+
+Ydinajatus: mikroneulaus ei tuo ihoon mitään vierasta ainetta, vaan
+käynnistää mekanismit jotka ihossa jo ovat. Sävy valittu koska
+edellinen Reels (pistoskulma) käytti vaaleaa, ja tämän viikon
+kahdella julkaisulla on oltava eri sävy myös keskenään.
+
+Kuvateksti sanatarkasti:
+
+```
+Lisääkö mikroneulaus ihoon jotain?
+
+Ei. Kliininen mikroneulaus ei vie ihon alle ainetta eikä täytettä. Menetelmä ei tuo ihoon mitään vierasta, vaan luo ohuita mikrokanavia jotka iho tulkitsee vaurioiksi. Se riittää käynnistämään ihon omat korjausmekanismit: uuden kollageenin ja elastiinin tuotannon, jotka ihossa jo ovat valmiina.
+
+Juuri tästä syystä tulos syntyy ihon sisältä eikä katoa ajan myötä samalla tavalla kuin pintahoidon vaikutus.
+
+Toteutamme kaikki mikroneulaushoidot Kotkan Ruonalassa. Hoidon tekee aina koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mita-on-kliininen-mikroneulaus.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #ihonhoito #kollageeni
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**5. Aktiivinen akne ei sovi (Reels) — EI JULKAISTA TÄLLÄ VIIKOLLA**
+Lähde: `mikroneulaus-sopiiko-minulle.html`, idea 3.1
+Tiedostot: `karusellit/akne_01.png` … `_05.png`
+Skripti: `generaattorit/akne.py`
+Video: `reels/akne.mp4` (21,3 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 3.8.2026.
+5 diaa, 52 sanaa, kansidian sävy vaalea.
+
+**Korjaus 3.8.2026:** kansidia oli aluksi keski (#4a6157). Käyttäjä
+huomautti perustellusti että se ja idean 5.1 tumma (#3d5247) ovat
+molemmat vihreitä ja näyttävät ruudukossa lähes samalta. Luvun 3.5a
+mukaan vaalea on ainoa sävy joka oikeasti rikkoo yksivärisyyden;
+kaksi vihreää vierekkäin "tuovat syvyyttä mutta eivät yksin riko
+yksivärisyyttä". Vaihdettu vaaleaksi, video ja diat tuotettu
+uudelleen.
+
+**Korvattu 7.8.2026:** käyttäjä totesi idean olevan hyvä mutta
+"ei toimi tähän hetkeen" perjantain julkaisuksi. Idean 3.1
+KÄYTETTY-merkintä poistettiin REELS-IDEAT.md:stä, koska sitä ei
+julkaista, vain tuotettu valmiiksi. Video ja diat jätetty
+`tuotanto/`-kansioon myöhempää käyttöä varten, ei poistettu.
+Tilalle valittiin idea 7.1 (ks. kohta 6 alla).
+
+**6. Aurinkosuoja on tärkein (Reels)**
+Lähde: `mikroneulauksen-jalkihoito.html`, idea 7.1
+Tiedostot: `karusellit/aurinkosuoja_01.png` … `_05.png`
+Skripti: `generaattorit/aurinkosuoja.py`
+Video: `reels/aurinkosuoja.mp4` (24,2 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 7.8.2026. **JULKAISTU 7.8.2026 Instagramiin
+ja Facebookiin.**
+5 diaa, 66 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: aurinkosuoja on jälkihoidon tärkein yksittäinen asia ja
+voi ratkaista koko sarjan lopputuloksen. Ajankohtainen elokuussa,
+kun UV-indeksi on vielä korkealla. Eri pääluku (7, Jälkihoito) kuin
+viikon toinen Reels "Ei mitään vierasta" (5, Miten hoito toimii) ja
+eri lähdeartikkeli. Kansidian sävy vaalea, jotta kontrasti idean
+5.1 tummaan kanteen on selkeä eikä kaksi vihreää sävyä jää
+vierekkäin samannäköisiksi (ks. korjaus edellä).
+
+**Korjaus 7.8.2026:** neljäs dia sanoi alun perin "Ei vain
+hoitopäivinä. Koko sarjan ajan.", mikä on harhaanjohtavaa.
+Lähdeartikkelin mukaan ensimmäisenä vuorokautena hoidon jälkeen
+aurinkoa vältetään kokonaan eikä iholle laiteta muuta kuin studion
+hoitava voide; SPF-suoja alkaa vasta seuraavana päivänä ja jatkuu
+sitten koko sarjan ajan. Dia ja kuvateksti korjattu vastaamaan
+tätä. Kolmas dia sanoi samaan aikaan "SPF 30–50 joka päivä koko
+sarjan ajan", mikä oli ristiriidassa korjatun neljännen dian
+kanssa. Poistettiin kolmannesta diasta "joka päivä koko sarjan
+ajan" ja jätettiin ajoitusväite yksin neljännelle dialle; kolmas
+dia kertoo nyt vain suojatason (SPF 30–50, laajakirjoinen) ja
+että sama sääntö koskee sisätiloja ja talvea. Video tuotettu
+uudelleen pidemmällä dia-kestolla, koska korjattu teksti on
+pidempi.
+
+Kuvateksti sanatarkasti:
+
+```
+Aurinkosuoja on jälkihoidon tärkein asia.
+
+Ensimmäisen vuorokauden aikana ihoa ei altisteta auringolle lainkaan, eikä iholle laiteta muuta kuin studiolta saatu hoitava voide. Sen jälkeen alkaa aurinkosuojan aika: SPF 30–50 päivittäin koko sarjan ajan, mielellään laajakirjoisena (UVA + UVB) suojana. UV-säteily on tänä aikana ihon suurin uhka, ja sen laiminlyönti voi heikentää koko sarjan lopputulosta enemmän kuin mikään muu jälkihoitovalinta. Sääntö koskee myös sisätiloja ikkunan lähellä ja talvikuukausia.
+
+Käymme jokaisen asiakkaan kanssa läpi jälkihoito-ohjeet Kotkan Ruonalassa sijaitsevalla studiollamme. Hoidon tekee aina koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulauksen-jalkihoito.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#jälkihoito #aurinkosuoja #mikroneulaus #kliininenmikroneulaus
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+Ydinajatus: aktiivista aknea ei hoideta mikroneulauksella, koska
+hoito voisi levittää bakteereja ja pahentaa tulehdusta. Eri
+pääluku kuin idea 5.1 (turvallisuus vs. menetelmä) ja eri
+lähdeartikkeli, jotta viikon kaksi Reelsiä eroavat aihepiiriltään.
+
+Kuvateksti sanatarkasti:
+
+```
+Aktiivista aknea ei hoideta mikroneulauksella.
+
+Jos akne on yhä aktiivinen, mikroneulausta ei tehdä hoitoalueelle. Hoito voisi levittää bakteereja ihon pinnalla ja pahentaa tulehdusta. Aknearpien hoito aloitetaan vasta kun aktiivinen vaihe on rauhoittunut ja iho on valmis korjausprosessiin.
+
+Tämä on yksi niistä turvallisuusrajoista jotka käymme läpi jokaisen asiakkaan kohdalla ennen hoitopäätöstä.
+
+Studiollamme Kotkan Ruonalassa jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen, ja ihon tilanne arvioidaan aina ennen hoitoa.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#aknehoito #aknearvet #ihonhoito #kliininenmikroneulaus
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (3.8.2026, päivitetty 7.8.2026):** ideapankin
+suositeltua aloitusjärjestystä noudatettiin siltä osin kuin
+mahdollista. Järjestyksen toinen kohta (1.2) ohitettiin, koska sen
+lähdeartikkeli on sama kuin ensimmäisen valinnan (5.1). Kolmas
+kohta oli 3.1 (aktiivinen akne), joka tuotettiin mutta korvattiin
+7.8.2026 käyttäjän pyynnöstä, koska se ei sopinut ajankohtaan.
+Tilalle valittiin 7.1 (aurinkosuoja), joka ei ollut alkuperäisessä
+kymmenen kohdan listassa mutta täyttää samat säännöt: eri pääluku
+ja eri lähdeartikkeli kuin 5.1, ja on lisäksi ajankohtainen
+elokuun UV-indeksin vuoksi.
+
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
 1. Kenelle mikroneulaus sopii (`mikroneulaus-sopiiko-minulle.html`)

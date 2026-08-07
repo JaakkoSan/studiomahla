@@ -12,6 +12,58 @@ sisältävä — brändi-info ja tekniset päätökset.
 
 ---
 
+## ⚠️ TIEDOSTOJEN KIRJOITTAMINEN (kriittinen, löydetty 6.8.2026)
+
+**Kansio `C:\studiomahla` on liitetty Windowsista, eikä tavallinen
+`open(polku,'w')` ole siinä luotettava.** 6.8.2026 löytyi viisi
+vaurioitunutta tiedostoa:
+
+| Tiedosto | Vika |
+|---|---|
+| `index.html` | 22 nollatavua lopussa |
+| `kysely.html` | 4148 nollatavua lopussa |
+| `mita-ensikaynnilla-tapahtuu.html` | 110 nollatavua lopussa |
+| `privacy.html` | 170 nollatavua lopussa |
+| `milloin-aloittaa-mikroneulaus.html` | loppu katkennut kesken `</body>`-tagia |
+
+Kaikki korjattu. Sisältö oli ehjä, vika oli vain tiedoston lopussa.
+
+**Oire:** kun uusi sisältö on vanhaa lyhyempi, vanha häntä jää jäljelle
+nollatavuina. Tämä tarkoittaa että kirjoitus ei katkaissut tiedostoa.
+
+**Seuraukset jos tätä ei huomaa:** git käsittelee nollatavuja sisältävää
+tiedostoa binäärinä, jolloin diffit lakkaavat toimimasta. Selain sietää
+sekä nollatavut että katkenneen lopun, joten sivusto näyttää toimivalta
+eikä vika paljastu käytössä.
+
+**Claude huomasi tämän oireen jo aiemmin** (`grep` ilmoitti
+"binary file matches" index.html:stä) ja kiersi sen sen sijaan että olisi
+tutkinut syyn. Se oli virhe.
+
+**Käytä aina tätä kirjoitustapaa:**
+
+```python
+import os
+def turvallinen_kirjoitus(polku, tavut):
+    tmp = polku + '.tmp'
+    with open(tmp, 'wb') as f:
+        f.write(tavut); f.flush(); os.fsync(f.fileno())
+    os.replace(tmp, polku)
+    assert open(polku, 'rb').read() == tavut, polku
+```
+
+**Tarkista muokkausten jälkeen:**
+
+```
+python3 -c "
+import glob
+for f in glob.glob('*.html'):
+    b=open(f,'rb').read()
+    if b'\\x00' in b or not b.rstrip().endswith(b'</html>'):
+        print('RIKKI', f)
+"
+```
+
 ## ⚠️ CLAUDELLE: pysyvä ohje
 
 **Päivitä tämä tiedosto AINA ITSENÄISESTI seuraavissa tilanteissa,
@@ -171,6 +223,12 @@ odottavat käyttäjän vahvistusta. Pidä ajan tasalla. Merkintä: ✅ = talless
   bussipysäkki tontin rajalla, ilmainen pysäköinti pihassa suoraan oven edustalla.
 
 ### Tiimi
+
+**Tony Kunnari** — yrityksen omistaja (kirjattu 6.8.2026)
+- Guild Lounge Oy:n omistaja
+- Ei osallistu hoitojen toteutukseen eikä omavalvontaan
+- Mainitaan omavalvontasuunnitelman perustiedoissa, koska
+  toiminnanharjoittaja on yhtiö
 
 **Jaakko Sandström** — hoitaja
 - Lähihoitaja
@@ -942,7 +1000,33 @@ tiedoston yläreunassa:
 5. Palauta cross-linkki `milloin-aloittaa-mikroneulaus.html`:n
    "Lue lisää"-osioon
 
-### Avausbanneri: päivitetään viikoittain (sovittu 5.8.2026)
+### Avausbanneri POISTETTU 6.8.2026
+
+**Käyttäjän havainto:** banneri ei ole enää tarpeellinen, koska ihminen
+löytää vapaat ajat ajanvarauslinkistä. Perustelu kesti tarkastelun:
+
+- Sama tieto sanotaan jokaisen sivun CTA-tekstissä ja yläpalkin
+  Ajanvaraus-painike on joka sivulla.
+- Timma näyttää todelliset vapaat ajat aina oikein, banneri vain niin
+  kauan kuin joku muistaa päivittää.
+- Yhden tekstirivin takia oli viikoittainen tarkistusrutiini, muistutus
+  Reels-automaatiossa ja oma lukunsa tässä muistiossa.
+- Riski oli epäsymmetrinen: pieni hyöty, mutta vanhentunut päivämäärä
+  lupaa aikoja joita ei ole. 5.9. jälkeen tieto olisi muuttunut
+  päivittäin eikä sitä olisi voinut ylläpitää käsin.
+
+**Poisto koski yhdeksää kohtaa.** `assets/layout.js` (banneri pois
+HEADER_HTML:stä ja tiedoston kuvausrivistä), `assets/style.css`
+(`.opening-banner`-säännöt ja `.article-hero`-kompensaatio) sekä
+`+40px`-kompensaatio viidessä sivussa: `index.html`, `blogi.html`,
+`404.html`, `lomake.html`, `privacy.html`. Kolme viimeistä olisi jäänyt
+huomaamatta ilman koko kansion hakua, ja niihin olisi jäänyt tyhjä
+kaistale sivun yläreunaan.
+
+Reels-automaation VAIHE 6b poistettiin sekä ajastetusta tehtävästä että
+varmuuskopiosta.
+
+### Vanha käytäntö (poistettu, säilytetty historiaa varten): banneri päivitettiin viikoittain (sovittu 5.8.2026)
 
 Banneri on tiedostossa `assets/layout.js`, muuttujassa `HEADER_HTML`, heti
 alussa. Se näkyy jokaisella sivulla, koska layout.js injektoi sen
@@ -977,6 +1061,381 @@ tiedostoa**, koska vain käyttäjä näkee Timman todellisen tilanteen.
 - Ilmoitus jonotuslistalaisille 24–48h ennen julkista avausta
 - Google Business Profile + Instagram/some -päivitys
 - Google Search Console: pyydä uudelleenindeksointi keskeisimmille sivuille
+
+### Hinnasto hoitotilaan: lakisääteinen vaatimus (selvitetty 6.8.2026)
+
+**Hinnaston on oltava esillä myös fyysisesti hoitotilassa. Verkkosivut
+eivät riitä.** Hintamerkintäasetus 553/2013, 5 §: palveluntarjoajan on
+pidettävä hinnasto esillä liikehuoneistossa ja verkkosivustoilla.
+Kuluttaja-asiamiehen linjaus täsmentää: hinnaston on oltava kuluttajan
+helposti havaittavissa ja näyttävä mahdollisuuksien mukaan myös
+liikehuoneiston ulkopuolelta.
+
+**Miksi tämä koskee studiota:** palvelulakia (1166/2009) ei sovelleta
+yksityisiin terveydenhuollon palveluihin, mutta tuo poikkeus tarkoittaa
+rekisteröityä yksityistä terveydenhuoltoa, ei sitä että palvelun tekijä
+on terveydenhuollon ammattilainen. Kauneudenhoitopalveluna studio kuuluu
+palvelulain piiriin, joten velvoite pätee. Valvonta: aluehallintovirasto.
+
+Asetuksen 6 § sallii, että jos kaikkia hintoja ei ole järkevää mahduttaa,
+esillä ovat tavallisimmat hinnat ja maininta täydellisestä hinnastosta,
+joka annetaan pyydettäessä. Nykyisellä palveluvalikoimalla kaikki mahtuu
+yhdelle sivulle, joten tätä ei tarvita.
+
+**Tulostettava A4 tehty:** `tuotanto/hinnasto-A4.pdf`, generaattori
+`tuotanto/generaattorit/hinnasto_a4.py`. Brändifontit, monogrammi
+piirretään samoista SVG-poluista kuin `layout.js`:ssä, valkoinen tausta
+tulostusta varten. Sisältää alv-maininnan.
+
+**HINNAT OVAT NYT KOLMESSA PAIKASSA:** `index.html`, `hinnasto.html` ja
+`tuotanto/generaattorit/hinnasto_a4.py`. Jokainen hinnanmuutos on tehtävä
+kaikkiin kolmeen ja PDF ajettava uudelleen. Tämä on kirjattu myös
+skriptin alkuun.
+
+### Terveydensuojelulain 13 §:n ilmoitus — TEHTY (vahvistettu 6.8.2026)
+
+**Ilmoituksen tunnus 145019** (Ilppa, ympäristöterveydenhuollon
+sähköinen asiointipalvelu). Kirjattu omavalvontasuunnitelmaan.
+Vastaanottotodistus vielä täydentämättä.
+
+Ilmoitusta päivitettiin 6.8.2026. Toiminnan vapaa kuvaus kirjoitettiin
+Ilppan ohjeen mukaan neljästä osasta: millaista palvelua perustetaan,
+henkilökunnan tausta, toimitila ja tilan soveltuvuus toimintaan.
+Kuvaus on 2771 merkkiä ja se on kirjoitettu **yläkerran hoitohuoneesta**,
+koska toiminta alkaa sieltä 5.9. Kuvaukseen lisättiin myös maininta
+tulevasta siirrosta alakertaan ja siitä että muutoksesta tehdään
+erillinen muutosilmoitus.
+
+Kuvaustekstin sisältö vastaa omavalvontasuunnitelmaa, joten jos
+suunnitelma muuttuu olennaisesti, myös Ilppan kuvaus on syytä päivittää.
+
+Tätä ilmoitusvelvollisuutta ei ollut aiemmin kirjattu suunnitelmaan
+lainkaan, mikä oli puute suunnitelmassa eikä toiminnassa.
+
+Terveydensuojelulaki 763/1994, 13 §. Ilmoitusvelvollisia toimintoja ovat
+muun muassa **"solariumpalvelu, ihoa rikkova toiminta (esimerkiksi
+tatuointiliike) ja erityistä hygieniaa edellyttävä kauneushoitola"**.
+Kliininen mikroneulaus on määritelmällisesti ihoa rikkovaa toimintaa,
+joten velvoite koskee studiota kiistatta.
+
+**Määräaika: ilmoitus on tehtävä 30 vuorokautta ennen toiminnan
+aloittamista.** Avaus on 5.9.2026, joten takaraja on 6.8.2026. Tämä
+selvisi vasta takarajan päivänä.
+
+Ilmoitus tehdään ensisijaisesti sähköisessä ilmoituspalvelussa
+**ilppa.fi**, ja käsittelijä on **Kotkan seudun ympäristöterveydenhuolto**.
+Ilmoitus tehdään myös toiminnan olennaisesta muuttamisesta ja
+päättymisestä. **Huom: alakerran tilaan siirtyminen remontin valmistuttua
+on todennäköisesti olennainen muutos**, eli ilmoitus on tehtävä silloin
+uudelleen.
+
+Valvova viranomainen on **Lupa- ja valvontavirasto (LVV)**, joka on
+korvannut Valviran. Ohjeet ovat osoitteessa lvv.fi, eivät enää
+valvira.fi.
+
+### Omavalvonta (selvitetty 6.8.2026)
+
+Terveydensuojelulaki asettaa 13 §:n mukaisille ilmoitusvelvollisille
+kohteille **omavalvontavelvoitteen, mutta ei vaadi kirjallista
+omavalvontasuunnitelmaa**. Kirjallinen suunnitelma on kuitenkin
+viranomaisen mukaan suositeltavin ja selkein tapa täyttää velvoite.
+
+Tarkastuksella toiminnanharjoittajan on pystyttävä osoittamaan:
+- miten toimintaan vaikuttavat riskitekijät on tunnistettu
+- miten niiden vakavuus on arvioitu
+- mitä riskienhallintakeinoja on otettu käyttöön
+
+Käytännössä ihoa rikkovassa toiminnassa kirjallinen suunnitelma
+kannattaa tehdä, koska tarkastaja kysyy sitä.
+
+Lähde jonka pohjalta suunnitelma laaditaan: **"Ohje kauneushoitolan ja
+muun vastaavan tilan sekä ihoa rikkovan toiminnan hygienian ja
+omavalvonnan vaatimuksista"**, Dnro V/47861/2024, 18.12.2024,
+saatavilla lvv.fi:stä.
+
+**Luonnos tehty 6.8.2026:** `tuotanto/omavalvontasuunnitelma-LUONNOS.docx`
+(1205 sanaa, 5 sivua). Generaattori `tuotanto/generaattorit/omavalvonta_docx.py`.
+**Kun tiedostoa on kerran muokattu Wordissa, skriptiä ei saa ajaa
+uudelleen**, koska se ylikirjoittaa muutokset. Skripti on tallessa vain
+rakenteen jäljitettävyyden vuoksi.
+
+Luonnoksen rakenne noudattaa viranomaisohjetta: perustiedot, toiminnan
+kuvaus, riskien tunnistaminen ja arviointi taulukkona, riskienhallinta
+(välineet, lähikontakti, tilat ja siivous, jätteet), asiakasturvallisuus,
+osaaminen, poikkeamat sekä arviointi ja päivittäminen. Lopussa on
+**ohjeen 11 arviointikysymystä vastauksineen**, koska ne ovat täsmälleen
+se lista jonka tarkastaja käy läpi. Tarkistettu ohjelmallisesti: kaikki
+14 ohjeen osa-aluetta ja 11/11 arviointikysymystä katettu.
+
+**Luonnoksessa on 23 kohtaa merkittynä [TÄYDENNÄ].** Keskeisimmät:
+toimipaikan osoite, ilmoituksen päivämäärä ja vastaanottotodistus,
+desinfiointi- ja puhdistusaineiden nimet, vesipisteen sijainti ja
+käyttötapa, ilmanvaihdon tyyppi ja riittävyys, särmäisjätteen
+hävitystapa, jätehuoltomääräysten tarkistus, laitteen huoltoväli sekä
+laitekoulutus ja hygieniaosaamisen ylläpito.
+
+**Sisällölliset ratkaisut jotka on syytä tietää:**
+- Studiolla ei ole kestokäyttöisiä ihon läpäiseviä välineitä, koska
+  neulapäät ovat steriilejä kertakäyttöisiä. Siksi **autoklaavia ei
+  tarvita**, ja tämä on kirjattu suunnitelmaan perusteluineen. Jos
+  kestokäyttöisiä välineitä otetaan joskus käyttöön, tarvitaan
+  sterilointimenetelmä ja steriiliyden varmentaminen indikaattoreilla.
+- Vasta-aiheet on kirjattu suunnitelmaan samana 12 kohdan listana kuin
+  sivustolla, jolloin dokumentit eivät voi ajautua erilleen.
+- Suunnitelmassa sanotaan, että alakertaan siirtyminen on olennainen
+  muutos joka vaatii sekä suunnitelman päivityksen että uuden ilmoituksen.
+
+**Täydennetty käyttäjän tiedoilla 6.8.2026:** omistaja Tony Kunnari,
+osoite Mahlamäentie 14, 48300 Kotka, vastuuhoitaja Petra Sahari
+sairaanhoitaja (AMK), omavalvonnasta vastaa Jaakko Sandström.
+Vesipiste on hoitohuoneessa eikä siinä tehdä välinehuoltoa, joten
+ristikontaminaatiota vesipisteen kautta ei synny. Laitteen päällä on
+hoidon ajan kertakäyttöinen suoja ja laite puhdistetaan lisäksi hoitojen
+välissä. Ilmanvaihto on painovoimainen. Työvaatteet vaihdetaan
+päivittäin. Käsineiden lisäksi käytetään hengityssuojainta. Hoitohuone
+siivotaan päivittäin viimeisen asiakkaan jälkeen. Laitekoulutus
+täydennettiin suoraan luvusta 1 (Revance Academy 24.5.2026), eikä sitä
+tarvinnut kysyä. **Jäljellä 13 täydennettävää kohtaa.**
+
+**Linjaus desinfiointi- ja puhdistusaineista (käyttäjän kysymys):**
+tuotenimiä ei kirjata suunnitelmaan, koska ne vaihtuvat. Suunnitelmassa
+sanotaan vaatimus (käyttötarkoitukseen sopiva aine, vaikutusaika
+valmistajan ohjeen mukaan) ja tuotteet luetellaan erillisessä
+liitteessä, joka päivittyy ilman että suunnitelmaa tarvitsee muuttaa.
+Ohje ei vaadi tuotenimiä suunnitelmaan, mutta tarkastaja kysyy mitä on
+käytössä, joten liiteluettelon on oltava ajan tasalla.
+
+**Täydennykset 2. kierros (käyttäjä 6.8.2026):** asiakasmäärä noin 10
+viikossa, laitehuolto tarvittaessa maahantuoja Duallaser Oy:n kautta,
+hygieniaosaaminen perustuu ammatilliseen taustaan eikä
+täydennyskoulutusta katsota tarpeelliseksi, jätehuoltomääräykset
+tarkistettu 6.8.2026, ilmanvaihto arvioitu riittäväksi.
+**Jäljellä kaksi täydennettävää: ilmoituksen päivämäärä ja
+vastaanottotodistus sekä särmäisjätteen sopimuskumppani.**
+
+**Tilavaatimukset selvitetty (6.8.2026).** Laki ei aseta hoitotilalle
+numeerisia vaatimuksia. Viranomaisohje toteaa sääntelyn olevan "varsin
+yleisluontoista" ja asettaa toiminnallisen vaatimuksen: *"Tilojen
+hygieenisten olosuhteiden tulisi olla riittävällä tasolla siten, että ne
+eivät osaltaan lisää tartuntariskiä. Harjoitettavien toimintojen tulisi
+soveltua tiloihin."* Käytännössä esiin nostetaan pintojen
+puhdistettavuus, vesipiste, ilmanvaihto, siivous ja välinehuollon paikka.
+
+**Sääntely kohdistuu toimintaan, ei huoneeseen:** *"Ihoa rikkova
+toiminta [...] on toimintona aina ilmoitusvelvollista riippumatta siitä
+missä kyseinen toiminta järjestetään."* Tästä seuraa, että jos joskus
+tehtäisiin kotikäyntejä, samat hygieniavaatimukset ja ilmoitusvelvollisuus
+seuraisivat mukana. Kotikäynti on hygienian kannalta vaativampi, ei
+kevyempi.
+
+**Ainoat numerot koko ohjeessa ovat veden lämpötilat** (talousvesiasetus):
+kylmä alle 20 °C minuutin juoksutuksen jälkeen, lämmin vähintään 50 °C.
+**Lämminvesivaraaja on 65 °C** (käyttäjän vahvistus 6.8.2026), eli
+vaatimus täyttyy selvästi. Huom: asetuksen raja koskee hanasta tulevaa
+vettä, ei varaajaa, mutta omakotitalon lyhyellä putkivedolla ero on
+merkityksetön.
+
+**Siivoussuunnitelma erotettu omaksi asiakirjakseen (6.8.2026):**
+`tuotanto/siivoussuunnitelma-LUONNOS.docx`, generaattori
+`tuotanto/generaattorit/siivoussuunnitelma_docx.py`. Siivoustaulukko ja
+aineluettelo poistettiin omavalvontasuunnitelmasta, jotta samaa tietoa ei
+ylläpidetä kahdessa paikassa. Omavalvontasuunnitelmassa on nyt vain
+viittaus. Viranomaisohje: *"Kirjallinen siivoussuunnitelma on
+suositeltava tapa suunnitella erilaisten tilojen [...] siivouksen
+toteutus ja siivoustiheys."* Suositus, ei lakisääteinen vaatimus.
+
+**Laajuuslinjaus (käyttäjä 6.8.2026): dokumenteista ei tehdä laajempia
+kuin laki vaatii.** Tästä seurasi kaksi asiaa.
+
+Ensinnäkin **liiteluettelo poistettiin kokonaan.** Mikään
+terveydensuojelulaissa tai viranomaisohjeessa ei vaadi liitteitä. Ne
+olivat oma lisäykseni ja niiden ylläpito olisi ollut turhaa työtä.
+
+Toiseksi on syytä muistaa mikä tässä kokonaisuudessa on lakisääteistä:
+- **Lakisääteinen:** 13 §:n ilmoitus (tehty) sekä itse
+  omavalvontavelvoite eli riskien tunnistaminen, arviointi ja hallinta.
+- **Ei lakisääteinen:** kirjallinen omavalvontasuunnitelma,
+  kirjallinen siivoussuunnitelma ja kaikki liitteet. Nämä ovat
+  viranomaisen suosittelemia tapoja osoittaa velvoitteen täyttäminen.
+- **Muusta laista tuleva:** käyttöturvallisuustiedotteet vaarallisista
+  kemikaaleista ovat työturvallisuus- ja kemikaalilainsäädännön asia,
+  eivät terveydensuojelulain. Ne on siis oltava olemassa, mutta ne
+  eivät ole tämän suunnitelman liite. **Tätä ei ole varmistettu, joten
+  se on tarkistettava erikseen.**
+
+**Suunnitelma karsittu minimiin (käyttäjän päätös 6.8.2026).**
+Perustelu: suunnitelmaa ei vaadita, mutta se on helpoin tapa osoittaa
+velvoitteen täyttäminen, joten se pidetään mutta vain siinä laajuudessa
+mitä laki edellyttää. **1447 sanasta 601 sanaan, 5 sivusta 2 sivuun.**
+
+Uusi rakenne: perustiedot, toiminta, riskit ja vakavuus,
+riskienhallinta (välineet, työtavat ja suojaimet, tilat, jätteet),
+hygieniaosaaminen, ylläpito. Tämä vastaa yksi yhteen lain vaatimusta:
+riskit tunnistettu, vakavuus arvioitu, hallintakeinot kuvattu.
+
+Poistettu:
+- **Liiteluettelo.** Ei lakiperustetta.
+- **Erillinen asiakasturvallisuusluku.** Vasta-aiheet, suostumus ja
+  jälkihoito-ohjeet eivät ole terveydensuojelulain asia.
+  **Infektionäkökulma säilytettiin** riskienhallinnassa: vasta-aiheet
+  tarkistetaan ennen jokaista hoitokertaa eikä hoitoa tehdä aktiivisen
+  infektion aikana tai vastustuskyvyn ollessa heikentynyt. Tämä on
+  hygieniariskin hallintaa ja kuuluu siksi suunnitelmaan.
+- **Poikkeamien käsittelyluku** (infektioepäily, laitevika).
+  Hyödyllinen mutta ei lain vaatimus. **Pistotapaturman toimintaohje
+  palautettiin käyttäjän pyynnöstä** omaksi kohdakseen 4.5, koska se
+  liittyy suoraan riskitaulukossa jo mainittuun pistotapaturmariskiin.
+  Suunnitelma on nyt 643 sanaa.
+- **Viranomaisen 11 arviointikysymyksen taulukko.** Se toisti muun
+  sisällön eri muodossa.
+
+**Nämä on tallessa versiohistoriassa tässä muistiossa**, joten jos
+tarkastaja pyytää jotain niistä, ne voi palauttaa. Erityisesti
+pistotapaturman toimintaohje kannattaa olla jossain, vaikkei
+suunnitelmassa: hoitajan on tiedettävä mitä tehdä ennen kuin se sattuu.
+
+**Kirjoitussäännön tarkennus (käyttäjä 6.8.2026): sääntö "ei kerrota
+mitä ei tapahdu" koskee myös kolmansia osapuolia.** Kirjoitin
+suunnitelmaan lauseen "Kymenlaakson Jäte ei ota vastaan yritysten
+vaarallisia jätteitä, eivätkä apteekit ota vastaan yritysten
+särmäisjätettä". Käyttäjä poisti sen turhana. Taustaperustelut siitä,
+mitä reittejä ei voi käyttää, kuuluvat selvitykseen eivätkä
+dokumenttiin. Dokumentissa kerrotaan mitä tehdään.
+
+**Rajaus:** kielto koskee taustaperusteluja, ei toimintasääntöjä.
+"Kertakäyttöisiä käsineitä ei pestä eikä käytetä uudelleen" on sääntö
+ja se jää. "Hoitotilassa ei pidetä lemmikkejä" on sääntö ja se jää.
+Erotus: sääntö ohjaa omaa toimintaa, taustaperustelu selittää
+ulkopuolisten toimintaa.
+
+**Särmäisjätteen hävitys selvitetty (6.8.2026).** Kymenlaakson Jäte
+sanoo suoraan: *"Kymenlaakson Jäte ei vastaanota yritysten vaarallisia
+jätteitä"* ja luettelee vastaanottajiksi Fortum Waste Solutions
+(ent. Ekokem) ja Lassila & Tikanoja. Lisäksi: *"Terveydenhuollon
+kohteissa syntyy erityisjätettä, kuten pistävää ja viiltävää jätettä
+[...] Näitä jätteitä ei pidä laittaa tavanomaisen jätteen joukkoon,
+vaan niille on omat keräyksensä."*
+**Apteekki ei ole vaihtoehto**, koska apteekit ottavat särmäisjätettä
+vastaan vain kotitalouksilta. Yrityksen on siis tehtävä sopimus
+erityisjätteen kuljettajan kanssa. Kymenlaakson Jätteen yrityspalvelut
+hoitaa Ekokaari Oy, joka on luonteva ensimmäinen yhteydenotto.
+
+**Verellä tahriintunut kertakäyttömateriaali:** käyttäjän käsitys
+pienten määrien sijoittamisesta sekajätteeseen vastaa yleistä
+käytäntöä, koska kyse ei ole tartuntavaarallisesta jätteestä silloin
+kun asiakkaat seulotaan eikä hoitoja tehdä aktiivisen infektion aikana.
+Suunnitelmaan kirjattiin tämä perusteluineen ja ehdolla: jos
+hoidettavalla tiedetään olevan veriteitse tarttuva infektio, jäte
+käsitellään erityisjätteenä. **Tämä on silti syytä varmistaa
+ympäristöterveydenhuollosta**, koska Kymenlaakson Jätteen sanamuoto
+erityisjätteestä on tiukempi kuin käytäntö.
+
+**Avoin riski: painovoimainen ilmanvaihto.** Ohje edellyttää toimivaa ja
+riittävää ilmanvaihtoa mikrobien ja epäpuhtauksien vähentämiseksi.
+Painovoimainen ilmanvaihto on heikoin muoto ja sen teho riippuu
+lämpötilaerosta, eli se on heikoimmillaan kesällä. Mikroneulaus ei
+tuota pölyä eikä kemikaalihöyryjä samalla tavalla kuin esimerkiksi
+kynsityö, joten tämä ei ole automaattisesti este. Tarkastaja
+todennäköisesti kuitenkin kysyy asiaa, ja suunnitelmaan on jätetty
+kohta johon mahdollinen tehostus kirjataan.
+
+### Muut velvoitteet: kartoitettu ja todettu hoidetuiksi (6.8.2026)
+
+Kartoitin omavalvonnan yhteydessä muuta lainsäädäntöä ja esitin listan,
+joka osoittautui suurelta osin aiheettomaksi. **Käyttäjän korjaukset
+ratkaisivat sen kahdella tosiseikalla.**
+
+**1. Palvelu on kauneudenhoitopalvelua, ei terveydenhuoltoa. Tässä ei ole
+tulkinnanvaraa.** Sivustolla kerrotaan että laite on lääkinnällinen ja
+että hoidon tekee terveydenhuollon ammattilainen, mutta missään ei sanota
+eikä anneta ymmärtää että kyse olisi terveydenhuollosta.
+
+**Seuraus:** lääkinnällisistä laitteista annetun lain 31 §:n
+ammattimaisen käyttäjän määritelmä ei sovellu. Kohta 2 koskee
+terveydenhuollon ammattihenkilöä joka **ammattia harjoittaessaan**
+käyttää laitetta. Ammatillinen kelpoisuus ei tee kaikesta tekemisestä
+ammatin harjoittamista. **Claude erehtyi pitämään tätä tulkinnanvaraisena
+ja käytti perusteluna markkinointitekstiä**, mikä oli heikko argumentti:
+maininta tekijän ammatista ei ole väite palvelun luonteesta.
+
+**2. Jaakko toimii alihankkijana ja laskuttaa yhtiötä, ei ole
+työsuhteessa.**
+
+**Seuraus:** kaikki työnantajavelvoitteet poistuvat. Ei
+työterveyshuoltoa, ei työturvallisuuslain 10 §:n vaarojen arviointia, ei
+työnantajan vakuutuksia. Nämä koskevat työsopimus- tai virkasuhdetta.
+Myös käyttöturvallisuustiedotteiden työturvallisuusperuste poistuu, joten
+jäljelle jää vain se että aineiden käyttöohjeita noudatetaan, mikä on jo
+omavalvontasuunnitelmassa.
+
+**Kunnossa käyttäjän vahvistuksen mukaan:** vakuutukset, rakennusvalvonta,
+terveydensuojelulain 13 §:n ilmoitus.
+
+**Jäljelle jää yksi asia, eikä sekään ole velvoite.** Vaaratilanteesta voi
+ilmoittaa Fimealle vaikkei olisi ammattimainen käyttäjä. Jos laitteessa
+ilmenee vika joka olisi voinut vaarantaa terveyden, ilmoitus on
+maksuton ja hyödyttää muitakin käyttäjiä.
+
+**Oppi Claudelle:** älä rakenna velvoitelistoja kysymättä ensin
+perustavia tosiseikkoja, tässä tapauksessa palvelun oikeudellista
+luonnetta ja työsuhteen olemassaoloa. Kaksi kysymystä olisi karsinut
+listasta viisi kohtaa kuudesta.
+
+### Omavalvontasuunnitelma: yksi lähde, kaksi ulostuloa (tehty 6.8.2026)
+
+**Generaattori: `tuotanto/generaattorit/omavalvonta.py`.** Korvasi
+aiemman `omavalvonta_docx.py`:n, joka on poistettu.
+
+Sisältö on määritelty **vain kerran** muuttujassa `SISALTO`. Skripti
+kirjoittaa siitä kaksi tiedostoa:
+
+| Ulostulo | Kenelle |
+|---|---|
+| `tuotanto/omavalvontasuunnitelma-LUONNOS.docx` | tarkastaja, tulostettava |
+| `omavalvonta.html` | sivusto |
+
+**TÄRKEIN SÄÄNTÖ: muutokset tehdään skriptiin, ei valmiisiin
+tiedostoihin.** Word-tiedostoa ei muokata käsin, koska seuraava ajo
+ylikirjoittaa sen. Tämä on päinvastoin kuin aiemmin, ja se on käyttäjän
+tietoinen valinta ("tee niin että riittää päivitys yhteen paikkaan").
+
+Myös päivämäärä tulee yhdestä paikasta: muuttuja `PAIVITETTY` syöttää
+sekä Wordin näkyvän tekstin että HTML:n `<time datetime>`-attribuutin.
+Koneluettava ja näkyvä päivä eivät siis voi erota toisistaan. Testattu.
+
+**Julkaisu tapahtuu vaihtamalla yksi muuttuja.** Skriptin alussa on
+`JULKAISTU = False`. Niin kauan kuin se on epätosi, `omavalvonta.html`
+saa `robots: noindex, nofollow`. Kun suunnitelma on täydennetty:
+
+1. `JULKAISTU = True`
+2. aja `python3 omavalvonta.py`
+3. lisää footer-linkki `assets/layout.js`:n `footer__bottom`-riville
+   tietosuojaselosteen viereen
+4. lisää `omavalvonta.html` tiedostoon `sitemap.xml`
+
+Kohdat 3 ja 4 ovat vielä tekemättä, koska suunnitelmassa on kaksi
+täydennettävää kohtaa: ilmoituksen päivämäärä ja vastaanottotodistus
+sekä särmäisjätteen sopimuskumppani.
+
+HTML käyttää samaa `article-hero` ja `article-body` -rakennetta kuin
+blogiartikkelit. Taulukkotyylit ovat sivun omassa `<style>`-lohkossa,
+koska `style.css` ei sisällä taulukkotyylejä artikkelirakenteelle.
+
+**Siivoussuunnitelma pysyy vain Word-muodossa** (`siivoussuunnitelma_docx.py`),
+koska sitä ei julkaista sivustolla.
+
+**Yhteystiedot omaksi rivikseen (6.8.2026):** perustiedoissa on nyt
+erillinen Yhteystiedot-rivi, jossa sähköposti ja puhelin
+(asiakaspalvelu@studiomahla.fi, 050 367 1683). Aiemmin sähköposti oli
+kiinni vastuuhenkilön rivissä, mikä sekoitti kaksi eri asiaa.
+Sivuston footerissa puhelinnumero oli jo ennestään `tel:`-linkkinä.
+
+**Huomio jonka käyttäjä voi halutessaan sivuuttaa:** julkaistu
+omavalvontasuunnitelma on alalla harvinaista ja siksi vahva
+luottamussignaali. Se kääntyy päinvastaiseksi jos se vanhenee. Jos
+sivustolla lukee "Päivitetty 6.8.2026" vielä kahden vuoden kuluttua, se
+kertoo huolimattomuudesta. Päivitys kannattaa kytkeä samaan
+vuositarkistukseen kuin suunnitelma itse.
 
 ### Ennen studion avautumista
 - Ota kuvat yläkerran huoneesta ennen remonttia (before/after -tarina)
@@ -2191,6 +2650,18 @@ muutoksia.
   vihjettä. Oppaan "palautumisaika" tarkoittaa hoitokertojen väliä, ja
   ensikäyntiartikkelin toinen maininta koskee ulkonäköä ennen häitä tai
   juhlia, mikä on oikea käyttö.
+- **⚠️ MERKITTÄVÄ PUUTE HAVAITTU: terveydensuojelulain 13 §:n ilmoitusta
+  ei ollut suunnitelmassa lainkaan.** Kliininen mikroneulaus on ihoa
+  rikkovaa toimintaa, joka on ilmoitusvelvollista kunnan
+  terveydensuojeluviranomaiselle **30 vuorokautta ennen toiminnan
+  aloittamista**. Avaus 5.9., joten takaraja oli tänään 6.8. Kirjattu
+  lukuun 9 omaksi kohdakseen. Tuli esiin käyttäjän omavalvontakysymyksen
+  kautta, ei siksi että olisin osannut kysyä sitä.
+- **Omavalvonta selvitetty:** terveydensuojelulaki asettaa
+  omavalvontavelvoitteen mutta ei vaadi kirjallista suunnitelmaa.
+  Kirjallinen on silti suositeltavin tapa ja käytännössä se mitä
+  tarkastaja kysyy. Lähdeohje kirjattu lukuun 9. Suunnitelmaa ei ole
+  vielä laadittu.
 - **Hinnastosivu `hinnasto.html` luotu ja lisätty navigaatioon** ennen
   Blogia. Yksityiskohdat luvussa 7. Muutetut tiedostot: uusi
   `hinnasto.html`, `assets/layout.js` (navilinkki ja `is-current`
