@@ -2520,6 +2520,70 @@ tiedostokoko putosi 77 kt → 69 kt.
 
 **`width` ja `height` päivitettiin HTML:ään**, muuten selain varaisi
 väärän tilan ja sivu hyppisi latautuessa.
+
+#### Loppusiivous 11.8.2026: viisi korjausta ja jakokuva
+
+Kävin sivun itse läpi käyttäjän pyynnöstä ja löysin kuusi asiaa.
+Viisi tehtiin heti, kuudes (rakenteinen data) siirtyi omaksi työkseen.
+
+**Kaksi virkettä jotka olin kirjoittanut itse, en ottanut mistään:**
+
+1. *"Loppuaika menee iho-analyysiin, esitietoihin ja
+   jälkihoito-ohjeisiin."* Lisäsin tämän kun siirsin kestotiedon
+   Hoidon kulun johdantoon. Looginen päätelmä mutta ei perustu mihinkään
+   käyttäjän antamaan tietoon. **Poistettu.** Jäljelle jäi vain
+   "Koko käynti kestää noin tunnin, josta hoito-osuus on 30–40 minuuttia."
+   Jos loppuaika todella menee näihin, virkkeen voi kirjoittaa takaisin.
+2. *"Jos tunnistat itsesi jostain näistä, ProXN on todennäköisesti
+   oikea reitti."* Kirjoitin tämän täyttämään Kenelle-osion vasenta
+   palstaa. Se lupaa jotain ennen iho-analyysia, mikä sotii sivun muun
+   linjan kanssa. Tilalle: *"Nämä ovat tilanteita joissa se on
+   yleisimmin perusteltu."*
+
+**Tämä on syytä huomata työtavasta:** molemmat syntyivät kun täytin
+layoutin vaatimaa tilaa. Kun palsta pitää saada täyteen, syntyy
+houkutus kirjoittaa virke jota kukaan ei ole pyytänyt. Jos jatkossa
+lisään tekstiä asettelun vuoksi, se on sanottava ääneen.
+
+**Kolme muuta korjausta:**
+
+3. **Sarjahinnat poistettu Varaaminen-osiosta.** 570 ja 1080 olivat
+   sivulla kahdesti. Varaaminen-osio käsittelee ensikäyntiä ja sen
+   kolmea reittiä, joten sarjahinnat olivat siellä toistoa kolmen
+   osion päästä. Tilalle viittaus: "Sarjahoitojen hinnat löydät edeltä."
+4. **Otsikko "Työ jatkuu käyntien välissä" → "Kotihoito jatkaa työtä
+   käyntien välissä".** Olin muuttanut otsikon layoutin takia, koska
+   yläpuolella on nosto "Kotihoito". Se maksoi hakusanan
+   otsikkotasolta, sillä nostot ovat kappaleita eivätkä otsikoita.
+   Turvallisuus-osion otsikko jätettiin ennalleen, koska
+   "vasta-aiheet" on itsessään hyvä hakusana.
+5. **Title 111 → 51 merkkiä, description 185 → 138.** Google katkaisee
+   otsikon noin 60 ja kuvauksen noin 155 merkin kohdalta.
+   Uusi title: `ProXN-kasvohoito Kotkassa | Mahlamäen Kauneusstudio`.
+   Kotka alkuun, koska paikkakuntahaut tuovat liikenteen.
+   **`og:title` ja `twitter:title` jätettiin pitkiksi tarkoituksella**,
+   koska jaossa kuvaava otsikko toimii paremmin eikä siinä ole
+   merkkirajaa.
+
+**Jakokuva `assets/og-proxn.jpg`.** Aiemmin sivu käytti yleistä
+`og-default.jpg`-kuvaa. Sivulla on Meta-pikseli ja se on todennäköinen
+mainoskohde, joten ampullikuva palvelee paremmin. Rajattu samasta
+lähteestä 1200×630 kohdasta jossa ampullit ja aktivaattori ovat,
+63 kt. Päivitetty `og:image`, `og:image:alt` ja `twitter:image`.
+
+**Sivu 2032 sanaa.** Kaikki assets-viittaukset osoittavat olemassa
+oleviin tiedostoihin, tagit tasapainossa, ei ajatusviivoja.
+
+#### AVOIN: rakenteinen data
+
+Sivulla on vain `BreadcrumbList`. Hoitosivulle sopisi `Service`
+hintatietoineen. **`hinnasto.html` on täsmälleen samassa tilassa**,
+eli tämä on koko sivuston kuvio eikä yhden sivun puute.
+Blogiartikkeleissa on `BlogPosting`, `WebPage` ja `Organization`.
+
+**Käyttäjän linjaus 11.8.2026: tehdään omana työnään seuraavaksi**,
+molemmille sivuille kerralla, jottei sivustosta tule epäjohdonmukainen
+eikä työtä tehdä kahdesti.
 - `robots` noindex → index, follow
 - Lisätään `sitemap.xml`:ään
 - **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):
