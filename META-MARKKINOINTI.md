@@ -595,7 +595,7 @@ Ei vaadi erillistä sisällöntuotantoa.
 
 | Vaihe | Reels | Muut | Perustelu |
 |---|---|---|---|
-| 28.7.–5.9. | 2 | 1 | Profiilin rakentaminen ennen avausta |
+| 28.7.–7.9. | 2 | 1 | Profiilin rakentaminen ennen avausta |
 | Syys–loka | 2 | 1 | Maksettu mainonta käynnistyy, orgaaninen jatkuu |
 | Marras eteenpäin | 1 | 1 | Ylläpito, kun mainonta hoitaa jakelun |
 
@@ -618,7 +618,7 @@ lähtökohdan kanssa (somea ei tehdä aktiivisesti).
 
 Algoritmi tarvitsee noin 10–20 julkaisua ymmärtääkseen mistä tili
 kertoo ja kenelle sitä kannattaa näyttää. Kolmen viikkotahdilla tämä
-täyttyy noin kuudessa viikossa, mikä osuu studion avaukseen 5.9.
+täyttyy noin kuudessa viikossa, mikä osuu studion avaukseen 7.9.
 
 Avaukseen mennessä profiilissa on noin 18 julkaisua (3 tehtyä +
 n. 15 uutta). Se riittää siihen että profiili näyttää vakuuttavalta
@@ -1490,6 +1490,99 @@ kymmenen kohdan listassa mutta täyttää samat säännöt: eri pääluku
 ja eri lähdeartikkeli kuin 5.1, ja on lisäksi ajankohtainen
 elokuun UV-indeksin vuoksi.
 
+**7. Prosentti vuodessa (Reels)**
+Lähde: `mita-on-kliininen-mikroneulaus.html`, idea 1.2
+Tiedostot: `karusellit/prosentti_01.png` … `_05.png`
+Skripti: `generaattorit/prosentti.py`
+Video: `reels/prosentti.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 10.8.2026. **JULKAISTU 10.8.2026** Instagramiin
+ja Facebookiin.
+5 diaa, 63 sanaa, kansidian sävy tumma.
+
+Ydinajatus: kollageenituotanto hidastuu noin 25 ikävuoden jälkeen ja
+on 30-vuotiaana jo noin prosentti vuodessa. Numeropohjainen koukku
+samasta pääluvusta (1, Numerot ja tutkimusnäyttö) kuin idea 1.1,
+mutta oma itsenäinen kärkensä. Viikon toinen Reels (4.3,
+Rehellisyys 50+) on eri pääluvusta (4, Ikä ja ihotyyppi) ja eri
+lähdeartikkelista. Kansidian sävy tumma, koska edellinen julkaistu
+Reels (aurinkosuoja, 7.8.2026) käytti vaaleaa.
+
+Kuvateksti sanatarkasti:
+
+```
+Iho menettää kollageenia joka vuosi.
+
+Kollageenin tuotanto alkaa hidastua noin 25 ikävuoden jälkeen, ja 30-vuotiaana pudotus on jo noin prosentti vuodessa. Muutos on asteittainen eikä tunnu yhtäkkiä, mutta se kertyy vuosien mittaan ihon kiinteyteen ja juonteisiin.
+
+Kliininen mikroneulaus ei tuo ihoon mitään ulkoista, vaan käynnistää ihon omat korjausmekanismit ja uuden kollageenin tuotannon. Toteutamme hoidot Kotkan Ruonalassa, ja jokaisen hoidon tekee aina koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mita-on-kliininen-mikroneulaus.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kollageeni #kliininenmikroneulaus #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**8. Rehellisyys 50+ (Reels)**
+Lähde: `mikroneulaus-sopiiko-minulle.html`, idea 4.3
+Tiedostot: `karusellit/rehellisyys_01.png` … `_05.png`
+Skripti: `generaattorit/rehellisyys.py`
+Video: `reels/rehellisyys.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 10.8.2026. **Ajastettu perjantaille 14.8.2026**
+molempiin kanaviin.
+5 diaa, 61 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: erottautumissisältöä, koska harva mainostaa hoidon
+rajoja. 50 ikävuoden jälkeen mikroneulaus toimii, mutta hitaammin ja
+vaatimattomammin: ihon laatu paranee ja hienot juonteet pehmenevät,
+mutta vahvat rypyt eivät katoa. Rakenne on tarkoituksella
+epäsymmetrinen samaan tapaan kuin idea 2.1 (pistoskulma): "mitä
+paranee" saa lyhyen vaalean dian, "mitä ei katoa" ja studion oma
+ratkaisu (yhdistelmähoito) saavat brändin vihreän ja enemmän tilaa.
+Eri pääluku (4, Ikä ja ihotyyppi) ja eri lähdeartikkeli kuin viikon
+ensimmäinen Reels (1.2, Prosentti vuodessa).
+
+**Korjaus 10.8.2026:** kansidia oli aluksi keski (#4a6157), viikon
+toinen Reels (prosentti) tumma (#3d5247). Käyttäjä huomautti
+perustellusti että molemmat kannet näyttivät samalta, eli täsmälleen
+sama virhe joka tehtiin ja korjattiin jo kerran aiemmin akne-
+Reelsissä (3.8.2026). Luvun 3.5a mukaan tumma ja keski ovat kaksi
+vihreää jotka näyttävät ruudukossa lähes samalta; vaalea on ainoa
+sävy joka oikeasti rikkoo yksivärisyyden. Vaihdettu vaaleaksi, video
+ja diat tuotettu uudelleen. Nyt viikon kannet ovat tumma (prosentti)
+ja vaalea (rehellisyys), eli oikeasti erottuvia. **Julkaisujärjestys
+tärkeä:** koska edellinen julkaistu Reels (aurinkosuoja, 7.8.2026)
+oli vaalea, prosentti (tumma) on julkaistava ennen rehellisyyttä
+(vaalea), jotta kaksi peräkkäistä julkaisua eivät ole samaa sävyä.
+
+Kuvateksti sanatarkasti:
+
+```
+Toimiiko mikroneulaus vielä 50 vuoden jälkeen?
+
+Kyllä, mutta rehellisyyden nimissä: hitaammin ja vaatimattomammin kuin nuoremmalla iholla. Ihon laatu paranee ja hienot juonteet pehmenevät, mutta syvät, vuosien aikana syntyneet rypyt eivät katoa pelkällä mikroneulauksella. Se ei ole tämän hoidon lupaus.
+
+Parhaat tulokset syntyvät yhdistelmällä: 50 ikävuoden jälkeen mikroneulaus toimii parhaiten muiden hoitojen rinnalla, ei yksin. Arvioimme jokaisen asiakkaan ihon tilanteen Kotkan Ruonalassa sijaitsevalla studiollamme, ja jokaisen hoidon tekee aina koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #ikääntyminen #kliininenmikroneulaus #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (10.8.2026):** ideapankissa oli tässä vaiheessa 41
+käyttämätöntä ideaa 46:sta, joten toisto ei ollut tarpeen. Molemmat
+valinnat ovat ★★★-ideoita, eri pääluvuista ja eri
+lähdeartikkeleista. Ideapankin suositellussa aloitusjärjestyksessä
+seuraavat käyttämättömät kohdat olivat 1.2 ja 4.3 (kohdat 3.1 ja
+7.1 oli jo käytetty tai korvattu aiemmin), joten järjestystä
+noudatettiin. Ei erityistä ajankohtaisuussyytä kummallekaan idealle
+elokuussa, joten valinta perustui vahvuuteen ja aihepiirien
+erotteluun.
+
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
 1. Kenelle mikroneulaus sopii (`mikroneulaus-sopiiko-minulle.html`)
@@ -1497,6 +1590,79 @@ elokuun UV-indeksin vuoksi.
 3. Rulla vai kliininen mikroneulaus (`mikroneularulla-vai-...html`)
 4. Jälkihoito-opas (`mikroneulauksen-jalkihoito.html`)
 5. Miksi sarjahoito (`mikroneulaus-sarjahoito.html`)
+
+### 3.5c ProXN-tuotesarja viikkojulkaisuina (suunniteltu 10.8.2026)
+
+**Idea:** viikoittainen kuvajulkaisu ProXN-tuotteista. Ensin sarja
+yleisesti, sen jälkeen yksi tuote viikossa.
+
+**Sopii nykyiseen tahtiin sellaisenaan.** Luvun 3.2 linjaus on kolme
+julkaisua viikossa: kaksi Reelsiä ja yksi karuselli tai kuva. ProXN-kuva
+menee siihen kolmanteen paikkaan. **Tahtia ei muuteta eikä neljättä
+julkaisua lisätä.**
+
+#### Ehdot ennen aloitusta
+
+**1. ProXN-sivun on oltava julki.** Tuotejulkaisulla ei muuten ole mihin
+linkittää, ja kiinnostusta rakennettaisiin ilman määränpäätä.
+Ensimmäinen ProXN-julkaisu ja `proxn-kasvohoito.html` julkaistaan samana
+päivänä. **Julkaisu voi siirtyä viikolle 34** (käyttäjän arvio 10.8.).
+
+**2. Käyttäjä testaa tuotteet ensin.** Käyttäjän linjaus 10.8.2026:
+koulutuksessa tuotteita on käytetty ja muutamia testereitä kokeiltu,
+mutta **ennen tuotekohtaisia julkaisuja hän haluaa testata tuotteet
+vielä pari kertaa itse.** Tämä koskee nimenomaan yksittäisten tuotteiden
+osioita, ei sarjan yleisesittelyä.
+
+Tämä on linjassa koko sivuston ja somen otteen kanssa: ei kirjoiteta
+asioista joita ei ole itse todennut. Sama sääntö kuin väitteiden
+lähdepohjaisuudessa, mutta kokemuksen puolella.
+
+**3. Ei näytetä sarjaa jota ei pidetä.** Valmistajan ryhmäkuva esittää
+koko tuotelinjan, mutta valikoimassa on kahdeksan tuotetta. Kuvassa on
+muun muassa Novel Peel, Bright Up -tuotteet ja ABC Cream, joita ei ole.
+**Sääntö "ei kerrota mitä ei ole" pätee myös kuviin.** Ampullikuva
+(Xanthohumol Recovery Treatment) toimii, koska se on molempien
+käytössä olevien hoitojen ydin.
+
+**4. Kuvien käyttöoikeus varmistettava Duallaserilta.** Nämä ovat
+valmistajan markkinointikuvia. Jälleenmyyjä yleensä saa käyttää niitä,
+mutta asia on syytä kysyä etukäteen.
+
+**5. Omat kuvat ovat parempia.** Elokuun kuvauslista on luvussa 3.5.
+ProXN-tuotteet omassa hoitohuoneessa todistavat että tuotteet ovat
+oikeasti siellä. Valmistajan renderit näyttävät samalta kuin kaikilla
+muillakin jälleenmyyjillä.
+
+#### Jaottelu: kaksi eri tarinaa
+
+Tuotteet eivät ole asiakkaalle sama asia, joten niitä ei esitetä samassa
+sarjassa peräkkäin ilman erottelua.
+
+**Mitä hoidossa tapahtuu** (ammattikäyttö, ei ostettavissa)
+- Xanthohumol Recovery Treatment
+- PHA Solution
+
+**Mitä voit jatkaa kotona** (saatavilla studiolta, ei verkkokauppaa,
+ei hintoja julkaisuissa)
+- Recovery Cleansing Oil
+- Balancing Cleansing Gel
+- Prime Mist
+- Antioxidant Therapy
+- Sun Barrier
+- LF Master
+
+**Järjestys: ammattikäyttöiset ensin.** Ne kertovat hoidosta eivätkä myy
+purkkia. Kotihoitotuotteet toimivat paremmin kun hoito on ensin tuttu.
+
+Kahdeksan tuotetta on kahdeksan viikkoa, mikä vie marraskuun alkuun.
+Silloin tahti muuttuu luvun 3.2 mukaan ylläpitoon (1 Reels + 1 muu).
+
+#### Tilanne 10.8.2026
+
+Ei aloitettu. Odottaa ProXN-sivun julkaisua ja käyttäjän omaa
+tuotetestausta. Tämän viikon kolmas julkaisupaikka on siis vapaa tai
+täytetään muulla sisällöllä.
 
 ### 3.6 Sisällön uudelleenkäyttö
 
@@ -2424,7 +2590,7 @@ sosiaalinen alusta vaan Google-yritysprofiilin arvostelut.
 Paikallisessa palveluliiketoiminnassa ne ovat vahvin yksittäinen
 tekijä sekä hakusijoituksessa että asiakkaan päätöksenteossa.
 Rutiini arvostelujen pyytämiseen ensimmäisestä asiakkaasta lähtien
-(5.9. alkaen) on arvokkaampi kuin mikään uusi alusta.
+(7.9. alkaen) on arvokkaampi kuin mikään uusi alusta.
 
 Studio löytyy jo Googlen etusivulta hakusanoilla mikroneulaus
 kotka, aknehoito kotka ja aknearpien hoito kotka. Tuo liikenne on

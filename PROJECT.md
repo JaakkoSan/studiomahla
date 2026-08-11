@@ -12,10 +12,10 @@ sisältävä — brändi-info ja tekniset päätökset.
 
 ---
 
-## ⚠️ TIEDOSTOJEN KIRJOITTAMINEN (kriittinen, löydetty 6.8.2026)
+## ⚠️ TIEDOSTOJEN KIRJOITTAMINEN (kriittinen, löydetty 7.8.2026)
 
 **Kansio `C:\studiomahla` on liitetty Windowsista, eikä tavallinen
-`open(polku,'w')` ole siinä luotettava.** 6.8.2026 löytyi viisi
+`open(polku,'w')` ole siinä luotettava.** 7.8.2026 löytyi viisi
 vaurioitunutta tiedostoa:
 
 | Tiedosto | Vika |
@@ -632,6 +632,16 @@ Sama verbi voi siis olla kummassa muodossa tahansa asiayhteyden mukaan.
 hoitohuoneessa tarkoittaa studiota. Tarkista aina kumpi on kyseessä, älä
 yhtenäistä mekaanisesti.
 
+**Lähdesäännön tarkennus (käyttäjä 7.8.2026): lähdeluettelossa on oltava
+suora linkki.** Jos lähteeseen ei voi linkittää, sitä ei laiteta
+lähdeluetteloon lainkaan. Tämä koskee esimerkiksi valmistajien omia
+PDF-aineistoja joita ei ole julkisesti verkossa.
+
+Seuraus: tällaiseen aineistoon viitataan **leipätekstissä** kertomalla
+mistä tieto on peräisin ("valmistajan tieteellisessä aineistossa"),
+eikä sivulle tehdä lähdeluetteloa. Lukija saa silti tietää lähteen
+luonteen, mikä on koko säännön tarkoitus.
+
 **Lähdesääntö (kirjattu 5.8.2026, käyttäjän sääntö).** Jos artikkelissa
 mainitaan jokin lähde, artikkelissa on oltava myös lähdeluettelo. Ei
 poikkeuksia. Yksikin nimetty tutkimus, katsaus tai julkaisu leipätekstissä
@@ -1000,9 +1010,9 @@ tiedoston yläreunassa:
 5. Palauta cross-linkki `milloin-aloittaa-mikroneulaus.html`:n
    "Lue lisää"-osioon
 
-### Avausbanneri POISTETTU 6.8.2026
+### Avausbanneri POISTETTU 7.8.2026
 
-**Käyttäjän havainto:** banneri ei ole enää tarpeellinen, koska ihminen
+**Käyttäjän havainto 7.8.2026:** banneri ei ole enää tarpeellinen, koska ihminen
 löytää vapaat ajat ajanvarauslinkistä. Perustelu kesti tarkastelun:
 
 - Sama tieto sanotaan jokaisen sivun CTA-tekstissä ja yläpalkin
@@ -1098,7 +1108,7 @@ skriptin alkuun.
 sähköinen asiointipalvelu). Kirjattu omavalvontasuunnitelmaan.
 Vastaanottotodistus vielä täydentämättä.
 
-Ilmoitusta päivitettiin 6.8.2026. Toiminnan vapaa kuvaus kirjoitettiin
+Ilmoitusta päivitettiin 7.8.2026. Toiminnan vapaa kuvaus kirjoitettiin
 Ilppan ohjeen mukaan neljästä osasta: millaista palvelua perustetaan,
 henkilökunnan tausta, toimitila ja tilan soveltuvuus toimintaan.
 Kuvaus on 2771 merkkiä ja se on kirjoitettu **yläkerran hoitohuoneesta**,
@@ -1132,6 +1142,382 @@ uudelleen.
 Valvova viranomainen on **Lupa- ja valvontavirasto (LVV)**, joka on
 korvannut Valviran. Ohjeet ovat osoitteessa lvv.fi, eivät enää
 valvira.fi.
+
+### VIRANOMAISEN TODISTUS 10.8.2026 — sisältää määräajan
+
+`Todistus_Mahlamaen-kauneusstudio_2097003.pdf`, 10 sivua. Sivut 1–2 ovat
+todistus, sivut 3–10 ovat liite `13.10.2025 TsL OMAVALVONTAOHJEISTUS.pdf`.
+
+**Ilmoitus on käsitelty ja kohde on lisätty valvontakohdetietokantaan.**
+
+| Tieto | Sisältö |
+|---|---|
+| Tapahtumatunnus | 2097003 |
+| Diaarinumero | D/8434/11.02.02.00/2026 |
+| Ilmoitus vastaanotettu | 7.8.2026 |
+| Todistus annettu | 10.8.2026 |
+| Toiminta | Kosmetologiset huoneistot ja laitokset |
+| Viranomainen | Kotkan ympäristöterveydenhuollon palveluyksikkö, terveydensuojelutoimiala, Mussalontie 428, 48310 Kotka |
+| Tarkastaja | Mirva Lahtela, 044 702 4807, mirva.lahtela@kotka.fi |
+| Maksu | 140,00 € erillisellä laskulla |
+
+#### MÄÄRÄAIKA 15.9.2026: pohjakuva ja ilmanvaihdon selvitys
+
+**"Toiminnanharjoittajaa ohjataan toimittamaan
+terveydensuojeluviranomaiselle 15.9.2026 mennessä huoneiston pohjakuva
+ja ilmanvaihdon selvitys (esim. IV-kuvat)."**
+
+Toimitusosoite: Kotkan kaupunki, ympäristöpalvelut / Mirva Lahtela,
+Mussalontie 428a, 48310 Kotka, tai ymparistoterveys@kotka.fi.
+
+Tämä on todistuksen ainoa aikataulutettu velvoite. 15.9.2026 on tiistai.
+
+**Käyttäjän linjaus 10.8.2026: tehdään myöhemmin, aikaa on.** Ei siis
+avoin tehtävä juuri nyt, mutta takaraja on kiinteä.
+
+**Huomioitava yhteys omavalvontasuunnitelmaan:** suunnitelmassa on
+kirjattu että ilmanvaihto on painovoimainen ja arvioitu riittäväksi.
+Painovoimaisesta ilmanvaihdosta ei ole IV-kuvia. Selvitys on siis
+kirjoitettava sanallisesti, ja sen on syytä olla sama perustelu kuin
+omavalvontasuunnitelmassa, ei eri sanoin kirjoitettu versio.
+
+#### Tarkastukset
+
+- **Seuraava tarkastus noin 6 kuukauden kuluessa** eli helmikuun 2027
+  tienoilla, ajankohta sovitaan erikseen. Maksullinen.
+- Sen jälkeen suunnitelmallinen valvonta **neljän vuoden välein**,
+  koska kyseessä on ihoa rikkova toiminta.
+- Tarkastuksella pyydetään esittämään miten riskit on tunnistettu,
+  miten niiden vakavuus on arvioitu ja mitä hallintakeinoja on käytössä.
+
+#### AVAUSPÄIVÄ ON 7.9.2026 (ratkaistu 10.8.2026)
+
+Todistuksessa lukee "toiminnan aloittaminen 7.9.2026 alkaen".
+Aiemmin kaikkialla oli 5.9.2026. **Käyttäjän linjaus 10.8.2026:
+missään ei saa enää lukea 5.9.** Viranomaiselle ilmoitettu päivä on
+oikea. 5.9.2026 on lauantai, 7.9.2026 maanantai.
+
+**Tämä on tästä eteenpäin ainoa oikea avauspäivä kaikessa sisällössä:
+sivusto, some, Timma, automaatiot, mainokset.**
+
+Korjaukset tehty 10.8.2026:
+
+| Tiedosto | Kohtia |
+|---|---|
+| `META-MARKKINOINTI.md` | 3 |
+| `tuotanto/automaatiot/viikoittainen-blogiehdotus.md` | 1 |
+| `omavalvonta.py` ja sen ulostulot | rivi "Toiminnan aloittaminen" |
+
+**Sivuston HTML-tiedostoissa ei ollut yhtään osumaa.** Syy on
+7.8.2026 tehty työ, jossa banneri poistettiin ja UKK-vastaukset
+muotoiltiin aikariippumattomiksi. Päivämäärää ei siis ole kovakoodattu
+mihinkään julkaistuun sivuun, mikä on syytä säilyttää.
+
+**PROJECT.md:n vanhoja lokimerkintöjä ei muutettu.** Ne kertovat mitä
+milloinkin tehtiin ja millä tiedolla, eikä historiaa kirjoiteta
+uudelleen. Jos vanhassa merkinnässä lukee 5.9., se on oikein siinä
+kontekstissa.
+
+#### Mitä todistus muuttaa omavalvontasuunnitelmassa
+
+Käyty läpi 10.8.2026 vertaamalla `omavalvonta.py`:n sisältöä liitteen
+ohjeeseen. Löydökset, ei vielä toteutettu:
+
+1. **Kaksi [TÄYDENNÄ]-kenttää ratkeaa.** Vastaanottotodistus on tämä
+   asiakirja. Tunnukseksi kannattaa merkitä tapahtumatunnus 2097003 ja
+   diaarinumero, ei pelkkä Ilppa-tunnus 145019.
+2. **Viranomaisen nimi on väärin.** Suunnitelmassa "Kotkan seudun
+   ympäristöterveydenhuolto", oikea nimi on "Kotkan
+   ympäristöterveydenhuollon palveluyksikkö". Yhteistoiminta-alue on
+   Kotka ja Pyhtää.
+3. **Riskitaulukon rakenne ei vastaa ohjeen omaa asteikkoa.** Ohjeen
+   taulukko 1 johtaa riskitason kahdesta muuttujasta: seurausten
+   vakavuus (vähäinen, haitallinen, vakava) ja esiintymistodennäköisyys
+   (epätodennäköinen, mahdollinen, todennäköinen). Riskitasot ovat
+   merkityksetön, siedettävä, kohtalainen, merkittävä ja sietämätön.
+   Suunnitelman taulukossa on yksi sarake "Vakavuus", jossa on sekaisin
+   seurausten vakavuutta ("Vakava") ja riskitasoja ("Kohtalainen").
+   **Tarkastaja lukee taulukkoa tätä ohjetta vasten.** Korjaus: kolme
+   saraketta, seuraukset ja todennäköisyys ja niistä johdettu riskitaso.
+   Tämä ei laajenna suunnitelmaa, vaan tekee samasta sisällöstä
+   luettavan oikeaa asteikkoa vasten.
+4. **Lämpimän veden yläraja puuttuu.** Ohje: vesikalusteesta saatava
+   vesi vähintään +50 °C ja **korkeintaan +65 °C**. Suunnitelmassa
+   mainitaan vain alaraja. Varaaja on 65 °C eli ylärajalla, joten
+   maininta ylärajasta kannattaa olla, muuten lukija joutuu itse
+   päättelemään onko luku sallittu.
+5. **Kylmä vesi alle 20 °C** on ohjeessa mainittu, suunnitelmassa ei.
+6. **Radon.** Ohje sanoo että radon on Kaakkois-Suomen alueella asia
+   joka suositellaan omavalvonnassa huomioimaan. Kotka on tällä
+   alueella. Ei ole suunnitelmassa. Yksi rivi riittää.
+7. **Dokumentaatio.** Ohje edellyttää terveydellisiin olosuhteisiin
+   liittyvien ilmoitusten ja toimenpiteiden kirjaamista ja säilyttämistä.
+   Suunnitelmassa on kirjaaminen vain pistotapaturmasta.
+
+Kohdat 1, 2 ja 4 ovat suoria korjauksia. Kohta 3 on rakennemuutos.
+Kohdat 5, 6 ja 7 ovat lisäyksiä, yhteensä muutama rivi.
+
+#### KAIKKI SEITSEMÄN TEHTY 10.8.2026
+
+`omavalvonta.py` päivitetty, molemmat ulostulot ajettu uudelleen.
+`PAIVITETTY = '10.8.2026'`. Word 3 sivua, 798 sanaa. Tarkistettu
+renderöimällä PDF:ksi ja katsomalla sivut.
+
+- Perustietotaulukkoon lisätty rivi **"Toiminnan aloittaminen 7.9.2026"**,
+  koska se on viranomaiselle ilmoitettu päivä.
+- Ilmoitusrivi kertoo nyt käsittelyn, todistuksen päivän ja molemmat
+  tunnukset. Vastaanottotodistuksen [TÄYDENNÄ] poistui.
+- Viranomaisrivillä oikea nimi, osoite ja tarkastajan yhteystiedot.
+  Ohje suosittelee pitämään keskeiset sidosryhmäyhteystiedot
+  omavalvonnassa, joten ne ovat samalla tuossa rivissä.
+- Riskitaulukko on nyt viisisarakkeinen: riski, syntytapa, seuraukset,
+  todennäköisyys, riskitaso. Taulukon edellä kerrotaan mihin asteikkoon
+  arvio perustuu ja että todennäköisyys on arvioitu **jäännösriskinä**
+  eli luvun 4 hallintakeinot käytössä. Tämä on tarkoituksellista: ohjeen
+  taulukko 2 sanoo että merkittävää riskiä ei saa jättää ennen toiminnan
+  aloittamista, joten arvion on kuvattava todellista tilannetta eikä
+  teoreettista tilannetta ilman suojauksia.
+- Taulukon jälkeen yksi virke: kohtalainen riski edellyttää toimia,
+  toimet ovat luvussa 4, merkittäviä tai sietämättömiä ei ole.
+- Riskitasot alla, korjattuina 10.8.2026 käyttäjän huomautuksen
+  perusteella.
+
+##### Riskiarviot korjattu 10.8.2026, käyttäjä huomautti kahdesta
+
+Käyttäjä kyseenalaisti pistotapaturman todennäköisyyden ja tarkensi
+bakteeri-infektion syntytapaa. Molemmat korjattiin.
+
+**Pistotapaturma: mahdollinen → epätodennäköinen.** Perustelin luokan
+sillä että neulanpistotapaturmat ovat terveydenhuollossa yleisiä.
+Perustelu ei päde tähän toimenpiteeseen: ne yleistyvät mekanismeista
+joita mikroneulauksessa ei ole, eli hollow-bore-neuloista,
+hylsytyksestä, kanyloinnista, ompelusta ja lääkkeen vedosta. Neulapää
+on suljettu kertakäyttökasetti joka napsautetaan kynään, irrallista
+neulaa ei käsitellä missään vaiheessa, ja käytetty kasetti menee
+suoraan särmäisjäteastiaan.
+
+**Sama virhetyyppi kuin ProXN:n keksityssä vasta-aiheessa 7.8.:
+päättely analogialla toisesta toimenpiteestä sen sijaan että olisi
+katsottu mitä tässä työvaiheessa oikeasti tapahtuu.** Tämä on
+toistunut kahdesti, joten se on syytä tunnistaa: kun kirjoitan
+kliinisestä riskistä, perustelun on tultava tästä työnkulusta, ei
+toimialan yleistilastosta.
+
+Seuraukset pidettiin haitallisena eikä vakavana, koska vakava
+lopputulos eli veriteitse tarttuva infektio on jo omana rivinään.
+Muuten sama asia laskettaisiin kahdesti.
+
+**Bakteeri-infektio jaettiin kahdeksi riviksi.** Käyttäjä: hoitotilanne
+on epätodennäköinen, mutta hoidon jälkeinen infektio on todellisuudessa
+mahdollinen ja johtuu käytännössä asiakkaan omasta toiminnasta.
+Yhdellä rivillä ei voi olla kahta todennäköisyyttä, ja hallintakeinot
+ovat eri: aseptiikka vastaan asiakkaan ohjeistus.
+
+**Tämä paljasti aukon.** Sanaa jälkihoito-ohje ei esiintynyt
+suunnitelmassa lainkaan, vaikka ohjeet annetaan. Jos taulukossa on
+riski, luvussa 4 on oltava sen hallintakeino. Lisättiin lukuun 4.2:
+asiakas saa kirjalliset jälkihoito-ohjeet ja ne käydään läpi hoidon
+päätteeksi.
+
+Lopputilanne, kuusi riviä:
+
+| Riski | Seuraukset | Todennäköisyys | Riskitaso |
+|---|---|---|---|
+| Veriteitse tarttuva infektio | Vakava | Epätodennäköinen | Kohtalainen |
+| Bakteeri-infektio, hoitotilanne | Haitallinen | Epätodennäköinen | Siedettävä |
+| Bakteeri-infektio, hoidon jälkeen | Haitallinen | Mahdollinen | Kohtalainen |
+| Infektion leviäminen tai paheneminen | Vakava | Epätodennäköinen | Kohtalainen |
+| Ristikontaminaatio | Haitallinen | Epätodennäköinen | Siedettävä |
+| Pistotapaturma | Haitallinen | Epätodennäköinen | Siedettävä |
+
+Word 901 sanaa. Kolme kohtalaista, kolme siedettävää. Taulukon jälkeinen
+virke pitää edelleen paikkansa: merkittäviä tai sietämättömiä ei ole.
+- Otsikko 3 muutettu muotoon "Riskit ja niiden arviointi", koska
+  "vakavuus" ei enää kata taulukon sisältöä.
+- Vesiriviin lisätty yläraja ja perustelu, uusi rivi kylmästä vedestä ja
+  uusi rivi radonista.
+- Uusi luku 6 Kirjaaminen. Vanha luku 6 on nyt 7.
+
+**[TÄYDENNÄ]-kohtia ei enää ole.** Särmäisjätteen vastaanottaja on
+**Ekokaari Oy** (käyttäjän tieto 10.8.2026).
+
+#### Särmäisjäte: sopimusta ei vaadita, siirtoasiakirja voi olla
+
+Käyttäjä oli selvittänyt ettei varsinaista sopimusta tarvita, riittää
+että vastaanottopaikka on tiedossa. **Tämä pitää paikkansa.**
+
+**Jätelaki 646/2011 29 §** rajaa vain sen kenelle jätteen saa luovuttaa:
+kuljettajalle tai kerääjälle jolla on jätehuoltorekisterimerkintä,
+käsittelijälle jolla on ympäristölupa tai rekisteröinti, tai
+vastaanottajalle jolla on riittävä asiantuntemus ja valmiudet jos
+viranomaishyväksyntää ei lain mukaan tarvita. **Sopimusvelvoitetta ei
+jätelaissa ole.** Suunnitelmaan kirjattu vastaanottaja ja tämä
+perustelu, ei sopimusta.
+
+**Siirtoasiakirjaa ei tarvita.** Käyttäjä vahvisti 10.8.2026 että
+jätenimike on **viiltävä ja pistävä jäte**, eli jäteasetuksen 978/2021
+liitteen 3 jäteluettelon **18 01 01**. Nimikkeessä ei ole tähteä, joten
+se ei ole vaarallista jätettä.
+
+Ympäristöministeriön muistio *Siirtoasiakirjan käyttö tiettyjen
+jätteiden kuljetuksessa* (päivitetty 15.9.2023) luettelee jätteet joista
+siirtoasiakirja on laadittava: vaarallinen jäte, POP-jäte, saostus- ja
+umpisäiliöliete, pilaantunut maa-aines, rakennus- ja purkujäte sekä
+hiekan- ja rasvanerotuskaivojen liete. Studion särmäisjäte ei ole
+mikään näistä.
+
+Rajanveto on 18 01 03*, tartuntavaaralliset jätteet. Se on tähdellinen
+ja edellyttäisi siirtoasiakirjan jokaisesta luovutuksesta määrästä
+riippumatta. **Jos jonkin asiakkaan tiedetään olevan veriteitse
+tarttuvan infektion kantaja, jäte käsitellään erityisjätteenä** ja
+tällöin nimike ja siirtoasiakirjavelvoite on tarkistettava erikseen.
+Tämä poikkeus on jo kirjattu suunnitelmaan jätteitä koskevaan lukuun.
+
+**Jätenimike 18 01 01 lisätty suunnitelmaan 10.8.2026** särmäisjäteastian
+kohdalle, jotta luokitus näkyy tarkastajalle suoraan.
+
+**Jäteasia on tältä osin loppuun käsitelty.**
+
+#### Radon: RATKAISTU 10.8.2026, mittausvelvollisuutta ei ole
+
+Käyttäjä vahvisti että **radonmittausta ei ole tehty** ja että
+**hoitotila on yläkerrassa**, ei maan alla.
+
+**Yläkerran sijainti ratkaisee asian, eikä aluetta tarvitse edes
+tarkistaa.** STUKin oma sivu `stuk.fi/radon-tyopaikoilla` sanoo suoraan:
+"Radonmittaus ei yleensä ole tarpeen rakennuksen toisessa tai ylemmissä
+kerroksissa sijaitsevilla työpaikoilla. Näissä tiloissa
+radonpitoisuudet ovat yleensä pieniä."
+
+Säteilylain 859/2018 155 §:n mukaan mittausvelvollisuus syntyy
+neljästä perusteesta. Yksikään ei koske yläkerran työtilaa:
+
+| Peruste | Koskeeko |
+|---|---|
+| Työtila osittain tai kokonaan maan alla | Ei |
+| Työtila mittausvelvoitealueella | Mitataan vain 1. kerros ja sen alapuoliset |
+| Harju tai muu hyvin ilmaa läpäisevä sora- tai hiekkamuodostuma | Mittaus tehdään 1. kerroksesta alaspäin |
+| Talousvettä toimittava laitos | Ei |
+
+STUK: "Näillä alueilla mitataan rakennuksen ensimmäisen kerroksen sekä
+maan alaiset työtilat." Ja mittausohje: "Työpaikan radonmittaus tehdään
+rakennuksen ensimmäisessä kerroksessa (maantasosta lukien) sekä tämän
+alapuolisissa kerroksissa."
+
+**Aiempi merkintä oli liian varovainen.** Kirjasin ensin että
+mittausvelvollisuus on tarkistettava STUKin kuntaluettelosta, koska en
+saanut luetteloa auki (kuntavalikko, ei staattista hakua, selainyhteys
+poikki). Kerroksen sijainti tekee luettelon tarkistamisen
+tarpeettomaksi: vaikka Kotka olisi luettelossa, velvoite kohdistuisi
+ensimmäiseen kerrokseen.
+
+**Suunnitelmaan kirjattu näin:** yläkerta, ei maan alla, velvollisuus ei
+koske tätä tilaa, mittausta ei ole tehty, ja jos hoitotila siirtyy
+alempaan kerrokseen mittaustarve arvioidaan uudelleen.
+
+**Tämä kytkeytyy suunnitelmassa jo olevaan kirjaukseen** siitä että
+hoitotilan siirtyminen alakertaan on olennainen muutos. Nyt siirrolla on
+myös radonseuraus, ei vain ilmoitusseuraus.
+
+Jos mittaus joskus tulee ajankohtaiseksi: mittauskausi on **1.9.–31.5.**,
+purkkia pidetään tilassa **vähintään kaksi, mieluiten kolme kuukautta**,
+viitearvo on **300 Bq/m³**, ja muualta kuin STUKista tilatun mittauksen
+tulos on ilmoitettava STUKille. STUKilla on myös kyselytyökalu
+velvoitteen selvittämiseen: formbox.fi-lomake sivulla
+`stuk.fi/radon-tyopaikoilla`.
+
+**Kaksi asiaa ohjeesta oli jo kunnossa:** siivousvälineiden säilytys
+ovellisessa kaapissa (siivoussuunnitelma) ja käyttöturvallisuustiedotteet
+hoitotilassa.
+
+**Ohjeen sanamuoto vahvistaa aiemman päätöksen:** "Omavalvontasuunnitelman
+suositellaan mielellään olevan kirjallinen, vaikka terveydensuojelulaki
+ei sitä suoraan velvoita kirjallisena tekemään." Kirjallinen suunnitelma
+minimilaajuudessa oli siis oikea ratkaisu.
+
+### KÄSIHYGIENIA: poikkeamme Valviran ohjeesta tietoisesti (10.8.2026)
+
+**Tämä on suunnitelman ainoa kohta jossa toimitaan toisin kuin
+Valviran ohjeessa. Poikkeama on tarkoituksellinen ja perusteltu. Jos
+tarkastaja kysyy, vastaus on tässä.**
+
+#### Mitä Valviran ohje sanoo
+
+`Ohje kauneushoitolan ja muun vastaavan tilan sekä ihoa rikkovan
+toiminnan hygienian sekä omavalvonnan vaatimuksista`, Valvira,
+Dnro V/47861/2024, 18.12.2024, luku 4.2:
+
+> "Käsihygieniaa ovat käsien pesu (nestesaippualla 40–60 sekuntia),
+> desinfiointi käsihuuhteella (80 tilavuus-%, 15–30 sekuntia) ja
+> tarvittaessa suojakäsineiden käyttö."
+
+> "Käsien saippuapesu ja desinfiointi tulisi tehdä ennen jokaista
+> hoitotilannetta tai toimenpidettä, tarvittaessa hoitojen aikana, ja
+> ennen suojaimien pukemista."
+
+#### Miksi siitä poiketaan
+
+WHO:n käsihygieniasuositukset (2009), konsensussuositukset luku 1:
+
+> "Use an alcohol-based handrub as the preferred means for routine hand
+> antisepsis in all other clinical situations ... if hands are not
+> visibly soiled" — **näytön luokka IA**, vahvin mahdollinen
+
+> "Wash hands with soap and water when visibly dirty or visibly soiled
+> with blood or other body fluids ... or after using the toilet"
+
+> "**Soap and alcohol-based handrub should not be used concomitantly**"
+> — sanottu kahdesti, sekä kohdassa 1.6 että ihonhoidon kohdassa 5.5
+
+Ja kirurgisesta käsienpesusta, joka on selvästi korkeampi
+vaatimustaso kuin mikroneulaus, kohdat 3.5 ja 3.8:
+
+> "Surgical hand antisepsis should be performed using **either** a
+> suitable antimicrobial soap **or** suitable alcohol-based handrub"
+
+> "**Do not combine** surgical hand scrub and surgical handrub with
+> alcohol-based products **sequentially**"
+
+THL noudattaa samaa linjaa: käsihuuhde on perusmenetelmä,
+vesisaippuapesu koskee lueteltuja tilanteita.
+
+**Valviran ohjeen kohta on siis ristiriidassa WHO:n IA-tason
+suosituksen kanssa.** Edes leikkaussalissa ei tehdä molempia peräkkäin.
+
+#### Miksi tämä on sallittua
+
+Valviran ohje sanoo itsestään: *"Ohje ei ole oikeudelliselta
+luonteeltaan sitova."* Velvoite tulee terveydensuojelulain 2 §:stä:
+tunnista riskit, arvioi ne, hallitse ne. Laki ei edellytä ohjeen
+kopiointia vaan perusteltua käytäntöä.
+
+**Peruste on kirjoitettu suunnitelmaan näkyviin**, jolloin poikkeama on
+dokumentoitu ammatillinen valinta eikä puute. Tarkastajan
+arviointikysymyksissä on täsmälleen "Missä tilanteissa käsiä pestään?
+Milloin desinfioidaan?", ja siihen on nyt valmis vastaus.
+
+#### Miten se on kirjattu
+
+Luku 4.2, kolme luotia: käsihuuhde ensisijaisena (15–30 s, ennen
+hoitoa, ennen käsineitä, käsineiden jälkeen, tarvittaessa hoidon
+aikana), saippuapesu lueteltuihin tilanteisiin (40–60 s, näkyvä lika
+tai veri, wc, töihin ja töistä), ja perustelu miksi niitä ei käytetä
+peräkkäin. Ohjeen kestot 40–60 s ja 15–30 s säilytettiin, koska ne
+eivät ole ristiriidassa minkään kanssa. Word 965 sanaa.
+
+#### Muistiinpano työtavasta
+
+Kysyin ensin mistä 40–60 sekuntia on peräisin ja väitin sen olevan
+oma keksintöni. Se oli väärin: luku on suoraan Valviran ohjeesta.
+Myönnyin käyttäjän vastaväitteeseen tarkistamatta alalähdettä, eli
+vastasin siihen kumpi vaikutti varmemmalta enkä siihen mitä lähteessä
+lukee. **Tämä on sama virhe toisesta suunnasta kuin lähteettömän
+väitteen esittäminen.** Molemmissa ohitetaan lähde.
+
+Ensimmäinen perusteluni poikkeamalle oli myös väärä: väitin että ihon
+läpäisy asettaa korkeamman lähtötason joten pestään lisäksi. Se menee
+päinvastoin, koska käsihuuhde on tehokkaampi kuin saippuapesu.
+Oikea peruste on teho ja ihon kunto, ei toimenpiteen vaativuus.
 
 ### Omavalvonta (selvitetty 6.8.2026)
 
@@ -1657,7 +2043,415 @@ ProXN ja LED ovat tukimenetelmiä (omat sivut, ei pillaria).
 Ei dropdownia. Ei hampurilaista aluksi. Alle 380 px piilotetaan "Blogi"
 (löytyy footerista); "Ajanvaraus" pysyy aina.
 
-### 14.5 Etusivun uudelleenajattelu
+### Timman palvelutekstit ProXN:lle (kirjattu sanatarkasti 10.8.2026)
+
+Kirjattu tähän, koska palveluun kirjoitettu teksti on aiemmin kadonnut
+kun sitä ei ollut muualla. Kaikissa kesto 60 min.
+
+**Kliininen mikroneulaus, ensikäynti — 200 €**
+
+```
+Varaa tämä jos tiedät haluavasi kliinisen mikroneulauksen.
+
+Käynnillä teemme iho-analyysin, käymme läpi esitiedot ja varmistamme
+että hoito sopii ihollesi. Sen jälkeen teemme ensimmäisen hoidon
+MicroPen EVO -laitteella.
+
+Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet.
+Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
+
+Jos analyysissä käy ilmi ettei mikroneulaus sovi ihollesi juuri nyt,
+vaihdamme hoidon sopivaan tai siirrämme sen myöhemmäksi.
+
+Hoidon tekee terveydenhuollon ammattilainen.
+```
+
+**ProXN-kasvohoito, ensikäynti — 200 €**
+
+```
+Varaa tämä jos tiedät haluavasi ProXN-kasvohoidon.
+
+ProXN on ammattikäyttöön tarkoitettu hoito herkälle, reaktiiviselle ja
+ikääntyvälle iholle. Se ei riko ihoa, vaan vahvistaa ihon omaa
+suojakerrosta ja antioksidanttipuolustusta Xanthohumol Complexilla.
+Sopii myös silloin kun mikroneulaus ei sovi.
+
+Käynnillä teemme iho-analyysin, käymme läpi esitiedot ja teemme
+ensimmäisen hoidon. Hoidon jälkeen ei ole rajoituksia, ja arkeen voi
+palata suoraan.
+
+Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet.
+Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
+
+Hoidon tekee terveydenhuollon ammattilainen.
+```
+
+**Ensikäynti ja hoitosuositus — 200 €**
+
+```
+Varaa tämä jos et ole varma kumpi hoito sinulle sopii.
+
+Teemme iho-analyysin, käymme läpi esitiedot ja päätämme yhdessä kumpi
+hoitopolku on sinulle oikea: kliininen mikroneulaus vai
+ProXN-kasvohoito.
+
+Valittu hoito tehdään samalla käynnillä, joten et lähde pelkän
+suunnitelman kanssa.
+
+Hinta on sama kuin suorissa varauksissa ja kattaa ammattilaisen ajan,
+käytetyt tuotteet ja jälkihoito-ohjeet. Jos päädyt sarjahoitoon, tämä
+käynti lasketaan sarjaan mukaan.
+
+Hoidon tekee terveydenhuollon ammattilainen.
+```
+
+#### Sarjapalvelut
+
+**Rakenne muutettu 10.8.2026.** Aiemmin sarjat olivat kaksi palvelua
+("neljän hoidon sarja", "kuuden hoidon sarja"), joissa hoitomuoto
+valittiin vasta ensikäynnillä. Nyt sarjat on jaettu hoitomuodon mukaan,
+koska hoitoväli on eri: rauhoitushoito kerran viikossa, aknehoito
+kahden viikon välein. Yhdessä palvelutekstissä ei voi kertoa
+aikataulua täsmällisesti jos hoitomuoto on auki.
+
+Neljä palvelua, kaikki 60 min.
+
+**ProXN-rauhoitushoito, kolmen hoidon sarja — 570 €**
+
+```
+Rauhoitushoito ylireagoivalle iholle, kolme hoitokertaa kerran viikossa.
+190 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
+
+Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa
+antioksidanttipuolustusta. Se sopii silloin kun iho punoittaa, kiristää
+tai reagoi herkästi.
+
+Kolmas hoitokerta on tarkistuspiste. Silloin katsotaan yhdessä miten iho
+on vastannut ja päätetään jatketaanko kuuteen. Kolme ei siis ole katto
+vaan kohta jossa suunta arvioidaan.
+
+Rauhoitushoidossa kolmas käynti on kahden viikon kuluttua ensimmäisestä.
+Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja
+viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+```
+
+**ProXN-rauhoitushoito, kuuden hoidon sarja — 1080 €**
+
+```
+Rauhoitushoito ylireagoivalle iholle, kuusi hoitokertaa kerran viikossa.
+180 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
+
+Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa
+antioksidanttipuolustusta. Se sopii silloin kun iho punoittaa, kiristää
+tai reagoi herkästi.
+
+Pidempi sarja on tarkoitettu tilanteisiin joissa ihon lähtötilanne
+vaatii enemmän toistoja. Kumpi sarja sinulle sopii, arvioidaan
+ensikäynnillä tai viimeistään kolmannen hoidon kohdalla.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+```
+
+**ProXN-aknehoito, kolmen hoidon sarja — 570 €**
+
+```
+Aknehoito, kolme hoitokertaa kahden viikon välein. 190 euroa
+hoitokerralta. Ensikäynti sisältyy sarjaan.
+
+Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen
+jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena
+ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon
+mikrobiomia.
+
+Kolmas hoitokerta on tarkistuspiste. Tulehtuneet muutokset ovat silloin
+useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa
+olevaan tulehdukseen. Tukkeutuneet ihohuokoset ja tulehduksen jälkeiset
+tummumat muuttuvat hitaammin, ja siksi aknehoidossa kolmesta yleensä
+jatketaan kuuteen.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+```
+
+**ProXN-aknehoito, kuuden hoidon sarja — 1080 €**
+
+```
+Aknehoito, kuusi hoitokertaa kahden viikon välein. 180 euroa
+hoitokerralta. Ensikäynti sisältyy sarjaan.
+
+Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen
+jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena
+ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon
+mikrobiomia.
+
+Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta
+huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa
+hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla
+ja vaikeammassa tilanteessa kahdentoista. Kahden viikon välein tehtynä
+kuuden hoidon sarjan viimeinen käynti on kymmenennellä viikolla, jolloin
+ollaan juuri siinä kohdassa.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+```
+
+### 14b-TYÖJÄRJESTYS: mistä jatketaan (tilanne 7.8.2026)
+
+Kaikki alla oleva riippuu vaiheesta 1. **Mihinkään ei kosketa ennen kuin
+ProXN-sivu on luettu ja hyväksytty.**
+
+**Vaihe 0. Timman palvelut** (käyttäjän työtä, tehdään ensin)
+- Seitsemän palvelua, tekstit valmiina tässä suunnitelmassa sanatarkasti
+  (ks. "Timman palvelutekstit ProXN:lle")
+- Ensikäynnit 200 €: mikroneulaus, ProXN, hoitosuositus
+- Sarjat: rauhoitushoito ja aknehoito, molemmat 3× 570 € ja 6× 1080 €
+- **Sarjat menevät Timmaan vaikka ne varataan aina käyttäjän toimesta.**
+  Syy: hinnat ja sisällöt näkyvät asiakkaalle.
+
+**Vaihe 1. ProXN-sivu julki**
+- Käyttäjä lukee `proxn-kasvohoito.html` (1973 sanaa, sarjahinnat sisällä)
+
+**Sävykorjaus 10.8.2026: puolusteleva ääni poistettu.** Käyttäjä
+huomautti että sivulla oli "sanon nyt suoraan" ja "tekee tätä, ei tätä"
+-tyyppisiä lauseita. Poistetut:
+
+- *"Ihonhoitoalalla luvut irrotetaan usein asiayhteydestään. Siksi
+  kerromme myös sen mitä numeroiden takana on."* — kehui omaa
+  rehellisyyttä ja piikitteli alaa
+- *"Rajaus on syytä sanoa selvästi."* — ilmoitus siitä että kohta
+  sanotaan jotain, itse rajaus jäi
+- *"Valmistaja käyttää itse varausta in vitro, ja se on rehellinen
+  muotoilu"* — kommentoi valmistajan sanavalintoja
+- *"Ne eivät ole toistensa vaihtoehtoja vaan eri työkaluja, ja siksi
+  sama studio tarjoaa molempia"* — loppuosa perusteli liiketoimintaa
+- *"Avaamme ne yksi kerrallaan, koska..."* — kertoi mitä teksti aikoo
+  tehdä sen sijaan että olisi tehnyt sen
+- Otsikko *"Yhtä vakavasti otettava kuin mikroneulaus, eri
+  mekanismilla"* → **"Mikroneulaus vai ProXN?"** ja sen alta virke
+  *"Molemmat hoidot tehdään samalla vakavuudella..."*
+
+**Jätettiin tarkoituksella:** "Kotihoito on lisä, ei edellytys",
+"Kyse on hyödyn maksimoinnista, ei turvallisuudesta" ja "Hoitoa ei
+tehdä vain siksi että se on varattu". Muoto on sama mutta ne estävät
+väärinkäsityksen jonka lukija oikeasti tekisi.
+
+**Tutkimusosio kirjoitettu uusiksi samalla.** Ongelma ei ollut
+rehellisyys vaan rakenne: jokainen löydös esitettiin ensin ja peruttiin
+seuraavassa kappaleessa, kolme kertaa peräkkäin, ja bold-korostus oli
+varauksen päällä. Osio päättyi linkkiin mikroneulauksen
+tutkimusartikkeliin, eli lukija ohjattiin pois huonoimmalla hetkellä.
+
+Ratkaisu: **rajoitus sanotaan kuvauksena eikä oikaisuna**, samassa
+hengenvedossa löydöksen kanssa. Yhtään tosiasiaa ei poistettu.
+
+- Otsikko "Mitä tutkimus sanoo, ja mitä se ei sano" → "Mitä tutkimus
+  sanoo"
+- Avaus alkaa 800 tutkimuksesta, joka on aito vahvuus ja oli ennen
+  haudattu kolmanneksi alaosioksi
+- "Se on kemiallinen mittaus, ei ihotutkimus" → "Iholla lopputulokseen
+  vaikuttavat lisäksi imeytyminen, pitoisuus ja käyttötiheys"
+- Solutason osio päättyy siltaan kliinisiin tutkimuksiin, ei kieltoon
+- Loppukappale asettaa näytön tason kontekstiin ja päättyy siihen että
+  tutkimusten kohderyhmä on sama kuin hoidon kohderyhmä
+- Mikroneulauslinkki siirretty Lue lisää -osioon
+
+**Lisäksi "Mitä tästä seuraa iholle" oli yhden kappaleen osio**, sama
+ohuus kuin "Kaksi hoitoa" ennen yhdistämistä. Liitetty edelliseen.
+
+#### Kaksi kuvaa lisätty 11.8.2026
+
+Maahantuoja toimitti markkinointikuvia. Sivulle valittiin kaksi:
+
+| Tiedosto | Lähde | Paikka |
+|---|---|---|
+| `assets/proxn-ampulli.jpg/.webp` | `Pro xn recovery treatment kit.jpg` | Xanthohumol Complex |
+| `assets/proxn-antioxidant.jpg/.webp` | `pro XN antioxidant therapy liian iso.jpg` | Kotihoito |
+
+Alkuperäiset 4672×7008 ja jopa 14 Mt → skaalattu 1000×1500, jpg q82 ja
+webp q80. Ampullikuva 77/38 kt, antioksidanttikuva 252/197 kt.
+`<picture>` webp-lähteellä, sama rakenne kuin etusivun laitekuvassa,
+`loading="lazy"` ja `decoding="async"`.
+
+`style.css`:ään lisätty `figure.article-figure` (marginaali, kuva
+täysleveänä, figcaption 14 px `--text-mid`). Artikkelisivuilla ei ollut
+aiemmin kuvatyyliä lainkaan, vain `figure.infographic` SVG:ille.
+
+**Valintaperuste: kuva laitetaan vain jos se selittää jotain.**
+Ampullikuva näyttää sen minkä teksti kertoo, eli kylmäkuivatun jauheen
+ja aktivaattorin, jotka yhdistetään vasta hoitohetkellä.
+Antioksidanttikuva on kotihoidon keskeisin tuote.
+
+**Kaksi kuvaa hylättiin sisältösyystä:**
+
+- **Koko tuoteperheen ryhmäkuva.** Siinä näkyvät Bright Up Mask No. 1
+  ja 2, Novel Peel, Bright Up Therapy ja ABC Cream, joita ei ole
+  käytössä. Kuva lupaisi valikoiman jota studiolla ei ole.
+- **Suurennuslasikuva.** Kohteena Boost Up Ampoule, Bright Up -perhettä,
+  ei käytössä.
+
+**Yleisrajaus jatkoa varten: nämä ovat maahantuojan kuvia, eli samat
+jokaisen ProXN-jälleenmyyjän sivuilla.** Ei erottelevaa arvoa eikä
+paikallista hakuarvoa. Niitä käytetään vain siellä missä ne selittävät
+jotain, ei koristeena. **Käyttäjän linjaus 11.8.2026: lisää kuvia
+katsotaan vasta kun omia kuvia on.**
+
+Kolmas mahdollinen jos joskus tarvitaan: PHA Solution
+(`proxn antioxidant.jpg`, lasipallokuva) osioon Hoidon kulku. Tuote on
+käytössä.
+- `robots` noindex → index, follow
+- Lisätään `sitemap.xml`:ään
+- **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):
+  vain kaksi mainintaa, "Kenelle mikroneulaus ei sovi" ja ensikäynti.
+  Mikroneulaus pysyy päätuotteena.
+
+**Vaihe 2. Ensikäynnin kolme varausreittiä muualle sivustolle**
+- `hinnasto.html`: kolme riviä yhden sijaan, kaikki 200 €, sekä
+  ProXN-sarjat 570 € ja 1080 €, samat kuin mikroneulauksessa
+- `mita-ensikaynnilla-tapahtuu.html`: kuvaus kolmesta reitistä
+- `index.html`: ensikäyntikortti
+- Muista sisältösääntö: iho-analyysi tehdään myös suorissa varauksissa
+
+**Vaihe 3. Etusivun jako ja `/mikroneulaus.html`** (ks. 14.5b)
+- Kuusi osiota siirtyy, noin 814 sanaa
+- Etusivulle kirjoitetaan kaksi lyhyttä hoito-osiota ja "Kenelle kumpi?"
+- Navigaatio, sitemap, sisäiset linkit samalla kertaa
+- Tarkistettu 7.8.: mikään sivu ei linkitä etusivun ankkureihin, joten
+  siirto ei riko sisäisiä linkkejä
+
+**Vaihe 4. Kysely kytketään** kun molemmat hoitosivut ovat paikallaan.
+Korjattava ensin vanhentunut lause varauskalenterista.
+
+**Myöhemmin:** chat-widget (14.5c), LED syksyllä, Novel Peel jos
+ikääntymisprotokollat halutaan käyttöön.
+
+**Some kytkeytyy vaiheeseen 1.** ProXN-tuotesarjan viikkojulkaisut on
+suunniteltu (META-MARKKINOINTI.md luku 3.5c) ja ne alkavat samana
+päivänä kun sivu julkaistaan. **Käyttäjän linjaus 10.8.2026: hän testaa
+tuotteet vielä pari kertaa ennen tuotekohtaisia julkaisuja**, vaikka on
+käyttänyt niitä koulutuksessa. Julkaisu voi siirtyä viikolle 34.
+
+### 14.5b PÄÄTETTY RAKENNE 7.8.2026 (korvaa luvun 14.5 osittain)
+
+Käyttäjä päätti rakenteen. Tämä syrjäyttää luvun 14.5 siltä osin kuin ne
+ovat ristiriidassa.
+
+**Akseli: menetelmä on runko, ei iho-ongelma.** Perustelu: blogi on jo
+ongelma-akseli. Yksitoista artikkelia, joista moni ongelmalähtöinen
+(aknearvet, herkkä iho ja ruusufinni, lisäalueet, kenelle ei sovi).
+Erilliset iho-ongelmasivut kilpailisivat näiden kanssa samoista hauista.
+**Uutta ongelmasivukerrosta ei rakenneta.**
+
+**Etusivun uusi rakenne:**
+
+```
+Hero
+Hoitofilosofia
+Tiimi
+Kliininen mikroneulaus      oma osio, laajempi, ensin
+ProXN-kasvohoito            oma osio, tiiviimpi
+Kenelle kumpi?              lyhyt teksti + nappi joka avaa kyselyn
+Blogi-nosto
+Yhteystiedot ja ajanvaraus
+```
+
+**Mikroneulaus säilyy etusivulla omana mainintanaan** (käyttäjän
+nimenomainen vaatimus), tulee ennen ProXN:ää ja saa enemmän tilaa.
+
+**Sivupuu:**
+- `/mikroneulaus.html` uusi. **Sisältö siirretään etusivulta, ei
+  kirjoiteta uudelleen:** menetelmä (207 sanaa), laite (94), hoidon kulku
+  (176), ennen ja jälkeen (86), kenelle ei sovi (89), rullavertailu (162).
+  Yhteensä noin 814 sanaa siirtyy, ja hinnat linkitetään hinnastoon.
+- `/proxn-kasvohoito.html` valmis
+- `/hinnasto.html` valmis
+- Blogi jatkaa ongelma-akselina
+- Syksyllä LED-laitteen myötä `/led-valohoito.html`
+
+Etusivu on nyt 1565 sanaa. Siirron jälkeen noin 750.
+
+**Navigaatio:** `Mikroneulaus | ProXN | Hinnasto | Blogi | Ajanvaraus`.
+Viisi kohtaa on mobiilissa paljon. Nykyinen CSS piilottaa Blogin alle
+380 pikselin, ja tämä on testattava uudelleen.
+
+**Kysely kytketään** modaalina "Kenelle kumpi?" -osiosta ja molemmilta
+hoitosivuilta. Ei kelluvaa nappia aluksi. Ks. luku kyselystä alla.
+
+**Riski hyväksytty tietoisesti.** Etusivu sijoittuu kahdeksantena haulla
+"mikroneulaus kotka" koska se on mikroneulaussivu. Sisällön siirto voi
+pudottaa sijoitusta. Käyttäjän perustelu: etusivu mainitsee edelleen
+mikroneulauksen, notkahdus on hyväksyttävä ja palautuu.
+**Seurataan hakusanaseurannassa 1.9. ja 1.10.** Jos sijoitus ei ole
+palautunut kahdessa mittauksessa, `/mikroneulaus.html`:n sisäistä
+linkitystä on vahvistettava.
+
+Vaihtoehto B (etusivu pysyy mikroneulaussivuna, vain ProXN-osio lisätään)
+**hylättiin**, koska etusivu on jo pitkä eikä sitä haluta pidentää.
+
+### `kysely.html` on jo olemassa (löydetty 7.8.2026)
+
+39 kt, `noindex`, ei linkitetty mistään. Viisi vaihetta: pääasiallinen
+iho-ongelma (14 vaihtoehtoa), ihotyyppi, ikä, elämäntavat, vasta-aiheet.
+Suosittelee mikroneulausta tai ProXN-hoitoa. Logiikassa
+`MICRONEEDLING_BLOCKS` ja `PROXN_PROBLEMS`. Rakennettu modaaliksi jonka
+on tarkoitus avautua kaikilta sivuilta.
+
+**Korjattava ennen käyttöönottoa:** tuloksessa lukee "Aukaisemme
+varauskalenterin syksyllä 2026", mikä on vanhentunut.
+
+**Kysely ei korvaa iho-ongelmasivuja eikä toisin päin.** Kysely on
+konversiotyökalu sivuston sisällä, se ei voi tuoda liikennettä koska
+hakukone ei löydä sitä. Tämä erottelu on syytä muistaa jos ongelmasivut
+tulevat joskus harkintaan.
+
+### 14.5c Ohjaava chat-widget (idea kirjattu 7.8.2026, ei toteuteta vielä)
+
+Käyttäjän idea: sivun oikeaan alareunaan chat-tyylinen ikkuna, jossa on
+valmiit vastausvaihtoehdot ja joka ohjaa asiakkaan oikeaan paikkaan
+sivustolla.
+
+**Toteutettavuus: kyllä, helposti.** Ei API-pintaa, ei taustapalvelinta,
+ei tekoälyä. Yksi JS-tiedosto jossa päätöspuu tietorakenteena, sama
+periaate kuin `layout.js`. Toimii ilman verkkoyhteyttä sivun latauksen
+jälkeen.
+
+**Suhde `kysely.html`-tiedostoon on ratkaistava ennen toteutusta.**
+Ehdotus: chat on sisäänkäynti, kysely on syvyys. Chat vastaa kolmessa
+klikkauksessa kysymykseen "mihin minun pitäisi mennä", ja jos vastaus on
+"en osaa sanoa", chat avaa kyselyn. Silloin työkalut ketjuuntuvat eivätkä
+kilpaile.
+
+**Ehdotettu päätöspuu sivuston omalla logiikalla:**
+
+```
+Mihin etsit apua?
+├ Aknearvet ja ihon epätasaisuus     -> mikroneulaus
+├ Aktiivinen akne                    -> ProXN
+├ Punoitus, ruusufinni, herkkä iho   -> ProXN
+├ Ikääntymisen merkit                -> onko ihosi herkkä tai reagoiva?
+│                                       ├ kyllä -> ProXN
+│                                       └ ei    -> mikroneulaus
+├ Kaula, dekoltee tai kädet          -> lisäalueet
+└ En osaa sanoa                      -> avaa kysely
+```
+
+**Arvokkaimmat haarat ovat aktiivinen akne ja ruusufinni.** Molemmat ovat
+tilanteita joissa asiakas valitsisi itse väärin, koska aktiivinen akne on
+mikroneulauksen vasta-aihe eikä asiakas tiedä sitä.
+
+**Vaatimukset:**
+- Saavutettavuus: näppäimistökäyttö, Escape sulkee, fokus palaa nappiin,
+  uudet viestit `aria-live`-alueeseen
+- Mobiili: pieni ja suljettava, sulkeminen muistetaan istunnon ajan
+- Ulkoasu: brändin vihreä ja Jost, ei animaatioita, ei geneeristä
+  chat-kuplan sävyä. Väärin tehtynä tämä halventaa kliinistä ilmettä.
+- Kytkettävissä pois yhdellä rivillä, jotta vaikutusta voi mitata
+
+**Ajoitus: tehdään vasta kun uusi sivustorakenne on paikallaan.**
+Sivusto on pieni eikä varsinaista navigointiongelmaa ole. Arvo on siinä
+että asiakas tunnistaa oman tilanteensa, eikä sitä voi tietää etukäteen
+toimiiko se.
+
+### 14.5 Etusivun uudelleenajattelu (osin korvattu, ks. 14.5b)
 
 Etusivu siirtyy palvelumyynnistä **brändi- ja filosofiakeskeiseksi portiksi**.
 Pois etusivulta: hinnasto, FAQ, prosessikuvaus, sarjat → siirtyy pillar-sivuille.
@@ -1948,6 +2742,413 @@ rosacea- ja atooppinen-ihottuma-segmentin joita mikroneulaus ei tavoita.
   perustaso 200 €, sarjahoidot lasketaan aikakatteen 100 €/h alv-minimillä
   ja tuotekustannuksella 70 €/hoito. Esim. 3× sarja 570 € (190 €/hoito
   → aikakate 120 €/h). Vahvistetaan seuraavan päätöksen yhteydessä.
+
+### Tuotetilaus tehty 7.8.2026 ja mitä siitä seuraa
+
+Tilattu Pro Starter Kit ja LF Master:
+
+```
+1 kpl Xanthohumol Recovery Treatment (5 hoitoa)
+2 kpl Recovery Cleansing Oil, 2 kpl Balancing Cleansing Gel
+2 kpl Prime Mist, 1 kpl PHA Solution
+2 kpl Antioxidant Therapy, 2 kpl Sun Barrier, 1 kpl LF Master
+```
+
+**Kriittinen seuraus: neljästä hoitoprotokollasta vain kaksi on
+toteutettavissa.**
+
+| Protokolla | Toteutettavissa | Este |
+|---|---|---|
+| Overreactive Rescue | kyllä | – |
+| Acne Rescue | kyllä | – |
+| Firming | ei | vaatii Novel Peelin |
+| Retexture | ei | vaatii Novel Peelin |
+
+Novel Peel maksaa 105 € alv 0 %. **Älä mainosta Firming- tai
+Retexture-hoitoa ennen kuin se on hankittu.** Sivulla tämä on kerrottu
+suoraan sen sijaan että lueteltaisiin kaikki neljä.
+
+Toinen rajoite: yksi laatikko Xanthohumol Recovery Treatmentia riittää
+**viiteen hoitoon**. Tuotekustannus 49 € hoitokerralta (245 € / 5,
+alv 0 %) ja sen päälle protokollan muut tuotteet.
+
+### ProXN-sivun kirjoitusohjeet (käyttäjän korjaukset 7.8.2026)
+
+Claude teki ensimmäisessä versiossa neljä virhettä. Nämä on korjattu ja
+kirjataan tähän, koska ne toistuvat helposti.
+
+1. **Palvelusivu kirjoitetaan me-muodossa kuten etusivu, ei minä-muodossa.**
+   Claude käytti `article-hero`-rakennetta ja ajautui siitä
+   artikkelin ääneen. Rakenne ei ratkaise persoonaa, sivun luonne
+   ratkaisee. ProXN-sivu on palvelusivu.
+2. **Ei kerrota mitä ei ole käytössä.** Claude kirjoitti että Firming ja
+   Retexture eivät ole valikoimassa. Sama sääntö kuin aiemmin: kerrotaan
+   vain mitä on. Sivulla esitellään Overreactive Rescue ja Acne Rescue,
+   ei mainita neljää protokollaa eikä Novel Peeliä.
+3. **Vasta-aiheita ei keksitä.** Claude kirjoitti aktiivisen
+   ihoinfektion vasta-aiheeksi analogiana mikroneulaukseen. **Se on
+   väärin.** Valmistajan aineisto sanoo päinvastaista: hoito on
+   suunniteltu tilanteisiin joissa iho on ärtynyt tai tulehtunut, ja
+   aktivaattorin sisältämä hopea ehkäisee bakteeriperäisiä
+   jälki-infektioita. Vasta-aiheita ei kirjata ilman lähdettä.
+4. **Hinnan perustelu puuttui.** Ensikäynti maksaa saman 200 € kuin
+   mikroneulaus, joten sivun on kerrottava mitä siitä saa ja miksi se on
+   sen arvoinen. Lisätty osio "Mitä 200 euron ensikäynti sisältää"
+   seitsemällä konkreettisella kohdalla.
+
+**Positiointilinjaus:** ProXN esitetään yhtä vakavasti otettavana kuin
+mikroneulaus omassa kategoriassaan. Argumentti: mikroneulaus perustuu
+hallittuun vaurioon, ProXN kuorman poistamiseen. Reaktiivisella iholla
+jälkimmäinen on se mekanismi joka toimii ja edellinen olisi askel
+taaksepäin. Ei siis "kevyempi vaihtoehto" vaan eri mekanismi samalla
+vakavuudella.
+
+### Näyttötilanne: mitä materiaaleista todella löytyi (7.8.2026)
+
+**Korjaus aiempaan: "yli 800 tutkimusta" LÖYTYY aineistosta**
+(`Pro XN Recovery Treatment 0226.pdf`). Claude väitti ensin ettei sitä
+ole, koska oli lukenut vain osan tiedostoista. Luku on käytettävissä.
+**Samassa yhteydessä valmistaja listaa xanthohumolin ominaisuudeksi
+myös "syöpää ehkäisevä". Tätä ei kirjoiteta kauneudenhoitosivustolle.**
+
+**"30 kertaa C-vitamiinia vahvempi" pitää paikkansa mutta vaatii
+kontekstin.** Dossierin sanamuoto: puhdas xanthohumoli vastaa suunnilleen
+C-vitamiinia (XN/C-vit 2,3/2 %/h), ja vasta **kompleksi** on keskimäärin
+kolmekymmenkertainen (65,3 %/h) **tässä menetelmässä**. Menetelmä on
+NMR-mittaus, jossa seurataan ditiolin hapettumista disulfidiksi
+vetyperoksidin läsnä ollessa. Koeputkikemiaa, ei ihotutkimus.
+
+**Valmistaja käyttää itse varausta "in vitro"** vaikutusväitteissä
+(antioksidanttipuolustus, ärsytyksen rauhoittaminen, hyperpigmentaatio,
+MMP-esto, kollageeni- ja elastiinisynteesi). Sama varaus säilytetään.
+
+**Ihmisillä tehdyt tutkimukset, kaikki n = 10:**
+
+| Tutkimus | Kesto | Havainto |
+|---|---|---|
+| Ärsytystesti (stripping) | kertaluonteinen | punoitus laski keskimäärin 20 % 15 min kuluttua |
+| Käyttötutkimus | kertaluonteinen | väite hyväksyttiin jos yli 50 % osallistujista koki sen |
+| Symbiosis, PHA + Recovery | 2 kk | ruusufinni ja atooppinen iho, VISIA-analyysi |
+| Symbiosis, PHA + Novel Peel + Recovery | 2 kk | herkkä iho, VISIA-analyysi |
+
+Pieniä, valmistajan teettämiä, verrokkiryhmää ei mainita, osin
+subjektiivisia. **Käyttäjän linjaus 7.8.2026: kirjoitetaan samalla
+otteella kuin mikroneulauksen tutkimusartikkelissa**, eli mitä on
+osoitettu, millä menetelmällä ja mitä ei vielä tiedetä.
+
+### Protokollakartta ja ikääntymisen merkit (selvitetty 7.8.2026)
+
+Protokollia on **kuusi, ei neljä** kuten aiemmin oletettiin.
+
+| Hoito | Indikaatiot | Väli | Käytössä |
+|---|---|---|---|
+| Overreactive Rescue | herkkä ja atooppinen iho, ruusufinni, valosuoja, retinoidihoidon aikana | 1 vko | kyllä |
+| Acne Rescue | toistuva akne, seborrea, rasvainen kosteusköyhä iho | 2–3 vko | kyllä |
+| Firming | **kiinteyden ja kimmoisuuden menetys, vaihdevuosi-iho**, UV-ikääntyminen | 2 vko | ei |
+| Retexture | **kypsä iho ilman ärsytystä**, ikääntymisen merkit | 3–4 vko | ei |
+| Bright Up No. 1 | pigmenttimuutokset, tulehduksen jälkeinen hyperpigmentaatio | 2 vko | ei |
+| Bright Up No. 2 | **valovanheneminen**, aurinko- ja hormonipigmentti | 1 kk | ei |
+
+**Kolme neljästä ikääntymiseen kohdistuvasta protokollasta on
+tavoittamattomissa.** Firming ja Retexture vaativat Novel Peelin,
+Bright Up -hoidot oman tuoteperheensä (Bright Up Mask No. 1 ja No. 2,
+Bright Up Ampoule).
+
+**Käyttäjän päätös 7.8.2026: lisätuotteita ei hankita tässä vaiheessa.**
+Novel Peel maksaisi 105 € alv 0 % ja avaisi kaksi ikääntymiseen
+indikoitua protokollaa, joista Retexture yhdistyy matalaan
+mikroneulaukseen 0,2–0,5 mm. Tämä on kirjattu tulevaa harkintaa varten.
+
+**Miten ikääntyminen kirjoitettiin sivulle ilman lisätuotteita.**
+Väite tehdään **mekanismin kautta, ei lopputuloksen kautta**, koska
+kiinteytymis- ja ryppylupaukset nojaisivat protokolliin joita ei ole.
+Kolme kantavaa perustetta nykyisillä hoidoilla:
+
+1. Xanthohumoli estää matriksin metalloproteinaaseja eli hidastaa
+   kollageenin ja elastiinin hajoamista. Ampulli on mukana molemmissa
+   käytössä olevissa protokollissa.
+2. Oksidatiivinen stressi ja pitkittynyt matala-asteinen tulehdus ovat
+   valovanhenemisen keskeisiä ajureita, ja molemmat hoidot kohdistuvat
+   niihin.
+3. Jokainen hoito päättyy SPF 50 -aurinkosuojaan.
+
+**Sivulle kirjoitettu rajaus:** hoito hidastaa menetystä ja suojaa, se
+ei rakenna uutta kollageenia. Jos iho kestää mikroneulauksen, se on
+ikääntymisen merkkeihin tehokkaampi valinta. ProXN on perusteltu silloin
+kun iho on **samaan aikaan ikääntyvä ja herkkä**, koska reaktiivisella
+iholla voimakas hoito lisää juuri sitä kuormaa joka ikääntymistä ajaa.
+
+**Symbiosis-tutkimus joka havaitsi kiinteyden ja kimmoisuuden
+paranemista sisälsi Novel Peelin, joten se ei tue nykyistä
+protokollaa.** Sitä ei käytetä ikääntymisväitteen perusteena.
+
+### ProXN-sarjahoidot: 3 ja 6, PÄÄTETTY 10.8.2026
+
+```
+Kolmen hoidon sarja    570 €    190 € / hoito
+Kuuden hoidon sarja   1080 €    180 € / hoito
+```
+
+**Samat luvut molemmissa hoidoissa ja samat kuin mikroneulauksessa.
+Koko talossa on yksi sarjarakenne: kolme ja kuusi.**
+
+Timmaan tulee silti neljä sarjapalvelua, koska hoitoväli on eri:
+rauhoitushoito viikon välein, aknehoito kahden viikon välein.
+
+#### Perustelu: kolmas kerta on tarkistuspiste, ei kurssi
+
+Tämä on koko rakenteen ydin, ja se on käyttäjän muotoilema (10.8.2026):
+*"kolme hoitoa on sellainen missä jo nähdään mihin suuntaan ollaan
+menossa ja voidaan tarvittaessa sopia että jatketaan kuuteen."*
+
+Neljä perustetta:
+
+**1. Kolmea ei myydä täytenä hoitona.** Siksi se ei ole ristiriidassa
+vanhemman esitteen 4-6:n kanssa. Jatkaminen on odotettu polku, ei
+lisämyyntiä.
+
+**2. Se mitä kolmannella kerralla näkee riippuu hoidosta, ja juuri se
+tekee rakenteesta ei-mielivaltaisen.** Rauhoitushoidossa kolmas käynti
+on kahden viikon kuluttua ensimmäisestä, ja suojakerros sekä punoitus
+reagoivat siinä ajassa, joten kolme voi hyvin riittää. Aknehoidossa
+kolmas käynti on neljännellä viikolla: tulehdus on rauhoittunut ja
+suunta näkyy, mutta tukkeutuneet huokoset ja tummumat eivät ole
+ehtineet muuttua, joten sieltä yleensä jatketaan kuuteen.
+
+**Myyntilause: kolmannella kerralla nähdään suunta, ja aknessa se
+yleensä tarkoittaa että jatketaan.**
+
+**3. Kolme on ainoa luku joka mahtuu jokaiseen uudemman painoksen
+suositukseen**, myös Level III:n kapeaan 1-3:een. Kuutta ei löydy
+uudemmasta lainkaan, joten kuusi on studion oma täysi sarja. Se on
+rehellisintä sanoa niin päin.
+
+**4. Sama rakenne kuin mikroneulauksessa.** Yksi logiikka koko talossa.
+
+#### Aknen aikataulu: miksi kuusi on aknessa oletus
+
+Akneterapiassa hoitovaste arvioidaan vakiintuneesti **kahdeksan viikon**
+kohdalla komedo- ja papulopustuloosisessa aknessa ja **kahdentoista
+viikon** kohdalla kyhmyisessä. Syy on mikrokomedo: se on näkymätön
+esiastemuutos, ja tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu
+viikkoja. Hoidon alussa ilmestyvät muutokset olivat siis jo putkessa
+ennen aloitusta.
+
+Hoidot ovat viikoilla 0, 2, 4, 6, 8 ja 10. **Sarjan kesto ja
+arviointihetki ovat eri asia:** arviointi on noin kaksi viikkoa
+viimeisen hoidon jälkeen.
+
+| Hoitoja | Sarja kestää | Viimeinen hoito | Arviointi |
+|---|---|---|---|
+| **3** | 4 vk | viikko 4 | ~viikko 6, suunta näkyy |
+| 4 | 6 vk | viikko 6 | ~viikko 8 |
+| **6** | 10 vk | viikko 10 | **~viikko 12** |
+
+Kuuden sarja osuu siis kahdentoista viikon arviointipisteeseen. Tämä on
+peruste sille miksi aknehoidossa kolmesta yleensä jatketaan, ei sille
+että kolmea ei saisi tarjota.
+
+**Rajaus: 8 ja 12 viikon arviointipisteet sekä mikrokomedon kesto ovat
+lähteistä. Niiden yhdistäminen tämän protokollan kahden viikon väliin
+on omaa päättelyäni. Valmistaja ei perustele lukujaan mitenkään.**
+
+#### Historia, kolme kierrosta samana päivänä 10.8.2026
+
+1. **4 ja 6**, koska vanhempi esite sanoo 4-6.
+2. Huomattiin että uudempi esite sanoo Level I:stä 2-4. Käyttäjä
+   ehdotti 3 ja 6 tarkistuspisteineen. Etsin fysiologisen perusteen ja
+   päädyin siihen että aknessa lyhin on 4, koska tulosta ei voi arvioida
+   ennen kahdeksaa viikkoa → **rauhoitushoito 3 ja 6, aknehoito 4 ja 6.**
+3. Käyttäjä palasi asiaan ja piti 3 ja 6 kaikkeen. **Neljän vaatimukseni
+   nojasi arviointihetkeen, mutta tarkistuspiste-kehyksessä kolmannella
+   kerralla ei arvioida lopputulosta vaan suuntaa.** Aknen aikataulu ei
+   siis vaadi neljää, se vaihtaa vain kolmannen kerran roolia.
+   → **3 ja 6 molempiin.**
+
+Käyttäjä huomautti matkan varrella myös laskuvirheestä: olin
+kirjoittanut leipätekstiin "neljä hoitoa vie kahdeksaan viikkoon", mikä
+niputti yhteen sarjan keston ja arviointihetken.
+
+**Seuraavat uudet sarjakoot tulevat vasta LED-hoidon myötä**
+(käyttäjän linjaus 10.8.2026). Siihen asti koko valikoima on 3 ja 6.
+
+**Hoitokertahinnat ovat samat kuin mikroneulauksessa** (190 € ja 180 €),
+joten kuuden hoidon sarja maksaa saman 1080 € molemmissa hoidoissa.
+Ensikäynti lasketaan sarjaan mukaan.
+
+#### Kate on tietoisesti pienempi kuin mikroneulauksessa
+
+Tuotekustannus hoitokertaa kohden, laskettu protokollien
+riittoisuustiedoista ja tukkuhinnastosta:
+
+```
+Xanthohumol Recovery Treatment  245 € / 5 hoitoa     49,00 €
+Sun Barrier                      39 € / 10 hoitoa     3,90 €
+Antioxidant Therapy              69 € / 20 hoitoa     3,45 €
+PHA Solution                     60 € / 20 hoitoa     3,00 €
+Recovery Cleansing Oil           56 € / 100 hoitoa    0,56 €
+Prime Mist                       31 € / 100 hoitoa    0,31 €
+                                                     ------
+Overreactive Rescue                                  60,22 € (alv 0)
+Acne Rescue (+ LF Master, Balancing Gel)             62,40 € (alv 0)
+```
+
+Ampulli on 81 % kustannuksesta. Muut ovat pyöristysvirhettä.
+
+Vertailu (käyttäjän luku mikroneulaukselle 31,25 € alvillisena):
+
+```
+                 tuotekustannus/hoito       aikakate/h
+                 netto      alvillinen
+mikroneulaus     24,90 €    31,25 €         118,53 €
+ProXN            60,22 €    75,58 €          83,21 €
+```
+
+Ero on 35 € hoitokerralta, eli kuuden hoidon sarjassa noin 212 €
+vähemmän katetta.
+
+**Käyttäjän päätös 10.8.2026: hinta pidetään silti samana ja katsotaan
+miten se lähtee menemään.** Perustelu: ProXN-hoidossa on parempi
+mahdollisuus kotihoitotuotteiden myyntiin, koska kotihoito on
+olennainen osa herkän ihon hoitoa. Mikroneulauksen jälkeen riittää
+käytännössä aurinkosuoja.
+
+**Tämä on syytä tarkistaa muutaman kuukauden kuluttua.** Jos
+tuotemyyntiä ei synny odotetusti, hinnoittelu on avattava uudelleen.
+Vaihtoehdot silloin: hinnankorotus, lyhyempi hoitoaika tai
+sarja-alennuksen pienentäminen.
+
+#### AVOIN: kotihoitotuotteiden myyntihinnat
+
+**Tukkuhinnat ovat tiedossa, myyntihintoja ei ole päätetty.** Koska
+tuotemyynti on nyt osa ProXN:n kannattavuuslaskelmaa, hinnat on
+päätettävä ennen avausta. Muuten tuotteita myydään tietämättä paljonko
+ne tuottavat. Tuotteet myydään vain studiossa eikä hintoja julkaista
+sivustolla (päätös 7.8.), mutta hinnan on silti oltava olemassa.
+
+### Sarjahoitojen välit ja määrät — KORJATTU 10.8.2026
+
+**Aiempi merkintä oli osittain väärä.** Kirjattuna oli "Acne Rescue 2–3
+viikon välein" ja lähteeksi "Treatment Protocols ENG 2024, kohta
+Intervention". Kumpikaan ei pidä paikkaansa: sellaista tiedostoa ei ole,
+eikä 2–3 viikon väliä esiinny missään materiaalissa. Alla on se mitä
+materiaaleissa oikeasti lukee.
+
+**`PROFESSIONAL THERAPY_ENG_PDF.pdf` s. 21–22** (vanhempi painos)
+
+| Hoito | Väli | Määrä |
+|---|---|---|
+| Level I = Overreactive Rescue | once a week | 4-6 treatments |
+| Level II | every two weeks | 4-6 treatments |
+| Level III | every 3-4 weeks | 4-6 treatments |
+| Acne Rescue | **every 2 weeks** | 4-6 treatments |
+
+**`PROFESSIONAL THERAPY_10_2025.pdf` s. 14** (uudempi, 10/2025)
+
+| Hoito | Väli | Määrä |
+|---|---|---|
+| Level I | once a week | **2 to 4 treatments** |
+| Level II | every two weeks | 2-4 treatments |
+| Level III | every 3-4 weeks | 1-3 treatments |
+| Acne Rescue | **ei mainita** | **ei mainita** |
+
+**`Pro XN esittely 0126` s. 14:** "Jokainen vaihe on suunniteltu tukemaan
+edellistä hoitoa kuuden hoidon jäsennellyssä sarjassa."
+
+Suomenkielinen `Pro XN protokollat.pdf` ei ota kantaa määriin eikä
+väleihin lainkaan, joten ristiriitaa ei voi ratkaista sen avulla.
+
+#### Mitä tästä seuraa
+
+**Väleistä ei ole epäselvyyttä**, molemmat painokset ovat samaa mieltä:
+rauhoitushoito kerran viikossa, aknehoito kahden viikon välein.
+
+**Määrästä ei ole materiaaleissa yksimielisyyttä.** Uudempi painos on
+laskenut Level I:n neljästä kuuteen välille kahdesta neljään.
+Neljän hoidon sarja mahtuu molempien painosten sisään. Kuusi tulee
+vanhemmasta painoksesta ja esittelydiasta.
+
+**Perustelua sarjan pituudelle ei löydy materiaaleista.** Käyty läpi
+10.8.2026: `PROFESSIONAL THERAPY` molemmat painokset, `Pro XN esittely
+0126`, `Pro XN Recovery Treatment 0226`, `Pro XN protokollat`,
+`Pro XN -tuote-esitteet`, `Scientific dossier Ksanto`, hinnasto.
+Materiaaleissa on pelkät tiheyslaatikot. Ei tutkimusta, ei
+mekanismiperustelua, ei ennen ja jälkeen -aineistoa sarjan pituudesta.
+
+**Sivulla ei siis saa väittää että 4 ja 6 olisivat "protokollan mukaisia"
+ilman varausta.** Sivun teksti korjattiin 10.8. muotoon joka kertoo
+välit tarkasti ja määrän suosituksena.
+
+**AVOIN: käyttäjä kysyy asian maahantuojalta (Duallaser Oy).** Kun
+vastaus tulee, tämä luku päivitetään ja sivun sanamuoto tarkistetaan.
+
+#### Hoitojen suomenkieliset nimet (päätetty 10.8.2026)
+
+| Alkuperäinen | Suomeksi |
+|---|---|
+| Overreactive Rescue Treatment | **rauhoitushoito** |
+| Acne Rescue Treatment | **aknehoito** |
+
+Englanninkielinen nimi mainitaan sivulla kerran sulkeissa esittelyn
+yhteydessä, muualla käytetään suomenkielistä. Perustelu: "Overreactive
+Rescue" ei kerro suomenkieliselle lukijalle mitään, ja sivuston linja on
+että ammattitermi selitetään eikä jätetä koristeeksi. Nimet ovat myös
+hakusanoja: "rauhoittava kasvohoito" ja "aknehoito" ovat asioita joita
+Kotkassa haetaan, "Overreactive Rescue" ei ole.
+
+**Huomionarvoista: väli on tiheämpi kuin mikroneulauksen neljä viikkoa.**
+Syy on mekanismissa. Mikroneulauksessa odotetaan paranemista ja
+kollageenin kypsymistä, ProXN-hoidossa paranemisjaksoa ei ole. Tämä on
+kirjattu sivulle, koska se on konkreettinen ero eikä pelkkä yksityiskohta.
+
+### Ennen ja jälkeen sekä vasta-aiheet (käyttäjän tiedot 7.8.2026)
+
+**Materiaaleissa ei ole jälkihoito-ohjeita, eikä niitä keksitä.** Käyttäjä
+vahvisti ettei koulutuksessakaan ollut. Sivulle kirjattu käyttäjän
+antamana:
+
+- **Ennen:** ei valmistautumista. Aktiiviaineita ei tarvitse tauottaa
+  eikä auringonottoa rajoittaa. Meikki saa olla, koska hoito alkaa
+  kaksoispuhdistuksella.
+- **Jälkeen:** ei rajoituksia. Iho ei ole rikki, joten meikin voi laittaa
+  heti ja arkeen palata suoraan.
+- **Yksi suositus:** saunan ja uinnin siirtäminen seuraavaan päivään,
+  koska iholle jää vaikuttavia aineita työskentelemään. **Kirjattu
+  nimenomaan hyödyn maksimointina, ei turvallisuusasiana**, koska se on
+  käyttäjän oma suositus eikä valmistajan ohje.
+- **Kotihoito on lisä, ei edellytys.** Hoito on kokonainen ilmankin.
+
+**Vasta-aiheet (käyttäjän yleistieto, ei valmistajan materiaalista):**
+
+- Avohaava hoitoalueella. **Ei tarkoita puhjennutta finniä vaan
+  varsinaista haavaa.** Tämä erottelu on kirjoitettu sivulle auki.
+- Tuore leikkausarpi hoitoalueella
+- Aktiivinen syöpä hoitoalueella
+- Tiedossa oleva allergia käytettäville ainesosille
+
+### Ensikäynnin rakenne muuttuu: kolme varausreittiä (päätetty 7.8.2026)
+
+Aiemmin ensikäynti oli yksi tuote. Nyt asiakas voi varata suoraan sen
+hoidon jonka haluaa, tai jättää valinnan ammattilaiselle.
+
+| Palvelu | Kenelle |
+|---|---|
+| Kliininen mikroneulaus, ensikäynti | tietää haluavansa mikroneulauksen |
+| ProXN-kasvohoito, ensikäynti | tietää haluavansa ProXN-hoidon |
+| Ensikäynti ja hoitosuositus | ei ole varma kumpi sopii |
+
+**Kaikki maksavat 200 €.** Suora varaus ei ole eri tuote vaan sama
+ensikäynti, jossa valinta on jo tehty.
+
+**Kriittinen sisältösääntö:** iho-analyysi tehdään myös suorissa
+varauksissa, ja jos hoito ei sovi, se vaihdetaan tai siirretään. Tämä on
+kirjoitettava jokaiseen kohtaan jossa suoraa varausta tarjotaan, jottei
+synny vaikutelmaa että varaus ohittaa arvioinnin.
+
+**Tehty toistaiseksi vain ProXN-sivulle** (käyttäjän päätös). Etusivu,
+`hinnasto.html`, `mita-ensikaynnilla-tapahtuu.html` ja Timman palvelut
+päivitetään vasta kun ProXN-sivu julkaistaan, jottei sivusto viittaa
+sivuun jota ei ole.
 
 ### Sivustorakenteen muutokset (kolme tasoa)
 
@@ -2497,8 +3698,66 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-08-07
+
+- **HUOM: istunto ylitti taas vuorokauden vaihteen.** Kaikki alla oleva
+  tehtiin 7.8., mutta se oli aluksi kirjattu 6.8. alle. Sama virhe kuin
+  edellisenä yönä, ja **sääntö päivämäärän tarkistamisesta bashilla oli
+  jo kirjattu muistioon 6.8.** En noudattanut sitä, koska käytin
+  istunnon alussa haettua päivää enkä tarkistanut sitä uudelleen työn
+  edetessä. **Tarkennus sääntöön: päivä tarkistetaan uudelleen aina kun
+  sitä kirjoitetaan johonkin, ei kerran istunnon alussa.**
+- **Viranomaisilmoituksen (Ilppa) vapaa kuvaus kirjoitettu.** 2771
+  merkkiä, neljä osaa Ilppan ohjeen mukaan: palvelun kuvaus,
+  henkilökunnan tausta, toimitila ja tilan soveltuvuus. Kirjoitettu
+  yläkerran hoitohuoneesta, koska toiminta alkaa sieltä 5.9. Mukana
+  maininta tulevasta siirrosta alakertaan ja muutosilmoituksesta.
+- **Ilmoituksen tunnus 145019 kirjattu** omavalvontasuunnitelmaan.
+- **Avausbanneri poistettu.** Yksityiskohdat luvussa 9. Poisto koski
+  kahdeksaa kohtaa, kolme enemmän kuin ennakoin: `404.html`,
+  `lomake.html` ja `privacy.html` sisälsivät saman
+  `+40px`-kompensaation, ja ne löytyivät vain koko kansion haulla.
+- **⚠️ VIISI TIEDOSTOA OLI VAURIOITUNUT.** Löytyi bannerin poiston
+  yhteydessä. `index.html`, `kysely.html`,
+  `mita-ensikaynnilla-tapahtuu.html` ja `privacy.html` sisälsivät
+  nollatavuja tiedoston lopussa, ja
+  `milloin-aloittaa-mikroneulaus.html` oli katkennut kesken
+  `</body>`-tagia. Sisältö oli ehjä, vika vain lopussa. Kaikki
+  korjattu ja tarkistettu.
+  **Syy ja turvallinen kirjoitustapa kirjattu muistion alkuun.**
+  Sama ohje lisätty Reels-automaatioon, koska se kirjoittaa tiedostoja
+  itsenäisesti.
+  **Claude oli nähnyt oireen jo aiemmin** (grep ilmoitti "binary file
+  matches" index.html:stä) ja kiertänyt sen tutkimatta syytä.
+- **Reels-automaation VAIHE 6b poistettu** sekä ajastetusta tehtävästä
+  että varmuuskopiosta, koska bannerin muistutus kävi tarpeettomaksi.
+
+**Iltapäivä: ProXN-työ.** Käyttäjä tilasi ProXN-tuotteet ja toimitti
+kahdeksan PDF-aineistoa. Yksityiskohdat luvussa 14b, tässä vain
+lopputulokset ja tilanne.
+
+- **`proxn-kasvohoito.html` kirjoitettu kokonaan uudelleen.** 1704 sanaa,
+  15 pääotsikkoa. Edelleen `noindex, nofollow` eikä linkitetty mistään,
+  koska sivua ei ole vielä hyväksytty. **Odottaa käyttäjän lukemista.**
+  Rakenne: mekanismit kolmena avattuna osiona, positiointi suhteessa
+  mikroneulaukseen, Xanthohumol Complex, näyttö ja sen rajat, kenelle
+  sopii, hoidon kulku, ikääntymisen merkit, ennen ja jälkeen, kaksi
+  hoitoa, sarjahoito, kotihoito, turvallisuus, varaaminen ja hinta.
+- **Otsikko laajennettu ikääntymiseen:** "kliininen ihonhoito herkälle,
+  reaktiiviselle ja ikääntyvälle iholle". Muutettu neljään paikkaan
+  (`title`, `h1`, `og:title`, `twitter:title`) ja kuvaukset
+  yhdenmukaistettu.
+- **Sivuston rakenneuudistus päätetty**, ks. luku 14.5b. Menetelmä on
+  runko, iho-ongelmasivuja ei rakenneta koska blogi hoitaa sen akselin.
+  Etusivun mikroneulaussisältö siirtyy `/mikroneulaus.html`-sivulle.
+- **Chat-widget kirjattu odottamaan**, ks. luku 14.5c.
+- **Claude teki neljä sisältövirhettä** jotka käyttäjä korjasi:
+  minä-muoto palvelusivulla, maininnat puuttuvista tuotteista, keksitty
+  vasta-aihe ja hinnan perustelu selittelynä. Kaikki kirjattu lukuun 14b
+  toistumisen estämiseksi.
+
 ### 2026-08-06
-- **HUOM: tämän istunnon työ jakautuu kahdelle päivälle.** Kaikki alla
+- **HUOM: työ jakautui kahdelle päivälle.** Kaikki alla
   oleva tehtiin 6.8. illalla, mutta se oli aluksi kirjattu 5.8. alle,
   koska en tarkistanut päivää bashilla vaan luotin istunnon alussa
   saatuun tietoon. Käyttäjä huomasi ristiriidan kansion
@@ -4152,4 +5411,4 @@ muutoksia.
 
 ---
 
-**Viimeksi päivitetty**: 2026-08-05
+**Viimeksi päivitetty**: 2026-08-10

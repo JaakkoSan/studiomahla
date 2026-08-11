@@ -47,7 +47,7 @@ Diat:
 3. "Mitattu kudosnäytteistä, ei markkinointiväite."
 4. CTA
 
-### 1.2 Prosentti vuodessa ★★★
+### 1.2 Prosentti vuodessa ★★★ — KÄYTETTY 10.8.2026
 **Lähde:** Mikä on mikroneulaus
 **Kesto:** n. 14 s
 
@@ -209,7 +209,7 @@ Nuoruusiässä syntyneet aknearvet on parasta hoitaa kun ne ovat tuoreita.
 Ihon korjauspotentiaali on silloin korkeimmillaan ja kuoppamaiset arvet
 täyttyvät paremmin.
 
-### 4.3 Rehellisyys 50+ ★★★
+### 4.3 Rehellisyys 50+ ★★★ — KÄYTETTY 10.8.2026
 **Lähde:** Kenelle sopii
 **Kesto:** n. 17 s
 
