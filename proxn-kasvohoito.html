@@ -55,6 +55,92 @@
   }
   </script>
 
+  <!-- JSON-LD SCHEMA: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ProXN-kasvohoito",
+    "serviceType": "Kasvohoito",
+    "description": "Ammattikäyttöön tarkoitettu Xanthohumol Complex -hoito herkälle, reaktiiviselle ja ikääntyvälle iholle. Hoito ei riko ihoa, vaan vahvistaa ihon omaa suojakerrosta ja antioksidanttipuolustusta.",
+    "url": "https://www.studiomahla.fi/proxn-kasvohoito.html",
+    "image": "https://www.studiomahla.fi/assets/og-proxn.jpg",
+    "provider": {
+      "@id": "https://www.studiomahla.fi/#studio"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Kotka"
+      },
+      {
+        "@type": "City",
+        "name": "Hamina"
+      },
+      {
+        "@type": "City",
+        "name": "Kouvola"
+      },
+      {
+        "@type": "City",
+        "name": "Pyhtää"
+      },
+      {
+        "@type": "City",
+        "name": "Iitti"
+      },
+      {
+        "@type": "City",
+        "name": "Miehikkälä"
+      },
+      {
+        "@type": "City",
+        "name": "Virolahti"
+      },
+      {
+        "@type": "City",
+        "name": "Loviisa"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kymenlaakso"
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Ensikäynti — ProXN-kasvohoito",
+        "price": "200",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "availabilityStarts": "2026-09-07",
+        "url": "https://www.studiomahla.fi/proxn-kasvohoito.html",
+        "description": "Iho-analyysi, esitiedot ja ensimmäinen hoito samalla käynnillä, noin tunti. Lasketaan sarjaan mukaan."
+      },
+      {
+        "@type": "Offer",
+        "name": "ProXN-kasvohoito, kolmen hoidon sarja",
+        "price": "570",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "availabilityStarts": "2026-09-07",
+        "url": "https://www.studiomahla.fi/proxn-kasvohoito.html",
+        "description": "190 euroa hoitokerralta. Kolmas kerta on tarkistuspiste, jossa päätetään jatketaanko kuuteen."
+      },
+      {
+        "@type": "Offer",
+        "name": "ProXN-kasvohoito, kuuden hoidon sarja",
+        "price": "1080",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "availabilityStarts": "2026-09-07",
+        "url": "https://www.studiomahla.fi/proxn-kasvohoito.html",
+        "description": "180 euroa hoitokerralta. Täysi sarja."
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="/assets/style.css">
   <!-- Meta Pixel -->
   <script src="/assets/meta-pixel.js"></script>
@@ -108,12 +194,26 @@
       gap: clamp(40px, 6vw, 80px); align-items: center;
     }
     .hero-grid .article-lead { max-width: none; }
+    .hero-hinta {
+      font-size: 16px; line-height: 1.8; color: var(--text-mid);
+      margin: 1.6em 0 0; padding-top: 1.4em;
+      border-top: 1px solid rgba(74, 94, 85, 0.18);
+    }
+    .hero-hinta strong { color: var(--text-dark); font-weight: 500; }
     .hero-logo { display: flex; justify-content: center; }
     .hero-logo img { width: 100%; max-width: 340px; height: auto; }
     @media (max-width: 860px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .hero-logo { justify-content: flex-start; }
       .hero-logo img { max-width: 260px; }
+    }
+
+    /* Vertailuosion linjaus korttien alla */
+    .vertailu-linjaus {
+      max-width: 860px;
+      margin: clamp(36px, 4vw, 48px) 0 0;
+      padding-left: 22px;
+      border-left: 2px solid var(--pink-pale);
     }
 
     /* Osion johdanto ennen leveaa sisaltoa */
@@ -226,6 +326,9 @@
             <p class="article-lead">
               Kaikkea ihoa ei hoideta ärsyttämällä. Kun iho on ärtynyt, reaktiivinen tai ei siedä voimakkaita aktiiviaineita, tulokseen päästään poistamalla ihoa kuormittavat tekijät ja vahvistamalla sen omaa puolustusta. Sama pätee ikääntymisen merkkeihin silloin kun iho on samalla herkkä. ProXN-kasvohoito on tähän rakennettu ammattikäyttöön tarkoitettu hoito, jonka vaikuttava aine on Xanthohumol Complex.
             </p>
+            <p class="hero-hinta">
+              <strong>Ensikäynti 200 euroa.</strong> Sisältää iho-analyysin ja ensimmäisen hoidon, ja lasketaan sarjaan mukaan.
+            </p>
           </div>
           <div class="hero-logo">
             <picture>
@@ -238,11 +341,34 @@
       </div>
     </header>
 
-    <section class="section section--dark" aria-labelledby="mekanismi-title">
+    <section class="section section--dark" aria-labelledby="kenelle-title">
+      <div class="section__inner">
+        <div class="grid-side">
+          <div>
+            <p class="label label--pink-pale">Kohderyhmä</p>
+            <h2 id="kenelle-title">Kenelle ProXN-kasvohoito sopii</h2>
+            <p class="lead">
+              Hoito on rakennettu iholle joka ei siedä voimakkaita menetelmiä. Nämä ovat tilanteita joissa se on yleisimmin perusteltu.
+            </p>
+          </div>
+          <ul class="care-list">
+            <li>Herkkä, ärtynyt tai reaktiivinen iho</li>
+            <li>Iho joka ei siedä voimakkaita aktiiviaineita</li>
+            <li>Ruusufinni, couperosa ja punoitukseen taipuvainen iho</li>
+            <li>Atooppinen iho</li>
+            <li>Toistuva akne, seborrea ja tulehduksen jälkeinen pigmentoituminen</li>
+            <li>Iho, joka on vaurioitunut vääränlaisista kotihoitotuotteista</li>
+            <li>Ikääntymisen merkit silloin kun iho on samalla herkkä tai reaktiivinen</li>
+            <li>Palautuminen invasiivisemmista hoidoista, kuten mikroneulauksesta tai laserhoidosta</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section section--white" aria-labelledby="mekanismi-title">
       <div class="section__inner">
         <div class="section__head">
           <div>
-            <p class="label label--pink-pale">Vaikutusmekanismi</p>
+            <p class="label label--mid">Vaikutusmekanismi</p>
             <h2 id="mekanismi-title">Mitä hoito tekee iholle</h2>
             <p class="lead">
               Herkän ja reaktiivisen ihon taustalla on tyypillisesti kaksi asiaa: ihon oma suojakerros on heikentynyt ja tulehdusreaktio on jäänyt päälle. Voimakkaat hoidot pahentavat molempia. ProXN-hoito puuttuu näihin suoraan.
@@ -278,9 +404,9 @@
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="vertailu-title">
+    <section class="section section--dark" aria-labelledby="vertailu-title">
       <div class="section__inner">
-        <p class="label label--mid">Kaksi eri mekanismia</p>
+        <p class="label label--pink-pale">Kaksi eri mekanismia</p>
         <h2 id="vertailu-title">Mikroneulaus vai ProXN?</h2>
         <div class="grid-2" style="margin-top: 40px;">
           <div class="feat-card">
@@ -292,14 +418,17 @@
             <p>ProXN toimii päinvastaisesta suunnasta. Se ei tuota vauriota vaan poistaa kuormaa: vähentää tulehdusta, täydentää antioksidanttipuolustusta ja palauttaa suojakerroksen toimintaa. Reaktiivisen ihon kohdalla tämä on se mekanismi joka toimii, ja vaurioon perustuva menetelmä olisi askel taaksepäin.</p>
           </div>
         </div>
+        <p class="vertailu-linjaus">
+          <strong>Jos ihosi kestää mikroneulauksen, se on useimmiten tehokkaampi valinta.</strong> Uuden kollageenin rakentaminen tuottaa rakenteellisen muutoksen, johon kuormaa keventävä hoito ei yllä. ProXN on rakennettu niitä tilanteita varten joissa iho ei kestä, ja silloin se on ainoa reitti joka vie eteenpäin. Kumpi tilanne on sinun kohdallasi kyseessä, selviää ensikäynnin iho-analyysissä.
+        </p>
       </div>
     </section>
 
-    <section class="section section--dark" aria-labelledby="xanthohumol-title">
+    <section class="section section--cream" aria-labelledby="xanthohumol-title">
       <div class="section__inner">
         <div class="grid-side">
           <div>
-            <p class="label label--pink-pale">Vaikuttava aine</p>
+            <p class="label label--mid">Vaikuttava aine</p>
             <h2 id="xanthohumol-title">Xanthohumol Complex</h2>
             <p>
               Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vesipitoisissa valmisteissa eikä sitä ole aiemmin saatu pysymään vakaana kosmetiikassa.
@@ -326,11 +455,11 @@
       </div>
     </section>
 
-    <section class="section section--cream" aria-labelledby="tutkimus-title">
+    <section class="section section--dark" aria-labelledby="tutkimus-title">
       <div class="section__inner">
         <div class="section__head">
           <div>
-            <p class="label label--mid">Näyttö</p>
+            <p class="label label--pink-pale">Näyttö</p>
             <h2 id="tutkimus-title">Mitä tutkimus sanoo</h2>
             <p class="lead">
               Xanthohumolista on julkaistu yli 800 tutkimusta, ja se on yksi tutkituimmista kasviperäisistä antioksidanteista. Alla on mitä siitä ja tästä hoitosarjasta tiedetään, ja millä tavalla se on mitattu.
@@ -365,29 +494,6 @@
       </div>
     </section>
 
-    <section class="section section--dark" aria-labelledby="kenelle-title">
-      <div class="section__inner">
-        <div class="grid-side">
-          <div>
-            <p class="label label--pink-pale">Kohderyhmä</p>
-            <h2 id="kenelle-title">Kenelle ProXN-kasvohoito sopii</h2>
-            <p class="lead">
-              Hoito on rakennettu iholle joka ei siedä voimakkaita menetelmiä. Nämä ovat tilanteita joissa se on yleisimmin perusteltu.
-            </p>
-          </div>
-          <ul class="care-list">
-            <li>Herkkä, ärtynyt tai reaktiivinen iho</li>
-            <li>Iho joka ei siedä voimakkaita aktiiviaineita</li>
-            <li>Ruusufinni, couperosa ja punoitukseen taipuvainen iho</li>
-            <li>Atooppinen iho</li>
-            <li>Toistuva akne, seborrea ja tulehduksen jälkeinen pigmentoituminen</li>
-            <li>Iho, joka on vaurioitunut vääränlaisista kotihoitotuotteista</li>
-            <li>Ikääntymisen merkit silloin kun iho on samalla herkkä tai reaktiivinen</li>
-            <li>Palautuminen invasiivisemmista hoidoista, kuten mikroneulauksesta tai laserhoidosta</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
     <section class="section section--white" aria-labelledby="kulku-title">
       <div class="section__inner">

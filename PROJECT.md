@@ -615,6 +615,37 @@ Sama käytäntö koskee kaikkia blogiartikkeleita, sivukuvauksia, meta-tageja,
 CTA-tekstejä ja muita asiakkaalle näkyviä tekstejä. Kun kirjoitat uutta
 sisältöä, tarkista jälkikäteen ettei tekstissä ole ajatusviivoja.
 
+**Etuliitesääntö: ei ilmoituksia siitä että kohta sanotaan jotain**
+(kirjattu 11.8.2026, käyttäjän sääntö, rikottu kahdesti ennen
+kirjaamista).
+
+Kielletyt rakenteet ovat ne joissa virke ilmoittaa oman
+rehellisyytensä tai suoruutensa ennen kuin kertoo asian:
+
+| EI | KYLLÄ |
+|---|---|
+| "Sanotaan tämä suoraan: jos ihosi kestää..." | "Jos ihosi kestää..." |
+| "Rajaus on syytä sanoa selvästi. Tämä hoito..." | "Tämä hoito..." |
+| "Ihonhoitoalalla luvut irrotetaan asiayhteydestään. Siksi kerromme myös..." | *(pelkkä tieto)* |
+| "Todettakoon", "on tärkeää huomata", "rehellisesti sanottuna" | *(poista)* |
+
+Käyttäjän perustelu 11.8.2026: **"Ei kukaan käytä tuon tyyppistä
+lauserakennetta verkkosivuilla. Turha sanoa että sanotaan suoraan kun
+asian voi vain ilmaista ilman turhia etuliitteitä."**
+
+Rakenne on myös itsensä kumoava: kun teksti ilmoittaa olevansa
+rehellinen, lukija alkaa miettiä milloin se ei ole.
+
+**Miksi tämä on erikseen kirjattu:** poistin nämä rakenteet
+`proxn-kasvohoito.html`-sivulta 11.8. aamulla, ja kirjoitin saman
+rakenteen takaisin samana päivänä iltapäivällä. Sääntö ei siis ole
+ilmeinen ilman kirjausta. Tarkistuskomento uudelle sisällölle:
+
+```
+grep -rIn "Sanotaan\|on syytä sanoa\|todettakoon\|huomattakoon\|
+On tärkeää huomata\|Kannattaa huomata\|Rehellisesti sanottuna" *.html
+```
+
 **Persoonasääntö: sekä minä- että me-muoto ovat käytössä** (kirjattu
 6.8.2026, käyttäjän sääntö). Ne eivät ole vaihtoehtoja toisilleen vaan
 niillä on eri tehtävä. Valinta ei ole tyylikysymys vaan riippuu siitä
@@ -2584,6 +2615,142 @@ Blogiartikkeleissa on `BlogPosting`, `WebPage` ja `Organization`.
 **Käyttäjän linjaus 11.8.2026: tehdään omana työnään seuraavaksi**,
 molemmille sivuille kerralla, jottei sivustosta tule epäjohdonmukainen
 eikä työtä tehdä kahdesti.
+
+#### Kolme korjausta lukijan kysymyksiin 11.8.2026
+
+Käyttäjä kysyi vastaako sivu kolmeen kysymykseen: mitä hoito on,
+miksi se sopii minulle ja mitä se maksaa. Mittasin ohjelmallisesti
+missä kohtaa sivua kukin asia tulee vastaan. Tulos paljasti epäsuhdan.
+
+| Tieto | Ennen | Nyt |
+|---|---|---|
+| Ensikäynti 200 euroa | 92 % | **3 %** |
+| Kenelle hoito sopii | 44 % | **4 %** |
+| Sarjahinnat 570 ja 1080 | 70 % | 70 % |
+
+**Ongelma oli järjestys, ei sisältö.** Lukija törmäsi tuhannen euron
+sarjahintaan ennen kuin oli koskaan nähnyt kahdensadan euron
+sisäänmenoa, ja sisäänmenohinta tuli vasta viimeisessä
+sisältöosiossa. Kysymykseen "onko tämä minulle" vastattiin vasta
+lähes 900 sanan molekyylibiologian jälkeen.
+
+**1. Ensikäynnin hinta hero-osioon.** Uusi `.hero-hinta`-rivi
+johdannon alle, ohuella yläviivalla erotettuna:
+*"Ensikäynti 200 euroa. Sisältää iho-analyysin ja ensimmäisen hoidon,
+ja lasketaan sarjaan mukaan."*
+
+**2. "Kenelle ProXN-kasvohoito sopii" siirretty ensimmäiseksi
+osioksi.** Nyt lukija saa vastauksen kysymykseen "onko tämä minulle"
+heti, ja mekanismiosio selittää sen jälkeen miksi. Värit järjestettiin
+uudelleen samalla säännöllä, tumma joka vaalean väliin, ja nostojen
+sävyluokat tarkistettiin ohjelmallisesti taustaa vasten.
+
+**3. ProXN-rivit `hinnasto.html`:ään.** Tämä oli suoranainen virhe:
+ProXN-sivulla luki "hinnastosta näet muut hinnat", mutta hinnastossa
+ei ollut ainuttakaan ProXN-hintaa. Linkki johti umpikujaan.
+Lisätty oma osio "ProXN-kasvohoidon sarjahoidot" mikroneulauksen
+sarjojen jälkeen ja ennen lisäalueita. Samalla:
+
+- **Ensikäyntirivin kuvaus laajennettu** kattamaan kaikki kolme
+  reittiä. Ennen: "ensimmäinen kliininen mikroneulaushoito".
+  Nyt kerrotaan että hinta on sama riippumatta siitä varaako
+  mikroneulauksen, ProXN:n vai hoitosuosituksen.
+- **Meta-kuvaus** mainitsee nyt molemmat hoidot.
+
+**TEHTY 11.8.2026: yleinen linjaus lisätty.** Sivu sanoi vain
+ikääntymisen kohdalla suoraan, että jos iho kestää mikroneulauksen,
+se on tehokkaampi valinta. Nyt se sanotaan yleisenä lauseena
+"Mikroneulaus vai ProXN?" -osion lopussa, korttien alla omana
+nostonaan (`.vertailu-linjaus`, vaalea pystyviiva):
+
+> **Jos ihosi kestää mikroneulauksen, se on useimmiten tehokkaampi
+> valinta.** Uuden kollageenin rakentaminen
+> tuottaa rakenteellisen muutoksen, johon kuormaa keventävä hoito ei
+> yllä. ProXN on rakennettu niitä tilanteita varten joissa iho ei
+> kestä, ja silloin se on ainoa reitti joka vie eteenpäin. Kumpi
+> tilanne on sinun kohdallasi kyseessä, selviää ensikäynnin
+> iho-analyysissä.
+
+Tämä on sivun tärkein luottamusta rakentava kohta: se ohjaa lukijan
+pois kalliimmasta hoidosta silloin kun toinen on parempi.
+
+### Rakenteinen data tehty 11.8.2026
+
+Sivustolla oli aiemmin `BeautySalon` vain etusivulla ja
+`BreadcrumbList` alasivuilla. Hoito- ja hintasivut eivät kertoneet
+hakukoneelle mitään palveluista tai hinnoista.
+
+**Ratkaisu: yksi entiteetti, johon muut viittaavat.**
+
+| Tiedosto | Lisätty |
+|---|---|
+| `index.html` | `"@id": "https://www.studiomahla.fi/#studio"` BeautySalonille |
+| `proxn-kasvohoito.html` | `Service` + 3 `Offer` |
+| `hinnasto.html` | `@graph`: 2 × `Service` + 9 `Offer` |
+
+Alasivujen `Service`-noodit viittaavat studioon `provider`-kentässä
+pelkällä `@id`:llä. **Näin yritystiedot ovat vain yhdessä paikassa
+eikä synny kahta kilpailevaa entiteettiä**, mikä olisi tapahtunut jos
+jokainen sivu toistaisi osoitteen ja puhelinnumeron.
+
+Jokaisessa tarjouksessa on `availabilityStarts: 2026-09-07`, eli
+hakukone tietää ettei aikoja ole ennen avausta. `areaServed` on sama
+yhdeksän kunnan lista kuin etusivulla.
+
+**Tarkistettu ohjelmallisesti:** kaikki kuusi JSON-LD-lohkoa
+jäsentyvät virheittä ja tagit ovat tasapainossa kaikissa kolmessa
+tiedostossa.
+
+**Etusivun `hasOfferCatalog` sisältää edelleen vain mikroneulauksen
+tarjoukset.** ProXN lisätään sinne vasta vaiheessa 1, koska
+etusivu on indeksoitu eikä siellä pidä luvata hoitoa jota ei ole
+vielä julkaistu.
+
+### ⚠ VAROITUS: hinnasto.html julkaisee ProXN:n
+
+**Tämä on sivutuote äskeisistä muutoksista ja se pitää huomata ennen
+kuin tiedosto viedään GitHubiin.**
+
+`hinnasto.html` sisältää nyt ProXN-sarjahoitojen hinnat, linkin
+`proxn-kasvohoito.html`-sivulle ja ProXN-palvelun rakenteisessa
+datassa. Hinnasto on indeksoitu ja julkinen sivu.
+
+**Jos hinnasto viedään nyt, ProXN on käytännössä julkaistu**: asiakas
+näkee hinnat ja pääsee sivulle linkistä. Sivun `noindex` estää
+hakukoneita mutta ei ihmisiä.
+
+Kaksi vaihtoehtoa:
+
+1. **Pidä `hinnasto.html` viemättä** kunnes ProXN julkaistaan
+   vaiheessa 1. Vie nyt vain `proxn-kasvohoito.html`, jolloin sivu
+   on katsottavissa suoralla osoitteella eikä kukaan löydä sitä.
+2. **Vie molemmat ja hyväksy että ProXN on julki.** Silloin
+   `proxn-kasvohoito.html`:n robots pitää vaihtaa muotoon
+   `index, follow` ja sivu lisätä sitemapiin, koska muuten
+   hinnastosta linkitetään sivulle jota ei saa indeksoida.
+
+**Suositus: vaihtoehto 1.** Käyttäjä on halunnut testata tuotteet
+vielä pari kertaa ennen julkaisua, joten hinnasto odottaa samaa
+hetkeä.
+
+### ⚠ MUISTUTETTAVA: yksittäisen hoidon hinta puuttuu
+
+**Käyttäjän pyyntö 11.8.2026: nosta tämä esiin kun hän seuraavan
+kerran kysyy mitä sivustolla on kesken.**
+
+Sivustolla ei ole missään hintaa yksittäiselle hoidolle sarjan
+ulkopuolella. Tarjolla on ensikäynti 200 € ja kaksi sarjaa, 570 € ja
+1080 €. **Jos asiakas haluaa yhden hoidon ylläpitona vaikka puolen
+vuoden välein, hintaa ei löydy mistään.**
+
+Puute koskee sekä ProXN:ää että mikroneulausta, eli se on koko
+hinnaston aukko eikä yhden sivun ongelma. Sarjan päättäneelle
+asiakkaalle ylläpitokäynti on luonteva jatko, joten tämä on myös
+myynnillinen aukko eikä vain tiedollinen.
+
+Ratkaisu vaatii käyttäjän päätöksen hinnasta. Vaihtoehtoja: sama
+190 € kuin sarjan kalliimmassa hoitokerrassa, tai korkeampi
+kertahinta joka tekee sarjasta houkuttelevamman.
 - `robots` noindex → index, follow
 - Lisätään `sitemap.xml`:ään
 - **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):
