@@ -2415,6 +2415,111 @@ sisältöön: kaksi vertailukorttia, ennen ja jälkeen, kaksi hoitokorttia.
 
 Mobiilissa `.pillars--3` menee yhteen palstaan alle 1000 px ja
 `.grid-side` alle 900 px.
+
+#### VAKAVA KASKADIVIRHE, korjattu 11.8.2026
+
+**Käyttäjä huomasi selaimessa: useissa kohdissa teksti ei näkynyt
+lainkaan tummalla pohjalla.** Kappaleet olivat tummanvihreitä
+tummanvihreällä.
+
+Syy oli tarkkuudessa. Kirjoitin tyylit tässä järjestyksessä:
+
+```css
+.section--dark p { color: rgba(250, 248, 244, 0.92); }   /* (0,1,1) */
+...
+.section p { color: var(--text-dark); }                  /* (0,1,1) */
+```
+
+**Molemmat ovat tarkkuudeltaan (0,1,1)**, eli yksi luokka ja yksi
+elementti. Tasatilanteessa **myöhempi voittaa**, joten `.section p`
+kumosi tumman värin ja kaikki tavalliset kappaleet tummissa osioissa
+saivat värin `--text-dark` eli #2a3830. Taustaväri on #3d5247.
+Kontrasti 1,14:1, käytännössä näkymätön.
+
+Miksi osa tekstistä näkyi: `.lead`-kappaleet pelastuivat, koska
+`.section--dark .lead` on (0,2,0) ja voittaa. Samoin `.pillar p`,
+`.feat-card p` ja `.care-list li` olivat suojassa omilla
+kahden luokan säännöillään. Näkymättömiä olivat vain kappaleet joilla
+ei ollut luokkaa.
+
+**Korjaus: kaikki `.section--dark` -värisäännöt siirrettiin
+perustypografian jälkeen** ja koottiin yhdeksi ryhmäksi, johon
+lisättiin myös `strong`. Tyylilohkoon jäi kommentti syystä, ettei
+sama toistu.
+
+**Tarkistettu ohjelmallisesti.** Kirjoitin skriptin joka lukee
+tyylilohkon, laskee jokaisen valitsimen tarkkuuden ja ratkaisee mikä
+sääntö voittaa kullekin elementtipolulle. Kaikki kaksitoista testattua
+tapausta menivät oikein.
+
+**Tämä on syytä muistaa jatkossa:** kun sivulla on sekä
+`.section p` että `.section--dark p`, järjestys ratkaisee. Tarkkuus ei
+ole tarpeeksi ilmeinen luettavaksi silmällä.
+
+Samalla korjattiin `.lead` → `.section .lead`, koska `.section p`
+kumosi senkin vaalealla taustalla ja johdantokappaleet näkyivät
+tummempina kuin oli tarkoitus.
+
+#### Sarjaosio selkeytetty ja logo heroon
+
+**Käyttäjä: sarjahoito-osio näytti sekavalta.** Siinä oli vasemmalla
+otsikko ja kolme kappaletta, oikealla hintarivit ja niiden alla
+selittävä kortti, ja alempana vielä kaksi hoitokorttia. Kolme eri
+korttityyppiä samassa osiossa ilman selkeää lukusuuntaa.
+
+Uusi rakenne on pystysuora ja yksiselitteinen:
+
+```
+johdanto (max 760 px)
+hinnat kahtena rivinä
+huomio kolmannesta kerrasta tarkistuspisteenä
+kaksi hoitokorttia rinnakkain
+huomio hoitovälistä
+```
+
+Hoitovälin selitys muotoiltiin uudelleen omaksi loppuhuomioksi, koska
+se ei ole kummankaan hoidon ominaisuus vaan koskee molempia.
+
+**Hero jaettiin kahteen palstaan** käyttäjän pyynnöstä: teksti
+vasemmalle, ProXN-logo oikealle. `fetchpriority="high"`, ei
+lazy-latausta, koska kuva on heti näkyvissä.
+
+#### Logo vektorista ja ampullikuvan rajaus 11.8.2026
+
+**Käyttäjä: logon valkoinen tausta näyttää turhalta, ja
+ampullikuvan yläosassa on liikaa tyhjää.**
+
+**Logo tehtiin uusiksi vektorilähteestä.** Ensin käytin
+`logo_zdj na www.jpg` -tiedostoa, joka on 39 kt pakattu JPEG
+valkoisella taustalla. **Huomasin että `Logo pro XN.ai` on
+tosiasiassa PDF** (`file` kertoo: PDF document, version 1.5), joten
+sen voi renderöidä ghostscriptilla:
+
+```
+gs -sDEVICE=pngalpha -r600 -dTextAlphaBits=4 -dGraphicsAlphaBits=4
+```
+
+Tuloksena 2619×1341 läpinäkyvä PNG, josta alfakanavan `getbbox()`
+rajasi tyhjät reunat pois (1909×559). Skaalattu 900×264.
+
+**Läpinäkyvä tausta on parempi kuin kermatausta:** logo toimii nyt
+millä tahansa vaalealla pohjalla, eikä se hajoa jos hero-osion sävy
+joskus muuttuu. Tallennettu PNG 40 kt ja WebP 20 kt, **molemmat
+alfakanavalla**. Vanha `proxn-logo.jpg` poistettiin.
+
+**Huom: logo on musta**, joten se sopii vain vaalealle taustalle.
+Tummaan osioon tarvittaisiin vaalea versio, jonka saa samasta
+PDF-lähteestä kääntämällä värit.
+
+**Ampullikuva rajattiin ohjelmallisesti.** Skripti etsi ensimmäisen
+rivin jolla on taustaa selvästi tummempaa sisältöä (mediaanitausta
+229, kynnys 45) ja rajasi siitä pienellä marginaalilla. Yläosasta
+poistui 2604 pikseliä alkuperäisestä 7008:sta, eli 37 prosenttia
+kuvasta oli tyhjää. Uusi suhde 1000×943 aiemman 1000×1500 sijaan,
+tiedostokoko putosi 77 kt → 69 kt.
+
+**`width` ja `height` päivitettiin HTML:ään**, muuten selain varaisi
+väärän tilan ja sivu hyppisi latautuessa.
 - `robots` noindex → index, follow
 - Lisätään `sitemap.xml`:ään
 - **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):

@@ -68,19 +68,28 @@
     .section--cream-warm { background: var(--cream-warm); }
     .section--white { background: var(--white); }
     .section--dark { background: var(--green-dark); color: var(--white); }
-    .section--dark h2, .section--dark h3 { color: var(--white); }
-    .section--dark p, .section--dark li { color: rgba(250, 248, 244, 0.92); }
-    .section--dark .lead { color: rgba(250, 248, 244, 0.92); }
 
+    /* Perustypografia */
     .section h2 { font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 .5em; line-height: 1.2; }
     .section h3 { font-size: 21px; font-weight: 500; margin: 0 0 .4em; }
     .section p { font-size: 16px; line-height: 1.9; color: var(--text-dark); margin: 0 0 1.2em; }
     .section p:last-child { margin-bottom: 0; }
-    .lead { font-size: clamp(17px, 1.4vw, 18px); line-height: 1.85; color: var(--text-mid); }
+    .section .lead { font-size: clamp(17px, 1.4vw, 18px); line-height: 1.85; color: var(--text-mid); }
     .section p a:not(.btn), .section li a:not(.btn) {
       color: var(--pink-deep); text-decoration: underline; text-underline-offset: 3px;
     }
     .section p a:not(.btn):hover, .section li a:not(.btn):hover { color: var(--green-dark); }
+
+    /* TUMMAN TAUSTAN VARIT. Naiden on oltava perustypografian JALKEEN,
+       koska .section p ja .section--dark p ovat samaa tarkkuutta ja
+       jalkimmainen voittaa. Tama oli 11.8. bugin syy. */
+    .section--dark h2,
+    .section--dark h3,
+    .section--dark p,
+    .section--dark li,
+    .section--dark .lead,
+    .section--dark strong { color: rgba(250, 248, 244, 0.94); }
+    .section--dark h2, .section--dark h3, .section--dark strong { color: var(--white); }
     .section--dark p a:not(.btn), .section--dark li a:not(.btn) { color: var(--pink-pale); }
 
     .grid-2 {
@@ -92,6 +101,21 @@
       display: grid; grid-template-columns: 0.78fr 1.22fr;
       gap: clamp(40px, 6vw, 80px); align-items: start;
     }
+    /* HERO KAHTEEN PALSTAAN */
+    .article-hero__inner { max-width: var(--max-w); }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(40px, 6vw, 80px); align-items: center;
+    }
+    .hero-grid .article-lead { max-width: none; }
+    .hero-logo { display: flex; justify-content: center; }
+    .hero-logo img { width: 100%; max-width: 340px; height: auto; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-logo { justify-content: flex-start; }
+      .hero-logo img { max-width: 260px; }
+    }
+
     /* Osion johdanto ennen leveaa sisaltoa */
     .section__head { max-width: 760px; margin: 0 0 clamp(44px, 6vw, 68px); }
 
@@ -161,7 +185,9 @@
     .section--dark .step p { color: rgba(250, 248, 244, 0.92); }
 
     /* HINTARIVIT */
-    .price-rows { margin: 0 0 28px; }
+    .price-rows { margin: 0 0 28px; max-width: 760px; }
+    .sarja-huomio { max-width: 760px; margin: 0 0 clamp(40px, 5vw, 60px); }
+    .sarja-kortit { margin-bottom: clamp(36px, 5vw, 52px); }
     .price-row {
       display: flex; justify-content: space-between; align-items: baseline;
       gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(74, 94, 85, 0.14);
@@ -193,11 +219,22 @@
   <article>
     <header class="article-hero">
       <div class="article-hero__inner">
-        <p class="label label--mid">Hoidot · ProXN</p>
-        <h1>ProXN-kasvohoito: kliininen ihonhoito herkälle, reaktiiviselle ja ikääntyvälle iholle</h1>
-        <p class="article-lead">
-          Kaikkea ihoa ei hoideta ärsyttämällä. Kun iho on ärtynyt, reaktiivinen tai ei siedä voimakkaita aktiiviaineita, tulokseen päästään poistamalla ihoa kuormittavat tekijät ja vahvistamalla sen omaa puolustusta. Sama pätee ikääntymisen merkkeihin silloin kun iho on samalla herkkä. ProXN-kasvohoito on tähän rakennettu ammattikäyttöön tarkoitettu hoito, jonka vaikuttava aine on Xanthohumol Complex.
-        </p>
+        <div class="hero-grid">
+          <div>
+            <p class="label label--mid">Hoidot · ProXN</p>
+            <h1>ProXN-kasvohoito: kliininen ihonhoito herkälle, reaktiiviselle ja ikääntyvälle iholle</h1>
+            <p class="article-lead">
+              Kaikkea ihoa ei hoideta ärsyttämällä. Kun iho on ärtynyt, reaktiivinen tai ei siedä voimakkaita aktiiviaineita, tulokseen päästään poistamalla ihoa kuormittavat tekijät ja vahvistamalla sen omaa puolustusta. Sama pätee ikääntymisen merkkeihin silloin kun iho on samalla herkkä. ProXN-kasvohoito on tähän rakennettu ammattikäyttöön tarkoitettu hoito, jonka vaikuttava aine on Xanthohumol Complex.
+            </p>
+          </div>
+          <div class="hero-logo">
+            <picture>
+              <source srcset="assets/proxn-logo.webp" type="image/webp">
+              <img src="assets/proxn-logo.png" alt="ProXN"
+                   width="900" height="264" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -279,7 +316,7 @@
               <source srcset="assets/proxn-ampulli.webp" type="image/webp">
               <img src="assets/proxn-ampulli.jpg"
                    alt="Xanthohumol Complex -ampulleja ja aktivaattoripullo, keltaista kylmäkuivattua jauhetta petrimaljoilla"
-                   width="1000" height="1500" loading="lazy" decoding="async">
+                   width="1000" height="943" loading="lazy" decoding="async">
             </picture>
             <figcaption>
               Vaikuttava aine on keltaista kylmäkuivattua jauhetta. Se yhdistetään aktivaattoriin vasta hoitohetkellä, koska xanthohumoli hajoaa vesiliuoksessa.
@@ -434,38 +471,32 @@
 
     <section class="section section--dark" aria-labelledby="sarjat-title">
       <div class="section__inner">
-        <div class="grid-side">
-          <div>
-            <p class="label label--pink-pale">Hoidot ja sarjat</p>
-            <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
-            <p class="lead">
-              ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
-            </p>
-            <p>
-              Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
-            </p>
-            <p>
-              Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
-            </p>
+        <div class="section__head">
+          <p class="label label--pink-pale">Hoidot ja sarjat</p>
+          <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
+          <p class="lead">
+            ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
+          </p>
+          <p>
+            Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
+          </p>
+        </div>
+
+        <div class="price-rows">
+          <div class="price-row">
+            <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
+            <span class="price-row__sum">570 €</span>
           </div>
-          <div>
-            <div class="price-rows">
-              <div class="price-row">
-                <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
-                <span class="price-row__sum">570 €</span>
-              </div>
-              <div class="price-row">
-                <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
-                <span class="price-row__sum">1080 €</span>
-              </div>
-            </div>
-            <div class="feat-card">
-              <h3>Miksi väli on tiheämpi kuin mikroneulauksessa</h3>
-              <p>Mikroneulauksessa hoitojen väli on neljä viikkoa, ProXN-hoidossa viikko tai kaksi. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.</p>
-            </div>
+          <div class="price-row">
+            <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
+            <span class="price-row__sum">1080 €</span>
           </div>
         </div>
-        <div class="grid-2" style="margin-top: clamp(40px, 6vw, 64px);">
+        <p class="sarja-huomio">
+          Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
+        </p>
+
+        <div class="grid-2 sarja-kortit">
           <div class="feat-card">
             <h3>Rauhoitushoito</h3>
             <p>Rauhoitushoito (Overreactive Rescue) on tarkoitettu ylireagoivalle iholle. Se palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa antioksidanttipuolustusta. Tämä on lähtökohta silloin, kun iho punoittaa, kiristää tai reagoi herkästi.</p>
@@ -478,6 +509,10 @@
             <p>Syy on aknen omassa aikataulussa. Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjassa viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.</p>
           </div>
         </div>
+
+        <p class="sarja-huomio">
+          Hoitojen väli on tiheämpi kuin mikroneulauksessa, jossa väli on neljä viikkoa. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.
+        </p>
       </div>
     </section>
 
