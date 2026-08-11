@@ -87,9 +87,25 @@
       display: grid; grid-template-columns: 1fr 1fr;
       gap: clamp(40px, 6vw, 88px); align-items: start;
     }
+    /* Otsikko vasemmalle, sisalto oikealle: kapeampi otsikkopalsta */
+    .grid-side {
+      display: grid; grid-template-columns: 0.78fr 1.22fr;
+      gap: clamp(40px, 6vw, 80px); align-items: start;
+    }
+    /* Osion johdanto ennen leveaa sisaltoa */
+    .section__head { max-width: 760px; margin: 0 0 clamp(44px, 6vw, 68px); }
+
+    /* NOSTOT ISOMMAT JA LUETTAVAMMAT */
+    .section .label { font-size: 12px; font-weight: 400; letter-spacing: 0.24em; }
+    .section--dark .label { color: var(--white); }
+    .section--cream .label, .section--white .label { color: var(--text-mid); }
 
     /* PYLVÄSLISTA (sama kuin etusivun .pillars) */
     .pillars { display: flex; flex-direction: column; gap: 36px; }
+    .pillars--3 {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: clamp(28px, 3.5vw, 44px);
+    }
     .pillar { padding-left: 28px; border-left: 1px solid var(--pink); }
     .pillar h3 { font-size: 21px; margin-bottom: 10px; color: var(--text-dark); }
     .pillar p { font-size: 15px; line-height: 1.85; color: var(--text-mid); margin: 0 0 1em; }
@@ -162,8 +178,11 @@
     .section figure.article-figure { margin: 0; }
     .section--dark figure.article-figure figcaption { color: rgba(250, 248, 244, 0.82); }
 
+    @media (max-width: 1000px) {
+      .pillars--3 { grid-template-columns: 1fr; gap: 36px; }
+    }
     @media (max-width: 900px) {
-      .grid-2 { grid-template-columns: 1fr; gap: 44px; }
+      .grid-2, .grid-side { grid-template-columns: 1fr; gap: 44px; }
     }
   </style>
 </head>
@@ -184,7 +203,7 @@
 
     <section class="section section--dark" aria-labelledby="mekanismi-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="section__head">
           <div>
             <p class="label label--pink-pale">Vaikutusmekanismi</p>
             <h2 id="mekanismi-title">Mitä hoito tekee iholle</h2>
@@ -198,7 +217,8 @@
               Yhdessä nämä kolme mekanismia tuottavat ihon, joka reagoi vähemmän, punoittaa vähemmän ja kestää enemmän. Herkän ihon kohdalla se on tulos, jota voimakkaammilla menetelmillä ei saavuteta, koska ne lisäävät juuri sitä kuormaa jota ollaan yrittämässä vähentää.
             </p>
           </div>
-          <div class="pillars">
+        </div>
+        <div class="pillars pillars--3">
             <div class="pillar">
               <h3>1. Vapaat radikaalit ja oksidatiivinen stressi</h3>
               <p>Vapaa radikaali on epävakaa molekyyli, jolta puuttuu elektroni. Vakautuakseen se sieppaa puuttuvan elektronin lähimmästä rakenteesta, esimerkiksi solukalvon rasvahaposta, proteiinista tai perimästä. Vaurioitunut rakenne muuttuu itse radikaaliksi, ja syntyy ketjureaktio.</p>
@@ -217,7 +237,6 @@
               <p>Ultraviolettisäteily ja pitkittynyt tulehdus kiihdyttävät näiden entsyymien toimintaa. Silloin hajotus alkaa voittaa rakentamisen, ja iho menettää kimmoisuuttaan. Xanthohumoli estää näitä entsyymejä, eli hidastaa hajottavaa puolta.</p>
               <p>Tämä kannattaa erottaa selvästi <a href="mikroneulaus-opas.html">mikroneulauksesta</a>, joka toimii toisin päin: se käynnistää uuden kollageenin rakentamisen. ProXN hidastaa menetystä, mikroneulaus lisää tuotantoa. Kyse on kahdesta eri työkalusta.</p>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -239,11 +258,11 @@
       </div>
     </section>
 
-    <section class="section section--cream" aria-labelledby="xanthohumol-title">
+    <section class="section section--dark" aria-labelledby="xanthohumol-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
-            <p class="label label--mid">Vaikuttava aine</p>
+            <p class="label label--pink-pale">Vaikuttava aine</p>
             <h2 id="xanthohumol-title">Xanthohumol Complex</h2>
             <p>
               Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vesipitoisissa valmisteissa eikä sitä ole aiemmin saatu pysymään vakaana kosmetiikassa.
@@ -270,11 +289,11 @@
       </div>
     </section>
 
-    <section class="section section--dark" aria-labelledby="tutkimus-title">
+    <section class="section section--cream" aria-labelledby="tutkimus-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="section__head">
           <div>
-            <p class="label label--pink-pale">Näyttö</p>
+            <p class="label label--mid">Näyttö</p>
             <h2 id="tutkimus-title">Mitä tutkimus sanoo</h2>
             <p class="lead">
               Xanthohumolista on julkaistu yli 800 tutkimusta, ja se on yksi tutkituimmista kasviperäisistä antioksidanteista. Alla on mitä siitä ja tästä hoitosarjasta tiedetään, ja millä tavalla se on mitattu.
@@ -283,7 +302,8 @@
               Tutkimukset ovat pieniä ja valmistajan teettämiä, eikä niissä ole verrokkiryhmää. Osa mittauksista on laitteellisia, osa perustuu osallistujien omaan arvioon. Näyttö on siis sen tasoista mitä ammattikäyttöön tarkoitetuilta hoitosarjoilta yleensä löytyy: se osoittaa suunnan ja kohderyhmän, ei vaikutuksen suuruutta väestötasolla. Olennaista on, että tutkimusten kohderyhmä on sama kuin hoidon kohderyhmä, eli herkkä, reaktiivinen ja tulehtunut iho.
             </p>
           </div>
-          <div class="pillars">
+        </div>
+        <div class="pillars pillars--3">
             <div class="pillar">
               <h3>Antioksidanttikapasiteetti</h3>
               <p>Valmistajan tieteellisessä aineistossa Xanthohumol Complexin antioksidanttiaktiivisuus on keskimäärin kolmekymmenkertainen C-vitamiiniin verrattuna. Puhdas xanthohumoli vastaa suunnilleen C-vitamiinia, eli ero syntyy kompleksoinnista.</p>
@@ -304,16 +324,15 @@
                 <li>Toisessa saman keskuksen kahden kuukauden tutkimuksessa herkkäihoisilla havaittiin kiinteyden, kimmoisuuden ja kosteustason paranemista sekä ihon pinnan tasoittumista.</li>
               </ul>
             </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="kenelle-title">
+    <section class="section section--dark" aria-labelledby="kenelle-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
-            <p class="label label--mid">Kohderyhmä</p>
+            <p class="label label--pink-pale">Kohderyhmä</p>
             <h2 id="kenelle-title">Kenelle ProXN-kasvohoito sopii</h2>
             <p class="lead">
               Hoito on rakennettu iholle joka ei siedä voimakkaita menetelmiä. Jos tunnistat itsesi jostain näistä, ProXN on todennäköisesti oikea reitti.
@@ -333,9 +352,9 @@
       </div>
     </section>
 
-    <section class="section section--cream" aria-labelledby="kulku-title">
+    <section class="section section--white" aria-labelledby="kulku-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
             <p class="label label--mid">Käynti vaihe vaiheelta</p>
             <h2 id="kulku-title">Hoidon kulku</h2>
@@ -366,7 +385,7 @@
 
     <section class="section section--dark" aria-labelledby="ikaantyminen-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
             <p class="label label--pink-pale">Ikääntyvä iho</p>
             <h2 id="ikaantyminen-title">Ikääntymisen merkit</h2>
@@ -386,7 +405,7 @@
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="ennenjalkeen-title">
+    <section class="section section--cream" aria-labelledby="ennenjalkeen-title">
       <div class="section__inner">
         <p class="label label--mid">Valmistautuminen</p>
         <h2 id="ennenjalkeen-title">Ennen ja jälkeen hoidon</h2>
@@ -413,11 +432,11 @@
       </div>
     </section>
 
-    <section class="section section--cream" aria-labelledby="sarjat-title">
+    <section class="section section--dark" aria-labelledby="sarjat-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
-            <p class="label label--mid">Hoidot ja sarjat</p>
+            <p class="label label--pink-pale">Hoidot ja sarjat</p>
             <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
             <p class="lead">
               ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
@@ -462,11 +481,11 @@
       </div>
     </section>
 
-    <section class="section section--dark" aria-labelledby="kotihoito-title">
+    <section class="section section--white" aria-labelledby="kotihoito-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
-            <p class="label label--pink-pale">Kotihoito</p>
+            <p class="label label--mid">Kotihoito</p>
             <h2 id="kotihoito-title">Työ jatkuu käyntien välissä</h2>
             <p class="lead">
               Herkän ihon hoidossa kotihoito ratkaisee suuren osan lopputuloksesta. Hoitokerta antaa iholle sysäyksen, mutta suojakerros vahvistuu päivittäisessä käytössä.
@@ -490,11 +509,11 @@
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="turvallisuus-title">
+    <section class="section section--dark" aria-labelledby="turvallisuus-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
-            <p class="label label--mid">Turvallisuus</p>
+            <p class="label label--pink-pale">Turvallisuus</p>
             <h2 id="turvallisuus-title">Vasta-aiheet ja esitiedot</h2>
             <p class="lead">
               ProXN-kasvohoito ei riko ihoa, ja hoito on suunniteltu nimenomaan tilanteisiin joissa iho on ärtynyt tai tulehtunut. Aktivaattorin sisältämä hopea ehkäisee bakteeriperäisiä jälki-infektioita.
@@ -519,7 +538,7 @@
 
     <section class="section section--cream" aria-labelledby="varaus-title">
       <div class="section__inner">
-        <div class="grid-2">
+        <div class="grid-side">
           <div>
             <p class="label label--mid">Varaaminen</p>
             <h2 id="varaus-title">Varaaminen ja hinta</h2>

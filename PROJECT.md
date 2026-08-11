@@ -2363,9 +2363,58 @@ hintayksikkö 5,56:1, pink-pale-linkki 5,55:1, text-mid kermalla
 pallolla, 2,39:1. Vaihdettiin tekstiväriksi `--text-dark` (4,86:1) ja
 tummalla taustalla pink-pale-pallo green-dark-numerolla.
 
-**Avoin, käyttäjä katsoo julkaisun jälkeen:** viimeinen osio on cream
-ja sen jälkeen tuleva CTA cream-warm. Se on sivun ainoa pehmeä sauma.
-Vaihtoehto olisi tehdä Varaaminen-osiosta dark.
+#### Kolme korjausta samana päivänä, käyttäjä katsoi sivun selaimessa
+
+**1. Valkoinen ja kerma eivät saa olla vierekkäin.** Ensimmäinen versio
+oli D W C D W C D W C D W C, jolloin valkoinen ja kerma osuivat vastakkain
+neljä kertaa. Sävyt ovat liian lähellä toisiaan (#faf8f4 ja #f5f0e8),
+joten sauma näytti virheeltä eikä tarkoitukselliselta.
+
+Käyttäjä: *"etusivulla siirtymät ovat myös tumma - valkoinen - tumma -
+kerma tyylillä."* **Sääntö tästä eteenpäin: tumma osio joka vaalean
+väliin.** Uusi järjestys:
+
+```
+hero cream → D W D C D W D C D W D C → CTA cream-warm
+```
+
+Kuusi tummaa kahdestatoista. Vaalea vuorottelee valkoisen ja kerman
+välillä mutta ne eivät koskaan kosketa toisiaan.
+
+**2. Nostot eivät olleet luettavia tummalla.** Syy oli
+kaskadissa: `.section--dark p` on tarkkuudeltaan (0,1,1) ja voitti
+`.label--pink-pale`-luokan (0,1,0), joten nosto peri kappaleen värin.
+Lisäksi jaettu `.label` on 11 px, paino 300 ja välistys 0.3em, mikä on
+pieni ja ohut luettavaksi.
+
+Korjaus: **oma sääntö riittävällä tarkkuudella** (`.section--dark .label`,
+kaksi luokkaa) ja nostot isommiksi tällä sivulla: 12 px, paino 400,
+välistys 0.24em. Tummalla täysi valkoinen 7,93:1, vaalealla text-mid
+6,12:1 ja 6,55:1. Skripti korjasi samalla sävyluokat vastaamaan uutta
+taustaa, eli `label--mid` vaalealle ja `label--pink-pale` tummalle.
+
+**Sama kaskadivirhe on myös etusivulla**, jossa tummien osioiden nostot
+perivät kappaleen värin 0.85 valkoisena. Ei korjattu, koska etusivusta
+ei ole valitettu, mutta se on hyvä tietää jos etusivua joskus säädetään.
+
+**3. Vasemmalle jäi liikaa tyhjää.** Kaksi osiota oli pahoja: "Mitä
+hoito tekee iholle" ja "Mitä tutkimus sanoo". Niissä vasemmassa
+palstassa oli otsikko ja pari kappaletta, oikeassa kolme pitkää
+pylvästä. Oikea palsta jatkui satoja pikseleitä pidemmälle, joten
+vasemmalle jäi tyhjä kuilu.
+
+Korjaus: **johdanto koko leveydelle ylös (`.section__head`, max 760 px)
+ja kolme pylvästä kolmeen palstaan alle (`.pillars--3`).** Sama kaava
+kuin etusivun korttiosioissa.
+
+Lisäksi kahdeksan osiota, joissa vasemmalla on vain otsikko ja
+johdanto, siirtyi `.grid-2`:sta uuteen **`.grid-side`**-ruudukkoon
+(0.78fr / 1.22fr). Otsikkopalsta on kapeampi ja sisältöpalsta leveämpi,
+jolloin epäsuhta pienenee. `.grid-2` jäi vain aidosti pareittaiseen
+sisältöön: kaksi vertailukorttia, ennen ja jälkeen, kaksi hoitokorttia.
+
+Mobiilissa `.pillars--3` menee yhteen palstaan alle 1000 px ja
+`.grid-side` alle 900 px.
 - `robots` noindex → index, follow
 - Lisätään `sitemap.xml`:ään
 - **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):
