@@ -59,6 +59,113 @@
   <!-- Meta Pixel -->
   <script src="/assets/meta-pixel.js"></script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1720418568979435&ev=PageView&noscript=1" alt=""/></noscript>
+
+  <style>
+    /* SIVUKOHTAISET TYYLIT — sama osiorakenne kuin etusivulla */
+    .section { padding: var(--section-py) var(--section-px); position: relative; }
+    .section__inner { max-width: var(--max-w); margin: 0 auto; }
+    .section--cream { background: var(--cream); }
+    .section--cream-warm { background: var(--cream-warm); }
+    .section--white { background: var(--white); }
+    .section--dark { background: var(--green-dark); color: var(--white); }
+    .section--dark h2, .section--dark h3 { color: var(--white); }
+    .section--dark p, .section--dark li { color: rgba(250, 248, 244, 0.92); }
+    .section--dark .lead { color: rgba(250, 248, 244, 0.92); }
+
+    .section h2 { font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 .5em; line-height: 1.2; }
+    .section h3 { font-size: 21px; font-weight: 500; margin: 0 0 .4em; }
+    .section p { font-size: 16px; line-height: 1.9; color: var(--text-dark); margin: 0 0 1.2em; }
+    .section p:last-child { margin-bottom: 0; }
+    .lead { font-size: clamp(17px, 1.4vw, 18px); line-height: 1.85; color: var(--text-mid); }
+    .section p a:not(.btn), .section li a:not(.btn) {
+      color: var(--pink-deep); text-decoration: underline; text-underline-offset: 3px;
+    }
+    .section p a:not(.btn):hover, .section li a:not(.btn):hover { color: var(--green-dark); }
+    .section--dark p a:not(.btn), .section--dark li a:not(.btn) { color: var(--pink-pale); }
+
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 88px); align-items: start;
+    }
+
+    /* PYLVÄSLISTA (sama kuin etusivun .pillars) */
+    .pillars { display: flex; flex-direction: column; gap: 36px; }
+    .pillar { padding-left: 28px; border-left: 1px solid var(--pink); }
+    .pillar h3 { font-size: 21px; margin-bottom: 10px; color: var(--text-dark); }
+    .pillar p { font-size: 15px; line-height: 1.85; color: var(--text-mid); margin: 0 0 1em; }
+    .pillar p:last-child { margin-bottom: 0; }
+    .section--dark .pillar { border-left-color: var(--pink-pale); }
+    .section--dark .pillar h3 { color: var(--white); }
+    .section--dark .pillar p { color: rgba(250, 248, 244, 0.92); }
+
+    /* VIIVALISTA */
+    .care-list { margin: 0; }
+    .care-list li {
+      position: relative; padding: 13px 0 13px 28px;
+      border-bottom: 1px solid rgba(74, 94, 85, 0.12);
+      font-size: 15px; line-height: 1.85; color: var(--text-mid);
+    }
+    .care-list li:last-child { border-bottom: 0; }
+    .care-list li::before {
+      content: ""; position: absolute; left: 0; top: 25px;
+      width: 12px; height: 1px; background: var(--pink);
+    }
+    .care-list li strong { color: var(--text-dark); font-weight: 500; }
+    .section--dark .care-list li {
+      color: rgba(250, 248, 244, 0.92); border-bottom-color: rgba(250, 248, 244, 0.16);
+    }
+    .section--dark .care-list li::before { background: var(--pink-pale); }
+    .section--dark .care-list li strong { color: var(--white); }
+
+    /* KORTTI */
+    .feat-card {
+      background: var(--cream-warm); border-left: 4px solid var(--pink);
+      padding: 26px 30px; border-radius: 2px;
+    }
+    .feat-card h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 400; margin: 0 0 10px; color: var(--text-dark); }
+    .feat-card p { font-size: 15px; line-height: 1.85; color: var(--text-mid); }
+    .section--white .feat-card { background: var(--cream); }
+    .section--dark .feat-card { background: var(--green-mid); border-left-color: var(--pink-pale); }
+    .section--dark .feat-card h3 { color: var(--white); }
+    .section--dark .feat-card p { color: rgba(250, 248, 244, 0.92); }
+
+    /* NUMEROIDUT VAIHEET */
+    .steps { counter-reset: askel; display: flex; flex-direction: column; gap: 26px; }
+    .step { position: relative; padding-left: 52px; }
+    .step::before {
+      counter-increment: askel; content: counter(askel);
+      position: absolute; left: 0; top: 0;
+      width: 34px; height: 34px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-size: 17px;
+      background: var(--pink); color: var(--text-dark);
+    }
+    .section--dark .step::before { background: var(--pink-pale); color: var(--green-dark); }
+    .step p { font-size: 15px; line-height: 1.85; color: var(--text-mid); margin: 0; padding-top: 4px; }
+    .section--dark .step p { color: rgba(250, 248, 244, 0.92); }
+
+    /* HINTARIVIT */
+    .price-rows { margin: 0 0 28px; }
+    .price-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(74, 94, 85, 0.14);
+    }
+    .price-row:last-child { border-bottom: 0; }
+    .price-row__name { font-family: var(--font-serif); font-size: 21px; color: var(--text-dark); }
+    .price-row__sum { font-family: var(--font-serif); font-size: 21px; color: var(--text-dark); white-space: nowrap; }
+    .price-row__unit { font-family: var(--font-sans); font-size: 13px; color: var(--text-mid); letter-spacing: 0.04em; }
+    .section--dark .price-row { border-bottom-color: rgba(250, 248, 244, 0.18); }
+    .section--dark .price-row__name, .section--dark .price-row__sum { color: var(--white); }
+    .section--dark .price-row__unit { color: rgba(250, 248, 244, 0.78); }
+
+    /* KUVA OSIOSSA */
+    .section figure.article-figure { margin: 0; }
+    .section--dark figure.article-figure figcaption { color: rgba(250, 248, 244, 0.82); }
+
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; gap: 44px; }
+    }
+  </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
@@ -74,277 +181,386 @@
         </p>
       </div>
     </header>
-    <div class="article-body">
 
-      <h2>Mitä hoito tekee iholle</h2>
-      <p>
-        Herkän ja reaktiivisen ihon taustalla on tyypillisesti kaksi asiaa: ihon oma suojakerros on heikentynyt ja tulehdusreaktio on jäänyt päälle. Voimakkaat hoidot pahentavat molempia. ProXN-hoito puuttuu näihin suoraan.
-      </p>
-      <p>
-        Xanthohumol Complex vaikuttaa kolmeen eri mekanismiin, ja ne selittävät miksi hoito tehoaa juuri reaktiiviseen ihoon.
-      </p>
+    <section class="section section--dark" aria-labelledby="mekanismi-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--pink-pale">Vaikutusmekanismi</p>
+            <h2 id="mekanismi-title">Mitä hoito tekee iholle</h2>
+            <p class="lead">
+              Herkän ja reaktiivisen ihon taustalla on tyypillisesti kaksi asiaa: ihon oma suojakerros on heikentynyt ja tulehdusreaktio on jäänyt päälle. Voimakkaat hoidot pahentavat molempia. ProXN-hoito puuttuu näihin suoraan.
+            </p>
+            <p class="lead">
+              Xanthohumol Complex vaikuttaa kolmeen eri mekanismiin, ja ne selittävät miksi hoito tehoaa juuri reaktiiviseen ihoon.
+            </p>
+            <p class="lead">
+              Yhdessä nämä kolme mekanismia tuottavat ihon, joka reagoi vähemmän, punoittaa vähemmän ja kestää enemmän. Herkän ihon kohdalla se on tulos, jota voimakkaammilla menetelmillä ei saavuteta, koska ne lisäävät juuri sitä kuormaa jota ollaan yrittämässä vähentää.
+            </p>
+          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <h3>1. Vapaat radikaalit ja oksidatiivinen stressi</h3>
+              <p>Vapaa radikaali on epävakaa molekyyli, jolta puuttuu elektroni. Vakautuakseen se sieppaa puuttuvan elektronin lähimmästä rakenteesta, esimerkiksi solukalvon rasvahaposta, proteiinista tai perimästä. Vaurioitunut rakenne muuttuu itse radikaaliksi, ja syntyy ketjureaktio.</p>
+              <p>Iholla vapaita radikaaleja syntyy jatkuvasti auringon ultraviolettisäteilystä, ilman epäpuhtauksista ja aivan tavallisesta aineenvaihdunnasta. Terveellä iholla on oma puolustusjärjestelmä, joka neutraloi ne. Kun kuorma ylittää puolustuskyvyn, tilaa kutsutaan oksidatiiviseksi stressiksi. Se näkyy ihon heikentyneenä kestävyytenä, punoituksena ja ennenaikaisina ikääntymisen merkkeinä.</p>
+              <p>Antioksidantti katkaisee ketjun luovuttamalla radikaalille sen puuttuvan elektronin. Xanthohumol Complex toimii juuri näin. Hoidossa käytettävä ampulli sisältää lisäksi superoksididismutaasia, joka on ihon oma antioksidanttientsyymi, sekä C-vitamiinijohdannaista ja koentsyymi Q10:tä. Ihoa ei siis vain suojata ulkoapäin, vaan sen omaa puolustusjärjestelmää täydennetään.</p>
+            </div>
+            <div class="pillar">
+              <h3>2. Tulehdusreaktio, joka on jäänyt päälle</h3>
+              <p>Solut viestivät keskenään välittäjäaineilla, joita kutsutaan sytokiineiksi. Osa niistä ylläpitää tulehdusreaktiota. Kolme keskeistä ovat interleukiini 1-beeta, interleukiini 6 ja TNF-alfa. Nimet ovat hankalia, mutta tehtävä on yksinkertainen: ne kertovat kudokselle että puolustusreaktio on pidettävä käynnissä.</p>
+              <p>Akuutissa tilanteessa tämä on hyödyllistä. Ongelma syntyy, kun viesti ei sammu. Reaktiivisessa ihossa, ruusufinnissä ja atooppisessa ihossa tulehdus jää matalalle tasolle päälle pitkäksi aikaa. Iho punoittaa, kirvelee ja reagoi asioihin joihin sen ei pitäisi reagoida. Samalla pitkittynyt tulehdus kuluttaa ihon rakenteita.</p>
+              <p>Xanthohumolin on osoitettu laskevan näiden kolmen välittäjäaineen tasoja. Käytännössä se hiljentää viestin sen sijaan että peittäisi oireen. Tämä on syy siihen, miksi hoito sopii ärtyneelle iholle eikä pahenna tilannetta niin kuin voimakkaat aktiiviaineet usein tekevät.</p>
+            </div>
+            <div class="pillar">
+              <h3>3. Kollageenia hajottavat entsyymit</h3>
+              <p>Iho rakentaa ja hajottaa kollageeniaan koko ajan. Hajottavasta puolesta vastaavat matriksin metalloproteinaasit, entsyymit jotka pilkkovat kollageeni- ja elastiinisäikeitä. Tämä on normaalia kudoksen uusiutumista.</p>
+              <p>Ultraviolettisäteily ja pitkittynyt tulehdus kiihdyttävät näiden entsyymien toimintaa. Silloin hajotus alkaa voittaa rakentamisen, ja iho menettää kimmoisuuttaan. Xanthohumoli estää näitä entsyymejä, eli hidastaa hajottavaa puolta.</p>
+              <p>Tämä kannattaa erottaa selvästi <a href="mikroneulaus-opas.html">mikroneulauksesta</a>, joka toimii toisin päin: se käynnistää uuden kollageenin rakentamisen. ProXN hidastaa menetystä, mikroneulaus lisää tuotantoa. Kyse on kahdesta eri työkalusta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>1. Vapaat radikaalit ja oksidatiivinen stressi</h3>
-      <p>
-        Vapaa radikaali on epävakaa molekyyli, jolta puuttuu elektroni. Vakautuakseen se sieppaa puuttuvan elektronin lähimmästä rakenteesta, esimerkiksi solukalvon rasvahaposta, proteiinista tai perimästä. Vaurioitunut rakenne muuttuu itse radikaaliksi, ja syntyy ketjureaktio.
-      </p>
-      <p>
-        Iholla vapaita radikaaleja syntyy jatkuvasti auringon ultraviolettisäteilystä, ilman epäpuhtauksista ja aivan tavallisesta aineenvaihdunnasta. Terveellä iholla on oma puolustusjärjestelmä, joka neutraloi ne. Kun kuorma ylittää puolustuskyvyn, tilaa kutsutaan oksidatiiviseksi stressiksi. Se näkyy ihon heikentyneenä kestävyytenä, punoituksena ja ennenaikaisina ikääntymisen merkkeinä.
-      </p>
-      <p>
-        Antioksidantti katkaisee ketjun luovuttamalla radikaalille sen puuttuvan elektronin. Xanthohumol Complex toimii juuri näin. Hoidossa käytettävä ampulli sisältää lisäksi superoksididismutaasia, joka on ihon oma antioksidanttientsyymi, sekä C-vitamiinijohdannaista ja koentsyymi Q10:tä. Ihoa ei siis vain suojata ulkoapäin, vaan sen omaa puolustusjärjestelmää täydennetään.
-      </p>
+    <section class="section section--white" aria-labelledby="vertailu-title">
+      <div class="section__inner">
+        <p class="label label--mid">Kaksi eri mekanismia</p>
+        <h2 id="vertailu-title">Mikroneulaus vai ProXN?</h2>
+        <div class="grid-2" style="margin-top: 40px;">
+          <div class="feat-card">
+            <h3>Kliininen mikroneulaus</h3>
+            <p><a href="mikroneulaus-opas.html">Kliininen mikroneulaus</a> perustuu hallittuun vaurioon: iho korjaa itsensä ja rakentaa samalla uutta kollageenia. Se on tehokas menetelmä, mutta se edellyttää ihoa joka kestää vaurion ja paranee ennustettavasti.</p>
+          </div>
+          <div class="feat-card">
+            <h3>ProXN-kasvohoito</h3>
+            <p>ProXN toimii päinvastaisesta suunnasta. Se ei tuota vauriota vaan poistaa kuormaa: vähentää tulehdusta, täydentää antioksidanttipuolustusta ja palauttaa suojakerroksen toimintaa. Reaktiivisen ihon kohdalla tämä on se mekanismi joka toimii, ja vaurioon perustuva menetelmä olisi askel taaksepäin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>2. Tulehdusreaktio, joka on jäänyt päälle</h3>
-      <p>
-        Solut viestivät keskenään välittäjäaineilla, joita kutsutaan sytokiineiksi. Osa niistä ylläpitää tulehdusreaktiota. Kolme keskeistä ovat interleukiini 1-beeta, interleukiini 6 ja TNF-alfa. Nimet ovat hankalia, mutta tehtävä on yksinkertainen: ne kertovat kudokselle että puolustusreaktio on pidettävä käynnissä.
-      </p>
-      <p>
-        Akuutissa tilanteessa tämä on hyödyllistä. Ongelma syntyy, kun viesti ei sammu. Reaktiivisessa ihossa, ruusufinnissä ja atooppisessa ihossa tulehdus jää matalalle tasolle päälle pitkäksi aikaa. Iho punoittaa, kirvelee ja reagoi asioihin joihin sen ei pitäisi reagoida. Samalla pitkittynyt tulehdus kuluttaa ihon rakenteita.
-      </p>
-      <p>
-        Xanthohumolin on osoitettu laskevan näiden kolmen välittäjäaineen tasoja. Käytännössä se hiljentää viestin sen sijaan että peittäisi oireen. Tämä on syy siihen, miksi hoito sopii ärtyneelle iholle eikä pahenna tilannetta niin kuin voimakkaat aktiiviaineet usein tekevät.
-      </p>
+    <section class="section section--cream" aria-labelledby="xanthohumol-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Vaikuttava aine</p>
+            <h2 id="xanthohumol-title">Xanthohumol Complex</h2>
+            <p>
+              Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vesipitoisissa valmisteissa eikä sitä ole aiemmin saatu pysymään vakaana kosmetiikassa.
+            </p>
+            <p>
+              ProXN ratkaisi tämän kompleksoimalla xanthohumolin syklodekstriiniin. Kompleksointi parantaa liukoisuutta ja pysyvyyttä, ja se on myös syy siihen miksi valmistajan mittaustulokset koskevat nimenomaan kompleksia eivätkä puhdasta xanthohumolia.
+            </p>
+            <p>
+              Hoidossa käytettävä ampulli sisältää Xanthohumol Complexin lisäksi superoksididismutaasia, 3-O-etyyliaskorbiinihappoa, niasiiniamidia ja koentsyymi Q10:tä. Aktivaattori sisältää hopeaa, joka ehkäisee bakteeriperäisiä jälki-infektioita.
+            </p>
+          </div>
+          <figure class="article-figure">
+            <picture>
+              <source srcset="assets/proxn-ampulli.webp" type="image/webp">
+              <img src="assets/proxn-ampulli.jpg"
+                   alt="Xanthohumol Complex -ampulleja ja aktivaattoripullo, keltaista kylmäkuivattua jauhetta petrimaljoilla"
+                   width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>
+              Vaikuttava aine on keltaista kylmäkuivattua jauhetta. Se yhdistetään aktivaattoriin vasta hoitohetkellä, koska xanthohumoli hajoaa vesiliuoksessa.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-      <h3>3. Kollageenia hajottavat entsyymit</h3>
-      <p>
-        Iho rakentaa ja hajottaa kollageeniaan koko ajan. Hajottavasta puolesta vastaavat matriksin metalloproteinaasit, entsyymit jotka pilkkovat kollageeni- ja elastiinisäikeitä. Tämä on normaalia kudoksen uusiutumista.
-      </p>
-      <p>
-        Ultraviolettisäteily ja pitkittynyt tulehdus kiihdyttävät näiden entsyymien toimintaa. Silloin hajotus alkaa voittaa rakentamisen, ja iho menettää kimmoisuuttaan. Xanthohumoli estää näitä entsyymejä, eli hidastaa hajottavaa puolta.
-      </p>
-      <p>
-        Tämä kannattaa erottaa selvästi <a href="mikroneulaus-opas.html">mikroneulauksesta</a>, joka toimii toisin päin: se käynnistää uuden kollageenin rakentamisen. ProXN hidastaa menetystä, mikroneulaus lisää tuotantoa. Kyse on kahdesta eri työkalusta.
-      </p>
-      <p>
-        Yhdessä nämä kolme mekanismia tuottavat ihon, joka reagoi vähemmän, punoittaa vähemmän ja kestää enemmän. Herkän ihon kohdalla se on tulos, jota voimakkaammilla menetelmillä ei saavuteta, koska ne lisäävät juuri sitä kuormaa jota ollaan yrittämässä vähentää.
-      </p>
+    <section class="section section--dark" aria-labelledby="tutkimus-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--pink-pale">Näyttö</p>
+            <h2 id="tutkimus-title">Mitä tutkimus sanoo</h2>
+            <p class="lead">
+              Xanthohumolista on julkaistu yli 800 tutkimusta, ja se on yksi tutkituimmista kasviperäisistä antioksidanteista. Alla on mitä siitä ja tästä hoitosarjasta tiedetään, ja millä tavalla se on mitattu.
+            </p>
+            <p class="lead">
+              Tutkimukset ovat pieniä ja valmistajan teettämiä, eikä niissä ole verrokkiryhmää. Osa mittauksista on laitteellisia, osa perustuu osallistujien omaan arvioon. Näyttö on siis sen tasoista mitä ammattikäyttöön tarkoitetuilta hoitosarjoilta yleensä löytyy: se osoittaa suunnan ja kohderyhmän, ei vaikutuksen suuruutta väestötasolla. Olennaista on, että tutkimusten kohderyhmä on sama kuin hoidon kohderyhmä, eli herkkä, reaktiivinen ja tulehtunut iho.
+            </p>
+          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <h3>Antioksidanttikapasiteetti</h3>
+              <p>Valmistajan tieteellisessä aineistossa Xanthohumol Complexin antioksidanttiaktiivisuus on keskimäärin kolmekymmenkertainen C-vitamiiniin verrattuna. Puhdas xanthohumoli vastaa suunnilleen C-vitamiinia, eli ero syntyy kompleksoinnista.</p>
+              <p>Luku on peräisin laboratoriomittauksesta, jossa seurattiin ydinmagneettisella resonanssispektroskopialla ditiolin hapettumista vetyperoksidin läsnä ollessa. Se kertoo yhdisteen kyvystä neutraloida hapettavaa kuormaa koeputkessa. Iholla lopputulokseen vaikuttavat lisäksi imeytyminen, pitoisuus ja käyttötiheys.</p>
+            </div>
+            <div class="pillar">
+              <h3>Solutason tutkimus</h3>
+              <p>Soluviljelmissä xanthohumolin on osoitettu vahvistavan antioksidanttipuolustusta, rauhoittavan tulehdusreaktiota, vähentävän pigmentin muodostusta, estävän matriksin metalloproteinaaseja ja tukevan kollageenin ja elastiinin synteesiä.</p>
+              <p>Nämä ovat ne mekanismit joihin hoidon vaikutus perustuu, ja ne on osoitettu solutasolla. Kuinka voimakkaana sama vaikutus näkyy ihmisen iholla, on eri kysymys, ja siihen vastaavat ihmisillä tehdyt tutkimukset.</p>
+            </div>
+            <div class="pillar">
+              <h3>Ihmisillä tehdyt tutkimukset</h3>
+              <p>Hoitosarjasta on tehty neljä tutkimusta, joissa kussakin oli kymmenen osallistujaa.</p>
+              <ul class="care-list">
+                <li>Ärsytystestissä iho ärsytettiin mekaanisesti ja punoitusta mitattiin laitteella. Punoitus laski keskimäärin 20 prosenttia viisitoista minuuttia levityksen jälkeen.</li>
+                <li>Käyttötutkimuksessa arvioitiin valmistajan lupaamat ominaisuudet. Ominaisuus katsottiin vahvistetuksi, jos yli puolet osallistujista koki sen toteutuvan.</li>
+                <li>Ihotautikeskuksen kahden kuukauden tutkimuksessa hoitoa käytettiin ruusufinniä ja atooppista ihottumaa sairastaville. Arviointi tehtiin VISIA-ihoanalyysilaitteella ja osallistujien omilla arvioilla. Ärsytys lievittyi, punoitus väheni ja kosteustaso parani.</li>
+                <li>Toisessa saman keskuksen kahden kuukauden tutkimuksessa herkkäihoisilla havaittiin kiinteyden, kimmoisuuden ja kosteustason paranemista sekä ihon pinnan tasoittumista.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Mikroneulaus vai ProXN?</h2>
-      <p>
-        <a href="mikroneulaus-opas.html">Kliininen mikroneulaus</a> perustuu hallittuun vaurioon: iho korjaa itsensä ja rakentaa samalla uutta kollageenia. Se on tehokas menetelmä, mutta se edellyttää ihoa joka kestää vaurion ja paranee ennustettavasti.
-      </p>
-      <p>
-        ProXN toimii päinvastaisesta suunnasta. Se ei tuota vauriota vaan poistaa kuormaa: vähentää tulehdusta, täydentää antioksidanttipuolustusta ja palauttaa suojakerroksen toimintaa. Reaktiivisen ihon kohdalla tämä on se mekanismi joka toimii, ja vaurioon perustuva menetelmä olisi askel taaksepäin.
-      </p>
+    <section class="section section--white" aria-labelledby="kenelle-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Kohderyhmä</p>
+            <h2 id="kenelle-title">Kenelle ProXN-kasvohoito sopii</h2>
+            <p class="lead">
+              Hoito on rakennettu iholle joka ei siedä voimakkaita menetelmiä. Jos tunnistat itsesi jostain näistä, ProXN on todennäköisesti oikea reitti.
+            </p>
+          </div>
+          <ul class="care-list">
+            <li>Herkkä, ärtynyt tai reaktiivinen iho</li>
+            <li>Iho joka ei siedä voimakkaita aktiiviaineita</li>
+            <li>Ruusufinni, couperosa ja punoitukseen taipuvainen iho</li>
+            <li>Atooppinen iho</li>
+            <li>Toistuva akne, seborrea ja tulehduksen jälkeinen pigmentoituminen</li>
+            <li>Iho, joka on vaurioitunut vääränlaisista kotihoitotuotteista</li>
+            <li>Ikääntymisen merkit silloin kun iho on samalla herkkä tai reaktiivinen</li>
+            <li>Palautuminen invasiivisemmista hoidoista, kuten mikroneulauksesta tai laserhoidosta</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <h2>Xanthohumol Complex</h2>
-      <p>
-        Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vesipitoisissa valmisteissa eikä sitä ole aiemmin saatu pysymään vakaana kosmetiikassa.
-      </p>
-      <p>
-        ProXN ratkaisi tämän kompleksoimalla xanthohumolin syklodekstriiniin. Kompleksointi parantaa liukoisuutta ja pysyvyyttä, ja se on myös syy siihen miksi valmistajan mittaustulokset koskevat nimenomaan kompleksia eivätkä puhdasta xanthohumolia.
-      </p>
-      <p>
-        Hoidossa käytettävä ampulli sisältää Xanthohumol Complexin lisäksi superoksididismutaasia, 3-O-etyyliaskorbiinihappoa, niasiiniamidia ja koentsyymi Q10:tä. Aktivaattori sisältää hopeaa, joka ehkäisee bakteeriperäisiä jälki-infektioita.
-      </p>
-      <figure class="article-figure">
-        <picture>
-          <source srcset="assets/proxn-ampulli.webp" type="image/webp">
-          <img src="assets/proxn-ampulli.jpg"
-               alt="Xanthohumol Complex -ampulleja ja aktivaattoripullo, keltaista kylmäkuivattua jauhetta petrimaljoilla"
-               width="1000" height="1500" loading="lazy" decoding="async">
-        </picture>
-        <figcaption>
-          Vaikuttava aine on keltaista kylmäkuivattua jauhetta. Se yhdistetään aktivaattoriin vasta hoitohetkellä, koska xanthohumoli hajoaa vesiliuoksessa.
-        </figcaption>
-      </figure>
+    <section class="section section--cream" aria-labelledby="kulku-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Käynti vaihe vaiheelta</p>
+            <h2 id="kulku-title">Hoidon kulku</h2>
+            <p class="lead">
+              Koko käynti kestää noin tunnin, josta hoito-osuus on 30–40 minuuttia. Loppuaika menee iho-analyysiin, esitietoihin ja jälkihoito-ohjeisiin.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <p>Ensin iho puhdistetaan kahdessa vaiheessa. Puhdistusöljy poistaa meikin ja epäpuhtaudet vahingoittamatta ihon omaa rasvakerrosta, ja sen jälkeen iho tasapainotetaan kosteuttavalla suihkeella.</p>
+            </div>
+            <div class="step">
+              <p>Seuraavaksi iho käsitellään hellävaraisella polyhydroksihappoliuoksella. Se irrottaa sarveiskerroksen kuollutta solukkoa ja parantaa seuraavien vaiheiden imeytymistä. Polyhydroksihapot ovat suurikokoisia molekyylejä, jotka imeytyvät hitaammin kuin tavalliset hedelmähapot, ja siksi ne sopivat herkälle iholle.</p>
+            </div>
+            <div class="step">
+              <p>Tämän jälkeen sekoitetaan Xanthohumol Complex -ampulli. Vaikuttava aine on kylmäkuivattua jauhetta, koska xanthohumoli hajoaa vesiliuoksessa. Jauhe ja aktivaattori yhdistetään vasta hoitohetkellä, jolloin aine on täydellä teholla iholle levitettäessä. Ampullia ei huuhdella pois.</p>
+            </div>
+            <div class="step">
+              <p>Ampullin päälle asetetaan steriili biosellu-naamio, joka avataan pakkauksestaan asiakkaan nähden. Naamio sitoo vettä ja muodostaa iholle tiiviin kalvon, joka tehostaa vaikuttavien aineiden imeytymistä. Naamio on iholla 15–30 minuuttia hoidosta riippuen.</p>
+            </div>
+            <div class="step">
+              <p>Hoidon päätteeksi iholle levitetään antioksidanttihoito ja aurinkosuoja, ja käymme läpi jälkihoito-ohjeet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Mitä tutkimus sanoo</h2>
-      <p>
-        Xanthohumolista on julkaistu yli 800 tutkimusta, ja se on yksi tutkituimmista kasviperäisistä antioksidanteista. Alla on mitä siitä ja tästä hoitosarjasta tiedetään, ja millä tavalla se on mitattu.
-      </p>
+    <section class="section section--dark" aria-labelledby="ikaantyminen-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--pink-pale">Ikääntyvä iho</p>
+            <h2 id="ikaantyminen-title">Ikääntymisen merkit</h2>
+            <p class="lead">
+              Ihon ikääntymistä ei aiheuta pelkkä ajan kuluminen. Suurin osa näkyvistä muutoksista on valovanhenemista, ja sen taustalla ovat samat kaksi tekijää joihin tämä hoito kohdistuu: oksidatiivinen stressi ja pitkittynyt matala-asteinen tulehdus. Ne kiihdyttävät kollageenia hajottavien entsyymien toimintaa, jolloin ihon tukirakenne ohenee nopeammin kuin sitä ehditään rakentaa.
+            </p>
+            <p class="lead">
+              Hoito puuttuu tähän kolmesta suunnasta. Xanthohumol Complex täydentää ihon antioksidanttipuolustusta ja hillitsee tulehdusta, se estää kollageenia ja elastiinia hajottavia entsyymejä, ja jokainen hoito päättyy aurinkosuojaan. Auringolta suojautuminen on edelleen vaikuttavin yksittäinen keino hidastaa ihon ikääntymistä.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h3>Mihin hoito ei yllä</h3>
+            <p>Tämä hoito <strong>hidastaa menetystä ja suojaa</strong>. Uuden kollageenin rakentaminen on <a href="mikroneulaus-opas.html">mikroneulauksen</a> tehtävä, ja jos iho kestää mikroneulauksen, se on ikääntymisen merkkeihin tehokkaampi valinta.</p>
+            <p>ProXN on siksi perusteltu vaihtoehto silloin, kun iho on samaan aikaan ikääntyvä ja herkkä. Reaktiivisella iholla voimakas hoito lisää juuri sitä tulehdusta ja oksidatiivista kuormaa joka ikääntymistä ajaa, jolloin lopputulos voi jäädä huonommaksi kuin hellävaraisemmalla reitillä. Kumpi tie on sinun ihollesi oikea, arvioidaan ensikäynnillä.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>Antioksidanttikapasiteetti</h3>
-      <p>
-        Valmistajan tieteellisessä aineistossa Xanthohumol Complexin antioksidanttiaktiivisuus on keskimäärin kolmekymmenkertainen C-vitamiiniin verrattuna. Puhdas xanthohumoli vastaa suunnilleen C-vitamiinia, eli ero syntyy kompleksoinnista.
-      </p>
-      <p>
-        Luku on peräisin laboratoriomittauksesta, jossa seurattiin ydinmagneettisella resonanssispektroskopialla ditiolin hapettumista vetyperoksidin läsnä ollessa. Se kertoo yhdisteen kyvystä neutraloida hapettavaa kuormaa koeputkessa. Iholla lopputulokseen vaikuttavat lisäksi imeytyminen, pitoisuus ja käyttötiheys.
-      </p>
+    <section class="section section--white" aria-labelledby="ennenjalkeen-title">
+      <div class="section__inner">
+        <p class="label label--mid">Valmistautuminen</p>
+        <h2 id="ennenjalkeen-title">Ennen ja jälkeen hoidon</h2>
+        <div class="grid-2" style="margin-top: 40px;">
+          <div>
+            <h3>Ennen hoitoa</h3>
+            <p>
+              Hoito ei vaadi valmistautumista. Aktiiviaineita ei tarvitse tauottaa etukäteen eikä auringonottoa rajoittaa, joten hoitoon voi tulla silloin kun sopii. Meikin voi olla kasvoilla, koska hoito alkaa joka tapauksessa kahden vaiheen puhdistuksella.
+            </p>
+          </div>
+          <div>
+            <h3>Hoidon jälkeen</h3>
+            <p>
+              Hoidon jälkeen ei ole rajoituksia. Iho ei ole rikki, joten meikin voi laittaa saman tien ja arkeen voi palata suoraan.
+            </p>
+            <p>
+              Yksi suositus kuitenkin annetaan. Hoidon jälkeen iholle jää vaikuttavia aineita työskentelemään, joten saunan ja uinnin siirtäminen seuraavaan päivään kannattaa, jotta hoidosta saa täyden hyödyn. Kyse on hyödyn maksimoinnista, ei turvallisuudesta.
+            </p>
+            <p>
+              Hoitoa voi halutessaan tehostaa kotihoitotuotteilla, mutta hoito on kokonainen ja toimii täysin ilmankin. Kotihoito on lisä, ei edellytys.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>Solutason tutkimus</h3>
-      <p>
-        Soluviljelmissä xanthohumolin on osoitettu vahvistavan antioksidanttipuolustusta, rauhoittavan tulehdusreaktiota, vähentävän pigmentin muodostusta, estävän matriksin metalloproteinaaseja ja tukevan kollageenin ja elastiinin synteesiä.
-      </p>
-      <p>
-        Nämä ovat ne mekanismit joihin hoidon vaikutus perustuu, ja ne on osoitettu solutasolla. Kuinka voimakkaana sama vaikutus näkyy ihmisen iholla, on eri kysymys, ja siihen vastaavat ihmisillä tehdyt tutkimukset.
-      </p>
+    <section class="section section--cream" aria-labelledby="sarjat-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Hoidot ja sarjat</p>
+            <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
+            <p class="lead">
+              ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
+            </p>
+            <p>
+              Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
+            </p>
+            <p>
+              Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
+            </p>
+          </div>
+          <div>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
+                <span class="price-row__sum">570 €</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
+                <span class="price-row__sum">1080 €</span>
+              </div>
+            </div>
+            <div class="feat-card">
+              <h3>Miksi väli on tiheämpi kuin mikroneulauksessa</h3>
+              <p>Mikroneulauksessa hoitojen väli on neljä viikkoa, ProXN-hoidossa viikko tai kaksi. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top: clamp(40px, 6vw, 64px);">
+          <div class="feat-card">
+            <h3>Rauhoitushoito</h3>
+            <p>Rauhoitushoito (Overreactive Rescue) on tarkoitettu ylireagoivalle iholle. Se palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa antioksidanttipuolustusta. Tämä on lähtökohta silloin, kun iho punoittaa, kiristää tai reagoi herkästi.</p>
+            <p>Hoito tehdään protokollan mukaan <strong>kerran viikossa</strong>, joten kolmas käynti on kahden viikon kuluttua ensimmäisestä. Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan. Punoitus, kiristys ja reaktiivisuus ovat kolmanteen kertaan mennessä yleensä jo rauhoittuneet.</p>
+          </div>
+          <div class="feat-card">
+            <h3>Aknehoito</h3>
+            <p>Aknehoito (Acne Rescue) on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.</p>
+            <p>Hoito tehdään <strong>kahden viikon välein</strong>, joten kolmas käynti on neljännellä viikolla. Tulehtuneet muutokset ovat silloin useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa olevaan tulehdukseen. Sen sijaan tukkeutuneet ihohuokoset ja tulehduksen jälkeiset tummumat eivät ole vielä ehtineet muuttua, ja siksi aknehoidossa kolmesta yleensä jatketaan kuuteen.</p>
+            <p>Syy on aknen omassa aikataulussa. Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjassa viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>Ihmisillä tehdyt tutkimukset</h3>
-      <p>
-        Hoitosarjasta on tehty neljä tutkimusta, joissa kussakin oli kymmenen osallistujaa.
-      </p>
-      <ul class="article-list">
-        <li>Ärsytystestissä iho ärsytettiin mekaanisesti ja punoitusta mitattiin laitteella. Punoitus laski keskimäärin 20 prosenttia viisitoista minuuttia levityksen jälkeen.</li>
-        <li>Käyttötutkimuksessa arvioitiin valmistajan lupaamat ominaisuudet. Ominaisuus katsottiin vahvistetuksi, jos yli puolet osallistujista koki sen toteutuvan.</li>
-        <li>Ihotautikeskuksen kahden kuukauden tutkimuksessa hoitoa käytettiin ruusufinniä ja atooppista ihottumaa sairastaville. Arviointi tehtiin VISIA-ihoanalyysilaitteella ja osallistujien omilla arvioilla. Ärsytys lievittyi, punoitus väheni ja kosteustaso parani.</li>
-        <li>Toisessa saman keskuksen kahden kuukauden tutkimuksessa herkkäihoisilla havaittiin kiinteyden, kimmoisuuden ja kosteustason paranemista sekä ihon pinnan tasoittumista.</li>
-      </ul>
-      <p>
-        Tutkimukset ovat pieniä ja valmistajan teettämiä, eikä niissä ole verrokkiryhmää. Osa mittauksista on laitteellisia, osa perustuu osallistujien omaan arvioon. Näyttö on siis sen tasoista mitä ammattikäyttöön tarkoitetuilta hoitosarjoilta yleensä löytyy: se osoittaa suunnan ja kohderyhmän, ei vaikutuksen suuruutta väestötasolla. Olennaista on, että tutkimusten kohderyhmä on sama kuin hoidon kohderyhmä, eli herkkä, reaktiivinen ja tulehtunut iho.
-      </p>
+    <section class="section section--dark" aria-labelledby="kotihoito-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--pink-pale">Kotihoito</p>
+            <h2 id="kotihoito-title">Työ jatkuu käyntien välissä</h2>
+            <p class="lead">
+              Herkän ihon hoidossa kotihoito ratkaisee suuren osan lopputuloksesta. Hoitokerta antaa iholle sysäyksen, mutta suojakerros vahvistuu päivittäisessä käytössä.
+            </p>
+            <p class="lead">
+              Suosittelemme kotihoitotuotteet aina ihon tilanteen mukaan. Sarjan tuotteita on saatavilla studiolta hoidon yhteydessä. Jos käytät jo tuotteita jotka toimivat, niitä ei ole syytä vaihtaa.
+            </p>
+          </div>
+          <figure class="article-figure">
+            <picture>
+              <source srcset="assets/proxn-antioxidant.webp" type="image/webp">
+              <img src="assets/proxn-antioxidant.jpg"
+                   alt="ProXN Antioxidant Therapy -seerumipullo keltaisen xanthohumolijauheen päällä"
+                   width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>
+              Antioxidant Therapy on kotihoidon keskeisin tuote. Se jatkaa hoidossa aloitettua työtä ihon antioksidanttipuolustuksen vahvistamiseksi.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-      <h2>Kenelle ProXN-kasvohoito sopii</h2>
-      <ul class="article-list">
-        <li>Herkkä, ärtynyt tai reaktiivinen iho</li>
-        <li>Iho joka ei siedä voimakkaita aktiiviaineita</li>
-        <li>Ruusufinni, couperosa ja punoitukseen taipuvainen iho</li>
-        <li>Atooppinen iho</li>
-        <li>Toistuva akne, seborrea ja tulehduksen jälkeinen pigmentoituminen</li>
-        <li>Iho, joka on vaurioitunut vääränlaisista kotihoitotuotteista</li>
-        <li>Ikääntymisen merkit silloin kun iho on samalla herkkä tai reaktiivinen</li>
-        <li>Palautuminen invasiivisemmista hoidoista, kuten mikroneulauksesta tai laserhoidosta</li>
-      </ul>
+    <section class="section section--white" aria-labelledby="turvallisuus-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Turvallisuus</p>
+            <h2 id="turvallisuus-title">Vasta-aiheet ja esitiedot</h2>
+            <p class="lead">
+              ProXN-kasvohoito ei riko ihoa, ja hoito on suunniteltu nimenomaan tilanteisiin joissa iho on ärtynyt tai tulehtunut. Aktivaattorin sisältämä hopea ehkäisee bakteeriperäisiä jälki-infektioita.
+            </p>
+            <p>
+              Ihon tilanne arvioidaan aina ennen hoitoa. Kerro esitiedoissa ihosairauksista, lääkityksistä ja aiemmista tuotereaktioista, niin hoito ja käytettävät tuotteet valitaan sen mukaan. Hoidossa käytetään polyhydroksihappoa ja atselaiinihappoa, joiden sopivuus arvioidaan yksilöllisesti.
+            </p>
+          </div>
+          <div>
+            <h3>Vasta-aiheita on vähän</h3>
+            <p>Hoitoa ei tehdä seuraavissa tilanteissa:</p>
+            <ul class="care-list">
+              <li>Avohaava hoitoalueella. Tämä tarkoittaa varsinaista haavaa, ei esimerkiksi puhjennutta finniä.</li>
+              <li>Tuore leikkausarpi hoitoalueella</li>
+              <li>Aktiivinen syöpä hoitoalueella</li>
+              <li>Tiedossa oleva allergia käytettäville ainesosille</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Hoidon kulku</h2>
-      <p>
-        Ensin iho puhdistetaan kahdessa vaiheessa. Puhdistusöljy poistaa meikin ja epäpuhtaudet vahingoittamatta ihon omaa rasvakerrosta, ja sen jälkeen iho tasapainotetaan kosteuttavalla suihkeella.
-      </p>
-      <p>
-        Seuraavaksi iho käsitellään hellävaraisella polyhydroksihappoliuoksella. Se irrottaa sarveiskerroksen kuollutta solukkoa ja parantaa seuraavien vaiheiden imeytymistä. Polyhydroksihapot ovat suurikokoisia molekyylejä, jotka imeytyvät hitaammin kuin tavalliset hedelmähapot, ja siksi ne sopivat herkälle iholle.
-      </p>
-      <p>
-        Tämän jälkeen sekoitetaan Xanthohumol Complex -ampulli. Vaikuttava aine on kylmäkuivattua jauhetta, koska xanthohumoli hajoaa vesiliuoksessa. Jauhe ja aktivaattori yhdistetään vasta hoitohetkellä, jolloin aine on täydellä teholla iholle levitettäessä. Ampullia ei huuhdella pois.
-      </p>
-      <p>
-        Ampullin päälle asetetaan steriili biosellu-naamio, joka avataan pakkauksestaan asiakkaan nähden. Naamio sitoo vettä ja muodostaa iholle tiiviin kalvon, joka tehostaa vaikuttavien aineiden imeytymistä. Naamio on iholla 15–30 minuuttia hoidosta riippuen.
-      </p>
-      <p>
-        Hoidon päätteeksi iholle levitetään antioksidanttihoito ja aurinkosuoja, ja käymme läpi jälkihoito-ohjeet. Koko käynti kestää noin tunnin, josta hoito-osuus on 30–40 minuuttia.
-      </p>
+    <section class="section section--cream" aria-labelledby="varaus-title">
+      <div class="section__inner">
+        <div class="grid-2">
+          <div>
+            <p class="label label--mid">Varaaminen</p>
+            <h2 id="varaus-title">Varaaminen ja hinta</h2>
+            <p class="lead">
+              Ensimmäisen käynnin voi varata kolmella tavalla, ja kaikki maksavat 200 euroa.
+            </p>
+            <ul class="care-list">
+              <li><strong>ProXN-kasvohoito, ensikäynti.</strong> Varaa tämä jos tiedät haluavasi ProXN-hoidon.</li>
+              <li><strong>Kliininen mikroneulaus, ensikäynti.</strong> Varaa tämä jos tiedät haluavasi mikroneulauksen.</li>
+              <li><strong>Ensikäynti ja hoitosuositus.</strong> Varaa tämä jos et ole varma kumpi hoito sinulle sopii.</li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              Iho-analyysi tehdään joka tapauksessa myös suorissa varauksissa. Jos analyysissä käy ilmi ettei varattu hoito sovi ihollesi juuri nyt, hoitoa vaihdetaan tai siirretään. Hoitoa ei tehdä vain siksi että se on varattu.
+            </p>
+            <p>
+              Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet. Jos päädyt sarjahoitoon, ensimmäinen hoito lasketaan mukaan sarjaan.
+            </p>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
+                <span class="price-row__sum">570 €</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
+                <span class="price-row__sum">1080 €</span>
+              </div>
+            </div>
+            <p>
+              <a href="hinnasto.html">Hinnastosta</a> näet muut hinnat. Hinnat sisältävät arvonlisäveron.
+            </p>
+            <h3 style="margin-top: 1.6em;">Lue lisää</h3>
+            <p>
+              <a href="mikroneulaus-sopiiko-minulle.html">Kenelle mikroneulaus sopii ja kenelle ei</a> auttaa hahmottamaan kumpi hoitopolku on omalla kohdalla todennäköisempi. <a href="mita-ensikaynnilla-tapahtuu.html">Mitä ensikäynnillä tapahtuu</a> kuvaa käynnin kulun vaihe vaiheelta. <a href="mita-tutkimus-sanoo-mikroneulauksesta.html">Mitä tutkimus oikeasti sanoo mikroneulauksesta</a> käy läpi mikroneulauksen näytön ja sen rajat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Ikääntymisen merkit</h2>
-      <p>
-        Ihon ikääntymistä ei aiheuta pelkkä ajan kuluminen. Suurin osa näkyvistä muutoksista on valovanhenemista, ja sen taustalla ovat samat kaksi tekijää joihin tämä hoito kohdistuu: oksidatiivinen stressi ja pitkittynyt matala-asteinen tulehdus. Ne kiihdyttävät kollageenia hajottavien entsyymien toimintaa, jolloin ihon tukirakenne ohenee nopeammin kuin sitä ehditään rakentaa.
-      </p>
-      <p>
-        Hoito puuttuu tähän kolmesta suunnasta. Xanthohumol Complex täydentää ihon antioksidanttipuolustusta ja hillitsee tulehdusta, se estää kollageenia ja elastiinia hajottavia entsyymejä, ja jokainen hoito päättyy aurinkosuojaan. Auringolta suojautuminen on edelleen vaikuttavin yksittäinen keino hidastaa ihon ikääntymistä.
-      </p>
-      <p>
-        Tämä hoito <strong>hidastaa menetystä ja suojaa</strong>. Uuden kollageenin rakentaminen on <a href="mikroneulaus-opas.html">mikroneulauksen</a> tehtävä, ja jos iho kestää mikroneulauksen, se on ikääntymisen merkkeihin tehokkaampi valinta.
-      </p>
-      <p>
-        ProXN on siksi perusteltu vaihtoehto silloin, kun iho on samaan aikaan ikääntyvä ja herkkä. Reaktiivisella iholla voimakas hoito lisää juuri sitä tulehdusta ja oksidatiivista kuormaa joka ikääntymistä ajaa, jolloin lopputulos voi jäädä huonommaksi kuin hellävaraisemmalla reitillä. Kumpi tie on sinun ihollesi oikea, arvioidaan ensikäynnillä.
-      </p>
-
-      <h2>Ennen ja jälkeen hoidon</h2>
-      <p>
-        Hoito ei vaadi valmistautumista. Aktiiviaineita ei tarvitse tauottaa etukäteen eikä auringonottoa rajoittaa, joten hoitoon voi tulla silloin kun sopii. Meikin voi olla kasvoilla, koska hoito alkaa joka tapauksessa kahden vaiheen puhdistuksella.
-      </p>
-      <p>
-        Hoidon jälkeen ei ole rajoituksia. Iho ei ole rikki, joten meikin voi laittaa saman tien ja arkeen voi palata suoraan.
-      </p>
-      <p>
-        Yksi suositus kuitenkin annetaan. Hoidon jälkeen iholle jää vaikuttavia aineita työskentelemään, joten saunan ja uinnin siirtäminen seuraavaan päivään kannattaa, jotta hoidosta saa täyden hyödyn. Kyse on hyödyn maksimoinnista, ei turvallisuudesta.
-      </p>
-      <p>
-        Hoitoa voi halutessaan tehostaa kotihoitotuotteilla, mutta hoito on kokonainen ja toimii täysin ilmankin. Kotihoito on lisä, ei edellytys.
-      </p>
-
-      <h2>Kaksi hoitoa ja niiden sarjat</h2>
-      <p>
-        ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
-      </p>
-      <p>
-        Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
-      </p>
-      <ul class="article-list">
-        <li><strong>Kolmen hoidon sarja 570 euroa</strong>, eli 190 euroa hoitokerralta.</li>
-        <li><strong>Kuuden hoidon sarja 1080 euroa</strong>, eli 180 euroa hoitokerralta.</li>
-      </ul>
-      <p>
-        Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
-      </p>
-
-      <h3>Rauhoitushoito</h3>
-      <p>
-        Rauhoitushoito (Overreactive Rescue) on tarkoitettu ylireagoivalle iholle. Se palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa antioksidanttipuolustusta. Tämä on lähtökohta silloin, kun iho punoittaa, kiristää tai reagoi herkästi.
-      </p>
-      <p>
-        Hoito tehdään protokollan mukaan <strong>kerran viikossa</strong>, joten kolmas käynti on kahden viikon kuluttua ensimmäisestä. Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan. Punoitus, kiristys ja reaktiivisuus ovat kolmanteen kertaan mennessä yleensä jo rauhoittuneet.
-      </p>
-
-      <h3>Aknehoito</h3>
-      <p>
-        Aknehoito (Acne Rescue) on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.
-      </p>
-      <p>
-        Hoito tehdään <strong>kahden viikon välein</strong>, joten kolmas käynti on neljännellä viikolla. Tulehtuneet muutokset ovat silloin useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa olevaan tulehdukseen. Sen sijaan tukkeutuneet ihohuokoset ja tulehduksen jälkeiset tummumat eivät ole vielä ehtineet muuttua, ja siksi aknehoidossa kolmesta yleensä jatketaan kuuteen.
-      </p>
-      <p>
-        Syy on aknen omassa aikataulussa. Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjassa viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.
-      </p>
-
-      <h3>Miksi väli on tiheämpi kuin mikroneulauksessa</h3>
-      <p>
-        Mikroneulauksessa hoitojen väli on neljä viikkoa, ProXN-hoidossa viikko tai kaksi. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.
-      </p>
-
-      <h2>Kotihoito</h2>
-      <p>
-        Herkän ihon hoidossa kotihoito ratkaisee suuren osan lopputuloksesta. Hoitokerta antaa iholle sysäyksen, mutta suojakerros vahvistuu päivittäisessä käytössä.
-      </p>
-      <p>
-        Suosittelemme kotihoitotuotteet aina ihon tilanteen mukaan. Sarjan tuotteita on saatavilla studiolta hoidon yhteydessä. Jos käytät jo tuotteita jotka toimivat, niitä ei ole syytä vaihtaa.
-      </p>
-      <figure class="article-figure">
-        <picture>
-          <source srcset="assets/proxn-antioxidant.webp" type="image/webp">
-          <img src="assets/proxn-antioxidant.jpg"
-               alt="ProXN Antioxidant Therapy -seerumipullo keltaisen xanthohumolijauheen päällä"
-               width="1000" height="1500" loading="lazy" decoding="async">
-        </picture>
-        <figcaption>
-          Antioxidant Therapy on kotihoidon keskeisin tuote. Se jatkaa hoidossa aloitettua työtä ihon antioksidanttipuolustuksen vahvistamiseksi.
-        </figcaption>
-      </figure>
-
-      <h2>Turvallisuus</h2>
-      <p>
-        ProXN-kasvohoito ei riko ihoa, ja hoito on suunniteltu nimenomaan tilanteisiin joissa iho on ärtynyt tai tulehtunut. Aktivaattorin sisältämä hopea ehkäisee bakteeriperäisiä jälki-infektioita.
-      </p>
-      <p>
-        Vasta-aiheita on vähän. Hoitoa ei tehdä seuraavissa tilanteissa:
-      </p>
-      <ul class="article-list">
-        <li>Avohaava hoitoalueella. Tämä tarkoittaa varsinaista haavaa, ei esimerkiksi puhjennutta finniä.</li>
-        <li>Tuore leikkausarpi hoitoalueella</li>
-        <li>Aktiivinen syöpä hoitoalueella</li>
-        <li>Tiedossa oleva allergia käytettäville ainesosille</li>
-      </ul>
-      <p>
-        Ihon tilanne arvioidaan aina ennen hoitoa. Kerro esitiedoissa ihosairauksista, lääkityksistä ja aiemmista tuotereaktioista, niin hoito ja käytettävät tuotteet valitaan sen mukaan. Hoidossa käytetään polyhydroksihappoa ja atselaiinihappoa, joiden sopivuus arvioidaan yksilöllisesti.
-      </p>
-
-      <h2>Varaaminen ja hinta</h2>
-      <p>
-        Ensimmäisen käynnin voi varata kolmella tavalla, ja kaikki maksavat 200 euroa.
-      </p>
-      <ul class="article-list">
-        <li><strong>ProXN-kasvohoito, ensikäynti.</strong> Varaa tämä jos tiedät haluavasi ProXN-hoidon.</li>
-        <li><strong>Kliininen mikroneulaus, ensikäynti.</strong> Varaa tämä jos tiedät haluavasi mikroneulauksen.</li>
-        <li><strong>Ensikäynti ja hoitosuositus.</strong> Varaa tämä jos et ole varma kumpi hoito sinulle sopii.</li>
-      </ul>
-      <p>
-        Iho-analyysi tehdään joka tapauksessa myös suorissa varauksissa. Jos analyysissä käy ilmi ettei varattu hoito sovi ihollesi juuri nyt, hoitoa vaihdetaan tai siirretään. Hoitoa ei tehdä vain siksi että se on varattu.
-      </p>
-      <p>
-        Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet. Jos päädyt sarjahoitoon, ensimmäinen hoito lasketaan mukaan sarjaan.
-      </p>
-      <ul class="article-list">
-        <li>Kolmen hoidon sarja 570 euroa, 190 euroa hoitokerralta</li>
-        <li>Kuuden hoidon sarja 1080 euroa, 180 euroa hoitokerralta</li>
-      </ul>
-      <p>
-        <a href="hinnasto.html">Hinnastosta</a> näet muut hinnat. Hinnat sisältävät arvonlisäveron.
-      </p>
-
-      <h3>Lue lisää</h3>
-      <p>
-        <a href="mikroneulaus-sopiiko-minulle.html">Kenelle mikroneulaus sopii ja kenelle ei</a> auttaa hahmottamaan kumpi hoitopolku on omalla kohdalla todennäköisempi. <a href="mita-ensikaynnilla-tapahtuu.html">Mitä ensikäynnillä tapahtuu</a> kuvaa käynnin kulun vaihe vaiheelta. <a href="mita-tutkimus-sanoo-mikroneulauksesta.html">Mitä tutkimus oikeasti sanoo mikroneulauksesta</a> käy läpi mikroneulauksen näytön ja sen rajat.
-      </p>
-    </div>
     <aside class="article-cta">
       <div class="article-cta__inner">
         <h2>Aloita ensikäynnillä</h2>

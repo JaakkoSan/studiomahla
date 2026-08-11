@@ -2298,6 +2298,74 @@ katsotaan vasta kun omia kuvia on.**
 Kolmas mahdollinen jos joskus tarvitaan: PHA Solution
 (`proxn antioxidant.jpg`, lasipallokuva) osioon Hoidon kulku. Tuote on
 käytössä.
+
+#### RAKENNE MUUTETTU 11.8.2026: artikkelipohjasta osiopohjaan
+
+**Käyttäjän huomio:** koko sivu oli valkoisella pohjalla, vain hero
+kermalla, ja teksti oli kapeassa keskitetyssä palstassa niin että
+reunoille jäi paljon tyhjää. Pyyntö: värit vaihtelevat kuten
+etusivulla ja asettelu käyttää leveyttä.
+
+**Syy miksi näin oli:** sivu käytti blogiartikkelien pohjaa. Jaettu
+`style.css` antaa `.article-body`-luokalle `max-width: 720px` eikä
+mitään taustaväriä. Etusivun `.section`, `.section--dark`, `.grid-2`
+ja `.pillars` **eivät ole jaetussa tyylitiedostossa**, vaan etusivun
+omassa `<style>`-lohkossa. Siksi niitä ei voinut vain ottaa käyttöön.
+
+**Ratkaisu:** `proxn-kasvohoito.html` sai oman `<style>`-lohkon, jossa
+osiotyylit on kirjoitettu uudelleen samoilla CSS-muuttujilla kuin
+etusivulla. `.article-body` poistettiin ja sisältö jaettiin kahteentoista
+`<section>`-osioon. **Yhtään sanaa ei muutettu**, vain järjestys ja
+asettelu.
+
+Värijärjestys, hero mukaan lukien:
+
+```
+hero               cream
+Mitä hoito tekee   dark      grid-2: teksti | kolme pylvästä
+Mikroneulaus vai   white     grid-2: kaksi korttia rinnakkain
+Xanthohumol        cream     grid-2: teksti | ampullikuva
+Mitä tutkimus      dark      grid-2: teksti | kolme pylvästä
+Kenelle sopii      white     grid-2: teksti | viivalista
+Hoidon kulku       cream     grid-2: teksti | numeroidut vaiheet
+Ikääntymisen       dark      grid-2: teksti | kortti "Mihin ei yllä"
+Ennen ja jälkeen   white     grid-2: ennen | jälkeen
+Kaksi hoitoa       cream     grid-2 + kaksi hoitokorttia alla
+Kotihoito          dark      grid-2: teksti | antioksidanttikuva
+Turvallisuus       white     grid-2: teksti | vasta-aiheet
+Varaaminen         cream     grid-2: reitit | hinnat ja lue lisää
+article-cta        cream-warm
+```
+
+**Uudet rakenneosat sivulla:** `.pillars`/`.pillar` (etusivun
+filosofia-osion malli), `.care-list` (viivalista), `.feat-card`,
+`.steps`/`.step` (numeroidut pallot) ja `.price-rows`/`.price-row`
+(nimi vasemmalle, summa oikealle).
+
+**Sisältömuutokset asettelun vuoksi, ei tekstin:**
+
+- Kotihoito-osion h2 on nyt "Työ jatkuu käyntien välissä", koska
+  osiossa on jo label "Kotihoito"
+- Turvallisuus-osion h2 on "Vasta-aiheet ja esitiedot" samasta syystä
+- Kenelle- ja Hoidon kulku -osioihin kirjoitettiin lyhyt johdantovirke
+  vasempaan palstaan, koska niissä oli aiemmin pelkkä otsikko ja lista
+- Hoidon kulun kestotieto siirtyi johdantoon, koska se ei ole vaihe
+
+**`.reveal` jätettiin pois tarkoituksella.** Sen CSS ja
+IntersectionObserver ovat vain `index.html`:n omassa lohkossa. Jos
+luokan lisäisi ilman JS:ää, elementit jäisivät `opacity: 0` eli
+näkymättömiksi. Muillakaan artikkelisivuilla ei ole revealia.
+
+**Kontrastit mitattu ohjelmallisesti, kaikki läpi.** Tumman taustan
+teksti 7,03:1, feat-card tummalla 5,65:1, figcaption 5,97:1,
+hintayksikkö 5,56:1, pink-pale-linkki 5,55:1, text-mid kermalla
+6,12:1. **Yksi korjattiin:** askelnumero oli valkoinen pinkillä
+pallolla, 2,39:1. Vaihdettiin tekstiväriksi `--text-dark` (4,86:1) ja
+tummalla taustalla pink-pale-pallo green-dark-numerolla.
+
+**Avoin, käyttäjä katsoo julkaisun jälkeen:** viimeinen osio on cream
+ja sen jälkeen tuleva CTA cream-warm. Se on sivun ainoa pehmeä sauma.
+Vaihtoehto olisi tehdä Varaaminen-osiosta dark.
 - `robots` noindex → index, follow
 - Lisätään `sitemap.xml`:ään
 - **Etusivua ei muuteta rakenteellisesti** (käyttäjän linjaus 10.8.):
