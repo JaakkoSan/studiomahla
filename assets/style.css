@@ -293,6 +293,23 @@ figure.infographic {
 figure.infographic svg { width: 100%; height: auto; }
 .num { font-weight: 500; }
 
+/* ARTICLE IMAGE */
+figure.article-figure {
+  margin: 2.6em 0;
+}
+figure.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+figure.article-figure figcaption {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-top: 12px;
+}
+
 /* FOOTER */
 .footer { background: var(--green-dark); color: var(--white); padding: 64px var(--section-px) 28px; }
 .footer__inner { max-width: var(--max-w); margin: 0 auto; }
