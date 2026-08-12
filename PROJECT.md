@@ -2240,6 +2240,15 @@ ProXN-sivu on luettu ja hyväksytty.**
   Syy: hinnat ja sisällöt näkyvät asiakkaalle.
 
 **Vaihe 1. ProXN-sivu julki**
+- **`hinnasto.html` viedään vasta tässä vaiheessa.** Päivitetty versio
+  on työkansiossa valmiina 11.8.2026 alkaen: ProXN-sarjahoidot omana
+  osionaan, ensikäyntirivi kattaa kaikki kolme reittiä, rakenteinen
+  data ja meta-kuvaus päivitetty. Palvelimella on siihen asti vanha
+  versio.
+- **`index.html` sai `@id`:n rakenteista dataa varten 11.8.** Se ei
+  sisällä ProXN-mainintoja, joten sen voi viedä milloin tahansa.
+  ProXN-tarjoukset lisätään etusivun `hasOfferCatalog`-listaan tässä
+  vaiheessa.
 - Käyttäjä lukee `proxn-kasvohoito.html` (1973 sanaa, sarjahinnat sisällä)
 
 **Sävykorjaus 10.8.2026: puolusteleva ääni poistettu.** Käyttäjä
@@ -2719,19 +2728,91 @@ datassa. Hinnasto on indeksoitu ja julkinen sivu.
 näkee hinnat ja pääsee sivulle linkistä. Sivun `noindex` estää
 hakukoneita mutta ei ihmisiä.
 
-Kaksi vaihtoehtoa:
+**PÄÄTÖS 11.8.2026: päivitettyä hinnastoa ei viedä vielä.**
+Käyttäjä: *"Tuon päivitetyn Hinnaston laitan sivuille vasta myöhemmin,
+sitten kun proxn julkaistaan. Tällä hetkellä saa vielä olla se mikä
+sivustolla jo nyt onkin."*
 
-1. **Pidä `hinnasto.html` viemättä** kunnes ProXN julkaistaan
-   vaiheessa 1. Vie nyt vain `proxn-kasvohoito.html`, jolloin sivu
-   on katsottavissa suoralla osoitteella eikä kukaan löydä sitä.
-2. **Vie molemmat ja hyväksy että ProXN on julki.** Silloin
-   `proxn-kasvohoito.html`:n robots pitää vaihtaa muotoon
-   `index, follow` ja sivu lisätä sitemapiin, koska muuten
-   hinnastosta linkitetään sivulle jota ei saa indeksoida.
+Palvelimella pysyy siis vanha hinnasto ilman ProXN-rivejä.
+Päivitetty versio on työkansiossa valmiina ja lähtee mukaan
+vaiheessa 1.
 
-**Suositus: vaihtoehto 1.** Käyttäjä on halunnut testata tuotteet
-vielä pari kertaa ennen julkaisua, joten hinnasto odottaa samaa
-hetkeä.
+#### ⚠ Riski: paikallinen hinnasto eroaa julkaistusta
+
+`C:\studiomahla\hinnasto.html` ei enää vastaa sitä mikä on
+studiomahla.fi:ssä. **Jos hinnastoa muokataan jostain muusta syystä
+ja se viedään GitHubiin, ProXN julkaistaan vahingossa mukana.**
+
+Ennen kuin hinnasto viedään mistään syystä, tarkista:
+
+```
+grep -ci proxn hinnasto.html     # 0 = turvallinen viedä
+```
+
+Jos tulos ei ole nolla, hinnaston vienti tarkoittaa ProXN:n julkaisua
+ja silloin on tehtävä myös vaiheen 1 muut kohdat: robots
+`index, follow`, sitemap ja etusivun maininnat.
+
+### Kuusi muutosta 12.8.2026, käyttäjän läpikäynnin perusteella
+
+**1. Pylvästeksti 15 px → 16 px.** Kolmen palstan ruudukossa palsta on
+noin 350 px leveä, ja 15 px kevyttä tekstiä oli liian pientä juuri
+siihen osioon jossa on sivun raskain asia.
+
+**2. Vertailuosio kirjoitettu uusiksi. Aiempi versio oli väärin, ei
+vain painotukseltaan huono.** Kirjoitin 11.8. lauseen *"jos ihosi
+kestää mikroneulauksen, se on useimmiten tehokkaampi valinta"*.
+Käyttäjä huomautti että siitä jää kuva ProXN:stä varavaihtoehtona.
+
+**Lause oli myös asiallisesti virheellinen.** Tehokkaampi mihin?
+Kollageenin rakentamiseen kyllä, reaktiivisen ihon rauhoittamiseen ei
+lainkaan. Rajaamaton vertailu on harhaanjohtava.
+
+Uusi kehys on tavoite, ei paremmuus: *"Kysymys ei ole kumpi hoito on
+parempi, vaan mitä ihossa halutaan muuttaa."* Rakenteellinen muutos on
+mikroneulauksen työtä, reaktiivisuus ja tulehdus ProXN:n. Lisäksi uusi
+kappale siitä että hoidot eivät sulje toisiaan pois, koska ProXN on
+kehitetty myös invasiivisten hoitojen jälkeiseen palautumiseen.
+
+**3. Xanthohumol-osio avattu.** Yhdessä kappaleessa oli peräkkäin
+superoksididismutaasi, 3-O-etyyliaskorbiinihappo, niasiiniamidi ja
+koentsyymi Q10 ilman että yksikään avautui, ja "kompleksoimalla
+syklodekstriiniin" jäi auki. Tämä rikkoi luvun 5 termisääntöä.
+
+Nyt syklodekstriini selitetään sokerimolekyylien renkaana jonka ontto
+keskusta suojaa herkkää ainetta, ja ainesosat ovat luettelona jossa
+jokainen kerrotaan sillä mitä se tekee: ihon oma antioksidanttientsyymi,
+C-vitamiinin vakaa muoto, B3-vitamiini, solujen energia-aineenvaihdunnan
+antioksidantti.
+
+**4. Tutkimusosion asettelu.** Kolmen tasapalstan ruudukossa palstat
+venyivät korkeimman mittaisiksi, joten ensimmäisen ja toisen pylvään
+vaaleanpunainen viiva jatkui tyhjänä alaspäin. Käyttäjä halusi
+kolmannen pylvään nousevan otsikon tasalle, koska siinä on selvästi
+eniten tekstiä. **Tehtiin mockup ennen toteutusta.**
+
+Uusi `.tutkimus-grid`: johdanto vie palstat 1–2 rivillä 1, kolmas
+pylväs on palstassa 3 ja jatkuu molempien rivien yli, ensimmäinen ja
+toinen pylväs ovat rivillä 2. DOM-järjestys on säilytetty loogisena
+(johdanto, 1, 2, 3), joten mobiilissa sisältö luetaan oikeassa
+järjestyksessä kun ruudukko purkautuu.
+
+**Käyttäjän huomio 12.8.: tämä voidaan muuttaa myöhemmin jos sivustolle
+lisätään reilusti enemmän kuvia.**
+
+**5. Oikea palsta alkaa otsikosta, ei nostosta.** Sama vika oli
+kaikissa kahdeksassa `.grid-side`-osiossa, ei vain ikääntymisosiossa.
+Korjattu yhdellä säännöllä: `.grid-side > :last-child { margin-top: 40px }`.
+Luku 40 px on noston rivikorkeus (12 px × 1.9) plus sen alamarginaali
+(1.4em = 16.8 px). Nollataan mobiilissa.
+
+**6. Sarjaosio kahteen palstaan.** Kaikki teksti vasempaan palstaan
+(johdanto, hinnat, huomio kolmannesta kerrasta, huomio hoitovälistä),
+hoitokortit oikeaan palstaan allekkain. Tasaleveät palstat, koska
+vasempaan tulee paljon tekstiä. `.sarja-huomio`-luokka poistettiin
+tarpeettomana.
+
+Sivu on nyt 2189 sanaa. Tagit tasapainossa, ei ajatusviivoja.
 
 ### ⚠ MUISTUTETTAVA: yksittäisen hoidon hinta puuttuu
 
@@ -4150,6 +4231,10 @@ varauksen.
 Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
+
+### 2026-08-12
+
+- **Viikoittainen blogiautomaatio: uusi artikkeli `mita-mikroneulaus-ei-tee.html`** (904 sanaa, ei vielä linkitetty mistään, odottaa hyväksyntää). Luettiin kaikki 11 julkaistua blogiartikkelia Chromella kokonaan läpi ennen päätöstä. Havaittiin lisäksi paikallinen, julkaisematon luonnos `herkka-iho-ruusufinni-mikroneulaus.html` (index,follow-tila mutta 404 livenä) jota ei ole kirjattu PROJECT.md:hen aiemmin. Se ei ole sitemapissa eikä blogi.html:ssä.
 
 ### 2026-08-07
 
@@ -5864,4 +5949,4 @@ lopputulokset ja tilanne.
 
 ---
 
-**Viimeksi päivitetty**: 2026-08-10
+**Viimeksi päivitetty**: 2026-08-12

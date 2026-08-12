@@ -216,6 +216,24 @@
       border-left: 2px solid var(--pink-pale);
     }
 
+    /* Oikea palsta alkaa otsikosta, ei nostosta.
+       40px = noston rivikorkeus (12px x 1.9) + sen alamarginaali (1.4em). */
+    .grid-side > :last-child { margin-top: 40px; }
+
+    /* Tutkimusosio: kolmas pylvas nousee otsikon tasalle ja jatkuu
+       molempien rivien yli, jolloin vasemmalle ei jaa tyhjaa. */
+    .tutkimus-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: clamp(28px, 3.5vw, 44px); align-items: start;
+    }
+    .tutkimus-head { grid-column: 1 / 3; grid-row: 1; }
+    .tutkimus-a { grid-column: 1; grid-row: 2; }
+    .tutkimus-b { grid-column: 2; grid-row: 2; }
+    .tutkimus-c { grid-column: 3; grid-row: 1 / 3; margin-top: 40px; }
+
+    /* Sarjaosio: teksti vasemmalle, hoitokortit oikealle */
+    .sarja-kortit { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
+
     /* Osion johdanto ennen leveaa sisaltoa */
     .section__head { max-width: 760px; margin: 0 0 clamp(44px, 6vw, 68px); }
 
@@ -232,7 +250,7 @@
     }
     .pillar { padding-left: 28px; border-left: 1px solid var(--pink); }
     .pillar h3 { font-size: 21px; margin-bottom: 10px; color: var(--text-dark); }
-    .pillar p { font-size: 15px; line-height: 1.85; color: var(--text-mid); margin: 0 0 1em; }
+    .pillar p { font-size: 16px; line-height: 1.85; color: var(--text-mid); margin: 0 0 1em; }
     .pillar p:last-child { margin-bottom: 0; }
     .section--dark .pillar { border-left-color: var(--pink-pale); }
     .section--dark .pillar h3 { color: var(--white); }
@@ -286,8 +304,6 @@
 
     /* HINTARIVIT */
     .price-rows { margin: 0 0 28px; max-width: 760px; }
-    .sarja-huomio { max-width: 760px; margin: 0 0 clamp(40px, 5vw, 60px); }
-    .sarja-kortit { margin-bottom: clamp(36px, 5vw, 52px); }
     .price-row {
       display: flex; justify-content: space-between; align-items: baseline;
       gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(74, 94, 85, 0.14);
@@ -306,9 +322,14 @@
 
     @media (max-width: 1000px) {
       .pillars--3 { grid-template-columns: 1fr; gap: 36px; }
+      .tutkimus-grid { grid-template-columns: 1fr; gap: 36px; }
+      .tutkimus-head, .tutkimus-a, .tutkimus-b, .tutkimus-c {
+        grid-column: auto; grid-row: auto; margin-top: 0;
+      }
     }
     @media (max-width: 900px) {
       .grid-2, .grid-side { grid-template-columns: 1fr; gap: 44px; }
+      .grid-side > :last-child, .sarja-kortit { margin-top: 0; }
     }
   </style>
 </head>
@@ -419,7 +440,10 @@
           </div>
         </div>
         <p class="vertailu-linjaus">
-          <strong>Jos ihosi kestää mikroneulauksen, se on useimmiten tehokkaampi valinta.</strong> Uuden kollageenin rakentaminen tuottaa rakenteellisen muutoksen, johon kuormaa keventävä hoito ei yllä. ProXN on rakennettu niitä tilanteita varten joissa iho ei kestä, ja silloin se on ainoa reitti joka vie eteenpäin. Kumpi tilanne on sinun kohdallasi kyseessä, selviää ensikäynnin iho-analyysissä.
+          <strong>Kysymys ei ole kumpi hoito on parempi, vaan mitä ihossa halutaan muuttaa.</strong> Rakenteellinen muutos, kuten arpi tai syvä juonne, vaatii uutta kollageenia, ja siihen pystyy mikroneulaus. Reaktiivisuus, pitkittynyt tulehdus ja heikentynyt suojakerros ovat eri ongelma, eikä mikroneulaus tavoita niitä lainkaan. Herkällä iholla se päinvastoin lisää juuri sitä kuormaa jota pitäisi vähentää.
+        </p>
+        <p class="vertailu-linjaus">
+          Hoidot eivät myöskään sulje toisiaan pois. ProXN on kehitetty myös invasiivisten hoitojen jälkeiseen palautumiseen, joten sitä käytetään mikroneulauksen rinnalla silloin kun iho tarvitsee molempia. Kumpi tai kumpikin on sinun ihollesi oikea, arvioidaan ensikäynnillä.
         </p>
       </div>
     </section>
@@ -431,13 +455,22 @@
             <p class="label label--mid">Vaikuttava aine</p>
             <h2 id="xanthohumol-title">Xanthohumol Complex</h2>
             <p>
-              Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vesipitoisissa valmisteissa eikä sitä ole aiemmin saatu pysymään vakaana kosmetiikassa.
+              Xanthohumoli on humalan emikukinnoista peräisin oleva flavonoidi eli kasvin oma suoja-aine. Se on tunnettu ja paljon tutkittu yhdiste, mutta ihonhoidossa uusi, koska se hajoaa vedessä. Sitä ei ole aiemmin saatu pysymään vakaana kosmetiikassa.
             </p>
             <p>
-              ProXN ratkaisi tämän kompleksoimalla xanthohumolin syklodekstriiniin. Kompleksointi parantaa liukoisuutta ja pysyvyyttä, ja se on myös syy siihen miksi valmistajan mittaustulokset koskevat nimenomaan kompleksia eivätkä puhdasta xanthohumolia.
+              ProXN ratkaisi ongelman sulkemalla xanthohumolimolekyylit syklodekstriinin sisään. Syklodekstriini on sokerimolekyyleistä muodostuva rengas, jonka ontto keskusta suojaa herkkää ainetta hajoamiselta. Tätä yhdistelmää kutsutaan Xanthohumol Complexiksi. Se on syy siihen miksi valmistajan mittaustulokset koskevat nimenomaan kompleksia eivätkä puhdasta xanthohumolia.
             </p>
             <p>
-              Hoidossa käytettävä ampulli sisältää Xanthohumol Complexin lisäksi superoksididismutaasia, 3-O-etyyliaskorbiinihappoa, niasiiniamidia ja koentsyymi Q10:tä. Aktivaattori sisältää hopeaa, joka ehkäisee bakteeriperäisiä jälki-infektioita.
+              Ampullissa on xanthohumolin lisäksi neljä muuta ainetta, jotka tukevat samaa tehtävää:
+            </p>
+            <ul class="care-list">
+              <li><strong>Superoksididismutaasi</strong> on ihon oma antioksidanttientsyymi. Hoito siis täydentää sitä puolustusta joka iholla on jo valmiina.</li>
+              <li><strong>C-vitamiinin vakaa muoto</strong>, joka ei ärsytä ihoa kuten puhdas C-vitamiini. Se on kollageenin muodostuksen edellytys.</li>
+              <li><strong>Niasiiniamidi eli B3-vitamiini</strong> vahvistaa ihon suojakerrosta ja vähentää punoitusta.</li>
+              <li><strong>Koentsyymi Q10</strong> on solujen energia-aineenvaihdunnan antioksidantti.</li>
+            </ul>
+            <p>
+              Aktivaattori, johon jauhe sekoitetaan, sisältää hopeaa. Se ehkäisee bakteeriperäisiä jälki-infektioita.
             </p>
           </div>
           <figure class="article-figure">
@@ -457,8 +490,8 @@
 
     <section class="section section--dark" aria-labelledby="tutkimus-title">
       <div class="section__inner">
-        <div class="section__head">
-          <div>
+        <div class="tutkimus-grid">
+          <div class="tutkimus-head">
             <p class="label label--pink-pale">Näyttö</p>
             <h2 id="tutkimus-title">Mitä tutkimus sanoo</h2>
             <p class="lead">
@@ -468,19 +501,17 @@
               Tutkimukset ovat pieniä ja valmistajan teettämiä, eikä niissä ole verrokkiryhmää. Osa mittauksista on laitteellisia, osa perustuu osallistujien omaan arvioon. Näyttö on siis sen tasoista mitä ammattikäyttöön tarkoitetuilta hoitosarjoilta yleensä löytyy: se osoittaa suunnan ja kohderyhmän, ei vaikutuksen suuruutta väestötasolla. Olennaista on, että tutkimusten kohderyhmä on sama kuin hoidon kohderyhmä, eli herkkä, reaktiivinen ja tulehtunut iho.
             </p>
           </div>
-        </div>
-        <div class="pillars pillars--3">
-            <div class="pillar">
+            <div class="pillar tutkimus-a">
               <h3>Antioksidanttikapasiteetti</h3>
               <p>Valmistajan tieteellisessä aineistossa Xanthohumol Complexin antioksidanttiaktiivisuus on keskimäärin kolmekymmenkertainen C-vitamiiniin verrattuna. Puhdas xanthohumoli vastaa suunnilleen C-vitamiinia, eli ero syntyy kompleksoinnista.</p>
               <p>Luku on peräisin laboratoriomittauksesta, jossa seurattiin ydinmagneettisella resonanssispektroskopialla ditiolin hapettumista vetyperoksidin läsnä ollessa. Se kertoo yhdisteen kyvystä neutraloida hapettavaa kuormaa koeputkessa. Iholla lopputulokseen vaikuttavat lisäksi imeytyminen, pitoisuus ja käyttötiheys.</p>
             </div>
-            <div class="pillar">
+            <div class="pillar tutkimus-b">
               <h3>Solutason tutkimus</h3>
               <p>Soluviljelmissä xanthohumolin on osoitettu vahvistavan antioksidanttipuolustusta, rauhoittavan tulehdusreaktiota, vähentävän pigmentin muodostusta, estävän matriksin metalloproteinaaseja ja tukevan kollageenin ja elastiinin synteesiä.</p>
               <p>Nämä ovat ne mekanismit joihin hoidon vaikutus perustuu, ja ne on osoitettu solutasolla. Kuinka voimakkaana sama vaikutus näkyy ihmisen iholla, on eri kysymys, ja siihen vastaavat ihmisillä tehdyt tutkimukset.</p>
             </div>
-            <div class="pillar">
+            <div class="pillar tutkimus-c">
               <h3>Ihmisillä tehdyt tutkimukset</h3>
               <p>Hoitosarjasta on tehty neljä tutkimusta, joissa kussakin oli kymmenen osallistujaa.</p>
               <ul class="care-list">
@@ -577,48 +608,47 @@
 
     <section class="section section--dark" aria-labelledby="sarjat-title">
       <div class="section__inner">
-        <div class="section__head">
-          <p class="label label--pink-pale">Hoidot ja sarjat</p>
-          <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
-          <p class="lead">
-            ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
-          </p>
-          <p>
-            Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
-          </p>
+        <div class="grid-2">
+          <div>
+            <p class="label label--pink-pale">Hoidot ja sarjat</p>
+            <h2 id="sarjat-title">Kaksi hoitoa ja niiden sarjat</h2>
+            <p class="lead">
+              ProXN-kasvohoidosta on kaksi versiota. Kumpi sinulle sopii, päätetään ensikäynnillä ihon tilanteen perusteella.
+            </p>
+            <p>
+              Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon oma suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Sarjoja on kaksi, ja ne ovat samat molemmissa hoidoissa.
+            </p>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
+                <span class="price-row__sum">570 €</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
+                <span class="price-row__sum">1080 €</span>
+              </div>
+            </div>
+            <p>
+              Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
+            </p>
+            <p>
+              Hoitojen väli on tiheämpi kuin mikroneulauksessa, jossa väli on neljä viikkoa. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.
+            </p>
+          </div>
+          <div class="sarja-kortit">
+            <div class="feat-card">
+              <h3>Rauhoitushoito</h3>
+              <p>Rauhoitushoito (Overreactive Rescue) on tarkoitettu ylireagoivalle iholle. Se palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa antioksidanttipuolustusta. Tämä on lähtökohta silloin, kun iho punoittaa, kiristää tai reagoi herkästi.</p>
+              <p>Hoito tehdään protokollan mukaan <strong>kerran viikossa</strong>, joten kolmas käynti on kahden viikon kuluttua ensimmäisestä. Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan. Punoitus, kiristys ja reaktiivisuus ovat kolmanteen kertaan mennessä yleensä jo rauhoittuneet.</p>
+            </div>
+            <div class="feat-card">
+              <h3>Aknehoito</h3>
+              <p>Aknehoito (Acne Rescue) on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.</p>
+              <p>Hoito tehdään <strong>kahden viikon välein</strong>, joten kolmas käynti on neljännellä viikolla. Tulehtuneet muutokset ovat silloin useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa olevaan tulehdukseen. Sen sijaan tukkeutuneet ihohuokoset ja tulehduksen jälkeiset tummumat eivät ole vielä ehtineet muuttua, ja siksi aknehoidossa kolmesta yleensä jatketaan kuuteen.</p>
+              <p>Syy on aknen omassa aikataulussa. Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjassa viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="price-rows">
-          <div class="price-row">
-            <span class="price-row__name">Kolmen hoidon sarja<br><span class="price-row__unit">190 € / hoito</span></span>
-            <span class="price-row__sum">570 €</span>
-          </div>
-          <div class="price-row">
-            <span class="price-row__name">Kuuden hoidon sarja<br><span class="price-row__unit">180 € / hoito</span></span>
-            <span class="price-row__sum">1080 €</span>
-          </div>
-        </div>
-        <p class="sarja-huomio">
-          Kolme hoitoa ei ole lyhennetty versio kuudesta. Se on kohta jossa nähdään mihin suuntaan iho on menossa, ja jossa päätetään yhdessä jatketaanko. Osalla kolme riittää, osalla se on puolimatka. Kumpi tilanne on kyseessä, sen näkee vasta ihosta eikä etukäteen. Ensikäynnin hoito lasketaan sarjaan mukaan, joten sarjan hintaan sisältyy myös ensimmäinen käynti.
-        </p>
-
-        <div class="grid-2 sarja-kortit">
-          <div class="feat-card">
-            <h3>Rauhoitushoito</h3>
-            <p>Rauhoitushoito (Overreactive Rescue) on tarkoitettu ylireagoivalle iholle. Se palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa antioksidanttipuolustusta. Tämä on lähtökohta silloin, kun iho punoittaa, kiristää tai reagoi herkästi.</p>
-            <p>Hoito tehdään protokollan mukaan <strong>kerran viikossa</strong>, joten kolmas käynti on kahden viikon kuluttua ensimmäisestä. Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan. Punoitus, kiristys ja reaktiivisuus ovat kolmanteen kertaan mennessä yleensä jo rauhoittuneet.</p>
-          </div>
-          <div class="feat-card">
-            <h3>Aknehoito</h3>
-            <p>Aknehoito (Acne Rescue) on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.</p>
-            <p>Hoito tehdään <strong>kahden viikon välein</strong>, joten kolmas käynti on neljännellä viikolla. Tulehtuneet muutokset ovat silloin useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa olevaan tulehdukseen. Sen sijaan tukkeutuneet ihohuokoset ja tulehduksen jälkeiset tummumat eivät ole vielä ehtineet muuttua, ja siksi aknehoidossa kolmesta yleensä jatketaan kuuteen.</p>
-            <p>Syy on aknen omassa aikataulussa. Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjassa viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.</p>
-          </div>
-        </div>
-
-        <p class="sarja-huomio">
-          Hoitojen väli on tiheämpi kuin mikroneulauksessa, jossa väli on neljä viikkoa. Ero johtuu mekanismista. Mikroneulauksessa odotetaan ihon paranemista ja kollageenin kypsymistä, mikä vie oman aikansa. ProXN-hoidossa paranemisjaksoa ei ole odotettavana, joten vaikutusta voidaan vahvistaa tiheämmin.
-        </p>
       </div>
     </section>
 
