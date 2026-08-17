@@ -2318,6 +2318,124 @@ linjauksen mukaisesti. ProXN tuli kahtena mainintana.
 kaikki JSON-LD-lohkot jäsentyvät, sitemap on kelvollista XML:ää,
 ei NUL-tavuja.
 
+#### ⚠ LÖYDÖS 17.8.2026: `assets/og-default.jpg` puuttuu GitHubista
+
+Käyttäjä pyysi tarkistamaan assets-kansion julkaisun jälkeen.
+ProXN-tiedostot olivat kaikki paikallaan ja vanha `proxn-logo.jpg` oli
+poistettu oikein. **Yksi tiedosto puuttui, eikä se liity ProXN:ään.**
+
+`assets/og-default.jpg` (1200×630, 25 kt) on työkansiossa mutta ei
+GitHubissa. **Kahdeksantoista sivua viittaa siihen** `og:image`- ja
+`twitter:image`-tageissa, eli käytännössä koko sivusto pois lukien
+ProXN-sivu joka sai oman kuvansa 11.8.
+
+Seuraus: kun mitä tahansa sivuston linkkiä jaetaan Facebookissa,
+WhatsAppissa, LinkedInissä tai Slackissa, esikatselukuvaa ei tule.
+Linkki näyttää pelkältä tekstiltä.
+
+**Tämä on vanha vika eikä johdu tämän päivän julkaisusta.** Tiedosto on
+päivätty 26.5.2026, joten se on todennäköisesti jäänyt lataamatta
+alusta asti tai poistettu jossain vaiheessa vahingossa.
+
+**Korjaus: lataa `assets/og-default.jpg` GitHubiin.** Tiedosto on
+työkansiossa valmiina, oikean kokoinen eikä vaadi muutoksia.
+
+**Sivuvirhe tarkistuksessa, kirjattu ettei toistu:** ensimmäinen
+skriptini etsi viittauksia hahmolla joka vaati lainausmerkin tai
+sulkeen ennen polkua. `og:image`-tagit käyttävät absoluuttista
+osoitetta `https://www.studiomahla.fi/assets/...`, joten yksikään
+niistä ei osunut ja skripti raportoi virheellisesti "ei puutteita".
+Kun tarkistetaan viittauksia, hahmon on osuttava sekä suhteellisiin
+että absoluuttisiin polkuihin.
+
+**Käyttämätön tiedosto:** `MicroPen-Logo-transparent.png` ei ole
+viitattu mistään. Ei haittaa, mutta sen voi poistaa jos haluaa pitää
+kansion siistinä.
+
+#### Hinnaston rakenne korjattu 17.8.2026
+
+Käyttäjä kävi hinnaston läpi julkaisun jälkeen ja löysi kolme asiaa.
+
+**1. Ensikäyntiosio ei vastannut uutta mallia.** Olin korjannut rivin
+tekstin mutta jättänyt rakenteen: yksi rivi nimeltä "Ensikäynti tai
+yksittäinen hoito", vaikka Timmassa on kolme erillistä 200 euron
+palvelua. Nyt osio on **"Yksittäiset hoidot ja ensikäynti"** ja siinä
+on kolme riviä, jotka vastaavat Timmaa yksi yhteen.
+
+Samalla korjattiin sivun johdanto. Siinä luki *"Hoito valitaan aina
+ihon tilanteen mukaan, joten kaikki alkaa ensikäynnistä"*, mikä ei
+enää pidä paikkaansa.
+
+**2. Lisäalueet olivat väärässä paikassa. Minun virheeni.** Lisäalueet
+ovat mikroneulauksen lisäpalveluita, mutta työnsin ProXN-osion niiden
+eteen 11.8., jolloin ne irtosivat mikroneulauksesta. Nyt järjestys on:
+
+```
+Yksittäiset hoidot ja ensikäynti
+Kliinisen mikroneulauksen sarjahoidot
+Lisäalueet
+ProXN-kasvohoidon sarjahoidot
+Kotihoitotuotteet
+Mitä hintaan sisältyy
+Varaaminen ja maksaminen
+```
+
+**Sääntö jatkoa varten: uusi osio ei saa katkaista olemassa olevaa
+kokonaisuutta.** Lisäalueet kuuluvat mikroneulauksen kanssa samaan
+ryhmään, ja se oli helppo ohittaa kun lisäystä katsoi vain sen omasta
+näkökulmasta.
+
+**3. "Mitä hintaan sisältyy" ei ole turha mutta oli väärin.** Käyttäjä
+kysyi onko osio tarpeeton. Se ei ole, koska siinä on kaksi asiaa joita
+ei sanota missään muualla hinnastossa: **erillisiä varausmaksuja ei
+ole**, ja **väline avataan asiakkaan nähden**. Molemmat poistavat
+ostoesteen.
+
+Osio oli kuitenkin **mikroneulauskohtainen**: se lupasi steriilin
+neulapään ja hoitavan voiteen myös ProXN-asiakkaalle, vaikka
+ProXN:ssä ei ole neulapäätä. Kirjoitettu uusiksi niin että yhteiset
+asiat ovat listassa ja hoitokohtaiset omassa kappaleessaan.
+ProXN:n vastine avaamiselle on ampulli ja biosellu-naamio, jotka
+molemmat avataan asiakkaan nähden.
+
+**Poistaminen olisi ollut helpompi mutta väärä ratkaisu**, koska
+tieto katoaisi kokonaan.
+
+#### Hinnasto karsittu 17.8.2026: hinnasto on hinnasto
+
+Käyttäjä kaksi virhettä edellisestä versiosta:
+
+1. *"varausmaksua ei ole on täysin turha maininta, ei ole mitään hyötyä
+   mitä ei ole"* — **tämä on sama sääntö jonka käyttäjä on antanut
+   aiemmin kahdesti** (6.8. kolmansista osapuolista, 7.8. tuotteista
+   joita ei ole). Rikoin sen kolmannen kerran.
+2. *"hinnaston ei muutenkaan ole tarkoitus kuvata hoitoja, ne tehdään
+   jo muualla sivustolla. Hinnasto on hinnasto."*
+
+**Sääntö jonka mukaan karsittiin: jos lause kertoo ostamisesta, se jää.
+Jos se kertoo hoidosta, se lähtee.**
+
+Runko 725 → 388 sanaa, eli **hoitokuvausta oli 46 prosenttia sivusta**.
+
+| Jäi | Lähti |
+|---|---|
+| Hoitokertojen määrä ja väli | Miksi väli on neljä viikkoa |
+| "Varaa tämä jos tiedät haluavasi..." | Mitä hoito tekee iholle |
+| Sarjaan sisältyvä ensimmäinen hoito | Aknearpisuositus |
+| Lisäalueen alennus sarjassa | Miksi kaulan iho on ohuempaa |
+| "Lisäalue hoidetaan kasvohoidon yhteydessä" | Tuotekuvaukset |
+| Maksutavat | Xanthohumolin ja version selitykset |
+| Linkki hoitosivulle | Linkin perässä ollut selitys mitä sivulta löytyy |
+
+**"Mitä hintaan sisältyy" jäi mutta lyheni neljään riviin.** Se vastaa
+kysymykseen mitä rahalla saa, mikä on hintasivun asia.
+Poistetut: varausmaksulause, steriili neulapää, biosellu-naamio,
+hoitava voide. Kolme jälkimmäistä ovat hoitokuvausta.
+
+**Tuotekuvaukset poistettiin hinnastosta mutta säilyvät
+ProXN-sivulla**, jossa ne ovat kolmen palstan korteissa. Sama tieto ei
+tarvitse olla kahdessa paikassa, ja hoitosivu on sille oikea paikka.
+
 ### 14b-TYÖJÄRJESTYS: mistä jatketaan (tilanne 7.8.2026)
 
 Kaikki alla oleva riippuu vaiheesta 1. **Mihinkään ei kosketa ennen kuin
