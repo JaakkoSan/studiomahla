@@ -6745,3 +6745,64 @@ Syntyaika tuntematon.
 Kaikki kuusi UKK-kohtaa vertailtiin ohjelmallisesti näkyvän tekstin ja
 `FAQPage`-datan välillä. Kysymykset täsmäävät kaikissa kuudessa,
 vastaukset neljässä kuudesta (poikkeukset yllä).
+
+
+## 17.8.2026 — ProXN-sivun kotihoito-osion taitto
+
+### Ongelma
+
+Kotihoito-osiossa `.grid-side` on `0.78fr 1.22fr` ja `align-items: start`.
+Oikeassa, leveämmässä sarakkeessa on pystykuva `proxn-antioxidant.jpg`
+(1000×1500, kuvasuhde 2:3). Vasemmassa sarakkeessa on vain nosto,
+otsikko ja kaksi kappaletta.
+
+Laskettuna käyttäjän ikkunaleveydellä: kuvasarake noin 808 px leveä →
+kuva 1212 px korkea. Tekstipalsta noin 400 px. **Yli 800 pikseliä
+tyhjää** vasempaan sarakkeeseen ennen kuin tuoteruudukko alkaa.
+
+### Korjaus
+
+Osion `grid-side`-elementille annettiin lisäluokka `kotihoito-grid`,
+jotta muut viisi `grid-side`-osiota eivät muutu.
+
+```css
+.kotihoito-grid { grid-template-columns: 1.15fr 0.85fr; }
+.kotihoito-grid > :last-child { margin-top: 0; }
+.kotihoito-grid .article-figure { max-width: 420px; margin-left: auto; }
+.kotihoito-grid .article-figure img {
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: center;
+}
+.kotihoito-grid + .tuote-grid { margin-top: clamp(32px, 4vw, 48px); }
+```
+
+Kolme muutosta yhdessä: tekstisarake leveämmäksi (vähemmän rivejä),
+kuva kapeammaksi ja neliömäisemmäksi rajattuna, ja `grid-side`-osioiden
+40 pikselin yläpudotus pois. Arvioitu tyhjä alue **noin 800 px → noin
+250 px**.
+
+**Rajaus on turvallinen**, koska sommittelu on keskitetty: pullo on
+keskellä pyöreää jauhekasaa ja ylä- ja alareunassa on runsaasti tyhjää
+taustaa. 4:5-rajaus tiivistää sommittelun eikä leikkaa pulloa.
+
+**Mobiilipalautus** `@media (max-width: 900px)`: `max-width: none`,
+`margin-left: 0`, `aspect-ratio: auto` — yksipalstaisessa taitossa kuva
+näytetään kokonaisena.
+
+**Kaskadi tarkistettu.** `.kotihoito-grid`-säännöt (rivit 360–366) ovat
+tiedostossa `.grid-side`-sääntöjen (321, 353) **jälkeen**. Tarkkuus on
+sama, joten järjestys ratkaisee. Sama ansa kuin 11.8. tummien osioiden
+tekstivärissä.
+
+### Alv-maininta
+
+Poistettu tuoteruudukon alta: *"Tuotteita on saatavilla studiolta hoidon
+yhteydessä. Hinnat sisältävät arvonlisäveron."* → *"Tuotteita on
+saatavilla studiolta hoidon yhteydessä."*
+
+**Tarkennus käyttäjän perusteluun.** Käyttäjä sanoi että alv mainitaan
+jo aiemmin. Se mainitaan sivulla **kerran, ja tuoteluettelon jälkeen**,
+osiossa "Varaaminen ja hinta": *"Hinnat sisältävät arvonlisäveron."*
+Lopputulos on silti oikea — maininta on sivulla kertaalleen eikä
+tuoteruudukko tarvitse omaansa. Hintamerkintäasetus 553/2013 § 5
+edellyttää että näytetty hinta on lopullinen kuluttajahinta, ja se
+toteutuu.

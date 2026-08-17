@@ -352,6 +352,19 @@
        40px = noston rivikorkeus (12px x 1.9) + sen alamarginaali (1.4em). */
     .grid-side > :last-child { margin-top: 40px; }
 
+    /* Kotihoito-osio. Pystykuva 2:3 vieressa on lyhyt tekstipalsta,
+       joten ilman rajausta kuva jaa satoja pikseleita tekstia
+       pidemmaksi ja tuoteruudukon eteen syntyy iso tyhja alue.
+       Kuva kavennetaan, rajataan neliomaisemmaksi ja tasataan oikeaan
+       reunaan. Sommittelu on keskitetty, joten rajaus on turvallinen. */
+    .kotihoito-grid { grid-template-columns: 1.15fr 0.85fr; }
+    .kotihoito-grid > :last-child { margin-top: 0; }
+    .kotihoito-grid .article-figure { max-width: 420px; margin-left: auto; }
+    .kotihoito-grid .article-figure img {
+      aspect-ratio: 4 / 5; object-fit: cover; object-position: center;
+    }
+    .kotihoito-grid + .tuote-grid { margin-top: clamp(32px, 4vw, 48px); }
+
     /* Tutkimusosio: kolmas pylvas nousee otsikon tasalle ja jatkuu
        molempien rivien yli, jolloin vasemmalle ei jaa tyhjaa. */
     .tutkimus-grid {
@@ -484,6 +497,8 @@
     }
     @media (max-width: 900px) {
       .grid-2, .grid-side { grid-template-columns: 1fr; gap: 44px; }
+      .kotihoito-grid .article-figure { max-width: none; margin-left: 0; }
+      .kotihoito-grid .article-figure img { aspect-ratio: auto; }
       .tuote-grid { grid-template-columns: 1fr; gap: 28px; }
       .grid-side > :last-child, .sarja-kortit { margin-top: 0; }
     }
@@ -812,7 +827,7 @@
 
     <section class="section section--white" aria-labelledby="kotihoito-title">
       <div class="section__inner">
-        <div class="grid-side">
+        <div class="grid-side kotihoito-grid">
           <div>
             <p class="label label--mid">Kotihoito</p>
             <h2 id="kotihoito-title">Kotihoito jatkaa työtä käyntien välissä</h2>
@@ -886,7 +901,7 @@
           </div>
         </div>
         <p class="tuote-huomio">
-          Tuotteita on saatavilla studiolta hoidon yhteydessä. Hinnat sisältävät arvonlisäveron.
+          Tuotteita on saatavilla studiolta hoidon yhteydessä.
         </p>
       </div>
     </section>
