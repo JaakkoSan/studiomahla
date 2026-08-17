@@ -36,6 +36,7 @@
           '<span class="brand__name">Mahlamäen<span>Kauneusstudio</span></span>' +
         '</a>' +
         '<nav class="nav__right" aria-label="Päänavigaatio">' +
+          '<a href="proxn-kasvohoito.html" class="nav__link">ProXN</a>' +
           '<a href="hinnasto.html" class="nav__link">Hinnasto</a>' +
           '<a href="blogi.html" class="nav__link">Blogi</a>' +
           '<a href="https://varaa.timma.fi/studiomahla" target="_blank" rel="noopener" data-cta="booking" class="btn btn--small" aria-label="Varaa aika Timman kautta">Ajanvaraus</a>' +
@@ -134,6 +135,12 @@
     if (page === 'hinnasto.html') {
       var hintaLink = document.querySelector('a.nav__link[href="hinnasto.html"]');
       if (hintaLink) hintaLink.classList.add('is-current');
+    }
+
+    // ProXN-linkin is-current-tila ProXN-sivulla
+    if (page === 'proxn-kasvohoito.html') {
+      var proxnLink = document.querySelector('a.nav__link[href="proxn-kasvohoito.html"]');
+      if (proxnLink) proxnLink.classList.add('is-current');
     }
   }
 
