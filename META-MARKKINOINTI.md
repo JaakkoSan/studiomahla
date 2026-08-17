@@ -1583,6 +1583,117 @@ noudatettiin. Ei erityistä ajankohtaisuussyytä kummallekaan idealle
 elokuussa, joten valinta perustui vahvuuteen ja aihepiirien
 erotteluun.
 
+**9. 400 prosenttia (Reels)**
+Lähde: `mikroneulaus-sarjahoito.html` ja
+`mita-tutkimus-sanoo-mikroneulauksesta.html`, idea 1.1
+Tiedostot: `karusellit/nelisataa_01.png` … `_05.png`
+Skripti: `generaattorit/nelisataa.py`
+Video: `reels/nelisataa.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 17.8.2026. **Julkaisu odottaa.**
+5 diaa, 66 sanaa, kansidian sävy keski.
+
+Ydinajatus: neljä hoitoa kuukauden välein johtaa histologisissa
+tutkimuksissa jopa 400 prosentin kasvuun kollageeni- ja
+elastiinipitoisuuksissa kuuden kuukauden kohdalla. Numeropohjainen
+koukku, jonka kolmas dia kertoo mistä luku on peräisin
+(kudosnäytteet, mikroskooppi), koska pelkkä prosenttiluku on
+uskottavuudeltaan heikko ilman mittaustapaa.
+
+**Kansidian sävy keski, ensimmäinen kerta.** Edellinen
+julkaisujonossa oleva Reels (rehellisyys, ajastettu 14.8.2026) on
+vaalea ja viikon toinen Reels (steriili) on vaalea, joten keski
+sopii väliin eikä kaksi vihreää jää vierekkäin. Luvun 3.5a
+varoitus koskee tumman ja keskin yhdistelmää, ei keskiä vaalean
+naapurina. **Julkaisujärjestys tärkeä:** tämä (keski) julkaistaan
+ennen steriiliä (vaalea).
+
+**Väitteiden kate.** Lähdeartikkelit kertovat myös että kyse on
+suhteellisesta kasvusta lähtötasoon nähden kuuden kuukauden
+kohdalla ja että alkuperäiset tutkimukset tehtiin rullalaitteella.
+Reels ja kuvateksti pysyvät siinä mitä sivusto sanoo eivätkä
+laajenna lukua koskemaan muuta.
+
+Kuvateksti sanatarkasti:
+
+```
+Mistä 400 prosentin luku oikeastaan tulee?
+
+Histologisissa tutkimuksissa on dokumentoitu, että neljä hoitoa kuukauden välein johtaa kuuden kuukauden kohdalla jopa 400 prosentin kasvuun kollageeni- ja elastiinipitoisuuksissa lähtötasoon nähden. Luku on mitattu ihosta otetuista kudosnäytteistä mikroskoopilla, ei arvioitu ulkonäön perusteella. Kyse on suhteellisesta kasvusta lähtötasoon verrattuna, ja mittaushetki on kuusi kuukautta.
+
+Sama luku on myös syy siihen miksi mikroneulaus tehdään sarjana: kertymä rakentuu kerros kerroksen päälle, ja hoitojen väli on neljä viikkoa ihon uusiutumissyklin vuoksi.
+
+Laadimme hoitosuunnitelman jokaiselle asiakkaalle erikseen Kotkan Ruonalassa sijaitsevalla studiollamme, ja jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sarjahoito.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kollageeni #sarjahoito #kliininenmikroneulaus
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**10. Steriili joka kerta (Reels)**
+Lähde: `mikroneularulla-vai-kliininen-mikroneulaus.html`, idea 2.4
+Tiedostot: `karusellit/steriili_01.png` … `_05.png`
+Skripti: `generaattorit/steriili.py`
+Video: `reels/steriili.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 17.8.2026. **Julkaisu odottaa.**
+5 diaa, 63 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: kliinisessä hoidossa hoitopää on steriili ja
+kertakäyttöinen ja vaihdetaan asiakkaan nähden, rullaa käytetään
+uudelleen. Konkreettinen turvallisuusasia, joka perustelee
+hintaeron markkinan halvempiin hoitoihin.
+
+**Rakenne on tarkoituksella epäsymmetrinen** samaan tapaan kuin
+ideat 2.1 ja 4.3: rulla saa yhden vaalean dian, studion oma
+menetelmä kaksi diaa brändin vihreällä. Taustaväri vaihtuu juuri
+siinä kohdassa jossa siirrytään omaan menetelmään.
+
+Eri pääluku (2, Rulla vastaan kliininen laite) ja eri
+lähdeartikkeli kuin viikon toinen Reels (1.1, 400 prosenttia,
+pääluku 1). Kansidian sävy vaalea, viikon toinen keski.
+
+**Korjaus 17.8.2026:** neljännen dian nosto oli aluksi "Hygienia ei
+ole yksityiskohta." Käyttäjä huomautti että lause ei avaudu
+katsojalle ilman kontekstia: se kiistää väitteen jota kukaan ei ole
+esittänyt, eikä kerro mihin hygienia vaikuttaa. Vaihdettu muotoon
+"Steriiliys on osa hoidon turvallisuutta." ja selite kertoo nyt
+syyn ("hoito avaa ihoon mikrokanavia, joten välineen puhtaus
+vaikuttaa infektioriskiin"). Video ja diat tuotettu uudelleen,
+kuvatekstin kolmas kappale yhdenmukaistettu.
+
+Kuvateksti sanatarkasti:
+
+```
+Uusi neula joka kerta, vai sama uudelleen?
+
+Kliinisessä mikroneulauksessa hoitopää on steriili ja kertakäyttöinen. Se vaihdetaan aina asiakkaan nähden ennen hoitoa ja hävitetään hoidon jälkeen asianmukaisesti. Laitteen rakenne estää nesteiden pääsyn runkoon, mikä ennaltaehkäisee epäpuhtauksien kulkeutumisen laitteessa.
+
+Kotikäyttöistä mikroneularullaa sen sijaan käytetään toistuvasti. Jokaisen käyttökerran jälkeen neulat ovat altistuneet ihon bakteereille, soluneritteille ja mahdollisille verenjäljille, eikä neulojen desinfiointi kotioloissa vastaa kliinistä steriiliyttä.
+
+Hoito avaa ihoon mikrokanavia, joten välineen puhtaus vaikuttaa suoraan infektioriskiin. Steriiliys ei siis ole tekninen yksityiskohta vaan osa hoidon turvallisuutta. Teemme kaikki hoidot Kotkan Ruonalassa, ja jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneularulla-vai-kliininen-mikroneulaus.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #ihonhoito #hygienia
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (17.8.2026):** ideapankissa oli ennen tätä ajoa 41
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista ja eri lähdeartikkeleista. Ideapankin
+suositellussa aloitusjärjestyksessä seuraavat käyttämättömät kohdat
+olivat 3.1, 1.1 ja 2.4. Kohta 3.1 (aktiivinen akne) ohitettiin,
+koska se on jo tuotettu valmiiksi 3.8.2026 ja käyttäjä siirsi sen
+julkaisusta syrjään 7.8.2026; video ja diat odottavat yhä
+`tuotanto/`-kansiossa eikä niitä kannata tuottaa uudelleen. Siksi
+valittiin listan seuraavat kohdat 1.1 ja 2.4. Ei erityistä
+ajankohtaisuussyytä kummallekaan elokuussa, joten valinta perustui
+vahvuuteen ja aihepiirien erotteluun.
+
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
 1. Kenelle mikroneulaus sopii (`mikroneulaus-sopiiko-minulle.html`)

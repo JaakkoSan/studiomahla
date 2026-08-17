@@ -2079,59 +2079,50 @@ Ei dropdownia. Ei hampurilaista aluksi. Alle 380 px piilotetaan "Blogi"
 Kirjattu tähän, koska palveluun kirjoitettu teksti on aiemmin kadonnut
 kun sitä ei ollut muualla. Kaikissa kesto 60 min.
 
-**Kliininen mikroneulaus, ensikäynti — 200 €**
+**Kliininen mikroneulaus — 200 €**
 
 ```
-Varaa tämä jos tiedät haluavasi kliinisen mikroneulauksen.
+Kliininen mikroneulaus MicroPen EVO -laitteella. Hoidossa ihoon tehdään mikrokanavia säädettävällä neulasyvyydellä, mikä käynnistää ihon oman korjausvasteen ja uuden kollageenin muodostuksen.
 
-Käynnillä teemme iho-analyysin, käymme läpi esitiedot ja varmistamme
-että hoito sopii ihollesi. Sen jälkeen teemme ensimmäisen hoidon
-MicroPen EVO -laitteella.
+Ensimmäisellä käynnillä teemme iho-analyysin, käymme läpi esitiedot ja varmistamme että hoito sopii ihollesi. Sen jälkeen teemme hoidon samalla käynnillä.
 
-Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet.
-Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
+Jos analyysissä käy ilmi ettei mikroneulaus sovi ihollesi juuri nyt, vaihdamme hoidon sopivaan tai siirrämme sen myöhemmäksi.
 
-Jos analyysissä käy ilmi ettei mikroneulaus sovi ihollesi juuri nyt,
-vaihdamme hoidon sopivaan tai siirrämme sen myöhemmäksi.
+Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
 
 Hoidon tekee terveydenhuollon ammattilainen.
 ```
 
-**ProXN-kasvohoito, ensikäynti — 200 €**
+**ProXN-kasvohoito — 200 €**
+
+**Käyttäjän muokkaama lopullinen versio, kirjattu 17.8.2026.** Tämä on
+se teksti joka on Timmassa. Pidensin kuvausta 17.8. käyttäjän pyynnöstä
+(*"koska tämä ei ole tunnettu hoito"*), minkä jälkeen käyttäjä muokkasi
+sitä itse. Mikroneulauksen ensikäyntiä ei pidennetty, koska se on
+asiakkaalle tunnettu hoito.
 
 ```
-Varaa tämä jos tiedät haluavasi ProXN-kasvohoidon.
-
-ProXN on ammattikäyttöön tarkoitettu hoito herkälle, reaktiiviselle ja
-ikääntyvälle iholle. Se ei riko ihoa, vaan vahvistaa ihon omaa
-suojakerrosta ja antioksidanttipuolustusta Xanthohumol Complexilla.
-Sopii myös silloin kun mikroneulaus ei sovi.
-
-Käynnillä teemme iho-analyysin, käymme läpi esitiedot ja teemme
-ensimmäisen hoidon. Hoidon jälkeen ei ole rajoituksia, ja arkeen voi
-palata suoraan.
-
-Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet.
-Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
-
-Hoidon tekee terveydenhuollon ammattilainen.
+ProXN on ammattikäyttöön tarkoitettu hoito herkälle, reaktiiviselle ja ikääntyvälle iholle. Se ei riko ihoa, vaan vahvistaa ihon omaa suojakerrosta ja antioksidanttipuolustusta Xanthohumol Complexilla. Sopii myös silloin kun mikroneulaus ei sovi. Hoidosta on kaksi versiota: rauhoitushoito ylireagoivalle iholle ja aknehoito toistuvaan akneen ja seborreaan. Kumpi sinulle tehdään, päätetään iho-analyysin perusteella. Aloitamme iho-analyysillä ja käymme läpi esitiedot. Sen jälkeen iho puhdistetaan kahdessa vaiheessa: puhdistusöljy poistaa meikin vahingoittamatta ihon omaa rasvakerrosta, ja iho tasapainotetaan kosteuttavalla suihkeella. Seuraavaksi iho käsitellään hellävaraisella polyhydroksihappoliuoksella. Polyhydroksihapot ovat suurikokoisia molekyylejä, jotka imeytyvät hitaammin kuin tavalliset hedelmähapot, ja siksi ne sopivat herkälle iholle. Sitten sekoitetaan vaikuttava ampulli. Xanthohumol Complex on kylmäkuivattua jauhetta, koska se hajoaa vesiliuoksessa. Jauhe ja aktivaattori yhdistetään vasta hoitohetkellä sinun nähden, jolloin aine on täydellä teholla iholle levitettäessä. Ampullia ei huuhdella pois. Ampullin päälle asetetaan steriili biosellu-naamio, joka avataan pakkauksestaan sinun nähden. Naamio muodostaa iholle tiiviin kalvon, joka tehostaa vaikuttavien aineiden imeytymistä. Naamio on iholla 15-30 minuuttia. Hoito päättyy antioksidanttihoitoon ja aurinkosuojaan, ja käymme läpi jälkihoito-ohjeet. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan. Hoidon tekee terveydenhuollon ammattilainen.
 ```
 
-**Ensikäynti ja hoitosuositus — 200 €**
+**Mitä käyttäjä poisti ehdotuksestani:**
+
+- avausrivi *"Varaa tämä jos tiedät haluavasi ProXN-kasvohoidon."*
+- väliotsikko *"Näin käynti etenee."*
+- *"Hoidon jälkeen ei ole rajoituksia. Iho ei ole rikki, joten meikin
+  voi laittaa saman tien ja arkeen voi palata suoraan."*
+- *"Hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja
+  jälkihoito-ohjeet."*
+- kappalejaot, teksti on yhtenä lohkona
+
+**Ensikäynti — 200 €**
 
 ```
-Varaa tämä jos et ole varma kumpi hoito sinulle sopii.
+Varaa tämä jos et tiedä mikä hoito sinulle sopii.
 
-Teemme iho-analyysin, käymme läpi esitiedot ja päätämme yhdessä kumpi
-hoitopolku on sinulle oikea: kliininen mikroneulaus vai
-ProXN-kasvohoito.
+Teemme iho-analyysin, käymme läpi esitiedot ja päätämme yhdessä kumpi hoito on sinulle oikea: kliininen mikroneulaus vai ProXN-kasvohoito. Valittu hoito tehdään samalla käynnillä, joten et lähde pelkän suunnitelman kanssa.
 
-Valittu hoito tehdään samalla käynnillä, joten et lähde pelkän
-suunnitelman kanssa.
-
-Hinta on sama kuin suorissa varauksissa ja kattaa ammattilaisen ajan,
-käytetyt tuotteet ja jälkihoito-ohjeet. Jos päädyt sarjahoitoon, tämä
-käynti lasketaan sarjaan mukaan.
+Hinta on sama kuin suorissa varauksissa. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
 
 Hoidon tekee terveydenhuollon ammattilainen.
 ```
@@ -2147,84 +2138,185 @@ aikataulua täsmällisesti jos hoitomuoto on auki.
 
 Neljä palvelua, kaikki 60 min.
 
-**ProXN-rauhoitushoito, kolmen hoidon sarja — 570 €**
+**Pidennetty 17.8.2026 samalla perusteella kuin ensikäynti: hoito ei ole
+asiakkaalle tunnettu, joten kuvauksen on kannettava yksin.** Jokaisessa
+on nyt sama tiivis kuvaus käynnin kulusta, koska varaaja voi tulla
+suoraan sarjapalveluun lukematta ensikäyntiä.
+
+**ProXN rauhoittava hoito herkälle iholle, 3 hoitokertaa — 570 €**
 
 ```
-Rauhoitushoito ylireagoivalle iholle, kolme hoitokertaa kerran viikossa.
-190 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
+Rauhoittava hoito herkälle ja reaktiiviselle iholle, kolme hoitokertaa kerran viikossa. 190 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
 
-Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa
-antioksidanttipuolustusta. Se sopii silloin kun iho punoittaa, kiristää
-tai reagoi herkästi.
+Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa antioksidanttipuolustusta Xanthohumol Complexilla. Se sopii silloin kun iho punoittaa, kiristää tai reagoi herkästi eikä siedä voimakkaita aktiiviaineita.
 
-Kolmas hoitokerta on tarkistuspiste. Silloin katsotaan yhdessä miten iho
-on vastannut ja päätetään jatketaanko kuuteen. Kolme ei siis ole katto
-vaan kohta jossa suunta arvioidaan.
+Jokainen käynti etenee samalla tavalla: kaksivaiheinen puhdistus, hellävarainen polyhydroksihappokäsittely, hoitohetkellä sekoitettava Xanthohumol Complex -ampulli ja steriili biosellu-naamio. Hoito päättyy antioksidanttihoitoon ja aurinkosuojaan. Käynti kestää noin tunnin, eikä hoidon jälkeen ole rajoituksia.
 
-Rauhoitushoidossa kolmas käynti on kahden viikon kuluttua ensimmäisestä.
-Ihon suojakerros ja antioksidanttipuolustus reagoivat päivissä ja
-viikoissa, joten siinä ajassa ehtii tapahtua se mitä hoidolta odotetaan.
+Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Väli on viikko, koska ihon ei tarvitse toipua hoitojen välillä niin kuin mikroneulauksessa.
 
-Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+Kolmas hoitokerta on tarkistuspiste. Se on kahden viikon kuluttua ensimmäisestä, ja siihen mennessä punoitus, kiristys ja reaktiivisuus ovat yleensä jo rauhoittuneet. Silloin katsotaan yhdessä miten iho on vastannut ja päätetään jatketaanko kuuteen. Kolme ei siis ole katto vaan kohta jossa suunta arvioidaan.
+
+Kotihoito on osa hoitoa. Suosittelemme tuotteet ihon tilanteen mukaan, emmekä myy koko sarjaa jokaiselle.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä. Hoidon tekee terveydenhuollon ammattilainen.
 ```
 
-**ProXN-rauhoitushoito, kuuden hoidon sarja — 1080 €**
+**ProXN rauhoittava hoito herkälle iholle, 6 hoitokertaa — 1080 €**
 
 ```
-Rauhoitushoito ylireagoivalle iholle, kuusi hoitokertaa kerran viikossa.
-180 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
+Rauhoittava hoito herkälle ja reaktiiviselle iholle, kuusi hoitokertaa kerran viikossa. 180 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
 
-Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa
-antioksidanttipuolustusta. Se sopii silloin kun iho punoittaa, kiristää
-tai reagoi herkästi.
+Hoito palauttaa ihon uloimman kerroksen eheyttä ja vahvistaa ihon omaa antioksidanttipuolustusta Xanthohumol Complexilla. Se sopii silloin kun iho punoittaa, kiristää tai reagoi herkästi eikä siedä voimakkaita aktiiviaineita.
 
-Pidempi sarja on tarkoitettu tilanteisiin joissa ihon lähtötilanne
-vaatii enemmän toistoja. Kumpi sarja sinulle sopii, arvioidaan
-ensikäynnillä tai viimeistään kolmannen hoidon kohdalla.
+Jokainen käynti etenee samalla tavalla: kaksivaiheinen puhdistus, hellävarainen polyhydroksihappokäsittely, hoitohetkellä sekoitettava Xanthohumol Complex -ampulli ja steriili biosellu-naamio. Hoito päättyy antioksidanttihoitoon ja aurinkosuojaan. Käynti kestää noin tunnin, eikä hoidon jälkeen ole rajoituksia.
 
-Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+Yksi käynti rauhoittaa ihoa, mutta ei muuta sen toimintaa pysyvästi. Ihon suojakerros ja antioksidanttipuolustus vahvistuvat toistojen kautta, ja siksi tulokset syntyvät sarjana. Väli on viikko, koska ihon ei tarvitse toipua hoitojen välillä niin kuin mikroneulauksessa.
+
+Kuuden hoidon sarja on tarkoitettu tilanteisiin joissa ihon lähtötilanne vaatii enemmän toistoja. Sarja kestää viisi viikkoa. Kumpi sarja sinulle sopii, arvioidaan ensikäynnillä tai viimeistään kolmannen hoidon kohdalla, joten kuutta ei tarvitse päättää etukäteen.
+
+Kotihoito on osa hoitoa. Suosittelemme tuotteet ihon tilanteen mukaan, emmekä myy koko sarjaa jokaiselle.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä. Hoidon tekee terveydenhuollon ammattilainen.
 ```
 
-**ProXN-aknehoito, kolmen hoidon sarja — 570 €**
+**ProXN aknehoito, 3 hoitokertaa — 570 €**
 
 ```
-Aknehoito, kolme hoitokertaa kahden viikon välein. 190 euroa
-hoitokerralta. Ensikäynti sisältyy sarjaan.
+Aknehoito, kolme hoitokertaa kahden viikon välein. 190 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
 
-Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen
-jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena
-ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon
-mikrobiomia.
+Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.
 
-Kolmas hoitokerta on tarkistuspiste. Tulehtuneet muutokset ovat silloin
-useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa
-olevaan tulehdukseen. Tukkeutuneet ihohuokoset ja tulehduksen jälkeiset
-tummumat muuttuvat hitaammin, ja siksi aknehoidossa kolmesta yleensä
-jatketaan kuuteen.
+Jokainen käynti etenee samalla tavalla: kaksivaiheinen puhdistus, hellävarainen polyhydroksihappokäsittely, hoitohetkellä sekoitettava Xanthohumol Complex -ampulli ja steriili biosellu-naamio. Hoito päättyy antioksidanttihoitoon ja aurinkosuojaan. Käynti kestää noin tunnin, eikä hoidon jälkeen ole rajoituksia.
 
-Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+Iho rauhoittuu toistojen kautta, ja siksi tulokset syntyvät sarjana. Väli on kaksi viikkoa, koska ihon ei tarvitse toipua hoitojen välillä niin kuin mikroneulauksessa.
+
+Kolmas hoitokerta on tarkistuspiste, ja se on neljännellä viikolla. Tulehtuneet muutokset ovat silloin useimmiten rauhoittuneet, koska hoito vaikuttaa suoraan olemassa olevaan tulehdukseen. Tukkeutuneet ihohuokoset ja tulehduksen jälkeiset tummumat muuttuvat hitaammin, ja siksi aknehoidossa kolmesta yleensä jatketaan kuuteen.
+
+Kotihoito on osa hoitoa. Suosittelemme tuotteet ihon tilanteen mukaan, emmekä myy koko sarjaa jokaiselle.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä. Hoidon tekee terveydenhuollon ammattilainen.
 ```
 
-**ProXN-aknehoito, kuuden hoidon sarja — 1080 €**
+**ProXN aknehoito, 6 hoitokertaa — 1080 €**
 
 ```
-Aknehoito, kuusi hoitokertaa kahden viikon välein. 180 euroa
-hoitokerralta. Ensikäynti sisältyy sarjaan.
+Aknehoito, kuusi hoitokertaa kahden viikon välein. 180 euroa hoitokerralta. Ensikäynti sisältyy sarjaan.
 
-Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen
-jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena
-ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon
-mikrobiomia.
+Hoito on tarkoitettu toistuvaan akneen, seborreaan ja tulehduksen jälkeiseen pigmentoitumiseen. Happokäsittely tehdään kolmena kerroksena ja mukaan tulee laktoferriiniseerumi, joka tasapainottaa ihon mikrobiomia ja tukee korjausprosesseja.
 
-Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta
-huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa
-hoitovaste arvioidaankin vakiintuneesti vasta kahdeksan viikon kohdalla
-ja vaikeammassa tilanteessa kahdentoista. Kahden viikon välein tehtynä
-kuuden hoidon sarjan viimeinen käynti on kymmenennellä viikolla, jolloin
-ollaan juuri siinä kohdassa.
+Jokainen käynti etenee samalla tavalla: kaksivaiheinen puhdistus, hellävarainen polyhydroksihappokäsittely, hoitohetkellä sekoitettava Xanthohumol Complex -ampulli ja steriili biosellu-naamio. Hoito päättyy antioksidanttihoitoon ja aurinkosuojaan. Käynti kestää noin tunnin, eikä hoidon jälkeen ole rajoituksia.
 
-Sarjan sisältö ja aikataulu sovitaan ensikäynnillä.
+Iho rauhoittuu toistojen kautta, ja siksi tulokset syntyvät sarjana. Väli on kaksi viikkoa, koska ihon ei tarvitse toipua hoitojen välillä niin kuin mikroneulauksessa.
+
+Näppylä ei synny siinä hetkessä kun se ilmestyy, vaan tukkeutuneesta huokosesta näkyväksi muutokseksi kuluu viikkoja. Akneterapiassa hoitovaste arvioidaan vakiintuneesti vasta kahdeksan viikon kohdalla ja vaikeammassa tilanteessa kahdentoista. Kuuden hoidon sarjan viimeinen käynti on kymmenennellä viikolla, jolloin ollaan juuri siinä kohdassa.
+
+Kotihoito on osa hoitoa. Suosittelemme tuotteet ihon tilanteen mukaan, emmekä myy koko sarjaa jokaiselle.
+
+Sarjan sisältö ja aikataulu sovitaan ensikäynnillä. Hoidon tekee terveydenhuollon ammattilainen.
 ```
+
+#### PÄÄTÖS 17.8.2026: ensikäynti omaksi palvelukseen
+
+Kolme rinnakkaista ensikäyntiä hylättiin (*"se ehkä kuitenkin
+sekoittaa"*). Uusi rakenne:
+
+- **Hoidot varataan suoraan omalla nimellään**, eivät ensikäyntinä.
+  Ensimmäisellä kerralla tehdään silti aina iho-analyysi, ja se
+  kerrotaan kuvauksessa.
+- **Ensikäynti on oma lyhyt palvelunsa** niille jotka eivät tiedä
+  kumpaa tarvitsevat.
+
+Kaikki kolme maksavat 200 €. Rakenne on sama kuin aiemmin suunniteltu
+kolme reittiä, mutta kahta niistä ei enää kutsuta ensikäynniksi.
+Käyttäjän 17.8. tekemä muokkaus ProXN-tekstiin sopi tähän valmiiksi:
+hän oli jo poistanut rivin "Varaa tämä jos tiedät haluavasi".
+
+**Nimenmuutos samalla:** rauhoitushoito → **rauhoittava hoito herkälle
+iholle**. Perustelu: "rauhoitushoito" ei kerro varaajalle kenelle se on,
+ja "herkkä iho" on hakusana jota ihmiset oikeasti käyttävät.
+Aknehoito jäi ennalleen, koska se on jo itsessään kuvaava.
+
+**TEHTY 17.8.2026.** `proxn-kasvohoito.html`:n varausosio kirjoitettu
+uuteen malliin, `hinnasto.html`:n ensikäyntirivi muutettu, nimi
+"Rauhoitushoito" vaihdettu kaikkialla muotoon "Rauhoittava hoito
+herkälle iholle", ja rakenteisen datan palvelunimi
+"Ensikäynti — ProXN-kasvohoito" → "ProXN-kasvohoito, yksittäinen hoito".
+
+#### Etusivun tilanne, kartoitettu 17.8.2026
+
+**Ensikäynti on etusivulla mikroneulauksen hintakorttina.** Osiossa
+"Kliininen mikroneulaus" on kolme korttia: Ensikäynti 200 €,
+Sarjahoito 3 × 570 €, Sarjahoito 6 × 1080 €. Uudessa mallissa
+ensikäynti ei enää ole mikroneulauksen sisäänmeno, joten kortin nimeksi
+kuuluu **Kliininen mikroneulaus** ja ensikäynti on eri asia.
+
+Sama koskee etusivun rakenteista dataa: tarjouksen nimi on
+"Ensikäynti — kliininen mikroneulaus".
+
+**Etusivua ei silti rakenneta uusiksi.** Käyttäjän linjaus 10.8. on
+voimassa: etusivu on jo pitkä, mikroneulaus pysyy päätuotteena, ja
+ProXN lisätään maininnoilla eikä osiorakenteen muutoksella.
+
+#### Kolme linkkiä etusivulle ja artikkeliin
+
+| Paikka | Mitä |
+|---|---|
+| "Kenelle mikroneulaus ei sovi", `contra-note` | ProXN vaihtoehtona. Vahvin paikka: lukija on juuri saanut tietää ettei hoito sovi hänelle |
+| Hoidot-osio korttien jälkeen | Maininta että studiolla on myös ProXN, linkki sivulle |
+| `mikroneulaus-sopiiko-minulle.html` | Sama logiikka kuin contra-notessa, ja artikkeli tuottaa juuri nämä lukijat |
+
+Kolmas ei ollut alkuperäisessä suunnitelmassa mutta on käytännössä
+tärkein, koska se artikkeli on olemassa juuri sitä kysymystä varten.
+
+#### TYÖJÄRJESTYS, sovittu 17.8.2026
+
+**1. Sivuston korjaukset** (tehty 17.8.). Sivusto vastaa uutta
+Timma-mallia. Turvallista tehdä nyt, koska ProXN-sivu on yhä noindex
+eikä hinnastoa ole viety.
+
+**2. Timma** (käyttäjän työtä). Seitsemän palvelua.
+
+**3. Julkaisu — TEHTY 17.8.2026.** Timma kunnossa, kaikki tehty
+samalla kerralla:
+
+- `proxn-kasvohoito.html`: robots `noindex, nofollow` → `index, follow`
+- `sitemap.xml`: ProXN-sivu mukaan
+- `index.html`: kolme linkitystä, ensikäyntikortti → mikroneulaus,
+  ProXN-tarjoukset `hasOfferCatalog`-listaan, rakenteisen datan
+  tarjousnimi
+- `mikroneulaus-sopiiko-minulle.html`: linkki ProXN-sivulle
+- `hinnasto.html` vietäväksi
+
+**Perustelu järjestykselle:** jokainen kohdan 3 askel lupaa jotain
+varattavaa. Jos ne tehdään ennen Timmaa, sivusto lupaa palveluita joita
+varausjärjestelmästä ei löydy. Ja kun ne tehdään yhdellä kertaa,
+sivusto ei ole missään vaiheessa puoliksi julkaistu.
+
+#### PROXN JULKAISTU 17.8.2026
+
+| Tiedosto | Muutos |
+|---|---|
+| `proxn-kasvohoito.html` | robots `index, follow` |
+| `sitemap.xml` | ProXN mukaan, priority 0.9, samaan tasoon kuin hinnasto ja mikroneulausopas |
+| `index.html` | kortti 01 "Ensikäynti" → "Kliininen mikroneulaus", ProXN-maininta hoitojen jälkeen, ProXN-maininta kontraindikaatio-osion loppuun, `hasOfferCatalog` 6 → 12 tarjousta |
+| `mikroneulaus-sopiiko-minulle.html` | kappale vasta-aiheiden jälkeen, linkki ProXN-sivulle |
+| `hinnasto.html` | viedään vihdoin, odottanut valmiina 11.8. alkaen |
+
+**Linkkejä ProXN-sivulle nyt kolmelta sivulta:** etusivu (2),
+hinnasto (2), soveltuvuusartikkeli (1).
+
+**Etusivun kontraindikaatio-osion uusi loppukappale** on julkaisun
+tärkein yksittäinen kohta. Lukija on juuri lukenut listan tilanteista
+joissa mikroneulaus ei sovi, ja saa heti tietää että vaihtoehto on
+olemassa. Aiemmin osio päättyi umpikujaan.
+
+**Etusivun rakennetta ei muutettu.** Osio on yhä nimeltään "Kliininen
+mikroneulaus" ja mikroneulaus on yhä päätuote, käyttäjän 10.8.
+linjauksen mukaisesti. ProXN tuli kahtena mainintana.
+
+**Tarkistettu ohjelmallisesti:** tagitasapaino viidessä tiedostossa,
+kaikki JSON-LD-lohkot jäsentyvät, sitemap on kelvollista XML:ää,
+ei NUL-tavuja.
 
 ### 14b-TYÖJÄRJESTYS: mistä jatketaan (tilanne 7.8.2026)
 
@@ -3552,13 +3644,160 @@ tuotemyyntiä ei synny odotetusti, hinnoittelu on avattava uudelleen.
 Vaihtoehdot silloin: hinnankorotus, lyhyempi hoitoaika tai
 sarja-alennuksen pienentäminen.
 
-#### AVOIN: kotihoitotuotteiden myyntihinnat
+#### KOTIHOITOTUOTTEIDEN HINNAT LUKITTU 12.8.2026
+
+```
+Recovery Cleansing Oil    200 ml     99 €     kate 29,0 %
+Balancing Cleansing Gel   200 ml     49 €     kate 28,3 %
+Prime Mist                200 ml     49 €     kate 20,6 %
+Antioxidant Therapy        30 ml    119 €     kate 27,2 %
+LF Master                  30 ml     99 €     kate 27,7 %
+Sun Barrier SPF 50         50 ml     69 €     kate 29,1 %
+```
+
+Kate koko sarjasta kerran myytynä noin 106 €. Kaikki hinnat päättyvät
+yhdeksään käyttäjän toiveesta.
+
+##### Kate vai kerroin: termi selvitettiin
+
+Maahantuojan ohje oli **kate 40–50 %, suositus eikä sitova**.
+Käyttäjä oli tottunut laskemaan hinnan kaavalla tukku × 1,4.
+**Nämä eivät ole sama asia:**
+
+```
+kate-%  = (myyntihinta − ostohinta) / myyntihinta
+kerroin =  myyntihinta / ostohinta
+```
+
+Tukku × 1,4 tuottaa katteen **28,6 %**, ei 40 %. Vastaavuudet:
+
+| Tavoiteltu kate | Kerroin | | Käytetty kerroin | Toteutuva kate |
+|---|---|---|---|---|
+| 40 % | × 1,67 | | × 1,4 | 28,6 % |
+| 50 % | × 2,00 | | × 1,5 | 33,3 % |
+
+40 prosentin katteella hinnat olisivat olleet 119, 59, 65, 145 ja 80 €.
+**Käyttäjä valitsi kertoimen 1,4.**
+
+##### Miksi matalampi kate on tässä perusteltu
+
+1. **Suunta on korjattavissa vain toiseen suuntaan.** Myyntidataa ei
+   ole. Hinnan nostaminen myöhemmin on tavallista, julkaistun hinnan
+   laskeminen kertoo asiakkaalle että ensimmäinen hinta oli väärä.
+2. **Tuotteet eivät ole se mistä raha tulee, vaan sarjat** (570 ja
+   1080 €). Sivu sanoo että kotihoito ratkaisee suuren osan
+   lopputuloksesta. Jos hinta estää oston, tulos jää heikommaksi ja
+   sarjan jatko on epävarmempi. Antioxidant Therapyn 33 euron
+   lisäkate ei ole sen riskin arvoinen.
+3. Hinnoittelu pysyy yhtenäisenä muun toiminnan kanssa.
+
+**Prime Mist on tietoinen poikkeus.** Sen kate jää 20,6 prosenttiin,
+koska yhdeksään päättyvistä vaihtoehdoista seuraava olisi 59 € (34 %).
+Käyttäjä 12.8.: *"sekin on arvokas kasvovesi sarjassa mutta silti edes
+jotenkin kohtuullinen."*
+
+**Seurattava: Sun Barrier 69 €.** Se on listan ainoa vertailukelpoinen
+tuote, koska asiakas osaa verrata 50 ml SPF 50 -aurinkovoidetta
+apteekin ja muiden ammattisarjojen hintoihin. Jos jokin jää hyllyyn,
+se on tämä.
+
+##### Korjaus: LF Master on kotihoitotuote
+
+Olin luokitellut LF Masterin ammattikäyttöön. **Väärin.** Maahantuojan
+hinnastossa se on ryhmässä "Ammattilais- ja kotihoitotuotteet".
+Pelkästään ammattikäyttöön ovat vain Xanthohumol Recovery Treatment,
+PHA Solution ja Novel Peel. Käyttäjä huomasi puutteen.
+
+##### Mitä tehtiin 12.8.2026
+
+- **`proxn-kasvohoito.html`**, Kotihoito-osio: kuuden tuotteen
+  ruudukko `.tuote-grid`, kolme palstaa. Kortissa nimi ja hinta samalla
+  rivillä, koko sen alla ja **kaksi tai kolme virkettä** siitä mitä
+  tuote tekee. Ruudukko on koko leveydellä johdannon ja kuvan alla,
+  ei vasemmassa palstassa, koska kuusi tuotetta kuvauksineen olisi
+  kaatanut osion tasapainon.
+
+  **Ensin tehtiin pelkkä hintalistaus ilman kuvauksia** (nimi, koko,
+  hinta `.price-rows`-tyylillä). Käyttäjä pyysi 12.8. lisäämään pari
+  kolme lausetta per tuote, jolloin rivimuoto ei enää riittänyt ja
+  rakenne vaihdettiin korttiruudukoksi.
+
+  Kuvaukset on kirjoitettu vain siitä mitä lähteissä on: tuotelappujen
+  ainesosat, protokollan käyttötapa ja valmistajan ohje siitä milloin
+  kotikäyttö aloitetaan. Esimerkiksi Antioxidant Therapystä ja
+  LF Masterista sanotaan että käyttö aloitetaan hoitoa seuraavana
+  päivänä, koska protokollissa lukee niin.
+- **`hinnasto.html`**: uusi osio **Kotihoitotuotteet** lisäalueiden
+  jälkeen, ennen "Mitä hintaan sisältyy". Samat `.hinta-rivi`-tyylit
+  kuin hoidoilla, kuvaukset kertovat mitä tuote tekee.
+- **Rakenteinen data molemmille sivuille:** kuusi `Product`-noodia,
+  kullakin `@id`, `brand: ProXN`, ja `Offer` jossa hinta,
+  `availabilityStarts: 2026-09-07` ja `seller` viittaa studioon.
+  Sama `@id` molemmilla sivuilla, joten kyseessä on yksi entiteetti
+  eikä kahta kilpailevaa.
+- Hinnaston meta-kuvaus mainitsee nyt myös kotihoitotuotteet.
+
+**Muistettava: ylläpitovelvoite.** Kun maahantuoja korottaa
+tukkuhintoja, sivuston hinnat on päivitettävä kahteen tiedostoon ja
+neljään kohtaan (näkyvä listaus ja rakenteinen data kummallakin
+sivulla).
+
+#### AVOIN aiemmin, nyt ratkaistu: kotihoitotuotteiden myyntihinnat
 
 **Tukkuhinnat ovat tiedossa, myyntihintoja ei ole päätetty.** Koska
 tuotemyynti on nyt osa ProXN:n kannattavuuslaskelmaa, hinnat on
 päätettävä ennen avausta. Muuten tuotteita myydään tietämättä paljonko
-ne tuottavat. Tuotteet myydään vain studiossa eikä hintoja julkaista
-sivustolla (päätös 7.8.), mutta hinnan on silti oltava olemassa.
+ne tuottavat.
+
+**Käyttäjän linjaus 12.8.2026: kun hinnat on päätetty, tuotteet
+lisätään listauksena ProXN-sivun Kotihoito-osioon.**
+
+Kotihoitoon myytävät tuotteet ovat nykyisellä tilauksella nämä viisi:
+
+| Tuote | Tehtävä |
+|---|---|
+| Recovery Cleansing Oil | puhdistusöljy, ei riko rasvakerrosta |
+| Balancing Cleansing Gel | puhdistusgeeli, aknehoidon rinnalle |
+| Prime Mist | kosteuttava suihke |
+| Antioxidant Therapy | kotihoidon keskeisin, jatkaa hoidon työtä |
+| Sun Barrier | aurinkosuoja SPF 50 |
+
+Ammattikäyttöön jäävät PHA Solution, Xanthohumol Complex -ampulli ja
+LF Master, eli ne eivät kuulu listaukseen.
+
+#### PÄÄTÖS 12.8.2026: tuotehinnat tulevat myös sivustolle
+
+**Tämä kumoaa 7.8. tehdyn päätöksen** siitä ettei tuotehintoja
+julkaista sivustolla. Käyttäjä: *"Mielestäni hinnat täytyy tulla myös
+sivustolle."*
+
+Seuraukset, jotka hoidetaan kun hinnat on päätetty:
+
+1. **Tuotelistaus hintoineen ProXN-sivun Kotihoito-osioon.**
+2. **Rakenteinen data.** Julkaistu hinta kuuluu omaksi noodikseen,
+   ei pelkäksi tekstiksi. Kotihoitotuotteet ovat `Product`-noodeja
+   omine `Offer`-hintoineen, eivät osa hoidon `Service`-noodia.
+   Palvelu ja tavara ovat schema.orgissa eri asioita.
+3. **Ratkaistava: tulevatko tuotteet myös `hinnasto.html`:ään.**
+   Hinnaston otsikko on "Hoidot ja hinnat", ja se on sivuston
+   luonteva paikka hinnoille. Jos tuotteet ovat vain ProXN-sivulla,
+   hinnasto on epätäydellinen. Suositus: molempiin, hinnastoon oma
+   osio "Kotihoitotuotteet".
+4. **Ylläpitovelvoite syntyy.** Kun maahantuoja korottaa tukkuhintoja,
+   sivuston hinnat on päivitettävä. Aiemmin tätä ei ollut, koska
+   hinnat olivat vain studiossa.
+
+**Muista myös fyysinen hintamerkintä.** Aiempi selvitys koski
+palveluiden hinnastoa. Myytävät tuotteet ovat kulutushyödykkeitä, ja
+niiden myyntihinnan on oltava kuluttajan havaittavissa myös
+liikehuoneistossa, ei pelkästään sivustolla. Tämä on eri velvoite kuin
+hoitojen hinnasto, ja se kannattaa varmistaa samalla kun hinnat
+päätetään.
+
+**Asetteluhuomio:** Kotihoito-osio on tällä hetkellä `.grid-side`,
+vasemmalla teksti ja oikealla antioksidanttikuva. Viiden tuotteen
+listaus mahtuu vasempaan palstaan `.care-list`-tyylillä, jolloin kuva
+säilyy. Jos listaus kasvaa, kuva siirtyy tai poistuu.
 
 ### Sarjahoitojen välit ja määrät — KORJATTU 10.8.2026
 

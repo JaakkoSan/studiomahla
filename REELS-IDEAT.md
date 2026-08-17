@@ -32,7 +32,7 @@ orientointiajalla per dia.
 
 ## 1. Numerot ja tutkimusnäyttö
 
-### 1.1 400 prosenttia ★★★
+### 1.1 400 prosenttia ★★★ — KÄYTETTY 17.8.2026
 **Lähde:** Sarjahoito, Tutkimusnäyttö
 **Kesto:** n. 15 s
 
@@ -118,7 +118,7 @@ Ammattilaislaite säätää neulasyvyyden 0,25 millimetrin tarkkuudella.
 Otsa, nenä, posket ja silmänympärys vaativat kaikki eri syvyyden.
 Rullassa syvyys on kiinteä.
 
-### 2.4 Steriili joka kerta ★★★
+### 2.4 Steriili joka kerta ★★★ — KÄYTETTY 17.8.2026
 **Lähde:** Rulla vai kliininen, Mikä on mikroneulaus
 **Kesto:** n. 14 s
 
