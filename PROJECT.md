@@ -2326,7 +2326,7 @@ linjauksen mukaisesti. ProXN tuli kahtena mainintana.
 kaikki JSON-LD-lohkot jäsentyvät, sitemap on kelvollista XML:ää,
 ei NUL-tavuja.
 
-#### ⚠ LÖYDÖS 17.8.2026: `assets/og-default.jpg` puuttuu GitHubista
+#### ✅ RATKAISTU 17.8.2026: `assets/og-default.jpg` puuttui GitHubista
 
 Käyttäjä pyysi tarkistamaan assets-kansion julkaisun jälkeen.
 ProXN-tiedostot olivat kaikki paikallaan ja vanha `proxn-logo.jpg` oli
@@ -2345,8 +2345,8 @@ Linkki näyttää pelkältä tekstiltä.
 päivätty 26.5.2026, joten se on todennäköisesti jäänyt lataamatta
 alusta asti tai poistettu jossain vaiheessa vahingossa.
 
-**Korjaus: lataa `assets/og-default.jpg` GitHubiin.** Tiedosto on
-työkansiossa valmiina, oikean kokoinen eikä vaadi muutoksia.
+**Korjattu 17.8.2026.** Käyttäjä latasi tiedoston GitHubiin. Kahdeksantoista
+sivun `og:image`- ja `twitter:image`-tagit toimivat taas.
 
 **Sivuvirhe tarkistuksessa, kirjattu ettei toistu:** ensimmäinen
 skriptini etsi viittauksia hahmolla joka vaati lainausmerkin tai
@@ -6576,3 +6576,99 @@ lauseen tarkoitus eikä valikoiman kuvaus:
   viittaa valmistautumiseen ja punoitukseen, ei hoitoihin
 
 **Kun LED julkaistaan, nämä viisi pitää käydä läpi uudelleen.**
+
+
+## 17.8.2026 — ProXN-linkitys blogeihin
+
+### Lähtötilanne
+
+Kävin läpi kaikki 24 sivua: linkkigraafin, sitemapin ja blogitekstien
+sisällön. ProXN-sivulle tuli **neljä sisäistä linkkiä**, joista yksi
+blogista. Vertailuksi `mikroneulaus-sopiiko-minulle.html` 16,
+`mikroneulaus-sarjahoito.html` 13. Toinen päähoito oli sisäisesti
+linkitetty heikommin kuin yksittäiset blogiartikkelit.
+
+**En ollut tehnyt tätä auditointia aiemmin**, vaikka olin 16.–17.8.
+käynyt sivuston läpi ristiriitojen varalta. Käyttäjä kysyi asiaa
+suoraan. Ristiriitatarkistus ei ole sama asia kuin puuttuvan sisällön
+tarkistus, ja tein vain edellisen.
+
+### Käyttäjän tarkennus julkaisutilanteesta
+
+Kaksi "orpoa" artikkelia eivät olleet orpoja vaan **julkaisemattomia**:
+
+- `herkka-iho-ruusufinni-mikroneulaus.html` — julkaistaan 17.8.
+- `mita-mikroneulaus-ei-tee.html` — julkaistaan ensi viikolla
+
+Olin päätellyt 0 sisääntulevaa linkkiä + puuttuva sitemap-merkintä =
+orpo. Oikea selitys oli yksinkertaisempi. **Julkaisematon luonnos
+näyttää linkkigraafissa täsmälleen samalta kuin orpo sivu.**
+
+### Tehdyt muutokset
+
+| Tiedosto | Muutos |
+|---|---|
+| `herkka-iho-ruusufinni-mikroneulaus.html` | Uusi h2 "Kun mikroneulaus ei ole oikea hoito" vasta-aiheosion jälkeen. Yhteenveto: "osalle se ei ole oikea ratkaisu juuri nyt" → "osalle ProXN-kasvohoito on parempi reitti". ProXN-linkki "Lue lisää" -osioon. |
+| `aknearpien-hoito-mikroneulauksella.html` | Uusi kappale "Miksi aktiivinen akne pitää rauhoittaa ensin" -osioon: aktiiviseen vaiheeseen on nyt oma hoitonsa. |
+| `mikroneulaus-sopiiko-minulle.html` | "hoito aloitetaan akneen rauhoittavasti muilla menetelmillä" → ProXN:n aknehoito nimeltä. |
+| `mita-mikroneulaus-ei-tee.html` | Kaksi kappaletta "Milloin kannattaa harkita toista menetelmää" -osioon. **Sisältö valmis, ei julkaistu.** |
+| `blogi.html` | Kortti herkän ihon artikkelille, päivämääräjärjestyksessä (30.7., sijoittuu 5.8. ja 28.7. väliin). |
+| `sitemap.xml` | `herkka-iho-ruusufinni-mikroneulaus.html`, lastmod 17.8., priority 0.8. |
+
+Sisääntulevat linkit ProXN-sivulle: **4 → 7**.
+
+### Oma virhe: väärä tiedosto
+
+Ehdotin korjattavaksi lausetta *"hoito aloitetaan akneen rauhoittavasti
+muilla menetelmillä"* ja sanoin sen olevan
+`aknearpien-hoito-mikroneulauksella.html`:ssä. Se oli
+`mikroneulaus-sopiiko-minulle.html`:ssä. Molemmissa oli oikea aukko,
+mutta eri sanamuodolla, ja siteerasin toisen tiedoston lauseen toisen
+nimissä. Korjasin molemmat.
+
+**Syy:** poimin lauseen grep-tulosteesta jossa oli useita tiedostoja
+peräkkäin enkä tarkistanut kummasta lohkosta se tuli.
+
+### Tarkoituksella tekemättä
+
+- **Kohta 5 (`mikroneulauksen-jalkihoito.html`)** — käyttäjä hylkäsi.
+  ProXN on kehitetty myös invasiivisten hoitojen jälkeiseen
+  palautumiseen, joten linkki olisi asiallinen, mutta jälkihoito-ohjeen
+  keskellä se olisi lähempänä myyntiä kuin virheen korjausta.
+- **Ristiinlinkitys muista artikkeleista herkän ihon artikkeliin** —
+  sillä on yhä vain yksi sisääntuleva linkki (blogilistaus). Luonnollisia
+  linkittäjiä olisivat `mikroneulaus-sopiiko-minulle.html` (käsittelee
+  ruusufinniä) ja `proxn-kasvohoito.html`. Ei pyydetty.
+
+### Julkaisupäivä siirretty 17.8.2026
+
+Herkän ihon artikkelin `datePublished` oli **30.7.2026**, luonnoksen
+kirjoituspäivä. Koska artikkeli julkaistiin 17.8., se olisi
+blogilistauksessa sijoittunut kolmanneksi ja näyttänyt heti kolme
+viikkoa vanhalta. Käyttäjä päätti siirtää päivän. Muutetut kohdat:
+JSON-LD `datePublished` ja `dateModified`, artikkelin näkyvä
+`Julkaistu`-rivi, ja blogikortin `<time>`. Kortti siirrettiin
+päivämääräjärjestyksessä kärkeen, kiinnitetyn oppaan jälkeen.
+
+**Sama tarkistus ensi viikolla** `mita-mikroneulaus-ei-tee.html`:lle.
+Luonnoksen kirjoituspäivä ei ole julkaisupäivä.
+
+### Ristiinlinkitys tehty
+
+| Mistä | Mihin | Sijainti |
+|---|---|---|
+| `mikroneulaus-sopiiko-minulle.html` | herkkä iho | "Couperosa ja rosacea" -kappale + "Lue lisää" |
+| `proxn-kasvohoito.html` | herkkä iho | "Lue myös" -osio |
+
+Sisääntulevat linkit:
+
+- `proxn-kasvohoito.html` **4 → 7**
+- `herkka-iho-ruusufinni-mikroneulaus.html` **0 → 3**
+
+### Ladattavat tiedostot GitHubiin
+
+`herkka-iho-ruusufinni-mikroneulaus.html`,
+`aknearpien-hoito-mikroneulauksella.html`,
+`mikroneulaus-sopiiko-minulle.html`, `proxn-kasvohoito.html`,
+`blogi.html`, `sitemap.xml`.
+**Ei** `mita-mikroneulaus-ei-tee.html` — se odottaa ensi viikkoa.
