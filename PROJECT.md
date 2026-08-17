@@ -6672,3 +6672,76 @@ Sisääntulevat linkit:
 `mikroneulaus-sopiiko-minulle.html`, `proxn-kasvohoito.html`,
 `blogi.html`, `sitemap.xml`.
 **Ei** `mita-mikroneulaus-ei-tee.html` — se odottaa ensi viikkoa.
+
+
+## 17.8.2026 — Etusivu: herkkä iho ja ProXN-linkki UKK:hon
+
+### Vahvistettu linjaus
+
+Etusivu on toistaiseksi **pääasiassa mikroneulaussivu**. Tämä on päätetty
+aiemmin eikä sitä avata uudelleen. Nostin asian esiin uudelleen, ja
+käyttäjä ohjasi takaisin: *"Tämä on jo päätetty aiemmin — tätä ei
+tarvitse miettiä tässä kohtaa uudelleen."*
+
+Taustaksi kirjattu tosiasia: kymmenestä sisältöosiosta **seitsemän
+nimeää mikroneulauksen otsikossaan**. ProXN on kahtena sivulauseena.
+Tämä on tietoinen valinta, ei epäsuhta jota pitäisi korjata.
+
+### 1. Herkkä iho etusivulle
+
+**Aukko:** etusivun haastekortit ovat aknearvet, juonteet,
+pigmenttimuutokset ja laajentuneet ihohuokoset — kaikki rakenteellisia.
+Studion oma linjaus on kolme painopistettä: akne, ärtynyt ja herkkä
+iho, ikääntymisen merkit. Herkkä iho ei esiintynyt etusivulla missään
+kohtaa asiana jota studiolla hoidetaan.
+
+**Ratkaisu:** kappale haastekorttien **jälkeen**, ei viidentenä
+korttina. Ruudukon otsikko on "Mihin haasteisiin mikroneulaus auttaa",
+joten herkkä iho korttina olisi ollut asiavirhe: mikroneulaus ei hoida
+herkkää ihoa, vaan sitä muokataan herkälle iholle sopivaksi.
+
+Kappale linkittää sekä `proxn-kasvohoito.html`:ään että
+`herkka-iho-ruusufinni-mikroneulaus.html`:ään.
+
+### 2. UKK: uusi kysymys 05
+
+Käyttäjä halusi ProXN-linkin UKK:hon, mutta etusivun mikroneulausluonnetta
+muuttamatta. **Ratkaisu on kysymys joka on itsessään mikroneulauskysymys
+ja jonka rehellinen vastaus on ProXN:**
+
+> **05 — Entä jos mikroneulaus ei sovi minulle?**
+
+Linkki ei tule ProXN-mainoksesta vaan mikroneulauksen rajasta. Sivulla
+on jo osio "Kenelle mikroneulaus ei sovi", joka päättyi umpikujaan
+ennen kuin ProXN lisättiin siihen 17.8. UKK-kohta vastaa samaan
+kysymykseen eri näkökulmasta: mitä minulle käytännössä tapahtuu
+käynnillä, ei mitä vaihtoehtoja on olemassa. Tekstit eivät ole
+päällekkäisiä.
+
+"Ajanvaraus ja maksutavat" siirtyi numerosta 05 numeroon 06 ja pysyy
+viimeisenä.
+
+**`FAQPage`-rakenteinen data päivitetty vastaavasti.** Uusi kysymys
+täsmää näkyvään tekstiin sanatarkasti.
+
+### Vanha löydös: FAQPage ei täsmää näkyvään tekstiin
+
+Kahdessa kohdassa rakenteinen data ja näkyvä teksti eroavat jo
+ennestään:
+
+- **Kysymys 04:** näkyvässä tekstissä on lopussa linkkilause "Lue mitä
+  tutkimus oikeasti sanoo mikroneulauksen vaikutuksista", jota ei ole
+  rakenteisessa datassa.
+- **Kysymys 06:** rakenteisessa "Timman kautta osoitteessa
+  https://varaa.timma.fi/studiomahla", näkyvässä "Voit siirtyä
+  varaamaan aikasi suoraan tästä".
+
+Kumpikaan ei ole vakava — Google sallii pienet erot, ja linkkilauseen
+poisjättö on tavallinen käytäntö. **Ei korjattu, koska ei pyydetty.**
+Syntyaika tuntematon.
+
+### Tarkistus
+
+Kaikki kuusi UKK-kohtaa vertailtiin ohjelmallisesti näkyvän tekstin ja
+`FAQPage`-datan välillä. Kysymykset täsmäävät kaikissa kuudessa,
+vastaukset neljässä kuudesta (poikkeukset yllä).
