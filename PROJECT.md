@@ -2117,15 +2117,23 @@ ProXN on ammattikäyttöön tarkoitettu hoito herkälle, reaktiiviselle ja ikä�
 
 **Ensikäynti — 200 €**
 
+**Teksti uusittu 17.8.2026**, kun ensikäynti nostettiin Timman
+ensimmäiseksi palveluksi. Vanha teksti oli lyhyt, koska ensikäynti oli
+kolmas kolmesta rinnakkaisesta vaihtoehdosta. Ensimmäisenä listalla se
+on monelle asiakkaalle ensimmäinen kohta jonka hän lukee studiosta,
+joten se kertoo nyt myös mitä hoitoja studiolla on.
+
 ```
-Varaa tämä jos et tiedä mikä hoito sinulle sopii.
-
-Teemme iho-analyysin, käymme läpi esitiedot ja päätämme yhdessä kumpi hoito on sinulle oikea: kliininen mikroneulaus vai ProXN-kasvohoito. Valittu hoito tehdään samalla käynnillä, joten et lähde pelkän suunnitelman kanssa.
-
-Hinta on sama kuin suorissa varauksissa. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan.
-
-Hoidon tekee terveydenhuollon ammattilainen.
+Varaa tämä jos et vielä tiedä mikä hoito sinulle sopii. Teemme iho-analyysin ja käymme läpi esitiedot: ihon sen hetkisen tilanteen, aiemmat hoidot, käytössä olevat tuotteet ja mahdolliset esteet hoidolle. Sen perusteella päätämme yhdessä minkä hoidon teemme. Kliininen mikroneulaus tehdään MicroPen EVO -laitteella. Ihoon tehdään mikrokanavia säädettävällä neulasyvyydellä, mikä käynnistää ihon oman korjausvasteen ja uuden kollageenin muodostuksen. Sopii arpiin, juonteisiin, laajentuneisiin ihohuokosiin ja ihon rakenteen parantamiseen. ProXN-kasvohoito ei riko ihoa, vaan vahvistaa ihon omaa suojakerrosta ja antioksidanttipuolustusta Xanthohumol Complexilla. Sopii herkälle, reaktiiviselle ja ikääntyvälle iholle sekä toistuvaan akneen, ja myös silloin kun mikroneulaus ei sovi. Valittu hoito tehdään samalla käynnillä, joten et lähde pelkän suunnitelman kanssa. Lopuksi käymme läpi jälkihoito-ohjeet ja suunnittelemme jatkon. Hinta on sama kuin suorissa varauksissa. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan mukaan. Hoidon tekee terveydenhuollon ammattilainen.
 ```
+
+*Vanha versio (10.8.–17.8.2026):* "Varaa tämä jos et tiedä mikä hoito
+sinulle sopii. / Teemme iho-analyysin, käymme läpi esitiedot ja
+päätämme yhdessä kumpi hoito on sinulle oikea: kliininen mikroneulaus
+vai ProXN-kasvohoito. Valittu hoito tehdään samalla käynnillä, joten et
+lähde pelkän suunnitelman kanssa. / Hinta on sama kuin suorissa
+varauksissa. Jos päädyt sarjahoitoon, tämä käynti lasketaan sarjaan
+mukaan. / Hoidon tekee terveydenhuollon ammattilainen."
 
 #### Sarjapalvelut
 
@@ -2435,6 +2443,101 @@ hoitava voide. Kolme jälkimmäistä ovat hoitokuvausta.
 **Tuotekuvaukset poistettiin hinnastosta mutta säilyvät
 ProXN-sivulla**, jossa ne ovat kolmen palstan korteissa. Sama tieto ei
 tarvitse olla kahdessa paikassa, ja hoitosivu on sille oikea paikka.
+
+#### ProXN yläpalkkiin 17.8.2026
+
+`assets/layout.js`, `HEADER_HTML`. Navigaatio on nyt:
+
+```
+ProXN | Hinnasto | Blogi | [Ajanvaraus]
+```
+
+Lisätty myös `is-current`-tila ProXN-sivulle, samalla tavalla kuin
+hinnastolla ja blogilla jo oli.
+
+**Mobiilileveys tarkistettu laskennallisesti.** Neljäs elementti mahtuu:
+400 pikselin näytöllä navigaatio vie noin 304 px kun tilaa on 376 px.
+Jaettu `style.css` pienentää linkit 10,5 pikseliin alle 768 px ja
+9,5 pikseliin alle 400 px, ja piilottaa brändinimen kokonaan alle
+400 px, joten tilaa jää.
+
+**Huomio rakenteesta:** mikroneulaus ei ole navigaatiossa, koska se on
+etusivu. ProXN on, koska se on oma sivunsa. Epäsymmetria on siis
+tarkoituksenmukainen niin kauan kuin etusivu on mikroneulaussivu.
+**Jos etusivu joskus jaetaan (vaihe 3), navigaatioon tulee kaksi
+hoitolinkkiä ja tämä ratkeaa itsestään.**
+
+### Sivustoauditointi 17.8.2026
+
+Käyttäjä pyysi käymään koko sivuston ja blogit läpi ProXN-julkaisun
+jälkeen. Skannattiin 24 HTML-sivua: robots-tila, sanamäärä,
+esiintyminen blogilistalla ja sitemapissa, sekä sisältöhaut
+vanhentuneista väitteistä.
+
+#### Tehty: `mita-ensikaynnilla-tapahtuu.html` kirjoitettu uusiksi
+
+Artikkeli oli rakenteellisesti väärä, ei vähän vanhentunut. **ProXN ei
+esiintynyt siinä kertaakaan**, kokonainen osio oli nimeltään "Itse
+mikroneulaushoito", ja valmistautumisohjeet olivat
+mikroneulauskohtaisia vaikka ProXN ei vaadi valmistautumista.
+
+**Kirjoitettiin uusiksi, ei jaettu kahtia.** Perustelu: **yksitoista
+sivua linkittää siihen**, eli se on sivuston linkitetyin artikkeli.
+Jako olisi hajottanut sen linkkivoiman ja pakottanut käymään läpi
+yksitoista linkkiä. Lisäksi uusi mikroneulausartikkeli olisi
+kilpaillut omien sivujen kanssa: `mikroneulaus-opas.html` sisältää jo
+osion "Miten hoito etenee käytännössä" ja
+`mita-on-kliininen-mikroneulaus.html` osion "Mitä hoidon aikana
+tapahtuu".
+
+1122 → 1379 sanaa. Osoite ennallaan.
+
+| Muutos | |
+|---|---|
+| Otsikko | "Mitä ensikäynnillä tapahtuu" → "Mitä ensimmäisellä käynnillä tapahtuu". Sana ensikäynti tarkoittaa nyt myös yhtä palvelua, joten geneerinen otsikko on tarkempi |
+| Uusi osio | "Kolme tapaa varata" |
+| Ennen kuin saavut | Haarautuu. Mukana käytännön neuvo: **jos varaat ensikäynnin etkä tiedä kumpi hoito tehdään, noudata mikroneulauksen ohjeita, niin molemmat pysyvät auki** |
+| Itse hoito | Kaksi h3-alaosiota, mikroneulaus ja ProXN |
+| Hoidon jälkeen | Haarautuu: punoitus vs. ei rajoituksia |
+| Jälkihoito | Haarautuu |
+| Hoitosuunnitelma | Ensin hoitomuoto, sitten määrä. Hoitoväli kerrotaan molemmille |
+| Meta ja JSON-LD | title, description, og, twitter, headline, breadcrumb |
+
+Ensimmäinen versio sisälsi kaksi `<h2>Yhteenveto</h2>`-otsikkoa.
+Korjattu, ensimmäinen on nyt "Käynti lyhyesti".
+
+#### Muut löydökset, eivät vielä tehty
+
+**1. Kaksi orpoa artikkelia `index, follow` -tilassa.** Kumpikaan ei
+ole blogilistalla eikä sitemapissa, eli ne ovat valmiita mutta
+näkymättömiä:
+
+- `mita-mikroneulaus-ei-tee.html` (973 sanaa), automaation tuottama
+  12.8., odottaa hyväksyntää
+- `herkka-iho-ruusufinni-mikroneulaus.html` (1084 sanaa), löytyi
+  12.8. automaation yhteydessä
+
+**Jälkimmäinen on huomionarvoinen: se käsittelee herkkää ihoa ja
+ruusufinniä, mikä on täsmälleen ProXN:n kohderyhmä.** Jos se
+julkaistaan, siihen kuuluu ProXN-linkki ja se on vahva sisääntuloväylä
+uudelle hoidolle.
+
+**2. `mita-mikroneulaus-ei-tee.html` on luonteva ProXN-osoitin.**
+Artikkeli käsittelee mikroneulauksen rajoja, eli sama logiikka kuin
+etusivun kontraindikaatio-osiossa.
+
+**3. "Aloita ensikäynnillä" -CTA on kaikilla 15 julkisella sivulla.**
+CTA on sivukohtainen, ei `layout.js`:ssä. Otsikko nimeää nyt yhden
+palvelun kolmesta. Mikroneulausartikkelin lukija, joka tietää mitä
+haluaa, ohjataan ensikäyntiin vaikka hän voisi varata hoidon suoraan.
+Teksti itsessään ei ole väärin, joten tämä ei ole kiireellinen.
+**Vaihtoehto: otsikoksi "Varaa aika", leipäteksti ennallaan.**
+15 tiedostoa.
+
+**4. Ei löytynyt:** vanhoja 5.9.-päivämääriä, virheellisiä hintoja,
+väitteitä että studiolla olisi vain yksi hoito, eikä rikkinäisiä
+assets-viittauksia. `sitemap.xml`:n "admin.html" oli väärä hälytys,
+se esiintyy vain kommentissa joka kieltää lisäämästä sitä.
 
 ### 14b-TYÖJÄRJESTYS: mistä jatketaan (tilanne 7.8.2026)
 
@@ -6307,3 +6410,169 @@ lopputulokset ja tilanne.
 ---
 
 **Viimeksi päivitetty**: 2026-08-12
+
+
+## 17.8.2026 — Varausmallin uudelleenjärjestely: ensikäynti ainoana ovena
+
+### Päätös
+
+Timman rakenne ja hinnaston järjestys:
+
+| Palvelu | Hinta |
+|---|---|
+| Ensikäynti | 200 € |
+| Kliininen mikroneulaus, yksittäinen hoito (aiemmin käyneille) | 200 € |
+| ProXN-kasvohoito, yksittäinen hoito (aiemmin käyneille) | 200 € |
+| Mikroneulauksen sarjahoito 3× / 6× | 570 € / 1080 € |
+| ProXN-sarjahoidot 3× / 6× | 570 € / 1080 € |
+| LED (myöhemmin) | oma hintansa |
+
+### Peruste
+
+Aiempi malli tarjosi kolme 200 euron vaihtoehtoa rinnakkain (mikroneulaus, ProXN,
+ensikäynti). Ne sekoittivat kaksi eri akselia: **mikä hoito** ja **onko asiakas
+käynyt aiemmin**. Kahdella hoidolla se toimi vielä, kolmella ei: jokainen uusi
+hoito olisi lisännyt kaksi riviä yhden sijaan.
+
+Ensikäynti ei ole hoitovalinta vaan asiakkaan tila. Kun se erotetaan omaksi
+palvelukseen, uusi hoito lisää vain yhden rivin.
+
+### Sivuvaikutus terminologiaan
+
+Sanaa "ensikäynti" esiintyy sivustolla 97 kertaa 17 sivulla, sekä yleisnimenä
+että palvelun nimenä. Vanhassa mallissa tämä oli monitulkintaista, koska
+ensikäynti oli vain yksi kolmesta reitistä. Uudessa mallissa merkitykset
+yhtyvät: jokainen ensimmäinen käynti *on* ensikäynti. Yksikään noista 97
+esiintymästä ei siksi vaatinut muokkausta.
+
+### LED-hinnoittelu
+
+Yksittäinen LED-hoito on halvempi, ja hinnat on jo päätetty. Jos asiakas päätyy
+ensikäynnillä LED-kertahoitoon, hän maksaa vähemmän. Jos hän päätyy LED-sarjaan,
+hän maksaa sarjahinnan. Ensikäynnin 200 euroa on siis käytännössä yläraja, ei
+kiinteä hinta. **Avoin:** kun LED julkaistaan, Timman ensikäyntirivin
+hintanäyttö pitää tarkistaa (todennäköisesti "alkaen"), ja ensikäynnin
+kuvaukseen kirjoitetaan miten hinta määräytyy.
+
+### Tehdyt sivumuutokset 17.8.
+
+| Tiedosto | Muutos |
+|---|---|
+| `proxn-kasvohoito.html` | "Varaaminen ja hinta": kolmen reitin lista → ensikäynti ensin, yksittäiset hoidot aiemmin käyneille. CTA-virhe "varaa ensikäynti ja hoitosuositus" korjattu. JSON-LD-tarjouksen kuvaus. |
+| `hinnasto.html` | Osion nimi ja rivijärjestys: Ensikäynti ensin, kaksi hoitoa merkinnällä "Yksittäinen hoito aiemmin käyneille". Ingressi. |
+| `index.html` | Kortti 01 "Kliininen mikroneulaus" → "Ensikäynti". ProXN-maininnan sanamuoto. `hasOfferCatalog`: kahden tarjouksen nimet ja kuvaukset, Ensikäynti siirretty ensimmäiseksi. |
+| `mita-ensikaynnilla-tapahtuu.html` | "Kolme tapaa varata" → "Miten käynti varataan", kirjoitettu uudelleen. Yhteenveto. |
+| `mikroneulaus-sarjahoito.html` | "ensikäyntihinta" → "sama kuin yksittäisestä hoidosta"; "Ensikäynti (yksi hoito)" → "Ensikäynti tai yksittäinen hoito". |
+| `blogi.html` | Artikkelikortin otsikko ja kuvaus vastaamaan uudelleenkirjoitettua artikkelia. |
+
+### Huomio: uusi malli korjasi kaksi aiemmin löydettyä ristiriitaa itsestään
+
+16.–17.8. sivustoauditoinnissa merkittiin virheiksi:
+
+- `mikroneulaus-sarjahoito.html`: "Yleinen suositus on aloittaa ensikäynnillä (200 €)"
+- `milloin-aloittaa-mikroneulaus.html`: "2. Varaa ensikäynti Timmasta"
+
+Nämä olivat ristiriitaisia vain vanhassa kolmen rinnakkaisen reitin mallissa.
+Uudessa mallissa molemmat ovat kirjaimellisesti oikein, eikä niitä muokattu.
+Tämä on merkki siitä, että sivuston vanhempi teksti oli lähempänä uutta mallia
+kuin 11.–16.8. tehdyt muutokset — eli varsinainen poikkeama oli väliaikainen.
+
+
+### Korjaus samana päivänä: suora varaus säilyy kaikille
+
+Ehdotin että kaksi yksittäistä hoitoa merkittäisiin Timmassa ja
+hinnastossa tekstillä "(aiemmin käyneille)". **Käyttäjä hylkäsi tämän:**
+
+> *"Pidän edelleen niin että ihminen voi varata myös suoraan joko
+> mikroneulaus tai proxn eli ei kuitenkaan rajata vain jo aiemmin
+> käyneille koska joku kuitenkin haluaa aina varata suoraan. Mutta
+> ensikäynti pidetään ensimmäisenä."*
+
+Olin ratkaissut skaalautuvuusongelman rajaamalla, vaikka pelkkä
+järjestyksen muutos riitti. Rajaus olisi estänyt varauksen asiakkaalta
+joka tietää mitä haluaa — eli juuri siltä asiakkaalta jolle suora
+varaus on tarkoitettu.
+
+**Lopullinen malli:**
+
+| Timman järjestys | Kenelle | Hinta |
+|---|---|---|
+| 1. Ensikäynti | jos et tiedä kumpi hoito sopii | 200 € |
+| 2. Kliininen mikroneulaus | kaikille, myös ensimmäistä kertaa | 200 € |
+| 3. ProXN-kasvohoito | kaikille, myös ensimmäistä kertaa | 200 € |
+| 4.–7. Sarjahoidot | | 570 / 1080 € |
+
+Ensikäynnin asema ei ole pakko vaan **oletusreitti**: se on ensimmäisenä
+listalla, ja se on ainoa vaihtoehto jossa hoitomuotoa ei tarvitse
+päättää etukäteen. LED-skaalautuvuus säilyy, koska LED lisää yhden
+rivin listaan eikä muuta ensikäyntiä.
+
+Poistettu maininta "aiemmin käyneille" tiedostoista `hinnasto.html`
+(2 kpl), `index.html` (JSON-LD, 2 kpl), `mita-ensikaynnilla-tapahtuu.html`
+ja `proxn-kasvohoito.html`.
+
+
+### Kaksijakoisuussääntö: "kumpi" → "mikä" (17.8.2026)
+
+Käyttäjä muokkasi ensikäynnin Timma-tekstiä kahdesta kohdasta ja perusteli:
+
+> *"muutin näin koska tarjolla on periaatteessa enemmän kuin kaksi
+> hoitoa (useampia sarja ja proxn kaksi eri protokollaa jne)"*
+
+- *"kumpi hoito sinulle sopii"* → *"mikä hoito sinulle sopii"*
+- *"päätämme yhdessä kumman hoidon teemme"* → *"minkä hoidon teemme"*
+
+**Virhe, korjattu samana päivänä.** Kirjasin tähän ensin että
+"käyttäjä kirjoittaa Timman palvelutekstit yhtenä lohkona", koska
+kappalejaot puuttuivat sekä ProXN-tekstistä että tästä. Käyttäjä
+oikaisi:
+
+> *"tuo että muokkasin yhdeksi lohkoksi niin se oli vain copy pasten
+> tulos, ei tietoinen muutos."*
+
+Yleistin kahdesta havainnosta tyylisäännön, vaikka kumpikaan ei ollut
+valinta. **Muotoiluvalinnaksi ei saa päätellä mitään mikä voi olla
+kopioinnin sivutuote.** Kappalejaot ovat Timman teksteissä sallittuja,
+ja ehdotukset annetaan jatkossa kappalejaollisina.
+
+**Sääntö:** hoitovalikoimaa kuvaavat lauseet kirjoitetaan avoimeen
+muotoon ("mikä", "minkä", "hoito"), ei kaksijakoiseen ("kumpi",
+"kumman", "kumpikin", "molemmat"). Perusteena on että valikoima kasvaa:
+ProXN:llä on kaksi protokollaa, sarjoja on useita, ja LED on tulossa.
+
+**Muutetut kohdat sivustolla:**
+
+| Tiedosto | Ennen | Jälkeen |
+|---|---|---|
+| `hinnasto.html` | "et vielä tiedä kumpaa tarvitset" | "et vielä tiedä mikä hoito sinulle sopii" |
+| `mita-ensikaynnilla-tapahtuu.html` | "Studiolla on kaksi hoitoa." | "Studiolla on tarjolla useampi kliininen hoitomuoto." |
+| ” | "kumpi hoito sinulle sopii" | "mikä hoito sinulle sopii" |
+| ” | "kumman hoidon haluat" | "minkä hoidon haluat" |
+| ” | "kumpi hoito tehdään" / "molemmat vaihtoehdot" / "kumpi tahansa valitaan" | "mikä hoito tehdään" / "kaikki vaihtoehdot" / "riippumatta siitä mikä valitaan" |
+| ” | "kumpikin hoito alkaa kaksoispuhdistuksella" | "hoito alkaa aina kaksoispuhdistuksella" |
+| ” | "kumpi hoito on järkevä" | "mikä hoito on järkevä" |
+| ” | "et vielä tiedä kumpaa tarvitset" | "et vielä tiedä mikä hoito sinulle sopii" |
+| `proxn-kasvohoito.html` | "et vielä tiedä kumpi hoito sinulle sopii" | "mikä hoito sinulle sopii" |
+
+**Lukumäärää ei ilmoiteta lainkaan.** Ehdotin ensin muotoa "Studiolla
+tehdään kahta hoitoa", joka on sama väite toisin sanoin. Käyttäjä
+korjasi: *"Sanoisin jo tässä kohtaa että 'Studiolla on tarjolla useampi
+kliininen hoitomuoto' tms sanavalinta."* Sääntö ei siis ole "vältä
+sanaa kumpi" vaan **älä sido tekstiä hoitojen lukumäärään ollenkaan.**
+
+**Tarkoituksella muuttamatta jätetyt.** Viisi "kumpi"-muotoa jäi, koska
+ne ovat suoria kahden hoitomuodon vertailuja, joissa kaksijakoisuus on
+lauseen tarkoitus eikä valikoiman kuvaus:
+
+- `proxn-kasvohoito.html` "Kysymys ei ole kumpi hoito on parempi, vaan
+  mitä ihossa halutaan muuttaa" — vertailukappaleen kärkilause
+- `proxn-kasvohoito.html` "Kumpi tai kumpikin on sinun ihollesi oikea"
+  — sanoo nimenomaan että molemmat voidaan tehdä rinnakkain
+- `proxn-kasvohoito.html` "kumpi hoitopolku on omalla kohdalla
+  todennäköisempi" — viittaa linkitettyyn vertailuartikkeliin
+- `mita-ensikaynnilla-tapahtuu.html` "kumpikaan hoito ei tuota tulosta
+  yhdessä hetkessä" — lause luettelee molemmat perään
+- `mita-ensikaynnilla-tapahtuu.html` "ProXN ei vaadi kumpaakaan" —
+  viittaa valmistautumiseen ja punoitukseen, ei hoitoihin
+
+**Kun LED julkaistaan, nämä viisi pitää käydä läpi uudelleen.**
