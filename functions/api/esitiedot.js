@@ -10,8 +10,9 @@ const KONTRA_KEYS = [
   'raskaus', 'ihotulehdus', 'akne', 'herpes', 'keloidi', 'teras',
   'verenohennus', 'immunosuppressio', 'syopahoito', 'diabetes',
   'isotretinoiini', 'tupakointi',
+  'avohaava', 'leikkausarpi', 'ainesosaallergia',
 ];
-const CONSENT_KEYS = ['consent1', 'consent2', 'consent3', 'consent4'];
+const CONSENT_KEYS = ['consent1', 'consent2', 'consent3', 'consent4', 'consent5'];
 
 function sanitize(value, maxLength) {
   if (typeof value !== 'string') return '';
