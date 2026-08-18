@@ -7012,10 +7012,59 @@ kaikki toimistoilta ja työkalufirmoilta. Kyselyluvut koskevat
 verkkokaupan tuotesuosituksia, ei hoitosuosituksia. Chat-luku on
 valikoitumisharhaa: chatin avannut oli jo valmiiksi kiinnostuneempi.
 
-**Vielä tekemättä:** "Mihin etsit apua?" -linkkiosio etusivulle. Sama
-päätöspuu kuin widgetissä olisi ollut, mutta staattisena ja Googlen
-luettavana. Vastaa §14.5:n "Kenelle kumpi?" -kohtaa, mutta linkkilistana
-eikä nappina joka avaa kyselyn.
+### Suunnitelma: "Mihin etsit apua?" -linkkiosio etusivulle
+
+**EI TOTEUTETA VIELÄ.** Käyttäjä 18.8.2026: *"en ole aivan varma onko
+kuitenkaan juuri tässä kohtaa kuinka hyödyllinen."* Kirjattu
+suunnitelmaksi, ei tehtäväksi.
+
+Sama päätöspuu kuin chat-widgetissä olisi ollut, mutta staattisena
+linkkilistana: ei JS-koodia, ei tilaa, ei suodatusta, ja Google lukee
+sen. Vastaa §14.5:n "Kenelle kumpi?" -kohtaa, mutta linkkilistana eikä
+nappina joka avaa kyselyn.
+
+**Ehdotettu sijainti:** Tiimi-osion jälkeen, ennen mikroneulausosiota
+(neljäs osio). Hero ja filosofia avaavat sivun, mutta osio tulee ennen
+kuutta peräkkäistä mikroneulausosiota. Instagramin biolinkistä tuleva
+kylmä kävijä osuu siihen ilman että on ilmaissut mitään hakuintentiota.
+
+**Ehdotetut rivit:**
+
+| Rivi | Kohde |
+|---|---|
+| Aknearvet ja ihon epätasaisuus | `aknearpien-hoito-mikroneulauksella.html` |
+| Aktiivinen akne juuri nyt | `proxn-kasvohoito.html` |
+| Punoitus, ruusufinni tai herkkä iho | `herkka-iho-ruusufinni-mikroneulaus.html` |
+| Juonteet ja ikääntymisen merkit | `mikroneulaus-opas.html` |
+| Kaula, dekoltee tai kämmenselät | `mikroneulaus-kaula-dekoltee-kadet.html` |
+| En osaa vielä sanoa | `mita-ensikaynnilla-tapahtuu.html` |
+
+#### Kaksi ratkaisematonta ongelmaa
+
+**1. Päällekkäisyys haastekorttien kanssa.** Etusivulla on jo osio
+"Mihin haasteisiin mikroneulaus auttaa" neljällä kortilla (aknearvet,
+juonteet, pigmenttimuutokset, laajentuneet ihohuokoset). Kaksi "mikä
+sinua vaivaa" -lohkoa samalla sivulla on sekavaa, vaikka tehtävä on eri:
+kortit selittävät mitä mikroneulaus tekee, uusi osio ohjaa lukemaan.
+Silmäilevä kävijä ei näe eroa.
+
+Vaihtoehdot: haastekorttien otsikko terävöitetään niin ettei se enää lue
+kysymyksenä, tai kortit poistetaan koska sama tieto on
+`mikroneulaus-opas.html`:ssä.
+
+**2. Ikääntymisen merkit ei haaraudu.** Widgetin päätöspuussa tämä oli
+ainoa kohta jossa oli jatkokysymys: *"onko ihosi herkkä tai reagoiva"*
+→ kyllä ProXN, ei mikroneulaus. **Staattinen lista ei voi kysyä.**
+Herkkäihoinen ikääntyjä ohjautuu mikroneulauksen oppaaseen, eli väärään
+paikkaan, ellei hän tunnista itseään kolmannen rivin sanasta "herkkä
+iho" — mitä ei voi olettaa.
+
+Vaihtoehto: rivi jaetaan kahdeksi ("Juonteet ja ikääntymisen merkit" /
+"Ikääntymisen merkit herkällä iholla"), jolloin rivejä on seitsemän.
+Lista alkaa silloin olla pitkä.
+
+**Molemmat ongelmat ovat syytä ratkaista ennen toteutusta**, koska
+kumpikin muuttaa joko etusivun muuta rakennetta tai listan pituutta.
 
 ### Kategoriat toteutettu
 
@@ -7042,6 +7091,76 @@ näkee koko listan riippumatta valinnasta. Ei erillisiä kategoriasivuja
 **Saavutettavuus:** napit ovat `<button>`-elementtejä `aria-pressed`-
 tilalla, ryhmällä on `role="group"` ja nimi, ja näkyvien artikkelien
 määrä ilmoitetaan `aria-live`-alueessa ruudunlukijalle.
+
+#### Lukumäärät lasketaan, ei kirjoiteta
+
+Ensimmäisessä versiossa luvut olivat kovakoodattuina nappien HTML:ssä.
+Käyttäjä huomasi ongelman heti: *"teitkö niin että kun uutta blogia
+julkaistaan niin päivittyy automaattisesti."* Ei tehnyt, enkä ollut
+maininnut asiaa.
+
+Luvut lasketaan nyt sivun latautuessa korttien `data-ryhma`-
+attribuuteista. **Luku ei voi olla väärin, koska se johdetaan samasta
+datasta jota suodatus käyttää.** Tyhjä kategoria piilottaa oman nappinsa
+automaattisesti, joten "0"-nappia ei jää näkyviin.
+
+**Vikasietoisuus valittiin tarkoituksella väärään suuntaan.** Jos
+kortilta puuttuu `data-ryhma` tai siinä on kirjoitusvirhe, artikkeli
+näytetään **kaikissa** kategorioissa eikä ei missään. Väärässä
+kategoriassa näkyvä artikkeli huomataan; kokonaan kadonnutta ei.
+Konsoliin tulee lisäksi varoitus.
+
+**Testattu viidellä skenaariolla** (`/tmp/shim.js`, kevyt DOM-simulaatio
+joka ajaa sivun oikean koodin, koska npm on estetty): nykytila, oikein
+merkitty uusi artikkeli, merkitsemätön artikkeli, kirjoitusvirheellinen
+merkintä, ja tyhjäksi jäävä kategoria. Kaikissa nappien lupaama luku
+vastasi näkyvien korttien määrää.
+
+#### Julkaisun tarkistuslista
+
+Uutta artikkelia julkaistaessa:
+
+1. **Lisää kortti `blogi.html`:ään** oikeaan kohtaan päivämääräjärjestystä
+2. **Merkitse `data-ryhma`** `<article>`-tagiin. Tätä ei voi automatisoida,
+   koska kategoria on toimituksellinen päätös.
+3. **Lisää sitemapiin**
+4. **Tarkista `datePublished`** — luonnoksen kirjoituspäivä ei ole
+   julkaisupäivä (opittu 17.8.)
+
+Lukumääriä **ei tarvitse päivittää.**
+
+#### Miten kategoria valitaan
+
+Kysy mihin kysymykseen artikkeli vastaa, älä mistä se kertoo:
+
+| Lukijan kysymys | Ryhmä |
+|---|---|
+| "Voiko tätä tehdä minulle?" | `sopiiko` |
+| "Mitä tämä oikeasti tekee ja toimiiko se?" | `miten` |
+| "Auttaako tämä juuri minun ongelmaani?" | `mihin` |
+| "Mitä tapahtuu ensimmäisen kerran jälkeen?" | `sarja` |
+
+Jos artikkeli sopii kahteen, valitse se jonka takia lukija **avaisi sen**,
+ei se johon sisältö painottuu. Esimerkki: herkän ihon artikkeli kertoo
+paljon hoidon muokkaamisesta (`miten`), mutta lukija avaa sen
+kysyäkseen sopiiko hoito hänelle (`sopiiko`).
+
+#### Milloin uusi kategoria on perusteltu
+
+- **Vähintään kaksi artikkelia.** Yhden artikkelin kategoria ei rajaa
+  mitään. Jos uusi artikkeli ei sovi mihinkään ryhmään eikä toista
+  samasta aiheesta ole tulossa, laita se lähimpään ryhmään.
+- **Enintään kuusi kategoriaa.** Sen yli nappirivi rivittyy kahdelle
+  riville eikä ole enää silmäiltävissä.
+- **Yli kuuden artikkelin ryhmä** kannattaa harkita jaettavaksi.
+- **Uusi hoito ei automaattisesti tarkoita uutta kategoriaa.** Ryhmittely
+  on lukijan kysymyksen mukaan, ei hoidon. LED-artikkelit menevät samoihin
+  ryhmiin. Hoitokohtainen akseli tulisi harkittavaksi vasta jos jokin
+  hoito saa oman artikkeliklusterinsa, ja silloin se on toinen akseli
+  eikä korvaa tätä.
+
+Kategorian lisääminen vaatii yhden napin `blog-filter`-lohkoon ja
+`data-ryhma`-merkinnät artikkeleihin. Lukumäärä hoituu itsestään.
 
 Kiinnitetty opas ei ole erikoistapaus vaan kuuluu ryhmään "Miten hoito
 toimii". Ryhmää valittaessa se pysyy listan kärjessä, koska se on

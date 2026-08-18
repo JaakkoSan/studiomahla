@@ -231,11 +231,11 @@
   </section>
   <section class="blog-list-section" aria-label="Artikkelilista">
     <div class="blog-filter" id="blogFilter" role="group" aria-label="Rajaa artikkeleita aiheen mukaan">
-      <button type="button" class="blog-filter__btn" data-suodatin="kaikki" aria-pressed="true">Kaikki<span class="blog-filter__count">12</span></button>
-      <button type="button" class="blog-filter__btn" data-suodatin="sopiiko" aria-pressed="false">Sopiiko minulle<span class="blog-filter__count">3</span></button>
-      <button type="button" class="blog-filter__btn" data-suodatin="miten" aria-pressed="false">Miten hoito toimii<span class="blog-filter__count">4</span></button>
-      <button type="button" class="blog-filter__btn" data-suodatin="mihin" aria-pressed="false">Mihin se auttaa<span class="blog-filter__count">2</span></button>
-      <button type="button" class="blog-filter__btn" data-suodatin="sarja" aria-pressed="false">Sarja ja jälkihoito<span class="blog-filter__count">3</span></button>
+      <button type="button" class="blog-filter__btn" data-suodatin="kaikki" aria-pressed="true">Kaikki<span class="blog-filter__count"></span></button>
+      <button type="button" class="blog-filter__btn" data-suodatin="sopiiko" aria-pressed="false">Sopiiko minulle<span class="blog-filter__count"></span></button>
+      <button type="button" class="blog-filter__btn" data-suodatin="miten" aria-pressed="false">Miten hoito toimii<span class="blog-filter__count"></span></button>
+      <button type="button" class="blog-filter__btn" data-suodatin="mihin" aria-pressed="false">Mihin se auttaa<span class="blog-filter__count"></span></button>
+      <button type="button" class="blog-filter__btn" data-suodatin="sarja" aria-pressed="false">Sarja ja jälkihoito<span class="blog-filter__count"></span></button>
     </div>
     <p id="blogFilterStatus" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;"></p>
     <div class="blog-list">
@@ -409,22 +409,48 @@
   (function () {
     var filter = document.getElementById('blogFilter');
     if (!filter) return;
-    var napit  = filter.querySelectorAll('.blog-filter__btn');
-    var kortit = document.querySelectorAll('.post-card');
+    var napit  = Array.prototype.slice.call(filter.querySelectorAll('.blog-filter__btn'));
+    var kortit = Array.prototype.slice.call(document.querySelectorAll('.post-card'));
     var status = document.getElementById('blogFilterStatus');
+
+    var tunnetut = napit.map(function (n) { return n.getAttribute('data-suodatin'); });
+
+    function ryhma(kortti) {
+      return kortti.getAttribute('data-ryhma') || '';
+    }
+    function tunnistamaton(kortti) {
+      return tunnetut.indexOf(ryhma(kortti)) === -1;
+    }
+
+    napit.forEach(function (nappi) {
+      var avain = nappi.getAttribute('data-suodatin');
+      var maara = (avain === 'kaikki')
+        ? kortit.length
+        : kortit.filter(function (k) { return ryhma(k) === avain || tunnistamaton(k); }).length;
+      var laskuri = nappi.querySelector('.blog-filter__count');
+      if (laskuri) laskuri.textContent = maara;
+      if (maara === 0 && avain !== 'kaikki') nappi.hidden = true;
+    });
+
+    var puuttuvat = kortit.filter(tunnistamaton);
+    if (puuttuvat.length && window.console && console.warn) {
+      console.warn('blogi.html: ' + puuttuvat.length + ' artikkelilta puuttuu kelvollinen data-ryhma. ' +
+                   'Ne näytetään kaikissa kategorioissa kunnes merkintä lisätään.');
+    }
+
     filter.addEventListener('click', function (e) {
       var nappi = e.target.closest('.blog-filter__btn');
       if (!nappi) return;
       var valinta = nappi.getAttribute('data-suodatin');
-      for (var i = 0; i < napit.length; i++) {
-        napit[i].setAttribute('aria-pressed', napit[i] === nappi ? 'true' : 'false');
-      }
+      napit.forEach(function (n) {
+        n.setAttribute('aria-pressed', n === nappi ? 'true' : 'false');
+      });
       var nakyvia = 0;
-      for (var j = 0; j < kortit.length; j++) {
-        var nayta = (valinta === 'kaikki') || (kortit[j].getAttribute('data-ryhma') === valinta);
-        kortit[j].hidden = !nayta;
+      kortit.forEach(function (kortti) {
+        var nayta = (valinta === 'kaikki') || ryhma(kortti) === valinta || tunnistamaton(kortti);
+        kortti.hidden = !nayta;
         if (nayta) nakyvia++;
-      }
+      });
       if (status) {
         status.textContent = nakyvia + (nakyvia === 1 ? ' artikkeli' : ' artikkelia') + ' n\u00e4kyviss\u00e4.';
       }
