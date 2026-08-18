@@ -358,16 +358,45 @@ kirjattu näkyviin `hinnasto.html`-sivulle. Muista tämä kun lasket
 katteita: luvun 14c-tyyppisissä laskelmissa alv on vähennettävä ennen
 katetta, mikä on aiemmin kertaalleen unohtunut.
 
-### Ensikäynti (200 €)
-Sisältää: iho-analyysi + keskustelu + henkilökohtaisesti valittu hoito.
-Hoitovaihtoehto valitaan yhdessä asiakkaan kanssa iho-analyysin perusteella:
+### Varausrakenne (päivitetty 17.8.2026)
 
-- **Mikroneulaus** (jos iho on siihen valmis)
-- **Pro XN -ammattikosmetiikkahoito** (jos iho tarvitsee ensin rauhoittamista ja
+Timmassa ja hinnastossa tässä järjestyksessä. **Kaikki yksittäiset
+hoidot 200 €, kaikki kestävät tunnin.**
+
+| # | Palvelu | Kenelle |
+|---|---|---|
+| 1 | **Ensikäynti** | jos et tiedä mikä hoito sopii |
+| 2 | **Kliininen mikroneulaus** | kaikille, myös ensimmäistä kertaa |
+| 3 | **ProXN-kasvohoito** | kaikille, myös ensimmäistä kertaa |
+| 4–7 | Sarjahoidot, 4 kpl | 570 € / 1080 € |
+| — | LED myöhemmin | oma hintansa |
+
+**Ensikäynti ei ole pakko vaan oletusreitti.** Se on ensimmäisenä
+listalla ja ainoa vaihtoehto jossa hoitomuotoa ei tarvitse päättää
+etukäteen. Suora varaus on auki kaikille, myös ensikertalaiselle —
+tämä rajattiin kertaalleen "aiemmin käyneille" ja käyttäjä perui
+rajauksen 17.8.: *"joku kuitenkin haluaa aina varata suoraan."*
+
+Rakenne skaalautuu: uusi hoito lisää yhden rivin, ei kahta.
+
+### Ensikäynti (200 €)
+Sisältää: iho-analyysi + esitiedot + henkilökohtaisesti valittu hoito,
+joka tehdään **samalla käynnillä**. Hoitovaihtoehto valitaan yhdessä
+asiakkaan kanssa iho-analyysin perusteella:
+
+- **Kliininen mikroneulaus** (jos iho on siihen valmis)
+- **ProXN-kasvohoito** (jos iho tarvitsee ensin rauhoittamista ja
   barrier-vahvistusta)
 
 Molemmat ovat täysipainoisia hoitoja, ei "plan A vs. plan B". Jos sarjahoitoon
 päädytään, ensikäynnin hoito lasketaan sarjaan mukaan (kustannusvaikutus neutraali).
+
+**LED-hinnoittelu (päätetty 17.8.2026).** Yksittäinen LED-hoito on
+halvempi. Jos asiakas päätyy ensikäynnillä LED-kertahoitoon, hän maksaa
+vähemmän; jos LED-sarjaan, sarjahinnan. Ensikäynnin 200 € on siis
+yläraja, ei kiinteä hinta. **Avoin:** kun LED julkaistaan, Timman
+hintanäyttö pitää tarkistaa ja ensikäynnin kuvaukseen kirjoitetaan
+miten hinta määräytyy.
 
 ### Mikroneulaus (jatkosarja)
 - Kolmen hoidon sarja: **570 €**
@@ -486,9 +515,15 @@ kuin sen hinta suhteessa kasvohoitoon antaisi olettaa. Lisäalueet
 kannattaa siis mainita järjestelmällisesti kaikille asiakkaille,
 ei vain silloin kun asiakas itse kysyy.
 
-### Pro XN -jatkohoidot
-- Hinta myöhemmin päätettävissä (n. 170–180 € voisi olla sopiva)
-- Voidaan myydä myös kotihoitotuotteita asiakkaille (retail-marginaali)
+### ProXN-sarjahoidot (päätetty 11.8.2026)
+- Kolmen hoidon sarja: **570 €** (190 € / kerta)
+- Kuuden hoidon sarja: **1080 €** (180 € / kerta)
+- Samat hinnat kuin mikroneulauksella; kolmas kerta on tarkistuspiste
+- Timmassa neljä sarjapalvelua, koska hoitoväli eroaa: rauhoitushoito
+  kerran viikossa, aknehoito kahden viikon välein
+- Kotihoitotuotteet myydään lisäksi (ks. luku 4)
+
+*Vanha arvio ennen päätöstä oli 170–180 € / kerta.*
 
 ### LED-valohoito
 
@@ -635,6 +670,47 @@ asian voi vain ilmaista ilman turhia etuliitteitä."**
 
 Rakenne on myös itsensä kumoava: kun teksti ilmoittaa olevansa
 rehellinen, lukija alkaa miettiä milloin se ei ole.
+
+**Laajennus 18.8.2026: täytelauseet ja puolusteleva vertailu.**
+Käyttäjä poisti kaksi rakennetta ProXN:n julkaisutekstistä, ja
+molemmat ovat samaa perhettä kuin etuliitesääntö. Lause kommentoi
+omaa sanomistaan sen sijaan että sanoisi asian.
+
+*Täytelause ilmoittaa mitä kohta sanotaan:*
+
+| EI | KYLLÄ |
+|---|---|
+| "…kylmäkuivattua jauhetta. Syy on yksinkertainen: se hajoaa vesiliuoksessa." | "…kylmäkuivattua jauhetta, koska se hajoaa vesiliuoksessa." |
+| "Vastaus on yksinkertainen:", "Näin se toimii:", "Toisin sanoen" | *(poista)* |
+
+Käyttäjän perustelu 18.8.2026: **"Näytä, älä kerro. Aivan turha
+käyttää täytelauseita."**
+
+*Puolusteleva vertailu vastaa väitteeseen jota kukaan ei ole
+esittänyt:*
+
+| EI | KYLLÄ |
+|---|---|
+| "Kysymys ei ole siitä kumpi hoito on parempi, vaan mitä ihossa halutaan muuttaa." | *(poista, tai kerro sopivuus suoraan)* |
+| "Hoidot eivät sulje toisiaan pois" | *(poista)* |
+| "Tämä ei tarkoita että…" | *(poista)* |
+
+Käyttäjän perustelu 18.8.2026: **"tämä on jälleen kerran vertailua
+joka puolustelee."** Rakenne kuulostaa tasapuoliselta mutta on
+puolustusasento: se tuo lukijan mieleen kilpailuasetelman jota hän ei
+ollut ajatellut.
+
+**Sivustolla olevat esiintymät** (todettu 18.8., ei korjattu koska ei
+pyydetty): `proxn-kasvohoito.html` rivit 615 ja 618,
+`herkka-iho-ruusufinni-mikroneulaus.html` rivi 176,
+`mita-mikroneulaus-ei-tee.html` rivi 210. Kolme neljästä kirjoitettiin
+17.8.2026. Julkaisematon `mita-mikroneulaus-ei-tee.html` ehtii vielä
+korjata ennen viikkoa 34.
+
+*Tarkistettu 18.8.:* varsinaista tyhjää täytelausetta ei ole sivustolla.
+Kaksi "Syy on…" -alkuista virkettä (`proxn-kasvohoito.html` 821,
+`mikroneulaus-sarjahoito.html` 116) kertovat syyn eivätkä vain ilmoita
+sitä, joten ne eivät riko sääntöä. Tiivistää voi silti.
 
 **Miksi tämä on erikseen kirjattu:** poistin nämä rakenteet
 `proxn-kasvohoito.html`-sivulta 11.8. aamulla, ja kirjoitin saman
@@ -896,7 +972,8 @@ sivut päivittyvät automaattisesti.
 
 ### Hinnastosivu (luotu 6.8.2026)
 
-`hinnasto.html`, linkitetty päänavigaatiosta ennen Blogia. 402 sanaa.
+`hinnasto.html`, linkitetty päänavigaatiosta ennen Blogia. 371 sanaa
+(17.8.2026, kun kuvailevat osiot poistettiin — hinnasto on hinnasto).
 
 **Laajuus rajattu tarkoituksella nykyiseen tarjontaan** (käyttäjän
 päätös): ensikäynti 200 €, kolmen hoidon sarja 570 €, kuuden hoidon
@@ -922,7 +999,7 @@ Sivulle ei tehty Offer-skeemaa, koska etusivun BeautySalon-lohkon
 päällekkäistä tarjousilmoitusta eri osoitteissa olisi turha
 ristiriidan lähde. Hinnastosivulla on vain BreadcrumbList.
 
-### Asiakassivut (14)
+### Asiakassivut (19)
 - **index.html** — etusivu (hero + filosofia + menetelmä + haasteet + vertailu)
 - **hinnasto.html** — hinnasto (navigaatiossa ennen Blogia), ks. luku yllä
 - **blogi.html** — blogilista (blog-hero tumma vihreä)
@@ -938,7 +1015,11 @@ ristiriidan lähde. Hinnastosivulla on vain BreadcrumbList.
 - **mita-tutkimus-sanoo-mikroneulauksesta.html** — tutkimusnäyttö
 - **mikroneulauksen-jalkihoito.html** — jälkihoito-opas 24 tunnista 30 päivään (julkaistu 16.7.2026)
 - **mikroneulaus-kaula-dekoltee-kadet.html** — lisäalueet: kaula, dekoltee, kämmenselät (julkaistu 28.7.2026)
-- **proxn-kasvohoito.html** — ProXN-kasvohoito (ei vielä linkitetty navigaatiosta)
+- **proxn-kasvohoito.html** — ProXN-kasvohoito, **navigaatiossa ensimmäisenä** (julkaistu 17.8.2026)
+- **aknearpien-hoito-mikroneulauksella.html** — aknearvet (julkaistu 5.8.2026)
+- **herkka-iho-ruusufinni-mikroneulaus.html** — herkkä iho ja ruusufinni (julkaistu 17.8.2026)
+- **mita-mikroneulaus-ei-tee.html** — hoidon rajat, **sisältö valmis, julkaisu viikolla 34/2026.** Julkaistaessa `datePublished` on korjattava julkaisupäivään, kuten herkän ihon artikkelissa 17.8.
+- **omavalvonta.html** — omavalvontasuunnitelma (noindex)
 - **mikroneulaus-talvella.html** — DRAFT, noindex, julkaisu marraskuussa 2026
 
 ### Hallintasivut (2)
@@ -6423,6 +6504,10 @@ Timman rakenne ja hinnaston järjestys:
 | Ensikäynti | 200 € |
 | Kliininen mikroneulaus, yksittäinen hoito (aiemmin käyneille) | 200 € |
 | ProXN-kasvohoito, yksittäinen hoito (aiemmin käyneille) | 200 € |
+
+> ⚠ **Tämä taulukko ei ole voimassa.** Rajaus "(aiemmin käyneille)"
+> peruttiin samana päivänä, ks. "Korjaus samana päivänä: suora varaus
+> säilyy kaikille" alempana. Voimassa oleva rakenne on luvussa 3.
 | Mikroneulauksen sarjahoito 3× / 6× | 570 € / 1080 € |
 | ProXN-sarjahoidot 3× / 6× | 570 € / 1080 € |
 | LED (myöhemmin) | oma hintansa |
@@ -6806,3 +6891,95 @@ Lopputulos on silti oikea — maininta on sivulla kertaalleen eikä
 tuoteruudukko tarvitse omaansa. Hintamerkintäasetus 553/2013 § 5
 edellyttää että näytetty hinta on lopullinen kuluttajahinta, ja se
 toteutuu.
+
+
+## 18.8.2026 — Esitietolomake kattamaan kaikki hoidot
+
+### Ratkaisu: yksi lomake, ei hoitokohtaisia
+
+**Ratkaiseva peruste on ajoitus, ei työmäärä.** Lomake täytetään ennen
+käyntiä, ja hoito valitaan vasta iho-analyysissä. Hoitokohtaista
+lomaketta ei voi lähettää, koska hoitoa ei siinä vaiheessa tiedetä.
+Erilliset lomakkeet toimisivat vain suorissa varauksissa, ja ensikäynti
+on oletusreitti. LED kolmantena tekisi asetelmasta hallitsemattoman.
+
+### Vasta-aiheet eivät ole osajoukkoja
+
+| Mikroneulaus (12) | ProXN (4) |
+|---|---|
+| raskaus, ihotulehdus, aktiivinen akne, herpes, keloiditaipumus, teräsallergia, verenohennus, immunosuppressio, syöpähoito, diabetes, isotretinoiini, tupakointi | avohaava, tuore leikkausarpi, aktiivinen syöpä hoitoalueella, ainesosa-allergia |
+
+Päällekkäisyys on lähes olematon. ProXN:n lista on lyhyt, mikä on koko
+hoidon pointti.
+
+### Tärkein muutos: osion merkitys, ei sisältö
+
+Osio oli nimeltään **"Kontraindikaatiot"**, ja "Kyllä" tarkoitti että
+hoitoa ei tehdä. Kahden hoidon mallissa sama rasti tarkoittaa usein eri
+asiaa: *aktiivinen akne* ja *ihotulehdus* sulkevat pois mikroneulauksen
+mutta ovat nimenomaan ProXN:n käyttöaiheita. **Sama rasti on este
+toisessa hoidossa ja peruste toisessa.**
+
+Osio nimettiin **"Terveystiedot"** ja johdantoon kirjoitettiin että
+"Kyllä" ei automaattisesti tarkoita ettei hoito onnistu. Ilman tätä
+sekä asiakas että käyttäjä lukisivat lomaketta väärin.
+
+### Ohjeet ovat toistensa osajoukkoja
+
+ProXN ei vaadi valmistautumista eikä aseta rajoituksia jälkeenpäin;
+mikroneulaus vaatii viikon valmistautumisen. **Kun hoito on auki,
+asiakas noudattaa mikroneulauksen ohjeita**, jolloin kaikki vaihtoehdot
+pysyvät auki. Sama sääntö on `mita-ensikaynnilla-tapahtuu.html`:ssä,
+joten lomake ja sivusto sanovat saman.
+
+*Oma virhe:* väitin ettei ProXN:n hoito-ohjeita ole sivustolla. Ne ovat
+`proxn-kasvohoito.html`:ssä ja kirjoitin ne itse 11.8. Olin hakenut vain
+"Vasta-aiheet ja esitiedot" -osiosta ja päätellyt siitä koko sivun.
+**Sama kaava kuin "muilla menetelmillä" -lauseen väärässä
+tiedostoviittauksessa 17.8.: päätelmä osittaisesta hausta.**
+
+### Suostumus ehdollisena
+
+Käyttäjän muotoilu: *"jos minulle tehdään mikroneulaus, olen tietoinen
+jne."* Kaksi hoitokohtaista kohtaa kirjoitettiin ehdollisina, koska
+asiakas ei tiedä hoitoa täyttäessään.
+
+- `consent1` — **Jos minulle tehdään kliininen mikroneulaus**, olen tietoinen mikroskooppisista pistoksista ja niiden normaaleista vasteista
+- `consent5` — **Jos minulle tehdään ProXN-kasvohoito**, olen tietoinen käytettävistä hapoista ja Xanthohumol Complex -ampullista ja olen ilmoittanut ainesosa-allergiat
+- `consent2`–`consent4` ennallaan (jälkihoito, tietojen oikeellisuus, muutosten ilmoittaminen)
+
+**Numerointi ei muuttunut.** Uusi kohta on `consent5` vaikka se näkyy
+lomakkeella toisena. Vanhojen avainten uudelleennumerointi olisi
+rikkonut API:n ja adminin turhaan.
+
+### Muutetut tiedostot
+
+| Tiedosto | Muutos |
+|---|---|
+| `lomake.html` | Ohjeosiot eriytetty, osio nimetty uudelleen, 3 uutta terveystietokysymystä, `consent5`, validointi 1–5, payload |
+| `functions/api/esitiedot.js` | `KONTRA_KEYS` +3, `CONSENT_KEYS` +`consent5` |
+| `admin.html` | `KONTRA_LABELS` +3, `KONTRA_ORDER` +3, `CONSENT_LABELS` +`consent5`, suostumusrivien järjestys |
+
+**Tietokantamuutosta ei tarvittu.** `kontraindikaatiot` ja `suostumus`
+ovat Supabasessa JSONB-sarakkeita, joten uudet avaimet menevät läpi
+sellaisenaan. Vanhoja tietueita ei ole, koska studio ei ole vielä auki.
+
+`syopahoito`-kohdan teksti laajennettiin muotoon **"Aktiivinen syöpä tai
+syöpähoito"**, jolloin yksi rivi kattaa molempien hoitojen vasta-aiheen.
+
+### Tarkistus
+
+Avainlistat verrattiin ohjelmallisesti kolmen tiedoston välillä: 15
+avainta, sama järjestys, kaikilla selite adminissa. `node --check` ajettu
+API-tiedostolle.
+
+### Korjattu: ylimääräinen `</div>` adminissa
+
+`admin.html`:ssä oli heti `</main>`-tagin jälkeen sulkeva `</div>`
+jolla ei ollut avaavaa paria. **Vanha virhe, ei 18.8. muutoksista** —
+kaikki sen päivän muokkaukset olivat `<script>`-lohkon sisällä. Selain
+jätti irrallisen sulkutagin huomiotta, joten sivu toimi.
+
+Poistettu 18.8.2026 käyttäjän luvalla. Tarkistettu ohjelmallisesti:
+`<div>`-tagit ovat nyt tasapainossa 38/38 `<script>`-lohkot pois
+lukien, eikä sulkematta jääneitä tai ylimääräisiä ole.

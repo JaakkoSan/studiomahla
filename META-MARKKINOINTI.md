@@ -1769,11 +1769,30 @@ purkkia. Kotihoitotuotteet toimivat paremmin kun hoito on ensin tuttu.
 Kahdeksan tuotetta on kahdeksan viikkoa, mikä vie marraskuun alkuun.
 Silloin tahti muuttuu luvun 3.2 mukaan ylläpitoon (1 Reels + 1 muu).
 
-#### Tilanne 10.8.2026
+#### Tilanne 17.8.2026: ehdot täyttyivät
 
-Ei aloitettu. Odottaa ProXN-sivun julkaisua ja käyttäjän omaa
-tuotetestausta. Tämän viikon kolmas julkaisupaikka on siis vapaa tai
-täytetään muulla sisällöllä.
+**Ehto 1 täyttyi.** `proxn-kasvohoito.html` julkaistiin 17.8.2026 ja
+lisättiin päänavigaatioon ensimmäiseksi.
+
+**Ehto 2 täyttyi.** Käyttäjä 17.8.2026: *"Tuotteet ovat nyt olleet
+käytössä jonkin aikaa ja olen tyytyväinen."*
+
+**Ehto 4 on yhä auki.** Kuvien käyttöoikeutta Duallaserilta ei ole
+varmistettu. Tämä koskee ampullikuvaa ja Antioxidant Therapy -kuvaa,
+joita käytetään jo sivustolla.
+
+**Aloitusjulkaisu 18.8.2026: hoidon julkistus, ei tuotesarjan
+yleisesittely.** Poikkeus alkuperäiseen suunnitelmaan, ja syy on että
+julkaistava uutinen on hoito eikä tuotelinja. Tuotesarjan
+viikkojulkaisut alkavat tämän jälkeen suunnitellussa järjestyksessä.
+
+Teksti molemmille kanaville, kuvavalinta ja perustelut:
+`tuotanto/julkaisut/proxn-julkistus-18-08-2026.md`
+
+**Aknekulma rajattiin pois julkistuksesta.** ProXN:stä on kaksi
+versiota, mutta aknesisältö menee omaan julkaisuunsa. Luku 6.2 rajaa
+terveysväitteitä, ja aknesanamuodot on parempi harkita erikseen kuin
+kiireessä julkistuksen yhteydessä.
 
 ### 3.6 Sisällön uudelleenkäyttö
 

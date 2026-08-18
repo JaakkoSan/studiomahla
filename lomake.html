@@ -272,7 +272,7 @@
     <div class="lomake-hero__inner">
       <p class="label label--pink-pale">Esitietolomake</p>
       <h1 id="lomake-title">Esitietolomake ja hoito-ohjeet</h1>
-      <p>Täytä lomake ennen ensimmäistä käyntiäsi. Käymme tiedot läpi yhdessä ennen hoitoa.</p>
+      <p>Täytä lomake ennen ensimmäistä käyntiäsi. Käymme tiedot läpi yhdessä ennen hoitoa. Sama lomake kattaa kaikki studion hoidot, joten hoitomuotoa ei tarvitse tietää etukäteen.</p>
     </div>
   </section>
   <!-- OSIO 1 — Ohjeet ennen hoitoa -->
@@ -281,7 +281,8 @@
       <div class="section__head">
         <p class="label label--mid">Osio 1</p>
         <h2 id="ennen-title">Ohjeet ennen hoitoa</h2>
-        <p>Noudata näitä ohjeita kahdesta päivästä yhteen viikkoon ennen hoitoa.</p>
+        <p><strong>ProXN-kasvohoito ei vaadi valmistautumista.</strong> Aktiiviaineita ei tarvitse tauottaa eikä auringonottoa rajoittaa, ja meikki saa olla kasvoilla. Jos tiedät varmasti että sinulle tehdään ProXN, voit ohittaa tämän osion.</p>
+        <p><strong>Kliininen mikroneulaus vaatii valmistautumisen.</strong> Noudata alla olevia ohjeita kahdesta päivästä yhteen viikkoon ennen hoitoa. <strong>Jos varaat ensikäynnin etkä vielä tiedä mikä hoito tehdään, noudata näitä ohjeita.</strong> Silloin kaikki vaihtoehdot pysyvät auki ja hoito voidaan tehdä samalla käynnillä riippumatta siitä mikä valitaan.</p>
       </div>
       <ul class="info-list">
         <li>Vältä auringonottoa 48 tuntia ennen hoitoa</li>
@@ -301,7 +302,8 @@
       <div class="section__head">
         <p class="label label--mid">Osio 2</p>
         <h2 id="jalkeen-title">Ohjeet hoidon jälkeen</h2>
-        <p>Noudata näitä ohjeita ensimmäisten päivien ja ensimmäisen viikon ajan hoidon jälkeen.</p>
+        <p><strong>ProXN-kasvohoidon jälkeen ei ole rajoituksia.</strong> Iho ei ole rikki, joten meikin voi laittaa saman tien ja arkeen voi palata suoraan. Yksi suositus annetaan: siirrä sauna ja uinti seuraavaan päivään, jotta iholle jäävät vaikuttavat aineet ehtivät työskennellä. Kyse on hyödyn maksimoinnista, ei turvallisuudesta.</p>
+        <p><strong>Kliinisen mikroneulauksen jälkeen</strong> noudata alla olevia ohjeita ensimmäisten päivien ja ensimmäisen viikon ajan. Saat ohjeet myös käynnillä.</p>
       </div>
       <ul class="info-list">
         <li>Vältä meikkiä 24 tuntia hoidon jälkeen</li>
@@ -378,8 +380,9 @@
           </div>
           <!-- KONTRAINDIKAATIOT -->
           <div class="form-subsection">
-            <h3>Kontraindikaatiot</h3>
+            <h3>Terveystiedot</h3>
             <p>Valitse jokaiseen kohtaan Kyllä tai Ei. Kaikki kysymykset ovat pakollisia.</p>
+            <p>Kysymykset kattavat kaikki studion hoidot. <strong>"Kyllä" ei tarkoita automaattisesti että hoito ei onnistu.</strong> Osa kohdista sulkee pois kliinisen mikroneulauksen mutta on nimenomaan syy tehdä ProXN-kasvohoito, joka ei riko ihoa. Käymme vastaukset läpi yhdessä ennen hoitoa.</p>
             <div class="kontra-list" id="kontraList">
               <!-- Rivit luodaan JS:llä jotta merkinnät pysyvät yhden lähteen takana -->
             </div>
@@ -400,11 +403,15 @@
           <div class="form-subsection">
             <p class="label label--mid" style="margin-bottom: 0.8em;">Osio 4</p>
             <h3>Suostumus</h3>
-            <p>Vahvista alla olevat kohdat ennen lomakkeen lähettämistä. Kaikki neljä ovat pakollisia.</p>
+            <p>Vahvista alla olevat kohdat ennen lomakkeen lähettämistä. Kaikki viisi ovat pakollisia. Kaksi ensimmäistä koskevat hoitoa jota et vielä välttämättä tiedä, joten ne on kirjoitettu ehdollisina.</p>
             <div class="consent-list">
               <label class="consent-item">
                 <input type="checkbox" name="consent1" required aria-required="true">
-                <span class="consent-item__text">Olen tietoinen että kliininen mikroneulaus aiheuttaa tarkoituksenmukaisesti ihoon mikroskooppisia pistoksia jotka voivat aiheuttaa lievää punoitusta, turvotusta ja lievää verenvuotoa. Nämä ovat normaaleja fysiologisia vasteita eivätkä merkki komplikaatiosta.</span>
+                <span class="consent-item__text"><strong>Jos minulle tehdään kliininen mikroneulaus</strong>, olen tietoinen että hoito aiheuttaa tarkoituksenmukaisesti ihoon mikroskooppisia pistoksia jotka voivat aiheuttaa lievää punoitusta, turvotusta ja lievää verenvuotoa. Nämä ovat normaaleja fysiologisia vasteita eivätkä merkki komplikaatiosta.</span>
+              </label>
+              <label class="consent-item">
+                <input type="checkbox" name="consent5" required aria-required="true">
+                <span class="consent-item__text"><strong>Jos minulle tehdään ProXN-kasvohoito</strong>, olen tietoinen että hoidossa käytetään polyhydroksihappoa, atselaiinihappoa ja Xanthohumol Complex -ampullia, ja että olen kertonut esitiedoissa kaikista tuntemistani ainesosa-allergioista ja aiemmista tuotereaktioista.</span>
               </label>
               <label class="consent-item">
                 <input type="checkbox" name="consent2" required aria-required="true">
@@ -454,10 +461,13 @@
       { key: 'teras',            label: 'Teräsallergia' },
       { key: 'verenohennus',     label: 'Verenohennuslääkitys' },
       { key: 'immunosuppressio', label: 'Immunosuppressiivinen lääkitys tai sairaus' },
-      { key: 'syopahoito',       label: 'Aktiivinen syöpähoito' },
+      { key: 'syopahoito',       label: 'Aktiivinen syöpä tai syöpähoito' },
       { key: 'diabetes',         label: 'Huonosti hallinnassa oleva diabetes' },
       { key: 'isotretinoiini',   label: 'Isotretinoiini viimeisen 6 kuukauden aikana' },
       { key: 'tupakointi',       label: 'Tupakointi – merkittävästi heikentää hoidon tuloksia ja hidastaa paranemista' },
+      { key: 'avohaava',         label: 'Avohaava hoitoalueella (varsinainen haava, ei esimerkiksi puhjennut finni)' },
+      { key: 'leikkausarpi',     label: 'Tuore leikkausarpi hoitoalueella' },
+      { key: 'ainesosaallergia', label: 'Tiedossa oleva allergia ihonhoitotuotteiden ainesosille' },
     ];
     var formEl     = document.getElementById('prebookingForm');
     var listEl     = document.getElementById('kontraList');
@@ -530,9 +540,9 @@
         showError('Vastaa kohtaan: ' + missingKontra);
         return;
       }
-      for (var c = 1; c <= 4; c++) {
+      for (var c = 1; c <= 5; c++) {
         var box = formEl.querySelector('input[name="consent' + c + '"]');
-        if (!box || !box.checked) { showError('Vahvista kaikki neljä suostumuskohtaa ennen lähettämistä.'); return; }
+        if (!box || !box.checked) { showError('Vahvista kaikki viisi suostumuskohtaa ennen lähettämistä.'); return; }
       }
       submitEl.disabled = true;
       var originalText = submitEl.textContent;
@@ -545,7 +555,7 @@
             name: name, email: email, phone: phone, age: age, skinIssue: skinIssue,
             kontra: kontra,
             otherMeds: otherMeds, allergies: allergies,
-            consent1: true, consent2: true, consent3: true, consent4: true,
+            consent1: true, consent2: true, consent3: true, consent4: true, consent5: true,
             website: website
           })
         });

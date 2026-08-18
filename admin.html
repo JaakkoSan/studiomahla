@@ -787,7 +787,6 @@
     <div id="esitiedotError" class="empty" style="color:var(--danger);" hidden></div>
   </section>
 </main>
-</div>
 <!-- ESITIETO DETAIL MODAL -->
 <div class="modal-overlay" id="detailModal" hidden>
   <div class="modal modal--detail" role="dialog" aria-modal="true" aria-labelledby="detailModalTitle">
@@ -1240,21 +1239,26 @@
       teras:            'Teräsallergia',
       verenohennus:     'Verenohennuslääkitys',
       immunosuppressio: 'Immunosuppressiivinen lääkitys tai sairaus',
-      syopahoito:       'Aktiivinen syöpähoito',
+      syopahoito:       'Aktiivinen syöpä tai syöpähoito',
       diabetes:         'Huonosti hallinnassa oleva diabetes',
       isotretinoiini:   'Isotretinoiini viimeisen 6 kuukauden aikana',
-      tupakointi:       'Tupakointi'
+      tupakointi:       'Tupakointi',
+      avohaava:         'Avohaava hoitoalueella',
+      leikkausarpi:     'Tuore leikkausarpi hoitoalueella',
+      ainesosaallergia: 'Allergia ihonhoitotuotteiden ainesosille'
     };
     var KONTRA_ORDER = [
       'raskaus','ihotulehdus','akne','herpes','keloidi','teras',
       'verenohennus','immunosuppressio','syopahoito','diabetes',
-      'isotretinoiini','tupakointi'
+      'isotretinoiini','tupakointi',
+      'avohaava','leikkausarpi','ainesosaallergia'
     ];
     var CONSENT_LABELS = {
-      consent1: 'Tietoinen normaaleista hoidon vasteista (punoitus, turvotus, lievä vuoto)',
+      consent1: 'Mikroneulaus: tietoinen normaaleista hoidon vasteista (punoitus, turvotus, lievä vuoto)',
       consent2: 'Sitoutuu noudattamaan jälkihoito-ohjeita',
       consent3: 'Vakuuttaa antamansa terveys- ja lääkitystiedot oikeiksi',
-      consent4: 'Ilmoittaa muutoksista terveydentilassaan ennen jokaista hoitokertaa'
+      consent4: 'Ilmoittaa muutoksista terveydentilassaan ennen jokaista hoitokertaa',
+      consent5: 'ProXN: tietoinen käytettävistä hapoista ja on ilmoittanut ainesosa-allergiat'
     };
     function maybeMutedValue(value) {
       var s = (value == null ? '' : String(value)).trim();
@@ -1276,7 +1280,7 @@
         var display = (val === 'kyllä' || val === 'kylla') ? 'Kyllä' : (val === 'ei' ? 'Ei' : '—');
         return '<tr><td>' + escapeHtml(label) + '</td><td class="' + cls + '">' + display + '</td></tr>';
       }).join('');
-      var consentRows = ['consent1','consent2','consent3','consent4'].map(function (k) {
+      var consentRows = ['consent1','consent5','consent2','consent3','consent4'].map(function (k) {
         var checked = suostumus[k] === true || suostumus[k] === 'true';
         return (
           '<div class="consent-row">' +
