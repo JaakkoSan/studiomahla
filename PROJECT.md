@@ -6983,3 +6983,80 @@ jätti irrallisen sulkutagin huomiotta, joten sivu toimi.
 Poistettu 18.8.2026 käyttäjän luvalla. Tarkistettu ohjelmallisesti:
 `<div>`-tagit ovat nyt tasapainossa 38/38 `<script>`-lohkot pois
 lukien, eikä sulkematta jääneitä tai ylimääräisiä ole.
+
+
+## 18.8.2026 — Blogilistan kategoriat, ja kolme hylättyä työkalua
+
+### Päätös: rakenteellinen korjaus, ei työkaluja
+
+Käyttäjä kysyi peräkkäin kolmesta työkalusta: soveltuvuuskysely,
+ohjaava chat-widget ja hakutoiminto. **Kaikki kolme yrittivät ratkaista
+saman ongelman**, ja ongelma osoittautui rakenteelliseksi:
+
+1. Etusivulla ei ole "mistä minä aloitan" -reittiä
+2. Blogilista oli litteä — 12 artikkelia päivämääräjärjestyksessä
+
+| Työkalu | Päätös | Syy |
+|---|---|---|
+| `kysely.html` | Ei kytketä. Jää `noindex`-tilaan. | Ensikäynti on nyt oletusreitti ja triage on ihminen. Hoitosuositus ihoa näkemättä on ristiriidassa sivuston oman linjan kanssa (*"arvioidaan käytännössä eikä arvailla etukäteen"*). Hyvä maksetun mainonnan laskeutumissivuna, ei muuhun. |
+| Chat-widget | Ei rakenneta. | Törmäisi `index.html`:n `floatingCta`-painikkeeseen mobiilissa juuri sillä sivulla jolla se olisi hyödyllisin. Käyttäjän oma huoli §14.5c:ssä: *"Väärin tehtynä tämä halventaa kliinistä ilmettä."* Tutkimuksessa 106 käytössä olevasta chatbotista yli 80 %:ssa oli kriittisiä saavutettavuusongelmia. |
+| Hakutoiminto | Ei tule. | Nielsen Norman Group: haku kannattaa yli ~200 sivun sivustolla. Tässä on 19. |
+
+**Kysely ja widget on tarkoitettu korjaamaan havaittua käyttäytymistä,
+eikä havaintoja ole — studio ei ole auki.** Rakenteelliset korjaukset
+ovat oikein riippumatta siitä mitä data myöhemmin kertoo.
+
+**Näytön laadusta.** Verkosta löytyvät luvut ("kysely nostaa konversiota
+52 %", "chattailleet konvertoivat 3× useammin") tulevat käytännössä
+kaikki toimistoilta ja työkalufirmoilta. Kyselyluvut koskevat
+verkkokaupan tuotesuosituksia, ei hoitosuosituksia. Chat-luku on
+valikoitumisharhaa: chatin avannut oli jo valmiiksi kiinnostuneempi.
+
+**Vielä tekemättä:** "Mihin etsit apua?" -linkkiosio etusivulle. Sama
+päätöspuu kuin widgetissä olisi ollut, mutta staattisena ja Googlen
+luettavana. Vastaa §14.5:n "Kenelle kumpi?" -kohtaa, mutta linkkilistana
+eikä nappina joka avaa kyselyn.
+
+### Kategoriat toteutettu
+
+Ryhmittely **lukijan kysymyksen mukaan**, ei artikkelin aiheen.
+Vanhat merkinnät eivät kelvanneet pohjaksi: toinen sana oli käytännössä
+uniikki joka artikkelilla (Opas, Herkkä iho, Aknearvet, Hoitoalueet,
+Jälkihoito, Ajoitus, Ensikäynti, Sarjahoito, Soveltuvuus, Tutkimus,
+Vertailu). Yksitoista kategoriaa kahdelletoista artikkelille ei suodata
+mitään.
+
+| Kategoria | Määrä | Artikkelit |
+|---|---|---|
+| Sopiiko minulle | 3 | soveltuvuus, herkkä iho, ensikäynti |
+| Miten hoito toimii | 4 | mitä on mikroneulaus, opas, tutkimus, rullavertailu |
+| Mihin se auttaa | 2 | aknearvet, kaula/dekoltee/kädet |
+| Sarja ja jälkihoito | 3 | sarjahoito, jälkihoito, ajoitus |
+
+**Toteutus.** `data-ryhma`-attribuutti jokaiseen korttiin,
+pillerinmuotoiset napit listan yläpuolelle, suodatus `hidden`-
+attribuutilla. **Kaikki kortit ovat aina HTML:ssä**, joten hakukone
+näkee koko listan riippumatta valinnasta. Ei erillisiä kategoriasivuja
+— ne olisivat ohuita sivuja 2–4 artikkelilla.
+
+**Saavutettavuus:** napit ovat `<button>`-elementtejä `aria-pressed`-
+tilalla, ryhmällä on `role="group"` ja nimi, ja näkyvien artikkelien
+määrä ilmoitetaan `aria-live`-alueessa ruudunlukijalle.
+
+Kiinnitetty opas ei ole erikoistapaus vaan kuuluu ryhmään "Miten hoito
+toimii". Ryhmää valittaessa se pysyy listan kärjessä, koska se on
+HTML:ssä ensimmäisenä.
+
+### Oma virhe: korvaus osui väärään esiintymään
+
+Aamulla vaihdoin blogikortin otsikon *"Mitä ensikäynnillä tapahtuu:
+käytännönläheinen opas"* → *"Mitä ensimmäisellä käynnillä tapahtuu"*.
+Korvaus osui `aria-label`-attribuuttiin, joka tulee tiedostossa ennen
+`<h2>`-otsikkoa, ja **näkyvä otsikko jäi vanhaksi koko päiväksi.**
+Ilmoitin muutoksen tehdyksi tarkistamatta kumpaan se osui.
+
+`replace(a, b, 1)` korvaa ensimmäisen osuman. Kun sama teksti esiintyy
+sekä attribuutissa että näkyvässä sisällössä, **korvausmerkkijonoon on
+otettava mukaan ympäröivä tagi**, kuten muissa tämän päivän
+korvauksissa tehtiin. Löytyi vasta kun luin korttien otsikot
+kategoriointia varten.
