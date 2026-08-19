@@ -4773,6 +4773,10 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-08-19
+
+- **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 13 julkaistua artikkelia sekä `proxn-kasvohoito.html` Chromella kokonaan läpi. Päivitettiin `milloin-aloittaa-mikroneulaus.html`: uusi H2 "Jos iho ei ole vielä valmis mikroneulaukseen" (ProXN-reitti ja sen ajoituslogiikka), uusi H3 "Aknearvet: pidempi sarja, aikaisempi aloitus", "Miten aloitat" -kohta 2 päivitetty 17.8. varausrakenteen mukaiseksi (ensikäynti oletusreittinä, suora varaus auki), uudet linkit ProXN-sivulle, herkän ihon ja aknearpien artikkeleihin. 600 → 787 sanaa. `dateModified` ja meta description päivitetty. **Syy valintaan: artikkeli on kauden kärjessä juuri nyt ja se oli ainoa blogisivu joka jäi 17.8. ProXN-linkitysauditoinnista kokonaan pois.** Ei muita tiedostoja muutettu.
+
 ### 2026-08-12
 
 - **Viikoittainen blogiautomaatio: uusi artikkeli `mita-mikroneulaus-ei-tee.html`** (904 sanaa, ei vielä linkitetty mistään, odottaa hyväksyntää). Luettiin kaikki 11 julkaistua blogiartikkelia Chromella kokonaan läpi ennen päätöstä. Havaittiin lisäksi paikallinen, julkaisematon luonnos `herkka-iho-ruusufinni-mikroneulaus.html` (index,follow-tila mutta 404 livenä) jota ei ole kirjattu PROJECT.md:hen aiemmin. Se ei ole sitemapissa eikä blogi.html:ssä.
