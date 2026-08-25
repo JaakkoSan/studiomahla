@@ -79,6 +79,18 @@ export async function onRequestPost(context) {
       kontraindikaatiot[key] = (val === 'ei') ? 'ei' : 'kyllä';
     }
 
+    const huoltaja_nimi   = sanitize(body.guardianName, 200);
+    const huoltaja_suhde  = sanitize(body.guardianRelation, 100);
+    const huoltaja_puh    = sanitize(body.guardianPhone, 50);
+    // Alle 18-vuotias ei voi antaa patevaa suostumusta kosmeettiseen
+    // hoitoon eika terveystietojensa kasittelyyn. Huoltajan tiedot ovat
+    // silloin pakolliset.
+    if (Number(ika) > 0 && Number(ika) < 18 && !huoltaja_nimi) {
+      return jsonResponse({
+        error: 'Alle 18-vuotiaan hoito edellyttää huoltajan suostumuksen.',
+      }, 400);
+    }
+
     const muut_laakitykset = sanitize(body.otherMeds, 4000);
     const allergiat        = sanitize(body.allergies, 4000);
 
@@ -91,6 +103,17 @@ export async function onRequestPost(context) {
         }, 400);
       }
       suostumus[key] = true;
+    }
+
+    // Huoltajan tiedot tallennetaan suostumus-kentan sisaan, koska se on
+    // olemassa oleva JSONB-sarake eika uutta saraketta tarvita. Huoltaja
+    // on myos looginen osa suostumusta: han on se joka sen antaa.
+    if (huoltaja_nimi) {
+      suostumus.huoltaja = {
+        nimi: huoltaja_nimi,
+        suhde: huoltaja_suhde,
+        puhelin: huoltaja_puh,
+      };
     }
 
     const ip_osoite = getClientIp(request).slice(0, 100);
