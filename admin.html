@@ -1294,6 +1294,16 @@
           '<h3 class="detail-section__title">Perustiedot</h3>' +
           '<div class="detail-grid">' +
             '<div class="detail-grid__label">Nimi</div>' + maybeMutedValue(rec.nimi) +
+            (suostumus.huoltaja
+              ? '<div class="detail-grid__label">Huoltaja</div>' +
+                '<span class="detail-grid__value">' +
+                  escapeHtml(suostumus.huoltaja.nimi || '') +
+                  (suostumus.huoltaja.suhde ? ' (' + escapeHtml(suostumus.huoltaja.suhde) + ')' : '') +
+                  (suostumus.huoltaja.puhelin
+                    ? ' · <a href="tel:' + escapeHtml(String(suostumus.huoltaja.puhelin).replace(/\s/g,'')) + '">' + escapeHtml(suostumus.huoltaja.puhelin) + '</a>'
+                    : '') +
+                '</span>'
+              : '') +
             '<div class="detail-grid__label">Sähköposti</div>' +
               (rec.sahkoposti
                 ? '<span class="detail-grid__value"><a href="mailto:' + escapeHtml(rec.sahkoposti) + '">' + escapeHtml(rec.sahkoposti) + '</a></span>'

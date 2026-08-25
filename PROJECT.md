@@ -7183,3 +7183,233 @@ sekä attribuutissa että näkyvässä sisällössä, **korvausmerkkijonoon on
 otettava mukaan ympäröivä tagi**, kuten muissa tämän päivän
 korvauksissa tehtiin. Löytyi vasta kun luin korttien otsikot
 kategoriointia varten.
+
+
+## 19.8.2026 — Search Consolen rakenteisen datan varoitukset: pysyvä tila
+
+Search Console ilmoitti viisi puutetta ProXN-tuotteiden `Product`-
+merkinnöissä. **Neljä niistä jää pysyvästi eikä niitä saa korjata.**
+
+### Miksi varoitukset syntyvät
+
+Googlen dokumentaatio jakaa Product-merkinnät kahteen käyttötapaukseen:
+
+> **Product snippets**: sivuille joilla tuotetta *ei voi suoraan ostaa*.
+> **Merchant listings**: sivuille joilla asiakas *voi ostaa tuotteen sinulta*.
+
+Studiomahla on ensimmäinen — tuotteita saa vain studiolta hoidon
+yhteydessä. Google arvioi merkintöjä silti automaattisesti myös
+kauppalistauksena, koska sivulla on `Product` + `offers` + hinta.
+**Raportti mittaa ominaisuutta johon sivusto ei ole kelvollinen eikä
+pyri.**
+
+### Puute puutteelta
+
+| Puute | Ratkaisu |
+|---|---|
+| `image` (kriittinen) | Aito. Antioxidant Therapy korjattu 19.8., loput viisi odottavat syyskuun kuvausta. |
+| `shippingDetails` | **Ei koske.** Mitään ei toimiteta. |
+| `hasMerchantReturnPolicy` | **Ei koske.** Ei etämyyntiä eikä palautusoikeutta. |
+| `review` | Arvosteluja ei ole olemassa. |
+| `aggregateRating` | Sama. |
+
+**Neljää alinta ei saa täyttää varoitusten sammuttamiseksi.** Googlen
+ohjeet edellyttävät että rakenteinen data vastaa todellisuutta.
+Toimitusehtojen, palautuskäytännön tai arvostelujen keksiminen olisi
+ohjeiden rikkomus, ei korjaus. Search Consolen "Fix issues" -painike
+houkuttelee juuri siihen.
+
+**"Kriittinen" tarkoittaa tässä** että puute estää kyseisen rikastetun
+tuloksen näkymisen, ei sivun näkymistä haussa. Sivut näkyvät
+normaalisti.
+
+### Tehty 19.8.2026
+
+`image`-kenttä lisätty Antioxidant Therapyn `Product`-olioon sekä
+`proxn-kasvohoito.html`:ään että `hinnasto.html`:ään. Se on ainoa
+kuudesta kotihoitotuotteesta josta on kuva. Ampullikuva esittää
+ammattikäyttöistä Xanthohumol Recovery Treatmentia, joka ei kuulu
+näihin kuuteen, joten sitä ei voi käyttää.
+
+**Vaikutus on pieni** — yksi kuudesta, ja rikastetun tuloksen
+saaminen on teoreettista. Lisätty koska data oli aidosti puuttuvaa.
+
+### Avoin: syyskuun kuvaus
+
+Viisi tuotetta ilman kuvaa: Recovery Cleansing Oil, Balancing
+Cleansing Gel, Prime Mist, LF Master, Sun Barrier. Kun kuvaussessio on
+pidetty, `image`-kentät lisätään samalla tavalla molempiin tiedostoihin.
+
+### Merkinnät muuten kunnossa
+
+Samat kuusi tuotetta esiintyvät kahdella sivulla jaetulla `@id`:llä
+(`hinnasto.html#tuotenimi`), joten Google ymmärtää ne samoiksi olioiksi
+eikä kaksoiskappaleiksi. Tätä ei pidä muuttaa.
+
+**Harkittu ja hylätty:** `offers`-lohkon poistaminen sammuttaisi
+varoitukset kokonaan, koska Google ei enää arvioisi merkintöjä
+kauppalistauksena. Silloin hinta ei voisi näkyä hakutuloksessa. ProXN
+on Suomessa harvinainen, joten tuotenimihaussa hinnan näkyminen on etu.
+
+
+## 22.8.2026 — Cloudflare Pages poistaa .html-päätteen: sivuston ja palvelimen ristiriita
+
+Search Console raportoi kohdassa "Page with redirect" neljä sivua.
+Kolme niistä on normaaleja, neljäs paljasti koko sivustoa koskevan
+epäjohdonmukaisuuden.
+
+### Neljä raportoitua
+
+| Osoite | Mihin ohjaa | Arvio |
+|---|---|---|
+| `index.html` | `/` | Normaali Pages-toiminta |
+| `kauppa.html` | `/` | **Oma 301-sääntömme** `_redirects`-tiedostossa |
+| `http://studiomahla.fi/` | https + www | Normaali ja välttämätön |
+| `mita-tutkimus-sanoo-mikroneulauksesta.html` | sama ilman `.html` | **Löydös, ks. alla** |
+
+Kolme ensimmäistä eivät vaadi toimenpiteitä.
+
+### Löydös
+
+**Cloudflare Pages poistaa `.html`-päätteen automaattisesti ja ohjaa
+301:llä päätteettömään osoitteeseen.** Tälle ei ole sääntöä
+`_redirects`-tiedostossa — se on alustan oletustoiminta, ja se koskee
+jokaista sivua. Google on ehtinyt havaita niistä neljä, ja määrä on
+kasvanut 1 → 2 → 3 → 4 kesän aikana.
+
+Sivusto ilmoittaa itsestään päinvastaista:
+
+| Mikä | Mitä sanoo |
+|---|---|
+| Palvelin | kanoninen osoite on **päätteetön** |
+| `rel="canonical"` | `.html` |
+| `og:url`, `twitter:` | `.html` |
+| `sitemap.xml` | `.html` |
+| 168 sisäistä linkkiä | `.html` |
+
+Canonical-tagi osoittaa siis osoitteeseen joka ohjaa takaisin siihen
+sivuun jolla tagi on.
+
+**Todennettu 22.8.2026** hakemalla
+`https://www.studiomahla.fi/mita-tutkimus-sanoo-mikroneulauksesta.html`,
+joka ohjautui osoitteeseen ilman päätettä samalla kun sivun oma
+canonical-tagi osoitti `.html`-versioon.
+
+### Vakavuus
+
+**Lievä.** Google ratkaisee ristiriidan seuraamalla ohjausta, ja sivut
+ovat indeksissä ja toimivat normaalisti. Haitat ovat:
+
+- jokainen sisäinen klikkaus tekee turhan 301-hypyn
+- sitemap ohjaa Googlen osoitteisiin jotka ohjaavat eteenpäin, mitä
+  Google nimenomaan kehottaa välttämään
+- indeksointibudjettia kuluu turhaan
+
+Mikään ei ole rikki. Kyse on siisteydestä.
+
+### Päätös 22.8.2026: ei korjata nyt
+
+Korjaus tarkoittaisi `.html`-päätteen poistamista canonical-tageista,
+`og:url`-kentistä, JSON-LD:n `url`-arvoista, sitemapista ja **168
+sisäisestä linkistä**. Mekaaninen mutta laaja muutos.
+
+Se tehdään silloin kun sivustolle ei ole tulossa muita muutoksia, ei
+kolme viikkoa ennen avausta. `_redirects`-tiedoston omat säännöt
+viittaavat `.html`-osoitteisiin ja toimivat korjauksen jälkeenkin.
+
+### Kun Search Console raportoi lisää sivuja tähän kohtaan
+
+**Se on odotettua eikä vaadi toimenpiteitä.** Määrä kasvaa siihen asti
+kunnes Google on käynyt läpi kaikki sivut. Älä paina "Validate fix" —
+ohjaus on olemassa ja pysyy, joten tarkistus vain vahvistaisi sen.
+
+### `/kauppa` ilman päätettä
+
+Erillinen 404-raportti koskee osoitetta `/kauppa`, jolle ei ole
+sääntöä. Sinne ei linkitä mikään, joten se on merkityksetön. Jos se
+joskus halutaan siistiä, `_redirects`-tiedostoon lisätään
+`/kauppa  /  301`.
+
+
+## 24.8.2026 — Alaikäiset asiakkaat ja huoltajan suostumus
+
+### Lähtökohta korjattiin
+
+Claude oletti ettei studiolla hoideta alaikäisiä lainkaan, koska
+"alle 18-vuotias" on mikroneulauksen vasta-aiheluettelossa. **Oletus oli
+väärä.** Käyttäjän linjaus 24.8.2026:
+
+> *"mikroneulausta ei tehdä alle 18 vuotiaille mutta proxn ja led kyllä
+> myös sopivat tietyissä tilanteissa. Olen ennenkin teinien ihoa
+> hoitanut. Sanoisin että lapsille emme tarjoa, teineille kyllä."*
+
+**Sivuston tekstit olivat kunnossa** — ikämaininta esiintyy vain
+mikroneulauksen vasta-aiheissa (`index.html`, `mikroneulaus-opas.html`,
+`mikroneulaus-sopiiko-minulle.html`), eikä yksikään sivu väitä ettei
+alaikäisiä hoideta. Ei korjattavaa.
+
+**Ei korosteta asiakassegmenttinä.** Käyttäjä: *"tätä ei kuitenkaan
+tarvitse korostaa omana kategorianaan asiakassegmenttinä mutta hyvä
+olla tietoinen."*
+
+### Miksi huoltajan suostumus vaaditaan
+
+Käyttäjä kysyi voiko studio vaatia lakia tiukempaa, koska 16-vuotias saa
+päättää omista terveysasioistaan. **Premissi on oikea mutta se tulee
+väärästä laista.**
+
+Se sääntö on potilaslaista ja koskee terveydenhuoltoa. **Studio ei ole
+terveydenhuoltoa** — META-MARKKINOINTI §7.4: mikroneulaus on
+kosmeettinen toimenpide, ei terveydenhuoltopalvelu. Suhde asiakkaaseen
+on kuluttajasopimus.
+
+Sopimusoikeudessa asetelma on päinvastainen. Alle 18-vuotias on
+**vajaavaltainen** ja saa itse tehdä vain oikeustoimia jotka ovat
+*"olosuhteisiin nähden tavanomaisia ja merkitykseltään vähäisiä"*.
+Kahdensadan euron kosmeettinen hoito ei ole kumpaakaan.
+
+**Huoltajan suostumuksen vaatiminen ei siis ole lakia tiukempaa vaan
+sitä mitä sopimusoikeus jo edellyttää.** Sama suostumus kattaa myös
+terveystietojen käsittelyn GDPR:n 9 artiklan nojalla.
+
+### Päätös
+
+**Alaikäisen hoito edellyttää huoltajan suostumuksen. Läsnäoloa ei
+vaadita.** Huoltaja täyttää esitietolomakkeen ennen käyntiä.
+
+Ei tapauskohtaista kypsyysarviota — se olisi käyttäjän tehtävä tehdä ja
+puolustaa jälkikäteen, eikä siihen ole terveydenhuollon kaltaista
+kehystä.
+
+### Toteutus
+
+| Tiedosto | Muutos |
+|---|---|
+| `lomake.html` | Huoltajalohko (nimi, suhde, puhelin) joka avautuu kun ikä < 18. Suostumusosion johdanto vaihtuu huoltajan ääneen. Validointi vaatii kaikki kolme kenttää. |
+| `functions/api/esitiedot.js` | Torjuu lähetyksen jos ikä < 18 eikä huoltajaa ole. Tallentaa huoltajatiedot. |
+| `admin.html` | Huoltaja näkyy perustiedoissa nimen alla, puhelin klikattavana. |
+| `mita-ensikaynnilla-tapahtuu.html` | Yksi lause varausosioon. Ei omaa osiota. |
+
+**Huoltajatiedot tallennetaan `suostumus`-JSONB-kentän sisään**, ei
+uutena sarakkeena. Ensimmäinen versio olisi lisännyt top-level-kentän
+`huoltaja`, mikä olisi vaatinut tietokantamuutoksen ja kaatunut
+tuotannossa. Huoltaja on myös looginen osa suostumusta: hän on se joka
+sen antaa.
+
+### Tiedostettu rajoite
+
+**Verkkolomakkeella ei voi todentaa että täyttäjä on huoltaja.** Tähän
+ei ole tässä mittakaavassa järkevää ratkaisua, ja sama koskee kaikkia
+vastaavia lomakkeita. Riittävä huolellisuus on se mitä voidaan vaatia.
+
+### Tarkistettu
+
+Kolmentoista kohdan testi ohjelmallisesti: lohkon näkyvyys, ikäraja,
+validointi, payload, API:n torjunta, tallennuspaikka, adminin näkymä ja
+artikkelin sanamuoto. `node --check` kaikille kolmelle JS-osuudelle.
+
+### Ei juridista varmistusta
+
+Tulkinta yleisistä säännöistä, ei juristin arvio. Jos ehto joskus
+kirjataan sivustolle sopimusehtona eikä ohjeena, sanamuoto kannattaa
+tarkistuttaa.
