@@ -7413,3 +7413,375 @@ artikkelin sanamuoto. `node --check` kaikille kolmelle JS-osuudelle.
 Tulkinta yleisistä säännöistä, ei juristin arvio. Jos ehto joskus
 kirjataan sivustolle sopimusehtona eikä ohjeena, sanamuoto kannattaa
 tarkistuttaa.
+
+
+## 24.8.2026 — Yleispilari `ihonhoito-opas.html`
+
+### Kaksi versiota, ensimmäinen hylätty
+
+**v1 oli kosmetiikkabrändin blogia.** Kolmen tuotteen perusrutiini,
+"kolme yleistä harhaluuloa", ihotyyppikuvaukset ja **miehen iho omana
+osionaan**. Yksikään väite ei ollut lähteessä kiinni.
+
+Käyttäjän arvio: *"tähän tuli kaikki peruskliseet jotka löytyvät
+kaikista blogeista. Miehen iho omana osionaan on aina todella
+vähättelevä eikä sovi mitenkään päin studion linjaan."*
+
+Molemmat pitivät paikkansa. **Sukupuolen mukaan nimetty osio on
+jaotteluna perusteeton**, ja se on kirjattu tähän jottei sitä ehdoteta
+uudelleen.
+
+### v2: rakenne näytön vahvuuden mukaan
+
+Sivusto teki tämän jo kerran oikein: `mita-tutkimus-sanoo-mikroneulauksesta.html`
+on sivuston vahvimpia tekstejä juuri siksi että se kertoo myös missä
+näyttöä ei ole. Pilari kirjoitettiin samalla äänellä koko ihonhoidosta.
+
+**Kulma:** mitä tutkimus tukee, mitä se ei tue, ja kuka tutkimuksen
+maksoi. Kosmetiikkabrändi ei voi kirjoittaa tätä sivua, koska se myy
+niitä tuotteita joista näyttö puuttuu.
+
+### Viisi varmistettua primäärilähdettä
+
+Kaikki tarkistettu alkuperäisjulkaisusta ja linkitetty DOI:lla.
+Yksityiskohdat: `tuotanto/ihonhoito-opas-lahteet.md`.
+
+| Lähde | Ydin |
+|---|---|
+| Hughes ym. 2013, *Ann Intern Med* | Nambourin RCT: päivittäinen aurinkosuoja, 24 % vähemmän fotovanhenemista, RO 0,76 (0,59–0,98) |
+| Flament ym. 2013, *Clin Cosmet Investig Dermatol* | Se 80 %:n luku — ja sen alkuperä |
+| Huang & Lee 2025, *Dermatol Pract Concept* | Tretinoiini: 8 RCT, 1 361 potilasta |
+| Yang ym. 2020, *Cochrane* | Bentsoyyliperoksidi: 120 tutkimusta, 29 592 osallistujaa, **matala varmuus** |
+| Myung & Park 2025, *Am J Med* | Kollageenilisät: vaikutus katoaa ilman teollisuusrahoitusta |
+
+### Kolme löydöstä joita ei ollut ennen tätä työtä
+
+**1. Se 80 prosentin luku on L'Oréalin.** Ihonhoidon toistetuin
+tilasto jäljittyy Flamentin ym. 2013 julkaisuun, jonka kirjoittajat
+työskentelivät L'Oréal Research and Innovationissa ja Biothermissä.
+Asetelma oli havainnoiva, ei satunnaistettu. **Ja julkaisun omat
+tulokset ovat hienojakoisempia kuin otsikkoluku:** ihon veltostuminen
+seurasi kronologista ikää eikä eronnut auringonhakuisten ja aurinkoa
+välttävien välillä lainkaan.
+
+Tämä ei kumoa aurinkosuojaa — Nambourin RCT tukee sitä riippumatta.
+Mutta hyvin perusteltua käytäntöä markkinoidaan luvulla joka
+yksinkertaistaa oman lähteensä.
+
+**2. Nambourin vertailuryhmä käytti myös aurinkosuojaa.** Koe vertasi
+päivittäistä käyttöä *harkinnanvaraiseen*, ei käyttämättömyyteen. Ero
+täysin ilman jäävään on suurempi kuin 24 %, mutta sitä koe ei mitannut.
+Lisäksi leveysaste oli 26° S eli Queensland, ja Suomi on 60° N.
+
+**3. Määrä ei ole sama kuin vahvuus.** Cochrane kokosi
+bentsoyyliperoksidista 120 tutkimusta ja lähes 30 000 osallistujaa, ja
+päätyi silti sanamuotoon "saattaa olla tehokkaampi" ja
+matalavarmuuksiseen näyttöön. Maailman käytetyin aknehoito.
+
+### Rakenteellinen havainto joka kantaa koko sivun
+
+| | Aurinkosuoja | Kollageenilisät |
+|---|---|---|
+| Rahoitus | Australian NHMRC, julkinen | 21/23 tutkimuksesta teollisuuskytkentäisiä |
+| Asetelma | Satunnaistettu | Satunnaistettuja, mutta laatu vaihtelee |
+| Tulos | Vaikutus todennettu | Katoaa riippumattomissa ja laadukkaissa |
+| Hinta | Pieni | Suuri |
+
+**Ihonhoidon vahvin näyttö on julkisrahoitteista, heikoin
+teollisuusrahoitteista.**
+
+### Oma virhe joka jäi kiinni tarkistuksessa
+
+Kirjasin suunnitelmaan että retinoidien meta-analyysi osoitti
+paranemisen "myös histologisesti". **Se ei pitänyt paikkaansa** —
+julkaisu raportoi kliiniset päätemuuttujat. Väite tuli hakukoosteesta
+joka sekoitti mukaan toisen katsauksen.
+
+Yksi virhe kolmesta ensimmäisestä tarkistuksesta. **Se on mitattu
+perustelu säännölle ettei väitettä viedä sivulle ilman
+alkuperäisjulkaisua.**
+
+### Tekninen toteutus
+
+| Tiedosto | Muutos |
+|---|---|
+| `ihonhoito-opas.html` | Uusi, **3 372 sanaa**, 18 pääosiota, yhdentoista lähteen luettelo. JSON-LD `BlogPosting` + `citation`-taulukko, `BreadcrumbList`. |
+| `blogi.html` | Toinen kiinnitetty kortti. Uusi `.blog-pinned` -kaari: kaksipalstainen työpöydällä, yksipalstainen alle 860 px. **Kiinnitetyt suodatuksen ulkopuolelle** `data-kiinnitetty`-attribuutilla. |
+| `sitemap.xml` | Lisätty, priority 0.9 |
+
+**Suodatinlogiikka testattu ohjelmallisesti:** kiinnitetyt näkyvät
+kaikilla viidellä suodatinvalinnalla, ja lukumäärät laskevat vain
+tavalliset kortit (11).
+
+### Toinen korjauskierros samana päivänä: kapea kattavuus
+
+Ensimmäinen v2-versio kattoi viisi aihetta — aurinkosuoja, se 80 %:n
+luku, retinoidit, bentsoyyliperoksidi ja kollageenilisät — ja **kutsuin
+sitä kattavaksi.** Käyttäjä huomasi: *"Et nyt siis myöskään keskittynyt
+yksittäisiin asioihin vaan kävit laajasti läpi kaikkea mikä voisi
+ihonhoitoon vaikuttaa?"*
+
+Ei käynyt. Ulkopuolelle jäi koko systeeminen puoli ja suojakerroksen
+biologia, jonka olin jopa hakenut mutta en kirjoittanut sisään.
+
+**Lisätyt osiot:**
+
+| Osio | Näyttöpohja |
+|---|---|
+| Ihon suojakerros ja TEWL | Keramidit, niasiiniamidi. Merkitty kohtalaiseksi näytöksi, ei satunnaistetuksi |
+| Hormonit | Brincat ym. 1983 *BMJ*: 48 % suurempi kollageenipitoisuus hormonihoitoa saaneilla, rajoitukset kerrottuna |
+| Tupakointi | UV:sta riippumaton, kaksostutkimukset |
+| Ravinto ja akne | **Rehellinen "ei tiedetä"** — ristiriitaiset meta-analyysit, maitoyhteys vain länsimaisissa väestöissä |
+| D-vitamiini ja aurinkosuoja | Suomen leveysasteilla argumentti kääntyy päinvastaiseksi |
+| Miksi mikään ei näy nopeasti | Uusiutumissyklit, tutkimusten seuranta-ajat |
+
+**Paras yksittäinen lisäys on D-vitamiiniosio.** Se on ainoa kohta joka
+on aidosti suomalainen: Nambourin koe tehtiin 26° S:llä, ja Suomessa
+auringon kulma on suuren osan vuodesta liian matala UVB:lle joka
+tapauksessa. Aurinkosuojan välttäminen ei siis ole täällä toimiva
+D-vitamiinistrategia. Puutos on yleistä ja se ratkaistaan
+ravitsemuksessa.
+
+### Kolmas kierros: tuotekategoriat ja sävy
+
+Käyttäjä pyysi käsittelemään puhdistuksen, kasvovedet, kosteusvoiteet ja
+seerumit. Tutkimus tehtiin ennen kirjoittamista, ja se tuotti kaksi
+lisää varmistettua lähdettä sekä yhden sävymuutoksen.
+
+**Aurinkosuojan poistaminen — Chen ym. 2020.** Ohje "aurinkosuoja pitää
+aina kaksoispuhdistaa" **pätee vain vedenkestäviin.** Ei-vedenkestävällä
+tavallinen puhdistusaine jättää 15,6 % ja öljy 13,4 % — ei eroa.
+Vedenkestävällä 36,8 % vastaan 5,8 %. Tutkimus mittasi jäämää, ei
+seurauksia, ja se aukko sanotaan artikkelissa ääneen.
+
+**BEEP-tutkimus, *Lancet* 2020.** Päivittäinen kosteusvoide vauvaiässä
+ei ehkäissyt ekseemaa, ja aineistossa näkyi viite ihoinfektioiden
+lisääntymisestä. Sama voide auttaa olemassa olevaa ekseemaa. **Hoito ja
+ehkäisy ovat eri kysymyksiä.** Tämä on kollageenia opettavaisempi
+esimerkki, koska mekanismi oli uskottava ja suositus ammattilaisten
+tukema — eikä kukaan myynyt sitä aggressiivisesti.
+
+**Kasvovedet käsitellään ainesosien kautta, ei kategoriana.** Käyttäjän
+linjaus: *"ei niin että kasvovesi olisi tehoton vaan vaikuttavien
+aineiden kautta."* Neljästä väitteestä yksi on aito ja johtuu
+ainesosasta, yksi nojaa mekanismiin jonka iho hoitaa itse noin
+tunnissa, ja kaksi on testaamatta.
+
+**Tämä oli myös ristiriitatarkistuksen kannalta välttämätöntä:** studio
+myy Prime Mist -kasvovettä. Ainesosalähtöinen käsittely on linjassa
+tuotekuvauksen kanssa, joka luettelee laktobionihapon, glukonolaktonin
+ja niasiiniamidin eikä esitä kategoriaväitteitä.
+
+#### Sävykorjaus: miellyttävyys on pätevä syy
+
+Käyttäjä 24.8.2026: *"jos ihonhoitotuotteet saavat ihon tuntumaan
+hyvältä niin se on itsessään hyvä syy käyttää — kunhan ei mene
+mihinkään addiktioon."*
+
+Artikkeli oli kirjoitettu puhtaasti välineellisestä kehyksestä, joka
+sanoo implisiittisesti että kaikki ilman satunnaistettua koetta on
+hukkaan heitettyä. **Se ei ole totta eikä tieteellisesti
+johdonmukaista:** Cochranen bentsoyyliperoksidikatsauksen ensisijainen
+päätemuuttuja oli osallistujan itse arvioima paraneminen.
+Ihotautitutkimuksessa oma kokemus on vakiintunut päätetapahtuma.
+
+Lisätty osio **"Kaikkea ei tarvitse perustella tutkimuksella"** kahdella
+rajalla: kun rutiini kasvaa niin että iho huononee, ja kun tuotteen
+käyttämättä jättäminen alkaa ahdistaa. Ei diagnoosisanastoa.
+
+Ilman tätä osiota kokonaisuus olisi nuhteleva — ja nuhteleva teksti on
+huono käyntikortti palvelulle jonka ydin on asiakkaan kuunteleminen.
+
+#### Otsikkorekisteri
+
+Käyttäjä hylkäsi muodon "mitä oikeasti tekee": *"vaikkakin se toki
+oikein on"* — ilmaus vihjaa että muut valehtelevat sen sijaan että
+sanoisi asian. Uusi osio nimettiin talon kaavan mukaan, aihe plus löydös:
+**"Puhdistus, kosteutus ja seerumit: neljä eri näytön tasoa"**.
+
+Artikkelin oma otsikko ja "Ihon suojakerros: mitä oikeasti mitataan"
+jäivät käyttäjän päätöksellä ennalleen, koska ne rinnastuvat julkaistuun
+artikkeliin "Mitä tutkimus oikeasti sanoo mikroneulauksesta".
+
+#### Ristiriitatarkistus muuhun sivustoon
+
+Käyty läpi `mikroneulauksen-jalkihoito.html`, `proxn-kasvohoito.html`,
+`herkka-iho-ruusufinni-mikroneulaus.html`, `hinnasto.html` ja
+`mita-ensikaynnilla-tapahtuu.html`. **Ristiriitoja ei löytynyt**, ja
+kolme kohtaa osui valmiiksi yhteen:
+
+- Sun Barrierin kuvaus: *"vaikuttavin yksittäinen keino hidastaa ihon
+  ikääntymistä"* — vastaa Nambourin tulosta myös siinä että puhutaan
+  hidastamisesta eikä korjaamisesta
+- Prime Mistin kuvaus on ainesosalähtöinen
+- ProXN-protokollan kahden vaiheen puhdistus vastaa Chenin dataa
+
+#### Neljäs kierros: meikki
+
+Käyttäjä huomautti että puhdistusosio käsitteli aurinkosuojan mutta ei
+meikkiä, vaikka se on toinen päivittäin iholla pidettävä asia.
+
+**Löydös: "non-comedogenic" on valvomaton merkintä.** Starzyk ym. 2025
+*JAAD Reviews*: merkinnän tausta on 1970-luvun kaniinin korvakoe, jossa
+testiaine levitetään albiinokaniinin korvalehdelle 2–4 viikoksi. Kolme
+ongelmaa: myöhemmät tutkimukset eivät saaneet vastaavia tuloksia
+ihmisiholla, testataan yksittäisiä raaka-aineita eikä valmiita
+tuotteita, eikä standardoitua testiä tai valvontaa ole.
+
+**Tämä on kolmas esimerkki samasta ilmiöstä** sivulla: 80 %:n luku,
+"clinical-grade" ja nyt "non-comedogenic".
+
+**Meikkivälineiden bakteerit** (Attar ym. 2025) kirjoitettiin
+mittaustuloksena, ei syy-seuraussuhteena — sama varaus kuin
+aurinkosuojan jäämässä.
+
+Meikin poistosta ei löytynyt vastaavaa mittaustutkimusta kuin
+aurinkosuojasta, ja se sanotaan artikkelissa ääneen.
+
+**Oma artikkeli meikistä lisätty aiheluetteloon** (aiheet 26–28).
+
+**Lopullinen artikkeli: 3 372 sanaa, 18 pääosiota, 11 alaotsikkoa,
+yksitoista lähdettä suorilla linkeillä.**
+
+### Jatko: 25 artikkeliaihetta
+
+`tuotanto/ihonhoito-opas-runko.md` sisältää 25 aihetta viidessä
+ryhmässä, jokaisella tunnistettu näyttöpohja. Ne linkittävät tähän
+pilariin.
+
+**Jokainen vaatii primäärilähteen ennen kirjoittamista.** Yhdeksän
+aihetta on vielä varmistamatta, ja ne on merkitty lähdetiedostoon.
+
+### Miksi tämä ei laimenna aihepiiriä
+
+PROJECT.md §16.4 varoi sisällön hajoamisesta. **Näyttö on eri akseli
+kuin hoitomuoto.** Se kattaa myös ProXN:n ja LED:n ilman että kumpikaan
+tarvitsee omaa klusteriaan, ja se vahvistaa samaa asemaa jota
+mikroneulausklusteri jo rakentaa.
+
+---
+
+## 26.8.2026 — Aknehoito-karuselli julkaistu
+
+**JULKAISTU 26.8.2026** Instagramiin ja Facebookiin. 7 diaa,
+kansidia tumma. Tiedostot `tuotanto/karusellit/aknehoito_01.png` …
+`_07.png`, skripti `tuotanto/generaattorit/aknehoito.py`, kuvatekstit
+`tuotanto/julkaisut/aknehoito-karuselli-26-08-2026.md`.
+
+### Kaksi muutosta julkaisupäivänä
+
+Käyttäjä: *"kuvatekstissä voisi hieman laajemmin mainita proxn
+ampullista (ei tässä nyt ollenkaan) ja tuo eri aikojen maininta on
+hyvin sekava, ehkä ottaisin sen pois."*
+
+**1. Aikataulu yhteen lauseeseen.** Kuvateksti kävi läpi kolme eri
+aikaa: kolmas käynti neljännellä viikolla, hoitovasteen arviointi
+kahdeksannella, kuuden hoidon sarjan päätös kymmenennellä. Kaikki
+kolme ovat sivustolla oikein ja perusteltuja, mutta päällekkäin
+yhdessä kuvatekstissä ne eivät ole luettavia. Sivulla ne aukeavat,
+koska ympärillä on tilaa selittää.
+
+Jäljelle jäi se mitä lukija tarvitsee varatakseen ajan: **aknen
+kohdalla suositellaan sarjaa ja hoitoväli on kaksi viikkoa.**
+
+Diat 5 ja 6 korvattiin yhdellä Sarjahoito-dialla.
+
+**Sääntö:** kuvatekstiin otetaan sivulta se aikatieto jonka lukija
+tarvitsee ajan varaamiseen, ei koko perustelua. Perustelu on sivulla,
+ja sinne linkataan.
+
+**2. Ampulli mukaan.** 18.8. ProXN-julkistuksessa ampulli oli koko
+julkaisun aihe, mutta aknekarusellista se puuttui kokonaan, vaikka se
+on hoidon vaikuttava aine. Nyt dia 4 on ampullista, ja kuvatekstissä
+kerrotaan kylmäkuivaus ja sen syy, neljä muuta ainetta
+(superoksididismutaasi, C-vitamiinin vakaa muoto, koentsyymi Q10,
+aktivaattorin hopea) sekä se että ampullia ei huuhdella pois vaan sen
+päälle asetetaan steriili biosellu-naamio.
+
+**Hopea kerrotaan koostumuksena, ei vaikutuksena.** Sivustolla lukee
+että aktivaattorin hopea ehkäisee bakteeriperäisiä jälki-infektioita.
+Kuvatekstissä sanotaan vain että aktivaattori sisältää hopeaa.
+Aknejulkaisussa infektiolauseen voi lukea aknetta koskevana
+tulosväitteenä, vaikka se koskee hoidon omaa turvallisuutta.
+META-MARKKINOINTI.md luku 6.2.
+
+---
+
+## 26.8.2026 — Yleispilari julkaistu ja linkitetty
+
+### Sääntö: julkaisupäivä on se päivä jolloin artikkeli menee sivustolle
+
+Käyttäjä 26.8.2026: *"julkaisupäivä on aina se päivä jolloin blogi
+sivustolle menee."*
+
+Ei siis kirjoituspäivä eikä valmistumispäivä. `ihonhoito-opas.html`
+oli kirjoitettu 24.8. ja päivätty sen mukaan; päiväys siirrettiin
+26.8:aan koska lataus tapahtuu silloin. Koskee kolmea kohtaa:
+`datePublished`, `dateModified` ja näkyvä `<time>`, sekä blogikortin
+päiväystä `blogi.html`:ssä. Nämä neljä pidetään aina samana.
+
+### Kolme korjausta ennen julkaisua
+
+**1. Sitemap.** `ihonhoito-opas.html` puuttui kokonaan. Lisätty heti
+`mikroneulaus-opas.html`:n jälkeen samoilla arvoilla (priority 0.9,
+changefreq monthly), koska molemmat ovat pilareita. `blogi.html`:n
+`lastmod` päivitettiin 2026-08-26, koska blogisivu muuttui
+kiinnitettyjen oppaiden takia. Sitemapissa nyt 19 osoitetta.
+
+**2. JSON-LD:n `citation`-lista oli jäänyt vanhaksi.** Siinä oli viisi
+lähdettä, sivun lähdeluettelossa kaksitoista. Puuttuivat BEEP,
+Cochrane-ekseemakatsaus, Starzyk, Attar, Chen, Brincat ja
+kollageeni-meta-analyysin kommenttikirjoitus. **Tämä on toistuva
+riski:** kun artikkeliin lisätään lähde, JSON-LD ei päivity itsestään.
+Tarkistuskomento:
+
+```
+citation-määrä JSON-LD:ssä == lähdeluettelon linkkien määrä
+```
+
+**3. Ei yhtään sisääntulevaa linkkiä.** Ainoa linkki tuli
+`blogi.html`:stä. Vertailu: `mikroneulaus-opas.html`:ään linkitetään
+neljästätoista tiedostosta. Pilari joka linkittää ulos kymmeneen
+paikkaan mutta ei saa mitään takaisin on umpiperä.
+
+### Kuusi sisääntulevaa linkkiä
+
+Valintaperuste: linkki sinne missä lukija oikeasti hyötyy, ei joka
+artikkeliin.
+
+| Tiedosto | Kohta | Mihin linkki vie |
+|---|---|---|
+| `mita-tutkimus-sanoo-mikroneulauksesta.html` | Näytön hierarkia -osio | Sama hierarkia laajemmin sovellettuna, ja rahoituslähde-esimerkki |
+| `mikroneulauksen-jalkihoito.html` | *"Aurinkosuoja on jälkihoidon tärkein yksittäinen asia"* | Nambourin satunnaistettu koe — väitteelle sen lähde |
+| `mikroneulaus-opas.html` | Tutkimusnäyttö-osion loppu | Pilarista pilariin |
+| `mikroneulaus-talvella.html` | Lue lisää | D-vitamiinin ja aurinkosuojan suomalainen jännite |
+| `aknearpien-hoito-mikroneulauksella.html` | Lue lisää | Akne omana kokonaisuutenaan, ravinnon osuus |
+| `proxn-kasvohoito.html` | Lue lisää | Mitä suojakerroksesta oikeasti mitataan |
+
+**Yksi linkkiteksti korjattiin.** Aknearpisivun teksti lupasi ensin
+*"mitä paikallishoidoista tiedetään varmasti"*, vaikka pilarin oma
+osio on nimeltään "Akne: laajin aineisto, matalin varmuus". Linkki ei
+saa luvata enemmän varmuutta kuin kohdesivu antaa.
+
+**Ankkuriteksti on viidessä paikassa artikkelin oma otsikko.** Se
+noudattaa sivuston vakiintunutta tapaa: `mikroneulaus-opas.html`:ään
+linkitetään samalla tavalla seitsemästä paikasta otsikolla
+"Mikroneulauksen täydellinen opas".
+
+`mikroneulauksen-jalkihoito.html` on poikkeus: siellä ankkurina on
+*"satunnaistettu tutkimus 903 aikuisella"*, koska linkki tukee siinä
+kohdassa yksittäistä väitettä eikä esittele kokonaista artikkelia.
+
+**Etusivuun ei koskettu.** Päätös 17.8.2026 on että etusivu on
+toistaiseksi pääasiassa mikroneulaussivu.
+
+### Ladattavat tiedostot
+
+`ihonhoito-opas.html`, `blogi.html`, `sitemap.xml`,
+`mita-tutkimus-sanoo-mikroneulauksesta.html`,
+`mikroneulauksen-jalkihoito.html`, `mikroneulaus-opas.html`,
+`mikroneulaus-talvella.html`,
+`aknearpien-hoito-mikroneulauksella.html`, `proxn-kasvohoito.html`.
+
+Yhdeksän tiedostoa. Tarkistettu: JSON-LD validi kaikilla,
+ei rikkinäisiä sisäisiä linkkejä (0/25 sivua).

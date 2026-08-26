@@ -1406,6 +1406,49 @@ julkaista, vain tuotettu valmiiksi. Video ja diat jätetty
 `tuotanto/`-kansioon myöhempää käyttöä varten, ei poistettu.
 Tilalle valittiin idea 7.1 (ks. kohta 6 alla).
 
+**JULKAISTU 24.8.2026 Instagramiin ja Facebookiin.** Syy siihen
+miksi video ei toiminut elokuun alussa on nyt tunnistettavissa:
+**se oli umpikuja.** Viisi diaa kertoivat miksi aktiivista aknea ei
+hoideta mikroneulauksella, eikä katsojalle jäänyt mitään mitä hän
+voisi tehdä. ProXN-kasvohoidon julkaisun jälkeen vastaus on olemassa.
+
+**Viimeinen dia vaihdettu.** Vanha loppu kertoi mikroneulauksesta,
+vaikka koko video kertoo miksi sitä ei tehdä. Uusi loppu: "Aktiiviseen
+vaiheeseen on oma hoitonsa — ProXN-kasvohoito ei riko ihoa, joten se
+voidaan tehdä silloinkin kun mikroneulaus ei sovi." Muut neljä diaa
+ennallaan, video tuotettu uudelleen, kesto sama 21,3 s.
+
+Kuvatekstit ja perustelut: `tuotanto/julkaisut/akne-reels-24-08-2026.md`
+
+**Idean 3.1 KÄYTETTY-merkintä palautettu REELS-IDEAT.md:hen.** Se
+poistettiin 7.8. koska ideaa ei julkaistu, vain tuotettiin valmiiksi.
+Nyt se on julkaistu, joten merkintä kuuluu takaisin — muuten jäljellä
+olevien ideoiden määrä laskettaisiin väärin.
+
+#### Generaattoreiden polut korjattu 19.8.2026
+
+Uudelleentuotanto paljasti että **kahdeksan kymmenestä generaattorista
+ei ajanut läpi.** Poluissa oli kolme eri vikaa:
+
+| Vika | Tiedostot |
+|---|---|
+| Kovakoodattu vanha istuntokansio `/sessions/festive-sharp-noether/...` | `akne.py`, `aurinkosuoja.py`, `vierasta.py` |
+| `sorted(glob.glob('/sessions/*/mnt/studiomahla'))[0]` — poimii aakkosjärjestyksessä ensimmäisen istunnon, ei nykyistä | `nelisataa.py`, `prosentti.py`, `rehellisyys.py`, `steriili.py` |
+| Osoitti `mnt/outputs`-kansioon eikä tuotantoon | `pistoskulma.py` |
+
+Kaikki korjattu johtamaan polku skriptin omasta sijainnista, samoin
+kuin `laitejulkaisu.py` ja `proxnjulkaisu.py` tekevät:
+
+```python
+JUURI = os.path.dirname(os.path.abspath(__file__))
+KARUSELLIT = os.path.join(JUURI, '..', 'karusellit')
+REELSIT = os.path.join(JUURI, '..', 'reels')
+```
+
+**Vika ei ollut näkynyt, koska mitään ei ollut tarvinnut tuottaa
+uudelleen.** Koko karuselli- ja Reels-putki oli rikki tietämättä.
+Absoluuttista polkua ei saa kirjoittaa generaattoriin.
+
 **6. Aurinkosuoja on tärkein (Reels)**
 Lähde: `mikroneulauksen-jalkihoito.html`, idea 7.1
 Tiedostot: `karusellit/aurinkosuoja_01.png` … `_05.png`
@@ -1590,7 +1633,7 @@ Tiedostot: `karusellit/nelisataa_01.png` … `_05.png`
 Skripti: `generaattorit/nelisataa.py`
 Video: `reels/nelisataa.mp4` (23,6 s, 1080 × 1920, H.264)
 Tuotettu automaatiolla 17.8.2026. **Julkaisu odottaa.**
-5 diaa, 66 sanaa, kansidian sävy keski.
+5 diaa, 61 sanaa, kansidian sävy keski.
 
 Ydinajatus: neljä hoitoa kuukauden välein johtaa histologisissa
 tutkimuksissa jopa 400 prosentin kasvuun kollageeni- ja
@@ -1607,6 +1650,29 @@ varoitus koskee tumman ja keskin yhdistelmää, ei keskiä vaalean
 naapurina. **Julkaisujärjestys tärkeä:** tämä (keski) julkaistaan
 ennen steriiliä (vaalea).
 
+**Korjaus 17.8.2026, kaksi asiaa käyttäjän palautteesta.**
+
+1. **Kansi oli pelkkä "400 %".** Se ei kerro katsojalle mitään
+   itsenäisenä, ja kansi on ainoa dia joka näkyy Instagram-ruudukossa.
+   Uusi kansi sanoo koko ajatuksen yksin: "Kollageeni ja elastiini
+   lisääntyvät jopa 400 %".
+2. **Dian 4 nosto oli "Yksi hoito ei riitä."** Käyttäjä huomautti että
+   isoon otsikkoon ei laiteta kieltoa: se kertoo mikä ei toimi ja
+   vähättelee samalla yksittäistä hoitoa, jota studio myös myy.
+   **Sääntö on jo PROJECT.md:ssä** ("ei ole mitään hyötyä mitä ei
+   ole", ja rajoitus sanotaan kuvauksena eikä oikaisuna), eli tämä ei
+   ollut uusi linjaus vaan olemassa olevan säännön rikkominen.
+   Nosto sanoo saman asian nyt myönteisesti: "Jokainen hoito rakentaa
+   edellisen päälle." Samasta syystä dialta 3 poistettiin "ei
+   arvioitu ulkonäön perusteella" ja se kertoo nyt vain miten luku on
+   mitattu. Kuvateksti yhdenmukaistettu, video ja diat tuotettu
+   uudelleen.
+
+**Yleissääntö jatkoon:** dian otsikko ja nosto kertovat mitä hoito
+tekee, eivät mitä se ei tee tai mikä ei riitä. Rajoitukset ja
+vasta-aiheet ovat oma sisältönsä (luku 3, Turvallisuus), eivät
+tehostekeino muun sisällön otsikoissa.
+
 **Väitteiden kate.** Lähdeartikkelit kertovat myös että kyse on
 suhteellisesta kasvusta lähtötasoon nähden kuuden kuukauden
 kohdalla ja että alkuperäiset tutkimukset tehtiin rullalaitteella.
@@ -1616,13 +1682,13 @@ laajenna lukua koskemaan muuta.
 Kuvateksti sanatarkasti:
 
 ```
-Mistä 400 prosentin luku oikeastaan tulee?
+Kollageeni ja elastiini lisääntyvät jopa 400 prosenttia.
 
-Histologisissa tutkimuksissa on dokumentoitu, että neljä hoitoa kuukauden välein johtaa kuuden kuukauden kohdalla jopa 400 prosentin kasvuun kollageeni- ja elastiinipitoisuuksissa lähtötasoon nähden. Luku on mitattu ihosta otetuista kudosnäytteistä mikroskoopilla, ei arvioitu ulkonäön perusteella. Kyse on suhteellisesta kasvusta lähtötasoon verrattuna, ja mittaushetki on kuusi kuukautta.
+Luku tulee histologisista tutkimuksista, joissa neljä mikroneulaushoitoa tehtiin kuukauden välein ja tulos mitattiin kuuden kuukauden kohdalla. Histologinen tarkoittaa sitä, että ihosta otettu kudosnäyte tutkitaan mikroskoopilla, eli muutos on mitattu kudoksesta. Kasvu on suhteellista lähtötasoon nähden, ja mittaushetki on kuusi kuukautta hoitojen aloituksesta.
 
-Sama luku on myös syy siihen miksi mikroneulaus tehdään sarjana: kertymä rakentuu kerros kerroksen päälle, ja hoitojen väli on neljä viikkoa ihon uusiutumissyklin vuoksi.
+Sama luku kertoo myös miksi mikroneulaus tehdään sarjana. Jokainen hoito rakentaa edellisen päälle: uusi kollageeni kypsyy vähitellen pysyväksi, ja neljän viikon hoitoväli seuraa ihon omaa uusiutumissykliä. Kertymä syntyy siis vaiheittain, ja loppusuoran hoidot tehdään jo vahvistuneeseen ihoon.
 
-Laadimme hoitosuunnitelman jokaiselle asiakkaalle erikseen Kotkan Ruonalassa sijaitsevalla studiollamme, ja jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
+Käymme läpi tavoitteet ja sopivan sarjan pituuden ensikäynnillä Kotkan Ruonalassa sijaitsevalla studiollamme, ja jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
 
 Lue lisää: https://www.studiomahla.fi/mikroneulaus-sarjahoito.html
 Ajanvaraus: https://varaa.timma.fi/studiomahla
@@ -1694,6 +1760,149 @@ valittiin listan seuraavat kohdat 1.1 ja 2.4. Ei erityistä
 ajankohtaisuussyytä kummallekaan elokuussa, joten valinta perustui
 vahvuuteen ja aihepiirien erotteluun.
 
+**11. Miksi yksi kerta ei riitä (Reels)**
+Lähde: `mikroneulaus-sarjahoito.html`, idea 6.1
+Tiedostot: `karusellit/sarja_01.png` … `_05.png`
+Skripti: `generaattorit/sarja.py`
+Video: `reels/sarja.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 24.8.2026. **Julkaisu odottaa.**
+5 diaa, 59 sanaa, kansidian sävy keski.
+
+Ydinajatus: ensimmäinen vaste on kollageeni-tyyppi III, väliaikaista
+korjauskollageenia joka hajoaa itsestään. Siksi yhden hoidon jälkeinen
+tunne haalistuu noin kuukaudessa ja hoitoväli on neljä viikkoa.
+Perustelee sarjahoidon hinnan biologialla eikä myyntipuheella.
+
+Rakenne on epäsymmetrinen samaan tapaan kuin ideat 2.1 ja 2.4: yksi
+vaalea dia kertoo miksi yksi hoitokerta jää vaillinaiseksi, ja kaksi
+vihreää diaa kertovat sarjasta. Taustaväri vaihtuu juuri siinä
+kohdassa jossa siirrytään studion omaan menetelmään.
+
+Kansidian sävy keski. Edellinen julkaisujonossa oleva julkaisu on
+aknehoito-karuselli (ke 26.8.2026, tumma) ja viikon toinen Reels
+(ensikäynti) on vaalea, joten kolme peräkkäistä julkaisua eroavat
+toisistaan (luku 3.5a).
+
+Kuvateksti sanatarkasti:
+
+```
+Miksi yksi mikroneulaus ei riitä?
+
+Iho vastaa hoitoon ensin rakentamalla kollageeni-tyyppi III:a. Se on väliaikaista korjauskollageenia, jota iho tuottaa kaikenlaisten mikrovaurioiden vasteena, ja rakenteeltaan se on heikompaa kuin pysyvä kollageeni-tyyppi I. Väliaikainen kollageeni hajoaa luonnollisesti viikkojen ja kuukausien aikana ihon uusiutumissyklin myötä, ja siksi yhden hoidon jälkeinen tunne uudistuneesta ihosta haalistuu noin kuukaudessa.
+
+Sarjahoidossa ihoa stimuloidaan uudelleen ennen kuin edellisen kerran vaste ehtii hävitä. Kun hoitoja tehdään neljän viikon välein, jokaisen kerran uusi kollageeni-tyyppi III ehtii kypsyä pysyväksi kollageeni-tyyppi I:ksi ennen seuraavaa hoitoa. Kypsyminen vie noin 12 viikkoa, ja jokainen hoito rakentaa edellisen päälle.
+
+Sarjan lopulliset tulokset näkyvät selvimmin 3–6 kuukautta viimeisen hoidon jälkeen, koska kollageenin kypsyminen jatkuu vielä senkin jälkeen. Hoitoväli ei siis ole sattumanvarainen vaan sidottu ihon omaan aikatauluun.
+
+Teemme hoidot Kotkan Ruonalassa, ja jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sarjahoito.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #sarjahoito #kollageeni #kliininenmikroneulaus
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**12. Mitä ensikäynti sisältää (Reels)**
+Lähde: `mita-ensikaynnilla-tapahtuu.html`, idea 8.1
+Tiedostot: `karusellit/ensikaynti_01.png` … `_05.png`
+Skripti: `generaattorit/ensikaynti.py`
+Video: `reels/ensikaynti.mp4` (23,6 s, 1080 × 1920, H.264)
+Tuotettu automaatiolla 24.8.2026. **Julkaisu odottaa.**
+5 diaa, 59 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: ensikäynti kestää tunnin ja sisältää hoidon, hoitomuotoa
+ei tarvitse päättää etukäteen, ja sarjaan päätyessä ensimmäinen hoito
+lasketaan mukaan. Poistaa varaamisen kynnyksen juuri ennen studion
+avausta 7.9.2026.
+
+Kaikki sisältödiat ovat vihreällä, koska tässä ei verrata kahta asiaa
+vaan kuvataan pelkästään studion omaa käytäntöä. Vaalea kansi antaa
+silti selkeän vaihdoksen heti ensimmäisessä siirtymässä.
+
+Hoitovalikoimaa ei sidota lukumäärään (PROJECT.md, kaksijakoisuus-
+sääntö 17.8.2026): teksti puhuu hoitomuodosta, ei kahdesta hoidosta
+eikä kolmesta palvelusta.
+
+Kuvateksti sanatarkasti:
+
+```
+Mitä 200 euron ensikäynti sisältää?
+
+Ensimmäinen käynti Kotkan Ruonalassa kestää noin tunnin. Se sisältää keskustelun, iho-analyysin, hoitosuunnitelman laatimisen sekä itse hoidon, ja hinta kattaa ammattilaisen ajan, käytetyt tuotteet ja jälkihoito-ohjeet.
+
+Käynti alkaa noin 15 minuutin keskustelulla. Käymme läpi ihon nykytilan, aiemman hoitohistorian, lääkitykset ja allergiat sekä sen mitä hoidolta on realistista odottaa. Sen pohjalta laadimme yhdessä alustavan hoitosuunnitelman: hoitomuoto, sopiva hoitomäärä, hoitoväli, hoidettavat alueet ja kotihoitosuositukset.
+
+Hoitomuotoa ei tarvitse päättää etukäteen. Se valitaan iho-analyysin perusteella ja hoito tehdään samalla käynnillä, joten et lähde pelkän suunnitelman kanssa. Jos tiedät jo minkä hoidon haluat, voit varata sen suoraan omalla nimellään; käynnin kulku ja hinta ovat samat, ja iho-analyysi tehdään joka tapauksessa.
+
+Jos sarjahoitoon päädytään, ensimmäinen hoito lasketaan mukaan sarjaan, joten kustannusvaikutus on neutraali.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mita-ensikaynnilla-tapahtuu.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #ihonhoito #kasvohoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (24.8.2026):** ideapankissa oli ennen tätä ajoa 39
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista (6 ja 8) ja eri lähdeartikkeleista.
+Ideapankin suositellussa aloitusjärjestyksessä seuraavat käyttämättömät
+kohdat olivat 6.1 ja 8.1, ja ne otettiin siinä järjestyksessä. Kohta
+3.1 (aktiivinen akne) on jo tuotettu ja jonossa maanantaille 24.8.,
+joten sitä ei valittu uudelleen. Aknesisältöä vältettiin muutenkin,
+koska viikon kaksi ensimmäistä julkaisua (Reels ma 24.8. ja karuselli
+ke 26.8.) käsittelevät molemmat aknea. Idea 8.1 on ajankohtainen,
+koska studio avataan 7.9.2026 ja ensikäynti on oletusreitti sisään.
+
+**Huomio julkaisutahdista:** tälle viikolle oli jo jonossa Reels
+(akne, ma 24.8.) ja karuselli (aknehoito, ke 26.8.), eli luvun 3.2
+mukainen 2 + 1 täyttyy jo yhdellä näistä kahdesta. Suositus: `sarja`
+perjantaille 28.8. ja `ensikaynti` seuraavan viikon maanantaille
+31.8. Sävykierto toimii kummassakin järjestyksessä.
+
+**13. ProXN-aknehoito (karuselli) — JULKAISTU 26.8.2026**
+Lähde: `proxn-kasvohoito.html`
+Tiedostot: `karusellit/aknehoito_01.png` … `_07.png`
+Skripti: `generaattorit/aknehoito.py`
+7 diaa, 88 sanaa, kansidian sävy tumma.
+
+Pari maanantain Reelsille: Reels asettaa rajan (aktiivista aknea ei
+hoideta mikroneulauksella), karuselli antaa vastauksen. Kansi tumma,
+koska maanantain Reelsin kansi on vaalea (luku 3.5a).
+
+**Muutokset julkaisupäivänä 26.8.2026.** Käyttäjä: *"kuvatekstissä
+voisi hieman laajemmin mainita proxn ampullista (ei tässä nyt
+ollenkaan) ja tuo eri aikojen maininta on hyvin sekava, ehkä ottaisin
+sen pois."*
+
+| | Ennen | Jälkeen |
+|---|---|---|
+| Aikataulu | Kolme aikaa: kolmas käynti 4. viikolla, vaste 8. viikolla, sarjan loppu 10. viikolla | Yksi lause: aknen kohdalla suositellaan sarjaa, hoitoväli kaksi viikkoa |
+| Ampulli | Ei mainintaa | Oma dia ja kuvatekstissä kylmäkuivaus, neljä muuta ainetta, aktivaattori ja biosellu-naamio |
+| Diat | 5 = hoitoväli, 6 = nosto vasteesta | 4 = nosto ampullista, 6 = sarjahoito |
+
+Luvut ovat sivustolla oikein ja niille on peruste, mutta kolme
+päällekkäistä aikajännettä yhdessä kuvatekstissä ei ole luettava.
+Sivulla ne aukeavat, koska ympärillä on tilaa selittää.
+
+**Sääntö:** kuvatekstiin otetaan sivulta se aikatieto jonka lukija
+tarvitsee ajan varaamiseen, ei koko perustelua.
+
+**Hopeasta kerrotaan koostumuksena.** Sivustolla lukee että
+aktivaattorin hopea ehkäisee bakteeriperäisiä jälki-infektioita.
+Kuvatekstissä sanotaan vain että aktivaattori sisältää hopeaa —
+aknejulkaisussa infektiolauseen voi lukea aknetta koskevana
+tulosväitteenä, vaikka se koskee hoidon omaa turvallisuutta.
+Luku 6.2.
+
+Kuvatekstit ja perustelut:
+`tuotanto/julkaisut/aknehoito-karuselli-26-08-2026.md`
+
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
 1. Kenelle mikroneulaus sopii (`mikroneulaus-sopiiko-minulle.html`)
@@ -1736,9 +1945,10 @@ muun muassa Novel Peel, Bright Up -tuotteet ja ABC Cream, joita ei ole.
 (Xanthohumol Recovery Treatment) toimii, koska se on molempien
 käytössä olevien hoitojen ydin.
 
-**4. Kuvien käyttöoikeus varmistettava Duallaserilta.** Nämä ovat
-valmistajan markkinointikuvia. Jälleenmyyjä yleensä saa käyttää niitä,
-mutta asia on syytä kysyä etukäteen.
+**4. Kuvien käyttöoikeus — ✅ VAHVISTETTU 19.8.2026.** Nämä ovat
+valmistajan markkinointikuvia. Käyttäjä varmisti asian Duallaserilta.
+Koskee myös sivustolla käytettäviä kuvia `proxn-ampulli`,
+`proxn-antioxidant`, `proxn-logo` ja `og-proxn`.
 
 **5. Omat kuvat ovat parempia.** Elokuun kuvauslista on luvussa 3.5.
 ProXN-tuotteet omassa hoitohuoneessa todistavat että tuotteet ovat
@@ -1777,9 +1987,8 @@ lisättiin päänavigaatioon ensimmäiseksi.
 **Ehto 2 täyttyi.** Käyttäjä 17.8.2026: *"Tuotteet ovat nyt olleet
 käytössä jonkin aikaa ja olen tyytyväinen."*
 
-**Ehto 4 on yhä auki.** Kuvien käyttöoikeutta Duallaserilta ei ole
-varmistettu. Tämä koskee ampullikuvaa ja Antioxidant Therapy -kuvaa,
-joita käytetään jo sivustolla.
+**Ehto 4 täyttyi 19.8.2026.** Käyttäjä varmisti kuvien käyttöoikeuden
+Duallaserilta. Kaikki neljä ehtoa ovat nyt kunnossa.
 
 **Aloitusjulkaisu 18.8.2026: hoidon julkistus, ei tuotesarjan
 yleisesittely.** Poikkeus alkuperäiseen suunnitelmaan, ja syy on että
@@ -1788,6 +1997,28 @@ viikkojulkaisut alkavat tämän jälkeen suunnitellussa järjestyksessä.
 
 Teksti molemmille kanaville, kuvavalinta ja perustelut:
 `tuotanto/julkaisut/proxn-julkistus-18-08-2026.md`
+
+**Kuva `tuotanto/julkaisut/proxn_ampulli.jpg` (1080 × 1350),
+generaattori `tuotanto/generaattorit/proxnjulkaisu.py`.** Sama pohja
+kuin laitejulkaisussa 31.7.2026.
+
+*Oma virhe:* neuvoin ensin julkaisemaan tuotekuvan sellaisenaan ilman
+tekstiä tai logoa, ja perustelin sen sillä ettei ruudukossa ole
+valokuvia. Väite oli väärä — laitekuva on julkaistu 31.7. Olin
+katsonut `kansikuvat/_ruudukko_vaihteleva.png`-suunnitelmakuvaa enkä
+sitä mitä on oikeasti julkaistu. **Suunnitelmamockup ei ole tilanne.**
+
+**Tekninen ero laitejulkaisuun.** Laitekuva oli pystykuva vaakasuuntaisessa
+kuva-alueessa, mikä vaati taustagradientin venyttämisen sivuille.
+Ampullikuva on 1000 × 943 ja kuva-alue 1080 × 945, joten kuvasuhteet
+ovat lähes samat: kuva skaalataan leveyden mukaan ja keskitetään
+pystysuunnassa, eikä sommittelusta leikkaudu mitään.
+
+Otsikko "Xanthohumol Complex" on pidempi kuin "MicroPen EVO", joten
+skriptissä on `_sovita()`-funktio joka hakee suurimman fonttikoon joka
+mahtuu marginaalien väliin. Tässä tapauksessa 76 px riitti eli sama
+kuin laitekuvassa, mutta funktio suojaa tulevilta pidemmiltä
+otsikoilta.
 
 **Aknekulma rajattiin pois julkistuksesta.** ProXN:stä on kaksi
 versiota, mutta aknesisältö menee omaan julkaisuunsa. Luku 6.2 rajaa

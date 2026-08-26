@@ -181,6 +181,18 @@
        artikkelin aiheen. Suodatus on pelkkaa nayttamista ja
        piilottamista, joten kaikki kortit ovat aina HTML:ssa ja
        hakukoneen luettavissa. */
+    /* Kaksi kiinnitettya opasta vierekkain tyopoydalla, allekkain
+       mobiilissa. Kiinnitetyt eivat kuulu suodatukseen. */
+    .blog-pinned {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+    .blog-pinned .post-card { height: 100%; }
+    @media (max-width: 860px) {
+      .blog-pinned { grid-template-columns: 1fr; }
+    }
     .blog-filter {
       max-width: 880px;
       margin: 0 auto clamp(32px, 4vw, 44px);
@@ -239,7 +251,8 @@
     </div>
     <p id="blogFilterStatus" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;"></p>
     <div class="blog-list">
-      <article data-ryhma="miten" class="post-card post-card--pinned">
+      <div class="blog-pinned">
+      <article class="post-card post-card--pinned" data-kiinnitetty>
         <div class="post-card__pinned-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="17" x2="12" y2="22"/>
@@ -258,6 +271,26 @@
           </span>
         </a>
       </article>
+      <article class="post-card post-card--pinned" data-kiinnitetty>
+        <div class="post-card__pinned-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="17" x2="12" y2="22"/>
+            <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/>
+          </svg>
+        </div>
+        <a href="ihonhoito-opas.html" aria-label="Lue opas: Mitä ihonhoidosta oikeasti tiedetään">
+          <p class="post-card__meta">Ihonhoito · Opas · <time datetime="2026-08-26">26.8.2026</time></p>
+          <h2 class="post-card__title">Mitä ihonhoidosta oikeasti tiedetään</h2>
+          <p class="post-card__excerpt">
+            Mitä satunnaistetut tutkimukset osoittavat aurinkosuojasta, retinoideista ja aknehoidoista — ja yksi tapaus jossa vaikutus katosi kokonaan kun tutkimukset eroteltiin rahoittajan mukaan. Jokainen väite linkitetty alkuperäisjulkaisuun.
+          </p>
+          <span class="post-card__read">
+            Lue opas
+            <span class="arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </article>
+      </div>
       <article data-ryhma="sopiiko" class="post-card">
         <a href="herkka-iho-ruusufinni-mikroneulaus.html" aria-label="Lue artikkeli: Herkkä iho ja ruusufinni: sopiiko mikroneulaus?">
           <p class="post-card__meta">Mikroneulaus · Herkkä iho · <time datetime="2026-08-17">17.8.2026</time></p>
@@ -410,7 +443,7 @@
     var filter = document.getElementById('blogFilter');
     if (!filter) return;
     var napit  = Array.prototype.slice.call(filter.querySelectorAll('.blog-filter__btn'));
-    var kortit = Array.prototype.slice.call(document.querySelectorAll('.post-card'));
+    var kortit = Array.prototype.slice.call(document.querySelectorAll('.post-card:not([data-kiinnitetty])'));
     var status = document.getElementById('blogFilterStatus');
 
     var tunnetut = napit.map(function (n) { return n.getAttribute('data-suodatin'); });
