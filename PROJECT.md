@@ -700,6 +700,37 @@ joka puolustelee."** Rakenne kuulostaa tasapuoliselta mutta on
 puolustusasento: se tuo lukijan mieleen kilpailuasetelman jota hän ei
 ollut ajatellut.
 
+**Laajennus 26.8.2026: oletettu yleistieto.** Sama perhe kuin
+puolusteleva vertailu. Teksti asettaa väitteen yleisesti tunnetuksi ja
+kumoaa sen, vaikka lukija ei ole väitettä koskaan kuullut.
+
+| EI | KYLLÄ |
+|---|---|
+| "Ihonhoidon toistetuin yksittäinen tilasto on…" | *(kerro mitä tutkimus löysi)* |
+| "yksi ihonhoidon toistetuimmista merkinnöistä" | *(kerro mitä merkintä tarkoittaa)* |
+| "vastoin yleistä käsitystä", "toisin kuin usein luullaan" | *(poista)* |
+
+Käyttäjä 26.8.2026 luettuaan yleispilarin 80 prosentin osion:
+**"Tuo se 80 luku on ihan turha sellaisenaan, en ole ikinä koskaan
+törmännyt siihen kahden kymmenen vuoden aikana. Yleisesti muutenkin
+tuollainen jonkin asian heitto niin että se on muka yleisesti tunnettu
+ei ole hyvä."**
+
+Kaksi vikaa. Väitteen tunnettuutta ei ole näytetty toteen, ja jos
+lukija ei tunne väitettä, koko osio kumoaa jotain mitä hän ei ollut
+ajatellut. Alalla kaksikymmentä vuotta ollut lukija ei ollut törmännyt
+lukuun kertaakaan.
+
+**Korjaustapa:** kirjoita siitä mitä tutkimus löysi, älä siitä mitä
+väitetään. Flamentin aineistosta jäi jäljelle käyttökelpoinen tieto
+(pigmentti seuraa auringonottoa, veltostuminen kronologista ikää) kun
+80 prosentin kehys poistettiin.
+
+**Otsikkosääntö samasta yhteydestä.** *"Se 80 prosentin luku"* on
+huono otsikko: demonstratiivipronomini olettaa lukijan tietävän mistä
+luvusta puhutaan. Otsikon on kerrottava sisältö. Uusi muoto:
+*"Auringon osuus vaihtelee sen mukaan mitä mitataan."*
+
 **Sivustolla olevat esiintymät** (todettu 18.8., ei korjattu koska ei
 pyydetty): `proxn-kasvohoito.html` rivit 615 ja 618,
 `herkka-iho-ruusufinni-mikroneulaus.html` rivi 176,
@@ -4773,6 +4804,11 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-08-26
+
+- **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 12 livenä olevaa blogiartikkelia Chromella kokonaan läpi. Päivitettiin `mikroneulaus-sarjahoito.html` (17.6., ainoa artikkeli jolla ei ollut päivitysmerkintää lainkaan): uusi H2 "Jos iho ei ole vielä valmis sarjaan" (ProXN-sarjat ja niiden eri hoitoväli), aknearpien kuuden hoidon sääntö kirjattu näkyviin, poistettu lähteetön väite "kaksi hoitoa tuottaa 30–50 % vähemmän kollageenikertymää", poistettu sisäinen kannattavuusperustelu ja anglismi "booking-vahvistaa", poistettu perustelematon hintavertailu täytehoitoihin, uudet linkit aknearpi-, ProXN- ja herkän ihon artikkeleihin. **Korjattu bugi: `og:url` osoitti väärään sivuun** (`mikroneulaus-sopiiko-minulle.html`). 1245 → 1404 sanaa. `dateModified`, article-meta ja meta-kuvaukset päivitetty. **Syy valintaan A:n sijaan: kaksi valmista artikkelia (`mita-mikroneulaus-ei-tee.html` 12.8. alkaen, `ihonhoito-opas.html` 26.8.) odottaa yhä julkaisua, eikä live-sitemapissa ole kumpaakaan.** Ei muita tiedostoja muutettu.
+- **Havainto: 26.8. tehdyt muutokset eivät ole vielä livenä.** `ihonhoito-opas.html` puuttuu live-sitemapista ja `blogi.html`:n live-versiosta, ja `mikroneulaus-opas.html` näyttää livenä yhä päivitysmerkinnän 5.8. Paikallinen kansio on siis edellä palvelinta, eli deploy on tekemättä.
+
 ### 2026-08-19
 
 - **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 13 julkaistua artikkelia sekä `proxn-kasvohoito.html` Chromella kokonaan läpi. Päivitettiin `milloin-aloittaa-mikroneulaus.html`: uusi H2 "Jos iho ei ole vielä valmis mikroneulaukseen" (ProXN-reitti ja sen ajoituslogiikka), uusi H3 "Aknearvet: pidempi sarja, aikaisempi aloitus", "Miten aloitat" -kohta 2 päivitetty 17.8. varausrakenteen mukaiseksi (ensikäynti oletusreittinä, suora varaus auki), uudet linkit ProXN-sivulle, herkän ihon ja aknearpien artikkeleihin. 600 → 787 sanaa. `dateModified` ja meta description päivitetty. **Syy valintaan: artikkeli on kauden kärjessä juuri nyt ja se oli ainoa blogisivu joka jäi 17.8. ProXN-linkitysauditoinnista kokonaan pois.** Ei muita tiedostoja muutettu.
@@ -7785,3 +7821,79 @@ toistaiseksi pääasiassa mikroneulaussivu.
 
 Yhdeksän tiedostoa. Tarkistettu: JSON-LD validi kaikilla,
 ei rikkinäisiä sisäisiä linkkejä (0/25 sivua).
+
+---
+
+## 26.8.2026 — Yleispilarin toinen korjauskierros
+
+Käyttäjä kysyi luettuaan artikkelin: *"Sinulla on jo selkeät ohjeet
+mitä ja millä tyylillä pitää kirjoittaa, luitkohan koko ohjeistuksen
+varmuudella läpi?"*
+
+**En ollut.** Luvun 5 kirjoitussäännöt olivat kirjattuina, ja artikkeli
+rikkoi niitä. Haku löysi:
+
+| Sääntö | Rikkeitä |
+|---|---|
+| Ei ajatusviivoja | 6 |
+| Etuliitesääntö | 4 |
+| Puolusteleva vertailu | 2 |
+| Meta-kommentti tekstistä itsestään | 5 |
+| Oletettu yleistieto (uusi sääntö) | 2 |
+
+Osa rikkeistä kirjoitettiin samana päivänä 26.8. blogikorttiin ja
+sisääntulevaan linkkitekstiin, eli sääntö rikkoutui myös uudessa
+sisällössä eikä vain vanhassa.
+
+**Tämä on toinen kerta.** Etuliitesääntö kirjattiin 11.8. juuri siksi
+että olin poistanut rakenteen aamulla ja kirjoittanut sen takaisin
+iltapäivällä. Kirjaaminen ei riitä, jos sääntöjä ei lueta ennen
+kirjoittamista. Tarkistushaku ajetaan jatkossa aina ennen kuin uusi
+sisältö esitetään:
+
+```
+grep -c "—" tiedosto.html
+grep -n "on syytä sanoa\|todettakoon\|Syy on yksinkertainen\|
+Tämä ei tarkoita että\|Tästä ei seuraa että\|toistetuin" tiedosto.html
+```
+
+### Kaksi osiota kirjoitettiin uudelleen
+
+**80 prosentin osio.** Poistettu luku ja koko sen ympärille rakennettu
+kehys. Uusi otsikko *"Auringon osuus vaihtelee sen mukaan mitä
+mitataan"*, ja sisältö on Flamentin aineiston löydökset: pigmentti
+seuraa auringonottoa, ihon veltostuminen kronologista ikää eikä eronnut
+ryhmien välillä lainkaan, juonteisiin vaikuttavat molemmat. Asetelman
+havainnoivuus ja tekijöiden tausta L&rsquo;Or&eacute;alilla ja
+Biothermillä kerrotaan edelleen, mutta rajoituksina eikä paljastuksena.
+
+Osio on nyt hyödyllinen ilman että lukijan tarvitsee tunnistaa mitään
+väitettä: se kertoo että aurinkosuoja osuu osaan ikääntymisen
+merkeistä ja osaan ei.
+
+**Meikkiosio.** Käyttäjä: *"tämä osio ei sano ulkopuoliselle yhtään
+mitään ja ammattilaisellekin vain vähän."* Kaniinin korvakokeen
+historiikki oli anekdootti. Kahdesta kappaleesta jäi yksi virke siitä
+mikä lukijaa koskee: **merkintää ei tarkasta kukaan.** Katsaus ja
+alkuperäismenetelmä mainitaan yhdessä sivulauseessa, ja lähde säilyy
+lähdeluettelossa.
+
+Poistettiin myös *"Meikin ja ihonhoidon suhde ansaitsee oman
+artikkelinsa, ja se kirjoitetaan myöhemmin."* Lukija ei osta
+tulevaisuuden sisältöä.
+
+**Artikkeli 3 372 → 3 212 sanaa.** Rakenne, lähdemäärä (12) ja JSON-LD
+ennallaan.
+
+### Jäljelle jäävä huomio
+
+Otsikko **"Se mikä ei ole purkissa"** on samaa demonstratiivipronomini-
+tyyppiä kuin poistettu *"Se 80 prosentin luku"*. Ei muutettu, koska
+ei pyydetty.
+
+Muut sivut rikkovat sääntöjä edelleen: ajatusviivoja
+`mikroneulaus-talvella.html` (6), `privacy.html` (6), `404.html`,
+`admin.html`, `kysely.html`, `lomake.html` (1 kussakin). Puolusteleva
+vertailu `mikroneulaus-kaula-dekoltee-kadet.html`,
+`mita-mikroneulaus-ei-tee.html` ja `proxn-kasvohoito.html`. Ei
+korjattu, koska ei pyydetty.
