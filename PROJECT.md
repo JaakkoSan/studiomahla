@@ -4804,6 +4804,17 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-09-02
+
+- **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 13 julkaistua artikkelia kokonaan livenä. Claude in Chrome ei ollut aluksi yhteydessä (neljä yritystä, `list_connected_browsers` palautti tyhjän listan), joten lukeminen tehtiin sovelluksen sisäisellä selaimella; käyttäjä yhdisti Chromen istunnon lopuksi ja havainnot tarkistettiin sillä uudelleen. Ks. varoitus sisäisestä selaimesta alempana.
+- **Päivitettiin `mikroneulauksen-jalkihoito.html`** (16.7., ei päivitysmerkintää lainkaan): uusi H2 "Jos iho tarvitsee tukea sarjan aikana" (ProXN kajoavien hoitojen jälkeiseen palautumiseen; artikkelissa ei ollut aiemmin yhtään ProXN-mainintaa vaikka 17.8. tehtiin ProXN-linkitysauditointi), **lisätty puuttuva lähdeluettelo** (Nambour-koe oli nimetty leipätekstissä ilman lähdeluetteloa, mikä rikkoi luvun 5 lähdesääntöä), uusi ristiinlinkki aknearpiartikkeliin (aknearpisivu linkitti tänne mutta ei toisin päin), kolme kielivirhettä korjattu ("Haalean vesi", "kotikäyttöiset kuorintaharjoja", pehmeä tavuviiva sanassa "ihonhoidon"). 1300 → 1315 sanaa. `dateModified`, article-meta ja kolme meta-kuvausta päivitetty.
+- **Kausilinkki vaihdettu.** UV-osiossa ollut linkki `mikroneulaus-talvella.html`-sivulle ("talvi on itse asiassa hyvä aika aloittaa sarja") korvattiin linkillä `milloin-aloittaa-mikroneulaus.html`-sivulle. Syy: talviartikkeli on noindex-luonnos joka julkaistaan vasta loka-marraskuussa, ja syyskuun alussa indeksoidun sivun ainoa kausisuositus osoitti pois sesongista. **Talvilinkki palautetaan kun talviartikkeli julkaistaan.**
+- **Syy valintaan A:n sijaan:** mikroneulausklusteri on käytännössä katettu. 13 julkaistua artikkelia plus valmis `mita-mikroneulaus-ei-tee.html`, ja ainoa jäljellä oleva luvun 16.4 aihe (ikääntymisen merkit omana artikkelinaan) menisi päällekkäin kolmen live-artikkelin kanssa: `mikroneulaus-opas.html` (juonteet ja ikääntymisen merkit), `mikroneulaus-sopiiko-minulle.html` (ikäryhmät 20–29, 30–39, 40–49, 50+) ja `ihonhoito-opas.html` (Flamentin aineisto, estrogeeni ja kollageeni, retinoidit). Tämä on luvun 16.5 signaali 1.
+- **Deploy on ajan tasalla, 26.8. avoimeksi jäänyt huoli on ratkennut.** Chromella tarkistettiin yhdeksän sivun `dateModified` ja näkyvä päivitysmerkintä livenä, ja kaikki vastaavat paikallista kansiota. `mikroneulaus-sarjahoito.html` näyttää livenä merkinnän 26.8.2026 ja sisältää kaikki 26.8. tehdyt korjaukset.
+- **VAROITUS TYÖKALUSTA: sovelluksen sisäinen selain tarjoili vanhentunutta sisältöä.** Istunnon alussa Claude in Chrome ei ollut yhteydessä, ja korvaava sisäänrakennettu selain näytti `mikroneulaus-sarjahoito.html`-sivusta 17.6. version päivitysmerkintöineen. Tästä pääteltiin virheellisesti että deploy oli jäänyt osittaiseksi. Chromella luettuna sama osoite näytti oikean 26.8. version. Sisäinen selain myös raportoi jokaisen sivun osoitteeksi `https://studiomahla.fi` riippumatta siitä mille sivulle navigoitiin, kun Chrome näyttää oikean osoitteen ilman `.html`-päätettä (Cloudflaren käytös, luku 22.8.2026). **Sääntö: sivuston tilaa koskevia päätelmiä ei tehdä sisäisellä selaimella. Jos Claude in Chrome ei ole yhteydessä, tehtävä keskeytetään ohjeen mukaisesti.**
+- **Pienempi havainto:** 26.8. lisättiin `mikroneulauksen-jalkihoito.html`-sivulle sisääntuleva linkki mutta `dateModified` jäi päivittämättä. Korjattu nyt tämän päivityksen yhteydessä.
+- Ei muita tiedostoja muutettu.
+
 ### 2026-08-26
 
 - **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 12 livenä olevaa blogiartikkelia Chromella kokonaan läpi. Päivitettiin `mikroneulaus-sarjahoito.html` (17.6., ainoa artikkeli jolla ei ollut päivitysmerkintää lainkaan): uusi H2 "Jos iho ei ole vielä valmis sarjaan" (ProXN-sarjat ja niiden eri hoitoväli), aknearpien kuuden hoidon sääntö kirjattu näkyviin, poistettu lähteetön väite "kaksi hoitoa tuottaa 30–50 % vähemmän kollageenikertymää", poistettu sisäinen kannattavuusperustelu ja anglismi "booking-vahvistaa", poistettu perustelematon hintavertailu täytehoitoihin, uudet linkit aknearpi-, ProXN- ja herkän ihon artikkeleihin. **Korjattu bugi: `og:url` osoitti väärään sivuun** (`mikroneulaus-sopiiko-minulle.html`). 1245 → 1404 sanaa. `dateModified`, article-meta ja meta-kuvaukset päivitetty. **Syy valintaan A:n sijaan: kaksi valmista artikkelia (`mita-mikroneulaus-ei-tee.html` 12.8. alkaen, `ihonhoito-opas.html` 26.8.) odottaa yhä julkaisua, eikä live-sitemapissa ole kumpaakaan.** Ei muita tiedostoja muutettu.
@@ -7897,3 +7908,63 @@ Muut sivut rikkovat sääntöjä edelleen: ajatusviivoja
 vertailu `mikroneulaus-kaula-dekoltee-kadet.html`,
 `mita-mikroneulaus-ei-tee.html` ja `proxn-kasvohoito.html`. Ei
 korjattu, koska ei pyydetty.
+
+---
+
+## 3.9.2026 — Pigmentti kytkettiin hoitoihin yleispilarissa
+
+Käyttäjä 26.8.2026: *"pigmenttihoito muistutuksena, nimenomaan
+auringon vaurioittamat alueet ja muu tummempi pigmentti, tähän
+mikroneulaus myös hyvin toimii."*
+
+Aukko oli juuri uudelleen kirjoitetussa aurinko-osiossa. Se osoitti
+pigmenttimuutosten seuraavan auringonottoa ja päättyi siihen että
+aurinkosuoja on paras keino niitä vastaan. Lukija sai tietää mikä
+läiskät aiheuttaa muttei sitä että jo syntyneille on hoito. Sama aukko
+oli loppuosiossa: *"Mitä studiolla tehdään"* puhui ihon rakenteesta ja
+suojakerroksesta muttei pigmentistä, vaikka pigmentti oli ainoa asia
+jonka osio osoitti auringon aiheuttamaksi.
+
+**Kaksi lisäystä.** Aurinko-osion loppuun kappale siitä että ehkäisy ja
+jo syntynyt pigmentti ovat eri asioita, linkki
+`mikroneulaus-sopiiko-minulle.html`:ään. Loppuosioon melaniinikertymän
+hajoaminen osana mikroneulauksen vaikutusta.
+
+**Melasmavarausta ei toisteta.** Se on linkin päässä
+(`mikroneulaus-sopiiko-minulle.html`: *"Poikkeus on melasma. Sen
+pohjana ovat hormonaaliset tekijät, eikä mikroneulaus aina ole oikea
+hoito."*) ja lisäksi `mita-mikroneulaus-ei-tee.html`:ssä. Pilarin
+tehtävä on ohjata oikeaan paikkaan, ei toistaa kaikkea.
+
+**Väitteet ovat sivustolla jo olemassa** eikä mitään uutta lisätty:
+mekanismi on `mikroneulaus-opas.html`:stä, käyttöaiheet
+`mikroneulaus-sopiiko-minulle.html`:stä.
+
+**Artikkeli 3 212 → 3 272 sanaa.**
+
+**dateModified 2026-09-03, datePublished pysyy 2026-08-26.** Artikkeli
+on ollut verkossa 26.8. alkaen, ja tämä on sisältömuutos julkaisun
+jälkeen. Näkyvä "Julkaistu 26.8.2026" ei muutu.
+
+**Ladattava: `ihonhoito-opas.html`. Yksi tiedosto.**
+
+### Virhe joka tässä tehtiin
+
+Ilmoitin muutosten jälkeen että ladattavia on yhdeksän. Se oli 26.8.
+tehdyn erän lista, joka oli jo verkossa. Käyttäjä huomautti:
+*"Mikä yhdeksän tiedostoa? Tänään tehtiin vain tämä yksi muutos."*
+
+**Syy: en tarkistanut päivämäärää enkä sitä mikä on jo julkaistu.**
+Istunto oli jatkunut yli viikonrajan, ja hiekkalaatikon kello näytti
+26.8. vaikka todellinen päivä oli 3.9.
+
+**Sääntö: ennen kuin ilmoitan ladattavien listan, tarkistan
+muokkausajat ja vertaan livesivustoon.**
+
+```
+find . -maxdepth 1 -newermt "<edellinen lataus>" -name "*.html"
+```
+
+Livesivuston voi tarkistaa hakemalla sivun ja katsomalla onko muutos
+siellä. Hiekkalaatikon `date` ei kelpaa päivämäärän lähteeksi, koska
+se voi olla jäljessä.
