@@ -1030,6 +1030,32 @@ ympäristössä, ei henkilön persoonassa.
 - Jälkihoitotuotteen levitys
 - Hoitosuunnitelman läpikäynti asiakkaan kanssa
 
+**D2. Punoituksen aikasarja (lisätty 3.9.2026)**
+
+Tätä ei voi lavastaa: se edellyttää että hoito on juuri tehty. Jos
+kuvauspäivälle ei ole varattu hoidettavaa, sarja jää saamatta.
+
+- Heti hoidon jälkeen
+- Vuorokauden kuluttua
+- Toisena päivänä
+
+**Sama kasvo, sama rajaus, sama valo kaikissa kolmessa.** Vertailu
+toimii vain jos muuttuja on iho eikä valaistus. Kasvokuvaetäisyys, ei
+zoomattua ihoalueen lähikuvaa (luvut 6.1 ja 6.4).
+
+Perustelu: `mikroneulauksen-jalkihoito.html` väittää että punoitus
+laskee ensimmäisen vuorokauden aikana ja on toisena päivänä selvästi
+laskenut. Sivustolla ei ole mitään joka näyttäisi sen. Kolmen kuvan
+sarja tekee väitteestä todennettavan.
+
+Kyseessä on prosessin kuvaaminen, ei ennen ja jälkeen -aineisto, joten
+luvun 6.1 linjaus pitää. Kuvatekstissä kerrotaan aina ajankohta.
+
+**Nykytila:** artikkelissa on 3.9.2026 alkaen yksi kuva, `assets/
+punoitus-hoidon-jalkeen.jpg`, joka kattaa sarjan ensimmäisen kohdan.
+Se on puhelinkuva ja korvataan jos kuvauksessa saadaan parempi, mutta
+kaksi jälkimmäistä puuttuvat kokonaan.
+
 **E. Tunnelmakuvat ja tekstitaustat**
 
 - Neutraaleja taustoja joihin voi lisätä tekstiä jälkikäteen
@@ -1902,6 +1928,239 @@ Luku 6.2.
 
 Kuvatekstit ja perustelut:
 `tuotanto/julkaisut/aknehoito-karuselli-26-08-2026.md`
+
+**14. Kaula unohtuu (Reels)**
+Lähde: `mikroneulaus-kaula-dekoltee-kadet.html`, idea 8b.1
+Tiedostot: `karusellit/kaula_01.png` … `_05.png`
+Skripti: `generaattorit/kaula.py`
+Video: `reels/kaula.mp4` (27,2 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 1.9.2026. **Julkaisu odottaa.**
+5 diaa, 62 sanaa, kansidian sävy tumma.
+
+Ydinajatus: kasvoja hoidetaan vuosia ja kaula jää väliin. Kaulan iho on
+ohuempaa, tukikudosta ja talirauhasia on vähemmän, ja siksi löystyminen
+ja vaakasuuntaiset juonteet näkyvät siellä usein ensin. Koska ihon pinta
+uusiutuu mikroneulauksen jälkeen osittain karvatupista ja talirauhasista
+käsin, paraneminen kestää alueella pidempään ja hoidon voimakkuus
+mitoitetaan erikseen.
+
+Sommittelu on epäsymmetrinen samaan tapaan kuin ideoissa 2.1 ja 6.1: yksi
+vaalea dia kuvaa alueen rakenteen, ja kaksi vihreää diaa kertovat mitä
+siitä seuraa ja miten studio hoitaa alueen.
+
+Neulasyvyydestä ei väitetä mitään (REELS-IDEAT.md luku 8b: alueilla ei
+välttämättä käytetä pienempää syvyyttä, koska herkällä iholla pienin
+syvyys on käytössä jo kasvoilla). Lisäalueen myyntiehto kerrotaan
+kuvatekstissä eikä dioissa, jottei dia täyty ehdoista.
+
+Kansidian sävy tumma. Edellinen julkaisujonossa oleva julkaisu on
+ensikaynti-Reels (vaalea) ja viikon toinen Reels (punoitus) on keski,
+joten kolme peräkkäistä julkaisua eroavat toisistaan (luku 3.5a).
+
+Kuvateksti sanatarkasti:
+
+```
+Hoidat kasvot vuosien ajan. Entä kaula?
+
+Kaula, dekoltee ja kämmenselät ovat mikroneulauksen lisäalueita, joita hoidamme Kotkan Ruonalassa kasvohoidon yhteydessä. Ne jäävät usein väliin, vaikka niissä näkyy usein enemmän kuin kasvoissa.
+
+Kaulan iho on ohuempaa kuin kasvojen iho ja sen tukikudosta on vähemmän. Alue liikkuu jatkuvasti puhumisen, nielemisen ja pään kääntämisen mukana, mikä kuormittaa ihon rakennetta. Talirauhasia on kaulassa selvästi vähemmän kuin kasvoissa, mikä tekee ihosta myös kuivemman. Käytännössä tämä näkyy niin että kaulan iho löystyy ja siihen syntyy vaakasuuntaisia juonteita usein aikaisemmin kuin kasvoihin vastaavia merkkejä. Hoidettujen kasvojen ja hoitamattoman kaulan raja voi näkyä selvästi.
+
+Mikroneulauksen jälkeen ihon pinta uusiutuu osittain karvatupista ja talirauhasista käsin, koska niistä nousee uusia ihosoluja pintaan. Kaulassa näitä rakenteita on vähemmän kuin kasvoissa, joten pinnan uusiutuminen kestää siellä pidempään, vaikka hoito tehtäisiin täsmälleen samalla tavalla. Siksi alueella edetään varovaisemmin ja hoidon voimakkuus mitoitetaan alueelle erikseen.
+
+Kaula, dekoltee ja kämmenselät hoidetaan lisäpalveluna kasvojen mikroneulaushoidon yhteydessä, ei erillisenä hoitona. Yksi lisäalue maksaa 35 euroa. Mainitse lisäalueesta ajanvarauksen yhteydessä tai viimeistään ensikäynnillä, niin varaamme aikaa riittävästi.
+
+Jokaisen hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-kaula-dekoltee-kadet.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #ihonhoito #kaulanhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**15. Punoitus on hyvä merkki (Reels)**
+Lähde: `mikroneulauksen-jalkihoito.html`, idea 7.2
+Tiedostot: `karusellit/punoitus_01.png` … `_05.png`
+Valokuva: `julkaisut/punoitus_hoidon_jalkeen.jpg`
+Skripti: `generaattorit/punoitus.py`
+Video: `reels/punoitus.mp4` (26,6 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 1.9.2026. **Julkaisu odottaa.**
+5 diaa, 56 sanaa, kansidian sävy vaalea, kansi on valokuva.
+
+Ydinajatus: hoidon jälkeinen punoitus on odotettu fysiologinen vaste ja
+merkki siitä että ihon oma uudistumisprosessi on käynnistynyt. Punoitus
+laskee tyypillisesti ensimmäisen vuorokauden aikana. Poistaa varaamisen
+kynnyksen juuri ennen studion avausta 7.9.2026: toipumisaika on yleisin
+syy siirtää ajanvarausta.
+
+**Kärki käännettiin myönteiseksi (käyttäjä 1.9.2026).** Ensimmäinen
+versio sanoi "Punoitus hoidon jälkeen ei ole ongelma". Käyttäjä:
+*"En käyttäisi lausetta että ei ole ongelma. Enemmänkin että punoitus
+on oletettavaa ja kertoo että hoito on tehty."*
+
+Muotoilu rikkoi PROJECT.md luvun 5 sääntöä puolustelevasta rakenteesta:
+se vastaa väitteeseen jota kukaan ei ole esittänyt ja tuo lukijan
+mieleen ongelman jota hän ei ollut ajatellut. Sama vika kuin
+rakenteissa "tämä ei tarkoita että…" ja "hoidot eivät sulje toisiaan
+pois".
+
+| | Ennen | Jälkeen |
+|---|---|---|
+| Kansi | "Punoitus hoidon jälkeen ei ole ongelma" | "Punoitus kertoo että hoito on tehty" |
+| Dia 3 | "Se on normaali vaste…" | "Se on odotettu vaste…" |
+| Kuvatekstin avaus | "…ei ole ongelma." | "…on odotettavaa, ja se kertoo että hoito on tehty." |
+
+Sanamäärä ei muuttunut, joten kestot ja diarakenne pysyivät ennallaan.
+
+**Sääntö jatkoon:** jälkihoidon ja vasta-aiheiden sisällössä kärki
+kerrotaan siitä mitä havainto tarkoittaa, ei siitä mitä se ei ole.
+
+Tässä ei verrata kahta menetelmää, joten sommittelu ei ole
+vastakkainasettelu. Rakenne on aikajana: vaalea dia kertoo ensimmäiset
+tunnit, ja kaksi vihreää diaa vievät toiseen päivään ja siitä
+eteenpäin. Taustaväri vaihtuu siinä kohdassa jossa siirrytään
+akuutista vaiheesta siihen mitä hoidosta jää jäljelle.
+
+**Diateksteistä tehtiin aikajana (käyttäjä 1.9.2026).** Käyttäjä pyysi
+harkitsemaan relevantimpia diatekstejä. Aiemmassa versiossa dia 2
+kuvasi oireet jotka kansikuva jo näyttää ja dia 3 jäi abstraktiksi
+("ihon oma uudistumisprosessi on käynnistynyt").
+
+| Dia | Ennen | Jälkeen |
+|---|---|---|
+| 2 | Heti hoidon jälkeen: punoitusta ja kuumotusta, iho herkkä ja kireä | Ensimmäiset tunnit: samat oireet, lisäksi että ne helpottuvat itsestään |
+| 3 | Mitä punoitus kertoo: odotettu vaste, uudistumisprosessi käynnistynyt | Toinen päivä: punoitus laskenut, meikin voi palauttaa varovasti |
+| 4 | Punoitus laskee vuorokaudessa | Pinta umpeutuu tunneissa (selite: kollageeni jatkuu viikkoja) |
+
+Peruste: aikajana vastaa siihen mikä oikeasti estää varaamasta, eli
+milloin voi näyttäytyä normaalisti. Meikin palautus toisena päivänä on
+lähdeartikkelin konkreettisin päätöksentekoon vaikuttava tieto, ja
+nostodia käyttää artikkelin vahvinta yksittäistä lausetta: kanavat
+sulkeutuvat pinnalta muutamassa tunnissa mutta kollageeninmuodostus
+jatkuu viikkoja.
+
+**Nostodian rivirajoitus.** Nostotekstiin mahtuu kolme riviä ennen kuin
+se törmää selitteen yläpuolella olevaan viivaan (nosto alkaa y = 280,
+riviväli 155, selitelohko ankkuroituu alas). Ensimmäinen yritys
+"Pinta umpeutuu tunneissa, kollageeni rakentuu viikkoja" oli viisi
+riviä ja meni päällekkäin selitteen kanssa. Vastakkainasettelu ei mahdu
+nostoon, joten nosto kantaa yllättävän havainnon ja selite
+vastakkainasettelun. Tämä koskee kaikkia tulevia nostodioita.
+
+**Kansidian sävy vaalea (vaihdettu 1.9.2026 julkaisupäivänä).**
+Alkuperäinen valinta oli keski, joka perustui julkaisujonon oletettuun
+järjestykseen. Käyttäjä julkaisi tämän samana päivänä ja kertoi että
+edellinen julkaisu oli vihreä, joten kerma on ainoa sävy joka oikeasti
+rikkoo ruudukon yksivärisyyden (luku 3.5a). Viikon toinen Reels (kaula)
+on tumma, joten sävyt eroavat myös keskenään.
+
+Seuraus dioihin: kansi ja dia 2 ovat molemmat kermalla ja väri vaihtuu
+vasta dialla 3. Se osuu aikajanan käännekohtaan, eli ensimmäisistä
+tunneista toiseen päivään, joten värivaihdos on nyt aiempaa
+tarkoituksenmukaisempi. Kansi on valokuva, joten kahdesta peräkkäisestä
+kermadiasta ei tule yksitoikkoista.
+
+**Huomio jatkoon:** julkaisujonon oletettu järjestys ei vastannut
+toteutunutta. Sävy kannattaa tarkistaa julkaisupäivänä ruudukosta eikä
+luottaa siihen mitä lokiin on kirjattu jonoon.
+
+**Kansi on valokuva (päätetty 1.9.2026, käyttäjän linjaus).** Video
+väittää että punoitus on normaalia, ja kuva on ainoa asia joka näyttää
+millaista se on. Kyse ei ole ennen/jälkeen-kuvasta vaan hoidon
+reaktiosta, eli luvun 6.1 tarkoittamasta prosessin kuvaamisesta, joten
+linjaus ennen/jälkeen-kuvista pitää.
+
+Kolme reunaehtoa jotka tässä täyttyvät:
+
+| Ehto | Miten ratkaistu |
+|---|---|
+| Suostumus (7.1) | Kuva on studion omaa väkeä, joten asiakassuostumusta ei tarvita |
+| Rajaus (6.1, 6.4) | Kasvokuvaetäisyys, koko pää ja kaula näkyvät. Tiukka lähikuva ihoalueesta luetaan automaattisessa tarkistuksessa ennen/jälkeen-aineistoksi |
+| Yksilöllinen vaihtelu | Kuvateksti kertoo että punoitus laskee toisilla nopeammin ja toisilla hitaammin, jottei yhdestä kuvasta tule mittatikkua |
+
+Silmät peitetään suorakulmiolla. Se on tämän kuvatyypin vakiintunut
+tapa ja pitää julkaisun yritysbrändissä eikä henkilöbrändissä
+(PROJECT.md luku 0.5).
+
+**Kaula näkyy kuvassa (käyttäjä 1.9.2026).** Myös kaula oli hoidettu ja
+siinä näkyy punoitusta, joten yksi kuva näyttää saman havainnon
+kahdella alueella. Ensimmäinen rajaus ulottui vain leukaan asti.
+
+Bannereita madallettiin, jotta kuva-alue muuttuu pystymmäksi ja
+lähdekuvasta mahtuu enemmän korkeussuunnassa: yläbanneri 130 px,
+kuva-alue 970 px, alabanneri 250 px, otsikko 66 px. Rajaus 0,11-0,7836
+osuuksina lähdekuvasta vastaa täsmälleen kuva-alueen mittasuhdetta
+(2448 × 970 / 1080 = 2199 px eli 0,6736 korkeudesta), joten keskeltä
+ei rajaudu mitään pois. Alareuna osuu paidan kaula-aukon yläpuolelle.
+
+Sivutuotteena kansi sitoo julkaisun viikon toiseen Reelsiin (kaula),
+vaikka aiheet ovat eri pääluvuista.
+
+**Uusi diatyyppi `kansi_kuva` (karuselli.py).** Lisätty 1.9.2026 tätä
+kantta varten, additiivinen eikä muuta vanhojen diatyyppien toimintaa
+(regressio tarkistettu ajamalla kaikki vanhat diatyypit läpi).
+Yläbanneri kantaa tunnisteet, valokuva täyttää välin reunasta reunaan
+ja alabanneri kantaa otsikon. Sävyvalikoima on sama kuin
+`dia_kansi`-funktiossa, joten sävykierto toimii myös kuvakannella.
+
+| Parametri | Merkitys |
+|---|---|
+| `rajaus` | (x0, y0, x1, y1) osuuksina lähdekuvasta |
+| `peitot` | Peittosuorakulmiot, samat koordinaatit, piirretään ennen rajausta |
+| `yla` / `ala` | Bannereiden korkeudet, oletus 150 ja 300 |
+| `otsikkokoko` | Otsikon pistekoko, oletus 76, riviväli 1,21-kertainen |
+
+EXIF-kierto puretaan `ImageOps.exif_transpose`-funktiolla, koska
+puhelinkuvassa oli orientaatio 8 eikä PIL käännä sitä itse. Otsikossa
+saa käyttää rivinvaihtoa, koska alabanneriin mahtuu vain kaksi riviä ja
+automaattinen rivitys katkaisi lauseen väärästä kohdasta ("… jälkeen ei
+/ ole ongelma").
+
+Kuvateksti sanatarkasti:
+
+```
+Punoitus mikroneulauksen jälkeen on odotettavaa, ja se kertoo että hoito on tehty.
+
+Teemme mikroneulaushoidot Kotkan Ruonalassa, ja jokaisen hoidon päätteeksi käymme läpi jälkihoito-ohjeet. Videon kansikuva on otettu heti hoidon jälkeen, ja se on studion omaa väkeä eikä asiakaskuva. Kuvassa on hoidettu sekä kasvot että kaula.
+
+Heti hoidon jälkeen iholla esiintyy punoitusta ja kevyttä kuumotusta. Iho voi tuntua herkältä, kuivalta ja kireältä, ja ensimmäisten tuntien aikana voi tuntua lievää polttavaa tai pistelevää tunnetta. Nämä helpottuvat itsestään.
+
+Punoitus on odotettu fysiologinen vaste ja merkki siitä että ihon oma uudistumisprosessi on käynnistynyt. Hoidossa ihoon tehdään tuhansia mikroskooppisen pieniä kanavia, jotka sulkeutuvat pinnalta muutamassa tunnissa, ja syvempi paranemis- ja kollageeninmuodostusprosessi jatkuu viikkoja.
+
+Punoitus laskee tyypillisesti ensimmäisen vuorokauden aikana, toisilla nopeammin ja toisilla hitaammin. Toisena päivänä se on tavallisesti selkeästi laskenut, ja meikin voi alkaa palauttaa varovasti; mineraalipohjaiset tuotteet ovat silloin parempia kuin voimakkaasti pigmentoidut nestemäiset meikit. Pintakerros voi myös hilseillä kevyesti, ja sekin on toivottu reaktio, koska vanha iho uusiutuu ja korvautuu uudella.
+
+Ensimmäisen vuorokauden ajan iholle levitetään studiolta saatua hoitavaa voidetta, joka sisältyy hoidon hintaan. Samaan aikaan vältetään meikkiä, auringonottoa, retinoideja ja happotuotteita, kuumaa suihkua, saunaa ja voimakasta liikuntaa.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulauksen-jalkihoito.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #jalkihoito #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (1.9.2026):** ideapankissa oli ennen tätä ajoa 36
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista (8b ja 7) ja eri lähdeartikkeleista.
+Ideapankin suositellun aloitusjärjestyksen kaikki kymmenen kohtaa on
+nyt käytetty, joten valinta tehtiin vapaasti käyttämättömien
+★★★-ideoiden joukosta. Idea 8b.1 valittiin, koska luvun 8b lisäalueita
+ei ole vielä käytetty kertaakaan ja lähdeartikkeli
+`mikroneulaus-kaula-dekoltee-kadet.html` on ainoa julkaistu artikkeli
+josta ei ole tehty yhtään Reelsiä. Idea 7.2 on ajankohtainen, koska
+studio avataan 7.9.2026 ja toipumisaika on yleisin varaamisen este;
+lähdeartikkelia on käytetty viimeksi 7.8.2026, eli kauimpana
+menneisyydessä käytetyistä. Aknesisältöä ja sarjahoitoa vältettiin,
+koska molemmat olivat esillä elokuun kahdessa viimeisessä viikossa.
+
+**Ideapankin tila 1.9.2026:** 34 käyttämätöntä ideaa 46:sta, eli luvun
+kynnys (alle 10) ei täyty eikä täydennystä tehty. Yhteenvetotaulukko
+REELS-IDEAT.md-tiedostossa korjattiin samalla: se ilmoitti 40 ideaa
+eikä sisältänyt luvun 8b lisäalueita.
 
 **Seuraavat karusellit prioriteettijärjestyksessä**
 

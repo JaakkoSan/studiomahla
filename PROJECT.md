@@ -7968,3 +7968,48 @@ find . -maxdepth 1 -newermt "<edellinen lataus>" -name "*.html"
 Livesivuston voi tarkistaa hakemalla sivun ja katsomalla onko muutos
 siellä. Hiekkalaatikon `date` ei kelpaa päivämäärän lähteeksi, koska
 se voi olla jäljessä.
+
+---
+
+## 3.9.2026 — Ensimmäinen valokuva jälkihoitoartikkeliin
+
+`mikroneulauksen-jalkihoito.html` oli sivuston ainoa artikkeli joka
+vastaa kysymykseen "miten punainen olen ja kuinka kauan", eikä siinä
+ollut yhtään kuvaa.
+
+**Kuva:** `assets/punoitus-hoidon-jalkeen.jpg` (1000 × 898, 119 kt) ja
+`.webp` (56 kt). Lähde `tuotanto/julkaisut/punoitus_hoidon_jalkeen.jpg`,
+sama rajaus ja silmäpeite kuin 1.9. julkaistun Reelsin kansidiassa.
+Sijoitus: "Ensimmäiset 24 tuntia" -osion ensimmäisen kappaleen jälkeen.
+
+### Miksi vain tähän yhteen paikkaan
+
+Kuva on todiste, ei koriste. Jälkihoitoartikkelissa lukija kysyy
+tosiasiakysymystä, ja valokuva vastaa siihen paremmin kuin lause.
+Muualla sivustolla se olisi kuvitusta, ja silloin tekninen taso alkaa
+haitata: valkoinen seinä, märät hiukset, epätasainen valo.
+
+**Karheus on tässä yhteydessä etu.** Studiovalaistu versio olisi
+vähemmän uskottava, koska lukija haluaa nähdä miltä iho näyttää kotona
+peilissä. Kuvateksti sanoo tämän ääneen: *"otettu hoitohuoneen
+ulkopuolella tavallisessa valossa, koska sellaisena iho myös peilistä
+näkyy."*
+
+### Kuvauslistalle lisättiin punoituksen aikasarja
+
+Syyskuun lopun kuvaus ei korvaa tätä kuvaa automaattisesti.
+**Hoidon jälkeistä punoitusta ei voi lavastaa**, vaan se edellyttää
+että hoito on juuri tehty. Kuvauslistan kohta D kattoi hoidon
+suorittamisen muttei sitä miltä iho näyttää jälkeenpäin.
+
+META-MARKKINOINTI.md luku 3.5, uusi kohta D2: kolme kuvaa samasta
+kasvosta samalla rajauksella ja valolla, heti hoidon jälkeen,
+vuorokauden kuluttua ja toisena päivänä.
+
+**Suostumus:** kuva on studion omasta väestä, joten luvun 7.1
+asiakassuostumusta ei tarvita. Silmät peitetty, mikä pitää julkaisun
+yritysbrändissä (luku 0.5).
+
+**Ladattavat: `mikroneulauksen-jalkihoito.html`,
+`assets/punoitus-hoidon-jalkeen.jpg`, `assets/punoitus-hoidon-jalkeen.webp`.**
+Lisäksi edellisestä muutoksesta yhä lataamatta `ihonhoito-opas.html`.
