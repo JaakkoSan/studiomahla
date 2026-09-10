@@ -4804,6 +4804,16 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-09-10
+
+- **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 14 live-sitemapin sivua Chromella kokonaan läpi. Päivitettiin `mita-on-kliininen-mikroneulaus.html`, joka oli sivuston vanhin sisältö: näkyvä päivitysmerkintä 24.5.2026 eli 3,5 kuukautta vanha, ja se oli jäänyt pois sekä 17.8. ProXN-linkitysauditoinnista että kaikista sen jälkeisistä päivityskierroksista. Uusi H2 "Kun mikroneulaus ei ole oikea hoito" (ProXN-reitti, sama rakenne kuin sarjahoito-, milloin-aloittaa- ja jälkihoitoartikkeleissa), uusi H3 "Lue lisää" kolmella ristiinlinkillä, sekä neljä uutta inline-linkkiä (ensikäynti, jälkihoito, sarjahoito, aknearvet). Ulos osoittavia sisäisiä artikkelilinkkejä 3 → 11. **Korjattu bugi: `dateModified` oli 2026-06-17 mutta näkyvä article-meta 24.5.2026**, eli skeema ja sivu olivat ristiriidassa. Molemmat nyt 10.9.2026. Noin 980 → 1230 sanaa. Meta-kuvauksiin ei koskettu, koska artikkelin aihe ei muuttunut.
+- **Syy valintaan A:n sijaan:** mikroneulausklusteri on katettu, ja kaksi valmista artikkelia odottaa yhä julkaisua. `mita-mikroneulaus-ei-tee.html` on ollut valmis 12.8. alkaen ja sen suunniteltu julkaisuviikko 34 meni ohi kolme viikkoa sitten; se on yhä 404 livenä ja puuttuu sitemapista, vaikka paikallisesti `index, follow`. `mikroneulaus-talvella.html` on noindex-luonnos loka-marraskuulle. Uuden artikkelin kirjoittaminen kolmannen jonoon on turhaa työtä ennen kuin jono purkautuu. Tämä on luvun 16.5 signaali 1 toistamiseen.
+- **Korjattu `mikroneularulla-vai-kliininen-mikroneulaus.html`:** kirjoitusvirhe "mikroneulausessa" kahdessa kohdassa → "mikroneulauksessa". `dateModified` ja article-meta jätettiin tarkoituksella koskematta, koska kyse on kirjoitusvirheestä eikä olennaisesta sisältömuutoksesta (sama Googlen ohje jota noudatettiin 6.8.2026).
+- **Korjattu `404.html`:** ajatusviiva leipätekstistä ("palaa etusivulle — ja jos päädyit tänne" → "palaa etusivulle. Jos päädyit tänne"), luvun 5 sääntö. Sivu on noindex eikä siinä ole päivämääriä.
+- **Ohje jatkoon (käyttäjä 10.9.2026):** *"kirjoitusvirheen voi tietenkin korjata myös heti, ihan turha jättää sellaista odottamaan."* Yksiselitteinen kirjoitus- tai kielivirhe korjataan löytöhetkellä eikä raportoida odottamaan hyväksyntää, vaikka se olisi eri tiedostossa kuin viikon varsinainen kohde. Vaiheen 6 rajaus koskee rakenteellisia muutoksia kuten linkityksiä ja sitemapia, ei ilmiselviä virheitä.
+- **Havainto, ei korjattu:** `mikroneularulla-vai-kliininen-mikroneulaus.html`:ssä on sama `dateModified`-ristiriita joka juuri korjattiin toisesta artikkelista: JSON-LD sanoo 2026-06-17, näkyvä merkintä 24.5.2026. Molemmat sivut on tehty samasta pohjasta, joten vika on todennäköisesti pohjassa. Ei korjattu koska ei tiedetä kumpi päivä on oikea eikä päivää haluta tuoreuttaa ilman sisältömuutosta. **Ratkaistaan kun sivua seuraavan kerran päivitetään.**
+- Ei muita tiedostoja muutettu. Uutta artikkelia ei linkitetty mihinkään, koska uutta artikkelia ei kirjoitettu.
+
 ### 2026-09-02
 
 - **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 13 julkaistua artikkelia kokonaan livenä. Claude in Chrome ei ollut aluksi yhteydessä (neljä yritystä, `list_connected_browsers` palautti tyhjän listan), joten lukeminen tehtiin sovelluksen sisäisellä selaimella; käyttäjä yhdisti Chromen istunnon lopuksi ja havainnot tarkistettiin sillä uudelleen. Ks. varoitus sisäisestä selaimesta alempana.
@@ -8013,3 +8023,889 @@ yritysbrändissä (luku 0.5).
 **Ladattavat: `mikroneulauksen-jalkihoito.html`,
 `assets/punoitus-hoidon-jalkeen.jpg`, `assets/punoitus-hoidon-jalkeen.webp`.**
 Lisäksi edellisestä muutoksesta yhä lataamatta `ihonhoito-opas.html`.
+
+---
+
+## 3.9.2026 — Ladattu GitHubiin
+
+Käyttäjä: *"Kaikki ladattu."* Verkossa 3.9.2026:
+
+- `ihonhoito-opas.html` (pigmenttilisäykset, dateModified 3.9.)
+- `mikroneulauksen-jalkihoito.html` (punoituskuva)
+- `assets/punoitus-hoidon-jalkeen.jpg` ja `.webp`
+
+Tarkistettu hakemalla `mikroneulauksen-jalkihoito`: kuva, alt-teksti ja
+kuvateksti näkyvät oikein, ja aurinkosuojaosion linkki yleispilariin
+toimii.
+
+**Ratkaistu:** `mikroneulauksen-jalkihoito.html`:n `dateModified` on
+2026-09-02 ja näkyvä päiväys "Päivitetty 2.9.2026", vaikka kuva
+lisättiin 3.9. Käyttäjä 3.9.2026: *"Ei tarvitse muokata, asia ok."*
+Jätetään ennalleen.
+
+**Tästä seuraa tarkennus 26.8. kirjattuun päiväyssääntöön.**
+`datePublished` on aina se päivä jolloin artikkeli menee sivustolle.
+`dateModified` päivitetään sisältömuutoksissa, mutta pienen lisäyksen
+kohdalla yhden päivän ero ei ole korjaamisen arvoinen. Kysy, älä
+korjaa oma-aloitteisesti.
+
+---
+
+## 5.9.2026 — Botuliinihoidot: selvitys
+
+Käyttäjä: *"vastuusairaanhoitaja olisi sitä kiinnostunut pistämään ja
+tämä sopisi studion tarjontaan jollain aikavälillä."*
+
+**Este ei ole sairaanhoitajan pätevyys. Este on lääkäri.**
+
+### Mitä laki vaatii
+
+Lähde: Lupa- ja valvontavirasto, [Botuliinihoidot](https://lvv.fi/sosiaali-ja-terveydenhuolto/botuliinihoidot),
+ja neljän viranomaisen yhteinen tiedote 8.7.2026
+([Fimea](https://fimea.fi/-/viranomaiset-kehottavat-esteettisia-hoitoloita-varmistumaan-lainsaadannon-velvoitteista)).
+
+Botuliinitoksiinihoito on **terveydenhuollon toimintaa myös puhtaasti
+esteettisessä tarkoituksessa.**
+
+| Vaatimus | Sisältö |
+|---|---|
+| Lääkemääräys | Vain laillistetun lääkärin |
+| Kuka saa pistää | Lääkäri, tai sairaanhoitaja, terveydenhoitaja tai kätilö. Ei muut. |
+| Lisäkoulutus | Nimenomaan botuliinitoksiinin pistämistä varten annettu koulutus |
+| Kirjallinen lupa | Lääkärin on varmistuttava osaamisesta ja myönnettävä kirjallinen lupa |
+| Hoidon tarve | Lääkäri arvioi jokaisen potilaan kohdalla omalla tutkimuksellaan |
+| **Lääkärin läsnäolo** | **Välittömästi tavoitettavissa paikalle palvelupisteeseen. Etävastaanotto ei riitä.** |
+| Vastuu | Lääkärillä, myös kun pistäminen on siirretty sairaanhoitajalle |
+| Lääkehoitosuunnitelma | Vastuut, menettelytavat ja osaamisvaatimukset erikseen kuvattuna |
+| Soteri | Rekisteröintipäätös **ennen** toiminnan aloittamista |
+| Valmisteet | Suomessa voimassa oleva myyntilupa, hankinta suomalaisesta apteekista |
+
+Suora lainaus LVV:ltä: *"Välitön tavoitettavuus tarkoittaa, että
+lääkäri/hammaslääkäri on pistämistilanteessa terveydenhollon
+palvelupisteessä paikalla tai sen välittömässä läheisyydessä. Lääkärin/
+hammaslääkärin tavoitettavuusedellytys ei täyty etävastaanoton
+keinoin."*
+
+**Soteri koskee nimenomaan sairaanhoitajaa.** LVV: *"Sairaanhoitajat,
+terveydenhoitajat ja kätilöt eivät voi aloittaa botuliinihoitojen
+antamista ennen kuin rekisteröinnistä on tehty päätös."* Poikkeus
+koskee vain yksin toimivia lääkäreitä. Luvaton terveydenhuollon
+ammattitoiminta on rikoslaissa rangaistavaksi säädetty.
+
+### Markkinointi
+
+**Lääkelaki 395/1987, 91 a § 1 mom:** *"Väestölle ei saa markkinoida
+lääkemääräyksellä toimitettavia eikä huumausaineita tai
+psykotrooppisia aineita sisältäviä lääkevalmisteita."*
+([Finlex](https://www.finlex.fi/fi/lainsaadanto/1987/395))
+
+Botuliinitoksiinivalmisteet ovat reseptivalmisteita, joten
+**tuotenimeä ei voi käyttää kuluttajamarkkinoinnissa.**
+
+⚠ **Varmistamatta:** missä kulkee raja lääkevalmisteen markkinoinnin
+ja terveyspalvelun markkinoinnin välillä. Klinikat markkinoivat
+"botuliinihoitoa" avoimesti, mutta Fimean julkaistua tulkintaa
+esteettisen alan palvelumarkkinoinnista ei löytynyt. **Tämä on
+kysyttävä Fimeasta ennen kuin mitään kirjoitetaan sivustolle.**
+
+### Mitä tämä tarkoittaa studiolle
+
+Botox ei ole lisäpalvelu vaan **eri liiketoimintamalli.** Se
+edellyttää:
+
+1. Sopimuslääkäriä joka on hoitopäivinä tiloissa tai niiden
+   välittömässä läheisyydessä ja tapaa jokaisen asiakkaan
+2. Botox-päivien keskittämistä niihin päiviin
+3. Soteri-rekisteröintiä eli siirtymistä terveydensuojelulain 13 §:n
+   ilmoituksesta rekisteröidyksi terveyspalvelujen tuottajaksi:
+   vastuuhenkilö, palveluyksikkökohtainen omavalvontasuunnitelma,
+   potilasvakuutus, potilasasiakirjat
+4. Lääkehoitosuunnitelmaa
+5. Petran botuliinikoulutusta ja lääkärin kirjallista lupaa
+
+**Aikajänne:** ei ennen kuin avaus on vakiintunut. Soteri-päätös vie
+aikansa, ja koko ketju alkaa lääkärin sitoutumisesta, ei koulutuksesta.
+
+### Sopiiko linjaan
+
+**Näytön puolesta kyllä.** Botuliinitoksiini on esteettisen alan
+parhaiten dokumentoituja hoitoja, ja studion linja on nimenomaan
+näyttöön nojaava.
+
+**Positioinnin kannalta kysymys on auki.** Studio hoitaa ihoa: sen
+rakennetta, suojakerrosta ja uusiutumista. Botuliinitoksiini ei hoida
+ihoa vaan lamauttaa lihaksen. Se on eri asia kuin mikään mitä
+studiolla nyt tehdään, ja se kannattaa ratkaista ennen kuin
+lupaprosessi aloitetaan.
+
+### Tarkennus: mitä läsnäolovaatimus tarkoittaa
+
+Käyttäjä 5.9.2026: *"on täysin selvää että toiminta kokonaisuudessaan vaatii
+lääkärin, mutta tuota paikallaoloa en usko."*
+
+**Olin kirjoittanut sen liian tiukasti.** Vaatimus ei ole että lääkäri
+seuraa pistämistä. Teksti sanoo *"palvelupisteessä paikalla tai sen
+välittömässä läheisyydessä"*, eli lääkäri voi olla omalla
+vastaanotollaan viereisessä huoneessa.
+
+Se selittää miksi ristiriitaa markkinaan ei ole: isolla klinikalla
+lääkäri on joka tapauksessa talossa, eikä ehto tunnu rajoitteelta.
+
+**Varmistamatta:** milloin tarkennus *"ei täyty etävastaanoton
+keinoin"* on lisätty. Valviran alkuperäinen ohje on vuodelta 2019 ja
+siitä uutisoitiin muodossa "lääkärin valvonnan alaisena" ilman tätä
+mainintaa. Alkuperäinen PDF on poistettu ja osoite ohjaa viraston
+etusivulle, joten sanamuotoja ei voi verrata. **Ei siis väitetä että
+ehto olisi uusi.**
+
+**Studion kannalta ehto sitoo joka tapauksessa**, koska kyseessä on
+yhden hoitohuoneen toimipiste.
+
+### Tarkistus 5.9.2026: mitä markkinasta löytyi
+
+Käyttäjä: *"Missään kauneushoitolassa missä botoxia tarjotaan ei ole
+lääkäriä paikalla ja näitä tarjotaan yleisesti."*
+
+**JulkiSoteri-tietopalvelua ei löytynyt käytöstä.** LVV:n
+Soteri-sivuilta ei ole linkkiä julkiseen hakuun, ja aineistossa
+puhutaan tietopalvelusta jota *luodaan*. Rekisteritietoa ei siis
+voinut tarkistaa nimeltä. Kysyttävä puhelimessa.
+
+**Kymenlaakson toimijat.** Lähin botoxia tarjoava paikka on Haminassa
+Lääkäri Veera Niskanen Oy, ja se on lääkärivetoinen: lääkäri
+omistajana, vastaava sairaanhoitaja nimettynä, potilasasiamies,
+lääketieteelliset hoidot alv 0 % ja Kela-suorakorvaus. Kouvolassa
+Klinikka Lux, sekin lääkärivetoinen. **Kumpikaan ei ole
+kauneushoitola.** Kaksi toimijaa ei ole otos, mutta kumpikin osui
+samaan malliin.
+
+### Mistä käsitysero johtuu
+
+Alan oma lähde selittää sen. Suomen Hoitolatukun opas
+[kauneushoitolan muuttamisesta terveydenhoidon toimipisteeksi](https://hoitolatukku.fi/hyppy-perinteisesta-kauneushoitolasta-esteettisia-hoitoja-tarjoavaksi-terveydenhoidon-toimipisteeksi/):
+
+| Aika | Tila |
+|---|---|
+| Ennen 2019 | Botuliinihoitoja tehtiin kauneushoitoloissa ja kampaamoissa ilman lääkärin valvontaa |
+| 5/2019 | Valvira asetti vaatimukset |
+| 15.12.2023 | Säteilylain siirtymäaika päättyi: IPL ja HIFU käytännössä kiellettiin perinteisessä kauneushoitolassa |
+| 1.1.2024 | Uusi valvontalaki yksinkertaisti rekisteröintiä ja tunnistaa pienet toimijat |
+| Nyt | Rekisteröitymisaalto. Hoitolat ottavat vastuulääkärin ja sairaanhoitajan pitämään "pientoimenpidepäiviä" |
+
+**Käyttäjän muistikuva on siis oikea, mutta se kuvaa aikaa ennen
+2019.** Nykyiset botoxia tarjoavat hoitolat ovat rekisteröityneitä
+terveydenhoidon toimipisteitä joilla on vastuulääkäri.
+
+Hoitolatukku sanoo suoraan: *"Kauneushoitola, jolla on vastuulääkäri
+ja joka on yksityinen terveydenhoidon toimipiste, erottautuu
+kilpailijoista kuluttajan silmissä."*
+
+**Aito ratkaisematon kohta jää silti.** Alan opas puhuu
+vastuulääkäristä eikä mainitse läsnäoloa. LVV:n teksti vaatii
+läsnäolon palvelupisteessä tai sen välittömässä läheisyydessä.
+Nämä kaksi eivät ole sama asia, ja juuri tästä erosta neljä
+viranomaista varoitti 8.7.2026.
+
+### Vastaesimerkki: Medifill Kotkassa
+
+Käyttäjä antoi konkreettisen tapauksen, ja se kumoaa yleistykseni.
+
+[Medifill](https://www.medifill.fi/) on Helsingin Kruununhaassa toimiva
+esteettisten hoitojen yritys. Perustaja esittelee itsensä sivulla
+muodossa *"Sairaanhoitaja, kosmetologi, Medifillin perustaja Tanja"*.
+Yritys tarjoaa botuliinihoitoa hinnoilla 190–430 €.
+
+[Kotkan-sivu](https://www.medifill.fi/kotka/): *"Kotkan pistospäivät
+kauneushoitola Beamissa, Kirkkokatu 19."* Vierailut pe–la 4.–5.9.2026
+ja 4.–5.12.2026.
+
+**Mitä sivustolta havaitsee:**
+
+| | |
+|---|---|
+| Tekijä | Sairaanhoitaja, ei lääkäri |
+| Toimipaikka Kotkassa | Kauneushoitola, kuvateksti "yhteistyöhoitola" |
+| Lääkäriä ei mainita | Ei etusivulla, ei botox-sivulla, ei Kotkan sivulla |
+| Turvallisuusosion muotoilu | *"kokeneiden esteettisten ammattilaisten toimesta"* |
+| Tuotenimi | "botox" sivun otsikossa ja meta-avainsanoissa |
+
+**Tämä on tarkalleen se malli jonka LVV:n teksti sulkee pois:**
+sairaanhoitaja pistää botuliinitoksiinia kauneushoitolassa
+vierailupäivinä.
+
+**Varaus:** verkkosivu ei nimeä lääkäriä, mutta se ei todista ettei
+vastuulääkäriä ole. Sitä ei voi tarkistaa, koska JulkiSoteri ei ole
+haettavissa. Kyse on havainnosta sivustosta, ei päätelmästä
+yrityksen laillisuudesta.
+
+**Silti:** vaikka vastuulääkäri olisi paperilla olemassa, ehto
+"välittömästi tavoitettavissa palvelupisteeseen" on vaikea täyttää
+kun yritys toimii Helsingistä ja käy Kotkassa kaksi päivää.
+
+### Johtopäätös käsityserosta
+
+**Käyttäjä oli oikeassa markkinasta. Minä olin oikeassa tekstistä.**
+Ne eivät kohtaa, ja juuri siitä neljä viranomaista varoitti 8.7.2026.
+
+Yleistin kahdesta lääkärivetoisesta toimijasta koko markkinaan,
+vaikka olin itse kirjannut ettei kahta havaintoa voi pitää otoksena.
+**Yhden vastaesimerkin löytäminen riitti kumoamaan sen.**
+
+### Mitä tästä seuraa studiolle
+
+**Este ei ole tekninen.** Petra voisi tehdä saman kuin Medifill, ja
+Kotkassa on jo kysyntää joka täytetään vierailupäivillä.
+
+**Este on linjassa.** Koko sivusto on rakennettu sen varaan että
+studio kertoo mitä näyttö sanoo ja mitä ei, ja tekee asiat oikein
+silloinkin kun se maksaa. Sellaisen toimintamallin kopioiminen joka
+ei näytä vastaavan viranomaisen julkaistuja vaatimuksia olisi
+ristiriidassa kaiken sivustolla olevan kanssa.
+
+**Ja tässä on mahdollisuus.** Jos studio tekisi tämän oikein
+(Soteri-rekisteröinti, nimetty vastuulääkäri, lääkehoitosuunnitelma),
+se olisi erottautumistekijä eikä pelkkä kustannus. Hoitolatukku
+sanoo saman: *"Kauneushoitola, jolla on vastuulääkäri ja joka on
+yksityinen terveydenhoidon toimipiste, erottautuu kilpailijoista
+kuluttajan silmissä."* Kotkassa vertailukohtana olisi
+vierailumalli ilman näkyvää lääkäriä.
+
+### Strateginen sivulöydös
+
+Hoitolatukku: **botuliinihoito on halvin reitti terveydenhoidon
+toimipisteeksi**, koska *"se ei vaadi juurikaan investointeja"*.
+Lupaa ei voi hakea pelkän IPL:n tai HIFUn perusteella, mutta
+rekisteröitynä toimipisteenä ne olisivat myöhemmin mahdollisia.
+
+Botox ei siis olisi vain uusi hoito vaan **ovi laitehoitoihin.**
+Tämä muuttaa laskelmaa ja kannattaa ottaa mukaan kun asiaa
+punnitaan.
+
+Liitteiksi vaaditaan toiminta-, omavalvonta-, tietoturva- ja
+lääkehoitosuunnitelmat. Omavalvontasuunnitelma on jo tehty
+terveydensuojelulakia varten, joten pohja on olemassa.
+
+### "Välitön läheisyys": määritelmää ei ole julkaistu
+
+Käyttäjä 5.9.2026 selvittää yhteistyötä Haminassa asuvan lääkäri Veera
+Niskasen kanssa ja kysyi mitä välitön läheisyys tarkalleen tarkoittaa.
+
+**Etäisyys- tai aikarajaa ei ole julkaistu.** Tarkistettu: LVV:n
+botuliinisivu, neljän viranomaisen tiedote 8.7.2026, LVV:n
+päätöslyhennelmät (12 kpl vuonna 2026, ei yhtään botuliinista) ja
+hakukoneet. Vanhemmat Valviran päätöslyhennelmät ovat
+Doria-julkaisuarkistossa koostejulkaisuina, sieltä ei etsitty.
+
+**Viranomainen määrittelee ehdon tehtävän kautta, ei matkan.** Koko
+lause: lääkärin on oltava tavoitettavissa *"jotta hän voi
+tosiasiallisesti valvoa pistämistilannetta ja puuttua siihen
+tarvittaessa"*. Fyysinen kriteeri johdetaan tästä. Yksi asia on
+suljettu nimenomaisesti pois: etävastaanotto.
+
+**Kaksi eri vaatimusta, kaksi eri tiukkuutta.** Nämä menevät helposti
+sekaisin:
+
+| Vaatimus | Voiko olla etänä |
+|---|---|
+| Lääkäri arvioi hoidon tarpeen | Kyllä. Fimea: *"omalla tutkimuksellaan **tai muulla luotettavalla tavalla**"* |
+| Lääkäri tavoitettavissa pistämishetkellä | **Ei.** Etävastaanotto ei täytä ehtoa |
+
+**Hamina ei ole Kotkan välitön läheisyys.** Noin 25 km. Se ei ole
+tulkintakysymys.
+
+**Toimiva malli on toinen:** lääkäri tulee studiolle hoitopäivinä.
+Veera Niskanen pyörittää jo kahta toimipistettä (Hamina ja
+Lappeenranta) erikseen ilmoitettavina päivinä, joten kolmas
+vierailukohde sopii olemassa olevaan toimintatapaan. Tämä on sama
+rakenne kuin Medifillin vierailupäivät, mutta lääkäri mukana.
+
+**Nopein tie vastaukseen ei ole viranomainen vaan Veera Niskanen
+itse.** Hänellä on jo vastaava sairaanhoitaja ja toimiva
+rekisteröity yksikkö, eli hän on joutunut ratkaisemaan tämän
+kysymyksen omassa toiminnassaan. Hänellä on myös taloudellinen
+intressi siihen että se on ratkaistu oikein.
+
+**Jos kysytään LVV:ltä, kysymys muotoillaan täsmällisesti:** täyttyykö
+välitön tavoitettavuus, kun vastuulääkäri on hoitopäivinä fyysisesti
+samassa toimipisteessä mutta ei hoitohuoneessa, ja onko olemassa
+sovellettua ratkaisukäytäntöä siitä mitä välitön läheisyys tarkoittaa
+yhden hoitohuoneen toimipisteessä.
+
+⚠ Alla oleva päättely on omaani eikä viranomaisen: koska ehdon
+tarkoitus on puuttuminen komplikaatioon, mittarina on se ehtiikö
+lääkäri paikalle. Botuliinihoidon akuutisti puuttumista vaativa
+tilanne on käytännössä anafylaksia valmisteelle tai
+pintapuudutteelle, ja siinä aikayksikkö on minuutteja. **Tätä ei ole
+kirjattu mihinkään lähteeseen, eikä sitä saa esittää viranomaisen
+kantana.**
+
+### Seuraava askel
+
+Soitto Lupa- ja valvontavirastoon. Täsmällinen kysymys: riittääkö että
+sopimuslääkäri on tavoitettavissa samassa kiinteistössä, ja mitä
+"välitön läheisyys" tarkoittaa yhden huoneen toimipisteessä.
+
+Toinen soitto Fimeaan: saako terveyspalvelua markkinoida nimellä
+"botuliinihoito" kun tuotenimeä ei käytetä.
+
+**Ei toimenpiteitä. Kirjattu tiedoksi.**
+
+### Menetelmävirhe
+
+Tiivistin viranomaistekstin taulukkoon muodossa "lääkärin läsnäolo",
+mikä on vahvempi kuin lähteen "paikalla tai sen välittömässä
+läheisyydessä". **Kun lähde on säädös tai viranomaisohje, tiivistys ei
+saa kiristää ehtoa.** Sama sääntö kuin lähdeviittauksissa: älä lupaa
+enempää kuin lähde sanoo, äläkä vaadi enempää.
+
+---
+
+## 5.9.2026 — HIFU: säteilylaki, ei sote-lupa
+
+Käyttäjä: *"Itseasiassa HIFU kiinnostaa jossain kohtaa, tämä pitää
+selvittää nyt samalla."*
+
+**Lopputulos on toinen kuin edellisessä merkinnässä oletin.** HIFU ei
+välttämättä vaadi Soteri-rekisteröintiä lainkaan. Se on
+laitekysymys, ei lupakysymys.
+
+### Ultraääni kuuluu säteilylain piiriin
+
+[STUK S/11/2024](https://www.stuklex.fi/fi/maarays/stuk-s-11-2024),
+Säteilyturvakeskuksen määräys ionisoimattoman säteilyn käytöstä
+kosmeettisessa toimenpiteessä, **8 § Ultraäänelle altistavat
+toimenpiteet.**
+
+Raja-arvon saa ylittää, jos:
+
+| Ehto | Arvo |
+|---|---|
+| Intensiteetti keskiarvoistettuna keilan poikkipinta-alan ja altistusajan yli | ≤ 3 W/cm² |
+| Paikallinen huippuarvo keskiarvoistettuna altistusajalla | ≤ 24 W/cm² |
+| **Tai vaihtoehtoisesti:** terminen indeksi | < 1,0 |
+| **ja** mekaaninen indeksi | < 0,7 |
+| Silmän lähellä: intensiteetti | ≤ 0,05 W/cm² (TI ≤ 0,7, MI ≤ 0,2) |
+
+Lisäksi: altistusta ei kohdisteta samalle alueelle tarpeettoman
+pitkäksi ajaksi, ja raskaus on huomioitava vasta-aiheissa.
+
+### Sama pykälä koskee nimenomaan kauneushoitolaa
+
+**Säteilylaki 859/2018, 162 § 1 mom** ([Finlex](https://www.finlex.fi/fi/lainsaadanto/2018/859)):
+
+> *"Kosmeettisessa tai muussa siihen verrattavassa toimenpiteessä,
+> joka suoritetaan **muualla kuin** potilaan asemasta ja oikeuksista
+> annetussa laissa tarkoitetussa **terveydenhuollon
+> toimintayksikössä**, altistus saa olla raja-arvoa suurempi, jos
+> muiden 161 §:ssä säädettyjen vaatimusten täyttyminen voidaan muuten
+> varmistaa."*
+
+Pykälä on siis kirjoitettu juuri sitä tilannetta varten että
+toimenpide tehdään **muualla kuin** terveydenhuollon yksikössä.
+Kauneushoitola saa tehdä HIFU-hoitoa, kunhan laite pysyy 8 §:n
+rajoissa.
+
+### Toiminnanharjoittajan velvoitteet (3 ja 4 §)
+
+- **Altistus on määritettävä luotettavalla menetelmällä ennen laitteen
+  käyttöönottoa.** Ei siis valmistajan lupaus vaan oma määritys.
+- **Vasta-aiheet on määriteltävä kirjallisesti ennen käyttöönottoa** ja
+  kerrottava asiakkaalle ennen toimenpidettä.
+- Laitteelle on oltava kirjalliset ohjeet joita noudattamalla toiminta
+  on 5–8 §:n mukaista.
+
+Sama rakenne kuin LED-laitteen kohdalla, eli pohja on jo olemassa.
+
+### Ratkaiseva kysymys on laite, ei lupa
+
+HIFU tarkoittaa fokusoitua ultraääntä, ja fokuksessa intensiteetti on
+tarkoituksella korkea. **Kysymys on siitä täyttääkö jokin markkinoilla
+oleva laite 8 §:n rajat.** Hoitolatukun mukaan STUKin arvion mukaan
+kaikki käytössä olleet valoimpulssilaitteet ylittivät raja-arvot;
+HIFUsta vastaavaa arviota ei löytynyt.
+
+**Kysymys jokaiselle HIFU-myyjälle:**
+
+1. Mikä on laitteen terminen indeksi (TI) ja mekaaninen indeksi (MI)?
+2. Mikä on intensiteetti keilan tehollisella poikkipinta-alalla ja
+   paikallinen huippuarvo?
+3. Täyttääkö laite STUK S/11/2024 8 §:n vaatimukset kosmeettisessa
+   käytössä kauneushoitolassa?
+
+Jos myyjä ei osaa vastata numeroilla, vastaus on ei.
+
+### ⚠ Mitä EI varmistunut
+
+**HIFUa ei mainita LVV:n Soteri-palvelualaohjeessa.** Ohje 15.4.2026,
+kohta "Esteettisessä tarkoituksessa annettavat hoidot D2" luettelee
+*"muun muassa botuliinitoksiinihoidot sekä PRP-plasmahoidot ja
+esteettisessä tarkoituksessa annettavat luokan 4 laserhoidot"*.
+Luettelo on avoin ("muun muassa"), eikä HIFU ole siinä.
+
+Väite että HIFU vaatisi nimetyn vastuulääkärin ja
+terveydenhuollon toimintayksikön löytyi vain klinikoiden omilta
+sivuilta ja alan toimittajan blogista, **ei viranomaislähteestä.**
+Sitä ei pidä esittää varmana.
+
+### Ero botuliinihoitoon
+
+| | Botuliini | HIFU |
+|---|---|---|
+| Peruste | Lääkelaki, lääkemääräys | Säteilylaki, laitteen raja-arvot |
+| Lääkäri | Pakollinen, myös paikalla | Ei tullut vastaan viranomaislähteessä |
+| Soteri | Pakollinen ennen aloitusta | Ei todennettu vaatimukseksi |
+| Este | Lääkärin läsnäolo ja sen hinta | Täyttääkö laite 8 §:n rajat |
+
+**Nämä ovat kaksi eri asiaa eikä niitä pidä niputtaa.** Aiempi
+merkintä esitti botoxin "halvimpana ovena" laitehoitoihin. Jos HIFU ei
+vaadi rekisteröintiä, ovea ei tarvita.
+
+### HIFU-laitekartoitus 5.9.2026
+
+**Yksikään laite ei julkaise niitä lukuja joilla vaatimustenmukaisuuden
+voisi todeta.**
+
+| Laite | Maahantuoja | Julkaistut tekniset arvot |
+|---|---|---|
+| Cube HIFU | Suomen Hoitolatukku | CE-merkintä. Ei W/cm², ei TI, ei MI |
+| Caretech HIFU 7D / 7D++ | Cosmedy Oy | Ei löytynyt |
+| AAC HIFU | aachifu.com | Ei tarkistettu |
+
+Cube HIFUn tuotesivu kuvaa kohteeksi **SMAS-kudoksen** ja
+vaikutusmekanismiksi kollageenin ja elastiinin tuotannon
+aktivoinnin. Numeroita ei ole.
+
+### Ratkaiseva havainto tulee myyjältä itseltään
+
+Suomen Hoitolatukku **myy Cube HIFUa** ja kirjoittaa samalla omassa
+oppaassaan:
+
+> *"Todellisen rekisteröintiaallon aiheutti 15.12.2023 päättynyt
+> säteilyturvalainsäädännön siirtymäaika, jonka seurauksena kaikkien
+> markkinoilla olevien ammattimaisten IPL- ja HIFU -laitteiden käyttö
+> käytännössä kiellettiin perinteisessä kauneushoitolassa."*
+
+**Lähdekritiikki.** Hoitolatukku myy sekä laitteita että
+Soteri-rekisteröinnin konsultointia, joten "sinun pitää
+rekisteröityä" on heidän intressissään. Mutta väite siitä että
+laitteet ylittävät raja-arvot toimii **heidän omaa laitemyyntiään
+vastaan** kauneushoitoloille. Siksi juuri se osa on uskottava.
+
+⚠ **Oma päättely, ei lähde:** HIFUn vaikutusmekanismi on
+SMAS-kudoksen lämmittäminen koagulaatiopisteiksi. Terminen indeksi
+alle 1,0 tarkoittaa käytännössä merkityksetöntä lämpenemistä. Laite
+joka mahtuisi 8 §:n rajoihin ei siis tekisi sitä mitä HIFUlla
+myydään. **Vaatimustenmukaisuus ja teho sulkevat toisensa pois.**
+Tätä ei ole missään lähteessä eikä sitä saa esittää faktana.
+
+### Johtopäätös
+
+Sopivaa laitetta ei löytynyt eikä sellaista todennäköisesti ole.
+Kaksi reittiä jää:
+
+1. **Kysy suoraan STUKilta** onko yhtäkään HIFU-laitetta jolla
+   voi toimia säteilylain 162 §:n nojalla kauneushoitolassa. Tämä
+   on nopea puhelinsoitto ja se sulkee kysymyksen.
+2. **Rekisteröidy terveydenhuollon toimintayksiköksi.** Silloin
+   162 § ei sovellu, koska se koskee nimenomaan toimintaa
+   *muualla kuin* terveydenhuollon yksikössä.
+
+**Sivuhuomio: radiotaajuusmikroneulaus on eri pykälä.** Se kuuluu
+7 §:n alaan (sähkömagneettiset kentät, SAR-rajat), ei 8 §:n
+ultraääneen. Se on myös lähempänä sitä mitä studiolla jo tehdään,
+koska se rikkoo ihon ja perustuu samaan korjausvasteeseen kuin
+mikroneulaus. Veera Niskasella on Sylfirm X. **Ei selvitetty, ei
+ehdotettu, kirjattu vain koska tuli vastaan.**
+
+### HIFU-laitteet joilla on näyttöä (5.9.2026)
+
+Käyttäjä pyysi aidosti toimivia laitteita, EU-alue riittää. **Nämä ovat
+kaikki laitteita joilla toimiminen edellyttää terveydenhuollon
+toimintayksikköä**, koska teho on juuri se mikä ei mahdu 8 §:n
+rajoihin.
+
+### Näytön rakenne: MFU-V ei ole sama asia kuin HIFU
+
+Ratkaiseva havainto. Alan vahvin näyttö koskee **MFU-V:tä**
+(microfocused ultrasound with visualization), joka on Ultherapyn
+tekniikka: laitteessa on reaaliaikainen ultraäänikuvaus, jolla
+hoitaja näkee minkä kudoskerroksen kohdalla on.
+
+**Geneeriset HIFU-laitteet nojaavat tähän näyttöön ilman että se
+koskee niitä.** Suoria vertailututkimuksia Ultherapyn ja
+korealaisten laitteiden välillä ei ole julkaistu.
+
+### Päälähde
+
+**Amiri M ym. Microfocused Ultrasound With Visualization (MFU-V)
+Effectiveness and Safety: A Systematic Review and Meta-Analysis.**
+*Aesthetic Surgery Journal.* 2025;45(3):NP86–NP94.
+[doi.org/10.1093/asj/sjae228](https://doi.org/10.1093/asj/sjae228)
+
+4 019 viitteestä mukaan 42 tutkimusta.
+
+| Tulos | Arvo |
+|---|---|
+| Arvioijan toteama parannus | 89 % (95 % LV 81–94, n = 411) |
+| Potilaan toteama parannus | 84 % (73–91, n = 312) |
+| Tyytyväisyys | 84 % (61–94, n = 326) |
+| **Tyytyväisyys kun "neutraali" oli vastausvaihtoehtona** | **62 %** (37–82, n = 172) |
+| Kipu | 4,85 / 10 |
+
+**Tekijöiden oma varaus:** *"the potential misclassification of
+neutral responses as positive may result in an overestimation of the
+treatment's effectiveness"* ja *"These findings highlight the need for
+well-designed trials"*.
+
+**Merkittävin rajoitus:** kaikki meta-analyysit tehtiin **pre/post
+-aineistosta ilman verrokkiryhmää.** Satunnaistetuistakin
+tutkimuksista poimittiin vain MFU-V-haara.
+
+Sama kuvio kuin kollageenilisissä yleispilarissa: kun
+vastausvaihtoehto muuttuu, luku putoaa 84:stä 62:een. **Tämä on hyvä
+esimerkki artikkeliaiheeksi.**
+
+### Laitteet näytön mukaan järjestettynä
+
+| Laite | Valmistaja | Näyttö |
+|---|---|---|
+| **Ultherapy / Ultherapy PRIME** | Merz Aesthetics (Saksa) | MFU-V, meta-analyysin 42 tutkimusta koskevat tätä tekniikkaa. Kuvantaminen. PRIME julkaistiin EMEA-alueella IMCAS 2025:ssä |
+| **Ultraformer MPT / MPT PLUS** | Classys (Korea) | Rekisteröityjä satunnaistettuja tutkimuksia meneillään: NCT06724510 (kulmien kohotus), NCT07229430 (leuanalus ja kaula) |
+| Ultraformer III | Classys | Kolme julkaistua tutkimusta |
+| Ultracel Q+ | Jeisys (Korea) | Löytyi vain valmistajan oma aineisto, ei vertaisarvioitua |
+| Cube HIFU, Caretech 7D ym. | eri | Ei löytynyt julkaistua näyttöä |
+
+**Merz on saksalainen**, joten Ultherapy on EU-valmistajan laite.
+
+### Ostotarkistuslista
+
+1. **MDR-sertifikaatti ja ilmoitetun laitoksen numero**, ei pelkkä
+   "CE-merkitty". CE-merkintä yksin ei kerro mitään.
+2. **Mitkä julkaistut tutkimukset koskevat juuri tätä mallia?** Ei
+   "HIFU-tutkimuksia" vaan tämän laitteen tutkimuksia.
+3. **Kartuskojen eli transducerien hinta ja laukausmäärä.** Tämä on
+   todellinen käyttökustannus, ei laitteen hankintahinta. Ei
+   selvitetty.
+4. TI, MI ja intensiteetit (jos kauneushoitolareitti olisi vielä
+   auki, mutta näillä laitteilla se ei ole).
+
+### Suomen maahantuoja ja kustannukset (selvitetty 5.9.2026)
+
+Käyttäjä huomautti perustellusti että jätin nämä selvittämättä sen
+sijaan että olisin kokeillut. Kokeilin.
+
+**Melon Oy, Hatanpään valtatie 48, 33900 Tampere.
+Puh. 010 423 7222, melon@melon.fi.**
+
+Melon on **Authorised Merz Aesthetics Distributor in Finland** ja
+edustaa neljää Merzin tuotetta: **Ultherapy, Bocouture
+(botuliinitoksiini), Belotero ja Radiesse.** Lisäksi valikoimassa
+**Dermalux LED** ja **InnoPen-mikroneulaus**.
+
+Sama toimittaja kattaa siis lähes kaiken mistä tässä on puhuttu.
+
+**Merzin Suomen-sivusto ultherapy.fi on pois käytöstä** (muokattu
+9.2.2026), joten tieto voi olla vanhentunutta. Melonin oma sivusto on
+merkitty © 2008–2021. **Varmista soittamalla.**
+
+#### Maahantuojan oma linjaus vahvistaa aiemman päättelyn
+
+Melonin Ultherapy-sivu sanoo suoraan:
+
+> *"Suomessa laite on käytössä vain terveydenhuollon
+> toimintaympäristöissä, ja laitteen käyttäjät ovat aina
+> erikoislääkäreitä (mm. plastiikkakirurgeja) tai terveydenhuollon
+> ammattihenkilöitä."*
+
+**Ultherapya ei siis myydä kauneushoitolaan.** Tämä ei ole tulkinta
+vaan maahantuojan oma kuvaus.
+
+Sivulla myös nimetään kopio-ongelma: *"markkinoille on tullut viime
+vuosina myös paljon laitteen kopioita, joita usein kutsutaan
+'HIFU-laitteiksi'. Suuri osa tällaisista laitteista tulee Kiinasta,
+eikä niillä ole lääketieteellistä tutkimustaustaa tai todisteita
+turvallisuudesta."* ⚠ Tämä on Ultherapyn maahantuojan markkinointia,
+mutta se osuu yhteen sen kanssa mitä löysin itsenäisesti: Cube HIFUlle
+ja Caretechille ei löytynyt julkaistua näyttöä.
+
+**Valtuutetut Ultherapy-hoitopaikat Suomessa:**
+`locator.ultherapy.com/finland`. Sivu ei auennut, tarkista itse.
+
+#### Kustannusrakenne
+
+⚠ **Lähdekritiikki: suuri osa hintatiedoista on kopiolaitteita myyvien
+kiinalaisvalmistajien sivuilta**, jotka kirjoittavat "Ultherapy
+machine cost" -sisältöä myydäkseen omia klooneja. Luvut ovat
+suuntaa-antavia eikä niitä pidä käyttää päätöksentekoon.
+
+| | Ultherapy | Ultraformer MPT |
+|---|---|---|
+| Laitteen hinta | ~80 000 USD (yksi mainittu esimerkki) | 50 000–75 000 USD |
+| Kartuska | **Kertakäyttöinen**, 500–1 000 USD | 20 000–62 000 laukausta |
+| Laukauksia kartuskassa | 300–1 000 | ks. yllä |
+| Hoidon hinta asiakkaalle | 1 000–5 000 USD | vaihtelee |
+
+**Tässä on koko ero.** Ultherapyn transduceri on kertakäyttöinen ja
+maksaa satoja euroja per hoito. Ultraformerin kartuska kestää
+kymmeniä tuhansia laukauksia. Se selittää miksi korealaiset laitteet
+hallitsevat markkinaa ja miksi Ultherapy-hoito maksaa asiakkaalle
+moninkertaisesti.
+
+**Kartuskan hinta on siis se luku joka ratkaisee kannattavuuden, ei
+laitteen hankintahinta.**
+
+#### Yhä selvittämättä
+
+Laitekohtainen MDR-sertifiointi ja ilmoitetun laitoksen numero.
+EUDAMED-tietokannasta ne löytyisivät, mutta hakua ei tehty.
+Todelliset Suomen hinnat saa vain Melonilta.
+
+---
+
+## 5.9.2026 — Ihoanalyysilaitteet
+
+Käyttäjän kaksi reunaehtoa: **koppilaite johon asiakas laittaa
+kasvot** (käsikäyttöisistä jää kotikutoisuuden mielikuva) ja
+**mitattava niitä asioita joita studiolla voidaan hoitaa.**
+
+Ensimmäinen ehto sulkee pois Courage + Khazakan anturit ja
+Antera 3D:n. Jäljelle jää neljä koppilaitetta.
+
+### Mitä studio hoitaa ja mikä siitä on koppilaitteella mitattavissa
+
+| Studion kohde | Mitattavissa | Millä |
+|---|---|---|
+| Pigmentti, UV-läiskät | Kyllä | UV Spots, Brown Spots / UV-tila |
+| Tulehduksen jälkeiset tummumat | Kyllä | Brown Spots, RBX |
+| Punoitus, ruusufinni, reaktiivisuus | Kyllä | Red Areas, RBX, polarisoitu |
+| Akne | Osittain | Porfyriinit UV-fluoresenssilla |
+| Juonteet ja ihon rakenne | Kyllä | Wrinkles, Texture |
+| Laajentuneet huokoset | Kyllä | Pores |
+| **Suojakerros ja TEWL** | **Ei** | **Ei millään kameralla** |
+
+**Viisi kuudesta.** Se mikä jää ulkopuolelle on juuri se suure jonka
+yleispilari nimeää ainoaksi suoraan mitattavaksi, ja se on ProXN:n
+koko vaikutusmekanismi.
+
+### Vaihtoehdot koppimuodossa
+
+| Laite | Valmistaja | Huomiot |
+|---|---|---|
+| **VISIA / VISIA 3D** | Canfield (USA) | 8 piirrettä, suurin vertailutietokanta. **Maahantuoja Melon Oy tiedossa.** Myyntiominaisuudet pois päältä |
+| **VISIA-CR Gen 5** | Canfield | Tutkimusversio. 7 valaistustilaa mukaan lukien kapeakaistainen sininen absorptio ja fluoresenssi. **Tämä on se versio joka esiintyy kliinisissä tutkimuksissa** |
+| **Observ 520x** | Sylton / Innofaith (Alankomaat) | 10 valaistustilaa. Pienempi ja edullisempi. Ei laske ihoikää |
+| **Reveal Imager** | Canfield | Pienin ja halvin, vähiten piirteitä |
+
+**Hintahaarukka 25 000–40 000 USD** koppilaitteille, 3 000 USD
+sisääntulotason antureille. ⚠ Luku on ohjelmistoyhtiön blogista joka
+myy vaihtoehtoa näille, eli lähde on kiinnostunut siitä että luku
+näyttää suurelta.
+
+### ⚠ Tutkimus jota EI pidä käyttää
+
+Löysin *Scientific Reports* 2024 -tutkimuksen
+([doi.org/10.1038/s41598-024-63274-7](https://doi.org/10.1038/s41598-024-63274-7)),
+jossa 60 osallistujalla verrattiin Observ 520x:ää VISIAan
+ihotautilääkärien MASI-pisteytystä vasten. Tulos: **Observ korreloi
+kliinisen arvion kanssa (r = 0,4314, p < 0,01), VISIA ei
+merkitsevästi.**
+
+Sitten sidonnaisuudet:
+
+> *"WA is the employer of Sylton, Innofaith beauty science,
+> manufacturer of OBSERV 520 x."*
+
+**Observ 520x:n valmistajan palveluksessa oleva henkilö on
+kirjoittajana tutkimuksessa joka toteaa Observ 520x:n paremmaksi.**
+
+Tämä on täsmälleen sama kuvio kuin kollageeni-meta-analyysi
+yleispilarissa. Tutkimusta ei voi käyttää perusteena laitevalinnalle,
+ja se on hyvä esimerkki artikkeliin.
+
+### Suositus
+
+**Käytännön valinta on VISIA Melon Oy:n kautta**, koska se on ainoa
+jolla on tiedossa oleva Suomen maahantuoja, se kattaa viisi kuudesta
+kohteesta ja myyntiominaisuudet voi jättää käyttämättä. VISIA-CR on
+uskottavampi tutkimusmielessä mutta se on tutkimuslaite.
+
+**Suojakerroksen mittaus ei ratkea koppilaitteella.** Jos se halutaan,
+se vaatii Tewameterin rinnalle.
+
+**Vastaus kotikutoisuushuoleen:** anturia ei tarvitse näyttää
+asiakkaalle konsultaationa. Koppi on se minkä asiakas näkee.
+Tewameter on työväline jota käytetään hoidon aikana, ei
+myyntitilanteessa. Ne eivät ole vaihtoehtoja toisilleen vaan eri
+tehtävissä.
+
+**Ei toimenpiteitä. Ajoitus on sama kuin VISIAlla: ei nyt.**
+
+### Korjaus: TEWL on mitattavissa, ja valmistaja on suomalainen
+
+Käyttäjä kysyi olenko varma ettei TEWL-mittausta löydy mistään. **Olin
+oikeassa siitä ettei kamera mittaa sitä, mutta väärässä siinä että
+jätin asian siihen.**
+
+**Delfin Technologies, Kuopio.** Osa Boreo Oyj:tä. Valmistaa
+**VapoMeter VX** -laitteen, suljetun kammion TEWL-mittarin, jota on
+käytetty useissa sadoissa julkaisuissa ja joka on validoitu avoimen
+kammion Tewameteria vastaan.
+
+**Ja hinnat ovat julkisia**, ainoana kaikista tämän päivän laitteista.
+Verkkokauppa `store.delfintech.com`, hinnat euroina Suomeen:
+
+| Laite | Mittaa | Hinta |
+|---|---|---|
+| **VapoMeter VX** | TEWL, suojakerroksen toiminta | **alk. 7 900 €** |
+| **SkinColorCatch** | Melaniini- ja erytemaindeksi erikseen, ITA-aste | **3 990 €** |
+| **SkinFibroMeter** | Kudoksen kiinteys, fibroottiset muutokset | **4 880 €** |
+| SebumScale | Talineritys absoluuttisena, µg/cm² | 4 010 € |
+| MoistureMeterSC | Pintakosteus | 3 340 € |
+| MoistureMeterEpiD | Syvä kosteus | 3 760 € |
+| ElastiMeter | Kimmoisuus | 4 880 € |
+| SkinGlossMeter | Kiilto | 5 170 € |
+| DMC-ohjelmisto | Langaton tiedonsiirto, CSV-vienti | 995 € |
+| Kalibrointipalvelu | | alk. 580 € |
+
+VapoMeterissa on **käyttäjän itse vaihdettava kalibroitu anturi
+(890 €)**, eli laitetta ei tarvitse lähettää kalibrointiin.
+
+### Kolme laitetta jotka osuvat studion kohteisiin
+
+**VapoMeter** mittaa suojakerroksen, eli ProXN:n koko
+vaikutusmekanismin ja sen suureen jonka yleispilari nimeää ainoaksi
+suoraan mitattavaksi.
+
+**SkinColorCatch** mittaa melaniinin ja punoituksen **toisistaan
+riippumattomina indekseinä**. Ne ovat studion kaksi keskeisintä
+kohdetta: pigmentti ja ruusufinni. Kamera antaa näistä
+kuva-analyysin, tämä antaa mittausarvon.
+
+**SkinFibroMeter** mittaa kudoksen kiinteyttä ja kovettumia. **Se on
+aknearven objektiivinen mittari**, eli mikroneulauksen päähoitokohde.
+Tätä ei mittaa yksikään kamera.
+
+### Kosketukseton TEWL: ei ole olemassa tuotteena
+
+Tutkimuksessa on lähi-infrapuna- ja SWIR-hyperspektrikuvantamista
+joka mittaa kudoksen vesipitoisuutta kosketuksetta. **Se on eri suure
+kuin TEWL:** vesipitoisuus on tila, TEWL on haihtumisnopeus eli
+vuo, ja vuon mittaaminen edellyttää kammiota iholla. Menetelmät ovat
+lisäksi tutkimusvaiheessa, eivät kaupallisia laitteita.
+
+### Mitä tästä seuraa
+
+Vertailu on nyt konkreettinen:
+
+| | Hinta | Mittaa |
+|---|---|---|
+| Koppi (VISIA-luokka) | 25 000–40 000 USD | Viisi kohdetta kuva-analyysinä |
+| VapoMeter + SkinColorCatch | **n. 12 000 €** | Suojakerros ja pigmentti/punoitus mittausarvoina |
+
+Koppi on kalliimpi ja mittaa pehmeämmin. Delfinin laitteet ovat
+halvempia, mittaavat kovemmin, ja valmistaja on Kuopiossa eli
+tuki ja kalibrointi ovat kotimaassa eikä maahantuontia tarvita.
+
+**Käyttäjän kotikutoisuushuoli on silti pätevä eikä sitä pidä
+sivuuttaa.** Ratkaisu ei ole valita toinen vaan käyttää niitä eri
+tehtävissä: koppi on se minkä asiakas näkee, anturi on työväline.
+Jos vain toiseen on varaa, kysymys on siitä halutaanko näyttää vai
+mitata.
+
+---
+
+## 5.9.2026 — Analyysilaite: yhteenveto ja avoimet kohdat
+
+**Ei päätöstä. Tähän palataan.** Käyttäjän reunaehdot muuttuivat
+keskustelun aikana kolmesti, ja lopputilanne on alla.
+
+### Reunaehdot
+
+1. **Yksi laite.** Useampaa ei oteta.
+2. **Käsikäyttöinen kelpaa** jos ohjelmisto tietokoneelle tai
+   tabletille on kunnollinen. Aiempi vaatimus koppilaitteesta
+   purettiin.
+3. **Mitattava sitä mitä studiolla hoidetaan.**
+4. Viimeisin painotus: **akne, ja asiakkaalle jää kuva.**
+
+### Aknessa on neljä mitattavaa asiaa ja ne vaativat eri fysiikkaa
+
+| Mitattava | Menetelmä | Mikä laite |
+|---|---|---|
+| **Porfyriinit** (*C. acnes*, koproporfyriini III) | UVA / 405 nm fluoresenssi | VISIA, Observ 520x |
+| Tulehdus ja punoitus | Monikanava tai polarisaatio | Kaikki |
+| Tulehduksen jälkeinen pigmentoituminen | Melaniinikanava | Kaikki |
+| **Aknearvet, syvyys ja tilavuus** | Aito 3D | **Vain Antera 3D** |
+| Talineritys | Kosketusanturi | SebumScale, ei kuvaa |
+| **Suojakerros, TEWL** | Suljettu kammio | **Vain VapoMeter, ei kuvaa** |
+
+UVRF eli ultraviolettipunainen fluoresenssi on **korvikemuuttuja**
+jota käytetään aknehoitojen tutkimuksissa. Fluoresoivien pisteiden
+jakauma korreloi komedoiden määrään. **Se ei mittaa aknen
+vaikeusastetta vaan bakteerin tuottamaa yhdistettä.** Jos laitteesta
+puhutaan asiakkaalle tai sivustolla, tämä varaus kuuluu mukaan.
+
+### Jako osuu studion hoitopolkuun
+
+| Vaihe | Hoito | Laite |
+|---|---|---|
+| Aktiivinen akne | ProXN Acne Rescue | UV-fluoresenssi: VISIA tai Observ |
+| Arpivaihe | Mikroneulaus | 3D: Antera |
+| Suojakerros | ProXN rauhoitushoito | VapoMeter |
+
+**Yksikään laite ei kata koko polkua.** Se on valinnan ydin.
+
+### Ehdokkaat
+
+| Laite | Valmistaja | Puolesta | Vastaan |
+|---|---|---|---|
+| **VISIA / VISIA-CR** | Canfield (USA) | 8 piirrettä ml. porfyriinit, vertailu ikäryhmään, **maahantuoja Melon Oy Tampere** | Myyntiominaisuudet: TruSkin Age, aging simulation, tuotesuosituskirjasto. Kallein |
+| **Observ 520x** | Sylton / Innofaith (NL) | UV-fluoresenssi, 10 valaistustilaa, halvempi, **ei keksi ihoikää** | Näyttää mutta ei laske |
+| **Antera 3D** | Miravex (Irlanti) | Ainoa joka mittaa arven tilavuuden. 150+ vertaisarvioitua tutkimusta. Ohjelmisto ratkaisee toistettavuuden | **Ei UV-herätettä, ei porfyriinejä.** Ei Suomen maahantuojaa |
+| **VapoMeter VX** | Delfin (Kuopio) | 7 900 €, **julkinen hinta**, kotimainen tuki, ainoa joka tuottaa julkaisukelpoista dataa | Yksi luku, ei kuvaa, ei liity akneen |
+
+### ⚠ Hintatieto on epäluotettavaa
+
+**"25 000–40 000 USD" on Perfect Corpin blogista.** Perfect Corp myy
+tekoälypohjaista ihoanalyysiohjelmistoa vaihtoehtona näille
+laitteille, eli lähde hyötyy siitä että laitteet näyttävät kalliilta.
+Luku on lisäksi haarukka joka niputtaa kolme eri laitetta.
+
+**Ultherapyn "80 000 USD" oli kiinalaisen kopiovalmistajan blogista.**
+
+**Menetelmävirhe, kirjattu ettei toistu:** merkitsin varauksen
+muistiinpanoihin kun löysin luvun, mutta toistin sen sitten kahdessa
+viestissä ilman varausta, jolloin se alkoi kuulostaa vahvistetulta.
+**Kun lähde on merkitty epäluotettavaksi, varaus kulkee luvun mukana
+joka kerta.**
+
+Ainoat julkiset ja luotettavat hinnat koko keskustelussa ovat
+Delfinin verkkokaupasta.
+
+### Kysymykset Melonille (VISIA)
+
+1. Malli: VISIA 3D vai VISIA-CR
+2. Kokoonpano: Basic, Desktop vai Deluxe
+3. Mitä ensimmäiseen vuoteen sisältyy (Canfield Care tulee esitteen
+   mukaan vuodeksi mukana)
+4. **Palvelusopimuksen hinta toisesta vuodesta eteenpäin** — tämä jää
+   yleensä kysymättä ja määrää todellisen kustannuksen
+5. Lisenssi- tai käyttökertamaksut, lisätyöasemien hinta
+6. **Missä ViewMyConsult-portaalin data sijaitsee** — kasvokuva ja
+   ihoanalyysi ovat henkilötietoa, ja EU:n ulkopuolinen palvelin on
+   oma selvityksensä
+
+### Yhteystiedot
+
+| | |
+|---|---|
+| Melon Oy (VISIA, Merz) | Hatanpään valtatie 48, 33900 Tampere. 010 423 7222, melon@melon.fi |
+| Delfin Technologies | Kuopio, osa Boreo Oyj:tä. store.delfintech.com |
+| Miravex (Antera 3D) | 11 St. Stephen's Green, Dublin. +353 1 524 1434 |
+| Sylton (Observ 520x) | Alankomaat |
+
+### Vielä selvittämättä
+
+Observ 520x:n hinta ja maahantuoja Suomessa. Anteran hinta.
+Laitekohtainen MDR-status. Onko VISIA-CR ylipäätään myynnissä
+esteettiselle puolelle vai vain tutkimuskäyttöön.
