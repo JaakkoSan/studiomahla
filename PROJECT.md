@@ -700,6 +700,29 @@ joka puolustelee."** Rakenne kuulostaa tasapuoliselta mutta on
 puolustusasento: se tuo lukijan mieleen kilpailuasetelman jota hän ei
 ollut ajatellut.
 
+**Laajennus 13.9.2026: nimeämätön vaihtoehto.** Sama perhe kuin
+puolusteleva vertailu. Teksti rajaa hoidon tehoa viittaamalla
+johonkin muuhun, mutta ei kerro mihin.
+
+| EI | KYLLÄ |
+|---|---|
+| "Syvät rypyt vaativat vahvempia menetelmiä." | *(poista, tai nimeä menetelmä)* |
+| "…toimii tukihoitona muiden menetelmien rinnalla" | *(poista, tai nimeä ne)* |
+| "vaatii toisenlaista lähestymistapaa", "tähän on parempia keinoja" | *(poista)* |
+
+Käyttäjä 13.9.2026: **"Turha mainita 'muita menetelmiä' ilman että
+kerrotaan mitä ne on."**
+
+Rakenteessa on kaksi vikaa. Lukija jää tyhjän päälle: hän saa tietää
+ettei tämä riitä muttei mitä tilalle. Ja teksti ohjaa hänet pois
+nimeämättömään suuntaan, eli toimii kilpailijan hyväksi
+tarkentamatta kenen.
+
+Rajaus itsessään on kunnossa ja usein tarpeen. Erotus on siinä
+kerrotaanko mihin hoito tehoaa vai mihin se ei tehoa. Ensimmäinen
+riittää: *"Pinnalliset juonteet reagoivat hoitoon"* rajaa saman asian
+ilman että lukijaa lähetetään minnekään.
+
 **Laajennus 26.8.2026: oletettu yleistieto.** Sama perhe kuin
 puolusteleva vertailu. Teksti asettaa väitteen yleisesti tunnetuksi ja
 kumoaa sen, vaikka lukija ei ole väitettä koskaan kuullut.
@@ -8982,3 +9005,70 @@ grep -n "hidden" tiedosto.html | grep -v aria-hidden
 
 ja jokaiselle löydökselle katso onko elementin luokalla
 `display`-sääntöä.
+
+
+## 13.9.2026 — Ainesosa-allergia pois esitietolomakkeelta
+
+Kontraindikaatiolistan kohta **"Tiedossa oleva allergia
+ihonhoitotuotteiden ainesosille"** on poistettu.
+
+Käyttäjä 13.9.2026: **"tätä ei asiakas käytännössä voi tietää eikä
+voida vaatia vastaamaan."**
+
+Kysymys oli kyllä/ei-pakollinen kuten muutkin kontraindikaatiot, mutta
+se ei ole samaa lajia kuin ne. Raskauden, verenohennuslääkityksen tai
+isotretinoiinin tietää jokainen itsestään. Sen sijaan asiakas ei voi
+tietää onko hän allerginen juuri niille ainesosille joita hoidossa
+käytetään, koska hän ei tiedä mitä niissä on ennen kuin hoito
+suunnitellaan. Pakollinen kysymys pakotti arvaamaan.
+
+**Tieto ei katoa.** Sama asia kerätään yhä kahdella tavalla: vapaa
+`Allergiat`-tekstikenttä ja ProXN-suostumus `consent5`, jossa asiakas
+vahvistaa kertoneensa *tuntemansa* ainesosa-allergiat. Kumpikin kysyy
+sitä mitä asiakas voi tietää. Lisäksi allergiat käydään läpi
+ensikäynnin keskustelussa.
+
+### Toteutus
+
+| Tiedosto | Muutos |
+|---|---|
+| `lomake.html` | Kohta poistettu `KONTRA_ITEMS`-listasta. Lista ohjaa sekä piirron että validoinnin, joten mitään muuta ei tarvinnut muuttaa. Kysymyksiä on nyt 14, ennen 15. |
+| `functions/api/esitiedot.js` | Avain **jätetty** `KONTRA_KEYS`-listaan. |
+| `admin.html` | Nimike ja järjestys **jätetty** ennalleen. |
+
+**Avain jätettiin tarkoituksella API:in ja adminiin.** Ennen
+13.9.2026 tallennetuissa tietueissa kenttä on olemassa, ja jos
+nimike poistettaisiin, vanhat lomakkeet näkyisivät adminissa
+vajaina. Uusia arvoja ei enää synny, koska lomake ei lähetä kenttää.
+
+
+## 13.9.2026 — Nimeämättömät vaihtoehdot pois artikkeleista
+
+Luvun 5 uusi sääntö (nimeämätön vaihtoehto) sovellettiin sivustolle.
+Kuusi lausetta poistettiin tai kirjoitettiin uusiksi.
+
+| Tiedosto | Ennen | Jälkeen |
+|---|---|---|
+| `mikroneulaus-sopiiko-minulle.html` | "Syvät, vahvasti uurtuneet rypyt vaativat vahvempia menetelmiä, ja niiden kohdalla mikroneulaus toimii lähinnä tukihoitona muiden menetelmien rinnalla." | "Syvien, vahvasti uurtuneiden ryppyjen kohdalla vaikutus jää vähäiseksi." |
+| sama | "Mikroneulaus toimii tässä ikävaiheessa parhaiten muiden hoitojen tukena, ei ainoana ratkaisuna." | *(poistettu)* |
+| sama | "Yhdistelmähoito muiden menetelmien kanssa antaa parhaita tuloksia." | *(poistettu)* |
+| sama | "…vaatii yksilöllistä arviointia ja usein yhdistelmähoitoa muiden menetelmien kanssa." | "…vaatii aina yksilöllistä arviointia." |
+| `mita-mikroneulaus-ei-tee.html` | "Mikroneulaus toimii silloin parhaiten muiden menetelmien rinnalla, ei ainoana ratkaisuna." | *(poistettu)* |
+| sama | "Näihin tarkoituksiin on olemassa omat menetelmänsä, eikä mikroneulausta kannata odottaa tekemään samaa työtä." | *(poistettu)* |
+
+**Rajaus säilyi joka kohdassa.** Poistettu osa oli aina se joka
+osoitti nimeämättömään suuntaan, ei se joka kertoi mihin hoito ei
+tehoa. Kahdessa kohdassa rajaus kirjoitettiin uusiksi sen sijaan että
+se olisi poistettu, koska pelkkä poisto olisi vienyt tiedon mukanaan.
+
+**Yksi kohta jätettiin:** `mikroneulaus-sopiiko-minulle.html` rivi 275
+(vitiligo, "yhdistelmähoitona muiden valmisteiden kanssa"). Se ei jätä
+lukijaa tyhjän päälle, koska samassa virkkeessä kerrotaan minne
+mennä: dermatologin arvio ennen aloittamista.
+
+Samalla poistettiin termi **"kultainen ikävaihe"**
+(`mikroneulaus-sopiiko-minulle.html` rivi 178). Tilalle: "Sarja
+kannattaa aloittaa kun juonteet ovat vielä pinnallisia." Muutos
+vastaa samaa linjausta jolla Reels kirjoitettiin uusiksi.
+
+`dateModified` päivitetty molempiin: 2026-09-13.

@@ -1118,6 +1118,10 @@ eivät yksin riko yksivärisyyttä.
 Vaalean toinen etu: Instagramin käyttöliittymä on vaalea, mutta
 ruudukossa vierekkäin tummien kanssa se erottuu ja rytmittää.
 
+**Tilanne 13.9.2026:** viimeisin julkaistu Reels (Ensimmäiset
+juonteet) on tumma, joten **seuraavan kansidian sävy on vaalea**.
+Käyttäjän linjaus.
+
 ### 3.5b Valmiit karusellit
 
 **1. Mitä kliininen mikroneulaus oikeasti tekee iholle? (karuselli)**
@@ -2162,6 +2166,156 @@ kynnys (alle 10) ei täyty eikä täydennystä tehty. Yhteenvetotaulukko
 REELS-IDEAT.md-tiedostossa korjattiin samalla: se ilmoitti 40 ideaa
 eikä sisältänyt luvun 8b lisäalueita.
 
+**16. Syvyyden säätö (Reels)**
+Lähde: `mikroneularulla-vai-kliininen-mikroneulaus.html`, idea 2.3
+Tiedostot: `karusellit/syvyys_01.png` … `_05.png`
+Skripti: `generaattorit/syvyys.py`
+Video: `reels/syvyys.mp4` (27,2 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 7.9.2026. **Julkaisu odottaa.**
+5 diaa, 56 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: ihon paksuus vaihtelee kasvoilla merkittävästi, ja otsa, nenä,
+posket sekä silmänympärys tarvitsevat kaikki eri neulasyvyyden.
+Ammattilaislaite säätää syvyyden 0,25 millimetrin tarkkuudella, rullassa
+syvyys on kiinteä ja sama koko hoitoalueella. Perustelee hintaeron
+konkreettisella teknisellä erolla eikä laatuväitteellä.
+
+**Värijärjestys on vuorotteleva (käyttäjän linjaus 7.9.2026).** Kansi
+kerma, dia 2 vihreä, dia 3 kerma, dia 4 vihreä. Loppudia on aina
+tummanvihreä (`karuselli.py` `dia_loppu`), joten kaksi viimeistä diaa
+ovat molemmat vihreitä eikä täyttä vuorottelua saa viidellä dialla.
+
+Seuraus sommitteluun: rulladia saa nyt brändin vihreän ja kynälaite
+kerman, eli värien merkitys on päinvastainen kuin julkaisussa 3
+(pistoskulma), jossa vihreä merkitsi studion omaa menetelmää. Painotus
+säilyy järjestyksen ja tilan kautta: kynälaite saa kaksi diaa viidestä
+ja viimeisen sanan ennen loppudiaa. Jos värien merkitys halutaan
+takaisin, dioja 2 ja 3 voi vaihtaa keskenään, jolloin vuorottelu
+säilyy mutta kynälaite on vihreällä.
+
+Nostodia noudattaa julkaisun 15 yhteydessä kirjattua rivirajoitusta:
+nosto "Säätö 0,25 millimetrin tarkkuudella." on kolme riviä ja
+vastakkainasettelu jää selitteeseen.
+
+**Kansidian sävy vaalea (käyttäjän valinta 7.9.2026).** Alkuperäinen
+valinta oli keski, joka perustui siihen että edellinen julkaistu Reels
+(punoitus, 1.9.2026) on vaalea. Viikon toinen Reels (ikävaihe) on
+tumma, joten viikon kaksi julkaisua eroavat toisistaan (luku 3.5a).
+
+Jos punoitus-Reels julkaistaan välittömästi tätä ennen, kaksi
+peräkkäistä kantta on kermalla. Punoituksen kansi on valokuva, joten
+ruudukossa ne eivät näytä samalta, mutta julkaisujärjestys kannattaa
+tarkistaa ruudukosta julkaisupäivänä (sama huomio kuin julkaisussa 15).
+
+Kuvateksti sanatarkasti:
+
+```
+Kasvojen iho ei ole yhtä paksua kaikkialla.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa kynämallisella ammattilaislaitteella, jossa neulasyvyys säädetään hoitoalueen mukaan.
+
+Ihon paksuus vaihtelee kasvoilla merkittävästi. Otsassa, nenässä, poskilla ja silmänympärysalueella tarvitaan kaikilla eri syvyys, jotta hoito osuu oikeaan kohtaan ihoa. Ammattilaislaite mahdollistaa syvyyden säädön 0,25 millimetrin tarkkuudella, ja säätö tehdään hoidon aikana alue kerrallaan.
+
+Mikroneularullassa syvyys on kiinteä eikä sitä voi muuttaa eri alueille. Sama syvyys koskee koko hoitoaluetta riippumatta siitä kuinka paksua iho kullakin kohdalla on.
+
+Kliinisissä hoitopäissä on lisäksi erittäin ohuet 32-gauge-neulat. Mitä ohuempi neula, sitä tarkempi pistos ja sitä vähemmän tarpeetonta kudosvauriota. Hoitopää on steriili ja kertakäyttöinen.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa, tunnistaa mahdolliset vasta-aiheet ja mitoittaa hoidon yksilöllisesti.
+
+Lue lisää: https://www.studiomahla.fi/mikroneularulla-vai-kliininen-mikroneulaus.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #micropenevo #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**17. Ensimmäiset juonteet (Reels) — JULKAISTU 13.9.2026**
+Lähde: `mikroneulaus-sopiiko-minulle.html`, idea 4.1
+Tiedostot: `karusellit/ikavaihe_01r.png` … `_06r.png`
+Skripti: `generaattorit/ikavaihe.py`
+Video: `reels/ikavaihe.mp4` (33,4 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu 7.9.2026, kirjoitettu ja tuotettu uudelleen 13.9.2026,
+julkaistu samana päivänä.
+6 diaa, 77 sanaa, kansidian sävy tumma.
+
+**Ensimmäinen julkaisu uudella asettelulla.** Diat renderöidään nyt
+natiivisti 1080 × 1920 kokoon, logo ja osoite ovat jokaisessa diassa,
+sivunumerot on poistettu ja sisältölohko keskitetään pystysuunnassa.
+Katso luku 3.5d.
+
+Ydinajatus: ensimmäiset hienovaraiset juonteet näkyvät tyypillisesti
+30–35 vuoden iässä silmien ympärillä ja otsalla, ja pinnallisessa
+vaiheessa mikroneulaus on tehokas valinta. Kärki vastaa kysymykseen
+"mihin ja milloin".
+
+**Uudelleenkirjoitus 13.9.2026, kaksi käyttäjän huomiota.**
+
+Ensimmäinen: termi "kultainen ikävaihe" pois kokonaan. Se on
+markkinoinnin kieltä eikä kerro lukijalle mitään.
+
+Toinen, ja olennaisempi: aiemmasta versiosta jäi epäselväksi **mihin
+vaivaan** hoito tässä ikävaiheessa aloitetaan. Viisi diaa puhuivat
+ikävaiheesta, kollageenista ja hoitosarjasta, mutta yksikään ei
+sanonut mitä hoidetaan. Lukija sai tietää milloin muttei miksi.
+
+Korjattu rakenne vie juonteista hoitoon: mistä ne johtuvat, missä ne
+näkyvät ensin, miksi pinnallinen vaihe on se jossa mikroneulaus
+toimii, ja milloin sarja aloitetaan jotta juonteet eivät ehdi
+syventyä. Ennaltaehkäisy on mukana viimeisessä kohdassa eikä omana
+väitteenään.
+
+Sama termi esiintyy myös lähdeartikkelissa
+`mikroneulaus-sopiiko-minulle.html` (rivi 178). **Ei korjattu, koska
+ei pyydetty.**
+
+Tässä ei verrata kahta menetelmää, joten sommittelu ei ole
+vastakkainasettelu vaan aikajana. Kermadiat kantavat syyn (mistä
+juonteet johtuvat) ja aloitusajankohdan, vihreät vievät oireesta
+hoitoon.
+
+Kansidian sävy tumma (#3d5247).
+
+> **Seuraavan Reelsin kansidia vaalea (#f5f0e8).** Tämä julkaisu on
+> tumma, joten kaksi peräkkäistä kantta ei saa olla vihreää (luku
+> 3.5a: vaalea on ainoa sävy joka oikeasti rikkoo ruudukon
+> yksivärisyyden). Käyttäjän linjaus 13.9.2026.
+
+Kuvateksti sanatarkasti:
+
+```
+Ensimmäiset juonteet tulevat tyypillisesti 30–35 vuoden iässä.
+
+Teemme mikroneulaushoidot Kotkan Ruonalassa. Ensikäynnillä arvioimme ihon tilanteen ja laadimme hoitosuunnitelman.
+
+Kollageenituotanto alkaa hidastua noin 25 ikävuoden jälkeen, ja muutos tulee näkyväksi tyypillisesti 30–35 vuoden iässä. Ensimmäiset hienovaraiset juonteet näkyvät silmien ympärillä ja otsalla, ja ihon kimmoisuus alkaa heiketä hitaasti.
+
+Pintajuonteet reagoivat mikroneulaukseen hyvin. Ihon napakoituminen tasoittaa juonteita ja palauttaa pintaan kimmoisuutta.
+
+Sarja kannattaa aloittaa kun juonteet ovat vielä pinnallisia ja iho ei ole menettänyt pohjarakennettaan. Kolmen tai kuuden hoidon sarja ja sen jälkeen ylläpito 6–12 kuukauden välein tuottaa parhaita tuloksia tässä ikävaiheessa. Hoitokerrat ajoitetaan noin neljän viikon välein, mikä on linjassa ihon luonnollisen uusiutumissyklin kanssa.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #juonteet #ihonhoito #kollageeni
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (7.9.2026):** ideapankissa oli ennen tätä ajoa 34
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista (2 ja 4) ja eri lähdeartikkeleista. Idea 2.3
+valittiin, koska luvun 2 vastakkainasettelu on ideapankin arvion mukaan
+vahvin sisältöryhmä ja lähdeartikkelia on käytetty viimeksi 17.8.2026.
+Idea 4.1 valittiin, koska studio avataan 7.9.2026 ja kysymys aloitusiästä
+on varaamisen edellä konkreettinen. Jälkihoitoa ja lisäalueita vältettiin,
+koska molemmat olivat esillä viikkoa aiemmin (julkaisut 14 ja 15).
+
+**Ideapankin tila 7.9.2026:** 32 käyttämätöntä ideaa 46:sta, eli luvun
+kynnys (alle 10) ei täyty eikä täydennystä tehty.
+
 **Seuraavat karusellit prioriteettijärjestyksessä**
 
 1. Kenelle mikroneulaus sopii (`mikroneulaus-sopiiko-minulle.html`)
@@ -2283,6 +2437,61 @@ otsikoilta.
 versiota, mutta aknesisältö menee omaan julkaisuunsa. Luku 6.2 rajaa
 terveysväitteitä, ja aknesanamuodot on parempi harkita erikseen kuin
 kiireessä julkistuksen yhteydessä.
+
+### 3.5d Dia-asettelu 13.9.2026 alkaen
+
+**Karusellit jäävät pois.** Käyttäjän linjaus 13.9.2026: *"Karuselleja
+ei ole tulossa jatkossa enää ollenkaan, ne eivät saa näyttöjä.
+Ainoastaan reelsejä ja yksittäisiä kuvia."* Julkaistuja karuselleja ei
+poisteta.
+
+**Diat renderöidään natiivisti siihen kokoon jossa ne julkaistaan.**
+`karuselli.py` osaa kaksi kehystä: `reels` 1080 × 1920 ja `karuselli`
+1080 × 1350 (yksittäiskuvat). `rakenna(diat, kansio, nimi,
+kehys='reels')` tuottaa tiedostot päätteellä `_01r`. `reels.py` ottaa
+9:16 dian sellaisenaan eikä enää skaalaa 4:5 diaa värikehykseen.
+
+Ankkurit on ilmaistu osuuksina sisältökaistasta, joten sama sommittelu
+toistuu kummassakin kehyksessä vaikka kaistan korkeus on eri.
+
+**Turva-alue.** Metan yhtenäistetty Reels/Stories-turva-alue
+(maaliskuu 2026): ylhäältä 270 px, alhaalta **670 px**, sivuilta 64 px
+1080 × 1920 kehyksestä. Lisäksi syötteessä Reels näytetään 4:5
+rajauksena kehyksen keskeltä eli riveiltä 285–1635, joten
+tosiasiallinen yläraja on 285. Reels-kehyksen sisältökaista on
+**310–1235**, mikä sisältää pelivaran molempiin.
+
+Alapuolella oleva 685 px on käyttöliittymän alla. Se ei ole
+käytettävissä tekstille millään asettelulla.
+
+**Brändi jokaisessa diassa.**
+
+| Elementti | Paikka |
+|---|---|
+| Logo tekstineen | vasen ylänurkka, merkki 88 px |
+| `STUDIOMAHLA.FI` | vasen alareuna, viiva yläpuolella |
+| Sivunumero | poistettu |
+
+Mittasuhteet logolle on otettu sivuston lockupista (`style.css
+.brand`): merkki, 14/30 sen leveydestä väliä, nimi kahdella rivillä,
+kirjainväli 0,22 em. Kaikki skaalautuu merkin korkeudesta.
+
+**Kuvadia on vain kansidia.** Käyttäjän linjaus 13.9.2026: kuvan
+päälle ei tule mitään, ei tekstiä, palkkia eikä häivytystä. Jatkodiat
+ovat pelkkää tekstiä. Kuvadiassa osoite siirtyy ylariville logon
+viereen, jolloin alabanneriin jää pelkkä otsikko ja se kutistuu 470
+pikselistä 288:aan. Kuva-alue kasvaa vastaavasti noin 1080 × 680:stä
+1080 × 860:een. Tämä on ainoa diatyyppi jossa osoite ei ole alhaalla.
+
+**Sisältölohko keskitetään** pystysuunnassa logorivin ja osoiterivin
+väliin. Lohkon korkeus lasketaan riveistä, joten keskitys toimii yhtä
+lailla yksirivisellä otsikolla ja nelirivisellä leipätekstillä.
+
+**Ylivuototarkistus.** Jos lohko ei mahdu, `_keskita` nostaa
+ValueErrorin eikä piirrä. Ilman tarkistusta teksti valui osoitteen
+päälle, ja se olisi mennyt läpi huomaamatta. Reels-kehyksessä tilaa on
+665 px: kolmirivinen nosto (465 px) ja kaksirivinen selite (130 px)
+mahtuvat, nelirivinen nosto ei.
 
 ### 3.6 Sisällön uudelleenkäyttö
 

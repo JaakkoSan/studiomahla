@@ -110,7 +110,7 @@ Diat:
 Viisto pistos tuottaa repeämän, kohtisuora tuottaa tarkan mikrokanavan.
 Ero on kudosvauriossa suhteessa saavutettuun hyötyyn.
 
-### 2.3 Syvyyden säätö ★★★
+### 2.3 Syvyyden säätö ★★★ — KÄYTETTY 7.9.2026
 **Lähde:** Rulla vai kliininen
 **Kesto:** n. 16 s
 
@@ -145,7 +145,7 @@ ratkaisemiseksi 2000-luvun puolivälissä.
 
 Nämä toimivat hyvin koska ne ovat konkreettisia ja moni ei tiedä niitä.
 
-### 3.1 Aktiivinen akne ei sovi ★★★
+### 3.1 Aktiivinen akne ei sovi ★★★ — KÄYTETTY 24.8.2026
 **Lähde:** Kenelle sopii
 **Kesto:** n. 15 s
 
@@ -193,13 +193,18 @@ viikkoa kunnes punoitus ja kuoriutuminen on rauhoittunut.
 
 ## 4. Ikä ja ihotyyppi
 
-### 4.1 Kultainen ikävaihe ★★★
+### 4.1 Ensimmäiset juonteet ★★★ — KÄYTETTY 13.9.2026
 **Lähde:** Kenelle sopii
-**Kesto:** n. 16 s
+**Kesto:** 33,4 s
 
-30–39 vuotta on paras ikä aloittaa säännölliset mikroneulaussarjat.
-Kollageenituotannon lasku on alkanut mutta ihon pohjarakenne on vielä
-tallella.
+Ensimmäiset hienovaraiset juonteet näkyvät tyypillisesti 30–35 vuoden
+iässä silmien ympärillä ja otsalla. Pinnallisessa vaiheessa
+mikroneulaus on tehokas valinta.
+
+Idea oli aiemmin nimellä "Kultainen ikävaihe". **Termi poistettu
+13.9.2026 käyttäjän linjauksella:** se on markkinoinnin kieltä eikä
+kerro lukijalle mitään. Samalla kärki siirtyi ikävaiheesta itse
+vaivaan, koska aiemmasta versiosta ei käynyt ilmi mitä hoidetaan.
 
 ### 4.2 Aknearvet kannattaa hoitaa tuoreina ★★★
 **Lähde:** Kenelle sopii
@@ -277,7 +282,7 @@ ihon pintarakennetta. Arpi täyttyy alapuolelta, ei peitetä päältä.
 
 ## 6. Sarjahoito
 
-### 6.1 Miksi yksi kerta ei riitä ★★★
+### 6.1 Miksi yksi kerta ei riitä ★★★ — KÄYTETTY 24.8.2026
 **Lähde:** Sarjahoito
 **Kesto:** n. 17 s
 
@@ -319,7 +324,7 @@ juonteisiin ja yli 40-vuotiaalle iholle.
 UV-suoja on jälkihoidon tärkein yksittäinen asia. Se voi ratkaista
 sarjan lopputuloksen enemmän kuin mikään muu jälkihoitovalinta.
 
-### 7.2 Punoitus on hyvä merkki ★★★
+### 7.2 Punoitus on hyvä merkki ★★★ — KÄYTETTY 1.9.2026
 **Lähde:** Jälkihoito
 **Kesto:** n. 14 s
 
@@ -351,7 +356,7 @@ kestä voimakkaita aktiiveja.
 
 ## 8. Ensikäynti ja käytäntö
 
-### 8.1 Ensimmäinen hoito lasketaan sarjaan ★★★
+### 8.1 Ensimmäinen hoito lasketaan sarjaan ★★★ — KÄYTETTY 24.8.2026
 **Lähde:** Ensikäynti
 **Kesto:** n. 16 s
 
@@ -402,7 +407,7 @@ varovaisemmin.
 neulasyvyyttä. Se ei pidä aina paikkaansa: herkällä iholla pienin
 syvyys on käytössä jo kasvoilla. Ks. PROJECT.md luku 3.
 
-### 8b.1 Kaula unohtuu ★★★
+### 8b.1 Kaula unohtuu ★★★ — KÄYTETTY 1.9.2026
 **Lähde:** lisäaluesivu, Timman kuvaus
 **Kesto:** n. 15 s
 
@@ -468,13 +473,18 @@ Ajoita tämä marras-joulukuulle.
 
 ## Yhteenveto
 
-**Ideoita yhteensä: 40**
+**Ideoita yhteensä: 46** (luvut korjattu 1.9.2026, aiempi 40 oli
+vanhentunut eikä sisältänyt luvun 8b lisäalueita)
 
 | Vahvuus | Määrä |
 |---|---|
-| ★★★ | 18 |
-| ★★ | 18 |
-| ★ | 4 |
+| ★★★ | 24 |
+| ★★ | 19 |
+| ★ | 3 |
+
+Käytettyjä 1.9.2026: 12. Käyttämättömiä 34.
+
+Käytettyjä 7.9.2026: 14. Käyttämättömiä 32.
 
 Jos julkaiset kaksi Reelsiä kuukaudessa, tämä on 20 kuukauden sisältö.
 Jos yhden viikossa, vajaan vuoden.

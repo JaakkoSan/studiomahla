@@ -493,7 +493,11 @@
       { key: 'tupakointi',       label: 'Tupakointi – merkittävästi heikentää hoidon tuloksia ja hidastaa paranemista' },
       { key: 'avohaava',         label: 'Avohaava hoitoalueella (varsinainen haava, ei esimerkiksi puhjennut finni)' },
       { key: 'leikkausarpi',     label: 'Tuore leikkausarpi hoitoalueella' },
-      { key: 'ainesosaallergia', label: 'Tiedossa oleva allergia ihonhoitotuotteiden ainesosille' },
+      // 'ainesosaallergia' poistettu 13.9.2026 käyttäjän linjauksella:
+      // asiakas ei käytännössä voi tietää onko hän allerginen juuri
+      // hoidossa käytettäville ainesosille, eikä sitä voi häneltä
+      // vaatia. Tieto kerätään yhä vapaassa Allergiat-kentässä ja
+      // käydään läpi ensikäynnillä.
     ];
     var formEl     = document.getElementById('prebookingForm');
     var listEl     = document.getElementById('kontraList');
