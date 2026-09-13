@@ -3656,12 +3656,18 @@ epilepsia (LED), raskaus/imetys (LED, vahvistettava koulutuksessa).
 
 ### 14.19 Lääkärivetoinen hoito — Vaihe 3 (tulevaisuus)
 
-Aknenhoitopolku v1.0 kohta 8: etälääkärin ihotautikonsultaatio, sairaanhoitajan
-verikokeet studiossa, isotretinoiinin koordinointi. Selvästi erillinen vaihe.
+**Korvattu 12.9.2026. Täysi suunnitelma:
+`tuotanto/aknepolku-suunnitelma.md`.**
 
-Vaatii: uusi alaosio "Lääketieteellinen ihonhoito", top nav -laajennus tai
-hampurilainen, LED:n vasta-aiheiden päivitys (isotretinoiinin yhteensopivuus),
-hoitolokin laajennus, GDPR ja potilastietolainsäädäntö.
+Alkuperäinen luonnos oli: etälääkärin ihotautikonsultaatio,
+sairaanhoitajan verikokeet studiossa, isotretinoiinin koordinointi.
+Vaatii uuden alaosion "Lääketieteellinen ihonhoito", top nav
+-laajennuksen, LED:n vasta-aiheiden päivityksen (isotretinoiinin
+yhteensopivuus), hoitolokin laajennuksen, GDPR:n ja
+potilastietolainsäädännön.
+
+Sivustoa koskevat kohdat pätevät edelleen. Lupa- ja
+järjestelmäpuoli on nyt selvitetty erillisessä suunnitelmassa.
 
 ---
 
@@ -8909,3 +8915,70 @@ Delfinin verkkokaupasta.
 Observ 520x:n hinta ja maahantuoja Suomessa. Anteran hinta.
 Laitekohtainen MDR-status. Onko VISIA-CR ylipäätään myynnissä
 esteettiselle puolelle vai vain tutkimuskäyttöön.
+
+
+## 13.9.2026 — Huoltajalohko näkyi kaikille: `hidden` hävisi CSS:lle
+
+Käyttäjä havaitsi testatessaan, että esitietolomakkeen huoltajaosio
+näkyy myös kun iäksi antaa yli 18. Lomakkeen sai lähetettyä, mutta
+osio näytti siltä että se on pakko täyttää.
+
+### Syy
+
+JavaScript toimi oikein koko ajan: `huoltajaEl.hidden = !alaik`
+asetti attribuutin, ja `hidden` oli DOM:ssa `true`. Vika oli
+tyylitiedostossa.
+
+Selaimen oma sääntö on `[hidden] { display: none }`, mutta se on
+käyttäjäagentin tyylitiedostossa ja häviää mille tahansa tekijän
+säännölle. `lomake.html` asettaa `.field { display: flex; }`, ja
+huoltajalohko on `<div class="field" id="huoltajaLohko" hidden>`.
+Luokkasääntö voitti, joten laskettu `display` oli `flex` ja lohko
+näkyi.
+
+Sama vika oli korjattu kerran aiemmin yhteen paikkaan
+(`.form-error[hidden] { display: none !important; }`), mutta
+paikkauksena yhdelle elementille eikä sääntönä.
+
+### Korjaus
+
+Yksi rivi ennen `.field`-sääntöä:
+
+```css
+[hidden] { display: none !important; }
+```
+
+Tämä kattaa kaikki `hidden`-attribuutilla ohjatut lohkot. Lomakkeessa
+niitä on kuusi: huoltajalohko, suostumusosion kaksi johdantoa,
+virheilmoitus, lomakesisältö ja kiitosnäkymä. Yksikään niistä ei
+näytetä `style.display`-arvoa asettamalla, joten `!important` ei
+riko mitään — tarkistettu hakemalla `style.display` koko tiedostosta.
+
+### Tarkistettu selaimessa
+
+Testattu tuotantosivulla `studiomahla.fi/lomake` injektoimalla sääntö
+ja lukemalla laskettu tyyli:
+
+| Ikä | Huoltajalohko | Suostumusjohdanto | Alaikäisen johdanto |
+|---|---|---|---|
+| tyhjä | ei | kyllä | ei |
+| 17 | kyllä | ei | kyllä |
+| 18 | ei | kyllä | ei |
+| 30 | ei | kyllä | ei |
+
+Ennen sääntöä: `hidden = true`, `display = flex`, lohko näkyvissä.
+Sen jälkeen: `display = none`, lohko piilossa.
+
+### Sääntö jatkoon
+
+**Kun elementin näkyvyyttä ohjataan `hidden`-attribuutilla ja
+elementillä on luokka joka asettaa `display`-arvon, attribuutti ei
+yksin riitä.** Jokaisessa projektin tyylitiedostossa on syytä olla
+`[hidden] { display: none !important; }`. Tarkistuskomento:
+
+```
+grep -n "hidden" tiedosto.html | grep -v aria-hidden
+```
+
+ja jokaiselle löydökselle katso onko elementin luokalla
+`display`-sääntöä.

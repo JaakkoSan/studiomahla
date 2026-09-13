@@ -100,6 +100,13 @@
       font-size: 14px; color: var(--text-mid);
       margin: 0 0 20px;
     }
+    /* hidden-attribuutin on voitettava kaikki display-säännöt.
+       Selaimen oma [hidden] { display: none } häviää mille tahansa
+       luokkasäännölle, joten esimerkiksi .field-lohko jäi näkyviin
+       vaikka JavaScript oli merkinnyt sen piilotetuksi. Näin kävi
+       huoltajaosiolle: se näkyi myös täysi-ikäisellä (havaittu
+       13.9.2026). */
+    [hidden] { display: none !important; }
     .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
     .field__label {
       font-family: var(--font-sans);
