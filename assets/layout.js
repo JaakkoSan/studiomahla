@@ -81,7 +81,10 @@
           '</div>' +
         '</div>' +
         '<div class="footer__bottom">' +
-          '© 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a>' +
+          '© 2026 Guild Lounge Oy <span>|</span> Y-tunnus 3578202-2 <span>|</span> <a href="privacy.html">Tietosuojaseloste</a> <span>|</span> <a href="omavalvonta.html">Omavalvontasuunnitelma</a>' +
+        '</div>' +
+        '<div class="footer__valvonta">' +
+          'Toiminnasta on tehty terveydensuojelulain 13 §:n mukainen ilmoitus Kotkan ympäristöterveydenhuollon palveluyksikölle. Studio on viranomaisvalvonnan piirissä.' +
         '</div>' +
       '</div>' +
     '</footer>';
