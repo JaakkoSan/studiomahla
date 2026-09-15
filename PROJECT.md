@@ -1327,7 +1327,7 @@ todistus, sivut 3–10 ovat liite `13.10.2025 TsL OMAVALVONTAOHJEISTUS.pdf`.
 | Tarkastaja | Mirva Lahtela, 044 702 4807, mirva.lahtela@kotka.fi |
 | Maksu | 140,00 € erillisellä laskulla |
 
-#### MÄÄRÄAIKA 15.9.2026: pohjakuva ja ilmanvaihdon selvitys
+#### MÄÄRÄAIKA 15.9.2026: pohjakuva ja ilmanvaihdon selvitys — HOIDETTU
 
 **"Toiminnanharjoittajaa ohjataan toimittamaan
 terveydensuojeluviranomaiselle 15.9.2026 mennessä huoneiston pohjakuva
@@ -1336,10 +1336,15 @@ ja ilmanvaihdon selvitys (esim. IV-kuvat)."**
 Toimitusosoite: Kotkan kaupunki, ympäristöpalvelut / Mirva Lahtela,
 Mussalontie 428a, 48310 Kotka, tai ymparistoterveys@kotka.fi.
 
-Tämä on todistuksen ainoa aikataulutettu velvoite. 15.9.2026 on tiistai.
+Tämä oli todistuksen ainoa aikataulutettu velvoite.
 
-**Käyttäjän linjaus 10.8.2026: tehdään myöhemmin, aikaa on.** Ei siis
-avoin tehtävä juuri nyt, mutta takaraja on kiinteä.
+**Toimitettu 15.9.2026 määräpäivänä. Viranomainen vahvisti samana
+päivänä:** *"kauneudenhoitohuoneiston pohjakuva ja ilmanvaihdon
+selvitys on vastaanotettu ympäristöterveydenhuollon palveluyksikössä.
+Asian käsittely on tältä osin päättynyt."* (Mirva Lahtela,
+terveystarkastaja.)
+
+Ks. erillinen kohta 15.9.2026.
 
 **Huomioitava yhteys omavalvontasuunnitelmaan:** suunnitelmassa on
 kirjattu että ilmanvaihto on painovoimainen ja arvioitu riittäväksi.
@@ -8078,6 +8083,13 @@ Jätetään ennalleen.
 kohdalla yhden päivän ero ei ole korjaamisen arvoinen. Kysy, älä
 korjaa oma-aloitteisesti.
 
+**Tarkennus 13.9.2026: tämä sääntö koskee omia väitteitä, ei
+käyttäjän ilmoituksia.** 5.9. kirjattiin että latauslistaa ei saa
+esittää tarkistamatta. Se koskee tilannetta jossa *minä* väitän mitä
+on ladattu. Kun **käyttäjä** ilmoittaa että jokin on hoidettu, se on
+tieto eikä hypoteesi: kirjaa se sellaisenaan äläkä lähde
+varmistamaan. Ks. erillinen kohta 13.9.2026.
+
 ---
 
 ## 5.9.2026 — Botuliinihoidot: selvitys
@@ -9072,3 +9084,199 @@ kannattaa aloittaa kun juonteet ovat vielä pinnallisia." Muutos
 vastaa samaa linjausta jolla Reels kirjoitettiin uusiksi.
 
 `dateModified` päivitetty molempiin: 2026-09-13.
+
+
+## 13.9.2026 — Ladattu GitHubiin
+
+Käyttäjä: *"voit kirjata päivitetyiksi."* Verkossa 13.9.2026:
+
+- `lomake.html` (`[hidden]`-korjaus ja ainesosa-allergian poisto)
+- `admin.html` (kommentti säilytetystä nimikkeestä)
+- `functions/api/esitiedot.js` (kommentti säilytetystä avaimesta)
+- `mikroneulaus-sopiiko-minulle.html` (nimeämättömät vaihtoehdot,
+  "kultainen ikävaihe", dateModified 13.9.)
+- `mita-mikroneulaus-ei-tee.html` (nimeämättömät vaihtoehdot,
+  dateModified 13.9.)
+
+
+## 15.9.2026 — Pohjakuva ja IV-selvitys toimitettu, asia päättynyt
+
+Todistuksen ainoa aikataulutettu velvoite hoidettu määräpäivänä.
+Viranomaisen vahvistus samana päivänä: **"Asian käsittely on tältä
+osin päättynyt."**
+
+### Mitä toimitettiin
+
+| Tiedosto | Sisältö |
+|---|---|
+| `tuotanto/pohjapiirustus-hoitohuone.pdf` | A4, mittakaava 1:25 |
+| `tuotanto/ilmanvaihdon-selvitys.pdf` | A4, kuusi kohtaa |
+
+Lähdeaineisto: `tuotanto/pohjapiirustus-hoitohuone.svg`,
+`tuotanto/ilmanvaihdon-selvitys.md`,
+`tuotanto/generaattorit/pohjapiirustus_pdf.py`.
+
+### Hoitohuoneen mitat
+
+Mitattu paikan päällä 15.9.2026, kaikki sisämittoja.
+
+| | |
+|---|---|
+| Sisämitat | 272 × 346 cm |
+| Huonekorkeus | 250 cm |
+| Huoneala | 9,41 m² |
+| Tilavuus | 23,53 m³ |
+| Seinäpaksuus | 15 cm |
+| Ovi | 90 cm, 20 cm alanurkasta, aukeaa sisäänpäin |
+| Allas | leveys 51 cm, syvyys 45 cm, 147 cm alanurkasta |
+| Ikkuna | 175 cm alanurkasta: 31 cm tuuletusikkuna + 144 cm kiinteä |
+| Korvausilmaventtiili | kiinteän ikkunan keskellä |
+
+### Rajaus: vain hoitohuone
+
+Viranomainen pyysi *huoneiston* pohjakuvaa. Omavalvontasuunnitelmassa
+huoneisto on kuvattu laajemmin: hoitotila on erillinen huone
+yläkerrassa, kuljetaan eteisen kautta, vieressä WC. Käyttäjän valinta
+15.9.2026 oli toimittaa vain hoitohuone, ja se riitti. Täydennystä ei
+pyydetty.
+
+### Tuuletuskäytäntö kirjattiin ensimmäistä kertaa numeroina
+
+Omavalvontasuunnitelmassa luki vain "tuuletetaan hoitojen välillä".
+Selvitykseen kirjattiin **kymmenen minuuttia jokaisen asiakkaan
+jälkeen tuuletusikkuna kokonaan auki**, lisäksi työpäivän alussa ja
+lopussa, ja erikseen että lämpimänä vuodenaikana aikaa pidennetään
+koska lämpötilaero on pieni ja painovoimainen virtaus siksi heikompi.
+
+Luku ei tule laista. Asumisterveysasetus 545/2015 ja Valviran
+soveltamisohje asettavat vaatimuksia olosuhteille mutta eivät kerro
+tuuletuksen kestoa. Kymmenen minuuttia valittiin siksi että se on
+**toteutettavissa**: hoito kestää tunnin ja asiakkaita on kymmenen
+viikossa. Lupaus jota ei pidetä on tarkastuksella pahempi kuin
+vaatimaton lupaus joka pidetään.
+
+**Mitä tietoisesti jätettiin pois:** ilmavirtaluvut,
+ilmanvaihtokerroin ja kaikki "vastaa X ilmanvaihtoa" -väitteet.
+Painovoimaisessa järjestelmässä niitä ei voi ilmoittaa mittaamatta,
+ja keksitty luku olisi ollut ainoa kohta koko paperissa joka olisi
+voinut kaatua tarkastuksessa.
+
+### Omavalvontasuunnitelma yhdenmukaistettu samana päivänä
+
+Kohta 4.3 Tilat sanoi "tuuletetaan hoitojen välillä", kun selvitys
+sanoi kymmenen minuuttia. Ei ristiriita, mutta kaksi eri sanamuotoa
+samasta asiasta on tarkastuksella turha selitettävä. Päivitetty
+vastaamaan selvitystä ja täydennetty neljällä rivillä: korvausilman
+reitti ja ikkunan mitat, tuuletuskäytäntö kestoineen, huoneen mitat ja
+tilavuus, sekä kanavien puhdistus.
+
+Muutos tehtiin `generaattorit/omavalvonta.py`:hyn, joka tuottaa
+molemmat ulostulot: `omavalvonta.html` (noindex) ja
+`tuotanto/omavalvontasuunnitelma-LUONNOS.docx` (tarkastajalle).
+Päiväys 10.8.2026 → 15.9.2026.
+
+**Ajoympäristöön lisättiin python-docx.** Venv sisältää nyt Pillow'n,
+reportlabin, pypdfium2:n ja python-docxin. `aja.bat` asentaa
+puuttuvat vasta kun niitä tarvitaan.
+
+### Avoimet jatkotoimet
+
+1. **Kanavien puhdistus 16.9.2026.** Sekä selvityksessä että
+   omavalvontasuunnitelmassa on luvattu että raportti arkistoidaan
+   omavalvonta-aineistoon.
+2. **Seuraava tarkastus noin helmikuussa 2027.** Silloin kysytään
+   juuri tuuletuskäytäntöä.
+### Omavalvontasuunnitelma julkaistu 15.9.2026
+
+10.8.2026 kirjattu julkaisusuunnitelma toteutettu kokonaan. Sen kaksi
+estettä olivat ratkenneet: ilmoituksen päivämäärä ja todistus ovat
+suunnitelmassa, ja särmäisjätteen vastaanotto hoituu Ekokaarelle ilman
+erillistä sopimusta.
+
+| Askel | Tehty |
+|---|---|
+| `JULKAISTU = True` | `generaattorit/omavalvonta.py` |
+| Ajo | `omavalvonta.html` sai `robots: index, follow` |
+| Footer-linkki | `assets/layout.js`, `footer__bottom`, tietosuojaselosteen viereen |
+| Sitemap | `omavalvonta.xml`-rivi lisätty, lastmod 2026-09-15 |
+
+**Word-tiedoston nimi seuraa nyt julkaisutilaa.**
+`omavalvontasuunnitelma-LUONNOS.docx` → `omavalvontasuunnitelma.docx`.
+Julkaistu suunnitelma ei voi olla tiedosto joka väittää olevansa
+luonnos. LUONNOS-pääte palaa automaattisesti jos `JULKAISTU`
+palautetaan epätodeksi.
+
+### Valvontamaininta footeriin: "hyväksymä" hylättiin
+
+Käyttäjä ehdotti mainintaa että toiminta on ympäristöterveydenhuollon
+"hyväksymä tms". **Sanamuoto ei kelpaa, ja syy on juridinen.**
+
+Terveydensuojelulain 13 § on ilmoitusmenettely, ei lupa. Viranomainen
+ei hyväksy toimintaa vaan ottaa ilmoituksen vastaan, käsittelee sen ja
+antaa siitä todistuksen. Todistuksen otsikko on "todistus ilmoituksen
+käsittelystä". "Hyväksymä" olisi tarkistettavissa oleva väite joka ei
+kestä tarkistusta, ja se on juuri sitä viranomaisauktoriteetilla
+ratsastamista joka kääntyy kauneusalalla nopeimmin itseään vastaan.
+
+Toinen ongelma: valvonta koskee hygieniaa ja tiloja, ei hoitojen
+laatua. "Hyväksytty toiminta" antaisi ymmärtää että viranomainen olisi
+ottanut kantaa hoitoihin.
+
+**Valittu sanamuoto (käyttäjän valinta kolmesta vaihtoehdosta):**
+
+> Toiminnasta on tehty terveydensuojelulain 13 §:n mukainen ilmoitus
+> Kotkan ympäristöterveydenhuollon palveluyksikölle. Studio on
+> viranomaisvalvonnan piirissä.
+
+Tyyli: uusi luokka `.footer__valvonta`, pienempi ja himmeämpi kuin
+`footer__bottom`, koska kyseessä on lakisääteinen tieto eikä
+myyntiväite.
+
+**Vahvin signaali on silti itse julkaistu suunnitelma.** Se on alalla
+harvinainen ja todennettavissa, toisin kuin mikään lause valvonnasta.
+
+### Avoin riski jonka käyttäjä tuntee
+
+Julkaistu omavalvontasuunnitelma kääntyy päinvastaiseksi jos se
+vanhenee. Nyt sivulla lukee "Päivitetty 15.9.2026". Jos siinä lukee
+sama vielä kahden vuoden kuluttua, se kertoo huolimattomuudesta.
+Päivitys kannattaa kytkeä samaan rytmiin kuin vuosittainen tarkistus,
+joka on suunnitelman kohdassa 6.
+
+### Työkalut
+
+PDF:t piirretään suoraan reportlabilla eikä muunneta SVG:stä, koska
+SVG-muuntimet eivät tue CSS-luokkia eivätkä tekstin kiertoa
+luotettavasti. Skripti renderöi tuloksen myös PNG:ksi pypdfium2:lla,
+jotta lopputulos voidaan tarkistaa silmällä ennen lähetystä. Sillä
+löytyi kaksi vikaa: mitta 144 osui korvausilmaventtiilin symbolin
+päälle, ja selvitys venyi kahdelle sivulle niin että toiselle jäi
+vain loppurivit.
+
+
+## 13.9.2026 — Sääntö: käyttäjän ilmoitusta ei tarkisteta
+
+Käyttäjä pyysi kirjaamaan tiedostot päivitetyiksi. Avasin sen sijaan
+tuotantosivun ja aloin lukea sieltä oliko muutos mennyt perille.
+
+Käyttäjä: **"Miksi lähdet joka kerta tarkistamaan vaikka en pyydä?
+Sanoin että kirjaa päivitetyiksi ja muista jatkossa että et lähde
+tarkistamaan jos ilmoitan että jokin asia on hoidettu."**
+
+**Sääntö: kun käyttäjä ilmoittaa että jokin on tehty, se kirjataan
+tehdyksi. Ei tarkistusta, ei varmistusta, ei "katsoin vielä".**
+
+Tarkistaminen ei ole tässä huolellisuutta vaan epäluottamuksen
+osoitus: se asettaa käyttäjän ilmoituksen hypoteesin asemaan.
+Käyttäjä myös hoitaa lataukset itse ja tietää mitä on tehnyt.
+Lisäksi tarkistus vie aikaa ja tuottaa virhelähteitä, kuten
+välimuistista luettu vanha sivu joka näyttäisi siltä että lataus ei
+mennyt perille.
+
+**Raja kulkee tässä.** Tarkistan oman työni tuloksen: renderöidyn
+dian, ajetun skriptin, kirjoittamani koodin. En tarkista käyttäjän
+tekemää työtä.
+
+Aiempi 5.9. kirjattu sääntö ("verify mtimes ja tuotantosivu ennen
+kuin esität latauslistan") tarkoitti omia väitteitäni, ei käyttäjän
+ilmoituksia. Tarkennus kirjattu myös sinne.
