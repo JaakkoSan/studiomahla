@@ -9235,6 +9235,54 @@ myyntiväite.
 **Vahvin signaali on silti itse julkaistu suunnitelma.** Se on alalla
 harvinainen ja todennettavissa, toisin kuin mikään lause valvonnasta.
 
+### Julkinen versio lyhennettiin samana päivänä
+
+Käyttäjä heti julkaisun jälkeen: *"julkisessa omavalvontasuunnitelmassa
+ei ehkä ole hyvä olla asiakasmäärää yms puhtaasti sisäisiä asioita."*
+Aiheellinen huomio, ja kolme kohtaa poistettiin julkisesta versiosta.
+
+| Poistettu julkisesta | Miksi |
+|---|---|
+| "noin 10 asiakasta viikossa" | Liiketoiminnan volyymi. Kilpailija saa siitä hinnaston kanssa liikevaihtoarvion. Vanhenee myös nopeasti, ja vanhentunut luku omassa asiakirjassa on väärää tietoa. |
+| Tarkastajan nimi, matkapuhelin ja sähköposti | Toisen ihmisen työyhteystiedot yrityksen sivustolla. Ei hyödytä lukijaa, ohjaa yhteydenottoja hänelle. Viraston nimi ja käyntiosoite jäivät, joten todennettavuus säilyy. |
+| "Hoitotilan siirtyminen alakertaan on olennainen muutos" | Kertoo asunnon rakenteesta enemmän kuin on tarpeen. Korvattu yleisellä muotoilulla "olennainen muutos", joka sanoo saman asian. |
+
+**Petra Saharin nimi jäi** vastuuhoitajana käyttäjän päätöksellä.
+
+**Ilmoituksen tunnukset ja diaarinumero jäivät ehdottomasti.** Ne ovat
+koko julkaisemisen pointti: lukija voi tarkistaa väitteen. Ilman niitä
+sivu on pelkkä lupaus.
+
+### Mekanismi: yksi lähde, kaksi eri laajuista ulostuloa
+
+Poisto olisi voinut tuottaa kaksi versiota jotka ajautuvat erilleen.
+Se on täsmälleen sama vika joka korjattiin samana päivänä tuuletuksen
+sanamuodosta. Siksi poisto tehtiin lähteeseen, ei ulostuloihin.
+
+`omavalvonta.py`:hyn lisättiin luokka `V`:
+
+```python
+V('täysi teksti viranomaiselle', 'lyhennetty julkinen teksti')
+V('vain viranomaiselle', None)   # jää julkisesta kokonaan pois
+```
+
+`tekstiksi(x, julkinen)` purkaa kääron. Molemmat renderöijät kutsuvat
+sitä, joten viranomaisversio saa aina täyden tekstin eikä kumpikaan
+voi jäädä jälkeen toisesta. Tyhjäksi jäävä taulukkorivi katoaa
+julkisesta kokonaan.
+
+**Julkisessa versiossa kerrotaan että se on lyhennetty.** Uusi
+lohkotyyppi `julkinen_huomio` tuottaa sivun loppuun:
+
+> Tämä on suunnitelman julkinen versio. Siitä on jätetty pois
+> liiketoiminnan yksityiskohtia ja viranomaisen henkilökohtaisia
+> yhteystietoja. Terveydensuojeluviranomaiselle toimitettu versio on
+> täydellinen.
+
+Poisto ilman mainintaa olisi salailua, ja koko julkaisemisen arvo on
+siinä että lukija voi luottaa näkemäänsä. Word-versioon huomiota ei
+tulosteta, koska se on se täydellinen versio.
+
 ### Avoin riski jonka käyttäjä tuntee
 
 Julkaistu omavalvontasuunnitelma kääntyy päinvastaiseksi jos se
