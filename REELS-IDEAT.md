@@ -160,7 +160,7 @@ hoito aloitetaan vasta kun aktiivinen vaihe on rauhoittunut.
 Mikroneulaus voidaan tehdä aikaisintaan kuusi kuukautta isotretinoiini-
 hoidon päättymisestä. Tämä on ehdoton turvallisuusraja, ei suositus.
 
-### 3.3 Melasma voi pahentua ★★★
+### 3.3 Melasma voi pahentua ★★★ — KÄYTETTY 14.9.2026
 **Lähde:** Kenelle sopii
 **Kesto:** n. 16 s
 
@@ -263,7 +263,7 @@ elimistölle ne ovat riittävä signaali käynnistää korjausprosessi.
 
 Uutta kollageenia, uutta elastiinia, nopeutunut uusiutumissykli.
 
-### 5.4 Miksi muutos on pysyvä ★★★
+### 5.4 Miksi muutos on pysyvä ★★★ — KÄYTETTY 14.9.2026
 **Lähde:** Mikä on mikroneulaus
 **Kesto:** n. 16 s
 
@@ -271,7 +271,7 @@ Hoito vaikuttaa ihon syvempiin kerroksiin siellä missä kollageeni
 muodostuu. Koska iho rakentaa itse uutta kudosta, muutos on
 rakenteellinen eikä katoa pesun tai ajan myötä.
 
-### 5.5 Aknearpi täyttyy alapuolelta ★★★
+### 5.5 Aknearpi täyttyy alapuolelta ★★★ — KÄYTETTY 28.9.2026
 **Lähde:** Kenelle sopii
 **Kesto:** n. 15 s
 
@@ -290,7 +290,7 @@ Ensimmäinen vaste on kollageeni-tyyppi III, väliaikainen korjaus-
 kollageeni. Se hajoaa luonnollisesti viikkojen aikana. Siksi yhden
 hoidon jälkeinen tunne haalistuu noin kuukaudessa.
 
-### 6.2 Kerros kerroksen päälle ★★★
+### 6.2 Kerros kerroksen päälle ★★★ — KÄYTETTY 22.9.2026
 **Lähde:** Sarjahoito
 **Kesto:** n. 16 s
 
@@ -434,7 +434,7 @@ Diat:
 3. "Se näkyy ihon ohentumisena ja kiinteyden vähenemisenä."
 4. CTA
 
-### 8b.3 Kädet paljastavat iän ★★★
+### 8b.3 Kädet paljastavat iän ★★★ — KÄYTETTY 22.9.2026
 **Lähde:** lisäaluesivu
 **Kesto:** n. 15 s
 
@@ -485,6 +485,15 @@ vanhentunut eikä sisältänyt luvun 8b lisäalueita)
 Käytettyjä 1.9.2026: 12. Käyttämättömiä 34.
 
 Käytettyjä 7.9.2026: 14. Käyttämättömiä 32.
+
+Käytettyjä 14.9.2026: 17. Käyttämättömiä 29. (Luku sisältää idean 4.1,
+joka merkittiin käytetyksi 13.9.2026, sekä tämän ajon ideat 5.4 ja 3.3.)
+
+Käytettyjä 22.9.2026: 19. Käyttämättömiä 27. (Tämän ajon ideat 6.2 ja
+8b.3.)
+
+Käyttämättömiä 28.9.2026: 26, joista ★★★ 5 (2.2, 3.2, 4.2, 5.2, 8b.2).
+(Tämän ajon idea 5.5. Yksi Reels viikossa 25.9.2026 alkaen.)
 
 Jos julkaiset kaksi Reelsiä kuukaudessa, tämä on 20 kuukauden sisältö.
 Jos yhden viikossa, vajaan vuoden.

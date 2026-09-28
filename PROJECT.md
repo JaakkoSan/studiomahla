@@ -1053,13 +1053,14 @@ Sivulle ei tehty Offer-skeemaa, koska etusivun BeautySalon-lohkon
 päällekkäistä tarjousilmoitusta eri osoitteissa olisi turha
 ristiriidan lähde. Hinnastosivulla on vain BreadcrumbList.
 
-### Asiakassivut (19)
+### Asiakassivut (21)
 - **index.html** — etusivu (hero + filosofia + menetelmä + haasteet + vertailu)
 - **hinnasto.html** — hinnasto (navigaatiossa ennen Blogia), ks. luku yllä
 - **blogi.html** — blogilista (blog-hero tumma vihreä)
 - **privacy.html** — tietosuojaseloste
 - **lomake.html** — esitietolomake (Supabase-tallennus)
 - **mikroneulaus-opas.html** — pinned blogiartikkeli, "Mikroneulaus: täydellinen opas"
+- **ihonhoito-opas.html** — pinned yleispilari, "Mitä ihonhoidosta oikeasti tiedetään" (julkaistu 26.8.2026)
 - **mikroneulaus-sarjahoito.html** — sarjahoidon biologia
 - **mikroneulaus-sopiiko-minulle.html** — soveltuvuusarvio 12 kysymyksellä
 - **mikroneularulla-vai-kliininen-mikroneulaus.html** — vertailu
@@ -1072,7 +1073,7 @@ ristiriidan lähde. Hinnastosivulla on vain BreadcrumbList.
 - **proxn-kasvohoito.html** — ProXN-kasvohoito, **navigaatiossa ensimmäisenä** (julkaistu 17.8.2026)
 - **aknearpien-hoito-mikroneulauksella.html** — aknearvet (julkaistu 5.8.2026)
 - **herkka-iho-ruusufinni-mikroneulaus.html** — herkkä iho ja ruusufinni (julkaistu 17.8.2026)
-- **mita-mikroneulaus-ei-tee.html** — hoidon rajat, **sisältö valmis, julkaisu viikolla 34/2026.** Julkaistaessa `datePublished` on korjattava julkaisupäivään, kuten herkän ihon artikkelissa 17.8.
+- **mita-mikroneulaus-ei-tee.html** — hoidon rajat (julkaistu 16.9.2026). Auditoitu ennen julkaisua luvun 5 sääntöjä vasten, ks. muutosloki 16.9. `datePublished` korjattiin todelliseen julkaisupäivään.
 - **omavalvonta.html** — omavalvontasuunnitelma (noindex)
 - **mikroneulaus-talvella.html** — DRAFT, noindex, julkaisu marraskuussa 2026
 
@@ -4838,6 +4839,48 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-09-28
+
+- **Viikkosisältö (ensimmäinen yhdistetty ajo): blogi C, Reels tuotettu.** Claude in Chrome ei ollut ensin yhteydessä; käyttäjän pyynnöstä yritettiin uudelleen samana päivänä ja yhteys toimi. Luettiin Chromella 15 artikkelia/palvelusivua (14 blogiartikkelia + ProXN) ja hinnasto; etusivusta `get_page_text` palautti vain UKK-kohdan. **Valinta C: ei julkaista mitään.** Live-tila on yhä sama kuin 23.9.: 16.9. muutokset eivät ole verkossa (live-sitemap "Päivitetty 2026-08-06" ilman `mita-mikroneulaus-ei-tee.html`:ää, rulla-artikkeli yhä "Päivitetty 24.5.2026", ei-tee-artikkeli yhä auditointia edeltävä "rehellinen katsaus" -versio). Uusi työ kasvattaisi julkaisematonta kerrostumaa. C toista kertaa peräkkäin → tahdin väljennys (joka toinen viikko) suositeltu. Seuraava B-ehdokas deployn jälkeen: `milloin-aloittaa-mikroneulaus.html` vanhenee lokakuussa ("syyskuussa tai lokakuun alussa", "päättyy syksyn puolivälissä"). Ideapankin täydennystä ei tarvittu (26 käyttämätöntä). Reels idea 5.5 "Aknearpi täyttyy alapuolelta" (`generaattorit/aknearpi.py`, `reels/aknearpi.mp4`, 26,4 s, sävy keski), loki META-MARKKINOINTI.md 3.5b nro 22. Havainto, ei korjattu: `aknearpien-hoito-mikroneulauksella.html` sisältää yhä "On myös rehellistä sanoa" (luvun 5 etuliitesääntö).
+
+- **Viikoittainen blogiautomaatio keskeytetty ensin: Claude in Chrome ei yhteydessä.** Neljä yritystä (`list_connected_browsers` tyhjä, `tabs_context_mcp` ei tavoittanut laajennusta), ohjeen mukaisesti tehtävä keskeytettiin sen sijaan että selainlukeminen olisi korvattu tiedostoilla tai haulla. Paikallinen kansio tarkistettu bashilla: ainoa julkaisematon luonnos on yhä `mikroneulaus-talvella.html` (noindex, loka-marraskuulle), ei uusia löydöksiä.
+- **Käyttäjä vahvisti yhteyden, tehtävä jatkettiin samana päivänä. Valinta C: ei julkaista mitään.** Kaikki 14 live-linkitettyä blogiartikkelia sekä `proxn-kasvohoito.html` luettiin Chromella kokonaan läpi (blogi.html:n linkit + suora käynti jokaisella osoitteella).
+- **KRIITTINEN HAVAINTO: 16.9.2026 istunnon blogimuutokset eivät ole koskaan päätyneet verkkoon.** 16.9. "Ladattu GitHubiin" -kirjaus (rivi 9131) koski vain omavalvonta.html:ää ja siihen liittyviä tiedostoja, ei blogimuutoksia. Live-sivusto vastaa yhä 10.9./2.9./26.8. tilaa:
+  - `mikroneularulla-vai-kliininen-mikroneulaus.html`: live näyttää yhä "Päivitetty 24.5.2026", uudet H2-osiot ("Mistä laitteesta tutkimusnäyttö on peräisin", "Jos olet käyttänyt rullaa kotona") puuttuvat kokonaan.
+  - `mikroneulaus-kaula-dekoltee-kadet.html`: live ei näytä päivitysmerkintää lainkaan, uusi H2 "Jos iho ei ole vielä valmis" puuttuu, teksti sisältää yhä vanhan "Varovaisuus ei tarkoita pelkästään syvyyttä" -muodon.
+  - `mita-mikroneulaus-ei-tee.html`: live-sivu latautuu (ei 404) mutta on **auditointia edeltävä versio**: otsikossa yhä "rehellinen katsaus" (luvun 5 etuliitesääntö), "Kysymys ei ole siitä kumpi hoito on parempi", "Tämä ei tarkoita ettei vanhempia arpia kannattaisi hoitaa", "kotikäyttöön tarkoitetulla rullalaitteella" (asiavirhe), otsikko "Milloin kannattaa harkita toista menetelmää" korjaamatta. Sivu ei ole `blogi.html`-listalla eikä live-sitemapissa, eli se on orpo.
+  - `herkka-iho-ruusufinni-mikroneulaus.html` ja `proxn-kasvohoito.html`: molemmissa yhä "Hoidot eivät myöskään sulje toisiaan pois" ja `herkka-iho...`:ssa yhä "Se ei tarkoita ettei ihollesi voisi tehdä mitään" (luvun 5 puolusteleva vertailu -sääntö).
+  - `aknearpien-hoito-mikroneulauksella.html`: yhä "Tämä ei tarkoita, että vanhempia arpia kannattaisi hoitaa".
+  - Live-sitemap.xml: puuttuu `mita-mikroneulaus-ei-tee.html` kokonaan, `lastmod`-päivät vain elokuulle asti.
+  - `mita-on-kliininen-mikroneulaus.html` (Päivitetty 10.9.), `mikroneulaus-sarjahoito.html` (26.8.) ja `mikroneulauksen-jalkihoito.html` (2.9.) SEN SIJAAN ovat livenä ajan tasalla, eli deploy toimi vielä 10.9. asti mutta ei 16.9. istunnon jälkeen.
+- **Syy valintaan C.** Live-sivuston stalein artikkeli (`mikroneularulla-vai-kliininen-mikroneulaus.html`, 24.5.) on jo päivitetty paikallisesti 16.9., mutta päivitys ei ole julkisesti näkyvissä. Uuden päivityksen tai artikkelin tekeminen tällä viikolla kasvattaisi julkaisematonta kerrostumaa entisestään sen sijaan että korjaisi tilanteen. Mikroneulausklusteri on kattava (14 artikkelia + pillar), ja ainoa jonossa oleva aihe on `mikroneulaus-talvella.html` (noindex, ei vielä ajankohtainen). Tämä on luvun 16.5 signaali 1 edelleen voimassa, ja 16.9. istunnossa jo suositeltiin siirtymistä joka toiseen viikkoon.
+- **Suositus käyttäjälle: deployaa 16.9.2026 istunnon muutokset GitHubiin ennen seuraavaa blogiautomaation ajoa.** Ilman sitä seuraava viikko arvioi jälleen väärää (vanhentunutta) live-tilaa, ja jo tehty auditointityö (`mita-mikroneulaus-ei-tee.html` 8 korjausta, puolustelevan vertailun poisto neljästä tiedostosta) jää hyödyntämättä.
+- Ei muutoksia sisältötiedostoihin tällä ajolla.
+
+### 2026-09-16
+
+- **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 13 julkaistua blogiartikkelia sekä `proxn-kasvohoito.html` Chromella kokonaan läpi. Live-sitemap vastaa paikallista tiedostoa rivi riviltä, eli deploy on ajan tasalla. Päivitettiin `mikroneularulla-vai-kliininen-mikroneulaus.html`, joka oli 10.9. jälkeen sivuston vanhin sisältö (päivitysmerkintä 24.5.2026) ja sen huonoiten linkitetty artikkeli: ulos osoittavia sisäisiä artikkelilinkkejä oli kaksi, eikä "Lue lisää" -lohkoa ollut lainkaan, vaan kaksi irrallista linkkiä yhteenvedon perässä. **Korjattu 10.9. kirjattu avoin bugi: `dateModified` oli 2026-06-17 mutta näkyvä article-meta 24.5.2026.** Molemmat nyt 16.9.2026. Sama vika oli samasta pohjasta tehdyssä `mita-on-kliininen-mikroneulaus.html`-sivussa ja korjattiin siihen 10.9., joten pohjan vika on nyt korjattu molemmista.
+- **Mitä lisättiin:** uusi H2 "Mistä laitteesta tutkimusnäyttö on peräisin" (Aust ym. 2008 ja Doddaballapur 2009 tehtiin rullalla, joten mekanismi on todennettu nimenomaan rullalla; ero syntyy toteutuksesta eikä menetelmästä) ja uusi H2 "Jos olet käyttänyt rullaa kotona" (tauko ennen ensikäyntiä, rullan käytön kertominen esitiedoissa, ProXN-reitti ärtyneelle iholle). Uusi H3 "Lue lisää" kolmella ristiinlinkillä, uusi lähdeluettelo neljällä lähteellä (luvun 5 lähdesääntö laukesi, koska kaksi tutkimusta nimetään leipätekstissä), ja artikkelin ensimmäinen ProXN-linkki. Ulos osoittavia sisäisiä artikkelilinkkejä 3 → 9. Noin 800 → 1117 sanaa. Meta description, og- ja twitter-kuvaus sekä JSON-LD:n description päivitettiin, koska artikkeliin tuli kaksi uutta aihetta.
+- **Syy valintaan A:n sijaan:** sama kuin 2.9. ja 10.9., ja nyt vahvempana. Mikroneulausklusteri on katettu, ja kaksi valmista artikkelia odottaa yhä julkaisua: `mita-mikroneulaus-ei-tee.html` (valmis 12.8., suunniteltu julkaisuviikko 34 meni ohi viisi viikkoa sitten, yhä 404 livenä ja puuttuu sitemapista) ja `mikroneulaus-talvella.html` (noindex-luonnos loka-marraskuulle). Kolmannen artikkelin kirjoittaminen jonoon ei tuota mitään ennen kuin jono purkautuu.
+- **Tahtisuositus: siirry joka toiseen viikkoon.** Vaihtoehto B on valittu nyt viidettä kertaa peräkkäin (19.8., 26.8., 2.9., 10.9., 16.9.), mikä on luvun 16.5 signaali 1 selvimmillään: automaatio ei enää löydä uusia aiheita vaan päivitettävää. Luvun 16.5 suunniteltu kaari sanoo "syyskuun puoliväli", ja se on nyt. Päivitettävää riittää yhä, joten kahden viikon tahti pitää työn mielekkäänä.
+- Ei muita tiedostoja muutettu. Päivitettyä artikkelia ei linkitetty uudelleen mistään eikä sitemapin `lastmod`-riviä koskettu.
+
+**Sama päivä, käyttäjän pyynnöstä: kaksi havaintoa toteutettu ja
+`mita-mikroneulaus-ei-tee.html` julkaistu.**
+
+- **Luvun 5 puolusteleva vertailu poistettu sivustolta kokonaan.** 18.8. kirjatut esiintymät korjattiin: `proxn-kasvohoito.html` ("Kysymys ei ole kumpi hoito on parempi" → "Valinta riippuu siitä mitä ihossa halutaan muuttaa", ja "Hoidot eivät myöskään sulje toisiaan pois" poistettu), `herkka-iho-ruusufinni-mikroneulaus.html` (sama lause poistettu). Lisäksi löytyi ja korjattiin kolme kirjaamatonta "Tämä ei tarkoita että" -rakennetta: `mikroneulaus-kaula-dekoltee-kadet.html`, `aknearpien-hoito-mikroneulauksella.html` (kaksi kohtaa). Samalla "invasiivinen" avattiin kahdessa paikassa muotoon "kajoavien eli invasiivisten" luvun 5 termisäännön mukaan. **Näiden neljän tiedoston `dateModified` jätettiin koskematta, koska kyse on tyylikorjauksesta eikä olennaisesta sisältömuutoksesta** (sama Googlen ohje jota noudatettiin 6.8.2026); sitemapin `lastmod` päivitettiin.
+- **`mikroneulaus-kaula-dekoltee-kadet.html` päivitetty.** Se oli ainoa live-artikkeli ilman päivitysmerkintää ja ilman ProXN-mainintaa. Uusi H2 "Jos iho ei ole vielä valmis": lisäalueet hoidetaan kasvohoidon yhteydessä, joten kasvojen ihon kunto ratkaisee myös lisäalueiden ajoituksen, ja ProXN on kaksivaiheisen reitin ensimmäinen vaihe. Lisäksi huomio siitä että kämmenselkien oma ihon kunto voi siirtää alueen hoitoa vaikka kasvot olisivat valmiit. 967 → 982 sanaa, `dateModified` ja article-meta 16.9.2026.
+- **`mita-mikroneulaus-ei-tee.html` auditoitu ja julkaistu.** Artikkeli oli ollut valmiina 12.8. alkaen mutta ei läpäissyt nykyisiä sääntöjä. Kahdeksan korjausta: **(1) otsikosta poistettiin "rehellinen katsaus"** neljästä paikasta (title, H1, og, twitter) ja kuvauksista, koska se on luvun 5 etuliitesääntö pahimmassa paikassa eli otsikossa. Uusi muoto "Mitä mikroneulaus ei tee: hoidon rajat ja mitä ne käytännössä tarkoittavat" kertoo sisällön otsikkosäännön mukaisesti. (2) Luvussa 5 nimetty rivi 210 "Kysymys ei ole siitä kumpi hoito on parempi" korjattu. (3) Kolme nimeämätöntä vaihtoehtoa nimetty: "kokonaan toisen lähestymistavan" → linkki aloitusajankohta-artikkeliin, "siirretään toiseen menetelmään" → ProXN nimetty, H2 "Milloin kannattaa harkita toista menetelmää" → "Mihin studiolla on toinen vastaus". (4) "Tämä ei tarkoita ettei vanhempia arpia kannattaisi hoitaa" korjattu. (5) "Sarjahoito ei ole lisämyyntiä vaan tulosten edellytys" oli puolusteleva vertailu, kirjoitettu myöntömuotoon.
+
+  **Korjauksen korjaus, käyttäjän huomautuksesta samana päivänä.** Ensimmäinen korjaukseni kohtaan 5 oli "Sarjahoito on siksi tulosten edellytys, **ei tehostus**", eli poistin kielletyn rakenteen ja kirjoitin saman rakenteen tilalle lievemmällä sanalla. Loppuhäntä on nyt poistettu kokonaan. **Tämä on täsmälleen sama virhe joka on kirjattu luvussa 5 ("poistin nämä rakenteet 11.8. aamulla ja kirjoitin saman rakenteen takaisin iltapäivällä"), eli virhe on toistunut kolmatta kertaa.** Opetus: kun tästä perheestä poistetaan rakenne, korvaava lause tarkistetaan erikseen, koska korjaaja kirjoittaa vaistomaisesti uuden vastakkainasettelun. Tarkistuskomento `grep -n ", ei [a-zäöå]*\.\|ei tarkoita\|ei sulje\|Kysymys ei ole"`.
+
+  Käyttäjä huomasi virheen siitä että esitin loppuraportissa "sarja ei ole lisämyyntiä" Reels-ideana, vaikka olin juuri poistanut saman lauseen artikkelista kiellettynä. (6) "On myös hyvä tietää, että" -etuliite poistettu. (7) **Asiavirhe korjattu:** artikkeli väitti että tutkimukset on tehty "kotikäyttöön tarkoitetulla rullalaitteella", vaikka ne tehtiin kliinisessä ympäristössä ammattilaisen toimesta. (8) Kielivirhe "seitsemän asiaa jotka mikroneulaus ei tee" (partitiivi puuttui, ja luku ei täsmännyt otsikoihin) poistettu. Lisäksi "invasiiviset menetelmät" avattiin ja nimettiin (laser, IPL, radiofrekvenssi, mikrodermabraasio, kemialliset kuorinnat). `datePublished` ja `dateModified` korjattu todelliseen julkaisupäivään 16.9.2026 luvun 7 ohjeen mukaisesti. 904 → 923 sanaa.
+- **Linkitykset tehty (käyttäjä hyväksyi).** Kortti `blogi.html`-tiedostoon ryhmään "sopiiko" uusimmaksi kiinnitettyjen jälkeen, uusi `<url>`-lohko `sitemap.xml`-tiedostoon, ja neljä sisääntulevaa linkkiä: `mikroneulaus-opas.html` (yhteenveto), `mikroneulaus-sopiiko-minulle.html` (Lue lisää), `aknearpien-hoito-mikroneulauksella.html` (realistiset odotukset) ja `mita-tutkimus-sanoo-mikroneulauksesta.html` (mitä tämä tarkoittaa käytännössä). Luku 16.8: orpo artikkeli ei sijoitu.
+- **Koko kansio käyty läpi saman perheen rakenteiden varalta** käyttäjän huomautuksen jälkeen. Kolme korjattua lisää: `mikroneulaus-kaula-dekoltee-kadet.html` ("Varovaisuus ei tarkoita pelkästään syvyyttä" → "Varovaisuus koskee syvyyden lisäksi"), `herkka-iho-ruusufinni-mikroneulaus.html` ja `mikroneulaus-sopiiko-minulle.html` ("Se ei tarkoita ettei ihollesi voi tehdä mitään" → "Iholle voidaan silti tehdä muutakin kuin odottaa", sivuston oma vakiintunut muoto), sekä `mita-on-kliininen-mikroneulaus.html` ("mutta se ei tarkoita että tuloksia ei synny" → "ja tuloksia syntyy silti").
+- **Kolme "ei tarkoita" -esiintymää jätettiin tarkoituksella paikalleen**, koska niissä kielto kantaa tietoa eikä vastaa esittämättömään väitteeseen: `ihonhoito-opas.html` ("Matala varmuus ei tarkoita ettei aine toimisi") avaa GRADE-termin jonka lukija muuten lukee väärin, `lomake.html` ("Kyllä ei tarkoita automaattisesti että hoito ei onnistu") estää esitietojen aliraportointia ja on turvallisuustoiminto, ja `mita-tutkimus-sanoo-mikroneulauksesta.html` ("perustuu histologiseen dataan, ei markkinointiväitteeseen") on näytön arviointia käsittelevän artikkelin ydinsanoma. Samoin `proxn-kasvohoito.html`:n "Kyse on hyödyn maksimoinnista, ei turvallisuudesta" ja "Kotihoito on lisä, ei edellytys" vastaavat kysymykseen jonka lukija oikeasti esittää. **Sääntö ei siis ole mekaaninen kielto sanalle, vaan koskee lauseita jotka vastaavat väitteeseen jota kukaan ei ole esittänyt.**
+- **Sitemapissa kymmenen `lastmod`-päivää päivitetty** ja tiedoston oma "Päivitetty"-kommentti 2026-08-06 → 2026-09-16.
+- **Tilanne julkaisujonossa:** jäljellä vain `mikroneulaus-talvella.html` (noindex-luonnos loka-marraskuulle). Live-artikkeleita on julkaisun jälkeen 14.
+
 ### 2026-09-10
 
 - **Viikoittainen blogiautomaatio: päivitys, ei uutta artikkelia (vaihtoehto B).** Luettiin kaikki 14 live-sitemapin sivua Chromella kokonaan läpi. Päivitettiin `mita-on-kliininen-mikroneulaus.html`, joka oli sivuston vanhin sisältö: näkyvä päivitysmerkintä 24.5.2026 eli 3,5 kuukautta vanha, ja se oli jäänyt pois sekä 17.8. ProXN-linkitysauditoinnista että kaikista sen jälkeisistä päivityskierroksista. Uusi H2 "Kun mikroneulaus ei ole oikea hoito" (ProXN-reitti, sama rakenne kuin sarjahoito-, milloin-aloittaa- ja jälkihoitoartikkeleissa), uusi H3 "Lue lisää" kolmella ristiinlinkillä, sekä neljä uutta inline-linkkiä (ensikäynti, jälkihoito, sarjahoito, aknearvet). Ulos osoittavia sisäisiä artikkelilinkkejä 3 → 11. **Korjattu bugi: `dateModified` oli 2026-06-17 mutta näkyvä article-meta 24.5.2026**, eli skeema ja sivu olivat ristiriidassa. Molemmat nyt 10.9.2026. Noin 980 → 1230 sanaa. Meta-kuvauksiin ei koskettu, koska artikkelin aihe ei muuttunut.
@@ -6585,7 +6628,7 @@ lopputulokset ja tilanne.
 
 ---
 
-**Viimeksi päivitetty**: 2026-08-12
+**Viimeksi päivitetty**: 2026-09-16
 
 
 ## 17.8.2026 — Varausmallin uudelleenjärjestely: ensikäynti ainoana ovena
@@ -9099,6 +9142,24 @@ Käyttäjä: *"voit kirjata päivitetyiksi."* Verkossa 13.9.2026:
   dateModified 13.9.)
 
 
+## 16.9.2026 — Ladattu GitHubiin
+
+Käyttäjä: *"ne on kunnossa jo."* Verkossa 16.9.2026:
+
+- `omavalvonta.html` (julkaistu, lyhennetty julkinen versio,
+  kanavien puhdistus menneessä aikamuodossa)
+- `assets/layout.js` (footer-linkki omavalvontasuunnitelmaan ja
+  valvontamaininta)
+- `assets/style.css` (`.footer__valvonta`)
+- `sitemap.xml` (omavalvonta.html lisätty)
+- `PROJECT.md`
+- `tuotanto/omavalvontasuunnitelma.docx` (ei verkossa, mutta
+  korvaa vanhan LUONNOS-tiedoston)
+
+Vanha `tuotanto/omavalvontasuunnitelma-LUONNOS.docx` jäi levylle ja
+voidaan poistaa.
+
+
 ## 15.9.2026 — Pohjakuva ja IV-selvitys toimitettu, asia päättynyt
 
 Todistuksen ainoa aikataulutettu velvoite hoidettu määräpäivänä.
@@ -9181,11 +9242,44 @@ puuttuvat vasta kun niitä tarvitaan.
 
 ### Avoimet jatkotoimet
 
-1. **Kanavien puhdistus 16.9.2026.** Sekä selvityksessä että
-   omavalvontasuunnitelmassa on luvattu että raportti arkistoidaan
-   omavalvonta-aineistoon.
+1. ~~Kanavien puhdistus 16.9.2026.~~ **Tehty 16.9.2026.**
+   Omavalvontasuunnitelma päivitetty menneeseen aikamuotoon samana
+   päivänä, päiväys 16.9.2026. Viranomaiselle 15.9. toimitetussa
+   selvityksessä lukee "puhdistetaan 16.9.2026", mikä oli totta
+   lähetyshetkellä. **Sitä ei lähetetä uudelleen**, koska asian
+   käsittely on päättynyt eikä viranomainen pyytänyt seurantaa.
+
+   **Puhdistustodistusta ei anneta.** Sekä selvityksessä että
+   omavalvontasuunnitelmassa luki ensin että "puhdistuksen raportti
+   arkistoidaan omavalvonta-aineistoon". Käyttäjä 16.9.: *"ei tule
+   erillistä todistusta."* Lupaus asiakirjasta jota ei ole olemassa on
+   tarkastuksella pahempi kuin ei lupausta lainkaan, joten
+   omavalvontasuunnitelman muotoilu vaihdettiin: työstä ei anneta
+   erillistä todistusta, joten ajankohta ja tekijä kirjataan
+   omavalvonta-aineistoon luvun 6 mukaisesti.
+
+   **Lasku on se todiste. Kirjattu 18.9.2026.** Käyttäjä toimitti
+   urakoitsijan laskun (`lasku_42_26849.pdf`) ja totesi että *"lasku
+   toimii myös todistuksena"*. Omavalvontasuunnitelmassa lukee nyt:
+   työn teki **Kanava et Hormi Oy**, erillistä puhdistustodistusta ei
+   anneta, ja tositteena on urakoitsijan lasku joka säilytetään
+   omavalvonta-aineistossa. Asiakirja viittaa siis olemassa olevaan
+   dokumenttiin eikä kirjaukseen joka pitäisi vasta tehdä.
+
+   Urakoitsijan nimi on kirjoitettu täsmälleen siinä muodossa jossa
+   käyttäjä sen antoi.
+
+   **Viranomaiselle lähtenyt selvitys lupaa yhä "raportin".** Jos
+   helmikuun tarkastuksella kysytään sitä, vastaus on että työstä ei
+   anneta erillistä todistusta ja että lasku on tosite.
+
+   **Laskua ei viety `C:\studiomahla`-kansioon.** Siinä on
+   liiketoimintatietoa, eikä ole varmaa onko repo julkinen. Tiedosto
+   säilyy käyttäjän omassa arkistossa. Samasta syystä laskusta
+   renderöity kuva kirjoitettiin Clauden istuntokansioon eikä
+   projektikansioon.
 2. **Seuraava tarkastus noin helmikuussa 2027.** Silloin kysytään
-   juuri tuuletuskäytäntöä.
+   juuri tuuletuskäytäntöä ja todennäköisesti myös puhdistusraporttia.
 ### Omavalvontasuunnitelma julkaistu 15.9.2026
 
 10.8.2026 kirjattu julkaisusuunnitelma toteutettu kokonaan. Sen kaksi
@@ -9302,6 +9396,45 @@ päälle, ja selvitys venyi kahdelle sivulle niin että toiselle jäi
 vain loppurivit.
 
 
+## 18.9.2026 — Sääntö: avatut ikkunat suljetaan
+
+Käyttäjä: **"Kun käytät tietokonetta ja avaat eri ohjelmia, kansioita
+ja ikkunoita niin sulje kaikki kun olet valmis. Muuten minulle jää
+helposti jopa kymmeniä turhia ikkunoita suljettavaksi."**
+
+**Sääntö: mitä avaan, sen myös suljen.** Resurssienhallinnan ikkunat,
+ohjelmat, välilehdet. Työn jälki ei ole vain tiedostoissa vaan myös
+siinä missä kunnossa kone jää.
+
+### Miksi niitä kertyi
+
+Skriptit ajetaan kaksoisklikkaamalla Resurssienhallinnassa, koska
+Linux-työtila ei ole käytettävissä (ks. 13.9.2026). Jokainen ajo
+tarkoitti navigointia kansioon, ja Explorer avaa herkästi uuden
+ikkunan vanhan sijaan. Kymmenen ajoa, kymmenen ikkunaa.
+
+### Pahin yksittäinen syy oli oma ajotiedosto
+
+`aja.bat` päättyi `pause`-komentoon, joten **jokainen ajo jätti
+komentoikkunan auki odottamaan näppäintä**. Näitä en itse edes pysty
+sulkemaan: komentoikkuna on rajoitetulla oikeudella, jossa
+näppäinsyöte ja sulkeminen on estetty.
+
+`pause` poistettiin `aja.bat`, `asenna_ffmpeg.bat` ja
+`etsi_python.bat` -tiedostoista. Se ei menetä mitään, koska kaikki
+tuloste kirjoitetaan jo `aja_loki.txt`-tiedostoon, jota luen
+suoraan. Ikkunan auki pitäminen palveli vain ihmiskäyttäjää joka ei
+lue lokia.
+
+### Käytännön muistilista
+
+1. Sulje Resurssienhallinnan ikkunat kun ajo on tehty.
+2. Sulje Chromen välilehdet jotka avasin (`tabs_close_mcp`).
+3. Älä jätä `pause`-komentoa uusiin ajotiedostoihin.
+4. Jos jokin ikkuna on rajoitetulla oikeudella eikä sitä voi sulkea,
+   kerro siitä käyttäjälle sen sijaan että jättäisi sen hiljaa.
+
+
 ## 13.9.2026 — Sääntö: käyttäjän ilmoitusta ei tarkisteta
 
 Käyttäjä pyysi kirjaamaan tiedostot päivitetyiksi. Avasin sen sijaan
@@ -9328,3 +9461,1011 @@ tekemää työtä.
 Aiempi 5.9. kirjattu sääntö ("verify mtimes ja tuotantosivu ennen
 kuin esität latauslistan") tarkoitti omia väitteitäni, ei käyttäjän
 ilmoituksia. Tarkennus kirjattu myös sinne.
+
+
+---
+
+## 18.9.2026 — Tummat silmänalukset: karboksiterapia ja verisuonilaser
+
+Käyttäjän kysymys: *"onko olemassa oikeasti tehokasta hoitoa tummiin
+silmänalusiin? Osa on geneettistä ja topikaalisesti voidaan hoitaa
+mutta onko pitkävaikutteista keinoa?"* ja tarkennus omasta
+havainnosta: *"verisuoniperäinen on isoin ongelma rakenteellisen
+lisäksi eli iän tuoma kuluma."*
+
+Ehdotin neljää suuntaa. Käyttäjä poisti mikroneulauksen listalta:
+**"Mikroneulaus ei sovellu alueelle jossa ei enää ole luuta alla eli
+iso osa silmänympärysihosta kuitenkin"** — tämä on oikein ja se
+kaataa kolme neljästä ehdotuksestani. Jäljelle jäi kaksi, jotka
+käyttäjä pyysi selvittämään: **karboksiterapia** ja
+**verisuonilaser**.
+
+Molemmat selvitettiin samalla tarkkuudella kuin HIFU 5.9.2026.
+**Lopputulos on sama kuin HIFUssa: kumpaakaan ei voi tehdä
+kauneushoitolana, mutta molemmat aukeavat terveydenhuollon
+toimintayksikkönä.** Kysymys ei ole siitä onko hoito studiolle
+mahdollinen, vaan siitä millä lupapohjalla se tehdään.
+
+### Tausta: periorbitaalisen tummuuden neljä tyyppiä
+
+| Tyyppi | Syy | Mitä hoito vaatii |
+|---|---|---|
+| Pigmentaarinen | Melaniini dermiksessä/epidermiksessä | Topikaalinen, kuorinta, pigmenttilaser |
+| Vaskulaarinen | Ohuen ihon läpi näkyvä laskimoverkko | Suonen sulkeminen tai ihon paksuntaminen |
+| Rakenteellinen | Tear trough -uurre, rasvatyynyn siirtymä, luukato | Volyymi tai kirurgia |
+| Sekamuoto | Yhdistelmä | Yhdistelmä |
+
+Kirjallisuus painottuu voimakkaasti tummaan ihoon (Fitzpatrick
+IV–VI, Intia, Lähi-itä, Itä-Aasia), koska siellä pigmentaarinen
+tyyppi on yleisin. Suomessa Fitzpatrick I–III:lla vaskulaarinen ja
+rakenteellinen painottuvat, mikä vastaa käyttäjän havaintoa.
+
+### 1. Karboksiterapia — kaksi täysin eri asiaa samalla nimellä
+
+**Tämä oli selvityksen tärkein löytö.** Sanalla "karboksiterapia"
+myydään Suomessa hoitoa, joka ei ole se hoito jota kirjallisuus
+tarkoittaa.
+
+| | Kirjallisuuden karboksiterapia | Suomen hoitoloiden "karboksiterapia" |
+|---|---|---|
+| Menetelmä | CO₂-kaasun ruiskutus neulalla ihonalaiskudokseen | CO₂-geeli + aktivoiva liina ihon pinnalle |
+| Aine | Lääkkeellinen hiilidioksidi | Kosmeettinen valmiste |
+| Ihon läpäisy | Kyllä | Ei |
+| Näyttö silmänalusiin | Pieniä sarjoja, ruiskutusmenetelmällä | Ei siirry — eri menetelmä |
+
+Tarkistetut esimerkit:
+
+- Ihonhoitoklinikka Kariniemi: *"hiilidioksidi (CO²) ohjataan ihoon
+  tuotteilla ja painelulla"*
+- L-Beauty: *"Carboksi-hoidossa käytettään carboksi geeliä sekä
+  aktivoivaa liinaa. Kun aktivoiva liina asetetaan geelin päälle, se
+  synnyttää hiilidioksidikuplia."* ja *"täysin ilman laitteita
+  suoritettava hoito"*
+
+Geelihoito on siis kosmetiikkaa ja täysin sallittua, mutta se ei ole
+sama hoito josta tutkimusnäyttö kertoo. **Jos studio myisi geeliä ja
+viittaisi ruiskutustutkimuksiin, se olisi harhaanjohtavaa
+markkinointia.**
+
+#### Ruiskutettava karboksiterapia ei ole studiolle mahdollinen
+
+Suomessa on myyntilupa yhdelle lääkkeelliselle hiilidioksidille:
+**Lääkehiilidioksidi AWO 100 %, Woikoski Oy, myyntilupa 37732.**
+Valmisteyhteenvedosta:
+
+- Käyttöaihe: *"Hypokapnian ehkäisy eukapnisen hyperventilaatiokokeen
+  yhteydessä."* Ei mitään ihoon liittyvää.
+- Antotapa: *"Hiilidioksidia annetaan inhalaationa keuhkojen kautta.
+  Hiilidioksidia saa antaa vain lääkärin suorassa valvonnassa."*
+
+Ihonalainen ruiskutus kosmeettiseen tarkoitukseen olisi siis
+**reseptilääkkeen käyttöaiheen ulkopuolista käyttöä**. Sen voi
+määrätä vain lääkäri, ja lääkkeen antaminen on lääkehoitoa. Studio ei
+saa lääkettä apteekista eikä saa antaa sitä.
+
+Tähän tulee päälle vielä se, että ihon läpäisevä injektio on
+hoitotoimenpide. Botuliinin osalta STM ja Valvira ovat linjanneet
+että antaminen on terveydenhuoltoa **hoidon tarkoituksesta
+riippumatta**. Lääkkeellisen kaasun ruiskutus on vähintään yhtä
+selvä tapaus.
+
+**Johtopäätös: ei kauneushoitolana. Toteutettavissa terveydenhuollon
+toimintayksikkönä, mutta vaatii kolme asiaa yhtä aikaa: lääkärin joka
+määrää lääkkeen, lääkehoitosuunnitelman ja lääkkeen hankintakanavan.
+Tämä on raskaampi kuin laserin vaatimukset, koska kyse on
+lääkehoidosta eikä laitehoidosta. Lisäksi näyttö on ohutta: pieniä
+sarjoja, ei vertailukelpoista aineistoa suomalaiseen ihotyyppiin.
+**Ei ensimmäinen laajennus.**
+
+### 2. Verisuonilaser — teho ensin, sääntely vasta sitten
+
+**Vastaako laser tähän vaivaan?** Vastaa, mutta vain siihen osaan
+jonka käyttäjä nimesi isoimmaksi: vaskulaariseen. Ja tarkemmin
+sanottuna **näkyviin suoniin**, ei hajanaiseen tummuuteen.
+
+| Tutkimus | Aineisto | Tulos |
+|---|---|---|
+| Kim ym. 2012, Dermatol Surg | 26 potilasta, Nd:YAG 1064 nm, 130–140 J/cm², 6 mm, kaksoispulssi 6–10 ms | Objektiivinen paranema 5/5 kaikilla, tyytyväisyys 3/3 kaikilla, seuranta 12 kk |
+| Mandavia ym. 2024, J Cosmet Dermatol | Systemaattinen katsaus (3 artikkelia) + 34 potilaan sarja, 1064 nm siniset / 532 nm punaiset | Keskimääräinen paranema 4,8/5, täysi tyytyväisyys, toipuminen 1 vrk |
+| Haittavaikutukset | molemmat | Kipu, punoitus, turvotus, mustelma, harvoin rakkula |
+
+Nämä ovat kauneudenhoidon mittapuulla poikkeuksellisen vahvoja
+tuloksia: 100 % puhdistuma 26/26 potilaalla ja vuoden seuranta. Syy
+on se että mekanismi on lopullinen — suoni koaguloituu ja häviää, se
+ei palaudu kuten kollageenivaikutus hiipuu.
+
+**Kaksi rajausta jotka on pidettävä mielessä:**
+
+1. **Indikaatio on näkyvä suoni.** Kim ym. muotoilevat sen itse:
+   *"selectively removes visible prominent veins"*. Jos asiakkaan
+   tummuus on hajanaista varjostumaa ilman erottuvaa suonta,
+   kohdetta ei ole.
+2. **Rakenteelliseen osuuteen se ei vaikuta.** Tear trough -uurre,
+   rasvatyynyn siirtymä ja luukato jäävät ennalleen. Käyttäjä nimesi
+   nämä toiseksi pääsyyksi. Sekamuotoisessa tapauksessa laser hoitaa
+   puolet ongelmasta.
+
+Näyttö on siis **vahvempaa kuin studion nykyisillä hoidoilla**, mutta
+kapeampi kuin "hoito tummiin silmänalusiin" antaa ymmärtää. Asiakkaan
+tyyppi pitää määrittää ennen kuin hoitoa luvataan.
+
+### Miksi sitä ei voi tehdä kauneushoitolana
+
+Sovellettava normi on sama kuin HIFUssa: **säteilylaki 859/2018
+§ 162** koskee toimintaa *muualla kuin terveydenhuollon
+toimintayksikössä*, ja rajat antaa **STUK S/11/2024**. Optiselle
+säteilylle rajat ovat **§ 6**.
+
+§ 6 sallii altistuksen raja-arvojen ylityksen kahdella tavalla:
+
+**Momentti 1.** Laite täyttää standardin **SFS-EN 60335-2-113**
+vaatimukset. Standardin soveltamisala kattaa nimenomaan myös
+kauneushoitoloissa käytettävät laitteet, joten tämä on se reitti
+jolla hoitoloiden IPL-laitteet toimivat.
+
+**Momentti 2.** Muu laser- tai valoimpulssilaite, jos kaikki
+täyttyvät:
+
+1. ei alle 400 nm säteilyä
+2. **kivunlievitystä tai ihon jäähdytystä ei käytetä**
+3. toimenpide keskeytetään heti jos tulee kipua
+4. laserilla: **altistuksen kesto > 0,25 s** ja **säteilyteho
+   enintään 500 mW mitattuna 3,5 mm:n apertuurissa**
+
+#### Mitä hoito oikeasti vaatii
+
+Kirjallisuuden parametrit silmänalusen laskimoille (pitkäpulssinen
+Nd:YAG 1064 nm):
+
+| Parametri | Kirjallisuus | S/11/2024 § 6 mom. 2 |
+|---|---|---|
+| Pulssin kesto | 3–20 ms | > 250 ms |
+| Fluenssi | 100–200 J/cm² | — |
+| Spotti | 1–6 mm | 3,5 mm apertuuri |
+| Teho | ~500 W (140 J/cm², 3 mm, 20 ms) | ≤ 0,5 W |
+| Ihon jäähdytys | Käytetään, välttämätön epidermiksen suojaksi | Kielletty |
+| Silmäsuojat | Sarveiskalvon alle asetettavat metallikuvut | — |
+
+**Ero tehossa on noin tuhatkertainen.** Rajan sisällä toimiva laser
+antaisi 0,5 W × 0,25 s ≈ 0,125 J, kun yksi hoitopulssi on ~10 J. Se
+ei sulje suonta — se on LLLT-tason valo.
+
+Momentti 1:n reitti ei auta: 60335-2-113 -laitteet ovat
+hoitola-IPL:iä ja diodilaitteita, jotka eivät tuota 1064 nm:llä
+sadan joulen fluensseja. Lisäksi tämän indikaation kohde on
+**syvä retikulaarinen laskimoverkko**, ei pinnallinen teleangiektasia
+— IPL:n 500–600 nm ei yllä sinne.
+
+STUK sanoo saman asian suoraan kauneudenhoitoalan sivullaan:
+
+> *"Liian tehokkaan kauneudenhoitolaitteen käyttö ei ole sallittua
+> terveydenhuollon yksiköiden ulkopuolella."*
+> *"suuren säteilytehon tuottamiseen kykenevien laitteiden käyttö on
+> sallittua vain terveydenhuollon yksiköissä."*
+
+Lisäksi MDR:n liite XVI ja komission täytäntöönpanoasetus **(EU)
+2022/2346** luokittelevat ei-lääkinnälliseen ihonhoitoon tarkoitetut
+suuritehoiset valolaitteet **luokkaan IIb**, kun käyttö on muuta kuin
+karvanpoistoa. Teleangiektasian hoito mainitaan asetuksessa
+nimenomaisesti. Kyse ei siis ole hoitolalaitteesta vaan
+lääkinnällisestä laitteesta.
+
+**Johtopäätös: ei kauneushoitolana, mutta terveydenhuollon
+toimintayksikössä rajat eivät koske toimintaa lainkaan.** § 162
+koskee vain toimintaa *muualla kuin* terveydenhuollon
+toimintayksikössä, ja STM:n asetuksen raja-arvoja ei sovelleta kun
+säteily kohdistetaan ihmiseen *"lääkärin määräämässä tutkimus- tai
+hoitotoimenpiteessä"*.
+
+**Tämä on sama ratkaisu kuin aknepolussa (luku 14) ja HIFUssa.**
+Verisuonilaser ei siis ole erillinen hanke vaan yksi peruste lisää
+samalle askeleelle: kun studio rekisteröityy Soteriin ja ottaa
+lääkärin, sekä aknehoito, HIFU että verisuonilaser aukeavat samalla
+kertaa. Laser on näistä se jolla on vahvin näyttö ja selkein
+indikaatio.
+
+### Saako lähihoitaja tehdä laserhoidon terveydenhuollon yksikössä?
+
+Selvitetty 18.9.2026 käyttäjän kysymyksestä. **Saa — laki ei varaa
+laserhoitoa millekään ammattiryhmälle.** Kolme normia tarkistettiin.
+
+**1. Säteilylaki 859/2018, 19 luku (ionisoimaton säteily).**
+Luvussa ei ole yhtään pätevyysvaatimusta hoidon tekijälle.
+§§ 165–169 (suuritehoinen laserlaite, lupa, vastuuhenkilö,
+omavalvonta) koskevat vain laseria *"valotehosteena, mainoksessa,
+taideteoksessa tai muussa näihin rinnastettavassa esityksessä tai
+pelissä"* — eivät hoitoa. § 162:n kosmetiikkarajat koskevat vain
+toimintaa muualla kuin terveydenhuollon toimintayksikössä.
+
+⚠ **Huomioitava: § 164.** Ionisoimattoman säteilyn lääketieteellisestä
+käytöstä on tehtävä **ilmoitus STUKille viimeistään 30 päivää ennen
+aloittamista**, jos väestölle aiheutuva altistus ylittää yhden
+kymmenesosan raja-arvosta tai muuten aiheuttaa terveyshaitan riskin.
+Tämä on erillinen velvoite eikä liity siihen kuka hoidon tekee.
+
+**2. Laki terveydenhuollon ammattihenkilöistä 559/1994, § 2 mom. 2.**
+Suomen järjestelmä on osaamisperusteinen, ei nimikeperusteinen:
+
+> *"Nimikesuojattujen ammattihenkilöiden ammatissa voivat toimia
+> muutkin henkilöt, joilla on riittävä koulutus, kokemus ja
+> ammattitaito. Tämä ei kuitenkaan estä... laillistettuja, luvan
+> saaneita tai nimikesuojattuja ammattihenkilöitä koulutuksensa,
+> kokemuksensa ja ammattitaitonsa mukaisesti toimimasta toistensa
+> tehtävissä silloin, kun se on perusteltua työjärjestelyjen ja
+> terveyspalvelujen tuottamisen kannalta."*
+
+Lähihoitaja on nimikesuojattu ammattihenkilö. Mikään säädös ei varaa
+laserhoitoa lääkärille tai laillistetulle ammattihenkilölle.
+
+**Botuliinin linjaus ei siirry tähän.** STM ja Valvira rajasivat
+botuliinin lääkärille tai laillistetulle ammattihenkilölle lääkärin
+valvonnassa, koska kyse on **lääkkeen antamisesta**. Laser on
+laitehoito, ei lääkehoitoa. Sama ero erottaa laserin myös
+karboksiterapiasta.
+
+**3. Laki lääkinnällisistä laitteista 719/2021, § 32.** Tästä tulevat
+todelliset reunaehdot. Ammattimaisella käyttäjällä on oltava
+**vastuuhenkilö**, ja käyttäjän on varmistuttava muun muassa että:
+
+> *"1) henkilöllä, joka käyttää lääkinnällistä laitetta, on sen
+> turvallisen käytön vaatima koulutus ja kokemus"*
+> *"4) laitetta käytetään valmistajan ilmoittaman käyttötarkoituksen
+> ja -ohjeistuksen mukaisesti"*
+
+Ja: *"Ammattimaisen käyttäjän on pystyttävä todentamaan"* että näitä
+noudatetaan. Kohta 4 on ratkaiseva: **jos valmistajan käyttöohje
+rajaa käyttäjäksi lääkärin, se sitoo** riippumatta siitä mitä
+ammattihenkilölaki sallii. Tämä on kysyttävä jokaiselta
+laitetoimittajalta ennen hankintaa.
+
+**Neljäs ehto tulee säteilypuolelta:** raja-arvoista vapautuminen
+edellyttää että säteily kohdistetaan *"lääkärin määräämässä
+tutkimus- tai hoitotoimenpiteessä"* (STM 1045/2018). Lääkärin on
+siis **määrättävä hoito**, vaikka ei tee sitä itse. Se ei ole
+muodollisuus: se tarkoittaa lääkärin tekemää arviota siitä että
+tummuus on vaskulaarista ja laser on oikea hoito.
+
+**Yhteenveto työnjaosta:**
+
+| Vaihe | Kuka |
+|---|---|
+| Diagnoosi: tyyppi ja hoidon aiheellisuus | Lääkäri (559/1994 § 22, STM 1045/2018) |
+| Hoitomääräys | Lääkäri |
+| Hoidon suorittaminen | Lähihoitaja, **jos** koulutus ja kokemus riittävät ja valmistajan käyttöohje sallii |
+| Osaamisen todentaminen | Palveluntuottaja (719/2021 § 32) |
+| Laitevastuu | Nimetty vastuuhenkilö (719/2021 § 32) |
+
+**Avoin kysymys ennen laitehankintaa:** mitä valmistajan käyttöohje
+sanoo käyttäjän pätevyydestä. Tämä ratkaisee asian käytännössä.
+
+### Laserin muut käyttöaiheet — miksi tämä on isompi asia kuin silmänalukset
+
+Käyttäjän huomio 18.9.2026: *"Laserilla voisi hoitaa muutakin joten
+tämä voisi olla jollain aikavälillä mielenkiintoinen."*
+
+Oikea havainto, ja se kääntää asetelman. Silmänalukset ovat kapea
+käyttöaihe. Sama 532 + 1064 nm -alusta kattaa paljon laajemman
+kirjon, ja **suurin volyymi on kasvojen punoituksessa, ei
+silmänaluksissa.**
+
+| Käyttöaihe | Aallonpituus | Näyttö |
+|---|---|---|
+| Kasvojen telangiektasiat | 532 / 1064 | 125/130 (97 %) parani |
+| Ruusufinni, erytematoteleangiektaattinen | 532 / 1064 | Useita tutkimuksia, molemmat toimivat |
+| Rubiinitäplät (spider angiooma) | 1064 | 26/26 (100 %) parani |
+| Silmänalusen laskimot | 1064 | 26/26, seuranta 12 kk |
+| Jalkojen pintasuonet | 1064 | 80/99 (81 %) — heikoin |
+| Aknen punoitus | 1064 | Alustava |
+
+Aallonpituudet täydentävät toisiaan: **532 nm** osuu oksihemoglobiinin
+absorptiohuippuun ja hoitaa pinnalliset suonet, **1064 nm** läpäisee
+syvemmälle ja kilpailee vähemmän melaniinin kanssa. Yksi
+aallonpituus ei riitä kaikkeen.
+
+**Kolme syytä miksi tämä sopii juuri tälle studiolle:**
+
+1. **Suomalainen ihotyyppi on lasersuotuisa.** Fitzpatrick I–III
+   tarkoittaa vähän melaniinia kilpailemassa kromoforina. Sama syy
+   miksi vaskulaarinen tyyppi ylipäänsä painottuu täällä.
+2. **Ruusufinni ja couperosa ovat krooninen vaiva.** Toistuvat
+   käynnit, ei kertahoito. Tämä on eri asiakasprofiili kuin akne.
+3. **Ei toistuvaa ainekustannusta.** Toisin kuin aknepolku
+   (isotretinoiini, laboratorio) tai karboksiterapia (lääkeostot),
+   laser on kertainvestointi. Kate paranee volyymin myötä.
+
+**Mitä tämä muuttaa Vaihe 3:ssa:** aknepolun ei enää tarvitse yksin
+kantaa lääkärin ja Soteri-rekisteröinnin kiinteää kustannusta.
+Kaksi eri asiakasryhmää samalla lupapohjalla ja samalla lääkärillä.
+
+### Mikä laser on tehokkain? (selvitetty 18.9.2026)
+
+Käyttäjän kysymys. **Yhtä tehokkainta ei ole — valinta määräytyy
+suonen syvyyden ja koon mukaan.** Kolme vakavasti otettavaa
+vaihtoehtoa, ja neljäs joka ei ole laser.
+
+| | PDL 585/595 nm | KTP 532 nm | Nd:YAG 1064 nm |
+|---|---|---|---|
+| Ulottuvuus | Pinnallinen–keskisyvä | Pinnallisin | **Syvin** |
+| Asema | Dokumentoitu gold standard kasvojen punoituksessa | Vertautuu PDL:ään | Paras syviin ja isoihin suoniin |
+| Melaniinikilpailu | Kohtalainen | **Suurin** | **Pienin** |
+| Tyypillinen haitta | **Purppura** (näkyvä mustelma päiviä) | Vähemmän reaktioita kuin PDL | Kapein turvamarginaali, arpiriski |
+| Kipu | 4,1/10 | **2,5/10** | Suurin |
+
+**Suorat vertailut:**
+
+- **KTP vs. PDL** (split-face, kasvojen telangiektasiat ja punoitus):
+  KTP tehokkaampi, mutta haittavaikutuksia enemmän. Toisessa
+  tutkimuksessa KTP:llä **vähemmän** jälkireaktioita ja selvästi
+  vähemmän kipua (2,5 vs. 4,1). Tulokset eivät ole yhdensuuntaisia —
+  laiteparametrit vaihtelevat.
+- **Nd:YAG vs. PDL** (erytematoteleangiektaattinen ruusufinni, 3
+  hoitokertaa): erinomainen vaste **73,3 % vs. 53,3 %** Nd:YAG:n
+  hyväksi.
+- **PDL vs. IPL**: meta-analyysi olemassa; PDL edellä.
+
+**Studion kannalta vastaus on aallonpituuspari, ei yksi laite.**
+
+Perustelu: studion kaksi kiinnostavinta käyttöaihetta ovat eri
+päissä syvyysasteikkoa. Silmänalusen laskimot ovat **syviä ja
+isokaliiperisia** — vain 1064 nm yltää niihin, eikä PDL tai KTP ole
+niihin vaihtoehto. Couperosa ja ruusufinni ovat **pinnallisia** —
+532 nm osuu oksihemoglobiinin absorptiohuippuun ja hoitaa ne
+tarkimmin.
+
+**532 + 1064 kattaa siis koko kirjon.** PDL jäisi väliin: se on
+yksinään paras jos tekee vain kasvojen punoitusta, mutta se ei
+korvaa 1064:ää syvissä suonissa eikä tuo mitään mitä pari ei jo
+kata. Lisäksi purppura on asiakkaalle huono ominaisuus
+kauneudenhoidollisessa hoidossa.
+
+**Fitzpatrick I–III tekee valinnasta helpomman.** KTP 532 nm:n
+suurin heikkous on melaniinikilpailu, joka on ongelma tummalla
+iholla. Suomalaisella ihotyypillä tuo heikkous ei realisoidu.
+
+⚠ **Nd:YAG on näistä vaarallisin väärin käytettynä.** Korkeat
+fluenssit, kapea turvamarginaali, arpi- ja haavaumariski. Tämä on
+suoraan yhteydessä edellisen osion kysymykseen käyttäjän
+pätevyydestä: mitä enemmän 1064 nm:ää käytetään, sitä painavampi
+peruste valmistajalla on rajata käyttäjä.
+
+### Arpi- ja ryppylaserit ovat eri laiteperhe (selvitetty 18.9.2026)
+
+Käyttäjän kysymys: *"Laserilla hoidetaan myös syviä arpia ja ryppyjä,
+mikä tyyppi tässä on?"*
+
+**Tämä on kokonaan eri laite, ei sama alusta eri asetuksilla.**
+Ero on kromoforissa:
+
+| | Verisuonilaser | Pinnoituslaser |
+|---|---|---|
+| Kohde | **Hemoglobiini** | **Vesi** kudoksessa |
+| Aallonpituus | 532 / 595 / 1064 nm | 2940 / 10 600 nm |
+| Vaikutus | Suoni koaguloituu | Kudos höyrystyy, uusi muodostuu tilalle |
+
+532 + 1064 -alusta ei hoida arpia eikä ryppyjä lainkaan. Jos
+molempia halutaan, se on **kaksi laitetta**.
+
+#### Kolme tasoa pinnoituksessa
+
+| Laite | Teho | Toipuminen |
+|---|---|---|
+| **Fraktioitu CO₂ 10 600 nm** | Vahvin. Yli 50 % paranema **65 %:lla** | Pisin, suurin PIH-riski |
+| **Fraktioitu Er:YAG 2940 nm** | Lähellä CO₂:ta, vähemmän lämpövauriota | Lyhyempi |
+| **Ei-ablatiivinen 1540/1550/1927 nm** | Heikoin. Yli 50 % paranema **12,5 %:lla** (vs. CO₂ 37,5 % samassa tutkimuksessa) | Lyhyin |
+
+Ero ablatiivisen ja ei-ablatiivisen välillä on iso ja
+johdonmukainen: **fraktioitu ablatiivinen on tehokkaampi, kipu ja
+toipumisaika ovat hintana.** Tämä toistuu jokaisessa löytyneessä
+vertailussa.
+
+#### Ratkaiseva vertailu studiolle: CO₂ vs. mikroneulaus
+
+Tämä on se vertailu joka merkitsee, koska **mikroneulaus on jo
+olemassa.** Tutkimusnäyttö on yhdensuuntaista: molemmat parantavat
+atrofisia aknearpia, **CO₂ on tehokkaampi**, mutta toipumisaika on
+pidempi ja jälkipigmentaatiota tulee enemmän. RF-mikroneulaus
+asettuu näiden väliin, ja siitä on useita split-face-vertailuja
+CO₂:ta vastaan.
+
+**Tästä seuraa tärkein strateginen ero:**
+
+| | Verisuonilaser | Pinnoituslaser |
+|---|---|---|
+| Suhde nykyiseen | **Täysin uusi** — studiolla ei ole mitään vaskulaariseen | **Päällekkäinen** — mikroneulaus kattaa jo lievemmät tapaukset |
+| Lisäarvo | Uusi asiakasryhmä | Sama asiakasryhmä, syvempi pää |
+
+Verisuonilaser avaa oven jota ei ole. Pinnoituslaser syventää ovea
+joka on jo auki. **Se puoltaa verisuonilaseria ensin**, jos
+valitaan vain yksi.
+
+#### Sääntely: sama ovi
+
+⚠ **Oma päättely, ei viranomaislähde.** Fraktioitu CO₂ ei mahdu
+S/11/2024 § 6 momentti 2:n rajoihin: pulssit ovat mikrosekunneista
+millisekunteihin ja teho on suuri, joten 0,25 s ja 500 mW eivät
+täyty. Lisäksi hoito tehdään käytännössä puudutusvoiteen kanssa, ja
+momentti 2 kohta 2 kieltää kivunlievityksen nimenomaisesti.
+
+Eli sama johtopäätös kuin verisuonilaserissa ja HIFUssa:
+**terveydenhuollon toimintayksikkö.** Kaikki kolme laiteperhettä
+avautuvat samalla askeleella.
+
+### Verisuonilaserin hintataso (selvitetty 18.9.2026)
+
+Käyttäjä: *"Vaikka valmistajat pitävät hintoja piilossa niin aivan
+varmasti on olemassa suhteellisen tarkkaa dataa EU alueelta
+hankittavista laitteista."* Pitää paikkansa — jälkimarkkinalla on
+julkisia pyyntihintoja.
+
+**Referenssilaite: Cutera excel V / excel V+.** Tämä on 532 + 1064
+-yhdistelmän vakiolaite ja juuri se pari johon edellinen osio
+päätyi. Tekniset tiedot vastaavat kirjallisuuden parametreja:
+pulssi 8–60 ms, fluenssi enintään 170 J/cm².
+
+#### Todelliset pyyntihinnat, Bimedis-markkinapaikka (11 ilmoitusta)
+
+| Maa | Vuosimalli | Kunto | Hinta (USD) |
+|---|---|---|---|
+| Ranska | 2012 | Käytetty | **11 480** |
+| Ranska | 2012 | Käytetty | 18 368 |
+| Uusi-Seelanti | 2014 | Hyvä | 20 000 |
+| Ranska | 2014 | Käytetty | 21 238 |
+| Hongkong | 2018 | Käytetty | 30 000 |
+| USA | 2013 | Hyvä | 34 950 |
+| Australia | — | Hyvä | 46 235 |
+| USA | 2015 | Kunnostettu | 49 950 |
+| Kanada | 2024 | Erinomainen | **80 000** |
+
+Keskiarvo 34 692 USD, vaihteluväli 11 481–80 000 USD.
+
+**Hintahajonnan selittää lähes kokonaan ikä.** Halvimmat ovat
+2012–2014 -laitteita, siis 12–14 vuotta vanhoja. Kolme edullisinta
+ovat Ranskasta eli EU:sta.
+
+⚠ **KORJAUS 18.9.2026, käyttäjän huomautuksesta.** Esitin nämä
+ensin "EU-alueen hintadatana". Se oli virhe: **Bimedis hinnoittelee
+dollareissa kaikilla maaversioillaan.** Ranskan-sivun
+valuutanvalitsin näyttää USD ja ranskankielinen teksti sanoo
+*"Prix minimum pour Excel V s'élève à 11481 $"*. Maaversion
+vaihtaminen kääntää vain kielen, ei valuuttaa. Ranskalaisten
+myyjien ilmoitukset ovat aitoja, mutta luvut ovat sivuston
+muuntamia dollareita, eivät myyjän euromääräisiä pyyntihintoja.
+
+**Euromääräistä julkista hintaa 532 + 1064 -verisuonilaserille ei
+löytynyt.** Saksalaisella `docspartner.de`-jälleenmyyjällä on
+euromääräiset hinnat käytetyille esteettisille lasereille, mutta
+varastossa ei ollut yhtään verisuonilaseria.
+
+**Johtopäätös hintadatasta: julkista euromääräistä hintaa ei ole
+saatavilla, ja sen saa vain kysymällä.** Jälleenmyyjät ja
+valmistajat hinnoittelevat tarjouksesta. Jos hintataso halutaan
+tietää tarkasti, se vaatii kirjallisen tarjouspyynnön EU:n
+jälleenmyyjille — ei enempää verkkohakua.
+
+⚠ **Toinen virhe samassa vastauksessa, korjattu käyttäjän
+huomautuksesta.** Esitin taulukon karvanpoistolaitteiden
+euromääräisistä hinnoista "tasokalibrointina". Karvanpoistosta ei
+ole keskusteltu eikä se kiinnosta, ja diodilaserin hinta ei kerro
+verisuonilaserin hinnasta mitään — laiteluokka on eri.
+**Sääntö: kun pyydettyä lukua ei löydy, se sanotaan. Ei korvata
+sitä sinne päin olevalla luvulla toisesta laiteluokasta.**
+
+#### Uushinta ja käyttökustannus
+
+⚠ **Lähde thedevicepulse.com on arvostelusivusto, ei valmistaja.
+Lukuja ei ole vahvistettu.**
+
+| Erä | Arvio (USD) |
+|---|---|
+| Uusi excel V+ | 90 000–140 000 |
+| Käytetty jälkimarkkinalla | 35 000–70 000 |
+| **Kulutustarvikkeet / vuosi** | **1 500–4 000** |
+| **Huolto / vuosi** | **5 000–9 000** |
+
+#### Rakenne on eri kuin HIFUssa
+
+HIFUssa ratkaiseva luku oli kertakäyttöinen kartuska: kustannus
+kasvoi jokaisen hoidon mukana. **Laserissa kulutustarvike on
+pieni ja huolto on kiinteä.** Se kääntää logiikan päinvastoin:
+
+- Laite ei halpene hoitoa kohden kartuskaa vaihtamalla vaan
+  **volyymilla**
+- Noin 6 500–13 000 USD vuotuinen kiinteä kustannus juoksee
+  riippumatta siitä tehdäänkö hoitoja
+- ⚠ **Karkea suuruusluokka, ei laskelma:** pelkkä vuotuinen
+  kiinteä kustannus vastaa muutamaa kymmentä hoitoa. Todellinen
+  kannattavuusraja edellyttää hinnoittelupäätöstä, jota ei ole
+  tehty
+
+#### Kaksi riskiä jotka halpa laite tuo mukanaan
+
+1. **Ikä vs. huoltokustannus.** 11 000 dollarin vuoden 2012 laite
+   maksaa huollossa lähes saman verran joka vuosi. Varaosien
+   saatavuus 14 vuotta vanhaan laseriin on oma kysymyksensä.
+2. **Suomessa ei löytynyt Cuteran maahantuojaa.** Haku ei tuottanut
+   yhtään suomalaista edustajaa. Ilman kotimaista huoltoa laite on
+   rikkoutuessaan pitkään pois käytöstä. **Tämä on tarkistettava
+   ennen mitään hankintaa.**
+
+⚠ **Lähdekritiikki.** Bimedisin luvut ovat pyyntihintoja, eivät
+toteutuneita kauppahintoja. Sivustolla on oma *"Sellers blacklist"*
+-osio, mikä kertoo että markkinapaikalla esiintyy epäluotettavia
+myyjiä. Hinnat on esitetty dollareissa markkinapaikan
+Yhdysvaltain-sivulla, myös ranskalaisten myyjien kohdalla.
+
+⚠ **Suomalainen hakutulos `laserwell.fi` ei liity tähän.** Se myy
+Irradian LLLT-kipulasereita (904/808/635 nm, 240–1200 mW) 990–12 400
+euron hintaan. Eri laiteluokka kokonaan — nämä ovat juuri niitä
+matalatehoisia laitteita jotka mahtuvat S/11/2024:n rajoihin, eivätkä
+siksi tee mitään verisuonille. **Suomenkielinen haku "laserlaite"
+osuu tähän kategoriaan, ei esteettisiin lasereihin.**
+
+### Suomalainen maahantuoja: Scanex Medical (löydetty 18.9.2026)
+
+Käyttäjä pyysi etsimään suomalaisen maahantuojan tai valmistajan,
+joka **täyttää jo valmiiksi Suomen sääntelyn.**
+
+**Löytyi yksi vakavasti otettava: Oy Scanex Medical Systems Ab.**
+
+| | |
+|---|---|
+| Y-tunnus | 0971011-3 |
+| Osoite | Gunskogantie 108, 21600 Parainen |
+| Perustettu | Ruotsissa 1988, Suomeen 1995 |
+| Päämies | **Fotona** (Ljubljana, Slovenia, EU) — iholaserit ja hammaslaserit. Lisäksi GE Healthcare |
+| Tuoteryhmät | Iho- ja hammaslaserit, röntgen, sädehoito, luuntiheysmittaus |
+| Asiakkaat | **Sairaalat ja yksityisklinikat** |
+| Palvelu | Myynti, koulutus ja huolto |
+
+**Miksi tämä on oikea profiili:**
+
+1. **Suomalainen yhtiö, ei ulkomainen verkkokauppa.** 30 vuotta
+   Suomessa, oma huolto. Tämä korjaa sen ongelman joka Cuteran
+   kohdalla jäi auki: kotimaista huoltoa ei löytynyt.
+2. **Asiakaskunta on sairaalat ja klinikat, ei kauneushoitolat.**
+   Se sopii yhteen sen kanssa mihin tämä on menossa —
+   terveydenhuollon toimintayksikkö, ei hoitola.
+3. **Päämies on EU-valmistaja.** Fotona on slovenialainen ja
+   ilmoittaa itse: *"All Fotona medical lasers are CE marked and
+   cleared for sale in the EU."* MDR-polku on siis lähtökohtaisesti
+   kunnossa, toisin kuin kiinalaisissa kopiolaitteissa joista HIFUn
+   yhteydessä varoitettiin.
+
+⚠ **MITÄ EI EHDITTY VARMISTAA — hakukiintiö loppui 18.9.2026:**
+
+1. **Aallonpituudet.** Fotonan esteettiset alustat ovat
+   tiettävästi **Nd:YAG 1064 + Er:YAG 2940**, eivät 532 + 1064.
+   Jos näin on, se **ei ole se pari johon edellinen osio päätyi.**
+   1064 kattaa syvät suonet eli silmänalukset, mutta pinnallinen
+   couperosa jää ilman 532 nm:ää heikommalle. Toisaalta Er:YAG
+   2940 kattaisi arvet ja rypyt. **Tämä on tarkistettava ennen
+   mitään muuta.**
+2. **Onko Scanex rekisteröity Fimealle** laki 719/2021 § 49:n
+   edellyttämällä tavalla. Yritin EUDAMED-haun, mutta julkisen
+   rajapinnan reitti ei auennut. Suomeen sijoittautuneet
+   maahantuojat löytyvät EUDAMEDista, jakelijat CERE-rekisteristä.
+3. **Valmistajan käyttöohjeen pätevyysvaatimus** — ratkaisee
+   voiko lähihoitaja käyttää laitetta.
+4. **Hinta.** Ei julkinen. Vain tarjouspyynnöllä.
+
+**Muut löydökset samalta haulta:**
+
+- **Fotonan oma sivusto ei julkaise jälleenmyyjälistaa** — vain
+  yhteydenottolomake. Suomalaista edustajaa ei saa sieltä suoraan.
+- Suomalaisia klinikoita jotka jo käyttävät näitä: Revitaly
+  (Helsinki, Fotona Dynamis Max), Klinik Linnea (InMode
+  Vasculaze), Ihosairaala (verisuonimuutosten laserhoito),
+  Cityklinikka.
+- **InModen suomalaista maahantuojaa ei löytynyt** hauilla, vaikka
+  Vasculaze on Suomessa käytössä.
+
+⚠ **Selvittämättä ennen kuin tästä voi tehdä mitään päätöksiä:**
+
+1. Laitemarkkina: mitä 532 + 1064 -alustoja Suomeen myydään, hinta,
+   MDR-luokka ja ilmoitettu laitos. **Varoitus HIFU-selvityksestä:
+   kopiolaitteita on paljon ja hintatiedot verkossa ovat usein
+   kloonivalmistajien markkinointia.**
+2. **Valmistajan käyttöohjeen pätevyysvaatimus** — tämä ratkaisee
+   voiko lähihoitaja käyttää laitetta (ks. edellinen osio)
+3. Kilpailutilanne Kymenlaaksossa: kuka jo tarjoaa ja millä laitteella
+4. Lääkärin määräysvaatimuksen käytännön pullonkaula volyymille
+5. Kannattavuuslaskelma yhdessä aknepolun kanssa, ei erikseen
+
+**Ei tehdä mitään näistä ennen kuin käyttäjä pyytää.**
+
+### Mitä tästä seuraa studiolle
+
+1. **Tummiin silmänalusiin ei ole hoitoa jonka voi tehdä nykyisellä
+   lupapohjalla.** Asiakkaalle vastataan tämä, ei sitä että hoitoa ei
+   olisi olemassa.
+2. **Kysyntä on todellinen** (käyttäjän havainto) ja se on kolmas
+   itsenäinen peruste terveydenhuollon toimintayksiköksi
+   hakeutumiselle. Kaksi muuta ovat aknepolku (luku 14) ja HIFU
+   (5.9.2026). Kaikki kolme ratkeavat samalla askeleella.
+3. **Verisuonilaser kannattaa ottaa mukaan Vaihe 3:n laskelmaan.**
+   Se vaatii laitehankinnan mutta ei toistuvaa lääkeostoa, ja
+   kohderyhmä on eri kuin aknessa — se levittää saman lääkärin
+   kiinteän kustannuksen useammalle palvelulle.
+4. **Nykyinen laite hoitaa alueen juonteita, ei tummuutta.**
+   Käyttäjän oma rajaus. Tätä eroa ei saa hämärtää markkinoinnissa.
+5. **Jos "karboksiterapia" joskus harkitaan**, on kirjattava
+   nimenomaisesti että kyse on geelihoidosta, eikä
+   ruiskutustutkimuksiin saa viitata.
+
+### Lähteet
+
+- [STUK S/11/2024, määräys ionisoimattoman säteilyn käytöstä kosmeettisessa tai siihen verrattavassa toimenpiteessä](https://www.stuklex.fi/fi/maarays/stuk-s-11-2024)
+- [STUK: Tietoa kauneudenhoitoalan ammattilaiselle](https://www.stuk.fi/stuk-valvoo/sateilyn-kayttajalle/laseresitykset-solariumit-ja-kauneudenhoito/tietoa-kauneudenhoitoalan-ammattilaiselle)
+- [Fimea: Lääkkeelliset kaasut](https://fimea.fi/valvonta/laakkeelliset-kaasut)
+- [Valmisteyhteenveto: Lääkehiilidioksidi AWO 100 %, myyntilupa 37732](https://spc.fimea.fi/indox/nam/html/nam/humspc/6/23352406.pdf)
+- [Komission täytäntöönpanoasetus (EU) 2022/2346](https://eur-lex.europa.eu/eli/reg_impl/2022/2346)
+- [IEC 60335-2-113:2016, soveltamisala](https://webstore.iec.ch/en/publication/24535)
+- [Ihonhoitoklinikka Kariniemi: Karboksiterapia](https://klinikkakariniemi.fi/palvelut/kasvohoidot/karboksiterapia/)
+- [L-Beauty: Carboksi-terapia](https://l-beauty.fi/carboksi-terapia/)
+- [Mandavia ym. 2024: Treatment of periorbital veins with vascular laser](https://onlinelibrary.wiley.com/doi/10.1111/jocd.16334)
+- [Kim ym. 2012: Treatment of venous infraorbital dark circles using a long-pulsed 1,064-nm Nd:YAG laser](https://pubmed.ncbi.nlm.nih.gov/22621220/)
+- [Säteilylaki 859/2018, 19 luku (ionisoimaton säteily)](https://www.finlex.fi/fi/lainsaadanto/2018/859)
+- [Laki terveydenhuollon ammattihenkilöistä 559/1994](https://www.finlex.fi/fi/lainsaadanto/1994/559)
+- [Laki lääkinnällisistä laitteista 719/2021](https://www.finlex.fi/fi/lainsaadanto/2021/719)
+
+---
+
+## 24.9.2026 — Supabase muuttaa Data API:n oikeuksia 30.10.2026
+
+Supabasen tiedote käyttäjälle. **Ei vaadi toimenpiteitä nyt, mutta
+kirjataan koska tämä on ansa tulevaisuudessa.**
+
+### Mikä muuttuu
+
+30.10.2026 alkaen Supabase **lakkaa myöntämästä Data API -oikeuksia
+automaattisesti uusille `public`-skeeman tauluille** olemassa
+olevissa projekteissa. Uusi taulu tarvitsee nimenomaisen
+`GRANT`-lauseen, muuten API palauttaa *permission denied*.
+
+### Mitä tämä tarkoittaa studiomahla.fi:lle
+
+**Ei mitään rikkoudu.** Olemassa olevat taulut säilyttävät
+oikeutensa. Projektin kolme taulua ovat kaikki olemassa:
+
+| Taulu | Käyttö |
+|---|---|
+| `esitiedot` | Esitietolomake, admin-näkymä, keep-alive |
+| `hoitoloki` | Hoitokirjaukset |
+| `backup_codes` | Kaksivaiheisen tunnistuksen varakoodit |
+
+Kaksi seikkaa pienentää riskiä entisestään:
+
+1. **Repossa ei ole migraatiotiedostoja.** Haku `create table`
+   -lauseille ei tuottanut osumia eikä `supabase/migrations`-kansiota
+   ole. Taulut on luotu käsin Supabasen käyttöliittymässä, joten
+   korjattavaa koodia ei ole. Tiedotteen varoitus migraatioista ei
+   koske tätä projektia.
+2. **Kaikki pääsy on palvelinpuolelta `service_role`-avaimella**
+   Cloudflare Functionsista (`functions/api/*.js`). Selaimessa ei ole
+   Supabase-clientiä eikä anon-avainta — `lomake.html` mainitsee
+   Supabasen vain tietosuojatekstissä.
+
+### ⚠ Milloin tämä puree
+
+**Kun seuraavan kerran luodaan uusi taulu.** Aknepolku-suunnitelma
+(luku 14) edellyttää potilastietojen käsittelyä, eli uusia tauluja
+tulee. Jos grant unohtuu, oire on hämäävä: koodi näyttää oikealta,
+mutta API vastaa *permission denied*.
+
+**Sääntö: uuden taulun luonnin yhteydessä ajetaan aina myös
+grantit.** Tässä projektissa `anon` ja `authenticated` ovat
+tarpeettomia, koska selain ei koske Supabaseen suoraan — **pelkkä
+`service_role` riittää**, ja on tietoturvan kannalta parempi olla
+myöntämättä enempää kuin tarvitaan:
+
+```sql
+grant select, insert, update, delete
+on public.uusi_taulu
+to service_role;
+```
+
+⚠ **Varmistamatta:** myöntääkö Supabasen Table Editor grantit
+automaattisesti, kun taulu luodaan käyttöliittymän kautta. Tiedote
+puhuu migraatioista. Turvallisin tapa: tarkista luonnin jälkeen
+Data API -asetuksista että uusi taulu näkyy.
+
+---
+
+## 24.9.2026 — Linux-työtilan vika: todennäköinen syy löytyi
+
+Työtila on ollut rikki **8.9.2026 Windows-päivityksestä lähtien**
+(ks. aiemmat merkinnät). Virhe: *"VM connection timeout after 60
+seconds"*. Käyttäjä kysyi voiko työtilan asentaa uudelleen ilman
+että mitään katoaa.
+
+### Mitään ei katoa
+
+Anthropicin dokumentaation mukaan hiekkalaatikko on **määritelmän
+mukaan väliaikainen**: *"Each session gets its own sandbox, created
+when the session starts and destroyed when it ends."* Se tuhoutuu
+joka istunnon lopussa muutenkin.
+
+Tämän projektin mikään osa ei asu siellä:
+
+- `C:\studiomahla` on käyttäjän levyllä, luetaan tiedostotyökaluilla
+- `.venv` ja ffmpeg ovat Windowsissa, eivät Linuxissa
+- Generaattorit ajetaan `aja.bat`-tiedostolla, joka ei käytä
+  työtilaa lainkaan (kiertotie rakennettu 13.9.2026)
+
+### ⚠ Uudelleenasennus ei todennäköisesti korjaa tätä
+
+Dokumentaatio kertoo että **Cowork vaatii Windowsissa Virtual
+Machine Platform -ominaisuuden.** Jos se puuttuu tai sen palvelut
+eivät ole rekisteröityneet, Cowork ei käynnisty vaikka Claude
+olisi asennettu oikein. Tämä sopii aikajanaan: vika alkoi
+Windows-päivityksestä.
+
+**Diagnoosi (PowerShell):**
+
+```powershell
+Get-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Get-Service vmcompute, hns
+```
+
+**Korjaus jos ominaisuus on pois päältä (vaatii järjestelmänvalvojan
+oikeudet):**
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All
+```
+
+⚠ **Tärkein yksityiskohta:** dokumentaatio sanoo että kone on
+käynnistettävä uudelleen **Käynnistä uudelleen** -toiminnolla, ei
+sammuttamalla ja käynnistämällä. Windowsin Fast Startup jättää
+sammutussyklissä virtualisointipalvelut alustamatta. **Tämä voi
+yksinään selittää miksi vika on jatkunut kaksi viikkoa.**
+
+Jos koneella on VMware tai VirtualBox, tarkistettava myös että
+`bcdedit` näyttää `hypervisorlaunchtype = Auto`.
+
+Tarkka vikakohta näkyy Claude Desktopissa:
+**Help > Troubleshooting > Show Logs**, tiedosto
+`supported-features-info.json`.
+
+**Lähde:** [Deploy Claude Desktop for Windows](https://support.claude.com/en/articles/12622703-deploy-claude-desktop-for-windows)
+
+### Tarkistus ajettu 24.9.2026 — Windows ei ole syy
+
+Väitin ensin etten pysty ajamaan tarkistusta. **Se oli väärin.**
+Käyttäjä huomautti että sama kuvio on jo käytössä generaattoreissa:
+.bat kirjoittaa tulosteen lokiin, Claude lukee lokin. PowerShelliin
+ei tarvitse kirjoittaa mitään.
+
+**Uusi tiedosto: `tuotanto/_aja/tarkista_vm.bat` → `vm_tarkistus.txt`.**
+Ajettiin Resurssienhallinnan kautta (tier "click", kaksoisnapsautus
+riittää). Komennot on valittu toimimaan **ilman järjestelmänvalvojan
+oikeuksia**: `Win32_OptionalFeature` WMI:n kautta eikä
+`Get-WindowsOptionalFeature`.
+
+**Tulos: kaikki Windows-puolen edellytykset ovat kunnossa.**
+
+| Tarkistus | Tulos | Tulkinta |
+|---|---|---|
+| VirtualMachinePlatform | InstallState **1** | Käytössä ✓ |
+| Microsoft-Windows-Subsystem-Linux | InstallState 1 | Käytössä |
+| HypervisorPlatform | InstallState 2 | Pois, ei tarvita |
+| Palvelu `vmcompute` | **Running** (Manual) | ✓ |
+| Palvelu `hns` | **Running** (Manual) | ✓ |
+| HypervisorPresent | **True** | Hypervisor ajossa ✓ |
+| VirtualizationFirmwareEnabled | False | ⚠ Ei ongelma: kun hypervisor on jo käynnissä, `Win32_Processor` raportoi tämän falseksi. `HypervisorPresent: True` on ratkaiseva arvo |
+| Prosessori | Intel i9-13980HX | — |
+| Windows | 11 Home build 26200 | — |
+| Fast Startup | HiberbootEnabled **1** | Päällä |
+| Viimeisin käynnistys | 23.9.2026 16:34, käyttöaika 21 h | — |
+| Viimeisimmät päivitykset | KB5124009, KB5124010 (23.9.2026) | Kone on käynnistetty niiden jälkeen |
+| Aiemmat | KB5124007, KB5126052 (10.9.2026) | Lähellä vian alkua 8.9. |
+
+**Johtopäätös: tukiartikkelin pääasiallinen diagnoosi ei päde
+tähän koneeseen.** Virtual Machine Platform on päällä, palvelut
+pyörivät, hypervisor on ajossa. Vika ei ole Windowsin
+virtualisointipinossa.
+
+**Mitä tästä seuraa:**
+
+1. Koska Windows-puoli on kunnossa, **vika on todennäköisesti
+   Clauden omassa VM-imagessa tai palvelussa.** Silloin
+   *uudelleenasennus on oikea toimenpide* — toisin kuin arvioin
+   ennen tarkistusta.
+2. Fast Startup on päällä ja kone on ollut käynnissä 21 tuntia.
+   Lokista ei näe oliko viimeisin käynnistys aito
+   uudelleenkäynnistys vai sammutus + virta päälle. **Yksi
+   selvä "Käynnistä uudelleen" kannattaa tehdä ensin**, koska se
+   on ilmainen ja sulkee tämän pois.
+3. ⚠ **Koneella on Oracle VirtualBox.** Tukiartikkeli varoittaa
+   tästä yhdistelmästä ja kehottaa tarkistamaan että
+   `bcdedit` näyttää `hypervisorlaunchtype = Auto`.
+   `HypervisorPresent: True` viittaa siihen että asia on kunnossa,
+   mutta `bcdedit /enum` vaatii järjestelmänvalvojan oikeudet eikä
+   sitä ajettu.
+
+### ✅ RATKAISTU 24.9.2026: Fast Startup oli syy
+
+Käyttäjä teki **Käynnistä uudelleen** -toiminnon. Linux-työtila
+käynnistyi heti sen jälkeen normaalisti (`uname -a` vastasi, mountit
+`outputs`, `studiomahla` ja `uploads` näkyvät).
+
+**Vika kesti 8.9.–24.9.2026, eli yli kaksi viikkoa.** Sinä aikana
+kone oli varmasti käynnistetty monta kertaa — mutta *sammuttamalla
+ja laittamalla virta päälle*, ei uudelleenkäynnistyksellä.
+Windowsin **Fast Startup** (HiberbootEnabled = 1) tekee
+sammutuksesta hybridilepotilan, joka palauttaa vanhan kernel-tilan
+sen sijaan että alustaisi virtualisointipalvelut uudelleen.
+
+**Tämä selittää myös sen miksi tarkistus näytti kaiken kunnossa
+olevaksi:** `vmcompute` ja `hns` olivat *Running* ja
+`HypervisorPresent` oli *True*, mutta palvelut oli palautettu
+vanhasta tilasta eivätkä ne toimineet oikein. Palvelun tila ei siis
+kerro koko totuutta Fast Startup -koneella.
+
+**Sääntö jatkoon: jos työtila ei käynnisty, tee ensin
+"Käynnistä uudelleen" — ei sammutusta ja virtaa päälle.**
+Uudelleenasennusta ei tarvittu.
+
+Arvioin ennen tarkistusta että uudelleenkäynnistys voi yksinään
+riittää, ja tarkistuksen jälkeen käänsin kantaani ja pidin
+Clauden VM-imagea todennäköisempänä syynä. **Ensimmäinen arvio oli
+oikea.** Opetus: Fast Startup -koneella "palvelu on Running" ei
+tarkoita että palvelu on alustettu.
+
+### Sääntö: "en pysty" on tarkistettava ennen kuin se sanotaan
+
+Väitin ettei tarkistus onnistu, koska ajattelin vain kahta reittiä:
+Linux-työtilaa (rikki) ja terminaaliin kirjoittamista (estetty
+tier-rajoituksella). Kolmas reitti oli koko ajan olemassa ja
+projektissa jo käytössä: **kirjoita .bat, aja se
+Resurssienhallinnasta, lue loki.**
+
+**Ennen kuin sanon "en pysty", tarkistan onko projektissa jo
+olemassa oleva kiertotie samaan ongelmaan.**
+
+
+---
+
+## 25.9.2026 — Viikottaiset tehtävät yhdistetty, Reels laskettu yhteen
+
+Käyttäjä: *"Onko mahdollista yhdistää nuo nykyiset viikottaiset
+reelsit ja viikottainen blogi yhdeksi ajastetuksi tehtäväksi?
+Tehdään jatkossa myös vain yksi reels viikossa, en näe isoa hyötyä
+tehdä useampaa varsinkin kun käytännössä on isosti saman toistoa
+eri näkökulmista."*
+
+### Uusi tehtävä: `viikkosisalto`
+
+| | |
+|---|---|
+| Nimi | Viikon sisältö: blogi + yksi Reels |
+| Ajo | **Sunnuntaisin klo 18** (cron `0 18 * * 0`) |
+| Tiedosto | `C:\Users\jaakk\Claude\Scheduled\viikkosisalto\SKILL.md` |
+
+**Korvaa kaksi aiempaa.** `viikoittaiset-reelsit` (ma klo 8) ja
+`viikoittainen-blogiehdotus` (ke klo 9) **jätettiin pois käytöstä,
+ei poistettu** — käyttäjän valinta. Ne näkyvät yhä listalla mutta
+eivät aja. Palautus onnistuu kytkemällä ne takaisin päälle.
+
+⚠ `agape-viikkoraportti` on eri yrityksen (Agape Palvelut Oy)
+tehtävä eikä liity tähän. Sitä ei koskettu.
+
+### Miksi yhdistäminen kannatti muutenkin kuin siisteyden vuoksi
+
+**Molemmat tehtävät lukivat koko blogikirjaston Chromella
+erikseen.** Blogitehtävä luki jokaisen artikkelin
+artikkelipäätöstä varten, Reels-tehtävä luki ne uudestaan
+ideapankin täydennystä varten. Nyt luenta tehdään **kerran** ja se
+palvelee molempia.
+
+Toinen etu: koska blogin viikkotoimi saa olla myös "ei julkaista
+mitään" (vaihtoehto C), yhdistetty tehtävä tuottaa Reelsin
+silloinkin kun blogiin ei kosketa. Aiemmin C tarkoitti että
+kyseinen ajo ei tuottanut mitään.
+
+**Yksi muutos aiempaan logiikkaan:** jos Claude in Chrome ei ole
+yhteydessä, tehtävä **ei enää keskeydy kokonaan**. Se tekee
+Reelsin ideapankista ja jättää blogiosuuden ja ideapankin
+täydennyksen tekemättä, ja kertoo sen raportissa. Vanha
+blogitehtävä keskeytti koko ajon.
+
+### Reels: kaksi → yksi viikossa
+
+Kirjattu META-MARKKINOINTI.md lukuun 3.2 otsikolla *"Tahti
+laskettu yhteen Reelsiin 25.9.2026"*.
+
+**Tämä ei ole poikkeama suunnitelmasta vaan sen aikaistus.** Luvun
+3.2 vaiheistus tiputti Reelsit yhteen jo alun perin marraskuussa.
+Muutos tehtiin kuusi viikkoa etuajassa, koska käyttäjän havainto
+toistosta osoittautui todeksi aiemmin kuin oletettiin.
+
+Syy toistoon: ideapankki on rakennettu samoista
+lähdeartikkeleista, ja vanha sääntö vaati vain että viikon kaksi
+Reelsiä tulevat **eri pääluvusta**. Se esti ilmeisen jankkaamisen
+muttei sitä että molemmat päätyvät samaan ydinviestiin eri reittiä.
+
+**Vastapaino uudessa ohjeessa:** kun viikossa on vain yksi Reels,
+sen on kannettava enemmän. Uusi tehtävä edellyttää siksi
+**★★★-idean suosimista** ja perustelua valinnalle. ★★- tai
+★-idean saa valita vain jos ★★★-ideoita ei ole jäljellä tai jokin
+on poikkeuksellisen ajankohtainen. Raportissa kerrotaan myös
+montako ★★★-ideaa on jäljellä.
+
+Sivuvaikutus: 40 idean pankki riittää yhden viikkotahdilla lähes
+vuoden kahden sijaan, joten vaiheen 8 täydennys tulee harvemmin
+vastaan.
+
+### ⚠ Ennen ensimmäistä automaattiajoa
+
+Tehtävä käyttää Claude in Chromea. Ajastetut ajot voivat pysähtyä
+lupakyselyyn, jos työkaluja ei ole hyväksytty etukäteen.
+**Kannattaa painaa "Run now" kerran**, jotta luvat tallentuvat
+tehtävälle ja sunnuntain ajo menee läpi ilman keskeytystä.
+
+
+---
+
+## 25.9.2026 — Raakakuvakansio ja ensimmäinen .gitignore
+
+Kuvaussessio studiolla **ti 29.9.2026**, kuvat kuvaajalta ke tai to.
+Käyttäjä kysyi miten ne kannattaa toimittaa.
+
+### Ongelma: repossa ei ollut .gitignore-tiedostoa
+
+`C:\studiomahla` julkaistaan GitHubiin ja sieltä Cloudflare
+Pagesiin. **Kaikki mikä kansiossa on, menee julkaisuputkeen.**
+Kuvaussession raakakuvat ovat satoja megatavuja tai gigatavuja;
+vertailuksi nykyiset `assets/`-kuvat ovat 20–120 kt kappale.
+
+Ennen tätä päivää repossa **ei ollut lainkaan `.gitignore`-tiedostoa.**
+
+### Ratkaisu
+
+| | |
+|---|---|
+| Uusi kansio | `C:\studiomahla\_kuvat` |
+| Uusi tiedosto | `C:\studiomahla\.gitignore` |
+| Ohje kansiossa | `_kuvat\LUE-TAMA.txt` |
+
+`.gitignore` rajaa pois:
+
+- `_kuvat/` — raakakuvat
+- `tuotanto/generaattorit/.venv/`, `__pycache__/`, `*.pyc`
+- ajolokit: `aja_loki.txt`, `python_haku.txt`, `ffmpeg_asennus.txt`, `vm_tarkistus.txt`
+- `*.tmp`, `Thumbs.db`, `desktop.ini`, `.DS_Store`
+
+⚠ **`.gitignore` vaikuttaa vain uusiin tiedostoihin.** Jos jokin
+yllä olevista on jo aiemmin viety versionhallintaan, se pysyy
+siellä kunnes poistetaan erikseen. Ei tarkistettu, koska
+git-tilaa ei tässä istunnossa luettu.
+
+### Miksi `_kuvat` on repon sisällä eikä ulkopuolella
+
+Vaihtoehtona oli pitää raakakuvat kokonaan muualla (esim.
+`C:\kuvat-2026-09`). Se olisi vaatinut kansion erillisen
+yhdistämisen Claudelle joka kerta. Repon sisällä + gitignoressa
+kuvat ovat luettavissa heti ilman lisävaihetta, eivätkä ne silti
+päädy julkaisuun. Alaviivaetuliite noudattaa olemassa olevaa
+käytäntöä (`_aja`, `_testi`).
+
+### Työnjako kuvien kanssa
+
+1. Käyttäjä kopioi kuvat sellaisenaan kansioon `_kuvat`.
+   Ei lajittelua, ei nimeämistä, alkuperäinen laatu.
+2. Claude käy läpi, kertoo mitä kussakin on ja ehdottaa kohteet.
+3. Käsitellyt versiot tallennetaan kansioon `assets/`:
+   - sivusto: jpg + webp -parina, nykyisen käytännön mukaan
+   - Reelsien kansidiat: 1080 × 1920 (`dia_kuva`, rakennettu 13.9.)
+   - yksittäisjulkaisut: 1080 × 1350
+4. **Raakakuvia ei poisteta**, jotta uudet rajaukset onnistuvat
+   ilman uutta kuvausta.
+
+### Punoituksen aikasarja: käyttäjä hoitaa itse
+
+META-MARKKINOINTI.md luvun 3.5 kohta D2. Kolme kuvaa samasta
+kasvosta samalla rajauksella ja valolla: heti hoidon jälkeen,
+vuorokauden kuluttua, toisena päivänä. Kaksi jälkimmäistä osuvat
+päiville jolloin kuvaaja ei ole paikalla.
+
+**Käyttäjä ilmoitti 25.9.2026 ottavansa sarjan itse.**
+Nimeämisohje on kirjattu tiedostoon `_kuvat\LUE-TAMA.txt`.

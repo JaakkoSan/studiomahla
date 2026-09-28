@@ -64,6 +64,35 @@ sen mukana.
 
 ---
 
+## 0.2 Keskeiset osoitteet
+
+Yhdessä paikassa, jotta niitä ei tarvitse etsiä eri luvuista.
+
+| Mihin | Osoite |
+|---|---|
+| Verkkosivu | https://www.studiomahla.fi |
+| Ajanvaraus | https://varaa.timma.fi/studiomahla |
+| Google-arvostelu | https://g.page/r/CRSyD2eXFwJIEBM/review |
+
+**Google-arvostelulinkki** avaa arvostelulomakkeen suoraan, tähdet
+valmiina, ilman että asiakkaan tarvitsee etsiä yritystä. Linkki on
+Googlen itsensä antama lyhytlinkki yritysprofiilista, ei käsin
+rakennettu. Saatu käyttäjältä 14.9.2026.
+
+Käyttö: tekstiviesti tai sähköposti 1–3 vuorokautta hoidon jälkeen,
+QR-koodina studiossa. **Arvostelusta ei saa antaa alennusta eikä
+muuta etua** — se rikkoo Googlen ehtoja ja johtaa arvostelujen
+poistoon. Pelkkä pyyntö on sallittu.
+
+Pyyntö koskee käyntiä ja palvelua, ei hoitotulosta. Tulosarvostelut
+ovat terveydenhuollon markkinoinnissa oma kysymyksensä, ja se
+selvitetään erikseen jos Soteri-rekisteröinti etenee.
+
+Linkkiä ei laiteta verkkosivulle, koska julkinen arvostelupyyntö
+kutsuu arvosteluja myös niiltä jotka eivät ole käyneet.
+
+---
+
 ## 0. Strategian ydin ja rehellinen arvio
 
 ### Käyttäjän linjaus
@@ -576,12 +605,17 @@ Tämä on realistinen työmäärä eikä vaadi somepresenssiä.
 
 ### 3.2 Julkaisutiheys
 
+⚠ **MUUTETTU 25.9.2026: yksi Reels viikossa.** Ks. alla oleva
+osio "Tahti laskettu yhteen Reelsiin 25.9.2026". Alkuperäinen
+28.7.2026 linjaus on jätetty näkyviin, koska perustelut pätevät
+yhä ja tahtia voidaan nostaa takaisin.
+
 **Linjaus päätetty 28.7.2026.** Kolme julkaisua viikossa, painotus
 Reelsin hyväksi.
 
 | Muoto | Määrä viikossa | Rooli |
 |---|---|---|
-| Reels | 2 | Jakelu, uusien ihmisten tavoittaminen |
+| ~~Reels~~ → **1** | ~~2~~ | Jakelu, uusien ihmisten tavoittaminen |
 | Karuselli tai kuva | 1 | Syvyys ja uskottavuus profiilissa |
 
 Facebookiin sama sisältö. Business Suite julkaisee molempiin
@@ -596,8 +630,41 @@ Ei vaadi erillistä sisällöntuotantoa.
 | Vaihe | Reels | Muut | Perustelu |
 |---|---|---|---|
 | 28.7.–7.9. | 2 | 1 | Profiilin rakentaminen ennen avausta |
-| Syys–loka | 2 | 1 | Maksettu mainonta käynnistyy, orgaaninen jatkuu |
+| Syys–loka | ~~2~~ | 1 | Suunniteltu, ei toteutunut loppuun asti |
+| **25.9. eteenpäin** | **1** | 1 | Tahti laskettu, ks. alla |
 | Marras eteenpäin | 1 | 1 | Ylläpito, kun mainonta hoitaa jakelun |
+
+**Tahti laskettu yhteen Reelsiin 25.9.2026**
+
+Käyttäjän havainto: *"en näe isoa hyötyä tehdä useampaa varsinkin
+kun käytännössä on isosti saman toistoa eri näkökulmista."*
+
+Tämä **ei ole poikkeama suunnitelmasta vaan sen aikaistus.** Yllä
+oleva vaiheistus tiputti Reelsit yhteen marraskuussa. Muutos tehtiin
+kuusi viikkoa etuajassa, koska perustelu osoittautui todeksi
+aiemmin kuin oletettiin.
+
+Miksi kahden viikko-Reelsin sisältö alkoi toistaa itseään:
+
+1. **Ideapankki on rakennettu samoista lähdeartikkeleista.** Kun
+   samasta artikkelista otetaan kaksi kärkeä samalle viikolle, ne
+   ovat väistämättä sukua toisilleen, vaikka aiheet eroavat
+   otsikkotasolla.
+2. **Vanha sääntö pakotti eri pääluvun mutta ei eri sanomaa.**
+   Ohje vaati vain että viikon kaksi Reelsiä tulevat eri
+   pääluvusta. Se esti ilmeisen jankkaamisen muttei sitä että
+   molemmat päätyvät samaan ydinviestiin eri reittiä.
+3. **Ideapankin kestoetu kasvaa.** Yhden viikkotahdin myötä 40
+   idean pankki riittää lähes vuoden kahden sijaan.
+
+Vastapaino: kun viikossa on vain yksi Reels, sen on kannettava
+enemmän. Yhdistetyn ajastetun tehtävän ohje edellyttää siksi
+**★★★-idean suosimista** ja perustelua sille miksi juuri se
+valittiin. Aiemmin heikompi idea saattoi mennä läpi viikon
+toisena.
+
+Tahtia voidaan nostaa takaisin kahteen jos näytöt laskevat
+selvästi. Silloin se on tietoinen päätös, ei oletus.
 
 **Miksi ei päivittäin**
 
@@ -1121,6 +1188,15 @@ ruudukossa vierekkäin tummien kanssa se erottuu ja rytmittää.
 **Tilanne 13.9.2026:** viimeisin julkaistu Reels (Ensimmäiset
 juonteet) on tumma, joten **seuraavan kansidian sävy on vaalea**.
 Käyttäjän linjaus.
+
+**Tilanne 14.9.2026:** viikon kaksi tuotettua Reelsiä ovat vaalea
+(pysyvä, julkaisu ensin) ja keski (melasma). Kolme peräkkäistä kantta
+ovat siis tumma, vaalea, keski. **Seuraavan kansidian sävy on vaalea
+tai tumma**, ei keski.
+
+**Tilanne 28.9.2026:** kolme viimeisintä tuotettua kantta ovat tumma
+(kerros), vaalea (kädet) ja keski (aknearpi). **Seuraavan kansidian
+sävy on tumma tai vaalea**, ei keski.
 
 ### 3.5b Valmiit karusellit
 
@@ -2304,6 +2380,302 @@ Ajanvaraus: https://varaa.timma.fi/studiomahla
 Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
 ```
 
+**18. Miksi muutos on pysyvä (Reels)**
+Lähde: `mita-on-kliininen-mikroneulaus.html`, idea 5.4
+Tiedostot: `karusellit/pysyva_01r.png` … `_05r.png`
+Skripti: `generaattorit/pysyva.py`
+Video: `reels/pysyva.mp4` (27,2 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 14.9.2026. **Julkaisu odottaa.**
+5 diaa, 56 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: mikroneulaus vaikuttaa ihon syvempiin kerroksiin siellä missä
+kollageeni ja elastiini muodostuvat, ja koska iho rakentaa itse uutta
+kudosta, muutos on rakenteellinen eikä katoa pesun tai ajan myötä.
+Vastaa kysymykseen jonka moni esittää ennen varaamista: kestääkö tulos.
+
+Värijärjestys vuorotteleva: kansi kerma, dia 2 vihreä, dia 3 kerma,
+dia 4 vihreä, loppudia vihreä.
+
+**Kansidian yläteksti nimeää menetelmän (käyttäjän huomio 14.9.2026).**
+Ensimmäinen versio käytti ylätekstiä "Miksi muutos on pysyvä", joka
+kertoi näkökulman muttei sitä mistä hoidosta puhutaan, ja menetelmä
+mainittiin vasta loppudiassa. Yläteksti on nyt "Kliininen
+mikroneulaus". Otsikko kantaa näkökulman yksinäänkin, joten mitään ei
+menetetty. Sama tarkistus kannattaa tehdä jokaiselle uudelle Reelsille:
+katsojan on tiedettävä ensimmäisestä diasta mistä hoidosta on kyse.
+
+**Lähdeartikkelin muotoilua "toisin kuin monet pintahoitomenetelmät" ei
+käytetty.** Se on PROJECT.md luvun 5 nimeämätön vaihtoehto: teksti rajaa
+viittaamalla johonkin muuhun nimeämättä sitä. Sama asia sanotaan diassa
+suoraan.
+
+Kuvateksti sanatarkasti:
+
+```
+Kliinisen mikroneulauksen tulos ei häviä pesun mukana.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa.
+
+Mikroneulaus vaikuttaa ihon syvempiin kerroksiin, juuri sinne missä kollageeni ja elastiini muodostuvat. Hoito ei lisää iholle mitään vierasta vaan käynnistää korjausprosessin, jonka iho tekee itse.
+
+Koska iho rakentaa itse uutta kudosta, muutos on rakenteellinen. Tulokset eivät katoa pesun tai ajan myötä, sillä iho todella muuttuu.
+
+Yksittäinen hoitokerta käynnistää prosessin, mutta pysyvät tulokset vaativat useimmiten kolmesta kuuteen hoitokertaa. Jokainen hoitokerta lisää uutta kollageenia entisten kerrosten päälle ja muutos kumuloituu. Tämä perustuu kollageenisynteesin biologiaan, ei hoitokertojen määrään sinänsä.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa, tunnistaa mahdolliset vasta-aiheet ja mitoittaa hoidon yksilöllisesti.
+
+Lue lisää: https://www.studiomahla.fi/mita-on-kliininen-mikroneulaus.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #kollageeni #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**19. Melasma voi pahentua (Reels)**
+Lähde: `mikroneulaus-sopiiko-minulle.html`, idea 3.3
+Tiedostot: `karusellit/melasma_01r.png` … `_05r.png`
+Skripti: `generaattorit/melasma.py`
+Video: `reels/melasma.mp4` (27,2 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 14.9.2026. **Julkaisu odottaa.**
+5 diaa, 55 sanaa, kansidian sävy keski.
+
+Ydinajatus: UV-säteilystä syntyneet pigmenttiläiskät ja tulehduksen
+jälkeen jäävät tummumat reagoivat hoitoon hyvin, mutta melasma on
+poikkeus, koska sen pohjana ovat hormonaaliset tekijät ja joissakin
+tutkimuksissa mikroneulaus on jopa pahentanut sitä.
+
+Tämä on erottautumissisältöä samaan tapaan kuin julkaisu 8
+(Rehellisyys 50+): kerrotaan missä hoito ei ole oikea valinta. Aihe on
+syksyllä ajankohtainen, koska kesän jälkeen pigmenttimuutokset ovat
+näkyvimmillään.
+
+Värijärjestys vuorotteleva. Kansi on tässä vihreä (sävy keski), joten
+dia 2 on kerma, dia 3 vihreä, dia 4 kerma ja loppudia vihreä. Täysi
+vuorottelu onnistuu viidellä dialla kun kansi on vihreä, toisin kuin
+julkaisussa 16.
+
+Termi "jälki-inflammatorinen hyperpigmentaatio" korvattiin dioissa
+selkokielisellä ilmauksella "tulehduksen jälkeen jäävät tummumat"
+(PROJECT.md luku 5). Kuvatekstissä on tilaa, joten siellä termi on
+mukana ja avattu sulkeissa.
+
+Kuvateksti sanatarkasti:
+
+```
+Kaikkia pigmenttiläiskiä ei hoideta mikroneulauksella.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa, ja ihon tilanne arvioidaan aina ennen hoidon aloittamista.
+
+Mikroneulauksen kiihdyttämä ihon uusiutuminen auttaa hajottamaan ylimääräistä väripigmenttiä, mikä tasoittaa ihon sävyä. Erityisesti UV-säteilystä syntyneet pigmenttiläiskät ja jälki-inflammatorinen pigmentaatio (tulehduksen jälkeen jäävät tummumat) reagoivat hoitoon hyvin.
+
+Poikkeus on melasma. Sen pohjana ovat hormonaaliset tekijät, eikä mikroneulaus aina ole oikea valinta. Joissakin tutkimuksissa mikroneulaus on jopa pahentanut melasmaa.
+
+Melasman kohdalla suositus on aina yksilöllinen arviointi ennen hoidon aloittamista. Käymme ensikäynnillä läpi ihon tilanteen, lääkitykset ja aiemmat hoidot, ja kerromme suoraan jos mikroneulaus ei ole sinun iholle oikea valinta.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa ja tunnistaa mahdolliset vasta-aiheet.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #pigmenttimuutokset #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**20. Kerros kerroksen päälle (Reels)**
+Lähde: `mikroneulaus-sarjahoito.html`, idea 6.2
+Tiedostot: `karusellit/kerros_01r.png` … `_05r.png`
+Skripti: `generaattorit/kerros.py`
+Video: `reels/kerros.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 22.9.2026. **Julkaisu odottaa.**
+5 diaa, 55 sanaa, kansidian sävy tumma.
+
+Ydinajatus: sarjan viimeiset hoidot tehdään jo vahvistuneeseen ihoon,
+jolloin niiden vaikutus on suhteellisesti voimakkaampi kuin
+ensimmäisen. Kollageenikertymä rakentuu kerros kerrokselta, ja neljän
+viikon väli on sidottu siihen että kollageeni-tyyppi III ehtii kypsyä
+ennen seuraavaa hoitoa.
+
+Kansidian otsikko "Viimeinen hoito tekee enemmän kuin ensimmäinen" on
+ideapankin kärki sellaisenaan. Se toimii koukkuna ilman selitystä,
+koska väite on vastoin odotusta: hoitosarjasta oletetaan että alku
+tekee eniten.
+
+Värijärjestys: kansi tummanvihreä, dia 2 kerma, dia 3 keskivihreä.
+Nostodia ja loppudia ovat aina tummanvihreitä, koska `karuselli.py`:n
+`_teema` palauttaa korostustilassa green_darkin eikä katso
+tumma-parametria. **Tämä korjaa aiempien lokimerkintöjen (julkaisut 18
+ja 19) kuvauksen**, jossa nostodia merkittiin kermaksi.
+
+Kuvateksti sanatarkasti:
+
+```
+Viimeinen hoito tekee enemmän kuin ensimmäinen.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa, ja sarjan hoitoajat varataan kalenteriin jo ensimmäisellä käynnillä.
+
+Yksittäinen hoito käynnistää ihossa korjausvasteen, mutta ensimmäinen uusi kollageeni on tyyppi III:a eli väliaikaista korjauskollageenia. Se hajoaa luonnollisesti viikkojen aikana, ja siksi yhden hoidon jälkeinen tunne haalistuu noin kuukaudessa.
+
+Sarjassa jokaisen hoitokerran kollageeni-tyyppi III ehtii kypsyä pysyväksi tyyppi I:ksi ennen seuraavaa hoitoa. Kertymä rakentuu kerros kerrokselta: jos ensimmäinen hoito lisää tietyn määrän uutta kollageenia, toinen lisää omansa sen päälle ja kolmas vielä sen päälle.
+
+Viimeiset hoidot tehdään jo vahvistuneeseen ihoon, jolloin niiden vaikutus on suhteellisesti voimakkaampi kuin ensimmäisen.
+
+Neljän viikon väli on sidottu ihon uusiutumissykliin. Liian tiheästi tehty hoito ei anna kollageenisynteesille aikaa edetä, ja liian harvoin tehty menettää sarjavaikutuksen, koska kollageeni-tyyppi III on jo alkanut hajota.
+
+Histologisissa tutkimuksissa neljä hoitoa kuukauden välein on johtanut kuuden kuukauden kohdalla jopa 400 prosentin kasvuun kollageeni- ja elastiinipitoisuuksissa.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa ja mitoittaa sarjan yksilöllisesti.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sarjahoito.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #kollageeni #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**21. Kädet paljastavat iän (Reels)**
+Lähde: `mikroneulaus-kaula-dekoltee-kadet.html`, idea 8b.3
+Tiedostot: `karusellit/kadet_01r.png` … `_05r.png`
+Skripti: `generaattorit/kadet.py`
+Video: `reels/kadet.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 22.9.2026. **Julkaisu odottaa.**
+5 diaa, 58 sanaa, kansidian sävy vaalea.
+
+Ydinajatus: kämmenselkien iho on ohutta ja sen alla on hyvin vähän
+rasvakudosta, alue saa auringonvaloa ympäri vuoden ja sitä pestään
+useita kertoja päivässä. Talirauhasia ja karvatuppeja on vähän, ja
+koska ihon pinta uusiutuu osittain juuri näistä rakenteista käsin,
+paraneminen kestää käsissä pidempään kuin kasvoissa.
+
+Dioissa ei väitetä että alueella käytettäisiin pienempää
+neulasyvyyttä. Ideapankin luvun 8b huomautus ja PROJECT.md luku 3:
+herkällä iholla pienin syvyys on käytössä jo kasvoilla.
+
+Ehto siitä että lisäalue myydään vain kasvohoidon yhteydessä on
+kuvatekstissä eikä dioissa, jotta dia ei täyty ehdoista (ideapankin
+huomautus luvun 8b lopussa).
+
+Värijärjestys: kansi kerma, dia 2 keskivihreä, dia 3 kerma. Nostodia
+ja loppudia tummanvihreitä, kuten julkaisussa 20.
+
+Kuvateksti sanatarkasti:
+
+```
+Kasvot kertovat yhtä, kädet toista.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa, ja kämmenselät hoidetaan lisäalueena kasvohoidon yhteydessä.
+
+Kasvoja hoidetaan huolellisesti vuosien ajan. Kädet jäävät väliin, vaikka ne ovat jatkuvasti näkyvissä eikä niitä voi peittää meikillä.
+
+Kämmenselkien iho on ohutta ja sen alla on hyvin vähän rasvakudosta. Kun rasvakudos vähenee iän myötä entisestään, jänteet ja verisuonet erottuvat selvemmin. Alue saa runsaasti auringonvaloa ympäri vuoden, ja sitä pestään useita kertoja päivässä, mikä poistaa ihon omaa rasvaa ja heikentää sen omaa suojakerrosta.
+
+Talirauhasia ja karvatuppeja on kämmenselissä hyvin vähän. Ihon pinta uusiutuu mikroneulauksen jälkeen osittain juuri näistä rakenteista käsin, joten paraneminen kestää käsissä pidempään kuin kasvoissa ja alueella edetään varovaisemmin.
+
+Jälkihoidossa korostuu kaksi asiaa: aurinkosuoja ja käsienpesu. Mieti etukäteen onko hoitopäivän jälkeen tulossa jotain joka vaatii jatkuvaa pesua.
+
+Kämmenselkiä ei myydä erillisenä hoitona. Yksi lisäalue maksaa 35 euroa kasvohoidon yhteydessä, ja sarjassa siitä saa saman alennuksen kuin hoitosarjasta.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa ja mitoittaa hoidon alueelle erikseen.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-kaula-dekoltee-kadet.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#mikroneulaus #kliininenmikroneulaus #ihonikaantyminen #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**22. Aknearpi täyttyy alapuolelta (Reels)**
+Lähde: `aknearpien-hoito-mikroneulauksella.html`, idea 5.5
+Tiedostot: `karusellit/aknearpi_01r.png` … `_05r.png`
+Skripti: `generaattorit/aknearpi.py`
+Video: `reels/aknearpi.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps)
+Tuotettu automaatiolla 28.9.2026 (`viikkosisalto`, ensimmäinen
+yhdistetty ajo). **Julkaisu odottaa.**
+5 diaa, 58 sanaa, kansidian sävy keski.
+
+Ydinajatus: kuoppamainen aknearpi on kohta, josta tulehdus on vienyt
+ihon tukirakennetta. Mikroneulaus käynnistää kollageenintuotannon arven
+pohjalta käsin, jolloin kuoppa nousee ylöspäin. Siksi aknearpiin aina
+kuuden hoidon sarja (PROJECT.md luku 3).
+
+Värijärjestys täysin vuorotteleva: kansi keskivihreä, dia 2 kerma,
+nostodia tummanvihreä, dia 4 kerma, loppudia tummanvihreä.
+
+Kuvateksti sanatarkasti:
+
+```
+Aknearpea ei peitetä päältä. Se täytetään alapuolelta.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa, ja aknearpien hoito suunnitellaan aina ihon arvion pohjalta.
+
+Kuoppamainen aknearpi (atrofinen arpi) syntyy, kun tulehtunut näppylä on vaurioittanut ihon tukirakennetta syvemmältä eikä ihon oma korjausprosessi ole ehtinyt rakentaa menetettyä kollageenia takaisin. Ihon pinta jää kohdalta alemmas kuin ympäröivä alue.
+
+Mikroneulaus ei täytä arpea ulkopuolelta. Hoito tekee ihoon tarkkoja mikrokanavia, jotka iho tulkitsee pieninä vaurioina, ja käynnistää kollageenin ja elastiinin tuotannon arven pohjalta käsin. Kun uutta kollageenia muodostuu arven pohjalle, kuoppa nousee vähitellen ylöspäin ja ihon pintarakenne tasoittuu.
+
+Arpialueella edetään syvemmälle kuin muualla kasvoissa, koska uutta kollageenia tarvitaan juuri siinä kerroksessa, jossa arven tukirakenne on.
+
+Rakenteellinen muutos vaatii toistoja, joten aknearpiin suosittelemme aina kuuden hoidon sarjaa. Lopulliset tulokset näkyvät selkeimmillään 3–6 kuukautta viimeisen hoitokerran jälkeen. Tuoreet arvet reagoivat yleensä parhaiten, ja myös vanhemmat tasoittuvat, joskin hitaammin.
+
+Aktiivinen akne rauhoitetaan aina ensin, ennen kuin arpien hoito aloitetaan.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ennen hoitoa ja mitoittaa sarjan yksilöllisesti.
+
+Lue lisää: https://www.studiomahla.fi/aknearpien-hoito-mikroneulauksella.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#aknearvet #aknehoito #kliininenmikroneulaus #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (28.9.2026):** ennen ajoa 27 käyttämätöntä ideaa,
+joista ★★★ kuusi, joten toistoa ei tarvittu. Luvut 6 ja 8b jätettiin
+pois, koska edellisen viikon julkaisut (20 ja 21) tulivat niistä. Idea
+2.2 olisi toistanut pistoskulman (julkaisu 3) ydinviestiä. 5.5 valittiin,
+koska aknehoito on luvun 16.4 mukaan suurempi kysyntä kuin menetelmä,
+aknearpiartikkelia ei ole käytetty Reelsin lähteenä, ja viesti (arpi
+täyttyy alapuolelta) on erottava eikä toista aiempia julkaisuja.
+Aktiivisen aknen Reels (3.1) julkaistiin viimeksi 24.8. Blogin
+viikkotoimi oli C (ei julkaistu mitään), joten teemakytköstä blogiin
+ei ollut.
+
+**Ideapankin tila 28.9.2026:** 26 käyttämätöntä, joista ★★★ viisi.
+Täydennyskynnys (alle 10) ei täyty.
+
+**Valintaperuste (22.9.2026):** ideapankissa oli ennen tätä ajoa 29
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista (6 ja 8b) ja eri lähdeartikkeleista.
+Lukuja 5 ja 3 vältettiin, koska viikon 38 julkaisut (18 ja 19) tulivat
+juuri niistä, ja lukua 2 vältettiin koska idea 2.3 käytettiin 7.9. Idea
+6.2 on syksyllä ajankohtainen, koska UV-indeksin lasku on luvun 9.1
+mukaan syy aloittaa sarja juuri nyt, ja sarjan logiikka on se mihin
+varauspäätös kaatuu. Idea 8b.3 valittiin lisäalueista käsien puolelta,
+koska dekoltee-idea 8b.2 nojaa auringon vaikutukseen ja olisi mennyt
+päällekkäin edellisviikon pigmenttiaiheen (julkaisu 19) kanssa.
+Lisäalueita on käsitelty viimeksi 1.9.2026 (julkaisu 15, kaula).
+
+**Ideapankin tila 22.9.2026:** 27 käyttämätöntä ideaa 46:sta, eli luvun
+kynnys (alle 10) ei täyty eikä täydennystä tehty.
+
+**Valintaperuste (14.9.2026):** ideapankissa oli ennen tätä ajoa 31
+käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
+★★★-ideoita, eri pääluvuista (5 ja 3) ja eri lähdeartikkeleista. Luvun 2
+vastakkainasettelua ja luvun 4 ikäaiheita vältettiin, koska viikon 37
+molemmat julkaisut (16 ja 17) tulivat juuri niistä. Käyttämättömiä on
+tämän jälkeen 29, eli luvun kynnys (alle 10) ei täyty eikä täydennystä
+tehty.
+
+**Tuotantotapa poikkeuksellinen: ajettiin Windowsissa.** Clauden
+Linux-työympäristö ei käynnisty 8.9.2026 julkaistun Windows-päivityksen
+vuoksi (Plan9-liitos epäonnistuu). Skriptit ajettiin koneen omalla
+Pythonilla `generaattorit/.venv`-ympäristössä, joka luotiin 13.9.2026
+samasta syystä. Katso `generaattorit/aja.bat`. ffmpeg löytyy koneelta
+wingetin kautta (Gyan 9.0.1). Tuloste ohjataan lokitiedostoon, koska
+Claude ei näe komentoikkunaa.
+
 **Valintaperuste (7.9.2026):** ideapankissa oli ennen tätä ajoa 34
 käyttämätöntä ideaa 46:sta, joten toistoa ei tarvittu. Molemmat ovat
 ★★★-ideoita, eri pääluvuista (2 ja 4) ja eri lähdeartikkeleista. Idea 2.3
@@ -3420,6 +3792,10 @@ Paikallisessa palveluliiketoiminnassa ne ovat vahvin yksittäinen
 tekijä sekä hakusijoituksessa että asiakkaan päätöksenteossa.
 Rutiini arvostelujen pyytämiseen ensimmäisestä asiakkaasta lähtien
 (7.9. alkaen) on arvokkaampi kuin mikään uusi alusta.
+
+**Työkalu on nyt olemassa (14.9.2026):** suora arvostelulinkki
+yritysprofiilista, ks. luku 0.2. Rutiini eli se milloin ja millä
+sanamuodolla pyyntö lähtee, on vielä sopimatta.
 
 Studio löytyy jo Googlen etusivulta hakusanoilla mikroneulaus
 kotka, aknehoito kotka ja aknearpien hoito kotka. Tuo liikenne on
