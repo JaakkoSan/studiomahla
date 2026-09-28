@@ -220,8 +220,12 @@ täyttyvät paremmin.
 
 50 ikävuoden jälkeen mikroneulaus toimii, mutta hitaammin ja
 vaatimattomammin. Ihon laatu paranee ja hienot juonteet pehmenevät,
-mutta vahvat rypyt eivät katoa. Se toimii parhaiten muiden hoitojen
-tukena.
+ja vahvoihinkin ryppyihin voidaan vaikuttaa yksilöllisesti, vaikka
+niiden poistumista ei voi luvata.
+
+**Tarkennettu 28.9.2026 käyttäjän linjauksella:** aiempi muoto "vahvat
+rypyt eivät katoa" oli liian jyrkkä, ja "muiden hoitojen tukena" oli
+nimeämätön vaihtoehto. Uusiokäytössä käytetään yllä olevaa muotoa.
 
 Tämä on erottautumissisältöä: harva mainostaa hoidon rajoja.
 
