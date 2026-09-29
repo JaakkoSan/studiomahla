@@ -129,6 +129,8 @@
       min-height: 36px;
     }
     .refresh-btn:hover { background: var(--cream-warm); color: var(--text-dark); }
+    /* Linkki lomakesivulle näyttää samalta kuin muut yläpalkin painikkeet. */
+    a.refresh-btn { display: inline-flex; align-items: center; text-decoration: none; }
     /* LOGIN */
     .login-card {
       max-width: 420px;
@@ -779,7 +781,12 @@
     <div class="page__head">
       <h1>Esitietolomakkeet</h1>
       <span class="page__meta" id="esitiedotMeta"></span>
-      <button type="button" class="refresh-btn" id="gdprCheckBtn" style="margin-left:auto;" title="Etsii yli 2 vuotta vanhat tietueet ja lähettää muistutusviestin">⚖ Aja GDPR-tarkistus</button>
+      <!-- 29.9.2026: uusi lomake täytetään samalla lomakesivulla kuin
+           asiakkaan itse täyttämä, jotta validointi, suostumukset ja
+           tallennus pysyvät yhdessä paikassa. Aukeaa uuteen välilehteen;
+           lista päivittyy kun admin-välilehdelle palataan. -->
+      <a href="/lomake.html" target="_blank" rel="noopener" class="refresh-btn" id="newEsitietoBtn" style="margin-left:auto;" title="Avaa esitietolomakkeen uuteen välilehteen. Anna laite asiakkaalle täytettäväksi.">＋ Uusi lomake</a>
+      <button type="button" class="refresh-btn" id="gdprCheckBtn" style="margin-left:8px;" title="Etsii yli 2 vuotta vanhat tietueet ja lähettää muistutusviestin">⚖ Aja GDPR-tarkistus</button>
       <button type="button" class="refresh-btn" id="refreshEsitiedotBtn" style="margin-left:8px;">↻ Päivitä</button>
     </div>
     <div id="esitiedotList" class="esitiedot-list"></div>
@@ -2141,6 +2148,13 @@
       showToast('Kirjauduit ulos.', 'success');
     });
     refreshEsitiedotBtn.addEventListener('click', function () { loadEsitiedot(); });
+    // Kun palataan lomakevälilehdeltä, haetaan lista uudelleen hiljaisesti,
+    // jotta juuri täytetty lomake näkyy ilman Päivitä-painiketta.
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible' && getToken() && !esitiedotView.hidden) {
+        loadEsitiedot({ silent: true });
+      }
+    });
     gdprCheckBtn.addEventListener('click', runGdprCheck);
     esitiedotList.addEventListener('click', function (e) {
       var row = e.target.closest('.esitieto-row');
