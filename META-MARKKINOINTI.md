@@ -1021,6 +1021,31 @@ studion linjaan, joten rajoitus ei käytännössä maksa mitään.
 **Tila 28.7.2026:** ei automatisoida vielä. Tehdään sitten kun
 muutama ääni on kokeiltu käytännössä.
 
+**TOTEUTETTU 29.9.2026: ääni on nyt oletuksena jokaisessa Reelsissä.**
+Käyttäjä latasi Meta Sound Collectionista raidan *Sweet Lover* ja
+pyysi lisäämään sen jatkossa kaikkiin Reelseihin.
+
+| | |
+|---|---|
+| Raita | `tuotanto/aani/sweet_lover.m4a` (AAC 48 kHz stereo, 2:56, irrotettu ladatusta mp4:stä ilman uudelleenkoodausta) |
+| Käyttö | `reels.py`:n `OLETUSAANI`; `rakenna_reels(..., aani=None)` tekee äänettömän |
+| Kohta | raidan alusta (`aani_alku=0.0`), kappaleen oma rauhallinen intro |
+| Häivytys | sisään 0,5 s, ulos 1,5 s videon loppuun |
+| Äänentaso | 25 s Reels asettuu n. -14,7 LUFS:iin ilman säätöä (Instagramin tavoite n. -14) |
+| Ääni | AAC 192 kbit/s, video kopioidaan uudelleenkoodaamatta |
+
+**Seuraus:** Business Suiten ajastus toimii nyt myös Reelseille, koska
+ääni on valmiina tiedostossa (ks. yllä). Instagramissa ääntä ei enää
+lisätä julkaisuhetkellä.
+
+Lisenssi kattaa Facebookin ja Instagramin, myös maksetut mainokset,
+**ei verkkosivustoa eikä muita alustoja**. Videota ei siis upoteta
+sivustolle äänen kanssa.
+
+Kun raitoja tulee lisää: tallenna ne kansioon `tuotanto/aani/` ja anna
+skriptissä `aani=`-parametrina. Suositus pysyy: kaksi tai kolme raitaa
+johdonmukaisesti.
+
 **Tekniset määritykset**
 
 - 1080 × 1920 (9:16), H.264, 30 fps
@@ -2591,9 +2616,14 @@ Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistess
 Lähde: `aknearpien-hoito-mikroneulauksella.html`, idea 5.5
 Tiedostot: `karusellit/aknearpi_01r.png` … `_05r.png`
 Skripti: `generaattorit/aknearpi.py`
-Video: `reels/aknearpi.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps)
+Video: `reels/aknearpi.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps,
+**ääni: Sweet Lover**, AAC 48 kHz, -14,7 LUFS)
 Tuotettu automaatiolla 28.9.2026 (`viikkosisalto`, ensimmäinen
-yhdistetty ajo). **Julkaisu odottaa.**
+yhdistetty ajo), ääni lisätty 29.9.2026. Dia 4:n otsikko "Siksi aina
+kuusi hoitoa" → "Siksi sarjahoito on tehokkain" ja kuvatekstin vastaava
+lause muutettu 29.9.2026 käyttäjän pyynnöstä. Ensimmäinen Reels jossa ääni
+on valmiina tiedostossa, joten sen voi ajastaa Business Suitessa.
+**Julkaisu odottaa.**
 5 diaa, 58 sanaa, kansidian sävy keski.
 
 Ydinajatus: kuoppamainen aknearpi on kohta, josta tulehdus on vienyt
@@ -2617,7 +2647,7 @@ Mikroneulaus ei täytä arpea ulkopuolelta. Hoito tekee ihoon tarkkoja mikrokana
 
 Arpialueella edetään syvemmälle kuin muualla kasvoissa, koska uutta kollageenia tarvitaan juuri siinä kerroksessa, jossa arven tukirakenne on.
 
-Rakenteellinen muutos vaatii toistoja, joten aknearpiin suosittelemme aina kuuden hoidon sarjaa. Lopulliset tulokset näkyvät selkeimmillään 3–6 kuukautta viimeisen hoitokerran jälkeen. Tuoreet arvet reagoivat yleensä parhaiten, ja myös vanhemmat tasoittuvat, joskin hitaammin.
+Rakenteellinen muutos vaatii toistoja, joten sarjahoito on tehokkain tapa hoitaa aknearpia. Lopulliset tulokset näkyvät selkeimmillään 3–6 kuukautta viimeisen hoitokerran jälkeen. Tuoreet arvet reagoivat yleensä parhaiten, ja myös vanhemmat tasoittuvat, joskin hitaammin.
 
 Aktiivinen akne rauhoitetaan aina ensin, ennen kuin arpien hoito aloitetaan.
 

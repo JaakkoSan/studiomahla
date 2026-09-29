@@ -723,6 +723,27 @@ kerrotaanko mihin hoito tehoaa vai mihin se ei tehoa. Ensimmäinen
 riittää: *"Pinnalliset juonteet reagoivat hoitoon"* rajaa saman asian
 ilman että lukijaa lähetetään minnekään.
 
+**Tulosten kuvaaminen: ei lupauksia, mutta ei myöskään ylivarovaisuutta**
+(kirjattu 28.9.2026, käyttäjän linjaus).
+
+Käyttäjä 28.9.2026: *"Vaikka ei voida luvata että kaikki hoituu niin
+vaikuttaa voidaan ja monet saavat apua, joten ei saa olla myöskään liian
+varovainen ja sanoa että ei tämä nyt oikeastaan mitään tee muuta kuin
+vain näissä rajatuissa tapauksissa."*
+
+| EI (lupaus) | EI (ylivarovainen) | KYLLÄ |
+|---|---|---|
+| "arvet häviävät" | "ei poista arpea kokonaan" | "osalla arvet tasoittuvat selvästi, osalla ne häviävät kokonaan; poistumista ei voi luvata, mutta niihin voidaan vaikuttaa" |
+| "rypyt katoavat" | "syvien ryppyjen kohdalla vaikutus jää vähäiseksi" | "syviinkin ryppyihin voidaan vaikuttaa yksilöllisesti, vaikka poistumista ei voi luvata" |
+| "kaikilla saadaan selvä tulos" | "hoito tehdään aina sarjana", "sarja on edellytys" | "yksittäisestäkin hoidosta on hyötyä; sarja on tehokkain tapa" |
+
+Periaate: rajaus kerrotaan lupauksen rajana (mitä ei voi luvata), ei
+tehon rajana (mihin hoito ei pysty). Hoidon rajoja käsittelevä
+sisältö on edelleen erottava tekijä (luku 16.8), mutta sävy ei saa
+kääntyä siihen että hoito kuulostaa hyödyttömältä muualla kuin
+kapeissa tapauksissa. Taustalla 28.9. korjaukset kolmeen artikkeliin,
+ks. muutosloki.
+
 **Laajennus 26.8.2026: oletettu yleistieto.** Sama perhe kuin
 puolusteleva vertailu. Teksti asettaa väitteen yleisesti tunnetuksi ja
 kumoaa sen, vaikka lukija ei ole väitettä koskaan kuullut.
@@ -4838,6 +4859,12 @@ varauksen.
 Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
+
+### 2026-09-29
+
+- **Reelseihin ääni oletuksena.** Käyttäjä latasi Meta Sound Collectionista raidan *Sweet Lover*. Tallennettu `tuotanto/aani/sweet_lover.m4a`; `reels.py` sai funktion `lisaa_aani` ja parametrit `aani` (oletus tämä raita, `None` = äänetön) ja `aani_alku`. Häivytys 0,5 s / 1,5 s, taso n. -14,7 LUFS. Tämän viikon `reels/aknearpi.mp4` ajettiin uudelleen äänen kanssa (26,4 s, h264 + aac). Reelsit voi nyt ajastaa Business Suitessa. Ks. META-MARKKINOINTI.md 3.4c. Viikkotehtävä käyttää `reels.py`:tä, joten ääni tulee jatkossa automaattisesti.
+- **Ylivarovaisuuskierros (luvun 5 uusi sääntö), käyttäjän hyväksymät kohdat 1–5:** `mikroneulaus-sopiiko-minulle.html` H3 "50+ vuotta: tukea, ei ratkaisua kaikkeen" → "tulokset rakentuvat hitaammin", "hitaampi ja vaatimattomampi" → "hoidosta on edelleen hyötyä, mutta tulokset rakentuvat hitaammin ja sarja on usein pidempi" (dateModified, article-meta, sitemap 29.9.); `aknearpien-hoito-mikroneulauksella.html` "yksi hoitokerta ei koskaan riitä" → "pysyvät tulokset rakentuvat useamman hoitokerran kautta"; `mita-mikroneulaus-ei-tee.html` "merkittävä ihon löysyys ei korjaannu kummallakaan" → "tuloksia ei voi luvata"; `mikroneulaus-sarjahoito.html` H2 "Yksittäisen hoidon rajallinen vaikutus" → "Mitä yksittäinen hoito tekee" (artikkelin otsikko jätettiin, hakusana); `index.html` "aina sarjahoidolla" → "sarjahoidolla". Kolmeen viimeiseen ei päivitysmerkintää (pieni sanamuoto).
+- **Lataamatta (kaikki 28.–29.9. muutokset):** `mita-mikroneulaus-ei-tee.html`, `mikroneulaus-sopiiko-minulle.html`, `aknearpien-hoito-mikroneulauksella.html`, `mikroneulaus-sarjahoito.html`, `index.html`, `blogi.html`, `sitemap.xml`, `PROJECT.md`, `META-MARKKINOINTI.md`, `REELS-IDEAT.md`, sekä `tuotanto/aani/`, `tuotanto/generaattorit/reels.py`, `tuotanto/generaattorit/aknearpi.py`, `tuotanto/reels/aknearpi.mp4`.
 
 ### 2026-09-28
 
