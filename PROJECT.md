@@ -2217,7 +2217,117 @@ Someprofiilien tarkoitus on toimia info- ja markkinointikanavana joka
 ohjaa ihmiset sivustolle ja ajanvaraukseen. Yksityiskohtainen
 suunnitelma tiedostossa `META-MARKKINOINTI.md`.
 
-### Maksettu mainonta (aloitussuunnitelma)
+### Maksettu mainonta — PÄIVITETTY 7.10.2026
+
+⚠ **Alla oleva 23.7.2026 suunnitelma on vanhentunut.** Se ajoitti
+Meta-mainonnan syys-lokakuulle 2026 budjetilla 300–500 €/kk.
+Mainontaa ei aloitettu. Uusi arvio perustuu tietoihin joita
+heinäkuussa ei ollut.
+
+#### Lähtötilanne 7.10.2026
+
+| Asia | Tilanne |
+|---|---|
+| Kapasiteetti | **n. 30 hoitoa/kk** ilman liiallista kuormitusta |
+| Ulkopuoliset asiakkaat | **nolla** avauksesta 7.9.2026 lähtien |
+| Minimitavoite | 10 hoitoa/kk, deadline **huhtikuun 2027 loppu** |
+| Järkevä tavoite | 20–60 asiakasta/kk |
+| Kuvat | tulossa n. 3 viikossa |
+| LED | marraskuu 2026 |
+
+#### Laskelma joka muuttaa kysymyksen
+
+**10 hoitoa kuukaudessa ei ole 10 asiakasta.** Kuuden hoidon sarja
+tuottaa kuusi hoitoa noin viidessä kuukaudessa, eli noin 1,2
+hoitoa/kk per asiakas.
+
+→ Kymmeneen hoitoon kuukaudessa tarvitaan **noin kahdeksan
+yhtäaikaista sarja-asiakasta** ja vakiintuneessa tilanteessa
+**noin kaksi uutta sarja-asiakasta kuukaudessa.**
+
+Minimitavoite on siis pieni. Se ei ole volyymiongelma.
+
+#### ⚠ KRIITTINEN PUUTE: kävijäseurantaa ei ole
+
+Sivustolla on **vain Meta Pixel**. Ei Google Analyticsia, ei
+Cloudflare Web Analyticsia, ei mitään josta näkisi kävijämäärän.
+
+**Tämä estää koko mainontapäätöksen.** Nolla asiakasta voi johtua
+kahdesta täysin eri syystä:
+
+- **Liikennettä ei ole** → mainonta auttaa
+- **Liikennettä on mutta se ei varaa** → mainonta polttaa rahaa,
+  koska ostat lisää ihmisiä jotka eivät varaa
+
+Näitä ei voi erottaa ilman mittausta.
+
+**Toimenpide: asenna kävijäseuranta ennen kuin mainontaan
+käytetään euroakaan.** [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
+sopii tähän: ilmainen, ei evästeitä eikä localStoragea, ei
+sormenjälkitunnistusta, asennetaan HTML-pätkällä. Sivusto on jo
+Cloudflare Pagesissa. Evästeettömyys sopii yhteen sivuston
+tietosuojalinjan kanssa eikä vaadi muutoksia `privacy.html`-sivuun
+samalla tavalla kuin GA vaatisi.
+
+#### ⚠ "Googlen etusivulla" on harhaanjohtava
+
+Heinäkuun päätös olla käyttämättä Google Adsia perustui siihen
+että orgaaninen näkyvyys on jo etusivulla. **Hakusanaseurannan
+30.7.2026 mittaus kertoo tarkemman kuvan:**
+
+| Hakusana | Sijoitus |
+|---|---|
+| kliininen mikroneulaus kotka | 1. ⚠ oma termi, tuskin haettu |
+| aknehoito kotka | 3. |
+| mikroneulaus kotka | **9.** |
+| aknearpien hoito kotka | **9.** |
+| mikroneulaus kymenlaakso / hamina | ei top 10 |
+
+Yhdeksäs sija on sivun 1 alalaita ja tuottaa hyvin vähän
+klikkauksia. Lisäksi paikallisten hakusanojen volyymi Kotkassa on
+todennäköisesti pieni. **Ykkössija termillä jota kukaan ei hae ei
+tuota asiakkaita.**
+
+Tästä seuraa että orgaanisella on katto joka voi olla alle
+minimitavoitteen, ja mainonnan tehtävä ei ole kysynnän
+nappaaminen vaan **tietoisuuden luominen**.
+
+#### Suositeltu järjestys
+
+| Ajankohta | Toimenpide |
+|---|---|
+| **Heti** | Kävijäseuranta käyttöön. Ilman sitä mainontaa ei aloiteta |
+| Loka–marras | Kuvat sivustolle. LED käyttöön. Palveluvalikoima valmis, mainosmateriaali olemassa |
+| Marras | Luetaan ensimmäinen kuukausi kävijädataa. Liikenne vai konversio? |
+| **Joulukuu 2026** | **Meta-testi, 150–250 €/kk.** Tarkoitus on oppia mitä yksi varaus maksaa, ei volyymi |
+| Tammi–helmi 2027 | Testin perusteella: skaalaus, kohdennuksen muutos tai lopetus |
+| Touko 2027 | Täysi kapasiteetti käytössä, mainonta skaalattu tunnetuilla luvuilla |
+
+**Aloitus joulukuussa eikä helmikuussa**, koska kapasiteettia on
+vapaana jo nyt eikä ole syytä lykätä oppimista. Aiempi arvioni
+(helmikuu) perustui oletukseen ettei kapasiteettia ole ennen
+toukokuuta. **Käyttäjä korjasi sen: kapasiteettia on 30 hoitoa
+kuukaudessa.**
+
+#### Asiakashankinnan kattohinta on korkea
+
+Kuuden hoidon sarja on 1080 €, kolmen 570 €. Useiden kymmenien
+eurojen hankintahinta per varaus on siedettävä. Tämä on
+poikkeuksellisen hyvä asema mainonnassa, **mutta sitä ei kannata
+käyttää ennen kuin tiedetään mitä varaus maksaa.** Siihen riittää
+pieni budjetti.
+
+#### Miksi nolla asiakasta ei ole hälyttävää vielä
+
+Käyttäjän oma arvio 7.10.2026: studio on uusi, kuvia ei ole ollut
+ja hinta on premium-tasoa. Kaikki kolme ovat tosia ja kaksi
+ensimmäistä korjaantuvat lähiviikkoina. **Premium-hinta on
+pysyvä, ja juuri siksi kuvat ja uskottavuus ratkaisevat
+enemmän kuin halvemmassa hinnoittelussa.**
+
+---
+
+### Maksettu mainonta (aloitussuunnitelma 23.7.2026, VANHENTUNUT)
 
 Päätös 2026-07-23: käyttäjä on jo Googlen orgaanisten hakutulosten
 etusivulla hakusanoilla "aknenhoito Kotka", "aknearpien hoito Kotka" ja
@@ -12161,3 +12271,107 @@ todellisen ongelman, ja ratkaisu oli jo olemassa samalla sivulla.
 katsotaan ensin miten vastaava ongelma on jo ratkaistu sivustolla**
 sen sijaan että keksitään uusi tapa. `feat-cards` oli valmiina
 koko ajan.
+
+
+---
+
+## 7.10.2026 — Cloudflare Web Analytics käyttöön, ja löytyi tietosuojaongelma
+
+### Web Analytics päällä
+
+Käyttäjä kytki sen Pages-projektin **Metrics → Enable** -napista
+7.10.2026. Cloudflare lisää skriptin automaattisesti seuraavassa
+julkaisussa. **Tiedostoihin ei lisätty mitään**, koska Pages
+injektoi sen itse. Käsin lisättynä pätkä olisi pitänyt ylläpitää
+kahdessakymmenessä HTML-tiedostossa.
+
+`privacy.html`: Cloudflare-kohtaan lisättiin kappale Web
+Analyticsista. Palvelu ei käytä evästeitä eikä sormenjälkiä, joten
+se ei vaadi suostumusta. Päivitysmerkintä 28.5.2026 → 7.10.2026.
+
+**Mainonnan este poistui.** Ensimmäinen kuukausi dataa luetaan
+marraskuussa: liikenne vai konversio.
+
+---
+
+### ⚠⚠ META PIXEL ON RISTIRIIDASSA TIETOSUOJASELOSTEEN KANSSA
+
+**Löytyi 7.10.2026 Web Analyticsia lisättäessä. Ei korjattu,
+koska vaatii käyttäjän päätöksen.**
+
+`assets/meta-pixel.js` latautuu **jokaisella sivulla
+ehdoitta**, ilman suostumuskyselyä. Se asettaa `_fbp`-evästeen ja
+lähettää sivulataukset Metalle (Pixel ID 1720418568979435).
+
+Samaan aikaan `privacy.html` sanoo:
+
+> *"Sivusto käyttää välttämättömiä evästeitä toimintansa
+> varmistamiseen. **Emme käytä seuranta- tai
+> markkinointievästeitä.**"*
+
+**Väite ei pidä paikkaansa.** Lisäksi **Metaa ei ole lainkaan
+mainittu tietojenkäsittelijöiden listassa**, jossa Supabase,
+Resend, Cloudflare ja Timma on lueteltu.
+
+#### Kolme ongelmaa
+
+1. Tietosuojaseloste sisältää virheellisen väitteen
+2. Vastaanottajaa ei ole ilmoitettu
+3. Markkinointipikseli vaatii ePrivacy-sääntelyn mukaan
+   **suostumuksen ennen latautumista**, eikä sivustolla ole
+   suostumusmekanismia
+
+Tämä painaa enemmän kuin tavallisella verkkosivustolla, koska
+toiminta on terveydenhuollon rajapinnassa ja omavalvonnan piirissä.
+
+#### Vaihtoehdot
+
+| | Vaihtoehto | Seuraus |
+|---|---|---|
+| **A** | **Poista pikseli kunnes mainonta alkaa** | Yksinkertaisin. Pikseli ei tee nyt mitään hyödyllistä, koska mainontaa ei ole. Ristiriita poistuu heti. Uudelleenmarkkinointiyleisö ei kerry, mutta ilman suostumusta kerättyä yleisöä ei saisi käyttääkään |
+| **B** | Suostumusbanneri ja pikseli sen taakse | Vaatii evästebannerin rakentamisen. Tarvitaan joka tapauksessa jos mainonta alkaa joulukuussa |
+| **C** | Korjataan vain tekstit | Poistaa kohdat 1 ja 2 muttei kohtaa 3 |
+
+**Suositus: A nyt, B ennen mainonnan aloitusta.**
+
+### ✅ VALITTU A, TOTEUTETTU 7.10.2026
+
+**Meta Pixel poistettu kaikilta sivuilta.** Poistettu
+`<script src="/assets/meta-pixel.js">` ja sen `<noscript>`-pari
+**24 HTML-tiedostosta**.
+
+⚠ **Yksi tiedosto poikkesi muista.** `ihonhoito-opas.html`
+-tiedostosta puuttui `<!-- Meta Pixel -->` -kommenttirivi, joten
+tiukka hakukuvio ei täsmännyt siihen. **Skripti ilmoitti siitä
+erikseen sen sijaan että olisi ohittanut sen hiljaa**, ja se
+käsiteltiin omana tapauksenaan. Löysä kuvio olisi voinut jättää
+rivit paikoilleen kenenkään huomaamatta.
+
+**`assets/meta-pixel.js` jätettiin paikalleen.** Tiedosto on
+772 tavua eikä latatu mistään, joten se ei tee mitään. Säilytys
+tekee palauttamisesta yhden rivin työn kun suostumusratkaisu on
+rakennettu.
+
+**Pixel ID 1720418568979435** on tallessa sekä tässä merkinnässä
+että skriptitiedostossa.
+
+#### Tietosuojaselosteen evästeväite on nyt totta
+
+> *"Sivusto käyttää välttämättömiä evästeitä toimintansa
+> varmistamiseen. Emme käytä seuranta- tai markkinointievästeitä."*
+
+Lause ei vaatinut muutosta, koska se vastaa nyt todellisuutta.
+Cloudflare Web Analytics ei käytä evästeitä, ja Meta Pixel on
+poistettu. Tarkistettu ettei sivustolla ole muita seurantoja.
+
+#### ⚠ Ennen mainonnan aloitusta joulukuussa
+
+**Suostumusbanneri on rakennettava** ja Meta Pixel palautettava
+sen taakse. Samalla:
+
+- Meta lisättävä `privacy.html`-sivun tietojenkäsittelijöihin
+- Evästeosion teksti päivitettävä
+- Pikseli ei saa latautua ennen suostumusta
+
+**Ilman tätä mainontaa ei aloiteta.** Mainonnan ja pikselin
+palauttamisen on tapahduttava yhdessä, ei peräkkäin.
