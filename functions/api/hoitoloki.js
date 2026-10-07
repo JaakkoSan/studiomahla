@@ -15,6 +15,16 @@ const UUID_RE = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0
 const VISIT_TYPES = ['Aloitushoito', 'Sarjakäynti', 'Ylläpitokäynti'];
 const NUMBING_AGENTS = ['Benzokaiini', 'Lidokaiini', 'Tetrakaiini', 'Muu'];
 
+// Hoitotyyppi lisätty 29.9.2026. Aiemmin loki oli pelkästään
+// MicroPen EVO -mikroneulaukselle. Vanhoille riveille tietokanta
+// asettaa oletukseksi 'Mikroneulaus', joten historia ei muutu.
+//
+// ProXN ja mikroneulaus eivät koskaan osu samalle käynnille:
+// Retexture-protokolla (joka yhdistäisi ne) jätettiin pois
+// valikoimasta 29.9.2026. Siksi hoitotyyppi voi vaihtaa
+// kenttäryhmät lomakkeessa suoraan.
+const TREATMENT_TYPES = ['Mikroneulaus', 'ProXN'];
+
 const DEPTH_FIELDS = [
   'depth_forehead', 'depth_nose', 'depth_facial_scars',
   'depth_orbital', 'depth_neck', 'depth_cheek',
@@ -104,6 +114,16 @@ function buildVisitFromBody(body, { isUpdate }) {
     throw err(400, 'Käyntipäivä puuttuu');
   }
 
+  if (body.treatment_type !== undefined) {
+    if (body.treatment_type === null || body.treatment_type === '') {
+      payload.treatment_type = null;
+    } else if (TREATMENT_TYPES.includes(body.treatment_type)) {
+      payload.treatment_type = body.treatment_type;
+    } else {
+      throw err(400, 'Virheellinen hoitotyyppi');
+    }
+  }
+
   if (body.visit_type !== undefined) {
     if (body.visit_type === null || body.visit_type === '') {
       payload.visit_type = null;
@@ -174,6 +194,20 @@ function buildVisitFromBody(body, { isUpdate }) {
     const arr = sanitizeAdditionalAreas(body.additional_areas);
     if (arr === null) throw err(400, 'Virheellinen lisäalueiden lista');
     payload.additional_areas = arr;
+  }
+
+  // Lisätty 29.9.2026. Nämä kolme näkyvät molemmilla hoitotyypeillä,
+  // eivät vain ProXN:llä: ihon kunto ja reaktiot ovat yhtä
+  // olennaisia mikroneulauksessa, ja tuotteita käytetään
+  // jälkihoitona myös siellä.
+  if (body.skin_condition !== undefined) {
+    payload.skin_condition = sanitizeText(body.skin_condition, 2000);
+  }
+  if (body.products_used !== undefined) {
+    payload.products_used = sanitizeText(body.products_used, 2000);
+  }
+  if (body.reactions !== undefined) {
+    payload.reactions = sanitizeText(body.reactions, 2000);
   }
 
   if (body.notes !== undefined) {
