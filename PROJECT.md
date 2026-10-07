@@ -12485,4 +12485,121 @@ kolme eri kuvausta samasta sivusta oli turha ylläpidettävä.
 
 **`<title>` ei muuttunut.**
 
-**Lataamatta:** `index.html`, `PROJECT.md`.
+### Tehty: hakusanat `kauneushoitola` ja `kasvohoito` muualle
+
+Käytiin läpi kaikki 25 HTML-tiedostoa, `assets/layout.js`-footer ja
+JSON-LD. **Lähtötilanne:** `kauneushoitola` ei esiintynyt missään
+muualla kuin uudessa etusivun tekstissä; `kasvohoito` esiintyi jo
+22 kertaa `proxn-kasvohoito.html`:ssa ja kuusi kertaa hinnastossa,
+eli sitä ei tarvinnut lisätä vaan kohdistaa. JSON-LD on jo
+`"@type": "BeautySalon"`, mikä on oikea koneluettava luokitus.
+
+**Hakumäärät (Ubersuggest):** kauneushoitola Kotka 140 hakua/kk,
+CPC 0,25 €. Kasvohoito 90 hakua/kk, CPC 0,14 €. Arvio: karttatulosten
+alla ensimmäisenä orgaanisena noin 15–25 kävijää kuussa. Syy tavoitella
+termiä ei ole hakumäärä vaan se että kilpailu on heikkoa (hakutulosten
+ensimmäisellä sivulla toimintansa lopettaneita yrityksiä ja suoria
+Timma-linkkejä ilman hoitolan omaa sivustoa).
+
+**1. `assets/layout.js`, FOOTER_HTML.** Osoiterivin perään lisätty
+rivi `Kauneushoitola Kotkan Ruonalassa`. Yksi muutos vie sanan
+kaikille 25 sivulle koskematta yhteenkään leipätekstiin.
+`node --check` ajettu.
+
+**2. `hinnasto.html` title.** *"Hinnasto | Mahlamäen Kauneusstudio"*
+→ *"Hinnasto: mikroneulaus ja kasvohoidot Kotkassa | Mahlamäen
+Kauneusstudio"* (72 merkkiä). **Hinnaston sisältöön ei koskettu**
+(sääntö: hinnasto on hinnasto), vain otsikkotagiin.
+
+**3. `proxn-kasvohoito.html` H1, yhden sanan muutos.** *"kliininen
+ihonhoito"* → *"kliininen kasvohoito"*. Sama muutos tehtiin
+`og:title`- ja `twitter:title`-tageihin, jotka toistavat H1:n
+(3 esiintymää). Sivun oma hakusana oli käytännössä brändinimi
+*ProXN*, jota kukaan ei hae.
+
+**Blogiartikkeleihin näitä sanoja ei viety.** Ne rankkaavat
+tietohauilla, ja hakusana keskellä kollageenitekstiä olisi sekä
+turha että tyylirikko.
+
+### Google Business Profile tarkistettu 7.10.2026
+
+Päästiin lukemaan Chromella (profiili on tilillä johon selain on
+kirjautunut). **Mitään ei muutettu.**
+
+| Kohta | Tila |
+|---|---|
+| Pääluokka | **Kauneushoitola** ✅ oikein, ei toimenpiteitä |
+| Toissijaiset luokat | ei yhtään |
+| Vahvistus | vahvistettu, toimipistekoodi 4250121 |
+
+**Löydökset jotka vaativat käyttäjän päätöksen:**
+
+1. **Yrityksen nimi on profiilissa "Mahlamäen kauneusstudio"**
+   pienellä k:lla. Brändinimi on `Mahlamäen Kauneusstudio`.
+   Nimenmuutos menee Googlen uudelleentarkistukseen, joten se on
+   käyttäjän tehtävä ja ajoitettava.
+2. **Kuvauksessa on väite jota sivusto ei tue:** *"tulokset ovat
+   pysyviä"*. Sivusto sanoo että ylläpitohoito tarvitaan
+   6–12 kuukauden välein. Tämä on sama ylilupaamisen laji joka
+   siivottiin sivustolta 28.–29.9. **Korjattava.**
+3. **Kuvauksessa ei ole sanoja `kasvohoito` eikä `ProXN`.** Kuvaus
+   puhuu vain mikroneulauksesta ja ihonhoidosta.
+4. **Toissijaista luokkaa ei ole asetettu.** Luokkavalitsimesta
+   kannattaa katsoa löytyykö kasvohoitoja vastaava luokka, koska
+   toissijainen luokka tuo näkyvyyttä omilla hauillaan ilman että
+   pääluokka heikkenee.
+5. Profiilissa oli yksi käsittelemätön **Google-päivitys**
+   (punainen merkki muokkauskuvakkeessa).
+
+### Uusi GBP-kuvaus kirjoitettu 7.10.2026 (käyttäjä vie profiiliin)
+
+Vanha kuvaus:
+
+> Mahlamäen Kauneusstudio on kliinisen tason ihonhoitoon
+> erikoistunut studio Kotkan Ruonalassa. Toteutamme kaikki hoidot
+> terveydenhuollon ammattilaisen työnä. Erikoistumisalueitamme ovat
+> aknen ja sen oireiden hoito, ärtynyt ja herkkä iho sekä
+> ikääntymisen merkit. Kliinisessä mikroneulaushoidossa käytämme
+> FDA-hyväksyttyä ja CE-merkittyä (luokka IIa) MicroPen EVO
+> -laitetta. Hoito käynnistää ihon oman kollageenin- ja
+> elastiinintuotannon ilman vieraita aineita, ja tulokset ovat
+> pysyviä.
+
+Uusi kuvaus, **680 merkkiä** (Googlen raja 750):
+
+> Mahlamäen Kauneusstudio on esteettisiin menetelmiin erikoistunut
+> kauneushoitola Kotkan Ruonalassa. Kaikki hoidot toteuttaa
+> terveydenhuollon ammattilainen, ja jokainen asiakas saa
+> yksilöllisen hoitosuunnitelman.
+>
+> Hoitovalikoimaamme kuuluvat kliininen mikroneulaus ja
+> ProXN-kasvohoidot. Erikoistumisalueitamme ovat aknen ja sen
+> jälkien hoito, ärtynyt ja herkkä iho sekä ikääntymisen merkit.
+>
+> Mikroneulauksessa käytämme FDA-hyväksyttyä ja CE-merkittyä
+> (luokka IIa) MicroPen EVO -laitetta. Hoito käynnistää ihon oman
+> kollageenin- ja elastiinintuotannon ilman vieraita aineita.
+> Tulokset rakentuvat sarjahoidon aikana, ja niitä ylläpidetään
+> yksittäisellä hoidolla 6-12 kuukauden välein.
+
+**Mikä muuttui ja miksi**
+
+| Muutos | Perustelu |
+|---|---|
+| *"tulokset ovat pysyviä"* → ylläpitohoito 6-12 kk välein | Vanha väite oli ristiriidassa sivuston kanssa. Tämä oli ainoa paikka jossa ylilupaus oli vielä jäljellä |
+| *"kliinisen tason ihonhoitoon erikoistunut studio"* → *"esteettisiin menetelmiin erikoistunut kauneushoitola"* | Hakusana `kauneushoitola`, sama muotoilu kuin etusivun herossa |
+| ProXN-kasvohoidot nimetty | Hakusana `kasvohoito` puuttui kuvauksesta kokonaan |
+| *"aknen ja sen oireiden hoito"* → *"aknen ja sen jälkien hoito"* | Studio ei hoida aktiivista aknea lääkkeellisesti, vaan sen jälkiä. "Oireiden hoito" oli epätarkka |
+| *"terveydenhuollon ammattilaisen työnä"* + yksilöllinen hoitosuunnitelma | Sama lupaus kuin etusivulla, pidetään yhdenmukaisena |
+
+**Ajatusviiva:** kuvauksessa käytetään tavuviivaa (`6-12`) eikä
+ajatusviivaa, koska Googlen kenttä on pelkkää tekstiä eikä
+typografiaa kannata luottaa säilyvän. Sivustolla sama väli
+kirjoitetaan ajatusviivalla.
+
+**Käyttäjän vietävä profiiliin itse.** Samalla kannattaa päättää
+nimen kirjoitusasu (pieni/iso k) ja käsitellä odottava
+Google-päivitys.
+
+**Lataamatta:** `index.html`, `hinnasto.html`,
+`proxn-kasvohoito.html`, `assets/layout.js`, `PROJECT.md`.
