@@ -12033,3 +12033,73 @@ Hiekkalaatikon selain ei avaa paikallisia tiedostoja.
 molemmissa tiimigrideissä, tagit tasapainossa, JSON-LD jäsentyy.
 **Visuaalinen tulos on tarkistettava latauksen jälkeen.**
 
+
+
+---
+
+## 7.10.2026 — Asettelukorjaus 2: tiimigridin bugi ja kynäkuvan paikka
+
+Käyttäjä testasi pöytäkoneella: *"tiimi menee nyt edelleen
+allekkain ja siihen jää ihan tosi paljon tyhjää tilaa väliin.
+Jälkihoito on ok, tuo kynäkuva menee nyt ehkä aika sekavasti
+tekstin joukkoon."*
+
+### 1. Tiimigridin bugi: `span 20` + `gap`
+
+**Vika löytyi.** Olin kirjoittanut `.tiimi > picture { grid-row:
+1 / span 20; }` pitääkseni kuvan ensimmäisessä sarakkeessa.
+
+Se luo gridiin **kaksikymmentä riviä**. `gap: 36px` pätee
+jokaisen rivivälin kohdalla myös silloin kun rivi on tyhjä, joten
+19 väliä × 36 px = **noin 680 px tyhjää tilaa**. Sisältöä oli
+viidellä rivillä, loput 15 riviä tuottivat pelkkää väliä.
+
+**Korjaus:** `span`-kikka poistettiin ja tekstielementit
+käärittiin omaan `div.tiimi__teksti`-elementtiin. Grid on nyt
+yksinkertaisesti kaksi solua: kuva ja teksti. Sama rakenne
+Petralla, jolla tekstiä oli alun perinkin vain yksi kappale.
+
+**Opetus: `gap` koskee myös tyhjiä rivejä.** Jos grid-item
+spannaa enemmän rivejä kuin sisältöä on, ylimääräiset välit
+näkyvät tyhjänä tilana.
+
+### 2. Kynäkuva ei sovi kaistaksi
+
+Kuva on pystysuuntainen (1000×1125) ja alkuperäinen 2836×3185.
+Testattiin kolme vaakakaistarajausta alkuperäisestä: **yksikään ei
+toimi.** Hoitaja on vasemmalla ja asiakkaan kasvot oikealla
+alhaalla, joten leveä kaista leikkaa kasvot kokonaan pois ja
+jäljelle jää hanska ja laitteen varsi.
+
+**Kaista toimii vain vaakakuvalle.** Naamiokuva (1200×800) sopii
+siihen, kynäkuva ei.
+
+### 3. Kynäkuva oikean palstan yläosaan
+
+Käyttäjän valinta kolmesta vaihtoehdosta.
+
+Kuva on nyt **oikean palstan ylimmäisenä**, otsikon "Mihin
+haasteisiin mikroneulaus auttaa" yläpuolella, palstan levyisenä.
+Vasemmalla menetelmäteksti, oikealla kuva ja haastekortit.
+
+**Mikään ei kierrä mitään eikä mikään kellu.** Osio lukeutuu
+kahtena puhtaana palstana. Kelluva ratkaisu oli väärä: palsta on
+noin 564 px, ja 240 px kuvan viereen jäävä 300 px tekstiä oli
+liian kapea, mikä teki jäljestä sekavan.
+
+`article-figure--kelluva`-luokka poistettiin kokonaan, koska sitä
+ei käytetä enää missään.
+
+### Yhteenveto kuvien asettelusta
+
+| Paikka | Kuva | Tapa |
+|---|---|---|
+| Tiimi | `jaakko`, `petra` | Grid `280px 1fr`, kuva ja teksti vierekkäin |
+| Uudistumisprosessi | `mikroneulaus-hoito` | Oikean palstan ylin, palstan levyinen |
+| Ennen ja jälkeen | `mikroneulaus-naamio` | Täysleveä kaista, `aspect-ratio 12/5` |
+| ProXN-sivu | `proxn-annostelu` | Tavallinen `article-figure` |
+
+⚠ **Visuaalista tulosta ei voitu tarkistaa.** Tämä on toinen
+korjauskierros samaan asiaan, koska esikatselu ei toimi eikä
+asettelua voi arvioida lukemalla koodia. **Kannattaa katsoa
+latauksen jälkeen ja kertoa jos jokin on yhä pielessä.**
