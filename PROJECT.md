@@ -152,6 +152,174 @@ tieto on jonkin epätarkassa paikassa kuin että se ei ole tallessa lainkaan.
 
 ---
 
+## ALOITA TÄSTÄ — perehdytys uudelle istunnolle
+
+Lisätty 30.9.2026. **Tämä on ensimmäinen asia jonka uusi istunto
+lukee.** Kaikki alla oleva on sitovaa.
+
+⚠ **Älä lue tätä tiedostoa kokonaan.** Se on yli 11 000 riviä.
+Lue tämä osio ja sen jälkeen vain se mitä tehtävä vaatii.
+Nopein tapa etsiä: `grep -n "hakusana" PROJECT.md`.
+
+### Mistä on kyse
+
+**Mahlamäen Kauneusstudio**, studiomahla.fi, Kotkan Ruonala.
+Kliininen mikroneulaus (MicroPen EVO) ja ProXN-kasvohoidot.
+Avattu 7.9.2026. Yrittäjä ja käyttäjä: **Jaakko Sandström**.
+
+Työkansio `C:\studiomahla` on GitHub-repo joka julkaistaan
+Cloudflare Pagesiin. **Käyttäjä hoitaa lataukset itse.**
+
+### KÄYTTÄJÄN PYSYVÄT LINJAUKSET
+
+Nämä on opittu kantapään kautta ja niiden rikkominen on
+istuntojen yleisin virhelähde.
+
+**Tekeminen:**
+> *"Sinulla ei ole mitään lupaa tehdä muutoksia pyytämättä. Pidä
+> tämä mielessä jatkossa. Et lähde tekemään mitään mitä en ole
+> pyytänyt. Voit ehdottaa, mutta teet ainoastaan sen mitä pyydän."*
+
+**Ehdottaminen:**
+> *"Ennen kuin ehdotat yhtään mitään niin tarkista aina kaikki
+> ajantasainen ohjeistus jotta ei edes yritetä sellaista mitä ei
+> ole varmuudella olemassa."*
+
+**Käyttäjän ilmoituksia ei tarkisteta:**
+> *"Miksi lähdet joka kerta tarkistamaan vaikka en pyydä? Sanoin
+> että kirjaa päivitetyiksi ja muista jatkossa että et lähde
+> tarkistamaan jos ilmoitan että jokin asia on hoidettu."*
+
+Raja: tarkistat oman työsi tuloksen, et käyttäjän tekemää työtä.
+
+**Lähteet:**
+> *"Jos laitetaan lähteitä niin niissä pitää olla suora linkki.
+> Jos suoraa linkkiä ei voida laittaa niin lähdettäkään ei voida
+> laittaa lähdeluetteloon."*
+
+**Ikkunat:**
+> *"Kun käytät tietokonetta ja avaat eri ohjelmia, kansioita ja
+> ikkunoita niin sulje kaikki kun olet valmis."*
+
+**Muut:**
+- **PROJECT.md päivitetään automaattisesti** kun tulee muutoksia
+- *"On turhaa kertoa mitä ei tapahdu."* Älä listaa tekemättä
+  jätettyä
+- *"Petra ei liity markkinointiin ja ylläpitoon millään tavalla."*
+- *"Hinnasto on hinnasto."* Se ei kuvaa hoitoja
+- **PubMed ja PMC ovat CAPTCHA-suojattuja** tästä ympäristöstä.
+  Niitä ei kierretä
+- Käyttäjä arvostaa suoraa ja lyhyttä ilmaisua eikä pidä turhasta
+  selittelystä
+- **Ei ehdoteta Driveen kirjoittamista tarkistamatta ensin kumman
+  tilin Drive on kytkettynä.** Studion Drive on eri tili kuin
+  kytketty henkilökohtainen
+
+### Mitä luetaan milloinkin
+
+| Tehtävä | Lue |
+|---|---|
+| Tekstiä sivustolle | **luku 5** (kirjoitussäännöt) |
+| Blogi | luku 5 ja **luku 16** |
+| Reels tai some | `tuotanto/OHJE-reels.md` |
+| Hinnat, palvelut | luku 3 |
+| Lupa-asiat, omavalvonta | luku 9 |
+| Aknepolku, Soteri, Vaihe 3 | **luku 14** |
+| Viimeisin tilanne | tiedoston **loppu** |
+
+⚠ **Jokaisen uuden asiakastekstin jälkeen ajetaan alla oleva
+haku ennen kuin työ esitetään valmiina.** Luvun 5 etuliitesääntö
+on rikottu kolmesti (11.8., 16.9., 30.9.2026).
+
+```bash
+grep -rn -E "rehellistä sanoa|Rehellisesti sanottuna|Sanotaan suoraan|on syytä sanoa|Todettakoon|On tärkeää huomata|Kannattaa huomata|On hyvä tietää|Vastaus on yksinkertainen|Näin se toimii|Toisin sanoen|Kysymys ei ole siitä|eivät sulje toisiaan pois|Tämä ei tarkoita ett" --include=*.html .
+```
+
+**Kirjoitussäännöt joita rikotaan helposti:** ei ajatusviivoja
+paitsi numeroalueissa; **"Mahlamäen Kauneusstudio"** tai "studio",
+ei "Studio Mahla"; ei anglismeja (barrier, formulaatio, retail);
+**"ihon oma suojakerros"**, ei "suojaeste"; ei nimeämättömiä
+vaihtoehtoja; ei sisäistä kannattavuuslogiikkaa asiakastekstiin;
+ei väitteitä joita sivusto ei jo kata.
+
+### Tekninen ympäristö
+
+Bash-polku vaihtelee istunnoittain:
+```bash
+TYO=$(ls -d /sessions/*/mnt/studiomahla 2>/dev/null | head -1)
+```
+
+**Tiedostojen kirjoittaminen:** tavallinen `open(polku,'w')` ei ole
+luotettava tässä liitoskansiossa (6.8.2026: viisi tiedostoa joihin
+jäi nollatavuja). Kirjoita väliaikaistiedoston kautta ja varmista.
+
+**Jos jokin pitää ajaa Windowsissa** eikä Linux-hiekkalaatikossa:
+kirjoita `.bat` joka kirjoittaa tulosteen lokitiedostoon, aja se
+Resurssienhallinnasta kaksoisnapsauttamalla ja lue loki.
+Terminaaliin ei voi kirjoittaa. Malli: `tuotanto/_aja/`.
+
+**Supabase:** esitiedot, hoitoloki, varakoodit. Pääsy vain
+palvelinpuolelta `service_role`-avaimella. ⚠ 30.10.2026 alkaen
+**uusi taulu** tarvitsee erillisen GRANTin, sarake ei.
+
+### MISSÄ MENNÄÄN (pidä ajan tasalla)
+
+**Tilanne 6.10.2026** (viikkosisältö lisätty, muuten 30.9.2026).
+
+*Odottaa latausta GitHubiin (käyttäjä lataa 1.10.2026):*
+
+**A. Hoitovälin yhtenäistäminen, 8 artikkelia.** Valmis ja
+tarkistettu 30.9. Nämä kuuluvat yhteen, lataa kaikki samalla:
+`mikroneulaus-sarjahoito.html`, `mikroneulaus-opas.html`,
+`mikroneulauksen-jalkihoito.html`, `mikroneulaus-sopiiko-minulle.html`,
+`milloin-aloittaa-mikroneulaus.html`, `mita-mikroneulaus-ei-tee.html`,
+`aknearpien-hoito-mikroneulauksella.html`,
+`mita-tutkimus-sanoo-mikroneulauksesta.html`, `index.html`.
+⚠ Tarkista myös `sitemap.xml`-lastmodit näille.
+
+**B. Hoitoloki, ProXN-tuki.** `functions/api/hoitoloki.js` ja
+`admin.html` — **vasta kun `tuotanto/supabase-migraatio-2026-09-29.sql`
+on ajettu Supabasessa.**
+
+**C. Muut:** `.gitignore`, `META-MARKKINOINTI.md`, `PROJECT.md`.
+
+**D. Viikkosisältö 6.10.2026.** `herkka-iho-ruusufinni-mikroneulaus.html`
+(päivitys, ks. muutosloki) ja samalla `sitemap.xml`-lastmod
+2026-10-06 tälle sivulle. Reels 23: `tuotanto/generaattorit/isotretinoiini.py`,
+`tuotanto/karusellit/isotretinoiini_*`, `tuotanto/reels/isotretinoiini.mp4`.
+Lisäksi `REELS-IDEAT.md`, `META-MARKKINOINTI.md`, `PROJECT.md`.
+Huomio 6.10. luennasta: livenä `mikroneulaus-opas.html` näytti vielä
+5.8.2026 version, eli A-erä ei ollut silloin livenä.
+
+**A-erään lisätty 7.10.2026:** `milloin-aloittaa-mikroneulaus.html`
+kirjoitettu vuodenajasta riippumattomaksi (oli vanhentunut), ja
+24h/48h-ristiriita korjattu `mikroneulauksen-jalkihoito.html`
+-tiedostoon. Molemmat olivat jo A-listalla, joten erän koko ei
+kasvanut.
+
+*Odottaa käyttäjää:*
+- Kuvaussession kuvat kansioon `_kuvat` (kuvaus 29.9.2026)
+- Punoituksen aikasarja, käyttäjä ottaa itse
+- Reels 23 (isotretinoiini) julkaisu
+
+*Avoimia:*
+- 24h/48h-ristiriita jälkihoito-ohjeissa
+- Verisuonilaser: Fotonan aallonpituudet, Scanexin
+  Fimea-rekisteröinti, valmistajan pätevyysvaatimus
+- Vaihe 3 (lääkäri + Soteri) avaisi kerralla aknepolun, HIFUn ja
+  verisuonilaserin
+
+*Ajastetut tehtävät:* `viikkosisalto` (su klo 18, blogi + yksi
+Reels), `hakusanaseuranta` (kuukausittain).
+
+### Ennen kuin lopetat istunnon
+
+Kirjaa mitä tehtiin ja **päivitä yllä oleva "Missä mennään"**.
+Se vanhenee nopeimmin, ja vanhentunut tilannekuva on pahempi kuin
+ei kuvaa lainkaan.
+
+---
+
 ## 0. Tietolista — mitä on tallessa, mitä puuttuu
 
 Nopea silmäys mitkä keskeiset faktat ovat vahvistettu tässä muistiossa ja mitkä
@@ -4860,6 +5028,11 @@ Kronologinen loki muutoksista tähän tiedostoon. Uusimmat ylimpänä. Claude
 päivittää tätä automaattisesti jokaisen istunnon päätteeksi jos on tehty
 muutoksia.
 
+### 2026-10-06
+
+- **`viikkosisalto`, blogin viikkotoimi B: `herkka-iho-ruusufinni-mikroneulaus.html` päivitetty.** Luettiin Chromella kaikki 14 julkaistua artikkelia sekä etusivu, hinnasto ja ProXN-sivu. Perustelu: artikkeli on blogin ristiinlinkitetyin kohde (seitsemän artikkelia lupaa sen kertovan "kumpi reitti on missäkin tilanteessa todennäköisempi"), mutta sellaista osiota siinä ei ollut, eikä sitä ollut päivitetty julkaisun 17.8. jälkeen. Muutokset: uusi H2 "Kumpi reitti on todennäköisempi" (kuusi tilannetta ja kaksivaiheinen reitti, väitteet sivustolta: sopiiko, ProXN, rulla, ei-tee), ProXN:n kohderyhmätutkimus lisätty tutkimusosioon valmistajan aineistona ilman lähdeluetteloa (luvun 5 sääntö), H2 "Kaksi yleistä väärinkäsitystä" → "Normaali punoitus vai pahenemisvaihe" (oletettu yleistieto pois), luvun 5 rakenteet poistettu ("rehellisyys tästä on tärkeämpää", "Tämä ei ole poikkeus", H2 "Mitä tutkimus sanoo, rehellisesti", "Rehellisyys omien menetelmien rajoista… ei sen vastakohta"), perusteeton väite kapillaarien toiminnan tasaantumisesta poistettu. Uudet sisäiset linkit: `ihonhoito-opas`, `mikroneularulla-vai-…`, `mita-mikroneulaus-ei-tee`, `aknearpien-hoito-…`. `dateModified` 2026-10-06, article-meta, meta description, og- ja twitter-kuvaus. 1430 sanaa. **Lataamatta; `sitemap.xml`-lastmod 2026-10-06 päivitetään latauksen yhteydessä (ei tehty, viikkotehtävä ei muokkaa sitemapia).**
+- **`viikkosisalto`, Reels 23 "Isotretinoiini: kuusi kuukautta"** (idea 3.2, ★★★). `generaattorit/isotretinoiini.py`, `karusellit/isotretinoiini_01r–05r.png`, `reels/isotretinoiini.mp4` (26,4 s, h264 + aac, -14,7 LUFS), kansi tumma. Julkaisuloki ja kuvateksti META-MARKKINOINTI.md 3.5b, sävykierto 3.5a, ideapankki merkitty. 25 käyttämätöntä ideaa, joista ★★★ neljä.
+
 ### 2026-09-29
 
 - **Admin: "＋ Uusi lomake" -painike.** Käyttäjä: esitietolomaketta ei päässyt tekemään administa, kätevä jos asiakas ei ole muistanut täyttää. Toteutus: linkki `/lomake.html` uuteen välilehteen Esitietolomakkeet-näkymän yläpalkissa, ja lista päivittyy hiljaisesti (`visibilitychange`) kun admin-välilehdelle palataan. **Ei erillistä admin-lomaketta tarkoituksella:** sama lomakesivu pitää validoinnin, suostumukset, huoltajalohkon ja `/api/esitiedot`-tallennuksen yhdessä paikassa, eikä kahta lomaketta tarvitse pitää synkronissa. Suostumukset antaa asiakas itse, joten laite annetaan asiakkaalle täytettäväksi. `esitiedot.js`:ssä ei ole IP-rajoitusta, joten useampi lomake samasta verkosta menee läpi. **Lataamatta:** `admin.html`, `PROJECT.md`.
@@ -6664,7 +6837,7 @@ lopputulokset ja tilanne.
 
 ---
 
-**Viimeksi päivitetty**: 2026-09-16
+**Viimeksi päivitetty**: 2026-10-06
 
 
 ## 17.8.2026 — Varausmallin uudelleenjärjestely: ensikäynti ainoana ovena
@@ -10505,3 +10678,1271 @@ päiville jolloin kuvaaja ei ole paikalla.
 
 **Käyttäjä ilmoitti 25.9.2026 ottavansa sarjan itse.**
 Nimeämisohje on kirjattu tiedostoon `_kuvat\LUE-TAMA.txt`.
+
+
+---
+
+## 29.9.2026 — Retexture jää pois valikoimasta
+
+Käyttäjä: *"retexturea en ole ottamassa valikoimaan koska oman
+arvioni mukaan proxn ei ole soveltuva tehtäväksi mikroneulauksen
+jälkeen."*
+
+**Päätös: Retexture Treatment ei tule valikoimaan.** Neljästä
+ProXN-protokollasta jäljelle jäävät Overreactive Rescue ja Acne
+Rescue (toteutettavissa) sekä Firming (estyy tuotepuutteesta,
+luku 14b).
+
+### Perustelu on kaksinkertainen
+
+**1. Käyttäjän kliininen arvio.** ProXN:ää ei tehdä
+mikroneulauksen jälkeen.
+
+**2. Turvallisuusarvioinnin kattavuus.** Kosmeettisen valmisteen
+turvallisuusselvitys kattaa käytön **ehjälle iholle**. Kun ihoon
+tehdään kanavat, antoreitti muuttuu eikä selvitys enää kata sitä.
+Tämä ei riipu tuotteen laadusta vaan siitä mihin se on arvioitu.
+Tunnettu seuraus alalla on granuloomien muodostuminen, kun
+valmistetta viedään ihon läpi menetelmällä jolle sitä ei ole
+tarkoitettu.
+
+**Jälkimmäinen on se peruste jonka voi sanoa ulospäin**, jos joku
+kysyy miksi Retexturea ei tehdä vaikka se on ProXN:n
+protokollalistalla.
+
+### Tämä sulkee aiemman avoimen kysymyksen
+
+Luvussa 14b oli avoin kohta: *"ProXN + mikroneulaus —
+Antioxidant/Xanthohumol jälkihoitona vai erilliset?"*
+**Vastaus: erilliset.** ProXN-hoidot ja kliininen mikroneulaus
+ovat eri käyntejä, eivät saman käynnin osia.
+
+Tämä on linjassa sen kanssa mitä sivustolla jo sanotaan
+(ProXN "ei sekoiteta mikroneulaukseen").
+
+### Seuraus hoitolokin rakenteeseen
+
+Suunnittelussa oli auki se, että Retexture sisältää
+mikroneulauksen 0.2–0.5 mm, jolloin ProXN ja neulaus olisivat
+voineet osua samalle käynnille ja `treatment_type` ei olisi voinut
+vaihtaa kenttäryhmiä puhtaasti.
+
+**Retexturen jäädessä pois ongelma poistuu.** ProXN ja
+mikroneulaus ovat aina eri käyntejä, joten lomake voi vaihtaa
+kenttäryhmät suoraan hoitotyypin mukaan.
+
+**Retexture jätetään kokonaan pois protokollavalikosta.**
+Valikossa oleva vaihtoehto jota ei tehdä on vain väärinvalinnan
+mahdollisuus.
+
+### ⚠ Yhä auki: mitä ProXN-käynnistä seurataan
+
+Ehdotettu kenttälista (protokolla, käytetyt tuotteet, ihon
+reaktio, vaikutusaika) odottaa käyttäjän vahvistusta. Muutosta ei
+ole tehty `hoitoloki`-tauluun, `functions/api/hoitoloki.js`- eikä
+`admin.html`-tiedostoon.
+
+
+---
+
+## 29.9.2026 — Hoitoloki laajennettu ProXN-hoidoille
+
+Käyttäjä: *"Admin hoitolokissa on seuranta vain mikroneulaukselle,
+voisi lisätä myös proxn hoidoille."* Seurattavat kentät käyttäjän
+määrääminä: **ihon kunto, käytetyt tuotteet, kuinka mones hoito,
+reaktiot.**
+
+### Ratkaisu: laajennettiin nykyistä taulua, ei tehty uutta
+
+Perustelut:
+
+1. **Asiakkaan hoitohistoria kuuluu yhdelle aikajanalle.** Eri
+   taulussa joutuisi katsomaan kahta näkymää, ja juuri hoitojen
+   yhdistelmä on kiinnostava.
+2. **Suurin osa kentistä oli jo yhteisiä:** käyntipäivä,
+   käyntityyppi, käyntinumero, tekijä, suostumus, valokuvat,
+   muistiinpanot.
+3. **Sarakkeiden lisääminen ei vaadi uusia GRANT-lauseita**
+   Supabasen 30.10.2026 muutoksen jälkeen. Uusi taulu olisi
+   vaatinut.
+
+### "Kuinka mones hoito" oli jo olemassa
+
+Kaksi neljästä pyydetystä kentästä löytyi jo taulusta:
+`visit_number` (käyntinumero) ja `visit_type` (Aloitushoito /
+Sarjakäynti / Ylläpitokäynti). Niitä ei duplikoitu.
+
+### Uudet sarakkeet
+
+| Sarake | Tyyppi | Näkyy |
+|---|---|---|
+| `treatment_type` | text, not null, oletus `'Mikroneulaus'`, check-rajoite | molemmilla |
+| `skin_condition` | text | molemmilla |
+| `products_used` | text | molemmilla |
+| `reactions` | text | molemmilla |
+
+**Kolme jälkimmäistä eivät ole ProXN-kohtaisia.** Ihon kunto ja
+reaktiot ovat yhtä olennaisia mikroneulauksessa, ja tuotteita
+käytetään jälkihoitona myös siellä. Rajaaminen ProXN:ään olisi
+ollut keinotekoista.
+
+**Vanhat rivit saavat oletuksen `'Mikroneulaus'` automaattisesti**,
+joten historiaa ei tarvitse korjata käsin.
+
+### Muutetut tiedostot
+
+| Tiedosto | Muutos |
+|---|---|
+| `tuotanto/supabase-migraatio-2026-09-29.sql` | **UUSI.** Ajettava Supabasen SQL Editorissa |
+| `functions/api/hoitoloki.js` | `TREATMENT_TYPES`-vakio, validointi neljälle uudelle kentälle |
+| `admin.html` | Hoitotyypin valitsin, ehdollinen kenttien näyttö, uusi kenttäryhmä, korttinäkymän päivitys |
+
+### ⚠ AJOJÄRJESTYS ON PAKOLLINEN
+
+**1. SQL ensin, 2. tiedostot vasta sitten.** Jos koodi menee
+tuotantoon ennen sarakkeita, hoitolokin tallennus kaatuu.
+
+### Lomakkeen logiikka
+
+Mikroneulauskohtaiset ryhmät (puudute, pistokerrat, syvyydet, muut
+alueet) on merkitty `data-micropen-only` ja piilotetaan kun
+hoitotyypiksi valitaan ProXN. Sama gate on korttinäkymässä, joten
+ProXN-käynnillä ei näy tyhjää syvyystaulukkoa.
+
+**Piilotetut kentät jäävät DOM:iin ja tallentuvat silti.** Tämä on
+tietoinen valinta: jos hoitotyyppi napsautetaan vahingossa väärin
+ja korjataan takaisin, syvyydet ovat tallessa. Hoitokirjauksesta ei
+pidä hävitä tietoa käyttöliittymän valinnan takia.
+
+### Tarkistettu
+
+`node --check` läpäisty sekä `hoitoloki.js`-tiedostolle että
+`admin.html`-tiedoston inline-skriptille. Selaimessa ei testattu,
+koska sarakkeita ei ole vielä olemassa.
+
+### ⚠ Ei lisätty: ProXN-protokolla
+
+Ehdotin kentäksi myös protokollaa (Overreactive Rescue, Acne
+Rescue, Firming). **Käyttäjän kenttälistassa sitä ei ollut, joten
+sitä ei lisätty.** Käytännössä `products_used` kertoo protokollan
+epäsuorasti, koska protokollat eroavat tuotteiltaan. Jos
+protokolla halutaan omaksi kentäkseen, se on yhden sarakkeen
+lisäys.
+
+
+---
+
+## 30.9.2026 — Cowork-tehtävät siirtyvät pilveen 6.10.2026
+
+Sovellus näytti ilmoituksen: tämän koneen tehtävät poistuvat
+käytöstä, uusia ei voi aloittaa 6.10. jälkeen, ja ilmoitus
+kehottaa siirtymään Claude Codeen.
+
+**Tarkistettu Anthropicin dokumentaatiosta. Ei vaadi
+toimenpiteitä.**
+
+### Mitä muuttuu
+
+| Asia | Muutos |
+|---|---|
+| Uudet tehtävät | Ajavat pilvessä 6.10.2026 alkaen |
+| Asetus "Only on your computer" | Poistuu |
+| Tämä tehtävä | Aloitettu koneella → **jää koneelle ja toimii loppuun** |
+| Työkansio `C:\studiomahla` | **Pysyy koneella.** Pilvi-istunto lukee ja kirjoittaa sen työpöytäsovelluksen kautta |
+| Ajastetut tehtävät | Siirtyvät pilveen automaattisesti, myös paikallisia tiedostoja käyttävät |
+
+Dokumentaatio: *"Your folders stay on your computer. Claude
+reaches only the folders you've connected, through the desktop
+app, and only while it's open."*
+
+### ⚠ Claude Codeen EI siirrytä
+
+Ilmoitus tyrkyttää Claude Codea, mutta dokumentaatiossa on yksi
+ratkaiseva lause:
+
+> *"Your projects and scheduled tasks don't carry over to Claude
+> Code."*
+
+Siirtyminen **menettäisi `viikkosisalto`- ja
+`hakusanaseuranta`-tehtävät** eikä toisi tilalle mitään mitä
+pilviversio ei jo tarjoa. Claude Code on oikea valinta vain jos
+työn on pakko pysyä yhdellä koneella.
+
+### Miksi tämä on vähäriskistä juuri tälle projektille
+
+**Projektin muisti ei ole keskusteluissa vaan
+`PROJECT.md`- ja `META-MARKKINOINTI.md`-tiedostoissa**, jotka ovat
+työkansiossa. Uusi istunto pilvessä lukee samat tiedostot ja tietää
+saman. Tämä on ollut tiedostojen koko tarkoitus alusta asti.
+
+### Ainoa käytännön vaatimus
+
+**Työpöytäsovelluksen on oltava auki kun ajastettu tehtävä ajaa**,
+koska ne tarvitsevat pääsyn kansioon `C:\studiomahla` ja selaimeen.
+Koskee erityisesti `viikkosisalto`-tehtävää sunnuntaisin klo 18.
+Tämä ei ole muutos: ajastetut tehtävät tarvitsivat auki olevan
+sovelluksen jo ennen tätä.
+
+**Lähde:** [Use Claude Cowork on web, desktop, and mobile](https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile)
+
+
+---
+
+## 28.–29.9.2026 — Sauna mikroneulauksen jälkeen: mekanismit ja viestintälinjaus
+
+Käyttäjä: *"mitä varsinaisesti käy jos menee samana päivänä
+saunaan mikroneulauksen jälkeen?"* Sivustolla on kielto mutta ei
+perustelua, ja asiakkaat kysyvät tätä jatkuvasti.
+
+### Neljä mekanismia, eri vakavuus
+
+| Mekanismi | Mitä tapahtuu | Heikkeneekö ajan myötä |
+|---|---|---|
+| **Verisuonten laajeneminen** | Tulehdusreaktio jo käynnissä, sauna lisää verenkiertoa → voimakkaampi punoitus ja turvotus, pidempi toipuminen | **Ei.** Reaktio on 6 h kohdalla lähellä huippuaan |
+| **Hiki rikkoutuneella iholla** | Suolaa, ureaa, maitohappoa läpäistyllä suojakerroksella → kirvely ja ärsytys | Osittain |
+| **Infektioriski** | Mikrokanavat ovat portti; lämmin kostea jaettu tila suosii bakteereja. Yleisin seuraus follikuliitti | **Kyllä**, selvästi |
+| **Lämpö ja pigmentti** | Lämpö aktivoi melanosyyttejä myös ilman UV:tä. Merkitsee PIH-taipuvaisilla ja melasmassa | **Ei.** Ei liity kanaviin |
+
+### Kanavien sulkeutuminen ≠ suojakerroksen palautuminen
+
+Nämä sekoitetaan helposti. Mekaaninen kanava sulkeutuu nopeasti,
+mutta **TEWL on koholla selvästi pidempään**, tyypillisesti
+vuorokauden yli.
+
+Siksi vain infektioargumentti heikkenee tuntien myötä. Punoitus,
+turvotus ja pigmenttivaikutus eivät heikkene lainkaan.
+
+### Käyttäjän kliininen havainto (29.9.2026)
+
+> *"Kuvantamisessa on näkynyt että saattaa pysyä auki jopa 24h
+> mutta tämä silloin jos on aiheutettu selvää vuotoa esim arpia
+> hoidettaessa."*
+
+**Sulkeutumisaika seuraa vaurion astetta, ei ole laitekohtainen
+vakio.** Pinnallinen nuorennushoito (korkeintaan pistemäistä
+tihkumista) on eri tapahtuma kuin arpihoito jossa haetaan selvää
+vuotoa.
+
+⚠ Claude ei pystynyt vahvistamaan tätä kuvantamislöydöstä
+lähteestä. Se on käyttäjän oma havainto, ei ristiriidassa
+mekanismin kanssa.
+
+### VIESTINTÄLINJAUS: "en suosittele", ei kielto eikä lupa
+
+Käyttäjä ensin: *"kertoo vain riskit ja asiakas sitten itse
+päättää."* Sitten tarkennus: **"Mutta en siis suosittele."**
+
+Claude oli ensimmäisessä vastauksessa liukunut liian lähelle
+"se on ihan ok" -sävyä. **Oikea muotoilu on kolmiportaisen
+asteikon keskimmäinen:**
+
+| Väärin | Oikein | Väärin |
+|---|---|---|
+| "Älä saunaa" (kielto) | **"En suosittele, ja tässä on miksi. Päätät itse."** | "Se on ihan ok" |
+
+**Painavin peruste ei ole riski vaan lopputulos.** Asiakas maksoi
+hoidosta jonka on tarkoitus tuottaa tietty jälki. Sauna ei tee
+siitä vaarallista mutta tekee siitä huonomman. **Suositus on osa
+hoitoa, ei varoitus.** Tämä puree asiakkaaseen paremmin kuin
+riskipuhe, ja ehdoton kielto jota moni rikkoo silti nakertaa
+uskottavuutta kaikilta muiltakin ohjeilta.
+
+### Mitä asiakkaalle sanotaan
+
+- Oma sauna, tavallinen hoito, samana päivänä: **infektioriski
+  pieni.** Punoitus kestää todennäköisesti pari päivää pidempään
+- Jaettu sauna on eri asia. Arpihoito on eri asia
+- Jos on jo käynyt: ei pelottelua. Pyydä ilmoittamaan jos tulee
+  näppylöitä, kipua tai kuumotusta **kahden ensimmäisen
+  vuorokauden jälkeen** — se erottaa tavallisen ärsytyksen
+  alkavasta infektiosta
+- Jos asiakas poikkeaa ohjeesta, **kirjaa hoitolokiin**. Jos
+  punoitus pitkittyy, tiedätte kummatkin mistä se johtui
+
+### ⚠ Näyttötilanne
+
+Nämä ovat mekanismeja, eivät koeasetelmasta saatuja lukuja.
+Claude ei löytänyt tutkimusta joka olisi verrannut saunomista ja
+saunomatta jättämistä neulauksen jälkeen. **Sivuston 48 tuntia on
+alan vakiintunut suositus, ei tutkimuksesta johdettu raja.**
+Tätä ei pidä esittää asiakkaalle tarkempana kuin se on.
+
+### ⚠ AVOIN: 24 tunnin ja 48 tunnin ristiriita sivustolla
+
+Löydetty 28.9.2026. **Ei korjattu.**
+
+| Tiedosto | Mitä lukee |
+|---|---|
+| `index.html`, `lomake.html`, `mita-ensikaynnilla-tapahtuu.html` | "Vältä saunaa, uimahallia ja voimakasta fyysistä rasitusta **48 tuntia**" |
+| `mikroneulauksen-jalkihoito.html` | "Ensimmäiset **24 tuntia**: ... ei saunaa/liikuntaa" |
+
+Nämä eivät ole suoraan ristiriidassa, koska 24 tunnin lista on
+tiukin taso. **Asiakas voi silti lukea ne eri tavalla.**
+
+Jos ohjetta joskus tarkennetaan, **tarkennus kuuluu tiukempaan
+suuntaan**: arpihoidon jälkeen pidempään, koska kanavat voivat
+olla auki vuorokauden. Ei kevyen hoidon jälkeen lyhyempään.
+Käyttäjä torjui jälkimmäisen nimenomaisesti.
+
+
+---
+
+## 30.9.2026 — Avoimet kohdat istunnon päättyessä
+
+### Odottaa latausta GitHubiin
+
+| Tiedosto | Muutos | Huom |
+|---|---|---|
+| `functions/api/hoitoloki.js` | ProXN-tuki | **Vasta SQL:n jälkeen** |
+| `admin.html` | ProXN-tuki | **Vasta SQL:n jälkeen** |
+| `.gitignore` | Uusi tiedosto | |
+| `META-MARKKINOINTI.md` | Luku 3.2, Reels 2 → 1 | |
+| `PROJECT.md` | Tämän istunnon merkinnät | |
+
+`tuotanto/supabase-migraatio-2026-09-29.sql` ajetaan Supabasen
+SQL Editorissa **ennen** kahden ensimmäisen lataamista.
+
+⚠ Claude ei tarkista latausten tilaa. Käyttäjä hoitaa lataukset
+ja ilmoittaa kun ne on tehty (sääntö 13.9.2026).
+
+### Odottaa käyttäjää
+
+- **Kuvaussession kuvat** kansioon `_kuvat` (kuvaus oli
+  ti 29.9.2026, kuvat luvattu ke tai to)
+- **Punoituksen aikasarja**, käyttäjä ottaa itse
+- **`viikkosisalto`-tehtävä**: "Run now" kerran ennen sunnuntaita,
+  jotta Chrome-luvat tallentuvat
+
+### Selvittämättä, ei kiireellinen
+
+- Onko Scanex Medical rekisteröity Fimealle (laki 719/2021 § 49)
+- Fotonan alustojen aallonpituudet: 1064 + 2940 vai myös 532
+- Valmistajan käyttöohjeen pätevyysvaatimus laserille
+- 24h/48h-ristiriita jälkihoito-ohjeissa
+
+
+---
+
+## 30.9.2026 — Drive-tilanne ja etätyöskentely reissussa
+
+### ⚠ Studion Drive EI ole Clauden nähtävissä
+
+Työkansio peilataan **studion Google Driveen**, joka on eri tili
+kuin tähän istuntoon kytketty henkilökohtainen
+`jaakko.sandstrom@gmail.com`. Claude ei siis näe projektin
+tiedostoja Drivessa lainkaan — haku ei löytänyt `PROJECT.md`:tä
+eikä mitään muutakaan.
+
+**Sovellus sallii vain yhden Google Drive -yhteyden kerrallaan**
+(varmistettu 30.9.2026), joten studion Drivea ei voi kytkeä
+rinnalle.
+
+### ⚠ VIRHE JOTA EI TOISTETA
+
+Claude ehdotti tilannekuvan kirjoittamista Driveen **ennen kuin
+oli selvittänyt kumman tilin Drive on kytkettynä.** Ehdotus olisi
+vienyt studion aineiston henkilökohtaiselle tilille.
+
+`PROJECT.md` sisältää liiketoiminnan sisäisiä lukuja, tarkastajan
+yhteystiedot ja muuta mitä julkisesta omavalvontasuunnitelmasta
+nimenomaan karsittiin pois. **Se kuuluu studion tilille.**
+Käyttäjän erottelu on tietoinen ja oikea.
+
+**Sääntö: ennen kuin ehdotan mitään Driveen kirjoittamista,
+tarkistan mikä tili on kytkettynä ja kenelle aineisto kuuluu.**
+
+### Päätös: connectoria ei vaihdeta
+
+Vaihtaminen studion Driveen veisi näkyvyyden henkilökohtaisesta
+ilman merkittävää hyötyä: ilman konetta ei voi muokata sivustoa
+eikä ajaa generaattoreita, joten pelkkä lukuoikeus ei muuta
+paljoa.
+
+### Etätyöskentely: miten se toimii
+
+**Ensisijainen tapa.** Työpöytäsovellus auki Windows-koneella,
+kone ei mene lepotilaan, **istunto aloitetaan tältä koneelta** ja
+Chromebook vain ohjaa sitä. Dokumentaation ehto: pilvi-istunto
+pääsee paikallisiin kansioihin vain kun sovellus on auki **ja
+istunto on aloitettu työpöydällä**.
+
+**Varautuminen.** `PROJECT.md` kopioidaan Chromebookille ennen
+lähtöä. Jos kone sammuu tai yhteys katkeaa, tiedosto liitetään
+keskusteluun ja Claude lukee sen suoraan. Ei vaadi Drivea,
+tilinvaihtoa eikä konfigurointia. Sama `META-MARKKINOINTI.md`:lle
+jos some-työ on ajankohtaista.
+
+⚠ Ilman konetta Claude **ei pysty** muokkaamaan sivustoa,
+ajamaan generaattoreita eikä lataamaan tiedostoja. Tutkiminen,
+suunnittelu, luonnostelu ja kysymyksiin vastaaminen onnistuvat.
+
+
+---
+
+## 30.9.2026 — ✅ Chromebook-etäkäyttö testattu ja toimii
+
+Käyttäjä lähdössä reissuun ja halusi jatkaa työskentelyä
+Chromebookilta Windows-koneen jäädessä päälle. **Testattu
+käytännössä, toimii.**
+
+### Testi
+
+Luotiin `tuotanto/yhteystesti.tmp` Windows-koneella. Chromebookilta
+ohjattu pilvi-istunto sai tehtäväkseen lukea tiedoston ja lisätä
+siihen rivin. Tulos tarkistettiin Windows-koneelta levyltä:
+
+```
+[30.9.2026, Windows, paikallinen istunto] Perusrivi.
+[30.9.2026 klo 10.45] Chromebook          <- Chromebookin kirjoittama
+```
+
+**Sekä luku että kirjoitus toimivat.** Kirjoitus oli epävarmin
+kohta, ja sekin meni läpi.
+
+### TOIMIVA RESEPTI
+
+| # | Vaihe | Miksi |
+|---|---|---|
+| 1 | Settings > General: **"Only on your computer" pois päältä** | Muuten istunto jää koneelle eikä näy Chromebookilla |
+| 2 | **Aloita istunto Windows-koneella**, ja se on oltava **Cowork, ei Chat** | Pilvi-istunto pääsee paikallisiin kansioihin vain jos se on aloitettu työpöydällä. Chatissa ei ole tiedostotyökaluja lainkaan |
+| 3 | Kone päälle, **lepotila pois**, sovellus auki | Ilman tätä tiedostoyhteys katkeaa |
+| 4 | Chromebookilta claude.ai → jatka samaa istuntoa | |
+
+⚠ **Cowork/Chat-valitsin on poistumassa.** Dokumentaation mukaan
+ne yhdistetään yhdeksi, ja uudessa kokemuksessa tehtävä vain
+kuvataan eikä valintaa tehdä. Jos valitsinta ei näy, versio on jo
+uusi eikä mitään tarvitse valita.
+
+### Mitä reissussa voi tehdä
+
+**Kaiken normaalin:** sivuston muokkaus, `PROJECT.md`:n päivitys,
+generaattorien ajo, tiedostojen luku ja kirjoitus.
+
+⚠ **Ehto on absoluuttinen: Windows-kone hereillä ja sovellus
+auki.** Jos kone nukahtaa tai Windows-päivitys käynnistää sen
+uudelleen, yhteys katkeaa. Muista myös 24.9. opittu: Fast Startup
+päällä olevalla koneella sammutus ei alusta virtualisointi-
+palveluita, joten palautuminen vaatii "Käynnistä uudelleen".
+
+### Varautuminen jos kone silti sammuu
+
+`PROJECT.md` mukaan Chromebookille. Tiedosto liitetään
+keskusteluun ja Claude lukee sen suoraan. Tutkiminen, suunnittelu
+ja luonnostelu onnistuvat, muokkaus ei.
+
+### Testitiedosto
+
+`tuotanto/yhteystesti.tmp` jätettiin paikalleen. Pääte `.tmp` on
+`.gitignore`ssa, joten se ei päädy GitHubiin. Voi poistaa, tai
+säilyttää seuraavan kerran testiä varten.
+
+
+---
+
+## 30.9.2026 — Virranhallinta tarkistettu ja Reels-ohje irrotettu omaksi tiedostoksi
+
+### Virranhallinta: lepotila ei ole ongelma
+
+Ajettiin `tuotanto/_aja/tarkista_virta.bat` → `virta_tarkistus.txt`.
+Vain lukevia komentoja, ei vaadi järjestelmänvalvojan oikeuksia.
+
+Virrankäyttösuunnitelma **"Turbo"** (ilmeisesti Armoury Craten
+tekemä).
+
+| Asetus | Verkkovirta | Akku |
+|---|---|---|
+| Lepotila (STANDBYIDLE) | **0x0 = ei koskaan** ✓ | 180 s |
+| Horrostila (HIBERNATEIDLE) | **0x0 = ei koskaan** ✓ | 3600 s |
+| Näyttö (VIDEOIDLE) | 300 s | 180 s |
+| Kiintolevy (DISKIDLE) | 30 s | 30 s |
+
+**Verkkovirralla kone ei mene lepotilaan eikä horrostilaan.**
+Näytön sammuminen ei ole lepotila eikä haittaa. Kiintolevyn
+30 s on epätavallisen lyhyt mutta ei vaikuta SSD:llä eikä katkaise
+tiedostoyhteyttä.
+
+Lepotilat: **S0 Low Power Idle (Modern Standby)**, ei S1–S3.
+Hybrid Sleep ei käytettävissä koska hypervisor on päällä.
+
+Verkko: **WLAN 2,4 Gbps, Ethernet irti.** Yhteys on langattoman
+varassa.
+
+### ⚠ ISOMPI RISKI KUIN LEPOTILA: Windows Update
+
+**ActiveHoursStart 8, ActiveHoursEnd 2.** Automaattinen
+uudelleenkäynnistys on siis sallittu **klo 02–08 yöllä.**
+
+Jos päivitys käynnistää koneen uudelleen reissun aikana, kone jää
+kirjautumisruutuun, Claude Desktop ei ole käynnissä eikä
+Chromebook pääse tiedostoihin. **Vikaa ei huomaa ennen kuin
+yrittää.**
+
+**Toimenpide: keskeytä päivitykset reissun ajaksi**
+(Asetukset > Windows Update > Keskeytä päivitykset). Tämä on
+yksittäisenä toimena tehokkain.
+
+### Kannen sulkeminen
+
+Modern Standby -koneella kannen sulkeminen voi viedä koneen
+lepoon vaikka aikakatkaisu on pois. **Asetusta ei tarkistettu.**
+Käyttäjä ilmoitti 30.9.2026 jättävänsä kannen auki, joten asia ei
+ole ajankohtainen. Jos joskus on, se on eri asetus kuin
+STANDBYIDLE.
+
+### Fast Startup
+
+`HiberbootEnabled: 1`, yhä päällä. Ei haittaa niin kauan kuin
+konetta ei sammuteta. Jos sammutetaan, palautuminen vaatii
+**Käynnistä uudelleen** eikä virran katkaisua (ks. 24.9.2026).
+
+---
+
+### UUSI: `tuotanto/OHJE-reels.md`
+
+Käyttäjä kysyi voiko Chromebookilta pyytää yhden Reelsin.
+**Voi, mutta ei pelkällä lauseella** — uusi istunto alkaa tyhjältä
+eikä tiedä dia-asettelua, sävykiertoa, ideapankkia eikä
+kirjoitussääntöjä.
+
+Ohjeet olivat vain `viikkosisalto`-ajastetun tehtävän sisällä,
+kansiossa `C:\Users\jaakk\Claude\Scheduled\`. **Se on työkansion
+ulkopuolella eikä näy pilvi-istunnolle.** Tämä istunto pystyi
+lukemaan sen, mutta Chromebookilta ohjattu ei todennäköisesti
+pysty.
+
+**Ratkaisu: Reels-osuus irrotettiin omaksi tiedostoksi
+työkansioon.** Sisältää kirjoitussäännöt, fonttitarkistuksen,
+turvallisen kirjoituksen, idean valinnan (★★★-etusija),
+diarakenteen, sävykierron, kuvatekstin vaatimukset,
+tiedostopäivitykset ja raportointiohjeen.
+
+**Käyttö Chromebookilta:**
+
+> Lue `C:\studiomahla\tuotanto\OHJE-reels.md` ja tee sen mukaan
+> yksi Reels.
+
+⚠ **Ylläpitovelvoite: sama ohje on nyt kahdessa paikassa.** Jos
+`OHJE-reels.md` muuttuu, sama muutos on tehtävä
+`viikkosisalto`-tehtävään ja päinvastoin. Tämä on kirjattu myös
+itse tiedostoon.
+
+
+---
+
+## 30.9.2026 — UUSI: `ALOITA.md`, uuden istunnon perehdytys
+
+Käyttäjä: *"Pitäisikö vain tehdä prompt millä aloitan uuden
+keskustelun niin että se lukee ohjeet yms ja osaa jatkaa kaikesta
+suoraan."*
+
+Hyvä idea ja laajempi kuin reissutilanne: se korjaa kylmästä
+aloituksesta johtuvan ongelman pysyvästi. **6.10.2026 jälkeen
+jokainen uusi istunto alkaa tyhjältä**, joten tämä tulee olemaan
+normaalitilanne.
+
+### Kaksiosainen ratkaisu
+
+**1. Lyhyt liitettävä prompt.** Kolme riviä, osoittaa tiedostoon.
+Pysyy lyhyenä eikä vanhene.
+
+**2. `C:\studiomahla\ALOITA.md`.** Kantaa yksityiskohdat, on
+työkansiossa ja päivittyy muun aineiston mukana.
+
+Syy jakoon: pitkä liitettävä prompt vanhenee ja jää päivittämättä,
+koska se elää käyttäjän leikepöydällä eikä versionhallinnassa.
+
+### Mitä ALOITA.md sisältää
+
+| Osa | Sisältö |
+|---|---|
+| 1 | Mistä on kyse: studio, sivusto, työkansio, julkaisuputki |
+| 2 | **Käyttäjän pysyvät linjaukset sanatarkasti** |
+| 3 | Mitä luetaan ja milloin + kirjoitussäännöt |
+| 4 | Tekninen ympäristö: polut, turvallinen kirjoitus, generaattorit, .bat-kiertotie, Supabase |
+| 5 | **Missä mennään** — latausjono, odottavat, avoimet, ajastetut |
+| 6 | Ennen kuin aloitat |
+
+**Luku 2 on tärkein.** Siinä ovat ne linjaukset jotka on opittu
+kantapään kautta ja jotka häviävät ensimmäisenä kun istunto
+vaihtuu: ei tehdä pyytämättä, tarkistetaan ennen ehdottamista, ei
+tarkisteta käyttäjän ilmoituksia, lähteisiin suora linkki,
+suljetaan avatut ikkunat.
+
+**Luku 3 kieltää lukemasta PROJECT.md:tä kokonaan** (yli 10 000
+riviä) ja antaa taulukon siitä mikä luku vastaa mitäkin tehtävää.
+
+### ⚠ Ylläpitovelvoite
+
+**`ALOITA.md` luku 5 vanhenee nopeimmin.** Se on päivitettävä kun
+latausjono tai avoimet asiat muuttuvat. Jos se vanhenee, uusi
+istunto saa väärän kuvan tilanteesta — mikä on pahempi kuin ei
+kuvaa lainkaan.
+
+Sama koskee lukua 2: jos käyttäjä antaa uuden pysyvän linjauksen,
+se kirjataan sekä PROJECT.md:hen että ALOITA.md:hen.
+
+
+---
+
+## 30.9.2026 — Kaksoiskappaleet poistettu: ALOITA.md ja Reels-ohje
+
+Käyttäjä: *"Tarvitseeko erillistä aloita.md olla? Kokeilin ja
+toimii toisessa keskustelussa."*
+
+**Käyttäjä oli oikeassa. Erillistä tiedostoa ei tarvita.**
+
+### Mitä oli tehty väärin
+
+Claude loi 30.9.2026 kaksi erillistä ohjetiedostoa —
+`ALOITA.md` ja `tuotanto/OHJE-reels.md` — ja **varoitti
+molempien kohdalla erikseen siitä että sama ohje on nyt kahdessa
+paikassa ja ne pitää pitää synkassa.**
+
+Ylläpitovelvoitteen tunnistaminen ei ole sama asia kuin sen
+välttäminen. Oikea ratkaisu oli poistaa kaksoiskappale, ei
+dokumentoida sitä.
+
+### Korjaus 1: ALOITA.md → PROJECT.md:n osioksi
+
+`ALOITA.md` **poistettu**. Sisältö siirretty PROJECT.md:hen
+osioksi **"ALOITA TÄSTÄ — perehdytys uudelle istunnolle"**, joka
+sijaitsee heti CLAUDELLE-ohjeen jälkeen ja ennen lukua 0
+(rivit n. 155–290).
+
+Perustelu: PROJECT.md:ssä oli jo *"⚠️ CLAUDELLE: pysyvä ohje"*
+ja luku 0 (tietolista), jotka kattoivat osan samasta. Uusi osio
+tuo ne kaksi asiaa jotka puuttuivat yhdestä paikasta:
+**käyttäjän pysyvät linjaukset koottuna** (olivat hajallaan
+päivätyissä merkinnöissä) ja **"missä mennään" -tilannekuva.**
+
+Osio sisältää myös kohdan *"Ennen kuin lopetat istunnon"*, joka
+velvoittaa päivittämään tilannekuvan.
+
+### Korjaus 2: `viikkosisalto` viittaa nyt Reels-ohjeeseen
+
+Ajastetun tehtävän Reels-osuus (vaiheet 4–8) korvattiin
+viittauksella: *"Noudata tiedostoa
+`C:\studiomahla\tuotanto\OHJE-reels.md`."* Tehtävään jäi vain
+kaksi lisäystä jotka koskevat nimenomaan viikkoajoa: blogiaiheen
+hyödyntäminen idean valinnassa ja ideapankin täydennys.
+
+Tehtävä myös aloittaa nyt lukemalla PROJECT.md:n ensimmäiset 300
+riviä, eli saman perehdytyksen kuin käsin aloitettu istunto.
+
+`OHJE-reels.md` pidettiin erillisenä tarkoituksella: se on pitkä
+toimintaohje jota luetaan vain kun tehdään Reels, eikä sitä
+kannata pakottaa jokaisen istunnon luettavaksi.
+
+### Uusi aloitusprompti
+
+```
+Työkansio on C:\studiomahla. Lue PROJECT.md:n ensimmäiset 300 riviä
+— siellä on perehdytys ja pysyvät linjaukset, joita noudatat.
+Älä lue tiedostoa kokonaan, se on yli 11 000 riviä.
+
+Kerro lyhyesti missä mennään, äläkä tee mitään ennen kuin olen
+sanonut mitä tehdään.
+```
+
+### Sääntö
+
+**Kun huomaat kirjoittavasi "tämä on nyt kahdessa paikassa ja
+pitää synkata", pysähdy.** Se on merkki väärästä rakenteesta,
+ei huomautus jonka kirjaaminen riittää.
+
+
+---
+
+## 30.9.2026 — Mikroneulauksen sarjaväli: neljä viikkoa pysyy, kahdeksan voidaan tarjota
+
+**PÄÄTÖS.** Käyttäjä: *"neljä viikkoa on edelleen se mikä pidetään
+mutta kahdeksan voidaan myös tarjota jos se sopii asiakkaalle
+paremmin."*
+
+Koskee **kliinistä mikroneulausta** (MicroPen EVO), ei ProXN:ää.
+ProXN-välit ovat eri asia, ks. 10.8.2026 merkintä.
+
+### Näyttötilanne: suoraa vertailua ei ole
+
+**Yhtäkään tutkimusta joka vertaisi hoitovälejä keskenään ei
+löytynyt** (haettu 30.9.2026). Julkaistut tutkimukset ovat
+käyttäneet 2, 4 ja 8 viikon välejä, ja kaikki raportoivat
+merkitsevää paranemista. Mikään ei aseta niitä vastakkain.
+
+⚠ **Neljä viikkoa on konventio, ei johdettu optimi.**
+
+Huomionarvoista: **El-Domyati ym. käyttivät kahden viikon väliä**
+kuudella hoitokerralla. Se on se aineisto jossa kollageeni I, III
+ja VII sekä tropoelastiini mitattiin koepaloista ja todettiin
+merkitsevästi lisääntyneiksi. Eli mekanismin parhaiten osoittava
+tutkimus käytti **lyhyempää** väliä kuin studion neljä.
+
+### Miksi pidempi väli ei hukkaa hyötyä
+
+Kaksi kelloa käy eri nopeutta:
+
+| Prosessi | Kesto | Mihin liittyy |
+|---|---|---|
+| Epidermin uusiutuminen | n. 28 vrk | **Tästä neljän viikon sääntö tulee** |
+| Dermaalinen remodellaatio | kuukausia | **Tätä hoidolla haetaan** |
+
+Kollageeni III muuttuu tyypiksi I hitaasti, ja histologiassa
+kollageeni on yhä nousussa kolmen kuukauden kohdalla. Edellisen
+kerran remodellaatio on siis kesken kummallakin välillä.
+**Ei ole mekanismia jonka perusteella kahdeksan viikkoa hukkaisi
+hyödyn.**
+
+Lisäetu: kahdeksan viikon kohdalla edellisen hoidon tulos on
+kypsempi, joten seuraavan kerran syvyys ja alueet valitaan
+paremman tiedon varassa.
+
+### Miksi neljä viikkoa silti pysyy oletuksena
+
+**Todellinen hinta on kalenteri, ei biologia.** Kuuden hoidon
+sarja venyy viidestä kuukaudesta yhteentoista. Pitkä sitoutuminen
+lisää keskeyttämistä, ja asiakas odottaa lopputulosta vuoden.
+
+### Milloin kahdeksan viikkoa tarjotaan
+
+- Reaktiivinen iho
+- Jälkitulehdukselliseen tummumiseen taipuvainen iho
+- Asiakas ei käytännössä pääse neljän viikon välein
+
+### ⚠ Mitä EI saa sanoa
+
+**Kahdeksan viikkoa ei ole parempi.** Näyttöä ei ole kumpaankaan
+suuntaan. Sitä tarjotaan sopivuuden perusteella, ei
+tehokkuusväitteellä. Vastaavasti neljän viikon paremmuutta ei voi
+perustella tutkimuksella — se on vakiintunut käytäntö ja
+käytännöllinen valinta.
+
+### Sivuston nykytila
+
+"Neljän viikon välein" esiintyy **yhdeksässä tiedostossa**:
+`index.html`, `hinnasto.html`, `mikroneulaus-sarjahoito.html`
+(4 kohtaa), `mikroneulauksen-jalkihoito.html` (2),
+`mikroneulaus-opas.html`, `mita-on-kliininen-mikroneulaus.html`,
+`mita-mikroneulaus-ei-tee.html`, `milloin-aloittaa-mikroneulaus.html`,
+`mikroneulaus-sopiiko-minulle.html`,
+`aknearpien-hoito-mikroneulauksella.html`.
+
+**Sivustoa ei muutettu.** Neljä viikkoa on yhä oikea suositus.
+⚠ Harkittava myöhemmin: asiakas joka ei pääse neljän viikon
+välein voi lukea nykyisen muotoilun ehdottomana ja jättää
+varaamatta. Yksi lause joustosta `mikroneulaus-sarjahoito.html`
+-sivulla voisi olla paikallaan. **Ei tehty, ei pyydetty.**
+
+
+---
+
+## 30.9.2026 — Hoitovälin viestintä yhtenäistetty koko sivustolla
+
+Seuraus 30.9. päätöksestä (neljä viikkoa oletus, kahdeksan
+voidaan tarjota) ja käyttäjän tarkennuksista: arvissa **kolme
+viikkoa** alaraja, ja haittavaroitus **siirretään tekniikkaan**.
+
+### Sweep löysi enemmän kuin ensimmäinen haku
+
+Ensimmäinen haku löysi 10 kohtaa. Käyttäjän pyytämä koko
+sivuston läpikäynti löysi **16 kohtaa kahdeksassa tiedostossa**,
+ja niistä yksi oli kokonaisen H2-osion teesi.
+
+⚠ **Sivusto oli jo ennestään sisäisesti ristiriitainen:**
+`mita-tutkimus-sanoo-mikroneulauksesta.html` puhui
+*"ammattilaiskonsensuksesta 4–6 viikon tauosta"*, kun muut sivut
+sanoivat jäykkää neljää. Tutkimussivu oli lähimpänä oikeaa, ja
+muut yhtenäistettiin siihen.
+
+### Muutetut väitteet
+
+| Tiedosto | Ennen | Jälkeen |
+|---|---|---|
+| `mikroneulaus-sarjahoito.html` H2 | "Hoitojen väli: miksi neljä viikkoa" | "Hoitojen väli: miksi noin kuukausi" |
+| sama, teesi | "optimaalinen väli on neljä viikkoa, ei viikko, ei kahdeksan viikkoa. Tämä on tarkka biologinen ikkuna eikä joustava aikataulu" | Neljä viikkoa on oletus; tutkimuksissa käytetty 2, 4 ja 6 viikkoa; vertailevaa tutkimusta ei ole |
+| sama, tiheä | "Liian tiheästi (esim. 1–2 viikkoa) tehty hoito ei anna kollageenisynteesille aikaa" | Arvissa perusteltu tiivistää, alaraja kolme viikkoa |
+| sama, harva | "Liian harvoin (esim. 8–12 viikkoa) menettää sarjavaikutuksen" | Pidempi väli ei poista hyötyä, tulos tulee hitaammin (6 hoitoa ≈ 11 kk) |
+| sama, sykli | "linjassa ihon luonnollisen uusiutumissyklin kanssa" | Epidermis 28 vrk, **mutta hoito tähtää dermikseen** jossa muutos kestää kuukausia |
+| sama, haitta | "alle neljän viikon väli on suoraan kontraindikaatio" | Haitat liittyvät **tekniikkaan**; katsaus ei määrittele neljää viikkoa rajaksi |
+| sama, tram-track | "yksi syy miksi sarjahoidon ajoitus on tarkka" | Paine ja neulapaksuus ratkaisevat, ei kalenteri |
+| sama, keskeytys | "Pidempi tauko nollaa sarjavaikutuksen" | Ei osoitettua rajaa; puolen vuoden jälkeen uusi arvio |
+| `milloin-aloittaa` | "ajoitetaan tarkasti... ei ole joustava aikataulu" | Yleensä neljä, voi joustaa kumpaankin suuntaan |
+| `mita-mikroneulaus-ei-tee` | "eikä väliä voi lyhentää ilman että kollageenisynteesi kärsii" | Ei kannata lyhentää paljon; sarjaa ei saa puristettua viikkoihin |
+| `mikroneulaus-opas` (2 kohtaa) | "biologisesti perusteltu vaatimus, ei pelkkä suositus" | Väli ei ole lukittu; haitta kohdistettu tekniikkaan |
+| `mikroneulauksen-jalkihoito` (2) | "ajoitettu tarkasti", "väli on kriittinen" | "tavallisesti", "mistä väli tulee ja milloin se voi joustaa" |
+| `mikroneulaus-sopiiko-minulle` | "linjassa uusiutumissyklin kanssa" | Arpiväli kolme viikkoa + epidermis/dermis-tarkennus |
+| `index.html` | "Optimaalinen väli hoitojen välillä on noin neljä viikkoa" | "yleensä noin neljän viikon välein. Väli voi joustaa" |
+| `aknearpien-hoito` | (vain neljä viikkoa) | + kolmen viikon mahdollisuus ja perustelu |
+| `mita-tutkimus-sanoo` | "Biologinen perustelu liian tiheän hoidon haitallisuudelle on **vahva**" | "**johdonmukainen**, mutta kontrolloitua tutkimusta ei ole eikä viikkomäärää ole osoitettu rajaksi" |
+
+**Ei muutettu:** `hinnasto.html` ("noin neljän viikon välein" —
+hinnasto on hinnasto), `index.html` JSON-LD-kuvaukset
+(faktuaalisia), `mita-on-kliininen-mikroneulaus.html` (oli jo
+pehmeä: "yleensä noin neljän viikon tauko").
+
+### Rehellinen päivitysmerkintä artikkelin alkuun
+
+Käyttäjän pyynnöstä `mikroneulaus-sarjahoito.html`-artikkelin
+alkuun lisättiin näkyvä merkintä joka **kertoo suoraan että
+aiempi muotoilu oli liian jyrkkä.** Ei piilotettua korjausta.
+
+### Tarkistukset ajettu
+
+JSON-LD jäsentyy kaikissa yhdeksässä tiedostossa. Ei kiellettyjä
+sanoja. Ei ajatusviivoja uusissa teksteissä. Ei jäljelle jääneitä
+jäykkyysväitteitä. Arpiväli mainitaan kolmessa tiedostossa
+yhdenmukaisesti. `dateModified` ja päivitysmerkinnät päivitetty
+kaikkiin kahdeksaan artikkeliin.
+
+⚠ **Kaikki kahdeksan tiedostoa odottavat latausta GitHubiin.**
+
+
+---
+
+## 30.9.2026 — Etuliitesääntö rikottu KOLMANNEN kerran
+
+Käyttäjä: *"'On kuitenkin rehellistä sanoa' — tämä on ohjeistuksen
+mukainen turha täytelause. Mitään tämän tyyppistä ei saa
+kirjoittaa, tiedät sen."*
+
+**Kirjoitin etuliitteen samana päivänä kun olin yhtenäistämässä
+koko sivuston tekstejä sääntöjen mukaisiksi.**
+
+Luvun 5 etuliitesääntö on kirjattu 11.8.2026 nimenomaan siksi että
+se rikkoontuu ilman kirjausta. PROJECT.md:ssä oli jo merkintä
+"Tämä on toinen kerta". Tämä on kolmas.
+
+### Korjatut kohdat, kaikki mikroneulaus-sarjahoito.html
+
+| # | Ennen | Jälkeen |
+|---|---|---|
+| 1 | "**On kuitenkin rehellistä sanoa, että** hoito vaikuttaa myös sitä syvemmälle" | "Hoito vaikuttaa myös sitä syvemmälle" |
+| 2 | "**Se ei kuitenkaan ole tarkka ikkuna jonka ohi ei saa mennä.**" | poistettu, puolusteleva vertailu |
+| 3 | "Pidempi väli **ei poista hyötyä** — — **mitään ei mene hukkaan**" | "Pidempi väli **toimii myös** — — **kerrat rakentuvat toistensa päälle**" |
+
+Kohta 3 rikkoi eri sääntöä: "On turhaa kertoa mitä ei tapahdu."
+Sama asia myöntömuodossa on lyhyempi ja vahvempi.
+
+### Koko sivusto tarkistettu kolmella perheellä
+
+Etuliite, täytelause ja puolusteleva vertailu haettiin erikseen.
+**Ainoa osuma koko sivustolla oli oma, juuri kirjoittamani lause.**
+28.9. korjattu aknearpien-hoito-mikroneulauksella.html on puhdas.
+
+### Miksi tämä toistuu
+
+Etuliite tuntuu kirjoitettaessa rehellisyydeltä, ja juuri
+rehellisyyttä lisäävässä muutoksessa houkutus on suurin. Sääntö on
+itsensä kumoava: kun teksti ilmoittaa olevansa rehellinen, lukija
+alkaa miettiä milloin se ei ole.
+
+**Tarkistuskomento on lisätty osioon ALOITA TÄSTÄ. Se ajetaan
+jokaisen uuden asiakastekstin jälkeen ennen kuin työ esitetään
+valmiina.**
+
+
+---
+
+## 30.9.2026 — Korjaus: varaukset olivat syöneet selkeyden
+
+Käyttäjä: *"On ammattimaista antaa selvät ohjeet ja liiallinen
+'yksilöllistä' tai 'ei voida sanoa varmuudella' tyyppinen teksti
+on suhteellisen turhaa. — — jäikö mitään missä vastaus ei
+kuitenkaan olisi jotenkin selkeä."*
+
+**Oli jäänyt, neljässä kohdassa.** Hoitovälin yhtenäistämisessä
+epävarmuuden myöntäminen oli paikoin syrjäyttänyt itse ohjeen.
+
+### Periaate
+
+**Ohje ensin ja selvästi, varaus perässä ja lyhyenä.** Näyttötilanne
+kuuluu `mita-tutkimus-sanoo-mikroneulauksesta.html`-sivulle.
+Hoitosivun tehtävä on sanoa mitä teemme ja milloin se muuttuu, ei
+pohtia onko oma suositus todistettu.
+
+### Neljä korjausta
+
+**1. Keskeytys oli selvä regressio.** Poistin konkreettisen ohjeen
+ja jätin tilalle epämääräisyyden.
+
+| | |
+|---|---|
+| Alkuperäinen | "palaa siihen viimeistään 2–3 kuukauden sisällä. Pidempi tauko **nollaa sarjavaikutuksen**" |
+| Ensimmäinen korjaukseni | "palaa siihen **kun pystyt**. — — **selvää rajaa ei tutkimuksessa ole osoitettu**" |
+| Lopullinen | "**jatka sarja loppuun kolmen kuukauden sisällä.** Pidempi tauko ei pilaa tehtyä työtä, mutta kerrat rakentuvat toistensa päälle sitä heikommin mitä pidempi väli on. Yli puolen vuoden tauon jälkeen tilanne arvioidaan ensikäynnillä uudelleen." |
+
+**Vika oli alkuperäisessä perustelussa, ei suosituksessa.** Numero
+olisi pitänyt jättää ja "nollaa sarjavaikutuksen" poistaa.
+
+**2. `mikroneulaus-opas.html` päättyi kahteen varaukseen
+peräkkäin:** "Väli ei kuitenkaan ole tarkkaan lukittu… Tarkempi
+arvio tehdään aina yksilöllisesti ensikäynnillä." Nyt: arpiväli
+kolme viikkoa sanotaan suoraan, jousto yhdellä lauseella, ja
+päätöslause vain kerran.
+
+**3. Etusivu.** "Väli voi joustaa tarpeen mukaan kumpaankin
+suuntaan" → "Sarjahoidon hoitokerrat ajoitetaan noin neljän viikon
+välein. Arpien hoidossa väli voi olla lyhyempi." **Etusivu sanoo
+oletuksen, ei joustovaraa.**
+
+**4. Sarjahoidon avauskappale.** Poistettu "neljä viikkoa on
+vakiintunut käytäntö **eikä mitatulla tavalla paras**" — se kertoi
+asiakkaalle että oma suosituksemme ei ole todistettu. Nyt:
+"Hoitokerrat ajoitetaan noin neljän viikon välein. Se on
+oletuksemme ja se sopii valtaosalle."
+
+### Sääntö jatkoon
+
+**Epävarmuuden myöntäminen ei saa korvata ohjetta.** Kun näyttö on
+ohutta, asiakkaalle kerrotaan silti mitä teemme ja miksi. Varaus
+kertoo milloin linjasta poiketaan, ei sitä ettei linjaa ole.
+
+
+
+---
+
+## 7.10.2026 — Kaksi lisäystä samaan latauserään
+
+Käyttäjä ei ollut vielä ladannut 30.9. erää ja kysyi mitä muuta
+samalla. Viikko oli kulunut, ja yksi asia oli ehtinyt vanhentua.
+
+### 1. `milloin-aloittaa-mikroneulaus.html` tehty vuodenajasta riippumattomaksi
+
+**Artikkeli oli vanhentunut 7.10. mennessä.** Koko teksti oli
+rakennettu sen varaan että syksyn alku on hyvä aloitushetki:
+
+| Oli | Ongelma |
+|---|---|
+| Otsikko "Miksi **syksy** on hyvä hetki aloittaa" | Syksyn alku ohi |
+| "Jos haluat aloittaa **syyskuussa tai lokakuun alussa**" | Ikkuna mennyt |
+| "sarja **päättyy syksyn puolivälissä**" | Nyt aloitettu päättyy tammikuussa |
+| "**Elokuun ja syyskuun välillä** UV-indeksi laskee" | Mennyttä aikaa |
+| "tulokset **kevät-kesällä 2027**" | Sidottu vuosilukuun |
+
+**Käyttäjän valinta: vuodenajasta riippumaton**, jottei vanhene
+joka syksy. 26 korvausta.
+
+**Uusi kärki:** aloitushetkeä ei mietitä siitä milloin ehtii vaan
+siitä milloin tuloksen haluaa nähdä, ja aikataulu lasketaan
+takaperin. Kaikki ajat ovat nyt suhteellisia aloitukseen
+(6–11 kuukautta sarjan koosta riippuen), ei kalenterikuukausia.
+
+**Uusi otsikko:** "Milloin kannattaa aloittaa mikroneulauksen
+sarjahoito". Osuu tiedostonimeen joka oli jo valmiiksi
+kausineutraali.
+
+UV-perustelu säilyi mutta kirjoitettiin kestävään muotoon: UV on
+korkeimmillaan touko-elokuussa ja matalimmillaan pimeällä
+kaudella, joten syksyllä, talvella ja alkukeväällä aloitettu
+sarja osuu matalampaan kuormaan. Lisättiin myös että **kesällä
+aloittaminen vaatii vain tarkempaa aurinkosuojaa, ei hoidon
+siirtämistä.**
+
+### 2. 24h/48h-ristiriita korjattu
+
+Ristiriita oli todellinen. `mikroneulauksen-jalkihoito.html`
+listasi saunan **24 tunnin** kieltoihin, kun `index.html`,
+`lomake.html` ja `mita-ensikaynnilla-tapahtuu.html` sanovat
+**48 tuntia**.
+
+**Korjaus: artikkeli vastaa nyt muuta sivustoa.** Saunalle,
+kuumalle suihkulle ja voimakkaalle liikunnalle sanotaan
+nimenomaisesti 48 tuntia, ja yhteenvetolistaan tuli oma
+48 tunnin rivi 24 tunnin rivin viereen.
+
+Samalla kirjattiin 28.9. keskustelun linjaus näkyviin:
+*"Tämä on suositus lopputuloksen vuoksi, ei turvallisuusrajoitus:
+aikaisemmin saunova ei vaaranna ihoaan, mutta punoitus kestää
+todennäköisesti pidempään."*
+
+### Virhe jonka tein ja korjasin
+
+Kirjoitin ensin `&mdash;`-entiteetin, joka renderöityy
+ajatusviivaksi. Luvun 5 ajatusviivasääntö koskee myös
+HTML-entiteettejä, ei vain näppäimistömerkkiä. Korjattu pisteeksi.
+
+### Tarkistukset
+
+JSON-LD jäsentyy, tagit tasapainossa, ei ajatusviivoja, ei
+etuliitteitä. `dateModified` ja päivitysmerkinnät 7.10.2026.
+
+### Huomioita jatkoon
+
+- **`mikroneulaus-talvella.html`** on yhä noindex-luonnos, ei
+  sitemapissa eikä blogilistalla. Tiedoston oma ohje sanoo
+  julkaistavaksi marraskuussa, eli kolmen viikon päästä. Nyt kun
+  aloitusartikkeli on kausineutraali, talviartikkeli on ainoa
+  kausisidonnainen teksti. **Päätettävä marraskuussa: julkaistaanko
+  vai sulautetaanko.**
+- **`_kuvat` on yhä tyhjä.** Käyttäjä on saanut muutaman kuvan,
+  loput parin viikon päästä.
+
+
+---
+
+## 7.10.2026 — Ensimmäiset viisi kuvausession kuvaa käsitelty
+
+Käyttäjä toimitti viisi kuvaa kansioon `_kuvat`. Loput tulevat
+parin viikon päästä.
+
+### Käyttäjän vahvistukset (poistivat kolme estettä)
+
+- **Hoidettava asiakas kuvissa on käyttäjä itse**, joten erillistä
+  mallilupaa ei tarvita
+- **Taustalla näkyvät julisteet ovat kunnossa**
+- **ProXN-kuva käytetään kuvatekstin kanssa**
+
+### Tehdyt tiedostot kansioon `assets/`
+
+Kaikki jpg + webp -parina nykyisen käytännön mukaisesti.
+
+| Tiedosto | Koko | Lähde | Käyttö |
+|---|---|---|---|
+| `jaakko.jpg/.webp` | 900×1200 | Jaakko.jpg | **Korvaa heinäkuisen version** |
+| `petra.jpg/.webp` | 900×1200 | Petra.jpg | Tiimi-osio, uusi |
+| `mikroneulaus-hoito.jpg/.webp` | 1000×1125 | mikroneulaus.jpg | Hoitokuva, laite näkyvissä |
+| `mikroneulaus-naamio.jpg/.webp` | 1200×800 | Mikroneulaus naamio.jpg | Ainoa vaakakuva |
+| `proxn-annostelu.jpg/.webp` | 1000×1333 | ProXN.jpg | ProXN-sivu |
+| `og-mikroneulaus.jpg/.webp` | 1200×630 | Mikroneulaus naamio.jpg | og-kuva |
+
+Rajaukset tarkistettu silmämääräisesti renderöimällä kontaktiarkki.
+
+### ⚠ ProXN-kuvassa on neula kiinni ruiskussa
+
+Lähikuvasta varmistettu: valmistetta vedetään ampullista
+**B. Braun Omnifix** -ruiskuun **neulan läpi**. Se on normaali
+vetovaihe, mutta se rajaa kuvatekstin muotoilua.
+
+**Kuvateksti ei voi sanoa pelkästään "ei neulalla", koska kuvassa
+on neula.** Lukija huomaa ristiriidan ja menettää luottamuksen.
+Tekstin on selitettävä neulan rooli.
+
+**Kuvateksti täsmennetty käyttäjän kuvauksella 7.10.2026.**
+Ensimmäinen ehdotukseni oli prosessin osalta väärä: luulin että
+ruiskuun vedetään suoraan vaikuttava aine. Oikea järjestys on
+kaksivaiheinen.
+
+**Hyväksytty kuvateksti:**
+
+> Pro XN -valmiste sekoitetaan jokaiselle asiakkaalle erikseen
+> juuri ennen hoitoa. Aktivaattori vedetään neulalla ampullista ja
+> sekoitetaan kuiva-ainetta sisältävään ampulliin. Valmis
+> vaikuttava aine vedetään ruiskuun ja neula poistetaan, minkä
+> jälkeen valmiste annostellaan iholle ruiskun kärjestä.
+
+Teksti on linjassa `proxn-kasvohoito.html`-sivun rivin 721 kanssa,
+jossa sama prosessi kuvataan jo sanallisesti ("Jauhe ja
+aktivaattori yhdistetään vasta hoitohetkellä, koska xanthohumoli
+hajoaa vesiliuoksessa"). Kuvateksti ei siis toista perustelua
+vaan kertoo mitä kuvassa tapahtuu.
+
+### Ei tehty
+
+**Kuvia ei ole liitetty yhdellekään sivulle.** Sijoittelu on oma
+päätöksensä ja vaatii muutoksia `index.html`-tiedoston
+tiimi-osioon, `proxn-kasvohoito.html`-sivulle ja og-tageihin.
+
+### Kuvauslistasta puuttuu yhä
+
+Hoitohuone kokonaisuutena, sisäänkäynti ulkoa, laite yksin,
+steriili hoitopää pakkauksessa, tuotteet aseteltuna, ja koko
+punoituksen aikasarja (D2).
+
+
+---
+
+## 7.10.2026 — Kuva lisätty etusivun Hoidon kulku -osioon
+
+**Tehty:** `index.html`, osio "Hoidon kulku: Miten mikroneulaus
+toteutetaan käytännössä". Kuva `mikroneulaus-hoito` (1000×1125)
+lisättiin vasempaan palstaan prosessikuvauksen perään, ennen
+jälkihoito-linkkiä.
+
+Käytetty `figure.article-figure` -rakennetta, joka on globaali
+tyyli `assets/style.css`-tiedostossa (rivit 297–311) ja siksi
+toimii myös etusivulla. Sama `<picture>` + webp/jpg -malli kuin
+`proxn-kasvohoito.html`-sivulla.
+
+**Kuvateksti:**
+
+> Hoito tehdään kynämäisellä laitteella, jonka neulaussyvyyttä
+> säädetään kasvojen alueen mukaan. Hoitopää on steriili
+> kertakäyttöinen ja vaihdetaan asiakkaan nähden.
+
+Kuvateksti ei vain nimeä kuvaa vaan toistaa kaksi
+luottamusargumenttia (syvyyden säätö alueittain, hoitopään vaihto
+asiakkaan nähden), jotka ovat muuallakin sivustolla.
+
+### LINJAUS 7.10.2026: jokaiselle tekstiosiolle oma kuva
+
+Käyttäjä: *"Tavoite on että sitten kun saadaan kaikki kuvat niin
+jokaisessa tekstiosiossa on aina oma kuvansa."*
+
+Etusivun osiot ja niiden kuvatilanne:
+
+| Osio | Kuva | Tila |
+|---|---|---|
+| Hoitofilosofia | tunnelma tai studio | puuttuu |
+| Tiimi | `jaakko`, `petra` | **valmis, ei sijoitettu** |
+| Mikroneulaus on ihon luonnollinen uudistumisprosessi | — | puuttuu |
+| Kliininen mikroneulaus | hoitohuone | puuttuu |
+| MicroPen EVO -laite | `micropenEVO` (vanha tuotekuva) | korvattava laitekuvalla studiosta |
+| **Hoidon kulku** | `mikroneulaus-hoito` | **TEHTY 7.10.2026** |
+| Ennen ja jälkeen hoidon | punoituksen aikasarja | puuttuu, D2 |
+| Kenelle ei sovi | — | ei välttämättä tarvitse |
+| Rulla vai kliininen | steriili hoitopää pakkauksessa | puuttuu |
+| Usein kysyttyä | — | ei välttämättä tarvitse |
+
+**Tämä taulukko ohjaa loppukuvausta.** Kuvauslista
+META-MARKKINOINTI.md luvussa 3.5 kattaa suurimman osan, mutta
+tästä näkee mihin kukin kuva menee.
+
+⚠ **Kaksi osiota joihin kuva ei välttämättä kuulu:** "Kenelle
+mikroneulaus ei sovi" ja "Usein kysyttyä". Rajoituksia ja
+kysymyksiä listaava osio ei parane kuvasta, ja kuva voi antaa
+väärän sävyn vasta-aiheiden rinnalla. Harkittava erikseen.
+
+### Vielä sijoittamatta
+
+`jaakko` ja `petra` (tiimi-osio), `proxn-annostelu`
+(ProXN-sivu, kuvateksti hyväksytty), `mikroneulaus-naamio` ja
+`og-mikroneulaus`.
+
+
+---
+
+## 7.10.2026 — Kuvat sijoitettu sivustolle
+
+Kolme kuvaa sijoitettu, yksi siirretty käyttäjän tarkennuksen
+jälkeen.
+
+### Lopullinen kuvakartta etusivulla
+
+| Osio | Kuva |
+|---|---|
+| Tiimi | `jaakko` (korvasi heinäkuisen), **`petra` uusi** |
+| Mikroneulaus on ihon luonnollinen uudistumisprosessi | **`mikroneulaus-hoito`** |
+| Kliininen mikroneulaus | `MicroPen-Logo-dark`, `micropenEVO` (vanhat) |
+| Ennen ja jälkeen hoidon | **`mikroneulaus-naamio`** |
+
+`proxn-kasvohoito.html`: **`proxn-annostelu`** ampullikuvan jälkeen.
+
+### Käyttäjän tarkennus kesken työn
+
+Laitekuva oli ensin "Hoidon kulku" -osiossa. Käyttäjä siirsi sen
+**"Mikroneulaus on ihon luonnollinen uudistumisprosessi"**
+-osioon ja naamiokuvan **"Ennen ja jälkeen hoidon"** -osioon.
+
+Sijoittelu on parempi kuin alkuperäinen: laitekuva tulee heti sen
+kappaleen perään jossa mikrokanavien syntyminen kuvataan, ja
+naamiokuva avaa jälkihoito-ohjeet kuvalla hoidon loppuvaiheesta.
+Kuvatekstit kirjoitettiin uusiin konteksteihin sopiviksi.
+
+### Tekniset muutokset
+
+- **Petran kappale `<p>` → `<div>`**, jotta kelluva kuva ja
+  clearfix toimivat. Tarkistettu ettei mikään JS tai CSS viittaa
+  `p.tiimi__vastuuhoitaja`-elementtiin
+- **Uusi CSS-luokka `.tiimi__vastuuhoitaja-kuva`:** 200 px,
+  kelluu oikealle. Pienempi kuin hoitajan 280 px, jotta osioon
+  syntyy hierarkia eivätkä kaksi muotokuvaa kilpaile
+- **Mobiilisääntö alle 640 px:** molemmat tiimikuvat lakkaavat
+  kellumasta
+- **`.section--dark figure.article-figure figcaption`** lisätty,
+  jotta naamiokuvan kuvateksti on luettavissa tummalla taustalla
+
+### Tarkistukset
+
+JSON-LD jäsentyy, tagit tasapainossa, kaikki viitatut kuvat
+olemassa, ei ajatusviivoja, ei etuliitteitä, ei kiellettyjä sanoja.
+
+⚠ **Selaimessa ei voitu tarkistaa.** Esikatselupaneeli ei
+palvellut testitiedostoa, ja Linux-hiekkalaatikon selain ei avaa
+paikallisia tiedostoja. **Asettelu kannattaa katsoa silmällä
+ensimmäisen latauksen jälkeen**, erityisesti Petran kelluva kuva
+ja naamiokuvan kuvateksti tummalla taustalla.
+
+### Latauslistaan lisätty
+
+`index.html`, `proxn-kasvohoito.html` ja kaikki uudet
+`assets/`-kuvat: `jaakko.jpg/.webp` (korvaava), `petra.*`,
+`mikroneulaus-hoito.*`, `mikroneulaus-naamio.*`,
+`proxn-annostelu.*`, `og-mikroneulaus.*`.
+
+### PÄÄTÖS 7.10.2026: og-kuvaa ei vaihdeta vielä
+
+Käyttäjä: *"ei vaihdeta og-mikroneulaus vielä tässä kohtaa,
+odotetaan muita kuvia."*
+
+**og-kuva pysyy logona** (`og-default.jpg`, 19 sivulla).
+Tiedostot `og-mikroneulaus.jpg/.webp` säilytetään
+`assets/`-kansiossa valmiina, koska ne ovat pieniä eikä niitä
+kannata tehdä uudestaan.
+
+Taustaa: Claude ehdotti ensin og-kuvan vaihtoa katsomatta mikä
+nykyinen on. Logoversio osoittautui hyvin perustelluksi: se toimii
+jokaisella sivulla aiheesta riippumatta eikä näytä koskaan
+väärältä. Jos og-kuvia joskus eriytetään, oikea malli on
+`og-proxn.jpg`: sivukohtainen kuva vain niille sivuille joille se
+sopii, logo oletuksena muille.
+
+
+---
+
+## 7.10.2026 — Sitemapin lastmod-päivät korjattu, 20 kohtaa
+
+Latauslistaa koottaessa havaittiin että **sitemapissa oli 20
+vanhentunutta `lastmod`-päivää**, vanhimmat elokuulta. Sitemap
+sanoi "Päivitetty 2026-09-16" vaikka sivuja oli muutettu sen
+jälkeen useita kertoja.
+
+**Seuraus:** hakukoneet eivät välttämättä käy muuttuneita sivuja
+uudelleen läpi, koska sitemap väittää niiden olevan ennallaan.
+Osa muutoksista olisi voinut jäädä huomaamatta pitkäksi aikaa.
+
+### Korjatut
+
+| Tiedosto | Ennen | Jälkeen |
+|---|---|---|
+| etusivu | 2026-08-06 | 2026-10-07 |
+| `milloin-aloittaa-mikroneulaus.html` | 2026-08-05 | 2026-10-07 |
+| `mikroneulauksen-jalkihoito.html` | 2026-08-05 | 2026-10-07 |
+| `proxn-kasvohoito.html` | 2026-09-16 | 2026-10-07 |
+| `herkka-iho-ruusufinni-mikroneulaus.html` | 2026-09-16 | 2026-10-06 |
+| `mikroneulaus-sarjahoito.html` | 2026-08-05 | 2026-09-30 |
+| `mikroneulaus-opas.html` | 2026-09-16 | 2026-09-30 |
+| `mita-tutkimus-sanoo-mikroneulauksesta.html` | 2026-09-16 | 2026-09-30 |
+| `mita-mikroneulaus-ei-tee.html` | 2026-09-28 | 2026-09-30 |
+| `mikroneulaus-sopiiko-minulle.html` | 2026-09-29 | 2026-09-30 |
+| `aknearpien-hoito-mikroneulauksella.html` | 2026-09-28 | 2026-09-30 |
+| `blogi.html` | 2026-09-16 | 2026-09-28 |
+| `mita-on-kliininen-mikroneulaus.html` | 2026-09-16 | 2026-09-28 |
+| `mikroneularulla-vai-kliininen-mikroneulaus.html` | 2026-09-16 | 2026-09-28 |
+| `mikroneulaus-kaula-dekoltee-kadet.html` | 2026-09-16 | 2026-09-28 |
+| `mita-ensikaynnilla-tapahtuu.html` | 2026-08-06 | 2026-08-25 |
+| `hinnasto.html` | 2026-08-06 | 2026-08-22 |
+| `ihonhoito-opas.html` | 2026-08-26 | 2026-09-03 |
+| `omavalvonta.html` | 2026-09-15 | 2026-09-18 |
+| `privacy.html` | 2026-05-24 | 2026-08-07 |
+
+Päivät luettiin tiedostojen todellisista muokkausajoista, ei
+arvattu. Tiedoston oma otsikkopäiväys päivitettiin 2026-10-07.
+
+### ⚠ Virhe skriptissä, löytyi tarkistuksessa
+
+Ensimmäinen ajo korjasi 19 kohtaa mutta jätti **etusivun** väliin.
+Syy: etusivun `<loc>` on pelkkä `https://www.studiomahla.fi/`,
+ja nimen päättely `split('/')[-1]` tuotti `www.studiomahla.fi`,
+jossa on piste, joten sitä ei tunnistettu `index.html`-tiedostoksi.
+
+**Lopputarkistus XML-jäsentimellä paljasti sen.** Ilman erillistä
+tarkistusajoa virhe olisi mennyt läpi, koska skripti raportoi
+19 onnistunutta korjausta eikä tiennyt epäonnistuneensa.
+
+**Opetus: korjausskriptin oma raportti ei ole tarkistus.**
+Tarkistus on erillinen ajo joka lukee lopputuloksen.
+
+### Käytäntö jatkoon
+
+Sitemapin lastmodit kannattaa tarkistaa aina ennen latauserää.
+Tarkistuskomento lukee XML:n ja vertaa jokaista `lastmod`-arvoa
+tiedoston muokkausaikaan levyllä.

@@ -1223,6 +1223,10 @@ tai tumma**, ei keski.
 (kerros), vaalea (kädet) ja keski (aknearpi). **Seuraavan kansidian
 sävy on tumma tai vaalea**, ei keski.
 
+**Tilanne 6.10.2026:** kolme viimeisintä tuotettua kantta ovat vaalea
+(kädet), keski (aknearpi) ja tumma (isotretinoiini). **Seuraavan
+kansidian sävy on vaalea tai keski**, ei tumma.
+
 ### 3.5b Valmiit karusellit
 
 **1. Mitä kliininen mikroneulaus oikeasti tekee iholle? (karuselli)**
@@ -2612,7 +2616,7 @@ Ajanvaraus: https://varaa.timma.fi/studiomahla
 Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
 ```
 
-**22. Aknearpi täyttyy alapuolelta (Reels)**
+**22. Aknearpi täyttyy alapuolelta (Reels) — JULKAISTU 29.9.2026**
 Lähde: `aknearpien-hoito-mikroneulauksella.html`, idea 5.5
 Tiedostot: `karusellit/aknearpi_01r.png` … `_05r.png`
 Skripti: `generaattorit/aknearpi.py`
@@ -2623,7 +2627,7 @@ yhdistetty ajo), ääni lisätty 29.9.2026. Dia 4:n otsikko "Siksi aina
 kuusi hoitoa" → "Siksi sarjahoito on tehokkain" ja kuvatekstin vastaava
 lause muutettu 29.9.2026 käyttäjän pyynnöstä. Ensimmäinen Reels jossa ääni
 on valmiina tiedostossa, joten sen voi ajastaa Business Suitessa.
-**Julkaisu odottaa.**
+**Julkaistu 29.9.2026.**
 5 diaa, 58 sanaa, kansidian sävy keski.
 
 Ydinajatus: kuoppamainen aknearpi on kohta, josta tulehdus on vienyt
@@ -2660,6 +2664,68 @@ Ajanvaraus: https://varaa.timma.fi/studiomahla
 
 Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
 ```
+
+**23. Isotretinoiini: kuusi kuukautta (Reels)**
+Lähde: `mikroneulaus-sopiiko-minulle.html`, idea 3.2
+Tiedostot: `karusellit/isotretinoiini_01r.png` … `_05r.png`
+Skripti: `generaattorit/isotretinoiini.py`
+Video: `reels/isotretinoiini.mp4` (26,4 s, 1080 × 1920, H.264, 30 fps,
+**ääni: Sweet Lover**, AAC 48 kHz, -14,7 LUFS)
+Tuotettu automaatiolla 6.10.2026 (`viikkosisalto`). **Julkaisu odottaa.**
+5 diaa, 51 sanaa, kansidian sävy tumma.
+
+Ydinajatus: mikroneulaus voidaan tehdä aikaisintaan kuusi kuukautta
+suun kautta otettavan isotretinoiinihoidon päättymisestä. Raja on
+ehdoton, koska isotretinoiini hidastaa ihon paranemista ja voi johtaa
+hallitsemattomiin arpiin. Päättynyt kuuri kerrotaan esitiedoissa, ja
+arpien hoito ajoitetaan sen mukaan.
+
+Dioissa ei ole kauppanimeä. Roaccutane mainitaan kuvatekstissä samassa
+muodossa kuin sivustolla ("esim. Roaccutane").
+
+Värijärjestys: kansi tummanvihreä, dia 2 kerma, nostodia tummanvihreä,
+dia 4 kerma, loppudia tummanvihreä.
+
+Kuvateksti sanatarkasti:
+
+```
+Aknelääkekuuri takana? Ennen mikroneulausta odotetaan kuusi kuukautta.
+
+Teemme kliiniset mikroneulaushoidot Kotkan Ruonalassa, ja lääkitykset käydään läpi aina ennen hoitoa.
+
+Suun kautta otettava isotretinoiini (esim. Roaccutane) on A-vitamiinijohdannaiseen perustuva aknelääke. Mikroneulaus voidaan tehdä aikaisintaan kuusi kuukautta lääkityksen päättymisestä.
+
+Raja on ehdoton, ei suositus. Isotretinoiini hidastaa ihon paranemista, ja liian aikaisin tehty mikroneulaus voi johtaa hallitsemattomiin arpiin. Kun hoidon tavoite on tasoittaa aknearpia, uusi arpi on juuri se mitä halutaan välttää.
+
+Kerro esitiedoissa myös päättyneestä kuurista ja siitä, milloin se loppui. Aknearpien hoito ajoitetaan sen mukaan.
+
+Itsearvioinnin 12 kysymystä kattavat tämän ja muut ehdottomat vasta-aiheet, ja ne voi käydä läpi jo ennen varausta.
+
+Hoidon tekee koulutettu terveydenhuollon ammattilainen, joka arvioi ihon kunnon ja vasta-aiheet ennen hoitoa.
+
+Lue lisää: https://www.studiomahla.fi/mikroneulaus-sopiiko-minulle.html
+Ajanvaraus: https://varaa.timma.fi/studiomahla
+
+#aknearvet #aknehoito #kliininenmikroneulaus #ihonhoito
+
+Muista lisätä sijaintimerkintä (Kotka / Mahlamäen Kauneusstudio) julkaistessasi.
+```
+
+**Valintaperuste (6.10.2026):** ennen ajoa 26 käyttämätöntä ideaa,
+joista ★★★ viisi, joten toistoa ei tarvittu. Idea 4.2 (aknearvet
+tuoreina) olisi toistanut edellisen julkaisun (22) lähdeartikkelin ja
+aiheen. Idea 2.2 toistaisi pistoskulman (julkaisu 3) ydinviestin ja 5.2
+mekanismijulkaisuja (5.1, 5.4). Idea 8b.2 nojaa auringon vaikutukseen,
+joka on lokakuussa heikoimmillaan ajankohtainen. 3.2 valittiin, koska se
+on konkreettinen turvallisuusraja jota moni ei tiedä, se jatkaa
+luontevasti edellisen viikon aknearpiaihetta (isotretinoiinia käyttänyt
+on tyypillinen aknearpien hoitoon hakeutuja) ja vasta-aiheita on
+käsitelty viimeksi 14.9. (melasma). Blogin viikkotoimi oli B
+(herkkä iho ja ruusufinni -artikkelin päivitys); ideapankissa ei ole
+herkän ihon ★★★-ideaa, joten teemakytköstä ei pakotettu.
+
+**Ideapankin tila 6.10.2026:** 25 käyttämätöntä, joista ★★★ neljä
+(2.2, 4.2, 5.2, 8b.2). Täydennyskynnys (alle 10) ei täyty.
 
 **Valintaperuste (28.9.2026):** ennen ajoa 27 käyttämätöntä ideaa,
 joista ★★★ kuusi, joten toistoa ei tarvittu. Luvut 6 ja 8b jätettiin

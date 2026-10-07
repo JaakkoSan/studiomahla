@@ -153,7 +153,7 @@ Jos akne on yhä aktiivinen, mikroneulausta ei tehdä hoitoalueelle.
 Hoito voisi levittää bakteereja ja pahentaa tilannetta. Aknearpien
 hoito aloitetaan vasta kun aktiivinen vaihe on rauhoittunut.
 
-### 3.2 Isotretinoiini: kuusi kuukautta ★★★
+### 3.2 Isotretinoiini: kuusi kuukautta ★★★ — KÄYTETTY 6.10.2026
 **Lähde:** Kenelle sopii
 **Kesto:** n. 15 s
 
@@ -498,6 +498,9 @@ Käytettyjä 22.9.2026: 19. Käyttämättömiä 27. (Tämän ajon ideat 6.2 ja
 
 Käyttämättömiä 28.9.2026: 26, joista ★★★ 5 (2.2, 3.2, 4.2, 5.2, 8b.2).
 (Tämän ajon idea 5.5. Yksi Reels viikossa 25.9.2026 alkaen.)
+
+Käyttämättömiä 6.10.2026: 25, joista ★★★ 4 (2.2, 4.2, 5.2, 8b.2).
+(Tämän ajon idea 3.2.)
 
 Jos julkaiset kaksi Reelsiä kuukaudessa, tämä on 20 kuukauden sisältö.
 Jos yhden viikossa, vajaan vuoden.

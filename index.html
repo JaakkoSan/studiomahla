@@ -141,6 +141,7 @@
       line-height: 1.85;
       color: var(--text-mid);
     }
+    .section--dark figure.article-figure figcaption { color: rgba(250, 248, 244, 0.82); }
     .section--dark .pillar h3 { color: var(--white); }
     .section--dark .pillar p { color: rgba(250, 248, 244, 1); }
     .section--dark .pillar { border-left-color: var(--pink-pale); }
@@ -357,6 +358,21 @@
       font-size: 16px;
       line-height: 1.9;
       color: rgba(250, 248, 244, 1);
+    }
+    /* Vastuuhoitajan kuva: pienempi kuin hoitajan ja oikealle, jotta
+       osioon syntyy hierarkia eivätkä kaksi muotokuvaa kilpaile. */
+    .tiimi__vastuuhoitaja::after { content: ""; display: block; clear: both; }
+    .tiimi__vastuuhoitaja-kuva {
+      float: right;
+      width: 200px;
+      height: auto;
+      margin: 4px 0 16px 32px;
+      border-radius: 4px;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .tiimi__kuva { float: none; width: 100%; max-width: 280px; margin: 0 0 24px; }
+      .tiimi__vastuuhoitaja-kuva { float: none; width: 100%; max-width: 200px; margin: 0 0 20px; }
     }
     @media (max-width: 640px) {
       .tiimi__kuva {
@@ -748,9 +764,18 @@
           Studiossa käytettävään MicroPen EVO -laitteeseen Jaakolla on Revance Academyn koulutus ja sertifikaatti.
         </p>
       </div>
-      <p class="tiimi__vastuuhoitaja reveal">
+      <div class="tiimi__vastuuhoitaja reveal">
+        <picture>
+          <source srcset="assets/petra.webp" type="image/webp">
+          <img class="tiimi__vastuuhoitaja-kuva"
+               src="assets/petra.jpg"
+               alt="Petra Sahari, sairaanhoitaja (AMK) ja studion vastuuhoitaja"
+               width="900"
+               height="1200"
+               loading="lazy">
+        </picture>
         Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra on pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalta ja tuo studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä.
-      </p>
+      </div>
     </div>
   </section>
   <!-- 4. MIKRONEULAUS – MENETELMÄ -->
@@ -770,6 +795,17 @@
           <p>
             Tämän seurauksena iho alkaa tuottaa uutta kollageenia ja elastiinia, ihon tärkeimpiä rakennusaineita. Mikroneulaus käynnistää tämän tuotannon uudelleen täysin luonnollisesti ilman vieraita aineita.
           </p>
+          <figure class="article-figure">
+            <picture>
+              <source srcset="assets/mikroneulaus-hoito.webp" type="image/webp">
+              <img src="assets/mikroneulaus-hoito.jpg"
+                   alt="Hoitaja tekee kliinistä mikroneulausta kynämäisellä MicroPen EVO -laitteella asiakkaan kasvoille, kädessä siniset suojakäsineet ja kasvoilla hengityssuojain"
+                   width="1000" height="1125" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>
+              Mikrokanavat tehdään kynämäisellä laitteella, jonka neulaussyvyyttä säädetään kasvojen alueen mukaan. Hoitopää on steriili kertakäyttöinen ja vaihdetaan asiakkaan nähden.
+            </figcaption>
+          </figure>
           <h3 style="margin-top:36px">Miksi valita kliininen mikroneulaus</h3>
           <p>
             Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä: iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
@@ -965,7 +1001,7 @@
           </p>
           <h3 style="margin-top:40px">Hoidon aikataulu ja ylläpito</h3>
           <p>
-            Sarjahoidon aikana hoitokerrat ajoitetaan ihon luonnollisen uusiutumissyklin mukaan. Optimaalinen väli hoitojen välillä on noin neljä viikkoa.
+            Sarjahoidon hoitokerrat ajoitetaan noin neljän viikon välein. Arpien hoidossa väli voi olla lyhyempi.
           </p>
           <p>
             Kun toivottu tulos on saavutettu, tulosten ylläpitämiseksi riittää yksittäinen ylläpitohoito 6–12 kuukauden välein.
@@ -981,6 +1017,17 @@
         <p class="label label--pink-pale">Ohjeistus</p>
         <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoidon</h2>
       </div>
+      <figure class="article-figure reveal" style="max-width: 720px; margin: 0 0 44px;">
+        <picture>
+          <source srcset="assets/mikroneulaus-naamio.webp" type="image/webp">
+          <img src="assets/mikroneulaus-naamio.jpg"
+               alt="Hoitaja asettelee rauhoittavaa naamiota asiakkaan kasvoille mikroneulaushoidon päätteeksi"
+               width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>
+          Hoito päättyy rauhoittavaan vaiheeseen. Jälkihoito alkaa jo hoitopöydällä, ja kotiin lähtiessä saat mukaan hoitavan voiteen ensimmäiseksi vuorokaudeksi.
+        </figcaption>
+      </figure>
       <div class="grid-2">
         <div class="reveal">
           <h3>Ennen hoitoa</h3>
