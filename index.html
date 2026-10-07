@@ -200,11 +200,17 @@
       font-weight: 500;
     }
     .challenges {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 28px;
       margin-top: 22px;
     }
+    @media (max-width: 900px) { .challenges { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .challenges { grid-template-columns: 1fr; } }
+    /* Haastelohko täysleveänä grid-2:n alla, sama malli kuin
+       MicroPen-osion feat-cards. */
+    .haasteet { margin-top: clamp(40px, 6vw, 64px); }
+    .menetelma-grid { align-items: center; }
     .challenge {
       padding-left: 22px;
       border-left: 1px solid var(--pink);
@@ -805,7 +811,7 @@
   <!-- 4. MIKRONEULAUS – MENETELMÄ -->
   <section class="section section--white" aria-labelledby="menetelma-title">
     <div class="section__inner">
-      <div class="grid-2">
+      <div class="grid-2 menetelma-grid">
         <div class="reveal">
           <p class="label label--mid">Menetelmä</p>
           <h2 id="menetelma-title">Mikroneulaus on ihon luonnollinen uudistumisprosessi</h2>
@@ -825,7 +831,7 @@
           </p>
         </div>
         <div class="reveal">
-          <figure class="article-figure" style="margin-top:48px;">
+          <figure class="article-figure">
             <picture>
               <source srcset="assets/mikroneulaus-hoito.webp" type="image/webp">
               <img src="assets/mikroneulaus-hoito.jpg"
@@ -836,7 +842,10 @@
               Neulaussyvyyttä säädetään kasvojen alueen mukaan. Hoitopää on steriili kertakäyttöinen ja vaihdetaan asiakkaan nähden.
             </figcaption>
           </figure>
-          <h3 style="margin-top:40px">Mihin haasteisiin mikroneulaus auttaa</h3>
+        </div>
+      </div>
+      <div class="haasteet reveal">
+        <h3 style="margin-top:0">Mihin haasteisiin mikroneulaus auttaa</h3>
           <p class="intro-text">
             Koska hoito perustuu ihon oman rakenteen vahvistamiseen sisältäpäin, se on poikkeuksellisen monipuolinen.
           </p>
@@ -861,7 +870,6 @@
           <p class="intro-text" style="margin-top:32px">
             Herkkä ja reaktiivinen iho on oma tilanteensa. Mikroneulaus onnistuu usein myös herkällä iholla pienemmällä neulasyvyydellä ja hellemmällä tekniikalla, mutta aina se ei ole oikea hoito. Silloin vaihtoehtona on <a href="proxn-kasvohoito.html">ProXN-kasvohoito</a>, joka ei riko ihoa. <a href="herkka-iho-ruusufinni-mikroneulaus.html">Herkkä iho ja ruusufinni</a> käy aiheen läpi tarkemmin.
           </p>
-        </div>
       </div>
     </div>
   </section>

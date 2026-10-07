@@ -12103,3 +12103,61 @@ ei käytetä enää missään.
 korjauskierros samaan asiaan, koska esikatselu ei toimi eikä
 asettelua voi arvioida lukemalla koodia. **Kannattaa katsoa
 latauksen jälkeen ja kertoa jos jokin on yhä pielessä.**
+
+
+---
+
+## 7.10.2026 — Asettelukorjaus 3: haastelohko täysleveäksi
+
+Käyttäjä lähetti kaksi kuvakaappausta pöytäkoneen näkymästä ja
+osoitti ratkaisun: *"asettelisin tuon mihin haasteisiin vastaa
+samalla tavalla kuin tuossa toisessa osiossa."*
+
+### Mikä oli vikana
+
+Kuvakaappauksista näkyi se mitä koodista ei voinut päätellä:
+uudistumisprosessi-osiossa **vasen palsta loppui paljon ennen
+oikeaa**. Vasemmalla oli menetelmäteksti, oikealla kuva ja neljä
+haastekorttia allekkain. Alavasemmalle jäi iso tyhjä alue.
+
+Kuvan siirtäminen palstasta toiseen ei auttanut, koska ongelma ei
+ollut kuvassa vaan **pystysuuntaisessa korttilistassa.**
+
+### Malli: MicroPen EVO -osio
+
+Käyttäjän osoittama toimiva rakenne:
+
+```
+<div class="grid-2">        kuva | teksti
+<div class="feat-cards">    3 korttia täysleveänä rivinä
+```
+
+Kortit ovat grid-2:n **ulkopuolella**, joten ne levittyvät koko
+osion leveyteen eikä palstojen korkeusero näy.
+
+### Mitä tehtiin
+
+Sama rakenne uudistumisprosessi-osioon:
+
+| Taso | Sisältö |
+|---|---|
+| `grid-2 menetelma-grid` | vasen: h2 ja menetelmäteksti · oikea: kynäkuva |
+| `div.haasteet` | h3, johdanto, **neljä haastekorttia vaakarivinä**, herkkä iho -kappale |
+
+**`.challenges` muutettiin `flex-direction: column` →
+`grid-template-columns: repeat(4, 1fr)`.** Katkaisupisteet:
+alle 900 px kaksi saraketta, alle 600 px yksi.
+
+Lisäksi `.menetelma-grid { align-items: center; }`, jolloin kuva
+keskittyy pystysuunnassa tekstiä vasten kuten MicroPen-osiossa.
+
+### Opetus
+
+**Kolme korjauskierrosta samaan asiaan**, koska arvioin asettelua
+koodia lukemalla. Vasta käyttäjän kuvakaappaukset näyttivät
+todellisen ongelman, ja ratkaisu oli jo olemassa samalla sivulla.
+
+**Sääntö: kun asettelua muutetaan eikä sitä voi renderöidä,
+katsotaan ensin miten vastaava ongelma on jo ratkaistu sivustolla**
+sen sijaan että keksitään uusi tapa. `feat-cards` oli valmiina
+koko ajan.
