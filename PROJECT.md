@@ -12375,3 +12375,114 @@ sen taakse. Samalla:
 
 **Ilman tätä mainontaa ei aloiteta.** Mainonnan ja pikselin
 palauttamisen on tapahduttava yhdessä, ei peräkkäin.
+
+---
+
+## 7.10.2026 — Hakusana "kauneushoitola" etusivulle
+
+**Lähtötilanne.** Käyttäjä teki haun *mikroneulaus kotka*
+incognito-tilassa: **studio on toisena**. Heinäkuun mittaus
+(`hakusanaseuranta`) oli tehty kirjautuneena, joten se oli
+harhainen eikä sitä voi käyttää päätöksiin. **Hakusanaseuranta
+ajettava uudelleen incognitossa.**
+
+Haku *kauneushoitola Kotka*: ensimmäisellä sivulla on yrityksiä
+jotka eivät enää toimi, ja pari suoraa Timma-linkkiä ilman
+hoitolan omaa sivustoa. Kilpailu termistä on siis heikkoa.
+Ubersuggest: **140 hakua/kk, CPC 0,25 €**.
+
+**Linjaus: hakusana otetaan käyttöön, mutta premium-ilme säilyy.**
+Erillistä kilpailijavertailusivua **ei tehdä** (käyttäjä:
+*"Se näyttäisi siltä että kilpailijat tekevät tätä ja se on huono
+ja me teemme tätä ja se on hyvä. Juuri sellaista mitä en halua."*).
+Rullavertailu on eri asia ja saa jäädä, koska rulla on oikeasti
+huono ja helposti haitallinen.
+
+### Tehty: teksti heroon, menetelmät Hoitofilosofiaan
+
+**Teksti on käyttäjän itse kirjoittama**, Claude korjasi vain
+kirjoitusvirheen *kliinisä* → *kliinisiä*. Käyttäjä vaihti vielä
+*hoitoihin* → *menetelmiin*, koska sana *hoito* toistui heti
+seuraavassa lauseessa.
+
+**1. Hero (`index.html`, `<p class="hero__body">`).** Vanha lause
+*"Terveydenhuollon ammattilaisten toteuttama hoito, jossa yhdistyvät
+yli kahdenkymmenen vuoden kokemus ja tieteellisesti todennetut
+menetelmät"* **korvattiin** tällä:
+
+> Mahlamäen Kauneusstudio on esteettisiin menetelmiin erikoistunut
+> kauneushoitola Kotkan Ruonalassa. Teemme kliinisiä ja tehokkaasti
+> vaikuttavia hoitoja ihosi pitkäaikaiseen hyvinvointiin.
+> Henkilökuntamme on terveydenhuollon ammattilaisia ja meiltä saat
+> aina yksilöllisen hoitosuunnitelman ihosi parhaaksi.
+
+Kappale tuo etusivun ensimmäiseen tekstilohkoon sanat
+**kauneushoitola**, **esteettinen** ja **Kotkan Ruonala** yhdessä.
+Kokemusvuodet eivät kadonneet sivustolta: ne ovat Tiimi-osiossa ja
+pilarissa "Vankka ammattitaito".
+
+**2. Hoitofilosofia: menetelmät nimetään.** Teksti oli ensin
+sijoitettu tähän osioon, mutta käyttäjä siirsi sen heroon ja
+linjasi että **menetelmät kerrotaan Hoitofilosofiassa**, jossa
+filosofia ja menetelmän valinta liittyvät luontevasti toisiinsa.
+Uusi toinen `<p class="lead">`:
+
+> Tämä ohjaa myös menetelmien valintaa. Kliininen mikroneulaus ja
+> ProXN-kasvohoidot vaikuttavat ihon rakenteeseen eivätkä vain sen
+> pintaan.
+
+**Sana "kasvohoito" on tässä tarkoituksellinen hakusana**
+(käyttäjän linjaus). **Menetelmiä ei luetella herossa**, koska
+valikoima laajenee ja lista alkaisi hallita etusivun avausta
+(käyttäjä: *"niitä voi myöhemmin tulla lisääkin ja sitten se voi
+jo alkaa tuntumaan listamaiselta"*). LED-valohoitoa ei mainita
+ennen kuin laite on hankittu (marraskuu 2026). Clauden ehdottama kolmas lause
+("Emme tee ripsiä, kynsiä emmekä klassisia hemmottelukasvohoitoja")
+**hylättiin**: se rikkoi säännön *"on turhaa kertoa mitä ei
+tapahdu"*. Käyttäjä: *"En halua tuota mitä emme tee. Mieluummin
+keskityn siihen mitä teemme."*
+
+**"Henkilökuntamme on terveydenhuollon ammattilaisia" on tosi:**
+Jaakko on lähihoitaja ja Petra sairaanhoitaja (AMK), joten monikko
+pitää paikkansa toisin kuin Timman teksteissä oleva "hoitajamme".
+
+### Kesken tästä aiheesta
+
+- **`<title>` jätetään ennalleen.** Se on nykyisellään
+  *Mahlamäen Kauneusstudio – Kliininen mikroneulaus Kotka* ja
+  sijoittuu toiseksi. Toimivaa otsikkoa ei kosketa
+- **Google Business Profile -kategoriat** käyttäjän tarkistettava.
+  Ilmainen ja vaikuttaa karttatuloksiin enemmän kuin sivuston teksti
+- **`hakusanaseuranta` ajettava incognitossa**
+
+### Tehty: etusivun meta description
+
+Vanha:
+
+> Kliininen mikroneulaus Kotkassa terveydenhuollon ammattilaisten
+> toteuttamana. MicroPen EVO™ on FDA-hyväksytty ja CE-merkitty
+> laite. Varaa aika Timmasta.
+
+Uusi (144 merkkiä, mahtuu Googlen katkaisurajaan):
+
+> Kauneushoitola Kotkan Ruonalassa: kliininen mikroneulaus ja
+> ProXN-kasvohoidot terveydenhuollon ammattilaisten toteuttamana.
+> Varaa aika Timmasta.
+
+Laitemaininta jäi pois, koska hakusanat *kauneushoitola*,
+*Kotkan Ruonala* ja *ProXN-kasvohoito* eivät mahtuneet sen
+rinnalle. MicroPen EVO ja sen hyväksynnät ovat sivun omassa
+sisällössä (osio "MicroPen EVO™, kliinisen tason
+mikroneulauslaite"), joten tieto ei kadonnut.
+
+**`og:description` ja `twitter:description` yhdenmukaistettu**
+käyttäjän pyynnöstä: molemmissa on nyt sanatarkasti sama teksti
+kuin meta descriptionissa (rivit 15 ja 26). Vanha oli
+*"Terveydenhuollon ammattilaisten toteuttama kliininen mikroneulaus
+Kotkassa. FDA-hyväksytty MicroPen EVO™ -laite."* Aiempi käytäntö,
+jossa some-kuvauksissa ei ollut ajanvarauskehotusta, jäi pois:
+kolme eri kuvausta samasta sivusta oli turha ylläpidettävä.
+
+**`<title>` ei muuttunut.**
+
+**Lataamatta:** `index.html`, `PROJECT.md`.
