@@ -278,8 +278,8 @@ tarkistettu 30.9. Nämä kuuluvat yhteen, lataa kaikki samalla:
 ⚠ Tarkista myös `sitemap.xml`-lastmodit näille.
 
 **B. Hoitoloki, ProXN-tuki.** `functions/api/hoitoloki.js` ja
-`admin.html` — **vasta kun `tuotanto/supabase-migraatio-2026-09-29.sql`
-on ajettu Supabasessa.**
+`admin.html`. ✅ **SQL ajettu Supabasessa 7.10.2026, este poistui.**
+Tiedostot voi ladata muiden mukana.
 
 **C. Muut:** `.gitignore`, `META-MARKKINOINTI.md`, `PROJECT.md`.
 
@@ -11946,3 +11946,90 @@ Tarkistus on erillinen ajo joka lukee lopputuloksen.
 Sitemapin lastmodit kannattaa tarkistaa aina ennen latauserää.
 Tarkistuskomento lukee XML:n ja vertaa jokaista `lastmod`-arvoa
 tiedoston muokkausaikaan levyllä.
+
+
+---
+
+## 7.10.2026 — Supabase-migraatio ajettu
+
+Käyttäjä ajoi `tuotanto/supabase-migraatio-2026-09-29.sql`
+Supabasen SQL Editorissa ja vahvisti että tulos oli odotettu.
+
+**`hoitoloki`-taulussa on nyt neljä uutta saraketta:**
+`treatment_type` (oletus `'Mikroneulaus'`, check-rajoite),
+`skin_condition`, `products_used`, `reactions`.
+
+**Este poistui.** `functions/api/hoitoloki.js` ja `admin.html`
+voidaan ladata GitHubiin muiden tiedostojen mukana ilman
+järjestysvaatimusta.
+
+### Mitä kannattaa tehdä latauksen jälkeen
+
+Yksi testikäynti kummallakin hoitotyypillä admin-paneelissa:
+Mikroneulaus-käynti (syvyyskentät näkyvissä) ja ProXN-käynti
+(syvyyskentät piilossa, uudet kentät tallentuvat). Tätä ei voitu
+testata etukäteen, koska sarakkeita ei ollut olemassa.
+
+⚠ **Muistutus 30.10.2026 muutoksesta:** se koskee vain uusia
+tauluja. Nyt lisätyt sarakkeet eivät vaadi GRANT-lauseita, joten
+tästä ei seuraa jatkotoimia.
+
+
+---
+
+## 7.10.2026 — Kuvien asettelu korjattu käyttäjän palautteen jälkeen
+
+Käyttäjä: *"Haluaisin tiimi osiossa että tekstit ja kuvat ovat
+vierekkäin ja petran kuva samassa koossa. Nuo muut osiot mihin
+laitoit kuvat niin siinä nyt se rakenne rikkoutuu, ei jätetä kuvan
+viereen kummallekaan puolelle tyhjää."*
+
+### 1. Tiimi: kellunnasta rinnakkaisiksi sarakkeiksi
+
+**Ennen:** kuva kellui vasemmalle ja teksti kiersi sen ympäri ja
+jatkui alta. Petran kuva oli 200 px ja kellui oikealle.
+
+**Nyt:** molemmat lohkot ovat gridejä `280px 1fr`, eli kuva ja
+teksti ovat omina sarakkeinaan vierekkäin. **Petran kuva on nyt
+sama 280 px kuin Jaakon.**
+
+Hoitajan lohkossa `picture` saa `grid-row: 1 / span 20`, jolloin
+se pysyy ensimmäisessä sarakkeessa ja kaikki tekstielementit
+latautuvat toiseen sarakkeeseen allekkain.
+
+Aiempi ratkaisu teki Petran kuvasta pienemmän tarkoituksella
+("hierarkia"). Käyttäjä halusi tasakokoiset, ja se on
+johdonmukaisempi: molemmat ovat studion ammattilaisia.
+
+### 2. Sisältöosiot: ei tyhjää kuvan viereen
+
+**Uudistumisprosessi-osio.** Kuva oli palstan levyinen, jolloin
+vasen palsta kasvoi pitkäksi ja oikea päättyi aiemmin. Tyhjää jäi
+oikealle alas.
+
+→ Uusi luokka **`.article-figure--kelluva`**: kuva 240 px, kelluu
+oikealle palstan sisällä, teksti kiertää sen. Palsta on noin
+564 px, joten tekstille jää noin 300 px. Kuva siirrettiin
+kappaleen alkuun jotta kierto alkaa heti.
+
+**Ennen ja jälkeen -osio.** Vaakakuva oli `max-width: 720px`
+1200 px:n osiossa, eli oikealle jäi 480 px tyhjää.
+
+→ Uusi luokka **`.article-figure--kaista`**: täysleveä, rajattu
+`aspect-ratio: 12/5` ja `object-fit: cover`, jotta kuva ei
+hallitse osiota. Kuvan viereen ei jää tilaa kummallekaan puolelle.
+
+**Mobiili alle 768 px:** kelluva kuva muuttuu täysleveäksi, kaista
+loivenee suhteeseen 3/2. Tiimigridit muuttuvat yksisarakkeisiksi
+alle 640 px.
+
+### ⚠ Asettelua ei voitu tarkistaa selaimessa
+
+Esikatselupaneeli palvelee vain tiedostoja jotka se on jo
+indeksoinut, eikä se löytänyt kahta eri testitiedostoa.
+Hiekkalaatikon selain ei avaa paikallisia tiedostoja.
+
+**Rakenne on varmistettu lukemalla:** `picture` on suora lapsi
+molemmissa tiimigrideissä, tagit tasapainossa, JSON-LD jäsentyy.
+**Visuaalinen tulos on tarkistettava latauksen jälkeen.**
+

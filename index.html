@@ -142,6 +142,27 @@
       color: var(--text-mid);
     }
     .section--dark figure.article-figure figcaption { color: rgba(250, 248, 244, 0.82); }
+    /* Kuva kelluu palstan sisällä, teksti kiertää sen. Näin osio
+       pysyy yhtenä kappaleena eikä kuvan viereen jää tyhjää. */
+    figure.article-figure--kelluva {
+      float: right;
+      width: 240px;
+      margin: 6px 0 20px 28px;
+    }
+    /* Täysleveä kaista: kuvan viereen ei jää tilaa kummallekaan
+       puolelle. Rajataan matalammaksi ettei kuva hallitse osiota. */
+    figure.article-figure--kaista {
+      margin: 0 0 44px;
+    }
+    figure.article-figure--kaista img {
+      aspect-ratio: 12 / 5;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    @media (max-width: 768px) {
+      figure.article-figure--kelluva { float: none; width: 100%; margin: 24px 0; }
+      figure.article-figure--kaista img { aspect-ratio: 3 / 2; }
+    }
     .section--dark .pillar h3 { color: var(--white); }
     .section--dark .pillar p { color: rgba(250, 248, 244, 1); }
     .section--dark .pillar { border-left-color: var(--pink-pale); }
@@ -317,14 +338,19 @@
         margin-bottom: 6px;
       }
     }
-    /* Tiimi: kuva vasemmalle, teksti kiertää sen ympäri ja jatkuu alta */
-    .tiimi { margin-top: 40px; max-width: 900px; }
-    .tiimi::after { content: ""; display: block; clear: both; }
+    /* Tiimi: kuva ja teksti rinnakkain omina sarakkeinaan */
+    .tiimi {
+      margin-top: 40px;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .tiimi > picture { grid-row: 1 / span 20; }
     .tiimi__kuva {
-      float: left;
       width: 280px;
       height: auto;
-      margin: 6px 36px 20px 0;
       border-radius: 4px;
       display: block;
     }
@@ -359,20 +385,24 @@
       line-height: 1.9;
       color: rgba(250, 248, 244, 1);
     }
-    /* Vastuuhoitajan kuva: pienempi kuin hoitajan ja oikealle, jotta
-       osioon syntyy hierarkia eivätkä kaksi muotokuvaa kilpaile. */
-    .tiimi__vastuuhoitaja::after { content: ""; display: block; clear: both; }
+    /* Vastuuhoitaja: sama rinnakkaisrakenne ja sama kuvakoko kuin
+       hoitajalla, jotta osio pysyy yhtenäisenä. */
+    .tiimi__vastuuhoitaja {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+      align-items: start;
+    }
     .tiimi__vastuuhoitaja-kuva {
-      float: right;
-      width: 200px;
+      width: 280px;
       height: auto;
-      margin: 4px 0 16px 32px;
       border-radius: 4px;
       display: block;
     }
     @media (max-width: 640px) {
-      .tiimi__kuva { float: none; width: 100%; max-width: 280px; margin: 0 0 24px; }
-      .tiimi__vastuuhoitaja-kuva { float: none; width: 100%; max-width: 200px; margin: 0 0 20px; }
+      .tiimi, .tiimi__vastuuhoitaja { grid-template-columns: 1fr; gap: 24px; }
+      .tiimi > picture { grid-row: auto; }
+      .tiimi__kuva, .tiimi__vastuuhoitaja-kuva { width: 100%; max-width: 280px; }
     }
     @media (max-width: 640px) {
       .tiimi__kuva {
@@ -774,7 +804,7 @@
                height="1200"
                loading="lazy">
         </picture>
-        Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra on pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalta ja tuo studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä.
+        <p style="margin:0;">Studion vastuuhoitajana toimii sairaanhoitaja (AMK) Petra Sahari. Petra on pitkän linjan yrittäjä sosiaali- ja terveydenhuoltoalalta ja tuo studioon laajan osaamisen aseptiikasta ja turvallisesta hoitotyöstä.</p>
       </div>
     </div>
   </section>
@@ -790,22 +820,22 @@
           </p>
           <h3 style="margin-top:36px">Miten mikroneulaus käytännössä toimii</h3>
           <p>
+            <figure class="article-figure article-figure--kelluva">
+              <picture>
+                <source srcset="assets/mikroneulaus-hoito.webp" type="image/webp">
+                <img src="assets/mikroneulaus-hoito.jpg"
+                     alt="Hoitaja tekee kliinistä mikroneulausta kynämäisellä MicroPen EVO -laitteella asiakkaan kasvoille, kädessä siniset suojakäsineet ja kasvoilla hengityssuojain"
+                     width="1000" height="1125" loading="lazy" decoding="async">
+              </picture>
+              <figcaption>
+                Neulaussyvyyttä säädetään kasvojen alueen mukaan. Hoitopää on steriili kertakäyttöinen ja vaihdetaan asiakkaan nähden.
+              </figcaption>
+            </figure>
             Iho on uskomattoman viisas elin. Mikroneulauksessa ihon luontaista korjauskykyä hyödynnetään täysin hallitusti. Ammattilaistason laitteen erittäin ohuet ja steriilit neulat tekevät ihon pintaan tuhansia mikroskooppisen pieniä kanavia, jotka lähettävät iholle vahvan viestin: on aika aloittaa uudistuminen.
           </p>
           <p>
             Tämän seurauksena iho alkaa tuottaa uutta kollageenia ja elastiinia, ihon tärkeimpiä rakennusaineita. Mikroneulaus käynnistää tämän tuotannon uudelleen täysin luonnollisesti ilman vieraita aineita.
           </p>
-          <figure class="article-figure">
-            <picture>
-              <source srcset="assets/mikroneulaus-hoito.webp" type="image/webp">
-              <img src="assets/mikroneulaus-hoito.jpg"
-                   alt="Hoitaja tekee kliinistä mikroneulausta kynämäisellä MicroPen EVO -laitteella asiakkaan kasvoille, kädessä siniset suojakäsineet ja kasvoilla hengityssuojain"
-                   width="1000" height="1125" loading="lazy" decoding="async">
-            </picture>
-            <figcaption>
-              Mikrokanavat tehdään kynämäisellä laitteella, jonka neulaussyvyyttä säädetään kasvojen alueen mukaan. Hoitopää on steriili kertakäyttöinen ja vaihdetaan asiakkaan nähden.
-            </figcaption>
-          </figure>
           <h3 style="margin-top:36px">Miksi valita kliininen mikroneulaus</h3>
           <p>
             Mikroneulauksen ylivoimainen etu on tulosten pysyvyys. Koska iho rakentaa itse uutta kudosta, tulokset eivät katoa ajan myötä: iho todella muuttuu pysyvästi paremmaksi. Kliinisessä asiantuntijaympäristössä toteutettuna hoito on äärimmäisen turvallinen. <a href="mikroneulaus-opas.html">Lue kattava mikroneulauksen opas hoidosta, tuloksista ja siitä kenelle se sopii.</a>
@@ -1017,7 +1047,7 @@
         <p class="label label--pink-pale">Ohjeistus</p>
         <h2 id="ennen-jalkeen-title">Ennen ja jälkeen hoidon</h2>
       </div>
-      <figure class="article-figure reveal" style="max-width: 720px; margin: 0 0 44px;">
+      <figure class="article-figure article-figure--kaista reveal">
         <picture>
           <source srcset="assets/mikroneulaus-naamio.webp" type="image/webp">
           <img src="assets/mikroneulaus-naamio.jpg"
